@@ -79,21 +79,22 @@ img { display: block; max-width: 100%; }
 ul { margin: 0; padding-inline-start: 1.2em; }
 ::selection { background: var(--orange-soft); color: #000; }
 
-.app { min-height: 100%; display: flex; flex-direction: column; }
+.app { height: 100vh; height: 100dvh; display: flex; flex-direction: column; overflow: hidden; }
+.content { flex: 1; min-height: 0; overflow-y: auto; -webkit-overflow-scrolling: touch; overscroll-behavior: contain; position: relative; }
 .page {
   flex: 1;
-  padding: 16px 16px calc(var(--nav-h) + var(--safe-b) + 24px);
+  padding: 16px 16px 28px;
   max-width: 980px;
   width: 100%;
   margin: 0 auto;
   animation: fade 0.25s ease;
 }
-.page--full { padding: 0; max-width: none; }
+.page--full { padding: 0; max-width: none; height: 100%; }
 @keyframes fade { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
 
 /* ---------- Header ---------- */
 .header {
-  position: sticky; top: 0; z-index: 50;
+  position: relative; z-index: 50; flex: none;
   height: calc(var(--header-h) + var(--safe-t));
   padding-top: var(--safe-t);
   display: flex; align-items: center; justify-content: space-between; gap: 8px;
@@ -118,7 +119,7 @@ ul { margin: 0; padding-inline-start: 1.2em; }
 
 /* ---------- Bottom nav ---------- */
 .nav {
-  position: fixed; bottom: 0; inset-inline: 0; z-index: 60;
+  position: relative; flex: none; z-index: 60;
   height: calc(var(--nav-h) + var(--safe-b));
   padding-bottom: var(--safe-b);
   background: var(--surface);
@@ -277,7 +278,7 @@ details.acc[open] summary::after { content: '−'; }
 details.acc .acc__body { padding: 0 0 14px; color: var(--text-2); font-size: 14px; }
 
 /* ---------- Map ---------- */
-.map-wrap { position: relative; height: calc(100dvh - var(--header-h) - var(--safe-t) - var(--nav-h) - var(--safe-b)); }
+.map-wrap { position: relative; height: 100%; }
 .map { position: absolute; inset: 0; z-index: 1; }
 .map-ctl { position: absolute; z-index: 10; display: flex; flex-direction: column; gap: 8px; }
 .map-ctl--tr { top: 12px; right: 12px; }
@@ -359,7 +360,7 @@ details.acc .acc__body { padding: 0 0 14px; color: var(--text-2); font-size: 14p
 body { background: var(--bg); background-image: radial-gradient(1200px 500px at 100% -10%, color-mix(in srgb, var(--orange) 9%, transparent), transparent 60%), radial-gradient(900px 500px at -10% 110%, color-mix(in srgb, var(--primary) 10%, transparent), transparent 60%); background-attachment: fixed; }
 .header { background: var(--grad-trail); background-size: 200% 200%; border-bottom: 0; box-shadow: 0 4px 20px rgba(11, 29, 51, 0.35); }
 .header::after { content: ''; position: absolute; inset-inline: 0; bottom: 0; height: 3px; background: linear-gradient(90deg, #fff 0 33%, #2563eb 33% 66%, var(--orange) 66%); }
-.header { position: sticky; }
+.header { position: relative; }
 .header__title { letter-spacing: -0.01em; }
 .card { border: 1px solid color-mix(in srgb, var(--border) 80%, transparent); box-shadow: 0 1px 2px rgba(6, 20, 40, 0.04), 0 8px 24px -12px rgba(6, 20, 40, 0.18); backdrop-filter: saturate(1.2); }
 .card--glow { position: relative; overflow: hidden; border-color: color-mix(in srgb, var(--orange) 40%, var(--border)); }

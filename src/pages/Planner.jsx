@@ -43,7 +43,7 @@ export default function Planner({ navigate }) {
   const sorted = [...segments].sort((a, b) => a.id - b.id)
   const startMonth = new Date(draft.startDate).getMonth()
 
-  const savePlan = () => { setPlan(draft); setShowTable(true); toast('התוכנית נשמרה במכשיר ✓'); window.scrollTo({ top: 0, behavior: 'smooth' }) }
+  const savePlan = () => { setPlan(draft); setShowTable(true); toast('התוכנית נשמרה במכשיר ✓'); document.getElementById('content')?.scrollTo({ top: 0, behavior: 'smooth' }) }
   const measuredPace = useMemo(() => { const k = journal.map((e) => parseFloat(e.km)).filter((x) => x > 0); return k.length ? Math.round(k.reduce((a, b) => a + b, 0) / k.length) : null }, [journal])
   const cacheMessage = () => {
     if (!preview?.caches?.length) return

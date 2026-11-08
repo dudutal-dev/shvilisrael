@@ -47,7 +47,7 @@ export default function App() {
       <ToastProvider>
         <div className="app">
           <Header title={TITLES[tab] || 'שביל ישראל'} onBack={isSub ? back : null} theme={effectiveTheme} setTheme={setTheme} navigate={navigate} />
-          <Suspense fallback={<div className="page center muted">טוען…</div>}>{page}</Suspense>
+          <main className="content" id="content"><Suspense fallback={<div className="page center muted">טוען…</div>}>{page}</Suspense></main>
           <BottomNav active={TAB_IDS.includes(tab) ? tab : ''} navigate={navigate} />
         </div>
       </ToastProvider>

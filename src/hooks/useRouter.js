@@ -10,7 +10,7 @@ function parse() {
 export function useRouter() {
   const [route, setRoute] = useState(parse)
   useEffect(() => {
-    const onHash = () => { setRoute(parse()); window.scrollTo({ top: 0 }) }
+    const onHash = () => { setRoute(parse()); const c = document.getElementById('content'); if (c) c.scrollTop = 0; else window.scrollTo({ top: 0 }) }
     window.addEventListener('hashchange', onHash)
     return () => window.removeEventListener('hashchange', onHash)
   }, [])
