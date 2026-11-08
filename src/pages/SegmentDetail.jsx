@@ -142,7 +142,7 @@ export default function SegmentDetail({
         }}>{seg.steps_he.length} {t("שלבים מתיאור המסלול הרשמי · הקראה קולית · מעקב GPS")}</span></span>
           <span style={{
         fontSize: 22
-      }}>←</span>
+      }}>{isEn() ? "→" : "←"}</span>
         </button>}
       <div className="segmented" style={{
       alignSelf: 'center'
