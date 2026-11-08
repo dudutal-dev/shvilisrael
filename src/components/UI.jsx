@@ -1,3 +1,4 @@
+import { createPortal } from 'react-dom'
 import { Icon } from './Icons.jsx'
 
 export const DIFF_HE = { 1: 'קל', 2: 'בינוני', 3: 'קשה', 4: 'קשה מאוד' }
@@ -25,13 +26,15 @@ export function Section({ title, icon, children, action }) {
 
 export function Modal({ open, onClose, title, children }) {
   if (!open) return null
-  return (
+  // Portal to <body>: cards use backdrop-filter, which would otherwise trap position:fixed inside them.
+  return createPortal(
     <div className="modal-bg" onClick={onClose}>
       <div className="modal" onClick={(e) => e.stopPropagation()}>
         <div className="row between mb"><h3>{title}</h3><button className="iconbtn iconbtn--surface" onClick={onClose} aria-label="סגור">✕</button></div>
         {children}
       </div>
-    </div>
+    </div>,
+    document.body,
   )
 }
 

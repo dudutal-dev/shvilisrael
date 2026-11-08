@@ -8,7 +8,7 @@ export function PoiModal({ poi, onClose, pos }) {
   return (
     <Modal open onClose={onClose} title={poi.title}>
       <div className="stack">
-        {(poi.original || poi.image) && <div className="poi-hero"><img src={poi.original || poi.image} alt={poi.title} referrerPolicy="no-referrer" /></div>}
+        {(poi.original || poi.image) && <div className="poi-hero"><img src={poi.original || poi.image} alt={poi.title} referrerPolicy="no-referrer" onError={(e) => { e.currentTarget.parentElement.style.display = 'none' }} /></div>}
         <p className="poi-text">{poi.extract}</p>
         <div className="row" style={{ gap: 6 }}>
           {poi.url && <a className="btn btn--sm btn--primary" href={poi.url} target="_blank" rel="noreferrer">📖 הערך המלא בוויקיפדיה</a>}
@@ -33,7 +33,7 @@ export function PoiCards({ pois, pos, layout = 'strip', onOpen }) {
           const d = pos && p.lat != null ? haversine(pos, p) : null
           return (
             <button key={p.title} className="poi-card" onClick={() => show(p)}>
-              <div className="poi-card__img">{p.image ? <img src={p.image} alt="" loading="lazy" referrerPolicy="no-referrer" /> : <span>🏛️</span>}</div>
+              <div className="poi-card__img">{p.image ? <img src={p.image} alt="" loading="lazy" referrerPolicy="no-referrer" onError={(e) => { e.currentTarget.replaceWith(Object.assign(document.createElement('span'), { textContent: '🏛️' })) }} /> : <span>🏛️</span>}</div>
               <div className="poi-card__body"><div className="poi-card__title">{p.title}</div>{d != null && <div className="tiny muted">{formatKm(d)}</div>}</div>
             </button>
           )

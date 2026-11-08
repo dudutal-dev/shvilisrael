@@ -1,1 +1,1617 @@
-{"fetched":"","segments":{},"pois":{}}
+{
+ "fetched": "2026-11-08",
+ "source": "he.wikipedia.org (CC BY-SA 4.0)",
+ "segments": {
+  "1": [
+   "נבי חזורי",
+   "סיירת אגוז",
+   "מבצר נמרוד",
+   "שמורת נחל הבניאס",
+   "נווה אטי\"ב",
+   "שבלול החרמון"
+  ],
+  "2": [
+   "נחל סער",
+   "גבעת האם",
+   "שמורת נחל הבניאס",
+   "שדה נחמיה",
+   "קריית שמונה",
+   "כפר גלעדי"
+  ],
+  "3": [
+   "תל חי",
+   "רכס רמים",
+   "נחל קדש",
+   "מצודת כ\"ח",
+   "רמות נפתלי"
+  ],
+  "4": [
+   "מצודת כ\"ח",
+   "נבי יושע",
+   "קרן נפתלי",
+   "נחל דישון",
+   "גן לאומי ברעם"
+  ],
+  "5": [
+   "נחל צבעון",
+   "הר מירון",
+   "קבר רבי שמעון בר יוחאי",
+   "נחל דישון"
+  ],
+  "6": [
+   "נחל צבעון",
+   "הר מירון",
+   "קבר רבי שמעון בר יוחאי"
+  ],
+  "7": [
+   "נחל מירון",
+   "נחל צבעון",
+   "הר מירון",
+   "קבר רבי שמעון בר יוחאי",
+   "נחל עמוד"
+  ],
+  "8": [
+   "נחל עמוד"
+  ],
+  "9": [
+   "הר ארבל",
+   "קרני חיטין",
+   "חוות כנרת",
+   "ירדנית"
+  ],
+  "10": [
+   "נחל תבור"
+  ],
+  "11": [
+   "הר תבור",
+   "דרך נוף יער בית קשת",
+   "אירוס נצרתי",
+   "דבורייה",
+   "הר דבורה"
+  ],
+  "12": [
+   "משהד",
+   "כפר כנא"
+  ],
+  "13": [
+   "נחל ציפורי",
+   "כעביה-טבאש-חג'אג'רה",
+   "אלונים",
+   "כפר חסידים"
+  ],
+  "14": [
+   "נחל יגור",
+   "חי-בר כרמל",
+   "נחל אורן"
+  ],
+  "15": [
+   "נחל מערות",
+   "מצפה עופר",
+   "זכרון יעקב",
+   "רמת הנדיב",
+   "נחל יגור",
+   "חי-בר כרמל",
+   "נחל אורן"
+  ],
+  "16": [
+   "יקבי כרמל",
+   "בית אהרנסון",
+   "נחל מערות",
+   "מצפה עופר",
+   "זכרון יעקב",
+   "רמת הנדיב"
+  ],
+  "17": [
+   "ג'סר א-זרקא",
+   "נחל תנינים",
+   "אמות המים של קיסריה",
+   "פארק נחל חדרה"
+  ],
+  "18": [
+   "נחל אלכסנדר",
+   "מכמורת",
+   "נתניה",
+   "נחל פולג"
+  ],
+  "19": [
+   "נחל פולג",
+   "אפולוניה",
+   "מרינה הרצליה",
+   "נמל תל אביב"
+  ],
+  "20": [
+   "גן לאומי ירקון",
+   "עינת"
+  ],
+  "21": [
+   "גן לאומי ירקון",
+   "נחל שילה",
+   "כפר סירקין",
+   "מאוזוליאום מזור",
+   "תל חדיד",
+   "מצפה מודיעין"
+  ],
+  "22": [
+   "מצפה מודיעין",
+   "מנזר השתקנים",
+   "שער הגיא"
+  ],
+  "23": [
+   "לטרון",
+   "עין לימון",
+   "צובה",
+   "מצפה מודיעין",
+   "מנזר השתקנים",
+   "שער הגיא",
+   "סטף"
+  ],
+  "24": [
+   "סטף",
+   "עין כרם",
+   "יד קנדי",
+   "עין לימון",
+   "צובה",
+   "מטע"
+  ],
+  "25": [
+   "מטע",
+   "חורבת חנות"
+  ],
+  "26": [
+   "תל גודד",
+   "עזקה",
+   "עמק האלה",
+   "פארק עדולם",
+   "בית גוברין - מרשה"
+  ],
+  "27": [
+   "תל לכיש",
+   "חבל לכיש",
+   "נחל גוברין"
+  ],
+  "28": [
+   "יער להב",
+   "תל חליף",
+   "מרכז ג'ו אלון"
+  ],
+  "29": [
+   "סנסנה",
+   "יער מיתר"
+  ],
+  "30": [
+   "יער יתיר",
+   "נחל אשתמוע",
+   "חורבת ענים",
+   "הר עמשא"
+  ],
+  "31": [
+   "תל ערד",
+   "ערד"
+  ],
+  "32": [
+   "מואב",
+   "בקעת קנאים",
+   "מצדה",
+   "נחל צאלים"
+  ],
+  "33": [
+   "מצדה",
+   "נחל צאלים",
+   "נחל בוקק",
+   "ים המלח",
+   "עין בוקק",
+   "מואב"
+  ],
+  "34": [
+   "נחל בוקק",
+   "ים המלח",
+   "עין בוקק",
+   "מצדה",
+   "נחל צאלים",
+   "מואב"
+  ],
+  "35": [
+   "מצד זוהר",
+   "נחל פרצים"
+  ],
+  "36": [
+   "נחל פרס",
+   "נחל צפית"
+  ],
+  "37": [
+   "נחל פרס",
+   "נחל צפית",
+   "המכתש הקטן",
+   "עין ירקעם",
+   "המכתש הגדול"
+  ],
+  "38": [
+   "המכתש הקטן",
+   "עין ירקעם",
+   "המכתש הגדול",
+   "רכס חתירה",
+   "נחל עפרן"
+  ],
+  "39": [
+   "רכס חתירה",
+   "נחל עפרן"
+  ],
+  "40": [
+   "נחל צין",
+   "חוד עקב",
+   "עין עקב"
+  ],
+  "41": [
+   "חוד עקב",
+   "עין עקב",
+   "כביש הנפט",
+   "מדרשת בן-גוריון",
+   "עין עבדת",
+   "נחל חווארים"
+  ],
+  "42": [
+   "נחל חווה",
+   "מצפה רמון"
+  ],
+  "43": [
+   "מכתש רמון",
+   "עין סהרונים",
+   "נחל חווה",
+   "מצפה רמון"
+  ],
+  "44": [
+   "נחל נקרות"
+  ],
+  "45": [
+   "נחל נקרות"
+  ],
+  "46": [
+   "נחל נקרות"
+  ],
+  "47": [],
+  "48": [
+   "נאות סמדר"
+  ],
+  "49": [
+   "נאות סמדר"
+  ],
+  "50": [
+   "חולות כסוי",
+   "בקעת עובדה",
+   "מקדש הנמרים",
+   "שחרות"
+  ],
+  "51": [
+   "מאובן"
+  ],
+  "52": [
+   "עמק ססגון",
+   "בקעת תמנע",
+   "עמודי שלמה",
+   "הר תמנע",
+   "מאובן"
+  ],
+  "53": [
+   "הר תמנע",
+   "בקעת תמנע",
+   "עמודי שלמה"
+  ],
+  "54": [
+   "עמודי עמרם",
+   "נחל רחם",
+   "נחל שחורת",
+   "הר שלמה"
+  ],
+  "55": [
+   "נחל שחורת",
+   "הר שחורת",
+   "עין נטפים",
+   "נחל רחם",
+   "הר שלמה"
+  ],
+  "56": [
+   "נחל גשרון",
+   "הר צפחות",
+   "מפרץ אילת",
+   "עין נטפים"
+  ]
+ },
+ "pois": {
+  "נחל סער": {
+   "title": "נחל סער",
+   "extract": "נַחַל סַעַר (וָאדִי חַשַׁבֶּה) הוא נחל הזורם בין צפון רמת הגולן לבין רכס החרמון. הנחל ידוע בעיקר בזכות מפל סער, הנמצא סמוך לכביש 99, ומתאפיין בזרימה מרשימה לאחר הגשמים.\nהנחל נשפך אל נחל חרמון כ־500 מטר מדרום־מערב למעיין הבניאס.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Saar_River_Waterfall_Golan_Heights.jpg/960px-Saar_River_Waterfall_Golan_Heights.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Saar_River_Waterfall_Golan_Heights.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": null,
+   "lon": null,
+   "url": "https://he.wikipedia.org/wiki/%D7%A0%D7%97%D7%9C_%D7%A1%D7%A2%D7%A8"
+  },
+  "קריית שמונה": {
+   "title": "קריית שמונה",
+   "extract": "קִרְיַת שְׁמוֹנָה היא העיר הצפונית ביותר בישראל. כעיר היחידה באצבע הגליל ומיקומה לצד כביש 90, משמשת קריית שמונה מרכז אזורי ליישובי הסביבה בשירותי בריאות, תעשייה, שירותים עסקיים ומסחר.",
+   "image": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Coat_of_arms_of_Kiryat_Shmona.png?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Coat_of_arms_of_Kiryat_Shmona.png?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": 33.21163113,
+   "lon": 35.57320492,
+   "url": "https://he.wikipedia.org/wiki/%D7%A7%D7%A8%D7%99%D7%99%D7%AA_%D7%A9%D7%9E%D7%95%D7%A0%D7%94"
+  },
+  "תל חי": {
+   "title": "תל חי",
+   "extract": "תל חי הייתה חווה חקלאית קטנה באצבע הגליל בראשית תקופת ההתיישבות הציונית בארץ ישראל. ב-1 במרץ 1920 (י\"א באדר תר\"ף) התחולל בה קרב שהפך לסמל ללחימת מעטים מול רבים ולערך ההתיישבות כחלק מהאתוס הציוני. בקרב נהרגו שישה יהודים, ובהם יוסף טרומפלדור. החווה, שהפכה לקיבוץ תל חי, אוחדה ב-1926 עם כפר גלעדי, ואנשיה עברו לשם. בשטח החצר הוקמו אתר זיכרון, המכללה האקדמית תל-חי, המכללה הטכנולוגית תל חי, פארק תעשייה ואכסניית נוער.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Tel_Hai_-_Courtyard_%283%29.jpg/960px-Tel_Hai_-_Courtyard_%283%29.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/6/69/Tel_Hai_-_Courtyard_%283%29.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": 33.235,
+   "lon": 35.57833333,
+   "url": "https://he.wikipedia.org/wiki/%D7%AA%D7%9C_%D7%97%D7%99"
+  },
+  "נווה אטי\"ב": {
+   "title": "נווה אטי\"ב",
+   "extract": "נְוֵה אָטִי\"ב הוא מושב של תנועת האיחוד החקלאי במורדות הר חרמון, בגובה 950 עד 1,050 מטרים מעל פני הים, במרחק כ־2 קילומטרים מדרום־מערב למג'דל שמס וכ־17 קילומטרים מצפון־מזרח לקריית שמונה. זהו היישוב השלישי הצפוני ביותר בישראל, לאחר מטולה ומג'דל שמס, והיישוב הצפוני ביותר במועצה אזורית גולן. כביש 989 עובר במושב, ומכונה בו \"שדרות סיירת אגוז\".\nשם היישוב הוא ראשי תיבות של שמות ארבעה מלוחמי סיירת אגוז שנהרגו במסגרת שירותם הצבאי בצפון רמת הגולן: אברהם המאירי, טוביה שרקינגר, יאיר אלגרנטי (נהרגו בפעולה צבאית ליד כביש הנפט בגולן ב-3 בספטמבר 1968) ובנימין חדד (נהרג במארב ליד ירדנה ב-30 באפריל 1968).",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/117601_moshav_neve_ativ_golan_heights_PikiWiki_Israel.jpg/960px-117601_moshav_neve_ativ_golan_heights_PikiWiki_Israel.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/0/0d/117601_moshav_neve_ativ_golan_heights_PikiWiki_Israel.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": 33.2622288,
+   "lon": 35.74169757,
+   "url": "https://he.wikipedia.org/wiki/%D7%A0%D7%95%D7%95%D7%94_%D7%90%D7%98%D7%99%22%D7%91"
+  },
+  "מבצר נמרוד": {
+   "title": "מבצר נמרוד",
+   "extract": "מבצר נמרוד (ידוע גם בשמות קַלְעַת נַמרוּד וקַלְעַת אֶ-צוּבֵּייבָּה - בערבית: قلعة الصبيبة) הוא אתר ארכאולוגי מהתקופה ההלניסטית ומימי הביניים, ובו שרידי מבצר גדול אשר נבנה במרוצת השנים על ידי צבאות איובים וממלוכים. המבצר שוכן בשיאו של רכס צר בגובה של כ-800 מטר מעל פני הים, למרגלות הר חרמון, כ-3 קילומטר מדרום-מערב ליישוב נווה אטי\"ב, וכ-1,300 מטרים צפונית-מזרחית ליובלו של נחל סער. המקום מוכרז כגן לאומי.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/%D7%9E%D7%91%D7%A6%D7%A8_%D7%A0%D7%9E%D7%A8%D7%95%D7%93%2C_%D7%A4%D7%91%D7%A8%D7%95%D7%90%D7%A8_2025.jpg/960px-%D7%9E%D7%91%D7%A6%D7%A8_%D7%A0%D7%9E%D7%A8%D7%95%D7%93%2C_%D7%A4%D7%91%D7%A8%D7%95%D7%90%D7%A8_2025.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/5/59/%D7%9E%D7%91%D7%A6%D7%A8_%D7%A0%D7%9E%D7%A8%D7%95%D7%93%2C_%D7%A4%D7%91%D7%A8%D7%95%D7%90%D7%A8_2025.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": 33.25277778,
+   "lon": 35.71472222,
+   "url": "https://he.wikipedia.org/wiki/%D7%9E%D7%91%D7%A6%D7%A8_%D7%A0%D7%9E%D7%A8%D7%95%D7%93"
+  },
+  "כפר גלעדי": {
+   "title": "כפר גלעדי",
+   "extract": "כְּפַר גִּלְעָדִי הוא קיבוץ באצבע הגליל ליד מטולה וקריית שמונה, השייך למועצה אזורית הגליל העליון. הקיבוץ נוצר כתוצאה מאיחוד שנעשה בשנות ה-20 וה-30 של המאה ה-20 בין כפר גלעדי, תל חי וקיבוץ טבריה. מדרום לקיבוץ (בתחומי תל חי לשעבר) שוכנת כיום אוניברסיטת קריית שמונה בגליל.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/%27%D7%91%D7%99%D7%AA_%D7%A8%D7%90%D7%A9%D7%95%D7%A0%D7%99%D7%9D%27_%D7%91%D7%9B%D7%A4%D7%A8_%D7%92%D7%9C%D7%A2%D7%93%D7%99.jpg/960px-%27%D7%91%D7%99%D7%AA_%D7%A8%D7%90%D7%A9%D7%95%D7%A0%D7%99%D7%9D%27_%D7%91%D7%9B%D7%A4%D7%A8_%D7%92%D7%9C%D7%A2%D7%93%D7%99.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/d/df/%27%D7%91%D7%99%D7%AA_%D7%A8%D7%90%D7%A9%D7%95%D7%A0%D7%99%D7%9D%27_%D7%91%D7%9B%D7%A4%D7%A8_%D7%92%D7%9C%D7%A2%D7%93%D7%99.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": 33.24246225,
+   "lon": 35.57472917,
+   "url": "https://he.wikipedia.org/wiki/%D7%9B%D7%A4%D7%A8_%D7%92%D7%9C%D7%A2%D7%93%D7%99"
+  },
+  "רמות נפתלי": {
+   "title": "רמות נפתלי",
+   "extract": "רָמוֹת נַפְתָּלִי הוא מושב באזור הצפון ליד הגבול בין ישראל ללבנון, השייך למועצה אזורית מבואות החרמון. היישוב נקרא כך משום שהוא ממוקם בהרי נפתלי, בתחום נחלת שבט נפתלי.",
+   "image": "https://thumb.wikimedia.org/wikipedia/he/thumb/b/bd/Ramot_Naftali_from_air.JPG/960px-Ramot_Naftali_from_air.JPG?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/he/b/bd/Ramot_Naftali_from_air.JPG?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": 33.1015984,
+   "lon": 35.55335494,
+   "url": "https://he.wikipedia.org/wiki/%D7%A8%D7%9E%D7%95%D7%AA_%D7%A0%D7%A4%D7%AA%D7%9C%D7%99"
+  },
+  "שדה נחמיה": {
+   "title": "שדה נחמיה",
+   "extract": "שְׂדֵה נְחֶמְיָה הוא קיבוץ באצבע הגליל בצפון עמק החולה, כ-5 ק\"מ ממזרח לקריית שמונה, המשתייך למועצה אזורית הגליל העליון.\nהקיבוץ הוקם בשנת 1940 על ידי עולים מאוסטריה, צ'כיה והולנד (אשר השתייכו לתנועת הנוער המכבי הצעיר), על אדמות שנקנו מהכפר הערבי א-דווארה.\nהקיבוץ נקרא על שם נחמיה דה לימה, פעיל ציוני הולנדי, שהיה יושב ראש ההסתדרות הציונית ההולנדית בשנים 1912–1918 ויו\"ר קק\"ל (קרן קיימת לישראל) בשנים 1919–1922.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Sde_Nehemya%2C_September_2023.jpg/960px-Sde_Nehemya%2C_September_2023.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Sde_Nehemya%2C_September_2023.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": 33.18739785,
+   "lon": 35.62360897,
+   "url": "https://he.wikipedia.org/wiki/%D7%A9%D7%93%D7%94_%D7%A0%D7%97%D7%9E%D7%99%D7%94"
+  },
+  "מצודת כ\"ח": {
+   "title": "מצודת כ\"ח",
+   "extract": "מצודת כ\"ח (שמה נֶהֱגֶה \"מצודת כוח\"; נקראת גם \"מצודת ישע\" ו\"נבּי יושע\", על שם חורבות הכפר הערבי הסמוך, נבי יושע) היא מצודת טגארט באזור הצפון כ-10 ק\"מ דרומית לקריית שמונה. המצודה נקראת על שם 28 הלוחמים שנהרגו בכיבושה במלחמת העצמאות.\nהמצודה משמשת כיום בסיס מג\"ב, ולצידה אנדרטה וקבר אחים בו קבורים 19 מחללי הקרבות במקום. בראשית 2014 נפתח בסמיכות למצודה מוזיאון הרעות, המנציח את הקרבות ואת החללים שנפלו במקום.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/MetzudatKoach_6885.jpg/960px-MetzudatKoach_6885.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/3/37/MetzudatKoach_6885.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": 33.11472222,
+   "lon": 35.55611111,
+   "url": "https://he.wikipedia.org/wiki/%D7%9E%D7%A6%D7%95%D7%93%D7%AA_%D7%9B%22%D7%97"
+  },
+  "סיירת אגוז": {
+   "title": "סיירת אגוז",
+   "extract": "סיירת אגוז (נקראה גם גדוד 483) הוקמה לראשונה בשנת 1956, כסיירת הפיקודית של פיקוד הצפון בהוראת אלוף פיקוד הצפון, יצחק רבין, אחרי שישראל פלשה לסיני במהלך מבצע \"קדש\". מקימה ומפקדה הראשון היה אריה גרדי. הסיירת פורקה בשנת 1974.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/Egoz_unit_1956-1974.png/960px-Egoz_unit_1956-1974.png?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/0/07/Egoz_unit_1956-1974.png?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": null,
+   "lon": null,
+   "url": "https://he.wikipedia.org/wiki/%D7%A1%D7%99%D7%99%D7%A8%D7%AA_%D7%90%D7%92%D7%95%D7%96"
+  },
+  "נבי יושע": {
+   "title": "נבי יושע",
+   "extract": "א-נבי יושע (בערבית: النبي يوشع) היה כפר ערבי שיעי בגליל העליון, ובו מאוזוליאום ובית קברות מוסלמי. כיום שוכן במקום היישוב רמות נפתלי.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Al-Nbi_Yusha_Mosque.JPG/960px-Al-Nbi_Yusha_Mosque.JPG?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Al-Nbi_Yusha_Mosque.JPG?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": 33.11527778,
+   "lon": 35.55611111,
+   "url": "https://he.wikipedia.org/wiki/%D7%A0%D7%91%D7%99_%D7%99%D7%95%D7%A9%D7%A2"
+  },
+  "נחל דישון": {
+   "title": "נחל דישון",
+   "extract": "נַחַל דִּישוֹן (בעבר ואדי חינדאג') הוא הגדול שבנחלי הגליל העליון המזרחי. ראשיתו במורדות המזרחיים של הר מירון, אורכו כ־31 ק\"מ, ובסיומו הוא נשפך לנהר הירדן (בעבר לאגם החולה), מצפון לגשר הפקק.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/Israel_Hiking_Map_%D7%A0%D7%97%D7%9C_%D7%93%D7%99%D7%A9%D7%95%D7%9F.jpeg/960px-Israel_Hiking_Map_%D7%A0%D7%97%D7%9C_%D7%93%D7%99%D7%A9%D7%95%D7%9F.jpeg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/6/66/Israel_Hiking_Map_%D7%A0%D7%97%D7%9C_%D7%93%D7%99%D7%A9%D7%95%D7%9F.jpeg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": null,
+   "lon": null,
+   "url": "https://he.wikipedia.org/wiki/%D7%A0%D7%97%D7%9C_%D7%93%D7%99%D7%A9%D7%95%D7%9F"
+  },
+  "רכס רמים": {
+   "title": "רכס רמים",
+   "extract": "רכס רמים (מכונה גם בשם \"רכס מנרה\") הוא הרכס המרכזי של הרי נפתלי שבגליל העליון. הרכס, שכיוונו צפון-דרום, מצוי בשטחיהן של לבנון וישראל וקו הגבול ביניהן עובר דרכו. המדרון המזרחי של הרכס יורד בתלילות לעבר עמק החולה בהפרש גובה של 750 מטר על פני כשני קילומטרים בלבד, ואילו המדרון המערבי משתפל במתינות לעבר נחל דובה שבשטח לבנון. הר שנאן המתנשא לגובה של 902 מטרים מעל פני הים מהווה את פסגת הרכס. רכס רמים ממוקם מצפון לשטח רמתי הקרוי רמות נפתלי.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Ramim.jpg/960px-Ramim.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Ramim.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": 33.208055,
+   "lon": 35.538611,
+   "url": "https://he.wikipedia.org/wiki/%D7%A8%D7%9B%D7%A1_%D7%A8%D7%9E%D7%99%D7%9D"
+  },
+  "קרן נפתלי": {
+   "title": "קרן נפתלי",
+   "extract": "קֶרֶן נַפְתָּלִי הוא הר בגובה של 510 מטרים מעל פני הים, השוכן בהרי נפתלי שבגליל העליון המזרחי, בין בקעת קדש מצפון ובקעת יחמור מדרום. מורדותיו המזרחיים של ההר משתפלים בתלילות בתוך כקילומטר מפסגתו עד לעמק החולה, שגובהו למרגלותיו הוא 80 מטרים מעל פני הים; ומההר נשקף מראה אל העמק ואל רמת הגולן והחרמון מעבר לו.\nעל פסגתו של ההר התגלו שרידיה של מצודה מהתקופה ההלניסטית, מצודת קרן נפתלי. בחפירות במקום נמצאו גם שרידים התיישבות מצומצמת מתקופת המקרא. ושל מקדש הלניסטים-רומי גדול יותר שהוקדש לאלה אתנה. עוד נמצאו במקום כתובת ביוונית אודות פלוני שתרם לתחזוקתו של המקום, בורות מים, חומות אבנים, מערות קבורה ושרידי רצפת פסיפס. ייתכן שראש ההר שימש כמאחז במערך ההגנה של תל קדש שמצפון־מערב לו.\nהחשמונאים כבשו את המקום, ומציאת אבנים גדולות במשקל של יותר מ־100 ק\"ג, אשר ייתכן ודורדרו במורד ההר לעבר חיילי אויב, רומזת לכך שבמקום ניטש קרב קשה.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/PikiWiki_Israel_33237_Keren_Naftali_lookout.JPG/960px-PikiWiki_Israel_33237_Keren_Naftali_lookout.JPG?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/b/b8/PikiWiki_Israel_33237_Keren_Naftali_lookout.JPG?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": null,
+   "lon": null,
+   "url": "https://he.wikipedia.org/wiki/%D7%A7%D7%A8%D7%9F_%D7%A0%D7%A4%D7%AA%D7%9C%D7%99"
+  },
+  "נבי חזורי": {
+   "title": "נבי חזורי",
+   "extract": "נבי חזורי (בערבית: مقام النبي الحزوري, مقام سيّدنا الحزّوري, مقام الحزوري) הוא אתר קבורה של הקדוש הדרוזי השייח' עות'מאן חזורי הנמצא בצפון רמת הגולן כק\"מ ממזרח לקלעת נמרוד. במקום חורשת אלונים עתיקה, שהתקדשה בעקבות קדושת הקבר. מבנה הקבר מתקופת השלטון הסורי היה בעל כיפה לבנה בצורת חרוט. בעשורים האחרונים הורחב המבנה.\nבמקום גם אתר הנצחה לחללי סיירת אגוז, על גלגוליה השונים הכולל שלושים ואחת פינות הנצחה לזכר שלושים ואחד נופלי היחידה. עוד מונצח במקום נחמן אלכסנדרון, מראשי קרן קיימת לישראל, שתכנן את המקום לפני מותו.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/Building_no_free_image_yet-he.svg/960px-Building_no_free_image_yet-he.svg.png?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Building_no_free_image_yet-he.svg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": null,
+   "lon": null,
+   "url": "https://he.wikipedia.org/wiki/%D7%A0%D7%91%D7%99_%D7%97%D7%96%D7%95%D7%A8%D7%99"
+  },
+  "שבלול החרמון": {
+   "title": "שבלול החרמון",
+   "extract": "שבלול החרמון (שם מדעי: Helix pachya, בעבר Helix texta) הוא חילזון ממשפחת הקדמומיים וסדרת שבלולי יבשה בעל ריאות החי ביבשה. שבלול החרמון הוא מין אנדמי לארץ ישראל ונמצא רק במורדות החרמון, בעיקר בשמורת נחל חרמון. בעבר הוגדר המין שבלול החרמון תחת המין Helix texta אך אחרי בחינה מחודשת התברר שמדובר באותו מין כמו Helix pachya ולכן הוא סווג מחדש בשם זה, שכן המין Helix pachya הוגדר קודם.",
+   "image": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Helix-pachya-0003.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Helix-pachya-0003.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": null,
+   "lon": null,
+   "url": "https://he.wikipedia.org/wiki/%D7%A9%D7%91%D7%9C%D7%95%D7%9C_%D7%94%D7%97%D7%A8%D7%9E%D7%95%D7%9F"
+  },
+  "נחל קדש": {
+   "title": "נחל קדש",
+   "extract": "נחל קֶדֶשׁ הוא נחל אכזב, מצוקי, ברום של כ-450 מטר המתחיל באזור לבנון ומסתיים בעמק החולה. חלקו התחתון של הנחל סגור לתנועה.",
+   "image": "https://upload.wikimedia.org/wikipedia/he/9/91/F1010022.JPG?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+   "original": "https://upload.wikimedia.org/wikipedia/he/9/91/F1010022.JPG?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": null,
+   "lon": null,
+   "url": "https://he.wikipedia.org/wiki/%D7%A0%D7%97%D7%9C_%D7%A7%D7%93%D7%A9"
+  },
+  "שמורת נחל הבניאס": {
+   "title": "שמורת נחל הבניאס",
+   "extract": "שמורת נחל הבניאס או שמורת נחל חרמון היא שמורת טבע הנמצאת למרגלות הר החרמון, במפגש שבין רמת הגולן לעמק החולה, ליד היישוב שניר. היא משתרעת לאורך נחל חרמון מאזור מעיינות הבניאס עד לראש מקורות הירדן. השמורה הוכרזה בשנת 1977 על שטח של כ-800 דונם. בשנת 2009 הורחבה השמורה ונוספו לה עוד כ-500 דונם במעלה הנחל, ומאז עומד שטחה של השמורה על כ-1,300 דונם.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Golan_Heights_-_Banias_waterfalls_001.jpg/960px-Golan_Heights_-_Banias_waterfalls_001.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Golan_Heights_-_Banias_waterfalls_001.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": null,
+   "lon": null,
+   "url": "https://he.wikipedia.org/wiki/%D7%A9%D7%9E%D7%95%D7%A8%D7%AA_%D7%A0%D7%97%D7%9C_%D7%94%D7%91%D7%A0%D7%99%D7%90%D7%A1"
+  },
+  "גבעת האם": {
+   "title": "גבעת האם",
+   "extract": "גבעת האֵם (נקראת בערבית תל אבו חנזיר) היא גבעה בזלתית בגובה 196 מטר מעל פני הים הנמצאת במורדות הגולן, בשולי עמק החולה. בדומה לכפר סאלד הנמצא כקילומטר וחצי מדרום, גם הגבעה קרויה על שמה של הנרייטה סאלד, אשר כונתה \"אֵם עליית הנוער\".",
+   "image": "https://upload.wikimedia.org/wikipedia/commons/8/85/GivatHaEm_Bunker.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/8/85/GivatHaEm_Bunker.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": null,
+   "lon": null,
+   "url": "https://he.wikipedia.org/wiki/%D7%92%D7%91%D7%A2%D7%AA_%D7%94%D7%90%D7%9D"
+  },
+  "הר מירון": {
+   "title": "הר מירון",
+   "extract": "הַר מֵירוֹן (בערבית: جبل الجرمق, ג'בל אל־ג'רמק) הוא ההר הגבוה ביותר בשטח ארץ ישראל שממערב לנהר הירדן והרביעי בגובהו בישראל כולה. הוא שוכן בין צפת למעלות תרשיחא ופסגתו מתנשאת לגובה של 1,204 מטר מעל פני הים, והיא הגבוהה ביותר ברכס הרי מירון שבגליל העליון. בעבר התנשא ההר לגובה של 1,208 מטר מעל פני הים, אך צה\"ל שיטח את פסגת ההר לצורך הקמת יחידת בקרה אווירית והנמיכה במעט.\nהר מירון הוא אחד האזורים הגשומים ביותר בישראל, בממוצע יורדים בו כ־900 מילימטר גשם בשנה. במרבית החורפים יורד בהר מירון שלג שנערם. ההר מכוסה בחורש ים תיכוני שכולל שיחי אלון, חרוב, שיחי קטלב אדומי גזע ואחרים.\nבעקבות מלחמת חרבות ברזל לפני ל\"ג בעומר ההר הוכרז כשטח צבאי סגור.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/PikiWiki_Israel_15276_Mount_Meron.JPG/960px-PikiWiki_Israel_15276_Mount_Meron.JPG?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/a/a8/PikiWiki_Israel_15276_Mount_Meron.JPG?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": 32.997866,
+   "lon": 35.413141,
+   "url": "https://he.wikipedia.org/wiki/%D7%94%D7%A8_%D7%9E%D7%99%D7%A8%D7%95%D7%9F"
+  },
+  "דבורייה": {
+   "title": "דבורייה",
+   "extract": "דבורייה (בערבית: دبورية / دبوریه) היא מועצה מקומית במחוז הצפון בישראל, השוכנת בשולי עמק יזרעאל ולמרגלות הר תבור. כפר דבורייה הוכרז כמועצה מקומית בשנת 1961. על-פי הלמ\"ס, נכון לסוף שנת 2022, כלל תושבי דבורייה היו ערבים-מוסלמים.\nדבורייה בנויה על צלע הר תבור, בחיבור בינו לבין מישור בקעת כסולות הצמוד אליו. צורת הבנייה בו היא בעיקר כפרית, אך נוכחת בו גם בניית בתי מגורים ומבנים בעלי קומה אחת - עד ארבע קומות. ראש המועצה הנוכחי של דבורייה הוא ריפעת עזאיזה.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/Daburiyya_Mount_Tabor_200704.JPG/960px-Daburiyya_Mount_Tabor_200704.JPG?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/5/53/Daburiyya_Mount_Tabor_200704.JPG?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": 32.69143945,
+   "lon": 35.37175237,
+   "url": "https://he.wikipedia.org/wiki/%D7%93%D7%91%D7%95%D7%A8%D7%99%D7%99%D7%94"
+  },
+  "כעביה-טבאש-חג'אג'רה": {
+   "title": "כעביה-טבאש-חג'אג'רה",
+   "extract": "כעביה-טבאש-חג'אג'רה (בערבית: كعبية، طباش،حجاجرة) היא מועצה מקומית במחוז הצפון בישראל. היא הוכרזה כמועצה מקומית בשנת 1996. \nביישוב פועלים קופת חולים, מגרש כדורגל, מתנ\"ס ושני מסגדים.",
+   "image": "https://upload.wikimedia.org/wikipedia/he/4/4b/Ka%27abiyye-Tabbash-Hajajre_COA.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+   "original": "https://upload.wikimedia.org/wikipedia/he/4/4b/Ka%27abiyye-Tabbash-Hajajre_COA.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": 32.74970985,
+   "lon": 35.18566264,
+   "url": "https://he.wikipedia.org/wiki/%D7%9B%D7%A2%D7%91%D7%99%D7%94-%D7%98%D7%91%D7%90%D7%A9-%D7%97%D7%92%27%D7%90%D7%92%27%D7%A8%D7%94"
+  },
+  "כפר כנא": {
+   "title": "כפר כנא",
+   "extract": "כפר כַּנָּא (בערבית: كفر كنا) היא מועצה מקומית ערבית בגליל התחתון, הנמצאת מצפון לערים נוף הגליל ונצרת. הוכרזה כמועצה מקומית בשנת 1968. כ-90% מתושבי הכפר הם מוסלמים והיתר נוצרים. היישוב מזוהה עם היישוב הקדום קנה, הקדוש לנצרות.",
+   "image": "https://upload.wikimedia.org/wikipedia/he/5/58/-Coat_of_arms_of_Kafr_Kanna.png?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+   "original": "https://upload.wikimedia.org/wikipedia/he/5/58/-Coat_of_arms_of_Kafr_Kanna.png?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": 32.74665992,
+   "lon": 35.34219278,
+   "url": "https://he.wikipedia.org/wiki/%D7%9B%D7%A4%D7%A8_%D7%9B%D7%A0%D7%90"
+  },
+  "אירוס נצרתי": {
+   "title": "אירוס נצרתי",
+   "extract": "אִירוּס נַצְרָתִי או אִירִיס נַצְרָתִי (שם מדעי: Iris bismarckiana) הוא מין בסקציית אירוסי ההיכל (Oncocyclus), בתת-סוג אירוס בסוג אירוס. האירוס הנצרתי אנדמי לצפון ארץ ישראל, לבנון, ירדן וסוריה. המין גדל בארץ ישראל בהרי נצרת, גבעת המורה בהרי נפתלי ולרגלי החרמון. מן העבר המזרחי של הירדן, האירוס הנצרתי צומח בחבל הגלעד במדינת ירדן. מכיוון שהמוסלמים נוהגים לשתול אותו בבתי קברות, מניחים שאוכלוסיות מסוימות הובאו למקומן על ידי האדם. אוכלוסיות אחדות שגדלות בבר כנראה התפתחו מצמחים שנשתלו בבתי הקברות המוסלמיים.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Iris-bismarckiana-Zachi-Evenor-01_%28cropped%29.jpg/960px-Iris-bismarckiana-Zachi-Evenor-01_%28cropped%29.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/2/25/Iris-bismarckiana-Zachi-Evenor-01_%28cropped%29.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": null,
+   "lon": null,
+   "url": "https://he.wikipedia.org/wiki/%D7%90%D7%99%D7%A8%D7%95%D7%A1_%D7%A0%D7%A6%D7%A8%D7%AA%D7%99"
+  },
+  "הר תבור": {
+   "title": "הר תבור",
+   "extract": "הַר תָּבוֹר הוא הר בגליל התחתון, מדרום לרכס הרי נצרת ומצפון לעמק יזרעאל. פסגתו היא בגובה 562 מטר מעל פני הים, וכ-400 מטרים מעל סביבתו. הפסגה בולטת ונראית למרחוק ברחבי הגליל ואף מרמת הגולן. במבט מכפר תבור, ממזרח למערב, הפסגה נראית מחודדת. במבט מדרום לצפון, מכיוון עפולה, הפסגה נראית מעוגלת ומתונה.\nעל מדרונות ההר שוכנים שלושה יישובים: אום אל-גנם (בקצה הדרום מזרחי), דבורייה (בתחתית המדרון המערבי), ושבלי (בתחתית המדרון המזרחי), וממזרח לו המושבה כפר תבור.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/45/Hartavor.jpg/960px-Hartavor.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/4/45/Hartavor.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": 32.68711389,
+   "lon": 35.39038333,
+   "url": "https://he.wikipedia.org/wiki/%D7%94%D7%A8_%D7%AA%D7%91%D7%95%D7%A8"
+  },
+  "משהד": {
+   "title": "משהד",
+   "extract": "מַשְׁהַד (בפרסית: ‏‏Ⓘ‏, מילולית: \"מקום הַקְרָבָה\", קרוב למילה הערבית \"שהיד\") היא העיר השנייה בגודלה באיראן ובירת הפרובינציה ח'וראסאן רזאווי שבצפון-מזרח המדינה. העיר ממוקמת כ-736 ק\"מ מזרחית לבירה טהראן וכ-210 ק\"מ דרום-מזרחית לאשגבאט בירת טורקמניסטן. גובהה 995 מטרים מעל פני הים.\nהעיר קדושה לשיעים בשל מקדש האימאם א-רידא, שם נמצא קברו של האימאם השמיני עלי א-רידא (בפרסית נהגה שמו לעיתים קרובות אֵמאם רֵזה). מיליוני מאמינים שיעים פוקדים את הקבר מדי שנה. העיר ידועה גם כעירו של פירדוסי, המשורר האיראני שכתב את שאהנאמה, שנחשב לאפוס הלאומי של איראן, וקברו נמצא סמוך לעיר.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Aerial_View_of_Koohsangi_street%2C_Mashhad%2C_Iran.png/960px-Aerial_View_of_Koohsangi_street%2C_Mashhad%2C_Iran.png?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/d/df/Aerial_View_of_Koohsangi_street%2C_Mashhad%2C_Iran.png?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": 36.3,
+   "lon": 59.6,
+   "url": "https://he.wikipedia.org/wiki/%D7%9E%D7%A9%D7%94%D7%93"
+  },
+  "קרני חיטין": {
+   "title": "קרני חיטין",
+   "extract": "קרני חיטין הוא שמו של הר געש כבוי בגליל התחתון, בקרבת הר ארבל; גובהו המרבי 326 מטר, והוא כ-5 ק\"מ ממערב לטבריה, ומעליה. ההר זכה לשמו בשל שתי פסגותיו, שצורתן כשל קרניים. קיימת סברה כי שתי פסגותיו – הידועות כ\"קרניים\" – הן פקקים געשיים שנחשפו באמצעות סחיפה. בשנת 2007 הוכרזה סביבת ההר כגן לאומי.\nמקרני חיטין ניתן לראות את הכנרת, הגלעד, הגולן והגליל.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/KARNEI_HITTIN_AERIAL.jpg/960px-KARNEI_HITTIN_AERIAL.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/8/83/KARNEI_HITTIN_AERIAL.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": 32.8044923,
+   "lon": 35.4614438,
+   "url": "https://he.wikipedia.org/wiki/%D7%A7%D7%A8%D7%A0%D7%99_%D7%97%D7%99%D7%98%D7%99%D7%9F"
+  },
+  "הר ארבל": {
+   "title": "הר ארבל",
+   "extract": "הארבל הוא מצוּק הנמצא בצפון ישראל במזרח הגליל התחתון, מצפון-מערב לטבריה, מצפון לבקעת ארבל. הר ארבל מתנשא לגובה 181 מטרים מעל פני הים, כ-390 מטרים מעל הכנרת.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/Mount_Arbel%2C_Israel.JPG/960px-Mount_Arbel%2C_Israel.JPG?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Mount_Arbel%2C_Israel.JPG?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": 32.824,
+   "lon": 35.507,
+   "url": "https://he.wikipedia.org/wiki/%D7%94%D7%A8_%D7%90%D7%A8%D7%91%D7%9C"
+  },
+  "חוות כנרת": {
+   "title": "חוות כנרת",
+   "extract": "חוות כנרת (או חצר כנרת) היא חווה חקלאית שהוקמה ב-1908 על חוף ימת כנרת בחלק הדרומי-מערבי. ההקמה בוצעה על ידי המשרד הארצישראלי של ההסתדרות הציונית, על פי הצעת מנהלו, ארתור רופין, על מנת להכשיר פועלים יהודים לעבודה חקלאית ובניין לשם התיישבות קבע.\nבוגרי החווה היו להוגי הדעות והמייסדים של מפעלי ההתיישבות המגוונים בתקופת העלייה השנייה ותנועת העבודה: בה החלו הניסיונות להקמת הקבוצה, הקיבוץ והמושב (ממנה יצאו מתיישבי דגניה, קבוצת כנרת, נהלל, עין חרוד ועוד), היא הייתה למוקד התארגנות של פועלי הארץ, ובה הונחו היסודות למספר ארגונים אשר עצבו את פני המדינה שבדרך, כגון ההגנה, המשביר, תנובה וסולל בונה.\nהמקום הוכר כאתר מורשת על ידי המועצה לשימור אתרי מורשת בישראל ועל ידי תוכנית ציוני דרך.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c1/Kinnereth062.jpg/960px-Kinnereth062.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Kinnereth062.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": 32.71316667,
+   "lon": 35.56541667,
+   "url": "https://he.wikipedia.org/wiki/%D7%97%D7%95%D7%95%D7%AA_%D7%9B%D7%A0%D7%A8%D7%AA"
+  },
+  "נחל עמוד": {
+   "title": "נחל עמוד",
+   "extract": "נַחַל עַמּוּד הוא נחל באזור הגליל העליון הנשפך אל הכנרת. זהו הגבוה שבנחלי הארץ המושכים מים כל ימות השנה.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/IHM_%D7%94%D7%A2%D7%9E%D7%95%D7%93_%D7%A9%D7%9C_%D7%A0%D7%97%D7%9C_%D7%A2%D7%9E%D7%95%D7%93_1.jpeg/960px-IHM_%D7%94%D7%A2%D7%9E%D7%95%D7%93_%D7%A9%D7%9C_%D7%A0%D7%97%D7%9C_%D7%A2%D7%9E%D7%95%D7%93_1.jpeg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/a/a3/IHM_%D7%94%D7%A2%D7%9E%D7%95%D7%93_%D7%A9%D7%9C_%D7%A0%D7%97%D7%9C_%D7%A2%D7%9E%D7%95%D7%93_1.jpeg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": 32.88091944,
+   "lon": 35.50326389,
+   "url": "https://he.wikipedia.org/wiki/%D7%A0%D7%97%D7%9C_%D7%A2%D7%9E%D7%95%D7%93"
+  },
+  "נחל ציפורי": {
+   "title": "נחל ציפורי",
+   "extract": "נַחַל צִיפּוֹרִי הוא נחל איתן הזורם מהרי נצרת לנחל קישון. הנחל, שאורכו 32 ק\"מ, מתחיל את דרכו ביישוב ריינה, עובר בגבעות יער אלונים הסמוכות לשפרעם, ומתנקז אל נחל קישון (שמתנקז בהמשך אל מפרץ חיפה על חוף הים התיכון). הוא ניזון מעינות ציפורי, עינות יפתחאל ועין יבקע, וממספר רב של מעיינות אכזב כמו עין רני, עין אבינועם, עין מהיל, עין גת חפר, עין אמת אבל, עין לפידות ועין תורעאן. במפות ישנות כגון במפות ז'אקוטן מ-1799 ומפות PEF נקרא הנחל Nahar wadi melik על שם הוואדי שבו הוא זורם. כיום השם ואדי מילק מיוחס לוואדי אחר. הנחל נשפך לקישון בסמוך למתחם בז\"ן.\nישנן עדויות מלפני אלפי שנים להתיישבות במקום ולאורך הנחל טחנות קמח ושרידי יישובים עתיקים. לאורכו של הנחל מתגוררים מספר שבטי בדואים בכפרים זרזיר, כעביה-טבאש-חג'אג'רה, ח'וואלד וחילף.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/PikiWiki_Israel_36454_Geography_of_Israel.JPG/960px-PikiWiki_Israel_36454_Geography_of_Israel.JPG?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/c/c0/PikiWiki_Israel_36454_Geography_of_Israel.JPG?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": null,
+   "lon": null,
+   "url": "https://he.wikipedia.org/wiki/%D7%A0%D7%97%D7%9C_%D7%A6%D7%99%D7%A4%D7%95%D7%A8%D7%99"
+  },
+  "נחל תבור": {
+   "title": "נחל תבור",
+   "extract": "נַחַל תָּבוֹר (בערבית: ואדי אל־בִּירָה) הוא נחל איתן בגליל התחתון, שמוצאו באזור הר כסולות שבהרי נצרת, זורם לכיוון דרום-מזרח ונשפך אל נהר הירדן סמוך לתל שושן וסמוך לקיבוץ גשר, כ־3 ק\"מ מדרום לנהריים. בדרכו הוא עוקף את הר תבור ומנקז אליו יובלים רבים, המרכזי מבניהם הוא נחל השבעה. הנחל מהווה גבול גאוגרפי בין רמת סירין לרמת כוכב. בקטע התחתון של הנחל, הנכלל בתחום שמורת הטבע \"נחל תבור\" נובעים שלושה מעיינות: עין רכש, עין זאב ועין שחל.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/Nahal_Tavor_Basalt_Canyon-2.jpg/960px-Nahal_Tavor_Basalt_Canyon-2.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/4/43/Nahal_Tavor_Basalt_Canyon-2.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": null,
+   "lon": null,
+   "url": "https://he.wikipedia.org/wiki/%D7%A0%D7%97%D7%9C_%D7%AA%D7%91%D7%95%D7%A8"
+  },
+  "קבר רבי שמעון בר יוחאי": {
+   "title": "קבר רבי שמעון בר יוחאי",
+   "extract": "מקום קברו של רבי שמעון בר יוחאי (רשב\"י), תנא בן המאה ה-2, שוכן לפי המדרש במירון הקדומה. כיום, הקבר בהר מירון נחשב לקונצנזוס יהודי והוא מהמפורסמים בארץ ישראל ובעולם, והאתר הדתי השני בארץ במספר המבקרים השנתי בו, אחרי הכותל המערבי. ההילולה הנערכת במקום מדי שנה בל\"ג בעומר, היא האירוע האזרחי-דתי השנתי הגדול בישראל. מנהג נפוץ הוא לבצע במקום את החלאקה, טקס התספורת הראשונה בגיל שלוש.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/%D7%9B%D7%A0%D7%99%D7%A1%D7%94_%D7%9C%D7%A6%D7%99%D7%95%D7%9F_%D7%A8%D7%91%D7%99_%D7%A9%D7%9E%D7%A2%D7%95%D7%9F_%D7%91%D7%A8_%D7%99%D7%95%D7%97%D7%90%D7%99_%D7%AA%D7%A9%D7%A2%22%D7%98.jpg/960px-%D7%9B%D7%A0%D7%99%D7%A1%D7%94_%D7%9C%D7%A6%D7%99%D7%95%D7%9F_%D7%A8%D7%91%D7%99_%D7%A9%D7%9E%D7%A2%D7%95%D7%9F_%D7%91%D7%A8_%D7%99%D7%95%D7%97%D7%90%D7%99_%D7%AA%D7%A9%D7%A2%22%D7%98.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/d/dd/%D7%9B%D7%A0%D7%99%D7%A1%D7%94_%D7%9C%D7%A6%D7%99%D7%95%D7%9F_%D7%A8%D7%91%D7%99_%D7%A9%D7%9E%D7%A2%D7%95%D7%9F_%D7%91%D7%A8_%D7%99%D7%95%D7%97%D7%90%D7%99_%D7%AA%D7%A9%D7%A2%22%D7%98.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": null,
+   "lon": null,
+   "url": "https://he.wikipedia.org/wiki/%D7%A7%D7%91%D7%A8_%D7%A8%D7%91%D7%99_%D7%A9%D7%9E%D7%A2%D7%95%D7%9F_%D7%91%D7%A8_%D7%99%D7%95%D7%97%D7%90%D7%99"
+  },
+  "נחל מירון": {
+   "title": "נחל מירון",
+   "extract": "נחל מירון הוא אחד מיובליו של נחל עמוד, הנמצא בגליל העליון. הנחל זורם ממורדות הר מירון לכיוון מזרח, עובר דרך שטחים חקלאיים ושטחי טבע רבים, והוא נשפך לנחל עמוד. אורכו של הנחל הוא כ-5 קילומטרים, והוא נחשב לנחל קצר יחסית אך בעל חשיבות היסטורית וגאוגרפית רבה. תוואי הנחל עובר סמוך למושב מירון וצפונית להר מסרבים. לאורכו מספר מעיינות בהם מעין מירון (\"מי מגידו\") ועין בר-יוחאי.\nבמעלה הגדה הצפונית, סמוך למושב מירון, נמצאים בית הכנסת העתיק במירון וקבר רבי שמעון בר יוחאי. ובגדה הדרומית נמצאים שרידי בית הכנסת בחורבת שמע.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/Meron-hurvat-shema-657.jpg/960px-Meron-hurvat-shema-657.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/7/72/Meron-hurvat-shema-657.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": null,
+   "lon": null,
+   "url": "https://he.wikipedia.org/wiki/%D7%A0%D7%97%D7%9C_%D7%9E%D7%99%D7%A8%D7%95%D7%9F"
+  },
+  "ירדנית": {
+   "title": "ירדנית",
+   "extract": "ירדנית הוא אתר טבילה בנהר הירדן המיועד לצליינים נוצרים. האתר ממוקם דרומית למוצא הנהר מהכנרת, בין סכר דגניה לסכר אלומות בסמוך לקבוצת כנרת, והוא מצוי בבעלות הקבוצה. באתר 12 בריכות טבילה נפרדות. בשנת 2012 הוכפלה קיבולת האתר לאור מספר המבקרים הרב.\nעל פי המסורת הנוצרית, הטביל יוחנן המטביל את ישו בקסר אל-יהוד, צפונית לים המלח ומזרחית ליריחו. במשך מאות שנים היה קסר אל יהוד אתר חשוב לביקורי צליינים, ובסמוך לו הוקמו מנזרים ובתי הארחה. לאחר מלחמת ששת הימים הפך קסר אל יהוד לאזור ספר, בגבול בין ישראל לירדן. כתחליף לאתר זה, לאחר הכרזה על האזור כשטח צבאי סגור במהלך מלחמת ההתשה, יזם משרד התיירות את הקמת הירדנית בשנת 1981.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/Yardenit.jpg/960px-Yardenit.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/3/34/Yardenit.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": null,
+   "lon": null,
+   "url": "https://he.wikipedia.org/wiki/%D7%99%D7%A8%D7%93%D7%A0%D7%99%D7%AA"
+  },
+  "גן לאומי ברעם": {
+   "title": "גן לאומי ברעם",
+   "extract": "גן לאומי ברעם הוא גן לאומי ובתחומו בית כנסת מתקופת התלמוד, ששרידיו הם מהיפים ביותר שנבנו בתקופה זו ומעיד על קיום קהילה יהודית מבוססת במקום. הגן משתרע על ראש גבעה שגובהה 755 מטרים מעל פני הים המשקיפה על פני הסביבה. כפר ברעם, שמו של היישוב היהודי בו נמצא בית הכנסת, נזכר לראשונה ב-1210 אצל הנוסע ר' שמואל ב\"ר שמשון ואחריתו, כנראה, בתקופה הממלוכית.\nבשטח הגן הלאומי מצויים מבני הכפר הערבי בירעם, שתושביו, נוצרים מרונים, פונו ממנו במלחמת העצמאות ולא הורשו לחזור אליו לאחריה, על אף הבטחות שקיבלו. לאורך השנים מנהלים עקורי איקרית ובירעם מאבק משפטי במוסדות המדינה בתביעה לשוב לכפרם.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/PikiWiki_Israel_8826_the_ancient_synagogue_in_baram.jpg/960px-PikiWiki_Israel_8826_the_ancient_synagogue_in_baram.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/d/d1/PikiWiki_Israel_8826_the_ancient_synagogue_in_baram.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": null,
+   "lon": null,
+   "url": "https://he.wikipedia.org/wiki/%D7%92%D7%9F_%D7%9C%D7%90%D7%95%D7%9E%D7%99_%D7%91%D7%A8%D7%A2%D7%9D"
+  },
+  "הר דבורה": {
+   "title": "הר דבורה",
+   "extract": "הר דבורה (בערבית: جبل سرطبة; ג'בל סָרְטָבָּה) הוא הר בישראל בגובה של 437 מטרים מעל פני הים, השוכן בהרי נצרת שבגליל התחתון, על גבולו של עמק יזרעאל שמדרום לו. הוא שוכן בין הר כסולות ממערב, הר יונה מצפון והר תבור שנמצא 4.5 ק\"מ דרומית-מזרחית לו. על מורדותיו המזרחיים של ההר שוכן הכפר דבורייה, ממערב לו העיר נוף הגליל ובעמק שמצפון לו הכפר עין מאהל. שמו של ההר מנציח את דבורה הנביאה שניצחה במלחמה בעמק שלמרגלותיו את סיסרא, שר צבאו של יבין מלך חצור.\nההר עשוי אבן גיר ודולומיט, ואדמתו היא אדמת טרה רוסה. הוא מיוער בחורש ים תיכוני, במיוחד בעצי אלון. המקום הוכרז כשמורת יער עוד בתקופת המנדט הבריטי ב-1926, וכונה \"יער סרטבה\". על הפסגה הכשירה קק\"ל חניון ובמקום ניצב סלע המנציח את יובל 25 השנים לחתונתה של מלכת הממלכה המאוחדת אליזבת השנייה עם הנסיך פיליפ שנחוג בשנת 1972.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/HarDvora1.jpg/960px-HarDvora1.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/0/04/HarDvora1.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": null,
+   "lon": null,
+   "url": "https://he.wikipedia.org/wiki/%D7%94%D7%A8_%D7%93%D7%91%D7%95%D7%A8%D7%94"
+  },
+  "דרך נוף יער בית קשת": {
+   "title": "דרך נוף יער בית קשת",
+   "extract": "דרך נוף יער בית קשת היא דרך נופית בגליל התחתון. שמה ניתן לה על שם הקיבוץ בית קשת שהדרך עוברת לידו. הכניסה הצפונית של הדרך היא ליד מחנה שמשון הכניסה היא מכביש 77 כ-2 ק\"מ מערבית למחלף גולני. הדרך עוברת ליד בית קשת לידו נמצאת הכניסה המזרחית אליה מגיעים מכביש 65. משם הדרך פונה לדרום-מערב לכיוון נוף הגליל.\nכניסה הדרומית של הדרך היא ליד הר כסולות ויער צ'רצ'יל. קטע דרך נופית נוסף סובבת את קיבוץ בית קשת. תחילתה בכניסה המזרחית ליד תל גובל היא פונה לכיוון הר דבורה, ולאחר מספר ק\"מ הדרך פונה דרומה לכיוון נחל השבעה וחוזרת לכניסה המזרחית.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d3/Beit_Keshet_scenic_route_map.jpg/960px-Beit_Keshet_scenic_route_map.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Beit_Keshet_scenic_route_map.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": null,
+   "lon": null,
+   "url": "https://he.wikipedia.org/wiki/%D7%93%D7%A8%D7%9A_%D7%A0%D7%95%D7%A3_%D7%99%D7%A2%D7%A8_%D7%91%D7%99%D7%AA_%D7%A7%D7%A9%D7%AA"
+  },
+  "נחל צבעון": {
+   "title": "נחל צבעון",
+   "extract": "נַחַל צִבְעוֹן (בערבית: ואדי צוביע; נקרא גם: נחל גורי האריות) הוא נחל אכזב הממוקם בגליל העליון והוא אחד מיובליו של נחל דישון.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/Building_no_free_image_yet-he.svg/960px-Building_no_free_image_yet-he.svg.png?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Building_no_free_image_yet-he.svg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": null,
+   "lon": null,
+   "url": "https://he.wikipedia.org/wiki/%D7%A0%D7%97%D7%9C_%D7%A6%D7%91%D7%A2%D7%95%D7%9F"
+  },
+  "נחל אלכסנדר": {
+   "title": "נחל אלכסנדר",
+   "extract": "נַחַל אֲלֶכְּסַנְדֶּר (בעבר: נהר אסְכַּנְדֶרוּנה) הוא נחל הזורם מהרי השומרון ועד לים התיכון. ברובו הוא זורם בעמק חפר. שפך הנחל מצוי מצפון לנתניה בין המושבים מכמורת ובית ינאי. הנחל מנקז את אזור שכם ומרכז השומרון, וכן חלק מהשרון. אורך הנחל כ-32 ק\"מ. חלקו התחתון של הנחל וסביבותיו הם גן לאומי מוכרז.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/DSC_5248%D7%A0%D7%97%D7%9C_%D7%90%D7%9C%D7%9B%D7%A1%D7%A0%D7%93%D7%A8.jpg/960px-DSC_5248%D7%A0%D7%97%D7%9C_%D7%90%D7%9C%D7%9B%D7%A1%D7%A0%D7%93%D7%A8.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/a/af/DSC_5248%D7%A0%D7%97%D7%9C_%D7%90%D7%9C%D7%9B%D7%A1%D7%A0%D7%93%D7%A8.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": 32.39613331,
+   "lon": 34.86570239,
+   "url": "https://he.wikipedia.org/wiki/%D7%A0%D7%97%D7%9C_%D7%90%D7%9C%D7%9B%D7%A1%D7%A0%D7%93%D7%A8"
+  },
+  "נתניה": {
+   "title": "נתניה",
+   "extract": "נְתַנְיָה היא עיר במחוז המרכז בישראל, השביעית באוכלוסייתה בערי מדינת ישראל. המקום נוסד על ידי קבוצת בני בנימין בשנת 1929 כיישוב לבני המושבות ופועלי הפרדס, והוכרז כעיר בשנת 1948. נתניה נקראת גם \"בירת השרון\", על שום היותה העיר הגדולה ביותר באזור השרון, וכן \"עיר היהלומים\", בשל תעשיית היהלומים המפותחת שהתקיימה בה בעבר.\nהעיר שוכנת במישור החוף (מחוז מרכז) לחופי הים התיכון, על אדמת כורכר. חוף הים מאופיין בצוקי כורכר גבוהים לאורך כל רצועת החוף של העיר, פרט לחלקה הדרומי ביותר – שכונת פולג ועיר ימים.\nהעיר קרויה על שם הנדבן נתן שטראוס, והיא העיר הגדולה ביותר בישראל ששמה מנציח אדם.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/20201130_153836_%D7%9E%D7%91%D7%98_%D7%9E%D7%9C%D7%9E%D7%A2%D7%9C%D7%94_%D7%A2%D7%9C_%D7%A9%D7%9C%D7%95%D7%9C%D7%99%D7%AA_%D7%94%D7%97%D7%95%D7%A8%D7%A3_%D7%91%D7%A0%D7%AA%D7%A0%D7%99%D7%94.jpg/960px-20201130_153836_%D7%9E%D7%91%D7%98_%D7%9E%D7%9C%D7%9E%D7%A2%D7%9C%D7%94_%D7%A2%D7%9C_%D7%A9%D7%9C%D7%95%D7%9C%D7%99%D7%AA_%D7%94%D7%97%D7%95%D7%A8%D7%A3_%D7%91%D7%A0%D7%AA%D7%A0%D7%99%D7%94.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/d/d8/20201130_153836_%D7%9E%D7%91%D7%98_%D7%9E%D7%9C%D7%9E%D7%A2%D7%9C%D7%94_%D7%A2%D7%9C_%D7%A9%D7%9C%D7%95%D7%9C%D7%99%D7%AA_%D7%94%D7%97%D7%95%D7%A8%D7%A3_%D7%91%D7%A0%D7%AA%D7%A0%D7%99%D7%94.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": 32.332,
+   "lon": 34.855,
+   "url": "https://he.wikipedia.org/wiki/%D7%A0%D7%AA%D7%A0%D7%99%D7%94"
+  },
+  "ג'סר א-זרקא": {
+   "title": "ג'סר א-זרקא",
+   "extract": "גִ'סְר אֶ־זַּרְקָא (בערבית: جسر الزرقاء, תעתיק מדויק: ג'סר אלזרקאא, לעיתים נקרא בקיצור ג'סר, בתרגום: הגשר הכחול) היא מועצה מקומית במחוז חיפה שבישראל. הכפר נחנך ב-1924, והוכרז כמועצה מקומית בשנת 1961. כלל תושבי ג'סר א-זרקא הם ערבים-מוסלמים.\nהיישוב שוכן על רצועת כורכר לחוף הים התיכון שגובהה 5–20 מטרים מעל פני הים, שלמרגלותיה זורם הקטע התחתון של נחל תנינים, שמפריד בין היישוב לבין הים במערב. מדרום שוכנת קיסריה, ומצפון מעגן מיכאל והכניסה לשמורת הטבע נחל התנינים. במזרח גובל היישוב בכביש 2 (כביש חיפה - תל אביב). בסמוך לשפך הנחל, דרומית-מערבית לבתי היישוב, שוכן תל תנינים.\nפירוש השם ג'סר א-זרקא הוא הגשר (על הנחל) הכחול על שם הגשר שנבנה על נחל תנינים \"אל-וואדי א-זרקא\" (הנחל הכחול בערבית).",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/PikiWiki_Israel_74654_zasrazarqa.jpg/960px-PikiWiki_Israel_74654_zasrazarqa.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/f/fd/PikiWiki_Israel_74654_zasrazarqa.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": 32.53665527,
+   "lon": 34.91212768,
+   "url": "https://he.wikipedia.org/wiki/%D7%92%27%D7%A1%D7%A8_%D7%90-%D7%96%D7%A8%D7%A7%D7%90"
+  },
+  "זכרון יעקב": {
+   "title": "זכרון יעקב",
+   "extract": "זִכְרוֹן יַעֲקֹב היא מועצה מקומית במחוז חיפה בישראל. היא נוסדה כמושבה ב-6 בדצמבר 1882 בידי עולים חובבי ציון מרומניה, והייתה המושבה השנייה של אנשי העלייה הראשונה (אחרי ראשון לציון).\nהמושבה יושבת על חוטם הכרמל, חלקו הדרומי של רכס הכרמל. היא הוכרזה כמועצה מקומית בשנת 1950.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/PikiWiki_Israel_73640_glider_photo_of_zichron_yaacov.jpg/960px-PikiWiki_Israel_73640_glider_photo_of_zichron_yaacov.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/b/b7/PikiWiki_Israel_73640_glider_photo_of_zichron_yaacov.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": 32.57064731,
+   "lon": 34.95227106,
+   "url": "https://he.wikipedia.org/wiki/%D7%96%D7%9B%D7%A8%D7%95%D7%9F_%D7%99%D7%A2%D7%A7%D7%91"
+  },
+  "רמת הנדיב": {
+   "title": "רמת הנדיב",
+   "extract": "גני רמת הנדיב הוא פארק טבע רחב-ידיים, שהוקם סביב חלקת הקבר של הברון בנימין אדמונד דה רוטשילד, דרומית לזכרון יעקב. האתר מוקדש לברון רוטשילד כהוקרה על תרומתו הרבה לעם ישראל. רוטשילד נפטר בשנת 1934.בתחילת שנות החמישים  עצמותיו לקבורה ברמת הנדיב, והפארק (שהיה קיים עוד קודם לכן) הוקדש לזכרו.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Rotschild_tomb.JPG/960px-Rotschild_tomb.JPG?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Rotschild_tomb.JPG?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": 32.54797222,
+   "lon": 34.94424722,
+   "url": "https://he.wikipedia.org/wiki/%D7%A8%D7%9E%D7%AA_%D7%94%D7%A0%D7%93%D7%99%D7%91"
+  },
+  "אלונים": {
+   "title": "אלונים",
+   "extract": "אַלּוֹנִים הוא קיבוץ בצפון עמק יזרעאל, ליד קריית טבעון, המשתייך לתנועה הקיבוצית. הקיבוץ, שעלה לקרקע במיקומו הנוכחי בשנת 1938, נמצא בתחום השיפוט של המועצה האזורית עמק יזרעאל.",
+   "image": "https://upload.wikimedia.org/wikipedia/he/5/56/%D7%9C%D7%95%D7%92%D7%95-%D7%A7%D7%99%D7%91%D7%95%D7%A5-%D7%90%D7%9C%D7%95%D7%A0%D7%99%D7%9D.png?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+   "original": "https://upload.wikimedia.org/wikipedia/he/5/56/%D7%9C%D7%95%D7%92%D7%95-%D7%A7%D7%99%D7%91%D7%95%D7%A5-%D7%90%D7%9C%D7%95%D7%A0%D7%99%D7%9D.png?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": 32.7195803,
+   "lon": 35.14534841,
+   "url": "https://he.wikipedia.org/wiki/%D7%90%D7%9C%D7%95%D7%A0%D7%99%D7%9D"
+  },
+  "אפולוניה": {
+   "title": "אפולוניה",
+   "extract": "אַפּוֹלוֹנְיָה־אַרְסוּף (גם תֵּל אַרְשָׁף) היא מצודה עתיקה ועיר ששרידיה נמצאים במישור החוף על מצוקי הכורכר בשרון הדרומי, ממערב לשכונת נוף ים בהרצליה, בקרבת סידנא עלי של ימינו. המקום הוכשר לביקורי מטיילים והוקם במקום גן לאומי.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/Arsur_Fortress1.jpg/960px-Arsur_Fortress1.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Arsur_Fortress1.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": 32.1952,
+   "lon": 34.8068,
+   "url": "https://he.wikipedia.org/wiki/%D7%90%D7%A4%D7%95%D7%9C%D7%95%D7%A0%D7%99%D7%94"
+  },
+  "נחל יגור": {
+   "title": "נחל יגור",
+   "extract": "נַחַל יָגוּר הוא נחל אכזב הזורם במורדות המזרחיים של הר הכרמל בכרמל הגבוה ועובר ב\"פארק אשדות יגור\" שהוא חלק מפארק הכרמל. נקרא גם ואדי שומריה על שם שיחי השומר הגדלים באזור. תחילתו של הנחל באזור עספיא. הוא זורם דרומית-מזרחית לנחל מעפילים לכיוון עמק זבולון ונשפך לנחל קישון. בדרכו עובר הנחל בקיבוץ יגור. בדומה ליתר נחלי הכרמל הזורמים ממזרח לקו פרשת המים של ההר, הנחל קצר, קניוני ובעל גדות תלולות. אורכו של הנחל כ-2 ק\"מ.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/Jagur_080.jpg/960px-Jagur_080.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Jagur_080.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": null,
+   "lon": null,
+   "url": "https://he.wikipedia.org/wiki/%D7%A0%D7%97%D7%9C_%D7%99%D7%92%D7%95%D7%A8"
+  },
+  "כפר חסידים": {
+   "title": "כפר חסידים",
+   "extract": "כְּפַר-חֲסִידִים הוא מושב בעמק זבולון ליד קריית אתא ורכסים בתחומי מועצה אזורית זבולון.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Kfar_Hasidim_1.JPG/960px-Kfar_Hasidim_1.JPG?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Kfar_Hasidim_1.JPG?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": 32.75056294,
+   "lon": 35.09261565,
+   "url": "https://he.wikipedia.org/wiki/%D7%9B%D7%A4%D7%A8_%D7%97%D7%A1%D7%99%D7%93%D7%99%D7%9D"
+  },
+  "מכמורת": {
+   "title": "מכמורת",
+   "extract": "מִכְמוֹרֶת הוא מושב בעמק חפר, כ-2 ק\"מ מדרום לחדרה וכ-6 ק\"מ צפונית לנתניה. הוא מהווה חלק ממועצה אזורית עמק חפר, והוא היישוב הצפוני ביותר בה.\nהמושב סמוך לשפך נחל אלכסנדר לחוף הים התיכון. ליד המושב קיים מפרץ ששימש בעבר נמל עתיק, ובית ספר על יסודי רמות ים בתוך כפר הנוער מבואות ים.",
+   "image": "https://upload.wikimedia.org/wikipedia/commons/7/78/Michmoret.JPG?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/7/78/Michmoret.JPG?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": 32.40634829,
+   "lon": 34.87343104,
+   "url": "https://he.wikipedia.org/wiki/%D7%9E%D7%9B%D7%9E%D7%95%D7%A8%D7%AA"
+  },
+  "נחל תנינים": {
+   "title": "נחל תנינים",
+   "extract": "נַחַל תַּנִּינִים (בערבית: وَادِي ٱلزَّرْقَاءِ - ואדי א-זֵרְקַא, \"הנחל הכחול\") הוא נחל איתן שתחילתו ברמות מנשה בין הקיבוצים דליה ועין השופט. הנחל זורם בכיוון דרום מערב, ונשפך לים התיכון צמוד לג'סר א-זרקא ודרומית לקיבוץ מעגן מיכאל. שמות נוספים וקדומים לנחל הם \"קרוקודילון\" ו\"תמאסיח\".\nסמוך למושב אביאל הקימה חברת מקורות סכר על ערוץ נחל תנינים, במסגרת מפעל \"נחלי מנשה\". בימי חורף שבהם הזרימה בנחל עזה, מוטים מי הנחל (כמו גם מים מנחלי עדה, ברקן ומשמרות) לתעלה המובילה את המים למאגר שיקוע להעשרת מי התהום, בחולות קיסריה.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/%D7%A0%D7%97%D7%9C_%D7%AA%D7%A0%D7%99%D7%A0%D7%99%D7%9D.jpg/960px-%D7%A0%D7%97%D7%9C_%D7%AA%D7%A0%D7%99%D7%A0%D7%99%D7%9D.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/1/1c/%D7%A0%D7%97%D7%9C_%D7%AA%D7%A0%D7%99%D7%A0%D7%99%D7%9D.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": 32.5475,
+   "lon": 34.915,
+   "url": "https://he.wikipedia.org/wiki/%D7%A0%D7%97%D7%9C_%D7%AA%D7%A0%D7%99%D7%A0%D7%99%D7%9D"
+  },
+  "נחל מערות": {
+   "title": "נחל מערות",
+   "extract": "נַחַל מְעָרוֹת הוא נחל הזורם בהר הכרמל. שטח אגן הניקוז שלו (ביחד עם יובלו נחל חרובים) מגיע לכ-24 קילומטר רבוע. אזור הנחל הוא שמורת טבע בשטח פארק הכרמל. במוצא הנחל אל מישור החוף ממוקם אתר ארכאולוגי-פרהיסטורי בעל חשיבות עולמית, הכולל ארבע מערות: מערת תנור (טבון), מערת גמל, מערת הנחל (אל-ואד) ומערת הגדי (סח'ול). מערות אלה מייצגות התיישבות חוזרת ונשנית של האדם הקדמון, הן האדם הניאנדרטלי והן ההומו סאפיינס וקודמיהם, במשך יותר מחצי מיליון שנה.\nרצף ההתיישבויות הפרהיסטוריות בנחל מערות ארוך ומלא במיוחד. הממצאים הייחודיים שנתגלו באתר (כמאובני אדם חשובים) וחקירתו הנמשכת לסירוגין למעלה משמונים שנה, הפכו את האתר לאחד הידועים בעולם מהתקופה הפלאוליתית. בארבע המערות שנחקרו התגלו עדויות, בין הקדומות בעולם, לקיום בו-זמני (במובן הרחב) של האדם הניאנדרטלי והאדם המודרני; לקבורת המתים; לשימוש בחפצים בעלי משמעות סמלית כחרוזים וחומרי צבע; ולהתיישבות קבע ובניית בתי אבן.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/%D7%A0%D7%97%D7%9C_%D7%9E%D7%A2%D7%A8%D7%95%D7%AA_%D7%9E%D7%9E%D7%A2%D7%95%D7%A3_%D7%94%D7%A6%D7%99%D7%A4%D7%95%D7%A8.jpg/960px-%D7%A0%D7%97%D7%9C_%D7%9E%D7%A2%D7%A8%D7%95%D7%AA_%D7%9E%D7%9E%D7%A2%D7%95%D7%A3_%D7%94%D7%A6%D7%99%D7%A4%D7%95%D7%A8.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/f/fb/%D7%A0%D7%97%D7%9C_%D7%9E%D7%A2%D7%A8%D7%95%D7%AA_%D7%9E%D7%9E%D7%A2%D7%95%D7%A3_%D7%94%D7%A6%D7%99%D7%A4%D7%95%D7%A8.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": null,
+   "lon": null,
+   "url": "https://he.wikipedia.org/wiki/%D7%A0%D7%97%D7%9C_%D7%9E%D7%A2%D7%A8%D7%95%D7%AA"
+  },
+  "נחל פולג": {
+   "title": "נחל פולג",
+   "extract": "נַחַל פּוֹלֵג (בערבית: وادي الفالق; ואדי אל-פאליק; הנחל המפלג) הוא נחל המנקז שטח באזור השרון בישראל, ונשפך לים התיכון צפונית למכון וינגייט באזור נתניה.",
+   "image": "https://upload.wikimedia.org/wikipedia/he/d/db/%D7%A0%D7%97%D7%9C_%D7%A4%D7%95%D7%9C%D7%92.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+   "original": "https://upload.wikimedia.org/wikipedia/he/d/db/%D7%A0%D7%97%D7%9C_%D7%A4%D7%95%D7%9C%D7%92.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": null,
+   "lon": null,
+   "url": "https://he.wikipedia.org/wiki/%D7%A0%D7%97%D7%9C_%D7%A4%D7%95%D7%9C%D7%92"
+  },
+  "יקבי כרמל": {
+   "title": "יקבי כרמל",
+   "extract": "יקבי כרמל (לשעבר \"כרמל מזרחי\", וקודם לכן \"כרמל\"), היא חברה ישראלית לייצור יין המפעילה מספר יקבים בישראל. שני היקבים הראשונים שלה הוקמו ב-1889‏ במושבות ראשון לציון וזכרון יעקב על ידי הברון בנימין אדמונד דה רוטשילד, והם פעילים עד היום. סמליל החברה, מציג את המרגלים שנשלחו על ידי משה רבנו לתור את הארץ ושבו עם אשכול ענבים \"וישאוהו במוט בשניים\" (במדבר י\"ג, כ\"ג). הסמליל נרכש במקור מיקבי אפרת, ומאוחר יותר אומץ הדימוי גם על ידי משרד התיירות כסמל הרשמי לתיירות ישראל.",
+   "image": "https://thumb.wikimedia.org/wikipedia/he/thumb/9/9d/%D7%A1%D7%9E%D7%9C%D7%99%D7%9C_%D7%99%D7%A7%D7%91%D7%99_%D7%9B%D7%A8%D7%9E%D7%9C_2019.svg/960px-%D7%A1%D7%9E%D7%9C%D7%99%D7%9C_%D7%99%D7%A7%D7%91%D7%99_%D7%9B%D7%A8%D7%9E%D7%9C_2019.svg.png?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/he/9/9d/%D7%A1%D7%9E%D7%9C%D7%99%D7%9C_%D7%99%D7%A7%D7%91%D7%99_%D7%9B%D7%A8%D7%9E%D7%9C_2019.svg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": null,
+   "lon": null,
+   "url": "https://he.wikipedia.org/wiki/%D7%99%D7%A7%D7%91%D7%99_%D7%9B%D7%A8%D7%9E%D7%9C"
+  },
+  "מצפה עופר": {
+   "title": "מצפה עופר",
+   "extract": "מצפה עופר הוא מצפה יערנים של קק\"ל, השוכן ביער חוף הכרמל, על מורדותיו המערביים של הכרמל, בין היישובים כרם מהר\"ל ממזרח וצרופה ממערב. המקום קרוי על שמו של מושב עופר הסמוך.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/PikiWiki_Israel_5951_Ofer_tower.JPG/960px-PikiWiki_Israel_5951_Ofer_tower.JPG?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/b/ba/PikiWiki_Israel_5951_Ofer_tower.JPG?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": null,
+   "lon": null,
+   "url": "https://he.wikipedia.org/wiki/%D7%9E%D7%A6%D7%A4%D7%94_%D7%A2%D7%95%D7%A4%D7%A8"
+  },
+  "פארק נחל חדרה": {
+   "title": "פארק נחל חדרה",
+   "extract": "פארק נחל חדרה הוא פארק שמנוהל על ידי נחלים החברה לפיתוח תיירות חדרה, השוכן בחלקו המערבי של נחל חדרה, בין כביש 2 ממזרח לבין חוף הים התיכון ממערב, ומדרום לתחנת הכוח אורות רבין.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/Orot_rabin_power_station_03.jpg/960px-Orot_rabin_power_station_03.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/a/af/Orot_rabin_power_station_03.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": null,
+   "lon": null,
+   "url": "https://he.wikipedia.org/wiki/%D7%A4%D7%90%D7%A8%D7%A7_%D7%A0%D7%97%D7%9C_%D7%97%D7%93%D7%A8%D7%94"
+  },
+  "אמות המים של קיסריה": {
+   "title": "אמות המים של קיסריה",
+   "extract": "אמות המים של קיסריה היא מערכת של אמות מים שהובילה מים לעיר קיסריה בעת העתיקה. אמות המים של קיסריה תיפקדו בזמן קיומה של העיר – מאז ייסודה בימי הורדוס ועד המאה ה-13, כאשר נהרסה בימי הסולטאן הממלוכי ביברס. אף על פי שקיסריה הוקמה על פני שכבת מי תהום גבוהים, המאפשרת אספקת מים באמצעות בארות, בוני העיר דאגו לאספקת מים זורמים לעיר, כמקובל בערים הגדולות של התקופה הרומית. המערכת הורכבה מכמה חלקים שונים.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/20140801-IMG_0217.jpg/960px-20140801-IMG_0217.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/c/c8/20140801-IMG_0217.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": null,
+   "lon": null,
+   "url": "https://he.wikipedia.org/wiki/%D7%90%D7%9E%D7%95%D7%AA_%D7%94%D7%9E%D7%99%D7%9D_%D7%A9%D7%9C_%D7%A7%D7%99%D7%A1%D7%A8%D7%99%D7%94"
+  },
+  "נחל אורן": {
+   "title": "נחל אורן",
+   "extract": "נַחַל אורן (בערבית: ואדי פלאח) הוא נחל הזורם בהר הכרמל. תחילתו ברום 420 מטרים מעל פני הים, ליד קו פרשת המים המרכזי של הכרמל באזור \"חורבת מעצרה\", כשני קילומטר מדרום-דרום-מזרח לעספיא. אורכו כ-14 ק\"מ, והוא נשפך לים התיכון צפונית לעתלית. נחל אורן הוא הגדול באגני הניקוז המערבי של הכרמל. שטח אגן הניקוז מגיע לכ-35 קמ\"ר. לאורך חלקו המערבי התחתון של אפיק הנחל עובר כביש 721 המוביל מכביש 4 עד כביש 672.\nאגן הניקוז של הנחל בנוי בעיקר מסלעים מתקופת קנומן טורון כגון אבן גיר, דולומיט וקירטון וכן מספר מחשופי טוף. מרבית חלקי הנחל מאופיינים בערוץ צר ועמוק.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Nahal_Oren_%289%29.JPG/960px-Nahal_Oren_%289%29.JPG?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Nahal_Oren_%289%29.JPG?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": null,
+   "lon": null,
+   "url": "https://he.wikipedia.org/wiki/%D7%A0%D7%97%D7%9C_%D7%90%D7%95%D7%A8%D7%9F"
+  },
+  "בית אהרנסון": {
+   "title": "בית אהרנסון",
+   "extract": "בית אהרנסון הוא ביתה של משפחת אהרנסון במושבה זכרון יעקב, ובו שוכן מוזיאון ניל\"י מאז 1956. הבית שוכן ברחוב המייסדים 40 בזכרון יעקב.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Beit_aharonson.jpg/960px-Beit_aharonson.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/5/56/Beit_aharonson.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": null,
+   "lon": null,
+   "url": "https://he.wikipedia.org/wiki/%D7%91%D7%99%D7%AA_%D7%90%D7%94%D7%A8%D7%A0%D7%A1%D7%95%D7%9F"
+  },
+  "חי-בר כרמל": {
+   "title": "חי-בר כרמל",
+   "extract": "שְׁמוּרַת חַי-בָּר כַּרְמֶל הוא מוסד זואולוגי מסוג חי-בר שנוסד על ידי רשות שמורות הטבע במטרה להגן ולהשיב לטבע בעלי חיים שחיו בעבר בצפון ישראל. חי בר כרמל נמצא בהרי הכרמל בצפון ישראל, והוא המקביל בעל האקלים הים תיכוני של חי-בר יטבתה שבערבה.\nבשנת 1973 החלו לגדר שטח שמורה לחי בר כרמל באגן נחל גלים. שמורת חי-בר כרמל משתרעת על שטח של כ-6,000 דונם. מחי-בר כרמל שוחררו לטבע היחמור הפרסי ואייל הכרמל שנעלמו מנוף הארץ.\nמנהל המוסד הוא הזואולוג בן רוזנברג.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/Carmel_Hai-Bar_%284%29.JPG/960px-Carmel_Hai-Bar_%284%29.JPG?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/6/66/Carmel_Hai-Bar_%284%29.JPG?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": null,
+   "lon": null,
+   "url": "https://he.wikipedia.org/wiki/%D7%97%D7%99-%D7%91%D7%A8_%D7%9B%D7%A8%D7%9E%D7%9C"
+  },
+  "צובה": {
+   "title": "צובה",
+   "extract": "צוֹבָה או פַּלְמָ\"ח צוֹבָה (ובעבר נקרא גם \"צובא\") הוא קיבוץ שיתופי הממוקם בפרוזדור ירושלים, ליד מבשרת ציון. הקיבוץ נמצא על שלוחת הר שגובהה 735 מטר מעל פני הים, ולידו נמצא תל צובה שגובהו 769 מטר. הכפר סובא שעל חורבותיו הוקם הקיבוץ, וכן שם הקיבוץ, משמרים את שם היישוב המקראי צֹבָה, ששרידיו נמצאים בתל צובה.\nענפי הכלכלה של הקיבוץ הם: תעשייה (מפעל \"אורן\" לשמשות בטיחות לרכב ושמשות נגד ירי), חקלאות (הכוללת מטעים, כרמים, שלחין, זיתים, עגבניות וכרוב הידרופוני, הגדל על מים).\nבקיבוץ וסביבתו ישנן אטרקציות רבות כגון: עין צובה והנקבה באורך 50 מטר, ומערת יוחנן המטביל. ענף התיירות בקיבוץ כולל את פארק השעשועים \"קיפצובה\" לילדים, ומלון כפרי \"צובה\". בנוסף קיים בקיבוץ גם אולפן לעברית.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Entrance_to_Kibbutz_Tzova.jpg/960px-Entrance_to_Kibbutz_Tzova.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Entrance_to_Kibbutz_Tzova.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": 31.78352286,
+   "lon": 35.11945192,
+   "url": "https://he.wikipedia.org/wiki/%D7%A6%D7%95%D7%91%D7%94"
+  },
+  "עין כרם": {
+   "title": "עין כרם",
+   "extract": "עין כרם (בערבית: عين كارم; ההגייה הרשמית של השם העברי היא עֵין כֶּרֶם, אך ההגייה הנפוצה היא עֵין כָּרֶם, בעקבות הערבית) היא שכונה בפאתיה הדרום-מערביים של ירושלים. המקום היה מיושב כבר מן התקופה הכנענית; בין המאה ה-14 ועד למלחמת העצמאות שכן במקום כפר ערבי שננטש במהלך המלחמה. בבתים הריקים יושבו עולים חדשים, ובמסגרת הרחבתה של ירושלים הוכרז הכפר כשכונה של העיר. גם כיום יש לשכונה עדיין אופי כפרי, בשל ניתוקה היחסי מהעיר והיותה מוקפת הרים, עמקים ויערות. עין כרם נחשבת גם למקום מקודש לנצרות ואתר צליינות לעולי רגל, מהיותה נודעת כמקום הולדתו של יוחנן המטביל; יש במקום מספר כנסיות ומנזרים, אותם פוקדים תיירים רבים.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/EinKeremFeb142022_02.jpg/960px-EinKeremFeb142022_02.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/9/9d/EinKeremFeb142022_02.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": 31.766728,
+   "lon": 35.161996,
+   "url": "https://he.wikipedia.org/wiki/%D7%A2%D7%99%D7%9F_%D7%9B%D7%A8%D7%9D"
+  },
+  "לטרון": {
+   "title": "לטרון",
+   "extract": "לטרון הוא רכס בעמק איילון, במרחק של כ-15 קילומטר מערבית לעיר ירושלים. הרכס שולט על הדרך לירושלים, נחשב ליעד אסטרטגי חשוב ונערכו בו קרבות מרכזיים, מימי התנ\"ך ועד למלחמת ששת הימים.\nמקור השם הוא שיבוש שמו של מבצר לטרון, מבצר צלבני שנבנה במקום ושנקרא בצרפתית \"Le toron des chevaliers\" (\"מגדל האבירים\" בתרגום חופשי). על פי השערה אחרת מקור השם הוא מלטינית Castellum bonu Latronis, מבצרו של הגנב הטוב.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Latrun-Castle-S-057-Monastery-Fort.jpg/960px-Latrun-Castle-S-057-Monastery-Fort.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/9/95/Latrun-Castle-S-057-Monastery-Fort.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": 31.8334913,
+   "lon": 35.02360525,
+   "url": "https://he.wikipedia.org/wiki/%D7%9C%D7%98%D7%A8%D7%95%D7%9F"
+  },
+  "כפר סירקין": {
+   "title": "כפר סירקין",
+   "extract": "כְּפַר סִירְקִין הוא מושב באזור השרון ליד פתח תקווה השייך למועצה אזורית דרום השרון.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/%D7%A9%D7%9C%D7%98_%D7%9B%D7%A0%D7%99%D7%A1%D7%94_%D7%9C%D7%9B%D7%A4%D7%A8_%D7%A1%D7%99%D7%A8%D7%A7%D7%99%D7%9F.jpg/960px-%D7%A9%D7%9C%D7%98_%D7%9B%D7%A0%D7%99%D7%A1%D7%94_%D7%9C%D7%9B%D7%A4%D7%A8_%D7%A1%D7%99%D7%A8%D7%A7%D7%99%D7%9F.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/6/6b/%D7%A9%D7%9C%D7%98_%D7%9B%D7%A0%D7%99%D7%A1%D7%94_%D7%9C%D7%9B%D7%A4%D7%A8_%D7%A1%D7%99%D7%A8%D7%A7%D7%99%D7%9F.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": 32.07741538,
+   "lon": 34.92440217,
+   "url": "https://he.wikipedia.org/wiki/%D7%9B%D7%A4%D7%A8_%D7%A1%D7%99%D7%A8%D7%A7%D7%99%D7%9F"
+  },
+  "עינת": {
+   "title": "עינת",
+   "extract": "עֵינַת הוא קיבוץ באזור השרון השייך למועצה אזורית דרום השרון. הוא שוכן דרומית-מערבית לראש העין וכביש הגישה היחיד אליו מסתעף מכביש 444, המקשר בין ראש העין לפתח תקווה. כמו כן, תוואי כביש 6 עובר כמה עשרות מטרים מערבית לקיבוץ, אך אינו מוביל אליו.",
+   "image": "https://thumb.wikimedia.org/wikipedia/he/thumb/1/1f/%D7%A2%D7%99%D7%A0%D7%AA_1390.JPG/960px-%D7%A2%D7%99%D7%A0%D7%AA_1390.JPG?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/he/1/1f/%D7%A2%D7%99%D7%A0%D7%AA_1390.JPG?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": 32.082397,
+   "lon": 34.939197,
+   "url": "https://he.wikipedia.org/wiki/%D7%A2%D7%99%D7%A0%D7%AA"
+  },
+  "תל חדיד": {
+   "title": "תל חדיד",
+   "extract": "תֵּל-חָדִיד הוא תל הנמצא מצָפון ליער בן שמן ולכביש 443 ודרומית לנחל נטוף. התל ממוקם בקו הגבעות הראשון מעל מישור החוף באזור בן שמן וממנו תצפית על כל גוש דן. שביל ישראל, קטע מס' 20, עובר בתל חדיד.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/%D7%AA%D7%9C_%D7%97%D7%93%D7%99%D7%93_%D7%9B%D7%91%D7%99%D7%A9_6.jpg/960px-%D7%AA%D7%9C_%D7%97%D7%93%D7%99%D7%93_%D7%9B%D7%91%D7%99%D7%A9_6.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/6/64/%D7%AA%D7%9C_%D7%97%D7%93%D7%99%D7%93_%D7%9B%D7%91%D7%99%D7%A9_6.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": 31.963907,
+   "lon": 34.951211,
+   "url": "https://he.wikipedia.org/wiki/%D7%AA%D7%9C_%D7%97%D7%93%D7%99%D7%93"
+  },
+  "גן לאומי ירקון": {
+   "title": "גן לאומי ירקון",
+   "extract": "גן לאומי ירקון הוא גן לאומי המשלב כיום שני אתרים: האחד הוא תל אפק, שהכניסה אליו היא מכביש 483, בין פתח תקווה לראש העין והשני, מקורות נחל הירקון שהגישה אליו היא מכביש 5 או מכביש 40, דרך הכניסה אל כפר הבפטיסטים. בגן יש אתרים לביקור לצד מרחבי דשא, עצים ומים, לנופש ולבילוי.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/%D7%94%D7%90%D7%92%D7%9D_%D7%94%D7%92%D7%93%D7%95%D7%9C_%D7%91%D7%AA%D7%9C_%D7%90%D7%A4%D7%A7.jpg/960px-%D7%94%D7%90%D7%92%D7%9D_%D7%94%D7%92%D7%93%D7%95%D7%9C_%D7%91%D7%AA%D7%9C_%D7%90%D7%A4%D7%A7.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/a/ac/%D7%94%D7%90%D7%92%D7%9D_%D7%94%D7%92%D7%93%D7%95%D7%9C_%D7%91%D7%AA%D7%9C_%D7%90%D7%A4%D7%A7.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": 32.113786,
+   "lon": 34.91865,
+   "url": "https://he.wikipedia.org/wiki/%D7%92%D7%9F_%D7%9C%D7%90%D7%95%D7%9E%D7%99_%D7%99%D7%A8%D7%A7%D7%95%D7%9F"
+  },
+  "שער הגיא": {
+   "title": "שער הגיא",
+   "extract": "שער הַגַּיְא (בערבית: باب الواد – בָּאב אל-וָאד) הוא פתח כניסה צר מהשפלה אל הרי ירושלים המצוי כיום בכביש 1, בקילומטר ה-35 מתל אביב. בסמוך לו נמצא מחלף שער הגיא. כביש 1 ממשיך משער הגיא מזרחה לכוון ירושלים לאורך כשישה קילומטרים בעמק צר באפיקו של נחל נחשון (ואדי עלי) עד לאזור שואבה.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/PikiWiki_Israel_68674_the_khan_at_the_entrance_to_the_bab_el_vad.jpg/960px-PikiWiki_Israel_68674_the_khan_at_the_entrance_to_the_bab_el_vad.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/1/19/PikiWiki_Israel_68674_the_khan_at_the_entrance_to_the_bab_el_vad.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": 31.814508,
+   "lon": 35.024865,
+   "url": "https://he.wikipedia.org/wiki/%D7%A9%D7%A2%D7%A8_%D7%94%D7%92%D7%99%D7%90"
+  },
+  "יד קנדי": {
+   "title": "יד קנדי",
+   "extract": "יד קנדי הוא אתר הנצחה לנשיא ארצות הברית ג'ון פ. קנדי, שהוקם באזור עמינדב בהרי ירושלים.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/%D7%99%D7%93_%D7%A7%D7%A0%D7%93%D7%99%2C_%D7%99%D7%A8%D7%95%D7%A9%D7%9C%D7%99%D7%9D%2C_%D7%99%D7%A9%D7%A8%D7%90%D7%9C.-Yad_Kennedy%2C_Jerusalem%2C_Israel.jpg/960px-%D7%99%D7%93_%D7%A7%D7%A0%D7%93%D7%99%2C_%D7%99%D7%A8%D7%95%D7%A9%D7%9C%D7%99%D7%9D%2C_%D7%99%D7%A9%D7%A8%D7%90%D7%9C.-Yad_Kennedy%2C_Jerusalem%2C_Israel.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/2/2a/%D7%99%D7%93_%D7%A7%D7%A0%D7%93%D7%99%2C_%D7%99%D7%A8%D7%95%D7%A9%D7%9C%D7%99%D7%9D%2C_%D7%99%D7%A9%D7%A8%D7%90%D7%9C.-Yad_Kennedy%2C_Jerusalem%2C_Israel.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": 31.749081,
+   "lon": 35.134717,
+   "url": "https://he.wikipedia.org/wiki/%D7%99%D7%93_%D7%A7%D7%A0%D7%93%D7%99"
+  },
+  "סטף": {
+   "title": "סטף",
+   "extract": "סטף (בערבית: صطاف, בתעתיק לעברית: צטאף) היה כפר ערבי בהרי ירושלים על הצלע המזרחית של הר איתן היורדת עד לנחל שורק, כעשרה קילומטרים מערבית לירושלים. במלחמת העצמאות נכבש הכפר במסגרת מבצע דני ותושביו עזבו אותו ולא הורשו לחזור אליו אחרי המלחמה.\nהאתר שוכן כקילומטר צפונית מערבית למושב אבן ספיר, משמר ומשחזר חקלאות הר מסורתית וקדומה שעדיין קיימת בכפרים כמו בתיר וואדי פוכין בהרי יהודה. חקלאות השלחין במקום התקיימה בעיקר ממימיהם של שני מעיינות שכבה, עין סטף (עין אל-בלד) ועין ביכורה (עין א-שרקיה).",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/SatafNov062022_04.jpg/960px-SatafNov062022_04.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/d/d7/SatafNov062022_04.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": 31.7691,
+   "lon": 35.1273,
+   "url": "https://he.wikipedia.org/wiki/%D7%A1%D7%98%D7%A3"
+  },
+  "תל גודד": {
+   "title": "תל גודד",
+   "extract": "תל גּוֹדֵד הוא אתר ארכאולוגי באזור שפלת יהודה, הכולל בין השאר שרידים מתקופת המקרא והתקופה הרומית ומערכות מסתור מימי בר כוכבא.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Goded_IMG_5604.JPG/960px-Goded_IMG_5604.JPG?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Goded_IMG_5604.JPG?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": null,
+   "lon": null,
+   "url": "https://he.wikipedia.org/wiki/%D7%AA%D7%9C_%D7%92%D7%95%D7%93%D7%93"
+  },
+  "מנזר השתקנים": {
+   "title": "מנזר השתקנים",
+   "extract": "מנזר גְבירתנו של שבעת המכאובים, הידוע יותר בשם מנזר לַטרוּן או מנזר השתקנים, הוא מנזר גברים בנדיקטיני-ציסטרציאני-טראפיסטי, השוכן בלטרון בקצהו הדרום-מזרחי של עמק איילון.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Latrun-Monastery.jpg/960px-Latrun-Monastery.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Latrun-Monastery.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": null,
+   "lon": null,
+   "url": "https://he.wikipedia.org/wiki/%D7%9E%D7%A0%D7%96%D7%A8_%D7%94%D7%A9%D7%AA%D7%A7%D7%A0%D7%99%D7%9D"
+  },
+  "מטע": {
+   "title": "מטע",
+   "extract": "מטע היא יחידת ייצור חקלאית המאופיינת, לרוב, בגידול חקלאי יחיד. \nבמטע מגדלים גידולים שונים כגון כותנה, טבק, קפה, קנה סוכר או עצי פרי. אף על פי כן, השימוש במונח \"מטע\" אופייני כיום בעיקר לתיאור מטעי עצים.\nמטע הוא צורת פעילות חקלאית מתוכננת ושיטתית שמיועדת להשיג יבולים גדולים תוך הקפדה על שימוש מיטבי במשאב הקרקע ובתשומות אחרות כמו מים, דשן, כוח אדם, הדברת מזיקים והגנה מפני איומים אחרים. הנטיעה נעשית בשורות ובטורים, דבר המקל על שלבי נטיעה, ההשקיה, הטיפול והקטיף. \nבדור האחרון מקובלת שיטת הגנה באמצעות רשתות, כדי להפחית מנזקי ציפורים  ורוח חזקה. מבחינה זו מתקרבת שיטת המטעים לשיטת החממות.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Palm_Oil_Plantation_-_Near_Tiberias_-_Galilee_-_Israel_%285710683290%29.jpg/960px-Palm_Oil_Plantation_-_Near_Tiberias_-_Galilee_-_Israel_%285710683290%29.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/5/57/Palm_Oil_Plantation_-_Near_Tiberias_-_Galilee_-_Israel_%285710683290%29.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": null,
+   "lon": null,
+   "url": "https://he.wikipedia.org/wiki/%D7%9E%D7%98%D7%A2"
+  },
+  "מאוזוליאום מזור": {
+   "title": "מאוזוליאום מזור",
+   "extract": "מאוזוליאום מזור הוא מאוזוליאום רומי מאמצע המאה ה-3, השוכן בפאתיה המערביים של העיר אלעד, ממזרח לכביש 444 ולכביש 6. המבנה ניצב בגובה של כ-75 מטרים מעל פני הים, בצידו הצפוני של נחל מזור. האתר שבו שוכן המבנה הוכרז כגן לאומי ב-21 במרץ 2002 ושטחו כ-25 דונמים.\nמבנה זה הוא היחיד מסוגו בארץ ישראל שממערב לירדן, אשר שרד בשלמותו מהתקופה הרומית. המבנה השתמר בשל כך ששימש משך תקופה ארוכה כמקום תפילה מוסלמי שכונה \"מקאם א-נבי יחיא\". המבנה, שגובהו 4.8 מטרים, בנוי בצורת חדר רבוע ובו שרידי סרקופגים שנועדו ככל הנראה לבני זוג. תקרתו עשויה לוחות אבני גזית הנישאים על ידי שתי קשתות. קירותיו העבים וחלונותיו הקטנים משמרים בו טמפרטורה קבועה.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Roman_Mausoleum_in_Mazor%2C_Israel.jpg/960px-Roman_Mausoleum_in_Mazor%2C_Israel.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Roman_Mausoleum_in_Mazor%2C_Israel.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": null,
+   "lon": null,
+   "url": "https://he.wikipedia.org/wiki/%D7%9E%D7%90%D7%95%D7%96%D7%95%D7%9C%D7%99%D7%90%D7%95%D7%9D_%D7%9E%D7%96%D7%95%D7%A8"
+  },
+  "נחל שילה": {
+   "title": "נחל שילה",
+   "extract": "נַחַל שִׁילֹה הוא נחל אכזב בבנימין, אחד מיובליו הראשיים של נחל הירקון. הנחל מנקז 400 קילומטר רבוע שהם כ-22% משטח אגן הניקוז של נחל ירקון (1,805 קילומטר רבוע).\nראשיתו של נחל שילה במזרח עמק שילה, והוא זורם מערבה צפונית לאלעד, עד להתחברותו עם נחל הירקון כשלושה קילומטר מזרחית למחלף מורשה. אורכו מגיע לכ-50 קילומטר, ולצידו אתרי מורשת, טבע ונוף מרשימים, בהם יער נחשונים, יער קולה, מגדל אפק ודיר קלעה.\nשמואל ספראי ועמית שדמן סבורים כי בתקופת בית שני, נחל שילה היה גבול טבעי בין שטחים המיושבים ביהודים (מדרום), לבין שטחים המיושבים בשומרונים (מצפון).",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/90/Abud-082558.jpg/960px-Abud-082558.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/9/90/Abud-082558.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": null,
+   "lon": null,
+   "url": "https://he.wikipedia.org/wiki/%D7%A0%D7%97%D7%9C_%D7%A9%D7%99%D7%9C%D7%94"
+  },
+  "עין לימון": {
+   "title": "עין לימון",
+   "extract": "עין לימון, כנראה שיבוש של השם עין לימור, שגם הוא שיבוש של השם עין אל-עומור (על-שם הכפר ח'רבת אל-עומור שהיה בסמוך), הוא מעיין שכבה בנחל כסלון שבהרי ירושלים, כקילומטר מערבית לעין ראפה, למרגלות הר צובה. במפת PEF ובמפת המרכז למיפוי ארץ ישראל משנת 1948, המעיין נקרא \"עין מחתוש\".\nלפני מלחמת העצמאות שכן במקום כפר, ח'רבת אל-עומור והבריכה שימשה את תושביו. הכפר שכן על גבעה כ-700 מטר מערבית למעיין.\nבמקום בריכת בטון קטנה ורבועה הממוקמת בתוך חציבה בגודל 18X10 מטרים, שהיוותה ככל הנראה את הבריכה בעבר. הבריכה מקבלת את מימיה דרך נקבה באורך 15 מטרים המובילה אליה את מי הנביעה. תיארוך הנקבה והבריכה הוא מן התקופה הרומית בארץ ישראל.\nהמעיין נמצא על שביל ישראל, ורבים מן המטיילים נוטים לעצור בו לטבילה ולמנוחה (וחלקם גם לנים למרגלותיו).",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/EinAlUmurFeb182023_04.jpg/960px-EinAlUmurFeb182023_04.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/0/09/EinAlUmurFeb182023_04.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": null,
+   "lon": null,
+   "url": "https://he.wikipedia.org/wiki/%D7%A2%D7%99%D7%9F_%D7%9C%D7%99%D7%9E%D7%95%D7%9F"
+  },
+  "מרינה הרצליה": {
+   "title": "מרינה הרצליה",
+   "extract": "מרינה הרצליה היא מרינה השוכנת לחופה של העיר הרצליה, מדרום למלון דן אכדיה, ובעורפו של תל מיכל.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Herzliya_Marina_Aerial_View.jpg/960px-Herzliya_Marina_Aerial_View.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Herzliya_Marina_Aerial_View.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": null,
+   "lon": null,
+   "url": "https://he.wikipedia.org/wiki/%D7%9E%D7%A8%D7%99%D7%A0%D7%94_%D7%94%D7%A8%D7%A6%D7%9C%D7%99%D7%94"
+  },
+  "חורבת חנות": {
+   "title": "חורבת חנות",
+   "extract": "חוּרבַת חָנוֹת (בערבית: ח'רבת אל-ח'אן) היא חורבה במורדות הרי ירושלים לקראת המעבר לשפלת יהודה, כקילומטר ממערב למושב מטע. החורבה הייתה אכסניה לעוברי דרכים (חאן) מן התקופה הממלוכית, האכסניה שירתה את העוברים בדרך הקיסר, שהייתה חלק מהדרך הרומית מירושלים ובית לחם אל השפלה ואל בית גוברין, והפסיקה לתפקד במהלך התקופה העות'מאנית בארץ ישראל. באתר רצפת פסיפס צבעונית של כנסייה מהתקופה הביזנטית, גת ובריכת אגירה.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Hurvat_Hanot.jpg/960px-Hurvat_Hanot.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Hurvat_Hanot.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": null,
+   "lon": null,
+   "url": "https://he.wikipedia.org/wiki/%D7%97%D7%95%D7%A8%D7%91%D7%AA_%D7%97%D7%A0%D7%95%D7%AA"
+  },
+  "נמל תל אביב": {
+   "title": "נמל תל אביב",
+   "extract": "נמל תל אביב הוא נמל על חוף הים התיכון שפעל בשפך הירקון בצפון-מערב תל אביב-יפו בשנים 1938–1965 וכונה \"הנמל העברי הראשון\". הקמת הנמל נחשבה צעד משמעותי בהתפתחות הספנות העברית בתקופת המנדט. מאז העשור הראשון של המאה ה-21 משמש מתחם הנמל מתחם בילוי.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Tel_Aviv_Port_Lowshot.jpg/960px-Tel_Aviv_Port_Lowshot.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Tel_Aviv_Port_Lowshot.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": null,
+   "lon": null,
+   "url": "https://he.wikipedia.org/wiki/%D7%A0%D7%9E%D7%9C_%D7%AA%D7%9C_%D7%90%D7%91%D7%99%D7%91"
+  },
+  "מצפה מודיעין": {
+   "title": "מצפה מודיעין",
+   "extract": "מצפה מודיעין הוא מגדל תצפית שריפות ביער בן שמן, אחד מ-42 מגדלי תצפית שריפות שהקומו ביערות הקרן הקיימת. הם נועדו לשמש לתצפית לצורך התרעה והגנה מפני שריפות. החל מסוף שנות ה-90, לאור ההתפתחויות הטכנולוגיות לאיתור מוקדי השריפות, המגדלים לרוב אינם מאוישים.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/%27%D7%9E%D7%A6%D7%A4%D7%94_%D7%9E%D7%95%D7%93%D7%99%D7%A2%D7%99%D7%9F%27_%D7%91%D7%99%D7%A2%D7%A8_%D7%91%D7%9F_%D7%A9%D7%9E%D7%9F.jpg/960px-%27%D7%9E%D7%A6%D7%A4%D7%94_%D7%9E%D7%95%D7%93%D7%99%D7%A2%D7%99%D7%9F%27_%D7%91%D7%99%D7%A2%D7%A8_%D7%91%D7%9F_%D7%A9%D7%9E%D7%9F.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/a/a0/%27%D7%9E%D7%A6%D7%A4%D7%94_%D7%9E%D7%95%D7%93%D7%99%D7%A2%D7%99%D7%9F%27_%D7%91%D7%99%D7%A2%D7%A8_%D7%91%D7%9F_%D7%A9%D7%9E%D7%9F.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": null,
+   "lon": null,
+   "url": "https://he.wikipedia.org/wiki/%D7%9E%D7%A6%D7%A4%D7%94_%D7%9E%D7%95%D7%93%D7%99%D7%A2%D7%99%D7%9F"
+  },
+  "ערד": {
+   "title": "ערד",
+   "extract": "עֲרָד (‏‏Ⓘ‏) היא עיר במחוז הדרום בישראל. העיר שוכנת במדבר יהודה, על רכס כידוד, בגובה של כ-600 מטר מעל פני הים. שטח השיפוט שלה הוא 125,610 דונם. ערד הוכרזה כעיר בשנת 1995.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/WikiAir_IL-13-06_015_-_Arad.JPG/960px-WikiAir_IL-13-06_015_-_Arad.JPG?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/1/14/WikiAir_IL-13-06_015_-_Arad.JPG?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": 31.25892773,
+   "lon": 35.21389295,
+   "url": "https://he.wikipedia.org/wiki/%D7%A2%D7%A8%D7%93"
+  },
+  "תל לכיש": {
+   "title": "תל לכיש",
+   "extract": "תל לכיש (בערבית: تل الدوير, תל אֶ-דֻּוֵיר) הוא תל מרכזי בשפלת יהודה. שטחו כ־124 דונם, והוא זוהה על ידי החוקר האמריקאי ויליאם אולברייט בשנת 1926. בשנת 1994 הוכרז כגן לאומי.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Tel_Lachiish_%2831294067732%29.jpg/960px-Tel_Lachiish_%2831294067732%29.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Tel_Lachiish_%2831294067732%29.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": 31.56527778,
+   "lon": 34.84916667,
+   "url": "https://he.wikipedia.org/wiki/%D7%AA%D7%9C_%D7%9C%D7%9B%D7%99%D7%A9"
+  },
+  "מואב": {
+   "title": "מואב",
+   "extract": "מוֹאָב הוא שמו של חבל ארץ בעבר הירדן המזרחי, בתקופה הישראלית, המקבילה ברובה לתקופת הברזל, בשלהי האלף ה-2 לפנה\"ס – המאה ה-6 לפנה\"ס. על פי המקורות, שכנה מואב ממזרח לים המלח, בין המתלול של ים המלח לבין המדבר הערבי, בתחומי ממלכת ירדן של ימינו.\nמואב היא ארץ הררית בעיקרה, וההרים שבין נחל זרד לנחל ארנון נקראים הרי מואב.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/Moab_830-es.svg/960px-Moab_830-es.svg.png?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/8/81/Moab_830-es.svg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": null,
+   "lon": null,
+   "url": "https://he.wikipedia.org/wiki/%D7%9E%D7%95%D7%90%D7%91"
+  },
+  "תל ערד": {
+   "title": "תל ערד",
+   "extract": "תֵּל עֲרָד הוא אתר ארכאולוגי בבקעת ערד, כ-8 ק\"מ מערבית לעיר ערד. התל שוכן בגובה 576 מטר מעל פני הים. תל ערד נמצא על צומת דרכים חשוב מתקופת הברונזה הקדומה ועד ימינו. בתקופת הברזל הגנה ערד על הדרך המרכזית שעברה מירושלים, חברון, בקעת ערד לכיוון חורבת עוזה וים המלח. יוחנן אהרוני מזהה את דרך זו בדרך האתרים של דרך ארץ אדום.\nלתל שני חלקים עיקריים: עיר גדולה מתקופת הברונזה הקדומה אשר שרידיה נראו ממש על פני השטח עוד לפני תחילת החפירות; ומצודה בראש הגבעה הכלולה בעיר זו, ותקופתה תקופת הברזל 2 (תקופת המלוכה).\nבאתר נערכו חפירות במשך 18 עונות חפירה, מתוכן 14 עונות חפירה בעיר תקופת הברונזה הקדומה, בראשותה של רות עמירן. משלחת ראשונה בשנים פעלה במקום בשנים 1962–1966, והשנייה בין 1971–1980.",
+   "image": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Tel_arad_all.JPG?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Tel_arad_all.JPG?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": 31.28083333,
+   "lon": 35.125,
+   "url": "https://he.wikipedia.org/wiki/%D7%AA%D7%9C_%D7%A2%D7%A8%D7%93"
+  },
+  "חבל לכיש": {
+   "title": "חבל לכיש",
+   "extract": "חבל לכיש הוא גוש התיישבות בדרום, בין הרי יהודה במזרח ובין אשקלון במערב. במרכזו העיר קריית גת. האזור נקרא על שם העיר הקדומה לכיש.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/Hevel_Lakhish_Aerial_View.jpg/960px-Hevel_Lakhish_Aerial_View.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Hevel_Lakhish_Aerial_View.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": 31.63138889,
+   "lon": 34.71111111,
+   "url": "https://he.wikipedia.org/wiki/%D7%97%D7%91%D7%9C_%D7%9C%D7%9B%D7%99%D7%A9"
+  },
+  "סנסנה": {
+   "title": "סנסנה",
+   "extract": "סַנְסַנָּה היא התנחלות דתית במתכונת של יישוב קהילתי בחבל מיתרים שבגבול צפון הנגב והר חברון, הממוקם ברובו ממזרח לקו הירוק, אך ממערב לגדר ההפרדה, ומשתייך למועצה אזורית הר חברון, בה הוא היישוב המערבי ביותר, וכן לתנועת אמנה.",
+   "image": "https://upload.wikimedia.org/wikipedia/commons/7/78/Sansana.JPG?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/7/78/Sansana.JPG?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": 31.36319495,
+   "lon": 34.90310311,
+   "url": "https://he.wikipedia.org/wiki/%D7%A1%D7%A0%D7%A1%D7%A0%D7%94"
+  },
+  "בית גוברין - מרשה": {
+   "title": "בית גוברין - מרשה",
+   "extract": "בית גוברין - מָרֵשָׁה הוא גן לאומי שהוכרז בשנת 1989 כדי לשמר את שרידיה של העיר מרשה, המשך המחקר באתר ושימור החורש הטבעי. הגן הלאומי משתרע על שטח של 5,000 דונם ובו מערות רבות וחללים תת-קרקעיים מגוונים ושרידים ארכאולוגיים חשובים. בחלקו הדרומי והגבוה ביותר של הגן נמצא תל מרשה.\nהמסלע של שפלת יהודה בנוי משכבת קירטון שהוא גיר רך מתקופת האיאוקן בעיקר, שהורבדה בים קדום. מעל לקירטון התפתחה שכבה בעובי של 1–3 מטר, של גיר קשה, המכונה 'נארי'. מִסְלע הקירטון נוח לחציבת חללים תת-קרקעיים ולהפקת לבנים לבניין. עיקר לבני הבניין נכרו ממערות בצורת פעמון שפתח עגול בראשן. דרך פתחים אלו נכנסו אל תחילת מלאכת החציבה, וירדו כלפי מטה בחציבה, שורה אחר שורה, והוציאו כלפי מעלה לבני קירטון לצורכי בנייה.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/Sidonian_Burial_Caves_036.jpg/960px-Sidonian_Burial_Caves_036.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/8/85/Sidonian_Burial_Caves_036.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": 31.61305556,
+   "lon": 34.89833333,
+   "url": "https://he.wikipedia.org/wiki/%D7%91%D7%99%D7%AA_%D7%92%D7%95%D7%91%D7%A8%D7%99%D7%9F_-_%D7%9E%D7%A8%D7%A9%D7%94"
+  },
+  "יער יתיר": {
+   "title": "יער יתיר",
+   "extract": "יער יתיר הוא יער נטוע הנמצא בחבל יתיר, כ-30 ק\"מ צפונית-מזרחית לבאר שבע. שטחו הנטוע משתרע על פני 37,000 דונם. זהו היער הנטוע הגדול בישראל, ולדברי קק\"ל היער הגדול בעולם שניטע על ידי אדם באזור מדברי למחצה. ממזרח תוחמים אותו היישובים הר עמשא ובית יתיר ומצפון ליבנה (שני) ועשהאל.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Yatir_Forest%2C_Israel_no.1.jpg/960px-Yatir_Forest%2C_Israel_no.1.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Yatir_Forest%2C_Israel_no.1.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": 31.3425,
+   "lon": 35.061667,
+   "url": "https://he.wikipedia.org/wiki/%D7%99%D7%A2%D7%A8_%D7%99%D7%AA%D7%99%D7%A8"
+  },
+  "עזקה": {
+   "title": "עזקה",
+   "extract": "תל עזקה (זכריה) הייתה עיר קדומה בליבה של שפלת יהודה. התל העליון ממוקם 347 מ' מעל פני הים, 117 מ' מעל לערוץ נחל האלה, ושטחו כ-45 דונם. התל ממוקם בפארק בריטניה המנוהל על ידי קק\"ל. האתר ממוקם בקצהו הצפוני של רכס שכיוונו צפון-דרום, אשר מהווה את הגבול בין השפלה הגבוהה ממזרח והנמוכה ממערב. עזקה שולטת על הצומת האסטרטגי של הדרך המובילה מכיוון גת פלשתים, דרך עמק האלה לכיוון הרי יהודה שממזרח עם הדרך המקשרת בין בית שמש בצפון ולכיש שבדרום, מסיבות אלה עזקה הפכה באופן טבעי לעיר חשובה. בחפירות באתר נתגלו שרידי יישוב בעיקר מתקופת הברונזה המאוחרת ומתקופת הברזל 2, מצודה, מגדלים, חותמות למלך וממצאים נוספים. בנוסף התגלו באתר מערות מסתור מתקופת מרד בר-כוכבא.",
+   "image": "https://upload.wikimedia.org/wikipedia/he/f/f4/Azeka22.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+   "original": "https://upload.wikimedia.org/wikipedia/he/f/f4/Azeka22.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": 31.7009791,
+   "lon": 34.9356716,
+   "url": "https://he.wikipedia.org/wiki/%D7%A2%D7%96%D7%A7%D7%94"
+  },
+  "עמק האלה": {
+   "title": "עמק האלה",
+   "extract": "עמק האלה הוא עמק קטן בשפלת יהודה, מדרום לבית שמש, שנודע כמקום קרב דוד וגוליית על-פי המסופר בתנ\"ך. עמק האלה נחשב לאחד האזורים הפוריים ביותר בארץ ישראל, והוא מקשר בין השפלה להרי יהודה וחבל עדולם, ומכאן חשיבותו לאורך השנים. עד ימינו בולטים בעמק ובסביבתו מספר רב של אתרים ארכאולוגיים ותלים מקראיים.\nבראשית שנת 2014 הופקדה התוכנית להכריז על עמק האלה כגן לאומי, וביולי 2019 הוכרז עליו כגן לאומי והוא עבר לניהולה של רשות הטבע והגנים, בעיקר עקב חשיבותו ההיסטורית והרצון להגביל את התפשטות המרחב האורבני של בית שמש דרומה אל שטחי העמק.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Valley_of_Elah.jpg/960px-Valley_of_Elah.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Valley_of_Elah.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": 31.6806252,
+   "lon": 34.9891247,
+   "url": "https://he.wikipedia.org/wiki/%D7%A2%D7%9E%D7%A7_%D7%94%D7%90%D7%9C%D7%94"
+  },
+  "הר עמשא": {
+   "title": "הר עמשא",
+   "extract": "הר עמשא הוא הר בהרי חברון, מדרום ליישוב הר עמשא ו-13 ק\"מ צפונית לערד. גובה ההר 859 מטר מעל פני הים ומפסגתו ניתן להשקיף על שטח דרום מדבר יהודה ועל בקעת ערד, צפון הר הנגב ומצפון, על הרי חברון. \nההר נמצא בתחום השיפוט של מועצה אזורית תמר, וסביבו שמורת טבע מוכרזת, \"שמורת הר עמשא\". ההר קיבל את שמו בעת החדשה על שם עמשא בן יתר שהיה שר צבא של אבשלום ומאוחר יותר שר צבא דוד המלך.",
+   "image": "https://upload.wikimedia.org/wikipedia/he/f/f0/Amasa.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+   "original": "https://upload.wikimedia.org/wikipedia/he/f/f0/Amasa.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": 31.32261944,
+   "lon": 35.09406111,
+   "url": "https://he.wikipedia.org/wiki/%D7%94%D7%A8_%D7%A2%D7%9E%D7%A9%D7%90"
+  },
+  "חורבת ענים": {
+   "title": "חורבת ענים",
+   "extract": "חורבת עָנִים (במקור: ח'רבת ע'ווין א-תחתא) הוא שמו של אתר בדרום הרי חברון בו מצויים שרידיו של יישוב מקראי ותלמודי, כ-20 ק\"מ מצפון מערב לערד ובתחום יער יתיר. האתר סמוך ליישוב ליבנה מדרום מערב.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/PikiWiki_Israel_7991_old_synagogue_in_yatir_forest.jpg/960px-PikiWiki_Israel_7991_old_synagogue_in_yatir_forest.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/f/fb/PikiWiki_Israel_7991_old_synagogue_in_yatir_forest.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": null,
+   "lon": null,
+   "url": "https://he.wikipedia.org/wiki/%D7%97%D7%95%D7%A8%D7%91%D7%AA_%D7%A2%D7%A0%D7%99%D7%9D"
+  },
+  "פארק עדולם": {
+   "title": "פארק עדולם",
+   "extract": "פארק עֲדֻלָּם, או בשמו המלא פארק מערות עדולם, הוא פארק במזרח שפלת יהודה בחבל עדולם, המכיל שרידים ארכאולוגיים מתקופות שונות. הפארק נקרא על שם העיר המקראית עֲדֻלָּם, הנזכרת בתנ\"ך, ומזוהה בתל הנמצא בתחומי הפארק.\nהכשרת הפארק החלה לאחר שהושלמה גדר ההפרדה ממזרח לפארק אל עבר הרי חברון.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/%D7%97%D7%A8%D7%91%D7%AA_%D7%A2%D7%AA%D7%A8%D7%99_1.JPG/960px-%D7%97%D7%A8%D7%91%D7%AA_%D7%A2%D7%AA%D7%A8%D7%99_1.JPG?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/3/3e/%D7%97%D7%A8%D7%91%D7%AA_%D7%A2%D7%AA%D7%A8%D7%99_1.JPG?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": null,
+   "lon": null,
+   "url": "https://he.wikipedia.org/wiki/%D7%A4%D7%90%D7%A8%D7%A7_%D7%A2%D7%93%D7%95%D7%9C%D7%9D"
+  },
+  "מרכז ג'ו אלון": {
+   "title": "מרכז ג'ו אלון",
+   "extract": "מרכז ג'ו אלון הוא מרכז חינוכי ותיירותי לידיעת הארץ ולהכרת הנגב, השוכן בפאתי יער להב שבנגב הצפוני, סמוך ממערב לקיבוץ להב. עיקר פרסומו של המרכז במוזיאון לתרבות הבדואים השוכן בו. המרכז קרוי על-שם הטייס ג'ו אלון.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/%D7%93%D7%A8%D7%95%D7%9D_%D7%94%D7%A8_%D7%97%D7%91%D7%A8%D7%95%D7%9F_008.JPG/960px-%D7%93%D7%A8%D7%95%D7%9D_%D7%94%D7%A8_%D7%97%D7%91%D7%A8%D7%95%D7%9F_008.JPG?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/0/0a/%D7%93%D7%A8%D7%95%D7%9D_%D7%94%D7%A8_%D7%97%D7%91%D7%A8%D7%95%D7%9F_008.JPG?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": null,
+   "lon": null,
+   "url": "https://he.wikipedia.org/wiki/%D7%9E%D7%A8%D7%9B%D7%96_%D7%92%27%D7%95_%D7%90%D7%9C%D7%95%D7%9F"
+  },
+  "נחל אשתמוע": {
+   "title": "נחל אשתמוע",
+   "extract": "נַחַל אֶשְׁתְּמֹעַ הוא נחל אכזב שראשיתו בדרום הר חברון, ברום של כ-800 מטרים מעל פני הים, וסופו בחיבור לנחל יתיר, מיובלי נחל באר שבע, בסמוך לחורה.\nשמו של הנחל נגזר משמה של העיר המקראית והתלמודית אֶשְׁתְּמֹעַ, אשר מזוהה עם הכפר סמוע, בו מתחיל הנחל.\nאפיקו של הנחל הוא בכיוון דרום מערב, והוא עובר בתחילתו למרגלות היישוב שמעה, ובהמשך למרגלות הר חירן ובצמוד ליישוב מיתר ולתוואי שביל ישראל, וכולל מספר גבים, בנוסף, בנחל עובר שביל ישראל.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/Building_no_free_image_yet-he.svg/960px-Building_no_free_image_yet-he.svg.png?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Building_no_free_image_yet-he.svg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": null,
+   "lon": null,
+   "url": "https://he.wikipedia.org/wiki/%D7%A0%D7%97%D7%9C_%D7%90%D7%A9%D7%AA%D7%9E%D7%95%D7%A2"
+  },
+  "נחל גוברין": {
+   "title": "נחל גוברין",
+   "extract": "נחל גוברין הוא נחל אכזב בשפלת יהודה, שראשיתו בהר חברון וסופו בנחל לכיש. הנחל זורם בכיוון כללי צפון-מערב.\nהנחל מנקז שטח של כ-204 קמ\"ר, החל מהר חברון (אזור הכפרים דורא ותפוח) ברום של כ-850 מטר מעל פני הים, ועד לנקודת החיבור לנחל לכיש לאחר כ-48 ק\"מ.",
+   "image": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Beit_Guvrin.JPG?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Beit_Guvrin.JPG?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": null,
+   "lon": null,
+   "url": "https://he.wikipedia.org/wiki/%D7%A0%D7%97%D7%9C_%D7%92%D7%95%D7%91%D7%A8%D7%99%D7%9F"
+  },
+  "יער להב": {
+   "title": "יער להב",
+   "extract": "יער לַהַב הוא יער נטוע בדרום ישראל הממוקם בין הנגב הצפוני לדרום שפלת יהודה ודרום הרי חברון, שטחו כ-30,000 דונם. היישובים הסמוכים אליו הם דביר, להב, להבים, לקייה ואשכולות.",
+   "image": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Laav_forest.JPG?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Laav_forest.JPG?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": null,
+   "lon": null,
+   "url": "https://he.wikipedia.org/wiki/%D7%99%D7%A2%D7%A8_%D7%9C%D7%94%D7%91"
+  },
+  "תל חליף": {
+   "title": "תל חליף",
+   "extract": "תל חליף (במקור: תל חווילפה) הוא תל קדום באזור הנגב הצפוני, כ-20 ק\"מ צפונית-מזרחית לבאר שבע, ממערב לקיבוץ להב.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/TEL_EL_KHUWEILFE_-_view_from_south.jpg/960px-TEL_EL_KHUWEILFE_-_view_from_south.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/b/b2/TEL_EL_KHUWEILFE_-_view_from_south.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": null,
+   "lon": null,
+   "url": "https://he.wikipedia.org/wiki/%D7%AA%D7%9C_%D7%97%D7%9C%D7%99%D7%A3"
+  },
+  "יער מיתר": {
+   "title": "יער מיתר",
+   "extract": "יער מיתר הוא יער נטוע בדרום ישראל, המקיף את היישוב מיתר מצפון וממזרח. שטחו של היער כ-8,200 דונם, והוא נמצא בגובה של כ-450 מ' מעל פני הים. הוא מהווה מרכיב מרכזי במרחב האקולוגי והנופי של האזור, תוך שהוא תורם לאיכות החיים של תושבי הסביבה ומשמש כאתר נופש ופנאי.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/PikiWiki_Israel_8015_entrance_to_metar_forest.jpg/960px-PikiWiki_Israel_8015_entrance_to_metar_forest.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/a/a9/PikiWiki_Israel_8015_entrance_to_metar_forest.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": null,
+   "lon": null,
+   "url": "https://he.wikipedia.org/wiki/%D7%99%D7%A2%D7%A8_%D7%9E%D7%99%D7%AA%D7%A8"
+  },
+  "בקעת קנאים": {
+   "title": "בקעת קנאים",
+   "extract": "בקעת קנאים היא בקעה בשולי מדבר יהודה הדרומיים, שגובהה 309 מטרים מעל פני הים. היא נתחמת ממזרח על ידי הר קנאים, ממערב על ידי הר צפירה, ומדרום על ידי הר מנחם. מצפון לה נחל צאלים, ואדי עמוק הנופל מגובה הבקעה מאות מטרים, ובקטעו הצמוד לבקעה נמצאת בירכת צפירה, אשר הגישה אליה נעשית דרך הבקעה. היא קרויה על שם הקנאים שפעלו בתקופת המרד הגדול נגד האימפריה הרומית ופעלו באזור זה.\nבבקעה נמצא כפר הנוקדים, כפר נופש מרכזי באזור.\nכביש 3199 חוצה את הבקעה בכיוון מזרח–מערב, בקטעו שבין ערד למצדה. ממנו עובר לפונה לאורך מרכז הבקעה כביש בלתי סלול, שאורכו 3.5 ק\"מ. שביל ישראל במקטע זה בין ערד למצדה.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Negev_Driving_to_Masada_%28469336845%29.jpg/960px-Negev_Driving_to_Masada_%28469336845%29.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/0/08/Negev_Driving_to_Masada_%28469336845%29.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": null,
+   "lon": null,
+   "url": "https://he.wikipedia.org/wiki/%D7%91%D7%A7%D7%A2%D7%AA_%D7%A7%D7%A0%D7%90%D7%99%D7%9D"
+  },
+  "המכתש הקטן": {
+   "title": "המכתש הקטן",
+   "extract": "המכתש הקטן (בשמו המדויק: מכתש חֲצֵרָה) הוא מכתש אירוזי, השלישי בגודלו מבין חמשת מכתשי הנגב וחצי האי סיני.\nהמכתש הקטן נמצא ברכס חצרה ומכאן נקרא גם מכתש חצרה (בערבית: الخضيرة - אלחֻ'צַ'יְרָה - \"גורן הדקלים\"). זהו המכתש המזרחי בסדרת המכתשים שנוצרו בקמרי הר הנגב ובצפון סיני, בהם מכתש רמון, המכתש הגדול ומכתשי עריף.\nביוני 2019 הכריזה המדינה על הפיכת המכתש לשמורת טבע.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/SmallCrater01_ST_08.JPG/960px-SmallCrater01_ST_08.JPG?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/0/08/SmallCrater01_ST_08.JPG?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": 30.96194444,
+   "lon": 35.19861111,
+   "url": "https://he.wikipedia.org/wiki/%D7%94%D7%9E%D7%9B%D7%AA%D7%A9_%D7%94%D7%A7%D7%98%D7%9F"
+  },
+  "המכתש הגדול": {
+   "title": "המכתש הגדול",
+   "extract": "מכתש ירוחם (הגדול; לשעבר המכתש הגדול / מכתש חֲתִירָה) הוא מכתש אירוזי הנמצא במזרח הנגב והוא מצוי בישראל ואחד מחמשת המכתשים שבנגב, אלו מכתשים דומים באזור שנוצרו באורח דומה זוהי תופעה מיוחדת ונדירה בעולם וקיימת בעיקר באזור זה. צורתו של המכתש היא אליפטית, והוא השני בגודלו במכתשי הנגב. ממוקם בקמר חתירה ומכאן שמו הנוסף.\nאורכו של המכתש 14 ק\"מ ורוחבו 6 ק\"מ. עומקו המרבי הוא 410 מטרים. הנחל המנקז אותו הוא נחל חתירה. גבולות המכתש הם רכס הרי חתירה במערב ורכס הר כרבולת במזרח ובדרום בו עובר שביל ישראל. מצפון מערב למכתש הגדול נמצא הר אבנון, המתנשא לגובה של 656 מטרים, ממנו קיימת תצפית יפה על המכתש.",
+   "image": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Makhtesh_gadol.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Makhtesh_gadol.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": 30.925,
+   "lon": 34.98111111,
+   "url": "https://he.wikipedia.org/wiki/%D7%94%D7%9E%D7%9B%D7%AA%D7%A9_%D7%94%D7%92%D7%93%D7%95%D7%9C"
+  },
+  "ים המלח": {
+   "title": "ים המלח",
+   "extract": "יַם הַמֶּלַח המכונה גם ים המוות (‏‏Ⓘ‏; באנגלית: The Dead Sea, בערבית: البحر الميت, הים המת) הוא אגם מלח חסר-מוצא לים, הנמצא בתחום הבקע הסורי-אפריקני ובמרכזו עובר הגבול בין ישראל לירדן.\nאגן ים המלח מורכב משני אגנים, דרומי וצפוני. עומקו הממוצע של האגן הצפוני הוא כ-200 מטרים וקרקעיתו ברום ממוצע של 730 מטרים מתחת לפני הים. עומקו הממוצע של החלק הדרומי הייתה כעשרה מטרים בלבד טרם תהליך התייבשותו וקרקעיתו הייתה ברום של 401 מטרים מתחת לפני הים. בשל הירידה המתמשכת במפלס, התייבש החלק הדרומי של האגם, שהיה רדוד בהרבה מזה הצפוני. עם ייבושו של האגן הדרומי נבנו בו בריכות לצורך אידוי המים והפקת אשלג וכימיקלים אחרים על ידי מפעלי האשלג בישראל וחברת האשלג הערבית הירדנית. לבריכות אלה נדרשת שאיבה בהיקף נרחב של מי האגם. שאיבת המים לבריכות היא בין הסיבות לירידתו של המפלס.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Dead_sea.jpg/960px-Dead_sea.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Dead_sea.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": 31.5,
+   "lon": 35.5,
+   "url": "https://he.wikipedia.org/wiki/%D7%99%D7%9D_%D7%94%D7%9E%D7%9C%D7%97"
+  },
+  "מצדה": {
+   "title": "מצדה",
+   "extract": "מְצָדָה (מַסָּדָה בכתיב מיושן) הוא מבצר עתיק על פסגתו של הר שולחן מבודד, בשוליו המזרחיים של מדבר יהודה, המתנשא לגובה של 63 מטרים מעל פני הים, וכ-480 מטרים מעל ים המלח שלמרגלותיו.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Israel-2013-Aerial_21-Masada.jpg/960px-Israel-2013-Aerial_21-Masada.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/1/14/Israel-2013-Aerial_21-Masada.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": 31.31555556,
+   "lon": 35.35388889,
+   "url": "https://he.wikipedia.org/wiki/%D7%9E%D7%A6%D7%93%D7%94"
+  },
+  "נחל צין": {
+   "title": "נחל צין",
+   "extract": "נַחַל צִין (בערבית: ואדי אל-פִקְרַא) הוא אחד מנחלי האכזב הארוכים בישראל (שני רק לנחל פארן), ומקובל לראות בו גבול בין הנגב הצפוני למרכזי. הנחל זורם ממישור הרוחות שמצפון למכתש רמון, עובר מדרום ולמרגלות מדרשת בן-גוריון, וממשיך משם לערבה. בצפון הערבה נסכר הנחל על ידי סוללת עפר, נשפך למערכות ניקוז המים של מפעלי ים המלח ומוסט אל האגן הצפוני של ים המלח. אורך הנחל כ-120 קילומטר, והוא נחל האכזב השני באורכו בישראל אחרי נחל פארן.\nלנחל צין כמה שמות בערבית, שם אחר לכל קטע. הראשון, ואדי נפח, זורם מאזור הר הנגב הגבוה, עד לנקודת הפנייה של הוואדי 90 מעלות מזרחה (אחרי העיר הנבטית עבדת). החלק השני נקרא ואדי מורה על שם עין מורה (המעיין המר על שם מימיו המליחים), המעיין התחתון בסדרת המעיינות של המעוק של הוואדי (אחרי עין מעריף ועין עבדת). החלק השלישי הוא ואדי פוקרה, שזורם מהקניון של עין עבדת, עד לים המלח (משמעות השם היא הנחל העני, בגלל מיעוט המזון למרעה, ומיעוט עצי השיטה שבוואדי).",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/IHM_viewpoint_50.jpeg/960px-IHM_viewpoint_50.jpeg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/c/c8/IHM_viewpoint_50.jpeg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": null,
+   "lon": null,
+   "url": "https://he.wikipedia.org/wiki/%D7%A0%D7%97%D7%9C_%D7%A6%D7%99%D7%9F"
+  },
+  "מדרשת בן-גוריון": {
+   "title": "מדרשת בן-גוריון",
+   "extract": "מִדּרֶשֶׁת בֶּן-גּוּרִיּוֹן היא יישוב קהילתי בשדה צין שברמת הנגב, בקרבת קיבוץ שדה בוקר, בין באר שבע למצפה רמון. הוא כולל מספר מוסדות חינוך ומחקר. מרבית פעילות היישוב מופעלת על ידי תאגיד מדרשת שדה בוקר, לצד מדרשת בן-גוריון ממוקם \"גן לאומי קבר בן-גוריון\".",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/Midreshet_Sde_Boker_Aerial_View.jpg/960px-Midreshet_Sde_Boker_Aerial_View.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/5/54/Midreshet_Sde_Boker_Aerial_View.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": 30.85272507,
+   "lon": 34.78249818,
+   "url": "https://he.wikipedia.org/wiki/%D7%9E%D7%93%D7%A8%D7%A9%D7%AA_%D7%91%D7%9F-%D7%92%D7%95%D7%A8%D7%99%D7%95%D7%9F"
+  },
+  "עין עבדת": {
+   "title": "עין עבדת",
+   "extract": "עין עֹבדת הוא מעיין בהר הנגב, הנובע בנחל צין ומוגדר כגן לאומי.",
+   "image": "https://upload.wikimedia.org/wikipedia/he/5/5d/EIN-OVDAT69.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+   "original": "https://upload.wikimedia.org/wikipedia/he/5/5d/EIN-OVDAT69.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": 30.82638889,
+   "lon": 34.76638889,
+   "url": "https://he.wikipedia.org/wiki/%D7%A2%D7%99%D7%9F_%D7%A2%D7%91%D7%93%D7%AA"
+  },
+  "נחל צאלים": {
+   "title": "נחל צאלים",
+   "extract": "נַחַל צֶאֱלִים (בערבית: وادِي السيّال- ואדי אַ-סֵיַּאל) הוא אחד מנחלי האכזב הגדולים ביותר בנחלי מדבר יהודה היורדים אל ים המלח, אורכו מתחילתו ועד לשפך הוא כ-32 ק\"מ. שטח אגן הניקוז של הנחל, כ-287 קמ\"ר. הנחל מנקז את אזור דרום מזרח הר חברון סמוך ליישוב מעון ממשיך מצפון לערד ונשפך לים המלח צפונית למצדה. מלבד גֵבֵי מים רבים, המתמלאים מדי שנה לאחר שיטפונות גשמי החורף, נובעים בנחל ארבעה מעיינות.",
+   "image": "https://upload.wikimedia.org/wikipedia/commons/a/a6/NahalTzeelim01_ST_04.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/a/a6/NahalTzeelim01_ST_04.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": null,
+   "lon": null,
+   "url": "https://he.wikipedia.org/wiki/%D7%A0%D7%97%D7%9C_%D7%A6%D7%90%D7%9C%D7%99%D7%9D"
+  },
+  "נחל בוקק": {
+   "title": "נחל בוקק",
+   "extract": "נַחַל בּוֹקֵק (בערבית: وادي البغق או بقق או المقلق) הוא נחל במדבר יהודה אורכו כ-15 ק\"מ, ושטח אגן ההיקוות שלו כ-21 קמ\"ר. הנחל יורד מהר בן נשר ונשפך לחוף ים המלח. מדרום לנחל נמצא נחל זוהר ומצפון לו נחל יעלים. על מניפת הסחף הגדולה שלו, הוקמו מלונות ים המלח ומרחצאות עין בוקק. מצפון לערוץ הנחל, סמוך למקום שפכו אל ים המלח, שוכן מצד בוקק הביזנטי.\nרוב מהלכו של הנחל ברמת המדבר, הוא מתחפר בסלע רך (קירטון ותצורת חתרורים) ולכן העמק שלו רדוד. בתחום מצוק ההעתקים, מתחבר הנחל לשני מפלים, הראשון גובהו כ-100 מטרים והשני כ-60. אחרי המפל הראשון הנחל ממשיך בזרימה בתוך קניון קצר (כ-1.5 ק\"מ) ועמוק.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/PikiWiki_Israel_15247_Ein_Bokek.JPG/960px-PikiWiki_Israel_15247_Ein_Bokek.JPG?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/5/5d/PikiWiki_Israel_15247_Ein_Bokek.JPG?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": 31.19291667,
+   "lon": 35.30561111,
+   "url": "https://he.wikipedia.org/wiki/%D7%A0%D7%97%D7%9C_%D7%91%D7%95%D7%A7%D7%A7"
+  },
+  "נחל פרס": {
+   "title": "נחל פרס",
+   "extract": "נַחַל פֶּרֶס (בערבית: ואדי פארש) הוא נחל אכזב בצפון־מזרח הנגב. אורכו כ־17 ק\"מ והוא זורם בכיוון דרום־מזרח, במקביל ומצפון למעלה תמר (כביש 25). תחילתו בבקעת צבאים, כ־3 ק\"מ ממזרח לצומת צפית, ובסופו הוא נשפך לנחל תמר, כקילומטר וחצי מזרחית לצומת הערבה.\nנהוג לחשוב כי הנחל קרוי על שם העוף הדורס פרס, אולם מקור שמו הוא במילה \"פארש\" או \"אלפארס\" בשפה הערבית, שמשמעותה מרבד, מזרן או מיטה, הוא עמק פרוש וסגור, המתאים לרעיית גמלים. כמו כן, הנחל הוא דרך רומית עתיקה שחיברה בין רפיח לעיר המקראית צוער.\nבחלקו המזרחי הנחל זורם בתוך קניון ובו גבים. באזור מעלה פרס, לפני המפגש עם נחל תמר, ישנו מפל גבוה של כ־50 מטרים.\nלנחל פרס ישנו יובל אחד – נחל תחמס, שמקורו במצד תמר, והוא נפגש עמו למרגלות הר צורים.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/IHM_%D7%92%D7%91%D7%99_%D7%A4%D7%A8%D7%A1.jpeg/960px-IHM_%D7%92%D7%91%D7%99_%D7%A4%D7%A8%D7%A1.jpeg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/f/f0/IHM_%D7%92%D7%91%D7%99_%D7%A4%D7%A8%D7%A1.jpeg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": null,
+   "lon": null,
+   "url": "https://he.wikipedia.org/wiki/%D7%A0%D7%97%D7%9C_%D7%A4%D7%A8%D7%A1"
+  },
+  "כביש הנפט": {
+   "title": "כביש הנפט",
+   "extract": "כביש הנפט (באנגלית: Petroleum Road, מכונה גם ציר הנפט) הוא כביש אספלט אורכי משובש ברמת הגולן בבעלות פרטית באורך של 47 ק\"מ, הנמשך מהגבול הסורי סמוך להר פרס במזרח הגולן המרכזי, ועד גבול לבנון, סמוך לכפר ע'ג'ר. שמו של הכביש נגזר מקו צינור הנפט \"טראנס־אראביאן פייפליין\" (Trans-Arabian Pipeline Company, \"צינור הנפט הטרנס־ערבי\") שלאורכו הוקם. כביש זה הוא חלק קטן מציר רצוף המלווה את צינור הנפט לכל אורכו.",
+   "image": "https://upload.wikimedia.org/wikipedia/commons/5/50/Nrthrdtrip_152.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/5/50/Nrthrdtrip_152.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": 33.01521389,
+   "lon": 35.76581944,
+   "url": "https://he.wikipedia.org/wiki/%D7%9B%D7%91%D7%99%D7%A9_%D7%94%D7%A0%D7%A4%D7%98"
+  },
+  "חוד עקב": {
+   "title": "חוד עקב",
+   "extract": "חוד עקב הוא הר משאר שנמצא במצוק הצינים. צורת ההר חרוטית, וגובהו הוא כ-576 מטרים מעל פני הים. ההר הוא חלק מרמת עבדת.\n\nההר קיבל את שמו מנחל עקב ומעין עקב הסמוכים, מקור השם במילה הערבית כּעבּ (كَعْب).\nמראש ההר ישנה תצפית רחבה, על נחל עקב, רמת בוקר ובקעת צין. העלייה אל ההר בצדו הצפוני דרך שביל ישראל תלולה ביותר, וכוללת טיפוס בעזרת יתדות ברזל.\nבעבר נהרגו מספר מטיילים בטיפוס על המצוק.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/IHM_%D7%97%D7%95%D7%93_%D7%A2%D7%A7%D7%91_6.jpeg/960px-IHM_%D7%97%D7%95%D7%93_%D7%A2%D7%A7%D7%91_6.jpeg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/5/5b/IHM_%D7%97%D7%95%D7%93_%D7%A2%D7%A7%D7%91_6.jpeg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": 30.829,
+   "lon": 34.8242,
+   "url": "https://he.wikipedia.org/wiki/%D7%97%D7%95%D7%93_%D7%A2%D7%A7%D7%91"
+  },
+  "עין עקב": {
+   "title": "עין עקב",
+   "extract": "עין עקב הוא שמם של שני מעיינות הבוקעים על ערוץ נחל עקב שברמת עבדת בנגב התיכון, דרומית-מזרחית ליישוב הקהילתי מדרשת בן-גוריון וסמוך לנחל צין ועין עבדת. מקור השם בשם הערבי למקום - עין אֻם כַּעְבּ, שפירושו מעיין העקב. האבן שעל שמה נקרא המעיין היא אבן צור שחורה שנמצאת בעין עקב עליון, והיא שונה מאוד מסביבתה הלבנה.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c1/EIN_AKEV_3.jpg/960px-EIN_AKEV_3.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/c/c1/EIN_AKEV_3.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": 30.81388889,
+   "lon": 34.81361111,
+   "url": "https://he.wikipedia.org/wiki/%D7%A2%D7%99%D7%9F_%D7%A2%D7%A7%D7%91"
+  },
+  "נחל פרצים": {
+   "title": "נחל פרצים",
+   "extract": "נַחַל פְּרָצִים הוא נחל אכזב בדרום מדבר יהודה. מקורו של נחל פרצים במישור עמיעז אותו הוא מנקז, הוא זורם לכיוון צפון-מזרח, אורכו 5.5 ק\"מ, בסופו הוא מצטרף לאגן ההיקוות של נחל חימר ונחל זוהר ונשפך לעמק זוהר ולים המלח מצפון להר סדום. נקיק הנחל מגיע לעומק של כ-50 מטר ורוחבו מטרים אחדים.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/IHM_%D7%A0%D7%97%D7%9C_%D7%A4%D7%A8%D7%A6%D7%99%D7%9D.jpeg/960px-IHM_%D7%A0%D7%97%D7%9C_%D7%A4%D7%A8%D7%A6%D7%99%D7%9D.jpeg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/7/78/IHM_%D7%A0%D7%97%D7%9C_%D7%A4%D7%A8%D7%A6%D7%99%D7%9D.jpeg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": null,
+   "lon": null,
+   "url": "https://he.wikipedia.org/wiki/%D7%A0%D7%97%D7%9C_%D7%A4%D7%A8%D7%A6%D7%99%D7%9D"
+  },
+  "מצד זוהר": {
+   "title": "מצד זוהר",
+   "extract": "מְצַד זוֹהַר הוא שמם של שני מבנים עתיקים בנחל זוהר, ממערב לכביש 90. המבנה המזרחי הוא מצד זוהר \"הישראלי\", הנמצא בסמוך לשפך הנחל לים המלח. מבנה זה זוהה על ידי הארכאולוגים יוחנן אהרוני ובנו רותנברג בשנת 1957, ותוארך על ידם לתקופת הברזל. ב-2025, בוצעו חפירות באתר והממצאים מיוחסים לתקופה הסלאוקית. המבנה המערבי נמצא על צוק שמתרומם מעל הנחל, והוא מכונה מצד זוהר \"הרומי\", אך הוא מתוארך לתקופה הצלבנית והממלוכית.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/PikiWiki_Israel_29766_Zohar_fort.JPG/960px-PikiWiki_Israel_29766_Zohar_fort.JPG?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/9/94/PikiWiki_Israel_29766_Zohar_fort.JPG?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": null,
+   "lon": null,
+   "url": "https://he.wikipedia.org/wiki/%D7%9E%D7%A6%D7%93_%D7%96%D7%95%D7%94%D7%A8"
+  },
+  "עין בוקק": {
+   "title": "עין בוקק",
+   "extract": "עֵין בּוֹקֵק הוא מתחם התיירות והבילוי העיקרי בצידו הישראלי של ים המלח. המתחם נמצא בתחומי המועצה האזורית תמר, ושוכן לחופי בריכה 5 באגן הדרומי של האגם, בגובה של 392 מטרים מתחת לפני הים. מלונות עין בוקק הוקמו על מניפת הסחף של נחל זוהר, בין חוף האגם ממזרח וכביש 90 ממערב, ואורכו של האתר הוא כקילומטר וחצי מצפון לדרום. המקום קרוי על שם מעיינות עין בוקק שבנחל בוקק.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Ein_Bokek_-_Dead_Sea2.jpg/960px-Ein_Bokek_-_Dead_Sea2.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Ein_Bokek_-_Dead_Sea2.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": null,
+   "lon": null,
+   "url": "https://he.wikipedia.org/wiki/%D7%A2%D7%99%D7%9F_%D7%91%D7%95%D7%A7%D7%A7"
+  },
+  "עין ירקעם": {
+   "title": "עין ירקעם",
+   "extract": "עין ירקעם הוא מעיין עונתי הנובע בחלק העליון של נחל חתירה, ממזרח למכתש הגדול. המעיין נובע בעיקר בחורף. בעונה זאת, עולה מפלס מי התהום אל מעל גובה הקרקע (\"תמילה\"). לרוב מימיו מוצפים גם במי גשם ושיטפונות, וממלאים גב גדול לעומק של עד 5 מטרים. לקראת סוף הקיץ נשארים מים מעטים רק בחלקו התחתון של הגב וחלקו העליון מתייבש, אך מי התהום של המעיין נותרים יחסית גבוהים ובעלי החיים מהאזור מצליחים להגיע אליהם עם מעט חפירה בחול. המעיין מוקף בצמחייה רבה של, בעיקר, קנה ואשל.\nבקיר הגדה הצפונית של הנחל חצובות מדרגות עתיקות שככל הנראה, שימשו להורדת גמלים לשתייה מהגב. בסמוך למעיין נמצא מצד ירקעם מהתקופה הביזנטית ששימש כנקודת אבטחה.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Ein_Yorke%27am%2C_Negev%2C_Israel_%D7%A2%D7%99%D7%9F_%D7%99%D7%A8%D7%A7%D7%A2%D7%9D%2C_%D7%94%D7%A0%D7%92%D7%91_-_panoramio.jpg/960px-Ein_Yorke%27am%2C_Negev%2C_Israel_%D7%A2%D7%99%D7%9F_%D7%99%D7%A8%D7%A7%D7%A2%D7%9D%2C_%D7%94%D7%A0%D7%92%D7%91_-_panoramio.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Ein_Yorke%27am%2C_Negev%2C_Israel_%D7%A2%D7%99%D7%9F_%D7%99%D7%A8%D7%A7%D7%A2%D7%9D%2C_%D7%94%D7%A0%D7%92%D7%91_-_panoramio.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": null,
+   "lon": null,
+   "url": "https://he.wikipedia.org/wiki/%D7%A2%D7%99%D7%9F_%D7%99%D7%A8%D7%A7%D7%A2%D7%9D"
+  },
+  "נחל צפית": {
+   "title": "נחל צפית",
+   "extract": "נחל צָפִית (בערבית: ואדי אלמֻראקאבּ) הוא אפיק נחל בצפון רכס חצרה ליד מצד תמר ומעלה תמר, מדרום לים המלח. אורכו כ-25 קילומטר. אפיק הנחל מתחיל מערבית להר חצרה, יורד בתחילת דרכו צפונה ואז מזרחה אל הערבה הצפונית. בחלקו העליון נובע מעיין עין צפית. הנחל יורד במפל גבוה ומספר מפלים נמוכים יותר, אל חלקו התחתון, עד שפך הנחל לנחל צין.\nעד 1956 נקרא הנחל בשמו הערבי. באותה שנה קבעה ועדת השמות הממשלתית את השם \"נחל צפית\".\nבאפריל 1975 זוהם הנחל בשפכים שזרמו ממפעל פריקלאס ים המלח.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/Descending_Towards_Zafit_Creek_%D7%94%D7%99%D7%A8%D7%99%D7%93%D7%94_%D7%9C%D7%A0%D7%97%D7%9C_%D7%A6%D7%A4%D7%99%D7%AA_-_panoramio.jpg/960px-Descending_Towards_Zafit_Creek_%D7%94%D7%99%D7%A8%D7%99%D7%93%D7%94_%D7%9C%D7%A0%D7%97%D7%9C_%D7%A6%D7%A4%D7%99%D7%AA_-_panoramio.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Descending_Towards_Zafit_Creek_%D7%94%D7%99%D7%A8%D7%99%D7%93%D7%94_%D7%9C%D7%A0%D7%97%D7%9C_%D7%A6%D7%A4%D7%99%D7%AA_-_panoramio.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": null,
+   "lon": null,
+   "url": "https://he.wikipedia.org/wiki/%D7%A0%D7%97%D7%9C_%D7%A6%D7%A4%D7%99%D7%AA"
+  },
+  "רכס חתירה": {
+   "title": "רכס חתירה",
+   "extract": "רכס חתירה או קמר חתירה הוא רכס הרים במזרח הנגב, אחד מתוך שישה קמרים מקבילים בחבל ארץ זה אשר כיוונם הכללי הוא מדרום-מערב לצפון-מזרח, והגבוה שבהם (שיאו ברום 704 מטר מעל לגובה פני הים). מדרום-מזרח לרכס חתירה נמצא קער אורון-ימין, ומצפון-מערב לו כביש דימונה-ירוחם-שדה בוקר (כביש 204).\nברכס חתירה נמצא המכתש הגדול, שהוא מכתש סחיפה. בסמוך לנקודת שיא הרום של הרכס, בקצהו הדרום-מערבי של המכתש, נמצאת אנדרטה לזכר אברהם קריניצי, ראש עיריית רמת גן בשנות ה-60 של המאה ה-20 (הדרך המובילה מהמכתש אל האנדרטה והמצפור שלידה נפרצה על-ידי חטיבת הצנחנים בשנת 1964, והם קראו לה \"מעלה אברהם\" על שמו של קריניצי, שעירו אימצה את הצנחנים).",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/%D7%A8%D7%9B%D7%A1_%D7%97%D7%AA%D7%99%D7%A8%D7%94_%D7%91%D7%A0%D7%95%D7%A3.jpg/960px-%D7%A8%D7%9B%D7%A1_%D7%97%D7%AA%D7%99%D7%A8%D7%94_%D7%91%D7%A0%D7%95%D7%A3.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/a/a3/%D7%A8%D7%9B%D7%A1_%D7%97%D7%AA%D7%99%D7%A8%D7%94_%D7%91%D7%A0%D7%95%D7%A3.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": null,
+   "lon": null,
+   "url": "https://he.wikipedia.org/wiki/%D7%A8%D7%9B%D7%A1_%D7%97%D7%AA%D7%99%D7%A8%D7%94"
+  },
+  "נחל עפרן": {
+   "title": "נחל עפרן",
+   "extract": "נחל עַפְרָן (מערבית: وادي عفران, תעתיק מדויק: ואדי עפראן) הוא נחל אכזב במורדות הדרומיים של רכס חתירה בנגב הצפוני. בנחל ערוץ קניוני תלול ובו מפלים, גבים ומעוק מרשים.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/PikiWiki_Israel_34108_Geography_of_Israel.jpg/960px-PikiWiki_Israel_34108_Geography_of_Israel.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/9/9f/PikiWiki_Israel_34108_Geography_of_Israel.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": null,
+   "lon": null,
+   "url": "https://he.wikipedia.org/wiki/%D7%A0%D7%97%D7%9C_%D7%A2%D7%A4%D7%A8%D7%9F"
+  },
+  "מצפה רמון": {
+   "title": "מצפה רמון",
+   "extract": "מִצְפֵּה רָמוֹן היא מועצה מקומית במחוז הדרום בישראל.\nמצפה רמון שוכנת במרכז הר הנגב, על שפת מכתש רמון הצפונית, כ-80 ק\"מ דרומית לבאר שבע וכ-150 ק\"מ צפונית לאילת. תחום השיפוט שלה הוא 64,500 דונם ומתגוררים בה כ-5,047 תושבים. היא הוקמה בשנת 1953 כמחנה עבודה לפועלים שסללו את הדרך לאילת, והפכה ליישוב קבע בשנת 1956.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/Mitzpe_Ramon_2009_%D7%9E%D7%A6%D7%A4%D7%94_%D7%A8%D7%9E%D7%95%D7%9F.jpg/960px-Mitzpe_Ramon_2009_%D7%9E%D7%A6%D7%A4%D7%94_%D7%A8%D7%9E%D7%95%D7%9F.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Mitzpe_Ramon_2009_%D7%9E%D7%A6%D7%A4%D7%94_%D7%A8%D7%9E%D7%95%D7%9F.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": 30.6128,
+   "lon": 34.8018,
+   "url": "https://he.wikipedia.org/wiki/%D7%9E%D7%A6%D7%A4%D7%94_%D7%A8%D7%9E%D7%95%D7%9F"
+  },
+  "מאובן": {
+   "title": "מאובן",
+   "extract": "מאובן הוא שריד, תבנית או עקבות של בעל חיים, צמח או אורגניזם אחר, מתקופה גאולוגית קדומה שנשמרו במצב שבו התאבנו. תחום המדע שחוקר מאובנים הוא הפלאונטולוגיה.\nהמונח מאובן שמור בדרך כלל לשרידים עתיקים מ-10,000 שנים, מלפני סוף עידן הקרח האחרון. (אפשר לכנות שרידים מאוחרים יותר תת-מאובנים subfossil). מאובנים מספקים עדויות חשובות לתיארוך מדויק של שכבות סלע, וסיפקו הרבה מהמידע שעליו מבוססות תת-החלוקות הנוכחיות של לוח הזמנים הגאולוגי.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Fossil_Diversity.png/960px-Fossil_Diversity.png?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Fossil_Diversity.png?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": null,
+   "lon": null,
+   "url": "https://he.wikipedia.org/wiki/%D7%9E%D7%90%D7%95%D7%91%D7%9F"
+  },
+  "נאות סמדר": {
+   "title": "נאות סמדר",
+   "extract": "נְאוֹת סְמָדַר הוא קיבוץ בדרום הערבה סמוך לצומת שיזפון, על כביש 40, השייך למועצה אזורית חבל אילות. הקיבוץ חבר בתק\"ם. הקיבוץ הוקם כהיאחזות \"שיזפון\" בשנת 1980, ולאחר שלא הצליח להתרומם התיישב בו בשנת 1989 גרעין נאות סמדר שהקים בו יישוב סביב הנושא האקולוגי־אורגני. היישוב משתרע על שטח של כ-800 דונם.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/%D7%9E%D7%91%D7%98_%D7%A8%D7%97%D7%91_%D7%A0%D7%90%D7%95%D7%AA_%D7%A1%D7%9E%D7%93%D7%A8.jpg/960px-%D7%9E%D7%91%D7%98_%D7%A8%D7%97%D7%91_%D7%A0%D7%90%D7%95%D7%AA_%D7%A1%D7%9E%D7%93%D7%A8.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/5/5c/%D7%9E%D7%91%D7%98_%D7%A8%D7%97%D7%91_%D7%A0%D7%90%D7%95%D7%AA_%D7%A1%D7%9E%D7%93%D7%A8.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": 30.04958454,
+   "lon": 35.02599043,
+   "url": "https://he.wikipedia.org/wiki/%D7%A0%D7%90%D7%95%D7%AA_%D7%A1%D7%9E%D7%93%D7%A8"
+  },
+  "שחרות": {
+   "title": "שחרות",
+   "extract": "שַׁחֲרוּת הוא יישוב קהילתי בערבה השייך למועצה אזורית חבל אילות, כ-37 ק\"מ צפונית לעיר אילת. הוא ממוקם על שפת מצוק ההעתקים, ממערב לקיבוץ יטבתה, 550 מטר מעל פני הים.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Shaharut.jpg/960px-Shaharut.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/9/92/Shaharut.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": 29.90421832,
+   "lon": 34.99912242,
+   "url": "https://he.wikipedia.org/wiki/%D7%A9%D7%97%D7%A8%D7%95%D7%AA"
+  },
+  "בקעת תמנע": {
+   "title": "בקעת תמנע",
+   "extract": "בקעת תִּמְנָע היא בקעה בשוליים המערביים של הערבה הדרומית, כ-25 קילומטר מצפון לאילת. הבקעה, שלהּ צורת פרסה, משתרעת על שטח של כ-60 קילומטר רבוע, ותחומה במצוקים תלולים בשלושה מצדדיה. היא מנוקזת על ידי נחל תמנע בצפון ונחל נחושתן בדרום, הזורמים לערבה שממזרח לה. במרכזהּ מתרומם הר תמנע לגובה של 453 מטרים. באזור שורר אקלים מדברי קיצוני.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/Mushroom_in_Timna_Park_in_summer_2011_%281%29.JPG/960px-Mushroom_in_Timna_Park_in_summer_2011_%281%29.JPG?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/0/02/Mushroom_in_Timna_Park_in_summer_2011_%281%29.JPG?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": 29.78777778,
+   "lon": 34.98888889,
+   "url": "https://he.wikipedia.org/wiki/%D7%91%D7%A7%D7%A2%D7%AA_%D7%AA%D7%9E%D7%A0%D7%A2"
+  },
+  "בקעת עובדה": {
+   "title": "בקעת עובדה",
+   "extract": "בקעת עוּבדה היא בקעה חולית מוקפת גבעות בנגב הדרומי. הבקעה וצוקי עובדה הסמוכים, נקראים על שם מבצע עובדה שהתרחש בשנת 1949 לקראת סוף מלחמת העצמאות, ובמהלכו נכבש, בין היתר, גם שטחה. יחד עם בקעת סיירים, הבקעה היא אחת משתי הבקעות העוברות בקטעים העיקריים של נחל חיון. הבקעה גובלת בדרום בבקעת סיירים ובצפון צוקי תמנע וצפון הר ברך, במזרח בהר שחרות, הר גרופית והר ארגמן, בצפון בהר שחרור והר פרוט ובמערב בצוקי עובדה.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Sayarim_Desert_Kite_in_Ovda_Valley.jpg/960px-Sayarim_Desert_Kite_in_Ovda_Valley.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Sayarim_Desert_Kite_in_Ovda_Valley.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": 29.94,
+   "lon": 34.93583333,
+   "url": "https://he.wikipedia.org/wiki/%D7%91%D7%A7%D7%A2%D7%AA_%D7%A2%D7%95%D7%91%D7%93%D7%94"
+  },
+  "הר שלמה": {
+   "title": "הר שלמה",
+   "extract": "הר שלמה, שגובהו 705 מטר, הוא אחד ההרים העתיקים ביותר ברכס הרי אילת. גילו נאמד במאות מיליוני שנים יותר מרוב ההרים הסובבים אותו. הוא מוקדם בכ-500 מיליון שנים מהר יהורם הצמוד אליו.\nההר קרוי על שמו של שלמה המלך שהקים את המכרות במקום. הר שלמה אמור היה להיות ההר הגבוה ביותר מבין ההרים שנקראו על שם אחד ממלכי יהודה, אך המלך חזקיהו זכה שעל שמו יקרא הר גבוה משל שלמה, זאת כיוון שבימיו של חזקיהו הוחזרה השליטה של ממלכת יהודה לאזור זה, לאחר מרידה ממושכת של האדומים.\nההר עשוי מסלעים מגמטיים ומותמרים ולכן צבעו שחור.\nפסגתו של ההר מחוברת בשבילים מסומנים להר יהורם, לנחל שלמה ולכביש 12, וכן לנחל נטפים. השבילים המסומנים בהר שלמה מאופיינים בתלילות חדה במיוחד, עקב מבנהו הכללי של ההר.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/Har-shlomo01.jpg/960px-Har-shlomo01.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/3/33/Har-shlomo01.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": 29.5802778,
+   "lon": 34.8997222,
+   "url": "https://he.wikipedia.org/wiki/%D7%94%D7%A8_%D7%A9%D7%9C%D7%9E%D7%94"
+  },
+  "מכתש רמון": {
+   "title": "מכתש רמון",
+   "extract": "מכתש רמון הוא מכתש הסחיפה הגדול בעולם. הוא מצוי בישראל ומהווה אחד מחמשת המכתשים שבנגב, ושמורת אור כוכבים בין-לאומית. נופו של מכתש רמון הוא ייחודי. על שפת המכתש הצפונית מצויה העיירה מצפה רמון.\nאורכו של המכתש כ-40 ק\"מ, רוחבו המרבי כ-9 ק\"מ ועומקו המרבי כ-350 מטר. במזרח, מחולק המכתש על ידי הר ארדון לשתי בקעות: בקעת ארדון ובקעת מחמל. רוב שטחו של המכתש מנוקז על ידי נחל רמון, שנקרא בערבית \"ואדי א-רוּמאן\", ייתכן משום שרומאים עברו באזור זה, בדרך הבשמים.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/MakhteshRamonMar262022_01.jpg/960px-MakhteshRamonMar262022_01.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/a/a1/MakhteshRamonMar262022_01.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": 30.57861111,
+   "lon": 34.81777778,
+   "url": "https://he.wikipedia.org/wiki/%D7%9E%D7%9B%D7%AA%D7%A9_%D7%A8%D7%9E%D7%95%D7%9F"
+  },
+  "מקדש הנמרים": {
+   "title": "מקדש הנמרים",
+   "extract": "מקדש הנמרים הוא אתר ארכאולוגי, בו התגלה מקדש פתוח ששימש אתר פולחן פרהיסטורי. האתר שוכן ממזרח לכביש הגישה ליישוב שחרות, צפונית-מזרחית לנמל התעופה עובדה שבבקעת עובדה. המקום הוא אחד מכ-160 מקדשים פתוחים שנתגלו עד כה בנגב ובמזרח סיני, והוא היה בשימוש במשך כ-4,000 שנים, החל מאמצע האלף ה-6 לפנה\"ס (תקופת האבן החדשה המאוחרת) ועד המחצית הראשונה של האלף ה-2 לפנה\"ס (תקופת הברונזה התיכונה).",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/Tigerntempf_049_%284%29.jpg/960px-Tigerntempf_049_%284%29.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Tigerntempf_049_%284%29.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": 29.95583333,
+   "lon": 34.97,
+   "url": "https://he.wikipedia.org/wiki/%D7%9E%D7%A7%D7%93%D7%A9_%D7%94%D7%A0%D7%9E%D7%A8%D7%99%D7%9D"
+  },
+  "נחל חווארים": {
+   "title": "נחל חווארים",
+   "extract": "נחל חווארים הוא נחל אכזב בנגב המרכזי, דרומית למדרשת בן-גוריון, ומצפון לעיר מצפה רמון. הוא מתחיל מכביש 40 ליד צומת ציפורים ונגמר למרגלות מעלה הגר שם הוא מתחבר עם נחל עבדת ויוצר איתו את נחל צין. ישנו חיבור בין נחל קרקש לנחל חווארים בערך באמצעו.\nנחל חווארים נכנס אל בקעת צין הנמצאת בין רמת עבדת לבין רמת הנגב.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/NahalHavarimNov212022_03.jpg/960px-NahalHavarimNov212022_03.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/d/d2/NahalHavarimNov212022_03.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": null,
+   "lon": null,
+   "url": "https://he.wikipedia.org/wiki/%D7%A0%D7%97%D7%9C_%D7%97%D7%95%D7%95%D7%90%D7%A8%D7%99%D7%9D"
+  },
+  "עמודי עמרם": {
+   "title": "עמודי עמרם",
+   "extract": "עמודי עמרם הם עמודים העשויים אבן חול נובית רכה וצבעונית בגוון ורוד, ושוכנים על מצוק בתחילת נחל עמרם, במקום בו הוא מתחיל את נתיבו לכיוון הערבה. הנחל זורם בהרי אילת מצפון לאילת.\nהעמודים נוצרו מחתירה של מי הגשמים בתוך הסדקים שהיו במצוק. שחיקת הסלע לאורך הסדקים יצרו בלייה והביאו ליצירת חמישה עמודים גבוהים המתנשאים לגובה של 15 מטרים. הגבעה הסמוכה לעמודים נקראת \"גבעת יוכבד\", על שם יוכבד אמו של משה, ואשתו של עמרם. האזור בו שוכנים העמודים, הוא חלק משמורת טבע מסיב באילת.\nאבן החול ממנה נוצרו העמודים, נוצרה מבלייה של סלע יסוד. הצבעים המופיעים באבן החול, הם תוצאה של שטיפתם במים העשירים בתחמוצות של חומרים שונים כגון ברזל, מנגן ועוד.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/PikiWiki_Israel_37101_Vacation_Experience.jpg/960px-PikiWiki_Israel_37101_Vacation_Experience.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/b/bc/PikiWiki_Israel_37101_Vacation_Experience.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": 29.65275,
+   "lon": 34.932194,
+   "url": "https://he.wikipedia.org/wiki/%D7%A2%D7%9E%D7%95%D7%93%D7%99_%D7%A2%D7%9E%D7%A8%D7%9D"
+  },
+  "נחל חווה": {
+   "title": "נחל חווה",
+   "extract": "נחל חווה (בערבית: نهر حواء \"נהר חואא\", \"ואדי משיש א-שריקה\") הוא נחל אכזב, מיובליו של נחל צין בהר הנגב המרכזי.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Hava_river_trek_%2825-27.03.13%29_1192_%289300627528%29.jpg/960px-Hava_river_trek_%2825-27.03.13%29_1192_%289300627528%29.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/6/69/Hava_river_trek_%2825-27.03.13%29_1192_%289300627528%29.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": 30.71011111,
+   "lon": 34.89047222,
+   "url": "https://he.wikipedia.org/wiki/%D7%A0%D7%97%D7%9C_%D7%97%D7%95%D7%95%D7%94"
+  },
+  "נחל נקרות": {
+   "title": "נחל נקרות",
+   "extract": "נחל נקרות הוא נחל אכזב באזור מכתש רמון הנשפך אל נחל הערבה. הנחל נקרא בערבית ואדי אלג'ריר (\"הנחל הגורר\"). הוא נקרא כך בשל הגומחות הרבות שנחצבו על ידי השיטפונות בדפנות הקניון.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/Wadi_Nekarot.jpg/960px-Wadi_Nekarot.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Wadi_Nekarot.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": null,
+   "lon": null,
+   "url": "https://he.wikipedia.org/wiki/%D7%A0%D7%97%D7%9C_%D7%A0%D7%A7%D7%A8%D7%95%D7%AA"
+  },
+  "עמק ססגון": {
+   "title": "עמק ססגון",
+   "extract": "עמק ססגון שוכן בצפון מזרח בקעת תמנע, כ-25 ק\"מ מצפון לאילת וכ-3 ק\"מ ממערב לכביש 90, וממערב לקיבוץ אליפז. סביב העמק ניצבות גבעות מִשאר של אבן חול נובית ובלבו עובר \"שביל ישראל\". העמק מצוי מחוץ לגבולות פארק תמנע והוא פתוח ללא תשלום לציבור. מאז 2007 ולמשך כתריסר שנים התנהל מאבק ציבורי נגד הקמתו של מתחם מלונאות בתוך העמק. המאבק הוכתר בהצלחה ובדצמבר 2019 אישרה המועצה הארצית לתכנון ובנייה פה אחד תוכנית שבמסגרתה יוכרז עמק ססגון כשמורת טבע. במסגרת תוכנית זו תתאפשר הקמתו של מלון בסמוך למבואת פארק תמנע.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/%D7%9E%D7%91%D7%98_%D7%9C%D7%A2%D7%9E%D7%A7_%D7%A1%D7%A1%D7%92%D7%95%D7%9F_%D7%9E%D7%94%D7%A8_%D7%9E%D7%9B%D7%A8%D7%95%D7%AA_%28%D7%97%D7%AA%D7%95%D7%9A%29.jpg/960px-%D7%9E%D7%91%D7%98_%D7%9C%D7%A2%D7%9E%D7%A7_%D7%A1%D7%A1%D7%92%D7%95%D7%9F_%D7%9E%D7%94%D7%A8_%D7%9E%D7%9B%D7%A8%D7%95%D7%AA_%28%D7%97%D7%AA%D7%95%D7%9A%29.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/8/87/%D7%9E%D7%91%D7%98_%D7%9C%D7%A2%D7%9E%D7%A7_%D7%A1%D7%A1%D7%92%D7%95%D7%9F_%D7%9E%D7%94%D7%A8_%D7%9E%D7%9B%D7%A8%D7%95%D7%AA_%28%D7%97%D7%AA%D7%95%D7%9A%29.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": null,
+   "lon": null,
+   "url": "https://he.wikipedia.org/wiki/%D7%A2%D7%9E%D7%A7_%D7%A1%D7%A1%D7%92%D7%95%D7%9F"
+  },
+  "עין סהרונים": {
+   "title": "עין סהרונים",
+   "extract": "עין סהרונים הוא מעיין קטן, היחיד במכתש רמון, המהווה את מקור המים הגדול והמרכזי ביותר במכתש. המעיין נמצא בשמורת הטבע מצוק הצינים, ובקרבת מצד סהרונים – תחנת דרכים קדומה.\nהשם עין סהרונים נובע מצמח הסהרון המשתלשל הגדל באזור. בערבית נקרא המעיין אלמחלה (\"המעיין היבש\", \"מעיין הבצורת\") כשם החאן הנבטי קצר אלמחלה.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Makhtesh-ramon-ein-saharonim.jpg/960px-Makhtesh-ramon-ein-saharonim.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/9/97/Makhtesh-ramon-ein-saharonim.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": null,
+   "lon": null,
+   "url": "https://he.wikipedia.org/wiki/%D7%A2%D7%99%D7%9F_%D7%A1%D7%94%D7%A8%D7%95%D7%A0%D7%99%D7%9D"
+  },
+  "נחל רחם": {
+   "title": "נחל רחם",
+   "extract": "נחל רחם (תרגום השם בערבית: ואדי אל רחמא, وادي الرحمة) הוא ואדי בדרום הנגב, ישראל.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/Building_no_free_image_yet-he.svg/960px-Building_no_free_image_yet-he.svg.png?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Building_no_free_image_yet-he.svg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": null,
+   "lon": null,
+   "url": "https://he.wikipedia.org/wiki/%D7%A0%D7%97%D7%9C_%D7%A8%D7%97%D7%9D"
+  },
+  "עמודי שלמה": {
+   "title": "עמודי שלמה",
+   "extract": "עמודי שלמה הם צורות סלע, הנראות למתבונן כעמודי אבן ענקיים, העמודים נמצאים בבקעת תמנע, מצפון לאילת. העמודים נוצרו על ידי בליה, שנגרמה על ידי רוח ומים לאורך קווי שבר באבן החול האדומה. עמודי שלמה מתנשאים לגובה של כ-40 מטרים.\nצורתם המרשימה של העמודים הנראים כעמודי מקדש הביאה את המצרים הקדמונים שחצבו נחושת בבקעה להקים למרגלותיהם מקדש לאלת המכרות חתחור, מקדש ששימש לאחר מכן גם את המדיינים.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/%D7%A2%D7%9E%D7%95%D7%93%D7%99_%D7%A9%D7%9C%D7%9E%D7%94_%D7%91%D7%90%D7%95%D7%A8_%D7%A9%D7%A7%D7%99%D7%A2%D7%94.jpg/960px-%D7%A2%D7%9E%D7%95%D7%93%D7%99_%D7%A9%D7%9C%D7%9E%D7%94_%D7%91%D7%90%D7%95%D7%A8_%D7%A9%D7%A7%D7%99%D7%A2%D7%94.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/f/f4/%D7%A2%D7%9E%D7%95%D7%93%D7%99_%D7%A9%D7%9C%D7%9E%D7%94_%D7%91%D7%90%D7%95%D7%A8_%D7%A9%D7%A7%D7%99%D7%A2%D7%94.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": null,
+   "lon": null,
+   "url": "https://he.wikipedia.org/wiki/%D7%A2%D7%9E%D7%95%D7%93%D7%99_%D7%A9%D7%9C%D7%9E%D7%94"
+  },
+  "נחל שחורת": {
+   "title": "נחל שחורת",
+   "extract": "נחל שחורת הוא נחל קצר, הזורם בעונת החורף באזור הרי אילת. בנחל מקור מים עונתי, מפער מים וקניוני העשוי מגרניט.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/%D7%A7%D7%A0%D7%99%D7%95%D7%9F_%D7%A9%D7%97%D7%95%D7%A8%D7%AA.jpg/960px-%D7%A7%D7%A0%D7%99%D7%95%D7%9F_%D7%A9%D7%97%D7%95%D7%A8%D7%AA.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/b/b9/%D7%A7%D7%A0%D7%99%D7%95%D7%9F_%D7%A9%D7%97%D7%95%D7%A8%D7%AA.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": null,
+   "lon": null,
+   "url": "https://he.wikipedia.org/wiki/%D7%A0%D7%97%D7%9C_%D7%A9%D7%97%D7%95%D7%A8%D7%AA"
+  },
+  "הר תמנע": {
+   "title": "הר תמנע",
+   "extract": "הר תמנע (בערבית: جَبَل تمنَع) נמצא בהרי אילת, בדרום הערבה כ-1.5 ק\"מ מהכניסה לפארק תמנע.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/%D7%94%D7%A8_%D7%AA%D7%9E%D7%A0%D7%A2.jpg/960px-%D7%94%D7%A8_%D7%AA%D7%9E%D7%A0%D7%A2.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/0/01/%D7%94%D7%A8_%D7%AA%D7%9E%D7%A0%D7%A2.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": null,
+   "lon": null,
+   "url": "https://he.wikipedia.org/wiki/%D7%94%D7%A8_%D7%AA%D7%9E%D7%A0%D7%A2"
+  },
+  "חולות כסוי": {
+   "title": "חולות כסוי",
+   "extract": "חולות כסוי הוא שטח המכוסה בחולות נודדים הנמצא במזרח בקעת עובדה שבדרום הנגב, כ-קילומטר צפון-מזרח לבסיס עובדה, כ-5 ק\"מ דרום-מערבית להר עיט וכ-6 ק\"מ צפונית ליישוב שחרות. הדיונות הן היחידות שבנגב בין מכתש רמון והר הנגב עד אילת יחד עם חולות סמר בערבה.\nבתחום הדיונות עובר שביל ישראל ומתנשא לגובה הר פרוט, מצפון לדיונות עובר נחל כסוי ומדרום נחל יתרו. חולות כיסוי נוצרו כתוצאה מסחיפת חול רך וקל שנישא עם רוחות עזות והצטבר על גבי דיונות אילו, כמו בחולות סמר.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/IHM_%D7%97%D7%A0%D7%99%D7%95%D7%9F_%D7%9C%D7%99%D7%9C%D7%94_%D7%90%D7%9E%D7%A6%D7%A2%D7%99_%D7%97%D7%95%D7%9C%D7%95%D7%AA_%D7%9B%D7%A1%D7%95%D7%99.jpeg/960px-IHM_%D7%97%D7%A0%D7%99%D7%95%D7%9F_%D7%9C%D7%99%D7%9C%D7%94_%D7%90%D7%9E%D7%A6%D7%A2%D7%99_%D7%97%D7%95%D7%9C%D7%95%D7%AA_%D7%9B%D7%A1%D7%95%D7%99.jpeg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/1/16/IHM_%D7%97%D7%A0%D7%99%D7%95%D7%9F_%D7%9C%D7%99%D7%9C%D7%94_%D7%90%D7%9E%D7%A6%D7%A2%D7%99_%D7%97%D7%95%D7%9C%D7%95%D7%AA_%D7%9B%D7%A1%D7%95%D7%99.jpeg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": null,
+   "lon": null,
+   "url": "https://he.wikipedia.org/wiki/%D7%97%D7%95%D7%9C%D7%95%D7%AA_%D7%9B%D7%A1%D7%95%D7%99"
+  },
+  "מפרץ אילת": {
+   "title": "מפרץ אילת",
+   "extract": "מפרץ אילת, הידוע מחוץ לישראל כמפרץ עקבה (בערבית: خليج العقبة), הוא לשון ים ארוכה וצרה, שלוחה צפונית של הים האדום המפרידה בין חצי האי סיני ובין חצי האי ערב. אורכו של המפרץ כ-180 קילומטר, ורוחבו המרבי 25 קילומטר. שטח המפרץ הוא 2,880 קמ\"ר המהווים כ-0.5% משטח הים האדום כולו. נפח המפרץ הוא 2,500 ק\"מ מעוקב, המהווים כ-1% מנפח הים האדום כולו. עומקו הממוצע הוא 900 מטר מתחת פני הים והעומק המרבי הוא 1,820 מטר מתחת פני הים (באזור שמול נואיבה בסמוך לחוף הסעודי). מבחינה גאולוגית, מפרץ אילת מהווה חלק מהבקע הסורי-אפריקני ומכאן עומקו הרב.\nמשני עבריו של מפרץ אילת מתנשאים הרים תלולים – הרי סיני ממערב והרי אדום ומדין ממזרח. זווית השיפוע הממוצעת של קרקעית המפרץ היא 21% ובקטעים מסוימים מגיע השיפוע למעל 50%.",
+   "image": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Sinai_Peninsula_from_Southeastern_Mediterranean_panorama_STS040-152-180.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Sinai_Peninsula_from_Southeastern_Mediterranean_panorama_STS040-152-180.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": 29.54348611,
+   "lon": 34.95488056,
+   "url": "https://he.wikipedia.org/wiki/%D7%9E%D7%A4%D7%A8%D7%A5_%D7%90%D7%99%D7%9C%D7%AA"
+  },
+  "עין נטפים": {
+   "title": "עין נטפים",
+   "extract": "עין נטפים (בערבית: ביר אל קטר או עין אל קטר) הוא מעיין מים מתוקים בהרי אילת בערוץ נחל נטפים ליד הגבול עם מצרים. המעין נמצא כשבעה ק\"מ צפונית לאילת סמוך לכביש 12. זהו המעיין היחיד הנובע כל השנה באזור הסמוך לאילת.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/%D7%A2%D7%99%D7%9F_%D7%A0%D7%98%D7%A4%D7%99%D7%9D_-_%D7%94%D7%A9%D7%95%D7%A7%D7%AA.jpg/960px-%D7%A2%D7%99%D7%9F_%D7%A0%D7%98%D7%A4%D7%99%D7%9D_-_%D7%94%D7%A9%D7%95%D7%A7%D7%AA.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/5/5b/%D7%A2%D7%99%D7%9F_%D7%A0%D7%98%D7%A4%D7%99%D7%9D_-_%D7%94%D7%A9%D7%95%D7%A7%D7%AA.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": 29.597014,
+   "lon": 34.883171,
+   "url": "https://he.wikipedia.org/wiki/%D7%A2%D7%99%D7%9F_%D7%A0%D7%98%D7%A4%D7%99%D7%9D"
+  },
+  "הר צפחות": {
+   "title": "הר צפחות",
+   "extract": "הר צפחות הוא הר מגמתי בדרומה של ארץ ישראל, לאורך חלקו הצפוני של מפרץ אילת והוא הקצה הדרומי של רכס הרי אילת.",
+   "image": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Tzfahot.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Tzfahot.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": 29.5158333,
+   "lon": 34.9177778,
+   "url": "https://he.wikipedia.org/wiki/%D7%94%D7%A8_%D7%A6%D7%A4%D7%97%D7%95%D7%AA"
+  },
+  "נחל גשרון": {
+   "title": "נחל גשרון",
+   "extract": "נַחַל גִּשְׁרוֹן (בערבית: وادِي جسرية – ואדי ג'סריה) הוא נחל אכזב בהרי אילת. \nיובליו העליונים מתחילים באזור ראס א־נקב שליד מעבר נטפים. הנחל יורד בתלילות עד שפכו לים האדום בטאבה שבמצרים. \nבנחל מסלולי הליכה למטיילים לאורך חלקיו העליונים, מהם ישנה תצפית על נופיו. בנחל יש מספר מצוקים בהם ניתן לבצע גלישת מצוקים.\nבנחל מתחיל המקטע האחרון של שביל ישראל, שנגמר בבית ספר שדה אילת שלמרגלות הר צפחות.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/IHM_%D7%9E%D7%A6%D7%A4%D7%94_%D7%A0%D7%97%D7%9C_%D7%92%D7%A9%D7%A8%D7%95%D7%9F._1.jpeg/960px-IHM_%D7%9E%D7%A6%D7%A4%D7%94_%D7%A0%D7%97%D7%9C_%D7%92%D7%A9%D7%A8%D7%95%D7%9F._1.jpeg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/5/52/IHM_%D7%9E%D7%A6%D7%A4%D7%94_%D7%A0%D7%97%D7%9C_%D7%92%D7%A9%D7%A8%D7%95%D7%9F._1.jpeg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": 29.53277779,
+   "lon": 34.89027786,
+   "url": "https://he.wikipedia.org/wiki/%D7%A0%D7%97%D7%9C_%D7%92%D7%A9%D7%A8%D7%95%D7%9F"
+  },
+  "הר שחורת": {
+   "title": "הר שחורת",
+   "extract": "הר שחורת הוא חלק מרכס הרי אילת, ונמצא בין נחל שחורת לנחל רודד. הוא נקרא כך בשל הסלעים השחורים הנמצאים בחלקו התחתון ותוחמים את נחל שחורת העובר למרגלותיו.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Eilat_Mountains_4.jpg/960px-Eilat_Mountains_4.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "original": "https://upload.wikimedia.org/wikipedia/commons/9/95/Eilat_Mountains_4.jpg?utm_source=he.wikipedia.org&utm_campaign=api&utm_content=original",
+   "lat": 29.61944444,
+   "lon": 34.9125,
+   "url": "https://he.wikipedia.org/wiki/%D7%94%D7%A8_%D7%A9%D7%97%D7%95%D7%A8%D7%AA"
+  }
+ }
+}
