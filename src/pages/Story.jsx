@@ -158,6 +158,36 @@ export default function Story({
     setSpeaking(true);
     playClip(clip.url).then(() => { setSpeaking(false); next?.(); }).catch(() => { setSpeaking(false); speakBrowser(text, next); });
   };
+  // Automatic voice navigation: when the GPS estimate moves to a new step, announce it (no tap needed)
+  const [autoNav, setAutoNav] = useLocalStorage('storyAutoNav', false);
+  const lastAnnounced = useRef(null);
+  const lastAnnounceAt = useRef(0);
+  const offTrailAt = useRef(0);
+  const speakingRef = useRef(false);
+  speakingRef.current = speaking;
+  useEffect(() => {
+    if (!autoNav || !gpsOn || suggested == null || speakingRef.current) return;
+    const now = Date.now();
+    if (suggested !== lastAnnounced.current && now - lastAnnounceAt.current > 8000) {
+      lastAnnounced.current = suggested; lastAnnounceAt.current = now;
+      setCur(suggested);
+      navigator.vibrate?.(80);
+      readStep(suggested);
+      return;
+    }
+    if (gps?.onTrail === false && gps.dist > 0.3 && now - offTrailAt.current > 120000) {
+      offTrailAt.current = now;
+      navigator.vibrate?.([200, 100, 200]);
+      speakBrowser(t("שימו לב, אתם כ-{0} מטר מהשביל. חזרו לסימון.", Math.round(gps.dist * 1000)));
+    }
+  }, [autoNav, gpsOn, suggested, speaking, gps]); // eslint-disable-line react-hooks/exhaustive-deps
+  const toggleAutoNav = async () => {
+    if (autoNav) { setAutoNav(false); stopAll(); return; }
+    setAutoNav(true); setGpsOn(true);
+    try { if (!wake.current && navigator.wakeLock) wake.current = await navigator.wakeLock.request('screen'); } catch { /* ignore */ }
+    const i = suggested ?? cur; lastAnnounced.current = i; lastAnnounceAt.current = Date.now();
+    setCur(i); readStep(i); // user gesture: unlocks audio playback for the automatic announcements that follow
+  };
   const toggleWake = async () => {
     try {
       if (wake.current) {
@@ -207,6 +237,8 @@ export default function Story({
         }}><Icon name="locate" size={18} />{t("מיקום חי")}</span>
           <label className="switch"><input type="checkbox" checked={gpsOn} onChange={e => setGpsOn(e.target.checked)} /></label>
         </div>
+        <button className={`btn mt ${autoNav ? 'btn--danger' : 'btn--primary'}`} style={{ width: '100%' }} onClick={toggleAutoNav}>{autoNav ? t("⏹ עצירת הניווט הקולי") : t("🧭🔊 ניווט קולי אוטומטי לפי GPS")}</button>
+        {autoNav && <div className="tiny muted mt">{t("השלב יוקרא אוטומטית כשתתקדמו לאורך המקטע (לפי המרחק שעברתם, בקירוב), עם התרעה קולית בסטייה מהשביל. השאירו את המסך דולק – ב-iOS ה-GPS נעצר כשהמסך כבוי.")}</div>}
         {gpsOn && !pos && <div className="small muted mt">{t("מחפש לוויינים…")}</div>}
         {gps && <div className="stack mt" style={{
         gap: 6

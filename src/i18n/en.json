@@ -1293,5 +1293,9 @@
 "למחוק את הקלטת המסלול של היום?": "Delete today's track recording?",
 "ההקלטה נמחקה": "Recording deleted",
 "ניהול": "manage",
-"למחוק את הקלטת ה-GPS של {0}?": "Delete the GPS recording of {0}?"
+"למחוק את הקלטת ה-GPS של {0}?": "Delete the GPS recording of {0}?",
+"שימו לב, אתם כ-{0} מטר מהשביל. חזרו לסימון.": "Attention, you are about {0} metres off the trail. Return to the markers.",
+"⏹ עצירת הניווט הקולי": "⏹ Stop voice navigation",
+"🧭🔊 ניווט קולי אוטומטי לפי GPS": "🧭🔊 Automatic voice navigation by GPS",
+"השלב יוקרא אוטומטית כשתתקדמו לאורך המקטע (לפי המרחק שעברתם, בקירוב), עם התרעה קולית בסטייה מהשביל. השאירו את המסך דולק – ב-iOS ה-GPS נעצר כשהמסך כבוי.": "Each step is read automatically as you progress along the segment (estimated from distance covered), with a voice alert when you leave the trail. Keep the screen on – on iOS, GPS stops when the screen is off."
 }
