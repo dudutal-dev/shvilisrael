@@ -11,6 +11,8 @@ import { regionGroup } from '../lib/season.js'
 import { useGeolocation } from '../hooks/useGeolocation.js'
 import { nearest } from '../lib/geo.js'
 import { sunTimes, fmtTime } from '../lib/sun.js'
+import updates from '../data/spni/updates.json'
+import { sortUpdates } from '../lib/updates.js'
 
 const QUICK = [
   ['map', '🗺️', 'מפה חיה'], ['weather', '🌤️', 'מזג אוויר'], ['nav', '🧭', 'מצפן'], ['guide/angels', '😇', 'מלאכי שביל'],
@@ -28,7 +30,7 @@ export default function Home({ navigate }) {
   const month = today.getMonth()
   const daysToStart = plan.startDate ? Math.ceil((new Date(plan.startDate) - today) / 86400000) : null
   const sorted = useMemo(() => [...segments].sort((a, b) => a.id - b.id), [segments])
-  const changes = (meta.recent_changes || []).slice(-3).reverse()
+  const changes = sortUpdates(updates.items || []).slice(0, 3)
   const needsAngel = tomorrow && !tomorrow.rest && /מלאכ/.test(tomorrow.overnight || '') && !angels.some((a) => tomorrow.segments.includes(Number(a.segId)))
 
   return (
@@ -39,7 +41,7 @@ export default function Home({ navigate }) {
         <div className="hero__content">
           <span className="hero__kicker"><span className="blaze" style={{ width: 10, height: 16 }}><span className="w" /><span className="b" /><span className="o" /></span> מהחרמון ועד אילת</span>
           <h1>שביל ישראל</h1>
-          <p>מסע של {Math.round(totalKm).toLocaleString()} ק"מ ב-{segments.length} מקטעים · מתכנן, מפה חיה ומלווה בשטח</p>
+          <p>מסע של {Math.round(totalKm).toLocaleString()} ק"מ ב-{segments.length} מקטעים רשמיים · מתכנן, מפה חיה ומלווה בשטח</p>
           <div className="hero__stats">
             <div><b>{Math.round(totalKm).toLocaleString()}</b><span>ק"מ</span></div>
             <div><b>{segments.length}</b><span>מקטעים</span></div>
@@ -114,9 +116,9 @@ export default function Home({ navigate }) {
       </Section>
 
       {changes.length > 0 && (
-        <Section title="עדכוני תוואי אחרונים" icon="flag">
-          {changes.map((c, i) => <div key={i} className="news"><b>{c.when}</b> – {c.what}</div>)}
-          <p className="tiny muted mt">לפני היציאה בדקו הודעות עדכניות באתר החברה להגנת הטבע ורשות הטבע והגנים.</p>
+        <Section title="עדכוני תוואי אחרונים" icon="flag" action={<button className="linkbtn small" onClick={() => navigate('guide/spni')}>כל העדכונים ←</button>}>
+          {changes.map((c, i) => <div key={i} className="news"><b>{c.place}</b> <span className="tiny muted">({c.date})</span> – {c.text}</div>)}
+          <p className="tiny muted mt">מקור: עמוד העדכונים של החברה להגנת הטבע. לפני היציאה בדקו גם את מוקד טבע ורשות הטבע והגנים.</p>
         </Section>
       )}
       <p className="tiny muted">המידע באפליקציה נאסף ממקורות ציבוריים ואינו תחליף למפות ולהנחיות הרשמיות. בטיחות קודמת לכול.</p>

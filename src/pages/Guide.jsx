@@ -9,10 +9,14 @@ import logistics from '../data/logistics.json'
 import lodging from '../data/lodging.json'
 import { gearFor, BASE_GEAR, packWeight } from '../lib/gear.js'
 import apps from '../data/apps.json'
+import tips from '../data/spni/tips.json'
+import updates from '../data/spni/updates.json'
+import segData from '../data/segments.json'
+import { sortUpdates } from '../lib/updates.js'
 
 const SECTIONS = [
   ['weather', '🌤️', 'מזג אוויר חי'], ['seasons', '☀️', 'עונות ואקלים'], ['angels', '😇', 'מלאכי שביל'], ['water', '💧', 'מים והטמנות'], ['lodging', '🏕️', 'לינה'], ['safety', '🆘', 'בטיחות וחירום'],
-  ['gear', '🎒', 'ציוד'], ['budget', '💰', 'תקציב'], ['transport', '🚌', 'תחבורה והצטיידות'], ['nav', '🧭', 'סימון וניווט'], ['faq', '❓', 'שאלות נפוצות'], ['ethics', '🌿', 'טיול אחראי'], ['apps', '📱', 'אפליקציות אחרות'],
+  ['gear', '🎒', 'ציוד'], ['budget', '💰', 'תקציב'], ['transport', '🚌', 'תחבורה והצטיידות'], ['nav', '🧭', 'סימון וניווט'], ['spni', '📘', 'המדריך הרשמי'], ['faq', '❓', 'שאלות נפוצות'], ['ethics', '🌿', 'טיול אחראי'], ['apps', '📱', 'אפליקציות אחרות'],
 ]
 
 export default function Guide({ section = 'seasons', navigate, query = {} }) {
@@ -34,6 +38,7 @@ export default function Guide({ section = 'seasons', navigate, query = {} }) {
       {sec === 'faq' && <FAQ />}
       {sec === 'ethics' && <Ethics />}
       {sec === 'apps' && <Apps />}
+      {sec === 'spni' && <Spni navigate={navigate} />}
       <p className="tiny muted">המידע נאסף ממקורות ציבוריים (החברה להגנת הטבע, רשות הטבע והגנים, קהילות השביל ומדריכים) ועלול להשתנות. אמתו לפני היציאה.</p>
     </div>
   )
@@ -365,6 +370,38 @@ function Apps() {
         ))}
       </Section>
       <p className="tiny muted">מבוסס על חיפוש בחנויות האפליקציות ובביקורות (נובמבר 2026). דירוגים ומחירים משתנים.</p>
+    </div>
+  )
+}
+
+function Spni({ navigate }) {
+  const maps = segData.meta?.maps || {}
+  const items = sortUpdates(updates.items || [])
+  return (
+    <div className="stack">
+      <div className="card card--glow">
+        <div className="card__title"><span className="blaze" style={{ width: 12, height: 18 }}><span className="w" /><span className="b" /><span className="o" /></span>המדריך הרשמי של החברה להגנת הטבע</div>
+        <p className="small">החלוקה ל-56 מקטעים, האורכים, תיאורי המסלול, העונות, נקודות ההתחלה והסיום, התחבורה וההמלצות באפליקציה מבוססים על המדריך הרשמי (נשלף {updates.fetched}). לכל מקטע יש מפה חינמית להורדה ועמוד מפורט באתר.</p>
+        <div className="row mt" style={{ gap: 6 }}>
+          <a className="btn btn--sm btn--primary" href={segData.meta?.spni_url} target="_blank" rel="noreferrer">המדריך המלא באתר</a>
+          <a className="btn btn--sm" href={maps.interactive} target="_blank" rel="noreferrer">🗺️ מפה אינטראקטיבית</a>
+          <a className="btn btn--sm" href={maps.all_pdf_zip} target="_blank" rel="noreferrer">⬇️ כל מפות המקטעים (ZIP)</a>
+          <a className="btn btn--sm btn--ghost" href={maps.buy_set} target="_blank" rel="noreferrer">אוגדן המפות לרכישה</a>
+          <a className="btn btn--sm btn--ghost" href={maps.report_marking} target="_blank" rel="noreferrer">דיווח על בעיה בסימון</a>
+        </div>
+      </div>
+      <Section title="עדכונים ושינויים בתוואי" icon="flag" action={<a className="linkbtn small" href={updates.url} target="_blank" rel="noreferrer">לעמוד העדכונים ←</a>}>
+        {items.map((u, i) => <div key={i} className="news"><b>{u.place}</b> <span className="tiny muted">({u.region}{u.date ? ` · ${u.date}` : ''})</span><div>{u.text}</div></div>)}
+      </Section>
+      <Section title="מדריכי הכנה ובטיחות" icon="book">
+        {(tips.guides || []).filter((g) => g.sections?.length && g.key !== 'moked-teva').map((g) => (
+          <Acc key={g.key} title={g.title}>
+            {g.sections.filter((x) => !x.title.includes('כל מה שצריך לדעת')).map((x, i) => <div key={i} className="mb"><b>{x.title}</b><p style={{ whiteSpace: 'pre-line' }}>{x.text}</p></div>)}
+            <a className="tiny" href={g.url} target="_blank" rel="noreferrer">למדריך המלא באתר</a>
+          </Acc>
+        ))}
+      </Section>
+      <Alert kind="info">לעדכונים אחרונים על מצב השבילים (סגירות, שיטפונות, שריפות): <a href="https://www.teva.org.il/moked-teva" target="_blank" rel="noreferrer">מוקד טבע</a> של החברה להגנת הטבע.</Alert>
     </div>
   )
 }

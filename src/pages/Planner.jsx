@@ -67,8 +67,8 @@ export default function Planner({ navigate }) {
         <div className="field">
           <label>כיוון ההליכה</label>
           <div className="segmented">
-            <button className={draft.direction === 'sobo' ? 'active' : ''} onClick={() => set('direction', 'sobo')}>צפון → דרום (דן → אילת)</button>
-            <button className={draft.direction === 'nobo' ? 'active' : ''} onClick={() => set('direction', 'nobo')}>דרום → צפון (אילת → דן)</button>
+            <button className={draft.direction === 'sobo' ? 'active' : ''} onClick={() => set('direction', 'sobo')}>צפון → דרום (חרמון → אילת)</button>
+            <button className={draft.direction === 'nobo' ? 'active' : ''} onClick={() => set('direction', 'nobo')}>דרום → צפון (אילת → חרמון)</button>
           </div>
           <p className="tiny muted">{draft.direction === 'sobo' ? 'מומלץ לצאת באוקטובר–נובמבר: הצפון עוד יבש, ומגיעים לנגב בחורף הנעים.' : 'מומלץ לצאת בפברואר–מרץ: חוצים את הנגב לפני החום ומגיעים לצפון הפורח באביב.'}</p>
         </div>

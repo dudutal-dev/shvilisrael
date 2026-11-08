@@ -8,6 +8,7 @@ import { navLinks, formatCoord } from '../lib/geo.js'
 import { waypointsToGPX, download } from '../lib/gpx.js'
 import { useToast } from '../hooks/useToast.jsx'
 import lodging from '../data/lodging.json'
+import spniAngels from '../data/spni/angels.json'
 import { gearFor } from '../lib/gear.js'
 import { WeatherNow, WeatherDaily, WeatherFlags } from '../components/Weather.jsx'
 import { useWeather } from '../hooks/useWeather.js'
@@ -56,7 +57,7 @@ export default function SegmentDetail({ id, navigate }) {
         <div className="hero__content">
           <div className="row" style={{ gap: 6 }}><span className="chip" style={{ background: 'rgba(255,255,255,0.2)', color: '#fff' }}>מקטע {seg.id}</span><Difficulty level={seg.difficulty} />{isDone && <span className="chip" style={{ background: 'var(--green)', color: '#fff' }}>הושלם ✓</span>}</div>
           <h1 style={{ fontSize: 22, marginTop: 6 }}>{seg.name_he}</h1>
-          <p className="small">{seg.start?.name_he} ← {seg.end?.name_he} · {seg.region}</p>
+          <p className="small">{seg.start?.short_he || seg.start?.name_he} ← {seg.end?.short_he || seg.end?.name_he} · {seg.region_spni || seg.region}</p>
         </div>
       </div>
 
@@ -75,7 +76,26 @@ export default function SegmentDetail({ id, navigate }) {
 
       {tab === 'info' && (
         <div className="stack">
-          {seg.description_he && <div className="card"><p>{seg.description_he}</p></div>}
+          {seg.description_he && <div className="card card--glow"><p style={{ lineHeight: 1.7 }}>{seg.description_he}</p></div>}
+          {seg.spni && (
+            <div className="card">
+              <div className="card__title"><span className="blaze" style={{ width: 12, height: 18 }}><span className="w" /><span className="b" /><span className="o" /></span>המדריך הרשמי – החברה להגנת הטבע</div>
+              <div className="stack small" style={{ gap: 8 }}>
+                {seg.spni.season_he && <div><b>עונה מומלצת:</b> {seg.spni.season_he}</div>}
+                {seg.spni.character_he && <div><b>אופי המסלול:</b> {seg.spni.character_he}</div>}
+                {seg.spni.shortcuts_he && <div><b>אפשרויות קיצור:</b> {seg.spni.shortcuts_he}</div>}
+                {seg.spni.parking_he && <div><b>חניה:</b> {seg.spni.parking_he}</div>}
+              </div>
+              {seg.spni.important_he?.length > 0 && <div className="alert alert--warn mt"><div><b>❗ חשוב לדעת</b><ul className="mt" style={{ paddingInlineStart: 18 }}>{seg.spni.important_he.map((x, i) => <li key={i}>{x}</li>)}</ul></div></div>}
+              <div className="row mt" style={{ gap: 6 }}>
+                {seg.spni.map_pdf && <a className="btn btn--sm btn--primary" href={seg.spni.map_pdf} target="_blank" rel="noreferrer">🗺️ מפת המקטע (PDF חינם)</a>}
+                <a className="btn btn--sm" href={seg.spni.url} target="_blank" rel="noreferrer">לעמוד המקטע באתר</a>
+                {seg.spni.guide_url && <a className="btn btn--sm btn--ghost" href={seg.spni.guide_url} target="_blank" rel="noreferrer">מדריך {seg.region_spni}</a>}
+              </div>
+              {seg.spni.description_he && <details className="acc mt"><summary>תיאור המסלול המלא (מצפון לדרום)</summary><div className="acc__body" style={{ whiteSpace: 'pre-line', lineHeight: 1.7 }}>{seg.spni.description_he}{seg.spni.author_he && <p className="tiny muted mt">כתב: {seg.spni.author_he}</p>}</div></details>}
+              {seg.spni.nearby_he?.length > 0 && <details className="acc mt"><summary>המלצות בסביבה</summary><div className="acc__body"><ul>{seg.spni.nearby_he.map((x, i) => <li key={i}>{x}</li>)}</ul></div></details>}
+            </div>
+          )}
           <div className="card">
             <div className="card__title"><Icon name="star" />נקודות עניין</div>
             <ul>{(seg.highlights || []).map((h, i) => <li key={i}>{h}</li>)}</ul>
@@ -88,8 +108,8 @@ export default function SegmentDetail({ id, navigate }) {
           )}
           <div className="card">
             <div className="card__title"><Icon name="bus" />הגעה ותחבורה</div>
-            <p className="small"><b>התחלה:</b> {seg.transport?.start_he || 'ראו מדריך'}</p>
-            <p className="small mt"><b>סיום:</b> {seg.transport?.end_he || 'ראו מדריך'}</p>
+            <p className="small">{seg.transport?.spni_he || seg.transport?.start_he || 'ראו מדריך'}</p>
+            {seg.transport?.end_he && <p className="small mt"><b>סיום:</b> {seg.transport.end_he}</p>}
             {links && <div className="row mt" style={{ gap: 6 }}>
               <a className="btn btn--sm" href={links.google} target="_blank" rel="noreferrer">Google Maps לנק' ההתחלה</a>
               <a className="btn btn--sm" href={links.waze} target="_blank" rel="noreferrer">Waze</a>
@@ -142,6 +162,19 @@ export default function SegmentDetail({ id, navigate }) {
             </div>
             <button className="btn btn--ghost btn--sm mt" onClick={() => navigate('guide/lodging')}>למדריך הלינה המלא ←</button>
           </div>
+          {seg.angels_region && (() => {
+            const list = (spniAngels.angels || []).filter((a) => a.region_index === seg.angels_region)
+            const reg = spniAngels.regions.find((r) => r.index === seg.angels_region)
+            return list.length ? (
+              <div className="card">
+                <div className="card__title">😇 מלאכי שביל באזור: {reg?.name}</div>
+                <p className="tiny muted mb">{list.length} מארחים ברשימה הרשמית של החברה להגנת הטבע. פרטי קשר – בעמוד האזורי באתר.</p>
+                <div className="stack" style={{ gap: 6 }}>{list.slice(0, 12).map((a, i) => <div key={i} className="small"><b>{a.settlement}</b> – <span className="muted">{a.offer.split('\n')[0].slice(0, 90)}</span></div>)}</div>
+                {list.length > 12 && <p className="tiny muted mt">ועוד {list.length - 12}…</p>}
+                <div className="row mt" style={{ gap: 6 }}><a className="btn btn--sm btn--primary" href={reg?.url} target="_blank" rel="noreferrer">הרשימה המלאה עם טלפונים</a><button className="btn btn--sm" onClick={() => navigate('guide/angels')}>המלאכים שלי</button></div>
+              </div>
+            ) : null
+          })()}
           {nearbyCamps.length > 0 && (
             <div className="card">
               <div className="card__title"><Icon name="tent" />חניוני לילה בסביבה</div>
