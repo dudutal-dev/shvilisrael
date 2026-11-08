@@ -78,7 +78,10 @@ export default function Planner({ navigate, query = {} }) {
     const hasAngel = angels.some((a) => d.segments.includes(Number(a.segId)))
     return { d, s, kind, hasAngel, key: `lodging:${d.day}` }
   }), [walking, angels]) // eslint-disable-line react-hooks/exhaustive-deps
-  const resupply = logistics.logistics?.resupply?.points || []
+  // resupply points mapped to official segment ranges; show only the ones on the chosen route
+  const RESUPPLY_RANGES = [[1, 2], [3, 6], [7, 10], [10, 14], [14, 17], [17, 23], [23, 31], [31, 43], [43, 49], [49, 56]]
+  const routeIds = useMemo(() => new Set(walking.flatMap((d) => d.segments)), [walking])
+  const resupply = useMemo(() => (logistics.logistics?.resupply?.points || []).map((r, i) => ({ ...r, i, range: RESUPPLY_RANGES[i] })).filter((r) => { const [a, b] = r.range || [0, 0]; for (let id = a; id <= b; id++) if (routeIds.has(id)) return true; return false }), [routeIds]) // eslint-disable-line react-hooks/exhaustive-deps
   const gearPlan = useMemo(() => {
     const extras = new Map(); let liters = 0, bag = ''
     for (const d of walking) { const s = seg(d.segments[0]); if (!s) continue; const g = gearFor(s, d.date.getMonth()); if (!g) continue; liters = Math.max(liters, g.waterLiters); if (!bag || g.sleepingBag.includes('0°C')) bag = g.sleepingBag; for (const x of g.extras) if (!extras.has(x.item)) extras.set(x.item, { ...x, days: [d.day] }); else extras.get(x.item).days.push(d.day) }
@@ -92,7 +95,7 @@ export default function Planner({ navigate, query = {} }) {
     const p = {}
     const count = (keys) => ({ done: keys.filter(task).length, total: keys.length })
     p.lodging = count(lodgingRows.filter((r) => r.kind !== 'camp').map((r) => r.key))
-    p.water = count([...(preview?.caches || []).map((c) => `cache:${c.day}`), ...resupply.map((_, i) => `resupply:${i}`)])
+    p.water = count([...(preview?.caches || []).map((c) => `cache:${c.day}`), ...resupply.map((r) => `resupply:${r.i}`)])
     p.gear = { done: baseGearDone + gearPlan.extras.filter((x) => task(`gear:${x.item}`)).length, total: baseGearTotal + gearPlan.extras.length }
     p.safety = count(['safety:contact', 'safety:insurance', 'safety:plan-shared', 'safety:apps', 'safety:floods'])
     p.logistics = count(['log:to-start', 'log:from-end', 'log:money', 'log:holidays', 'log:sim'])
@@ -235,9 +238,9 @@ export default function Planner({ navigate, query = {} }) {
               <div className="row"><button className="btn btn--sm btn--primary" onClick={cacheMessage}>📋 הודעת הזמנה לספק</button><button className="btn btn--sm" onClick={() => navigate('guide/water')}>ספקים והנחיות</button></div>
             </>
           ) : <Alert kind="ok">אין ימים הדורשים הטמנת מים במסלול שבחרתם.</Alert>}
-          <Acc title={`🛒 נקודות הצטיידות לאורך הדרך (${resupply.filter((_, i) => task(`resupply:${i}`)).length}/${resupply.length})`} open>
+          <Acc title={`🛒 נקודות הצטיידות במסלול שבחרתם (${resupply.filter((r) => task(`resupply:${r.i}`)).length}/${resupply.length})`} open>
             <p className="tiny muted mb">סמנו נקודות שתכננתם לקנות בהן אוכל (בנגב: 2–4 ימי אוכל בין נקודה לנקודה).</p>
-            {resupply.map((r, i) => <Check key={i} k={`resupply:${i}`} sub={r.places_he}>{r.segment_he}</Check>)}
+            {resupply.map((r) => <Check key={r.i} k={`resupply:${r.i}`} sub={r.places_he}>{r.segment_he} <span className="tiny muted">(מקטעים {r.range[0]}–{r.range[1]})</span></Check>)}{resupply.length === 0 && <p className="small muted">אין נקודות הצטיידות רשומות לטווח המקטעים שנבחר.</p>}
           </Acc>
           <Acc title="🍲 טיפים לאוכל במסלול ארוך"><ul><li>500–800 גרם אוכל ליום; עתיר קלוריות ומשקל נמוך (אגוזים, טחינה, שיבולת שועל, קוסקוס, חטיפים).</li><li>תמיד יום אוכל עודף בנגב.</li><li>מלחים/אלקטרוליטים בקיץ ובמדבר.</li></ul></Acc>
           <StepNav />
