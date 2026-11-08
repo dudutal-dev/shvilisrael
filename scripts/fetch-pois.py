@@ -20,7 +20,9 @@ def get(params):
             time.sleep(1.2)
             with urllib.request.urlopen(req, timeout=30) as r: return json.load(r)
         except urllib.error.HTTPError as e:
-            if e.code == 429: time.sleep(15 * (i + 1)); continue
+            if e.code == 429:
+                ra = int(e.headers.get('Retry-After') or 30)
+                print('429 – waiting', ra + 2, 's', file=sys.stderr); time.sleep(ra + 2); continue
             if i == 5: raise
             time.sleep(2)
         except Exception:
@@ -76,22 +78,51 @@ def resolve(name):
     return cache[name]
 
 pois, segmap = {}, {}
+seg_names = {str(seg['id']): candidates(seg) for seg in data['segments']}
+all_names = list(dict.fromkeys(n for v in seg_names.values() for n in v))
+print('candidate names:', len(all_names), file=sys.stderr)
+# pass 1: direct title lookup in batches of 50 (redirects resolved by the API)
+direct = {}
+todo = [n for n in all_names if n not in cache and n not in MAP]
+for i in range(0, len(todo), 50):
+    batch = todo[i:i + 50]
+    r = get({'action': 'query', 'titles': '|'.join(batch), 'redirects': 1, 'prop': 'pageprops', 'ppprop': 'disambiguation'})
+    q = r.get('query', {})
+    norm_map = {x['from']: x['to'] for x in q.get('normalized', [])}
+    red_map = {x['from']: x['to'] for x in q.get('redirects', [])}
+    ok = {p['title'] for p in q.get('pages', []) if not p.get('missing') and 'disambiguation' not in p.get('pageprops', {})}
+    for n in batch:
+        t = red_map.get(norm_map.get(n, n), norm_map.get(n, n))
+        cache[n] = t if t in ok else None
+        if t in ok: direct[n] = t
+    json.dump(cache, open(cache_file, 'w'), ensure_ascii=False, indent=1)
+    print(f'direct batch {i // 50 + 1}: {len(direct)} found so far', file=sys.stderr)
+# pass 2: search for the misses (slow; incremental cache)
+misses = [n for n in all_names if not cache.get(n) and n not in MAP]
+print('searching for', len(misses), 'names', file=sys.stderr)
+for n in misses:
+    if cache.get(n) is not None: continue
+    r = get({'action': 'query', 'list': 'search', 'srsearch': n, 'srlimit': 4})
+    best = None
+    for h in r.get('query', {}).get('search', []):
+        score = good_match(n, h['title'])
+        if score and (best is None or score > best[0]): best = (score, h['title'])
+    cache[n] = best[1] if best else ''
+    json.dump(cache, open(cache_file, 'w'), ensure_ascii=False, indent=1)
 titles_needed = {}
-for seg in data['segments']:
-    names = candidates(seg)
-    segmap[str(seg['id'])] = []
+for sid, names in seg_names.items():
+    segmap[sid] = []
     for n in names:
-        t = resolve(n)
+        t = MAP.get(n) or cache.get(n)
         if not t: continue
-        key = t
-        titles_needed[key] = n
-        if key not in segmap[str(seg['id'])]: segmap[str(seg['id'])].append(key)
-json.dump(cache, open(cache_file, 'w'), ensure_ascii=False, indent=1)
+        titles_needed[t] = n
+        if t not in segmap[sid]: segmap[sid].append(t)
 print('resolved titles:', len(titles_needed), file=sys.stderr)
 
 titles = list(titles_needed)
 for i in range(0, len(titles), 20):
     batch = titles[i:i + 20]
+    print(f'details batch {i // 20 + 1}/{(len(titles) + 19) // 20}', file=sys.stderr)
     r = get({'action': 'query', 'prop': 'extracts|pageimages|coordinates|pageprops|info', 'inprop': 'url', 'exintro': 1, 'explaintext': 1, 'exsentences': 8, 'piprop': 'thumbnail|original', 'pithumbsize': 900, 'titles': '|'.join(batch), 'redirects': 1, 'ppprop': 'disambiguation'})
     red = {x['from']: x['to'] for x in r.get('query', {}).get('redirects', [])}
     for p in r.get('query', {}).get('pages', []):
