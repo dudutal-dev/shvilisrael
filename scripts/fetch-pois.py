@@ -9,7 +9,8 @@ seg_file = 'src/data/segments.json'
 data = json.load(open(seg_file, encoding='utf-8'))
 overrides = json.load(open('scripts/poi-overrides.json', encoding='utf-8')) if os.path.exists('scripts/poi-overrides.json') else {}
 SKIP = overrides.get('_skip', [])
-MAP = overrides.get('_map', {})
+MAP = {k: (v if isinstance(v, list) else [v]) for k, v in overrides.get('_map', {}).items()}
+DO_SEARCH = overrides.get('_search', True)
 
 def get(params):
     params = dict(params, format='json', formatversion='2')
@@ -83,7 +84,8 @@ all_names = list(dict.fromkeys(n for v in seg_names.values() for n in v))
 print('candidate names:', len(all_names), file=sys.stderr)
 # pass 1: direct title lookup in batches of 50 (redirects resolved by the API)
 direct = {}
-todo = [n for n in all_names if n not in cache and n not in MAP]
+alts = [t for n in all_names if n in MAP for t in MAP[n]]
+todo = list(dict.fromkeys([n for n in all_names if cache.get(n) is None and n not in MAP] + [t for t in alts if cache.get(t) is None]))
 for i in range(0, len(todo), 50):
     batch = todo[i:i + 50]
     r = get({'action': 'query', 'titles': '|'.join(batch), 'redirects': 1, 'prop': 'pageprops', 'ppprop': 'disambiguation'})
@@ -98,7 +100,11 @@ for i in range(0, len(todo), 50):
     json.dump(cache, open(cache_file, 'w'), ensure_ascii=False, indent=1)
     print(f'direct batch {i // 50 + 1}: {len(direct)} found so far', file=sys.stderr)
 # pass 2: search for the misses (slow; incremental cache)
-misses = [n for n in all_names if not cache.get(n) and n not in MAP]
+for n in all_names:
+    if n in MAP:
+        hit = next((cache.get(t) for t in MAP[n] if cache.get(t)), None)
+        cache[n] = hit or ''
+misses = [n for n in all_names if not cache.get(n) and n not in MAP] if DO_SEARCH else []
 print('searching for', len(misses), 'names', file=sys.stderr)
 for n in misses:
     if cache.get(n) is not None: continue
@@ -113,7 +119,7 @@ titles_needed = {}
 for sid, names in seg_names.items():
     segmap[sid] = []
     for n in names:
-        t = MAP.get(n) or cache.get(n)
+        t = cache.get(n)
         if not t: continue
         titles_needed[t] = n
         if t not in segmap[sid]: segmap[sid].append(t)
