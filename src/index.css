@@ -649,5 +649,5 @@ a { overflow-wrap: anywhere; }
 [dir='ltr'] .switch input:checked::after { transform: translateX(18px); }
 [dir='ltr'] .header__title .blaze { order: 0; }
 
-[dir='ltr'] .he-content, [dir='ltr'] .acc__body, [dir='ltr'] .news, [dir='ltr'] .poi-text, [dir='ltr'] .story__text, [dir='ltr'] .angel-card p, [dir='ltr'] .rs-row, [dir='ltr'] .wx-station { direction: rtl; text-align: right; }
+[dir='ltr'] .he-content, [dir='ltr'] .news, [dir='ltr'] .poi-text, [dir='ltr'] .angel-card p, [dir='ltr'] .rs-row, [dir='ltr'] .wx-station, [dir='ltr'] [dir='rtl'] { direction: rtl; text-align: right; }
 [dir='ltr'] .acc__body ul, [dir='ltr'] .acc__body ol { padding-inline-start: 1.2em; }

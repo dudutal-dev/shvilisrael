@@ -1,13 +1,18 @@
 // Builds src/data/segments.json from SPNI's official 56 segments (src/data/spni/segments.json),
 // endpoint coordinates (scripts/spni-endpoints.json), photo map, and attributes merged from the
 // earlier research dataset (src/data/segments.raw.json, tiuli-based 49 segments).
-import { readFileSync, writeFileSync } from 'node:fs'
+import { readFileSync, writeFileSync, existsSync, readdirSync } from 'node:fs'
+const fs = { existsSync, readdirSync }
 const J = (f) => JSON.parse(readFileSync(f, 'utf8'))
 const spni = J('src/data/spni/segments.json')
 const pts = J('scripts/spni-endpoints.json')
 const photos = J('scripts/segment-photos-spni.json')
 const raw = J('src/data/segments.raw.json')
 const namesEn = J('scripts/segment-names-en.json')
+// Optional English translations of the official SPNI texts: scripts/i18n/spni-en/seg-NN.json
+const enDir = 'scripts/i18n/spni-en'
+const spniEn = {}
+if (fs.existsSync(enDir)) for (const f of fs.readdirSync(enDir)) if (/^seg-\d+\.json$/.test(f)) { const t = J(`${enDir}/${f}`); spniEn[t.number] = t }
 const research = raw.segments.filter((s) => s.variant !== 'old_route' && Number.isInteger(s.id))
 const hav = (a, b) => { const R = 6371, r = Math.PI / 180, dLat = (b.lat - a.lat) * r, dLon = (b.lon - a.lon) * r, h = Math.sin(dLat / 2) ** 2 + Math.cos(a.lat * r) * Math.cos(b.lat * r) * Math.sin(dLon / 2) ** 2; return 2 * R * Math.asin(Math.sqrt(h)) }
 const mid = (a, b) => ({ lat: (a.lat + b.lat) / 2, lon: (a.lon + b.lon) / 2 })
@@ -35,6 +40,7 @@ const fixSpaces = (t = '') => t.replace(/([.!?:])(?=[\u0590-\u05FF])/g, '$1 ').r
 const segments = spni.map((s) => {
 
   const n = s.number
+  const en = spniEn[n] || {}
   const start = { name_he: s.start || pts[n].name, lat: pts[n].lat, lon: pts[n].lon, approx: true, short_he: pts[n].name, short_en: namesEn.points[n], name_en: namesEn.points[n] }
   const end = { name_he: s.end || pts[n + 1].name, lat: pts[n + 1].lat, lon: pts[n + 1].lon, approx: true, short_he: pts[n + 1].name, short_en: namesEn.points[n + 1], name_en: namesEn.points[n + 1] }
   const m = mid(start, end)
@@ -57,6 +63,8 @@ const segments = spni.map((s) => {
   const w = best.water || {}
   const waterSummary = [{ taps: 'ברזים זמינים לאורך המקטע', springs: 'מעיינות (לטהר לפני שתייה)', none: 'אין מים בתוואי', limited: 'מים מוגבלים', mixed: 'מים חלקיים' }[w.availability] || w.availability, w.points?.length ? `נקודות: ${w.points.join(', ')}` : null].filter(Boolean).join('. ')
   const spniWater = (s.important || []).filter((x) => /מים|הטמנ/.test(x))
+  const spniWaterEn = (s.important || []).map((x, i) => (/מים|הטמנ/.test(x) ? en.important_en?.[i] : null)).filter(Boolean)
+  const waterSummaryEn = [{ taps: 'Taps available along the segment', springs: 'Springs (purify before drinking)', none: 'No water on the route', limited: 'Limited water', mixed: 'Partial water' }[w.availability] || null].filter(Boolean).join('. ')
   const caching = !!w.caching_needed || /הטמנת מים|להטמין מים|לדאוג מראש להטמנת/.test((s.important || []).join(' '))
   const o = best.overnight || {}
   const angelsRegion = ANGEL_RANGES.find(([, a, b]) => n >= a && n <= b)?.[0] || null
@@ -68,21 +76,25 @@ const segments = spni.map((s) => {
     difficulty, difficulty_he: ['', 'קל', 'בינוני', 'קשה', 'קשה מאוד'][difficulty],
     ascent_m: null, descent_m: null,
     start, end,
-    water: { summary_he: [waterSummary, ...spniWater].filter(Boolean).join(' · '), sources: w.points || [], availability: w.availability },
+    water: { summary_he: [waterSummary, ...spniWater].filter(Boolean).join(' · '), summary_en: en.number ? [waterSummaryEn, ...spniWaterEn].filter(Boolean).join(' · ') || undefined : undefined, sources: w.points || [], availability: w.availability },
     water_caching_needed: caching,
-    overnight: { night_camp: o.night_camp || null, trail_angels: o.trail_angels || null, paid: Array.isArray(o.paid_lodging) ? o.paid_lodging.join(', ') : o.paid_lodging || null, field_school: s.lodging?.[0] || o.field_school || null, summary_he: s.lodging?.length ? `המלצת החברה להגנת הטבע: ${s.lodging.join(', ')}` : null },
+    overnight: { night_camp: o.night_camp || null, trail_angels: o.trail_angels || null, paid: Array.isArray(o.paid_lodging) ? o.paid_lodging.join(', ') : o.paid_lodging || null, field_school: s.lodging?.[0] || o.field_school || null, summary_he: s.lodging?.length ? `המלצת החברה להגנת הטבע: ${s.lodging.join(', ')}` : null, summary_en: en.lodging_en?.length ? `SPNI recommendation: ${en.lodging_en.join(', ')}` : undefined },
     highlights: uniq([...(s.pois ? s.pois.split(/,|·/).map((x) => x.trim().replace(/\.$/, '')) : []), ...pool.flatMap((r) => r.highlights || [])]).slice(0, 10),
+    ...(en.pois_en ? { highlights_en: uniq(en.pois_en.split(/\n/)[0].split(/,|·|;/).map((x) => x.trim().replace(/\.$/, '')).filter((x) => x.length > 1)).slice(0, 10) } : {}),
     hazards, firing_zone: fz,
     transport: { start_he: s.transport || best.public_transport?.start || '', end_he: '' , spni_he: s.transport || '' },
     description_he: fixSpaces((s.intro || '')).split('\n').filter((l) => !/\(\d+\)\s*$/.test(l.trim()) && !/^למקטע/.test(l.trim())).join('\n').trim(),
+    description_en: (en.intro_en || '').split('\n').filter((l) => !/\(\d+\)\s*$/.test(l.trim())).join('\n').trim() || undefined,
     photo: photos[n] || null,
     angels_region: angelsRegion,
     spni: {
       url: s.url, map_pdf: s.map_pdf, map_pdfs: s.map_pdfs, guide_url: s.region_guide ? `https://www.teva.org.il/israel-national-trail/${GUIDE_URL[s.region_guide] || ''}` : null,
       season_he: s.season, character_he: fixSpaces(s.character || ''), shortcuts_he: s.shortcuts, parking_he: s.parking, transport_he: s.transport,
       pois_raw: s.pois || '', important_he: s.important || [], nearby_he: s.nearby || [], lodging_he: s.lodging || [], description_he: fixSpaces(s.description || ''), author_he: s.author, image: s.image, photo_credit_he: s.photo_credit,
+      ...(en.number ? { character_en: en.character_en || undefined, shortcuts_en: en.shortcuts_en || undefined, parking_en: en.parking_en || undefined, transport_en: en.transport_en || undefined, pois_en: en.pois_en || undefined, important_en: en.important_en || undefined, nearby_en: en.nearby_en || undefined, lodging_en: en.lodging_en || undefined, description_en: en.description_en || undefined, author_en: en.author_en || undefined } : {}),
     },
     steps_he: toSteps(fixSpaces(s.description || '')),
+    ...(en.description_en ? { steps_en: toSteps(en.description_en) } : {}),
     research_match: pool.map((r) => r.id),
   }
 })

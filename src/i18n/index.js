@@ -55,3 +55,15 @@ export function tSeason(s) {
   for (const [h, e] of SEASON_WORDS) out = out.replace(new RegExp(h.length > 1 ? h : '\\b' + h, 'g'), e)
   return /[\u0590-\u05FF]/.test(out) ? s : out
 }
+
+// List variant of tf(): picks `${base}_en` array when English and present, else `${base}_he`.
+export function tl(obj, base) {
+  if (lang === 'en' && Array.isArray(obj?.[`${base}_en`]) && obj[`${base}_en`].length) return obj[`${base}_en`]
+  return obj?.[`${base}_he`] ?? obj?.[base] ?? []
+}
+// dir attribute for a content block: 'rtl' when the UI is English but only Hebrew text exists.
+export function heDir(obj, base) {
+  if (lang !== 'en') return undefined
+  const en = obj?.[`${base}_en`]
+  return (Array.isArray(en) ? en.length : !!en) ? undefined : 'rtl'
+}

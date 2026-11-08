@@ -11,8 +11,9 @@ import { sunTimes, fmtTime } from '../lib/sun.js';
 import { useToast } from '../hooks/useToast.jsx';
 import { poisForSegment, nearestPoi } from '../lib/pois.js';
 import { PoiCards, PoiModal } from '../components/PoiCards.jsx';
-import { t, tf, isEn } from '../i18n/index.js'
-const KEYWORDS = /(פונים|נפנה|ממשיכים|נמשיך|חוצים|נחצה|עולים|נעלה|יורדים|נרד|מטפסים|נטפס|הולכים|נלך|מגיעים|נגיע|יוצאים|נצא|שמאלה|ימינה|צומת|מפגש|שלט|סימון|מעבר|גשר|כביש|דרך עפר|ערוץ|מעלה|אוכף|פסגה|מעיין|חניון)/g;
+import { t, tf, isEn, locale } from '../i18n/index.js'
+const KEYWORDS_HE = /(פונים|נפנה|ממשיכים|נמשיך|חוצים|נחצה|עולים|נעלה|יורדים|נרד|מטפסים|נטפס|הולכים|נלך|מגיעים|נגיע|יוצאים|נצא|שמאלה|ימינה|צומת|מפגש|שלט|סימון|מעבר|גשר|כביש|דרך עפר|ערוץ|מעלה|אוכף|פסגה|מעיין|חניון)/g;
+const KEYWORDS_EN = /\b(turn(?:s|ing)? (?:left|right)|(?:to the |on the )?(?:left|right)|continue(?:s)?|cross(?:es|ing)?|climb(?:s|ing)?|ascend(?:s|ing)?|descend(?:s|ing)?|go(?:es)? down|go(?:es)? up|reach(?:es)?|arrive(?:s)? at|junction|intersection|signpost|sign|trail markers?|marked trail|bridge|road|dirt road|wadi|riverbed|ascent|saddle|summit|peak|spring|campsite|overnight campsite|parking lot)\b/gi;
 export default function Story({
   id,
   navigate
@@ -24,7 +25,9 @@ export default function Story({
   const toast = useToast();
   const seg = segments.find(s => s.id === Number(id));
   const nobo = plan.direction === 'nobo';
-  const steps = useMemo(() => seg?.steps_he?.length ? nobo ? [...seg.steps_he].reverse() : seg.steps_he : [], [seg, nobo]);
+  const en = isEn() && seg?.steps_en?.length > 0;
+  const rawSteps = en ? seg.steps_en : seg?.steps_he;
+  const steps = useMemo(() => rawSteps?.length ? nobo ? [...rawSteps].reverse() : rawSteps : [], [rawSteps, nobo]);
   const [progress, setProgress] = useLocalStorage('storyProgress', {});
   const cur = Math.min(progress[seg?.id] || 0, Math.max(0, steps.length - 1));
   const setCur = i => setProgress({
@@ -117,9 +120,9 @@ export default function Story({
     }
     synth.cancel();
     const u = new SpeechSynthesisUtterance(text);
-    u.lang = 'he-IL'; // route text is Hebrew
+    u.lang = en ? locale() : 'he-IL'; // official route text is Hebrew unless translated
     u.rate = 0.95;
-    const voice = synth.getVoices().find(v => v.lang?.toLowerCase().startsWith('he'));
+    const voice = synth.getVoices().find(v => v.lang?.toLowerCase().startsWith(en ? 'en' : 'he'));
     if (voice) u.voice = voice;
     u.onend = () => {
       setSpeaking(false);
@@ -147,7 +150,7 @@ export default function Story({
       toast(t("אין תמיכה בנעילת מסך"));
     }
   };
-  const highlight = t => t.split(KEYWORDS).map((part, i) => i % 2 ? <mark key={i} className="kw">{part}</mark> : part);
+  const highlight = t => t.split(en ? KEYWORDS_EN : KEYWORDS_HE).map((part, i) => i % 2 ? <mark key={i} className="kw">{part}</mark> : part);
   if (!seg) return <div className="page"><Alert kind="warn">{t("המקטע לא נמצא")}</Alert></div>;
   if (!steps.length) return <div className="page stack"><Alert kind="info">{t("למקטע זה אין עדיין תיאור מסלול מפורט.")}</Alert><button className="btn" onClick={() => navigate(`segments/${seg.id}`)}>{t("חזרה למקטע")}</button></div>;
   return <div className={`page stack story ${big ? 'story--big' : ''}`}>
@@ -211,7 +214,7 @@ export default function Story({
       <div className="story__steps">
         {steps.map((t, i) => <div key={i} ref={i === cur ? stepRef : null} className={`story__step ${i === cur ? 'is-current' : i < cur ? 'is-done' : ''}`} onClick={() => setCur(i)}>
             <div className="story__num">{i < cur ? '✓' : i + 1}</div>
-            <div className="story__text" dir="rtl">{i === cur ? highlight(t) : t}</div>
+            <div className="story__text" dir={en ? undefined : 'rtl'}>{i === cur ? highlight(t) : t}</div>
           </div>)}
       </div>
 

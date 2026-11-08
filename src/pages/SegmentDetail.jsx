@@ -18,7 +18,7 @@ import { WeatherNow, WeatherDaily, WeatherFlags } from '../components/Weather.js
 import { useWeather } from '../hooks/useWeather.js';
 import { regionGroup } from '../lib/season.js';
 import { HE_MONTHS } from '../lib/dates.js';
-import { t, tf, tSeason, isEn } from '../i18n/index.js'
+import { t, tf, tSeason, isEn, tl, heDir } from '../i18n/index.js'
 export default function SegmentDetail({
   id,
   navigate
@@ -130,7 +130,7 @@ export default function SegmentDetail({
         <Stat value={seg.ascent_m != null ? `↑${seg.ascent_m}` : '–'} label={seg.descent_m != null ? t("↓{0} מ' טיפוס/ירידה", seg.descent_m) : t("מ' טיפוס")} />
       </div>
 
-      {seg.water_caching_needed && <Alert kind="warn" icon="water"><b>{t("נדרשת הטמנת מים.")}</b> {seg.water?.summary_he}</Alert>}
+      {seg.water_caching_needed && <Alert kind="warn" icon="water"><b>{t("נדרשת הטמנת מים.")}</b> {tf(seg.water || {}, 'summary')}</Alert>}
       {seg.firing_zone && <Alert kind="danger" icon="warn"><b>{t("שטח אש:")}</b> {seg.firing_zone}</Alert>}
 
       {seg.steps_he?.length > 0 && <button className="story-cta" onClick={() => navigate(`segments/${seg.id}/story`)}>
@@ -149,10 +149,10 @@ export default function SegmentDetail({
       </div>
 
       {tab === 'info' && <div className="stack">
-          {seg.description_he && <div className="card card--glow"><p style={{
+          {tf(seg, 'description') && <div className="card card--glow"><p style={{
           lineHeight: 1.7,
           whiteSpace: 'pre-line'
-        }}>{seg.description_he}</p></div>}
+        }}>{tf(seg, 'description')}</p></div>}
           {seg.spni && <div className="card">
               <div className="card__title"><span className="blaze" style={{
             width: 12,
@@ -162,13 +162,13 @@ export default function SegmentDetail({
           gap: 8
         }}>
                 {seg.spni.season_he && <div><b>{t("עונה מומלצת:")}</b> {tSeason(seg.spni.season_he)}</div>}
-                {seg.spni.character_he && <div><b>{t("אופי המסלול:")}</b> <span dir="rtl">{seg.spni.character_he}</span></div>}
-                {seg.spni.shortcuts_he && <div><b>{t("אפשרויות קיצור:")}</b> {seg.spni.shortcuts_he}</div>}
-                {seg.spni.parking_he && <div><b>{t("חניה:")}</b> {seg.spni.parking_he}</div>}
+                {seg.spni.character_he && <div><b>{t("אופי המסלול:")}</b> <span dir={heDir(seg.spni, 'character')}>{tf(seg.spni, 'character')}</span></div>}
+                {seg.spni.shortcuts_he && <div><b>{t("אפשרויות קיצור:")}</b> <span dir={heDir(seg.spni, 'shortcuts')}>{tf(seg.spni, 'shortcuts')}</span></div>}
+                {seg.spni.parking_he && <div><b>{t("חניה:")}</b> <span dir={heDir(seg.spni, 'parking')}>{tf(seg.spni, 'parking')}</span></div>}
               </div>
               {seg.spni.important_he?.length > 0 && <div className="alert alert--warn mt"><div><b>{t("❗ חשוב לדעת")}</b><ul className="mt" style={{
               paddingInlineStart: 18
-            }}>{seg.spni.important_he.map((x, i) => <li key={i}>{x}</li>)}</ul></div></div>}
+            }}>{tl(seg.spni, 'important').map((x, i) => <li key={i} dir={heDir(seg.spni, 'important')}>{x}</li>)}</ul></div></div>}
               <div className="row mt" style={{
           gap: 6
         }}>
@@ -176,16 +176,16 @@ export default function SegmentDetail({
                 <a className="btn btn--sm" href={seg.spni.url} target="_blank" rel="noreferrer">{t("לעמוד המקטע באתר")}</a>
                 {seg.spni.guide_url && <a className="btn btn--sm btn--ghost" href={seg.spni.guide_url} target="_blank" rel="noreferrer">{t("מדריך")} {seg.region_spni}</a>}
               </div>
-              {seg.spni.description_he && <details className="acc mt"><summary>{t("תיאור המסלול המלא (מצפון לדרום)")}</summary><div className="acc__body" style={{
+              {seg.spni.description_he && <details className="acc mt"><summary>{t("תיאור המסלול המלא (מצפון לדרום)")}</summary><div className="acc__body" dir={heDir(seg.spni, 'description')} style={{
             whiteSpace: 'pre-line',
             lineHeight: 1.7
-          }}>{seg.spni.description_he}{seg.spni.author_he && <p className="tiny muted mt">{t("כתב:")} {seg.spni.author_he}</p>}</div></details>}
-              {seg.spni.nearby_he?.length > 0 && <details className="acc mt"><summary>{t("המלצות בסביבה")}</summary><div className="acc__body"><ul>{seg.spni.nearby_he.map((x, i) => <li key={i}>{x}</li>)}</ul></div></details>}
+          }}>{tf(seg.spni, 'description')}{tf(seg.spni, 'author') && <p className="tiny muted mt">{t("כתב:")} {tf(seg.spni, 'author')}</p>}</div></details>}
+              {seg.spni.nearby_he?.length > 0 && <details className="acc mt"><summary>{t("המלצות בסביבה")}</summary><div className="acc__body" dir={heDir(seg.spni, 'nearby')}><ul>{tl(seg.spni, 'nearby').map((x, i) => <li key={i}>{x}</li>)}</ul></div></details>}
             </div>}
           <div className="card">
             <div className="card__title"><Icon name="star" />{t("נקודות עניין")}</div>
             {poisForSegment(seg.id).length > 0 && <><p className="tiny muted mb">{t("לחצו על נקודה לקריאת ההיסטוריה והמהות שלה (ויקיפדיה), עם תמונות.")}</p><PoiCards pois={poisForSegment(seg.id)} layout="grid" /></>}
-            <ul className="mt">{(seg.highlights || []).map((h, i) => <li key={i}>{h}</li>)}</ul>
+            <ul className="mt" dir={heDir(seg, 'highlights')}>{(isEn() && seg.highlights_en?.length ? seg.highlights_en : seg.highlights || []).map((h, i) => <li key={i}>{h}</li>)}</ul>
           </div>
           {seg.hazards?.length > 0 && <div className="card">
               <div className="card__title"><Icon name="warn" />{t("אזהרות ודגשים")}</div>
@@ -213,7 +213,7 @@ export default function SegmentDetail({
       {tab === 'lodging' && <div className="stack">
           <div className="card">
             <div className="card__title"><Icon name="water" />{t("מים במקטע")}</div>
-            <p>{seg.water?.summary_he || t("אין מידע")}</p>
+            <p dir={heDir(seg.water || {}, 'summary')}>{tf(seg.water || {}, 'summary') || t("אין מידע")}</p>
             {seg.water?.sources?.length > 0 && <ul className="mt">{seg.water.sources.map((w, i) => <li key={i}>{w}</li>)}</ul>}
           </div>
           <div className="card card--glow">
@@ -236,7 +236,7 @@ export default function SegmentDetail({
           </div>
           <div className="card">
             <div className="card__title"><Icon name="bed" />{t("לינה בסיום המקטע")}</div>
-            {seg.overnight?.summary_he && <p className="mb">{seg.overnight.summary_he}</p>}
+            {tf(seg.overnight || {}, 'summary') && <p className="mb" dir={heDir(seg.overnight || {}, 'summary')}>{tf(seg.overnight || {}, 'summary')}</p>}
             <div className="stack" style={{
           gap: 8
         }}>
