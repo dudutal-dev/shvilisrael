@@ -38,7 +38,17 @@ export default function Settings({ theme, setTheme }) {
       <div className="card stack small">
         <div className="card__title">על האפליקציה</div>
         <p>אפליקציית תכנון וביצוע מסע בשביל ישראל. עובדת גם ללא אינטרנט לאחר הטעינה הראשונה (PWA) – הוסיפו למסך הבית.</p>
-        <p><b>מקורות נתונים:</b> {(meta.sources || []).map((s, i) => <span key={i}>{s.url ? <a href={s.url} target="_blank" rel="noreferrer">{s.name}</a> : s.name || s}{i < meta.sources.length - 1 ? ' · ' : ''}</span>)}</p>
+        <div><b>מקורות נתונים:</b>
+          <ul className="src-list">{(meta.sources || []).map((src, i) => {
+            const url = src.url || (typeof src === 'string' ? src : '')
+            const m = url.match(/^https?:\/\/([^/\s]+)/)
+            const host = m ? m[1].replace(/^www\./, '') : ''
+            const note = (src.name || '').startsWith('http') ? (src.name.match(/\(([^)]+)\)/) || [])[1] : src.name
+            const label = note && !note.startsWith('http') ? note : host || src.name
+            const href = m ? url.split(' ')[0] : null
+            return <li key={i}>{href ? <a href={href} target="_blank" rel="noreferrer">{label}</a> : label}{href && label !== host && host ? <span className="muted"> · {host}</span> : null}</li>
+          })}</ul>
+        </div>
         <p className="muted">מפות: OpenStreetMap, Israel Hiking Map, OpenTopoMap. תמונות: Wikimedia Commons (רישיונות חופשיים, קרדיט מופיע על כל תמונה). מזג אוויר: Open-Meteo.</p>
         <p className="muted">⚠ המידע נאסף ממקורות ציבוריים ועשוי להשתנות (שינויי תוואי, סגירות ביטחוניות, שטחי אש, מחירים). לפני היציאה יש לאמת מול החברה להגנת הטבע, רשות הטבע והגנים והמפות העדכניות. האחריות על הבטיחות היא של המטייל.</p>
         <p className="tiny muted">עודכן: {meta.updated || '2026'}</p>
