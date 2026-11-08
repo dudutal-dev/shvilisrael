@@ -29,6 +29,7 @@
   --nav-h: 64px;
   --header-h: 56px;
   --safe-b: env(safe-area-inset-bottom, 0px);
+  --safe-t: env(safe-area-inset-top, 0px);
 }
 :root[data-theme='dark'] {
   --bg: #0b1424;
@@ -93,7 +94,8 @@ ul { margin: 0; padding-inline-start: 1.2em; }
 /* ---------- Header ---------- */
 .header {
   position: sticky; top: 0; z-index: 50;
-  height: var(--header-h);
+  height: calc(var(--header-h) + var(--safe-t));
+  padding-top: var(--safe-t);
   display: flex; align-items: center; justify-content: space-between; gap: 8px;
   padding: 0 14px;
   background: var(--blue-deep);
@@ -275,7 +277,7 @@ details.acc[open] summary::after { content: '−'; }
 details.acc .acc__body { padding: 0 0 14px; color: var(--text-2); font-size: 14px; }
 
 /* ---------- Map ---------- */
-.map-wrap { position: relative; height: calc(100dvh - var(--header-h) - var(--nav-h) - var(--safe-b)); }
+.map-wrap { position: relative; height: calc(100dvh - var(--header-h) - var(--safe-t) - var(--nav-h) - var(--safe-b)); }
 .map { position: absolute; inset: 0; z-index: 1; }
 .map-ctl { position: absolute; z-index: 10; display: flex; flex-direction: column; gap: 8px; }
 .map-ctl--tr { top: 12px; right: 12px; }
@@ -506,3 +508,11 @@ body { background: var(--bg); background-image: radial-gradient(1200px 500px at 
 .wx-pill.wx-bad { background: color-mix(in srgb, var(--red) 18%, var(--surface)); color: var(--red); }
 
 .news--new { border-inline-start-color: var(--orange); background: color-mix(in srgb, var(--orange) 10%, var(--surface)); }
+
+/* colour icons */
+.nav__ico { display: inline-flex; transition: transform 0.2s, filter 0.2s; filter: grayscale(0.55) opacity(0.75); }
+.nav__btn.active .nav__ico { filter: none; transform: scale(1.12); }
+.nav__btn.active { color: var(--text); }
+.quick__ico { background: color-mix(in srgb, var(--surface-2) 70%, transparent); width: 56px; height: 56px; border-radius: 18px; }
+.chip--ico { padding: 4px 10px 4px 6px; gap: 6px; }
+.chip--btn.active.chip--ico svg { filter: drop-shadow(0 0 2px rgba(255,255,255,0.6)); }

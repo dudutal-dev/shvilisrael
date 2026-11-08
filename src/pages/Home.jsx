@@ -3,6 +3,7 @@ import { useApp } from '../context.jsx'
 import { Photo, getPhoto } from '../components/Photo.jsx'
 import { Section } from '../components/UI.jsx'
 import { Icon } from '../components/Icons.jsx'
+import { CIcon } from '../components/ColorIcons.jsx'
 import { fmtDate, HE_MONTHS } from '../lib/dates.js'
 import { MONTHS, LEVEL_CLS, LEVEL_HE } from '../lib/season.js'
 import { WeatherNow, WeatherDaily } from '../components/Weather.jsx'
@@ -15,9 +16,9 @@ import { useLiveUpdates } from '../hooks/useLiveUpdates.js'
 import { markSeen } from '../lib/liveUpdates.js'
 
 const QUICK = [
-  ['map', '🗺️', 'מפה חיה'], ['weather', '🌤️', 'מזג אוויר'], ['nav', '🧭', 'מצפן'], ['guide/angels', '😇', 'מלאכי שביל'],
-  ['guide/lodging', '⛺', 'לינה'], ['guide/water', '💧', 'מים'], ['guide/gear', '🎒', 'ציוד'],
-  ['guide/safety', '🆘', 'בטיחות'], ['journal', '📓', 'יומן'],
+  ['map', 'map', 'מפה חיה'], ['weather', 'weather', 'מזג אוויר'], ['nav', 'compass', 'מצפן'], ['guide/angels', 'angels', 'מלאכי שביל'],
+  ['guide/lodging', 'lodging', 'לינה'], ['guide/water', 'water', 'מים'], ['guide/gear', 'gear', 'ציוד'],
+  ['guide/safety', 'safety', 'בטיחות'], ['journal', 'journal', 'יומן'],
 ]
 
 export default function Home({ navigate }) {
@@ -92,7 +93,7 @@ export default function Home({ navigate }) {
       )}
 
       <div className="quick">
-        {QUICK.map(([to, ico, t]) => <button key={to} className="quick__btn" onClick={() => navigate(to)}><span className="quick__ico">{ico}</span>{t}</button>)}
+        {QUICK.map(([to, ico, t]) => <button key={to} className="quick__btn" onClick={() => navigate(to)}><span className="quick__ico"><CIcon name={ico} size={34} /></span>{t}</button>)}
       </div>
 
       <WeatherCard segments={segments} navigate={navigate} />

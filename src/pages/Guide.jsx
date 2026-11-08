@@ -3,6 +3,7 @@ import { useApp } from '../context.jsx'
 import { Acc, Alert, Section, Stat } from '../components/UI.jsx'
 import { Photo } from '../components/Photo.jsx'
 import { Icon } from '../components/Icons.jsx'
+import { CIcon } from '../components/ColorIcons.jsx'
 import { HE_MONTHS_SHORT, HE_MONTHS } from '../lib/dates.js'
 import { LEVEL_CLS, LEVEL_HE } from '../lib/season.js'
 import logistics from '../data/logistics.json'
@@ -15,17 +16,18 @@ import { markSeen } from '../lib/liveUpdates.js'
 import segData from '../data/segments.json'
 
 const SECTIONS = [
-  ['weather', '🌤️', 'מזג אוויר חי'], ['seasons', '☀️', 'עונות ואקלים'], ['angels', '😇', 'מלאכי שביל'], ['water', '💧', 'מים והטמנות'], ['lodging', '🏕️', 'לינה'], ['safety', '🆘', 'בטיחות וחירום'],
-  ['gear', '🎒', 'ציוד'], ['budget', '💰', 'תקציב'], ['transport', '🚌', 'תחבורה והצטיידות'], ['nav', '🧭', 'סימון וניווט'], ['spni', '📘', 'המדריך הרשמי'], ['faq', '❓', 'שאלות נפוצות'], ['ethics', '🌿', 'טיול אחראי'], ['apps', '📱', 'אפליקציות אחרות'],
+  ['weather', 'weather', 'מזג אוויר חי'], ['seasons', 'seasons', 'עונות ואקלים'], ['angels', 'angels', 'מלאכי שביל'], ['water', 'water', 'מים והטמנות'], ['lodging', 'lodging', 'לינה'], ['safety', 'safety', 'בטיחות וחירום'],
+  ['gear', 'gear', 'ציוד'], ['budget', 'budget', 'תקציב'], ['transport', 'transport', 'תחבורה והצטיידות'], ['nav', 'nav', 'סימון וניווט'], ['spni', 'spni', 'המדריך הרשמי'], ['faq', 'faq', 'שאלות נפוצות'], ['ethics', 'ethics', 'טיול אחראי'], ['apps', 'apps', 'אפליקציות אחרות'],
 ]
 
 export default function Guide({ section = 'seasons', navigate, query = {} }) {
   const sec = SECTIONS.find((s) => s[0] === section) ? section : 'seasons'
   useEffect(() => { if (sec === 'weather') navigate('weather') }, [sec, navigate])
+  useEffect(() => { document.querySelector('.chip--ico.active')?.scrollIntoView({ inline: 'center', block: 'nearest', behavior: 'smooth' }) }, [sec])
   return (
     <div className="page stack">
       <div className="row" style={{ gap: 6, overflowX: 'auto', flexWrap: 'nowrap', paddingBottom: 4 }}>
-        {SECTIONS.map(([id, ico, name]) => <button key={id} className={`chip chip--btn ${sec === id ? 'active' : ''}`} style={{ whiteSpace: 'nowrap' }} onClick={() => navigate(`guide/${id}`)}>{ico} {name}</button>)}
+        {SECTIONS.map(([id, ico, name]) => <button key={id} className={`chip chip--btn chip--ico ${sec === id ? 'active' : ''}`} style={{ whiteSpace: 'nowrap' }} onClick={() => navigate(`guide/${id}`)}><CIcon name={ico} size={20} /> {name}</button>)}
       </div>
       {sec === 'seasons' && <Seasons />}
       {sec === 'water' && <Water />}

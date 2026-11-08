@@ -1,13 +1,14 @@
 import { Icon } from './Icons.jsx'
+import { CIcon } from './ColorIcons.jsx'
 import { useOnline } from '../hooks/useOnline.js'
 
 const TABS = [
   { id: 'home', label: 'בית', icon: 'home' },
-  { id: 'segments', label: 'מקטעים', icon: 'route' },
+  { id: 'segments', label: 'מקטעים', icon: 'segments' },
   { id: 'map', label: 'מפה', icon: 'map' },
   { id: 'plan', label: 'תכנון', icon: 'plan' },
   { id: 'nav', label: 'ניווט', icon: 'compass' },
-  { id: 'guide', label: 'מדריך', icon: 'book' },
+  { id: 'guide', label: 'מדריך', icon: 'guide' },
 ]
 
 export function Header({ title, onBack, theme, setTheme, navigate }) {
@@ -37,7 +38,7 @@ export function BottomNav({ active, navigate }) {
     <nav className="nav">
       {TABS.map((t) => (
         <button key={t.id} className={`nav__btn ${active === t.id ? 'active' : ''}`} onClick={() => navigate(t.id)}>
-          <Icon name={t.icon} size={24} />
+          <span className="nav__ico"><CIcon name={t.icon} size={26} /></span>
           <span>{t.label}</span>
         </button>
       ))}
