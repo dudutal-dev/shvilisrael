@@ -30,6 +30,13 @@ export default function Planner({ navigate, query = {} }) {
   const [step, setStep] = useLocalStorage('planStep', 'route')
   const [tasks, setTasks] = useLocalStorage('planTasks', {})
   const [contacts, setContacts] = useLocalStorage('planContacts', { name: '', phone: '', checkin: '19:00', insurance: false, notes: '' })
+  const [prep, setPrep] = useLocalStorage('planPrep', {})
+  const clearPlan = () => {
+    if (!confirm('לנקות את התוכנית? יימחקו הכיוון, התאריכים, כל הסימונים וההכנות (היומן, התמונות ורשימת הציוד הבסיסית נשמרים).')) return
+    const fresh = { ...DEFAULT_PLAN, startDate: toISODate(new Date()) }
+    setDraft(fresh); setPlan({ ...DEFAULT_PLAN }); setTasks({}); setPrep({}); setContacts({ name: '', phone: '', checkin: '19:00', insurance: false, notes: '' }); setStep('route'); setWx({})
+    toast('התוכנית נוקתה – מתחילים מחדש')
+  }
   const [detail, setDetail] = useState(null)
   const [wx, setWx] = useState({})
   const preview = useMemo(() => (segments.length ? buildItinerary(segments, draft) : null), [segments, draft])
@@ -129,7 +136,10 @@ export default function Planner({ navigate, query = {} }) {
     <div className="page stack">
       <div className="row between">
         <h2 className="section-title"><Icon name="plan" />תכנון המסע</h2>
-        {readiness && <span className={`chip ${readiness.overall === 'ok' ? 'chip--green' : readiness.overall === 'warn' ? 'chip--orange' : 'chip--red'}`} onClick={() => go(7)} style={{ cursor: 'pointer' }}>{readiness.overall === 'ok' ? '🟢 תקין' : readiness.overall === 'warn' ? '🟡 דגשים' : '🔴 אזהרות'}</span>}
+        <div className="row" style={{ gap: 6 }}>
+          {readiness && <span className={`chip ${readiness.overall === 'ok' ? 'chip--green' : readiness.overall === 'warn' ? 'chip--orange' : 'chip--red'}`} onClick={() => go(7)} style={{ cursor: 'pointer' }}>{readiness.overall === 'ok' ? '🟢 תקין' : readiness.overall === 'warn' ? '🟡 דגשים' : '🔴 אזהרות'}</span>}
+          <button className="btn btn--sm btn--ghost" onClick={clearPlan} title="נקה תוכנית">🗑️ נקה</button>
+        </div>
       </div>
 
       {/* stepper */}
@@ -324,6 +334,7 @@ export default function Planner({ navigate, query = {} }) {
           </div>
           <div className="row" style={{ gap: 6 }}>
             <button className="btn btn--sm" onClick={exportIcs}>📅 ליומן</button><button className="btn btn--sm" onClick={exportText}><Icon name="share" size={16} /> שיתוף</button><button className="btn btn--sm no-print" onClick={() => window.print()}>🖨️ הדפסה</button>
+            <button className="btn btn--sm btn--ghost" style={{ color: 'var(--red)' }} onClick={clearPlan}>🗑️ נקה תוכנית</button>
           </div>
           <div className="section-title">לוח זמנים יומי</div>
           {Object.keys(wx).length > 0 && <p className="tiny muted">🌤️ תחזית חיה מוצגת לימים שבטווח 16 הימים הקרובים.</p>}
