@@ -1275,5 +1275,18 @@
 "מכסה חודשית: {0} מתוך {1} תווים בשימוש ({2})": "Monthly quota: {0} of {1} characters used ({2})",
 "מתאפס": "resets",
 "מקטע ממוצע ≈ 3,500 תווים": "an average segment ≈ 3,500 characters",
-"קריינות שמורה במכשיר: {0} קטעים · {1} MB": "Narration saved on device: {0} clips · {1} MB"
+"קריינות שמורה במכשיר: {0} קטעים · {1} MB": "Narration saved on device: {0} clips · {1} MB",
+"מדרום לצפון": "south to north",
+"🔊 קריינות שמורה במכשיר ✓": "🔊 Narration saved on device ✓",
+"⬇️ קריינות למקטע ללא קליטה ({0}/{1})": "⬇️ Offline narration for this segment ({0}/{1})",
+"קריינות: קול המכשיר": "Narration: device voice",
+"קריינות: קול המכשיר (אין עדיין הקלטה למקטע)": "Narration: device voice (no recording for this segment yet)",
+"הקריינות של כל השביל שמורה במכשיר": "Narration for the whole trail is saved on the device",
+"🎙️ קריינות סיפור הדרך": "🎙️ Route-story narration",
+"עברית: קריינות ElevenLabs מוכנה מראש (קול {0}) לכל {1} השלבים – מתנגנת בלי מפתח ובלי חשבון. אנגלית: הקול המובנה של המכשיר.": "Hebrew: pre-generated ElevenLabs narration (voice {0}) for all {1} steps – plays with no key or account. English: the device's built-in voice.",
+"קטע שהושמע פעם אחת נשמר אוטומטית. לפני היציאה אפשר להוריד את הקריינות של מקטע (בסיפור הדרך) או של כל השביל כאן, כדי שתעבוד גם בלי קליטה.": "A clip played once is saved automatically. Before setting out you can download a segment's narration (in the route story) or the whole trail here, so it works without reception.",
+"מוריד {0}/{1}": "Downloading {0}/{1}",
+"⬇️ הורדת קריינות לכל השביל ({0} MB)": "⬇️ Download narration for the whole trail ({0} MB)",
+"עצירה": "Stop",
+"שמור במכשיר: {0} מתוך {1} קטעים · {2} MB": "Saved on device: {0} of {1} clips · {2} MB"
 }

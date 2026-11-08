@@ -9,12 +9,13 @@ import { storageInfo, persistStorage, clearTiles } from '../lib/offline.js';
 import { idbGet, idbSet } from '../lib/overpass.js';
 import { getPhotos } from '../lib/photos.js';
 import { t } from '../i18n/index.js'
-import { getTts, setTts, fetchVoices, fetchQuota, MODELS, speakEleven, narrationCacheInfo, clearNarrationCache, DEFAULT_EN_VOICE } from '../lib/tts.js'
+import { trailNarrationSize, segmentClips, prefetch, cacheInfo, clearCache, narrationVoice } from '../lib/tts.js'
 export default function Settings({
   theme,
   setTheme
 }) {
   const {
+    segments,
     prefs,
     setPrefs,
     meta,
@@ -62,7 +63,7 @@ export default function Settings({
         })}>{Object.entries(BASE_LAYERS).map(([k, v]) => <option key={k} value={k}>{t(v.name)}</option>)}</select>
         </div>
       </div>
-      <TtsCard toast={toast} />
+      <NarrationCard toast={toast} segments={segments} />
       <div className="card stack">
         <div className="card__title">{t("💾 נתונים שמורים במכשיר")}</div>
         <p className="small muted">{t("הכול נשמר במכשיר עצמו ונשאר בין פתיחות: התוכנית, היומן והתמונות, ההתקדמות, תוואי השביל ואריחי המפה שהורדתם. אין צורך להעלות או לשמור מחדש.")}</p>
@@ -130,56 +131,27 @@ export default function Settings({
       </div>
     </div>;
 }
-function TtsCard({ toast }) {
-  const [cfg, setCfg] = useState(getTts);
-  const [voices, setVoices] = useState([]);
-  const [quota, setQuota] = useState(null);
-  const [cache, setCache] = useState(null);
-  const [busy, setBusy] = useState(false);
-  const [sample, setSample] = useState(false);
-  const upd = patch => setCfg(setTts(patch));
-  const connect = async () => {
-    if (!cfg.key) return;
-    setBusy(true);
-    try {
-      const [v, q] = await Promise.all([fetchVoices(cfg.key), fetchQuota(cfg.key).catch(() => null)]);
-      setVoices(v); setQuota(q);
-      const he = v.find(x => x.lang === 'he' || x.langs.includes('he'));
-      const patch = {};
-      if (!cfg.voiceHe || !v.some(x => x.id === cfg.voiceHe)) patch.voiceHe = (he || v[0])?.id || '';
-      if (!cfg.voiceEn || !v.some(x => x.id === cfg.voiceEn)) patch.voiceEn = (v.find(x => x.id === DEFAULT_EN_VOICE) || v.find(x => x.lang === 'en') || v[0])?.id || '';
-      if (Object.keys(patch).length) upd(patch);
-      toast(t("החיבור ל-ElevenLabs הצליח · {0} קולות", v.length));
-    } catch (e) { toast(t("החיבור ל-ElevenLabs נכשל ({0}) – בדקו את המפתח", e.message)); }
-    setBusy(false);
+function NarrationCard({ toast, segments }) {
+  const [info, setInfo] = useState(null);
+  const [dl, setDl] = useState(null);
+  const total = trailNarrationSize(segments);
+  const refresh = () => cacheInfo().then(setInfo);
+  useEffect(() => { refresh(); }, []); // eslint-disable-line react-hooks/exhaustive-deps
+  const downloadAll = async () => {
+    const urls = segments.flatMap(s => segmentClips(s.id, s.steps_he || []).filter(Boolean).map(c => c.url));
+    const ctl = new AbortController(); setDl({ done: 0, total: urls.length, ctl });
+    try { await prefetch(urls, (done, t2) => setDl({ done, total: t2, ctl }), ctl.signal); toast(t("הקריינות של כל השביל שמורה במכשיר")); }
+    catch (e) { toast(t("הורדת הקריינות נכשלה: {0}", e.message)); }
+    setDl(null); refresh();
   };
-  useEffect(() => { if (cfg.key) connect(); narrationCacheInfo().then(setCache); }, []); // eslint-disable-line react-hooks/exhaustive-deps
-  const test = async lang => {
-    setSample(true);
-    try { await speakEleven(lang === 'en' ? 'Welcome to the Israel National Trail. Turn left onto the red-marked trail.' : 'ברוכים הבאים לשביל ישראל. פונים שמאלה בשביל המסומן אדום.', lang); }
-    catch (e) { toast(t("הקריינות נכשלה: {0}", e.message)); }
-    setSample(false); narrationCacheInfo().then(setCache);
-  };
-  const opt = v => <option key={v.id} value={v.id}>{v.name}{v.lang ? ` (${v.lang})` : ''}</option>;
   return <div className="card stack">
-      <div className="card__title">{t("🎙️ קריינות ElevenLabs")}</div>
-      <p className="small muted">{t("סיפור הדרך יוקרא בקול טבעי של ElevenLabs במקום קול המכשיר. המפתח נשמר רק במכשיר הזה ונשלח ישירות ל-ElevenLabs. אפשר להוריד מראש את הקריינות של כל מקטע לשימוש ללא קליטה.")}</p>
-      <div className="field"><label>{t("מפתח API")}</label>
-        <div className="row" style={{ gap: 6 }}>
-          <input className="input ltr" type="password" autoComplete="off" placeholder="xi-…" value={cfg.key} onChange={e => upd({ key: e.target.value.trim() })} style={{ flex: 1 }} />
-          <button className="btn btn--sm btn--primary" onClick={connect} disabled={busy || !cfg.key}>{busy ? '…' : t("חיבור")}</button>
-        </div></div>
-      {cfg.key && <>
-        <label className="switch small"><input type="checkbox" checked={cfg.enabled !== false} onChange={e => upd({ enabled: e.target.checked })} /> {t("להשתמש ב-ElevenLabs להקראה")}</label>
-        <div className="field"><label>{t("מודל")}</label><select className="select" value={cfg.model} onChange={e => upd({ model: e.target.value })}>{MODELS.map(m => <option key={m.id} value={m.id}>{t(m.name)}</option>)}</select></div>
-        <div className="grid-2">
-          <div className="field"><label>{t("קול לעברית")}</label><select className="select" value={cfg.voiceHe} onChange={e => upd({ voiceHe: e.target.value })}>{voices.length ? voices.map(opt) : <option value={cfg.voiceHe}>{cfg.voiceHe || '–'}</option>}</select>
-            <button className="btn btn--sm mt" onClick={() => test('he')} disabled={sample || !cfg.voiceHe}>▶ {t("בדיקה")}</button></div>
-          <div className="field"><label>{t("קול לאנגלית")}</label><select className="select" value={cfg.voiceEn} onChange={e => upd({ voiceEn: e.target.value })}>{voices.length ? voices.map(opt) : <option value={cfg.voiceEn}>{cfg.voiceEn || '–'}</option>}</select>
-            <button className="btn btn--sm mt" onClick={() => test('en')} disabled={sample || !cfg.voiceEn}>▶ {t("בדיקה")}</button></div>
-        </div>
-        {quota && <p className="tiny muted">{t("מכסה חודשית: {0} מתוך {1} תווים בשימוש ({2})", quota.used.toLocaleString(), quota.limit.toLocaleString(), quota.tier)}{quota.resetAt ? ` · ${t("מתאפס")} ${new Date(quota.resetAt).toLocaleDateString()}` : ''} · {t("מקטע ממוצע ≈ 3,500 תווים")}</p>}
-        {cache && <p className="tiny muted">{t("קריינות שמורה במכשיר: {0} קטעים · {1} MB", cache.clips, (cache.bytes / 1048576).toFixed(1))} {cache.clips > 0 && <button className="linkbtn tiny" onClick={async () => { await clearNarrationCache(); setCache(await narrationCacheInfo()); }}>{t("מחיקה")}</button>}</p>}
-      </>}
+      <div className="card__title">{t("🎙️ קריינות סיפור הדרך")}</div>
+      <p className="small">{t("עברית: קריינות ElevenLabs מוכנה מראש (קול {0}) לכל {1} השלבים – מתנגנת בלי מפתח ובלי חשבון. אנגלית: הקול המובנה של המכשיר.", narrationVoice(), total.clips)}</p>
+      <p className="tiny muted">{t("קטע שהושמע פעם אחת נשמר אוטומטית. לפני היציאה אפשר להוריד את הקריינות של מקטע (בסיפור הדרך) או של כל השביל כאן, כדי שתעבוד גם בלי קליטה.")}</p>
+      <div className="row" style={{ gap: 8, flexWrap: 'wrap' }}>
+        <button className="btn btn--sm btn--primary" onClick={downloadAll} disabled={!!dl || !total.clips}>{dl ? t("מוריד {0}/{1}", dl.done, dl.total) : t("⬇️ הורדת קריינות לכל השביל ({0} MB)", (total.bytes / 1048576).toFixed(0))}</button>
+        {dl && <button className="btn btn--sm" onClick={() => dl.ctl.abort()}>{t("עצירה")}</button>}
+      </div>
+      {info && <p className="tiny muted">{t("שמור במכשיר: {0} מתוך {1} קטעים · {2} MB", info.clips, total.clips, (info.bytes / 1048576).toFixed(1))} {info.clips > 0 && <button className="linkbtn tiny" onClick={async () => { await clearCache(); refresh(); }}>{t("מחיקה")}</button>}</p>}
     </div>;
 }

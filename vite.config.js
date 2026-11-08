@@ -35,7 +35,7 @@ export default defineConfig({
         // index.html is NOT precached: navigations always try the network first (so a new deploy is picked
         // up immediately and a stale shell can never point at assets that no longer exist) and fall back
         // to the last good copy offline. Hashed assets stay precached for offline use.
-        globIgnores: ['**/data/**', '**/index.html'],
+        globIgnores: ['**/data/**', '**/index.html', '**/audio/**'],
         navigateFallback: null,
         maximumFileSizeToCacheInBytes: 6 * 1024 * 1024,
         runtimeCaching: [
@@ -47,6 +47,12 @@ export default defineConfig({
               // every in-scope navigation (any route / query) shares one cached shell
               plugins: [{ cacheKeyWillBeUsed: async () => self.registration.scope }],
             },
+          },
+          {
+            // pre-generated narration clips: cached after first play / explicit download
+            urlPattern: ({ url }) => /\/audio\/he\//.test(url.pathname),
+            handler: 'CacheFirst',
+            options: { cacheName: 'narration', expiration: { maxEntries: 1500, maxAgeSeconds: 60 * 60 * 24 * 365, purgeOnQuotaError: false }, cacheableResponse: { statuses: [200] } },
           },
           {
             urlPattern: ({ url }) => url.pathname.endsWith('/data/updates.json'),

@@ -12,7 +12,7 @@ import { useToast } from '../hooks/useToast.jsx';
 import { poisForSegment, nearestPoi } from '../lib/pois.js';
 import { PoiCards, PoiModal } from '../components/PoiCards.jsx';
 import { t, tf, tl, heDir, isEn, locale } from '../i18n/index.js'
-import { ttsConfigured, speakEleven, stopEleven, prefetchClips, countCached } from '../lib/tts.js'
+import { segmentClips, playClip, stopClip, prefetch, countCached, stepText, pickVoice } from '../lib/tts.js'
 const KEYWORDS_HE = /(פונים|נפנה|ממשיכים|נמשיך|חוצים|נחצה|עולים|נעלה|יורדים|נרד|מטפסים|נטפס|הולכים|נלך|מגיעים|נגיע|יוצאים|נצא|שמאלה|ימינה|צומת|מפגש|שלט|סימון|מעבר|גשר|כביש|דרך עפר|ערוץ|מעלה|אוכף|פסגה|מעיין|חניון)/g;
 const KEYWORDS_EN = /\b(turn(?:s|ing)? (?:left|right)|(?:to the |on the )?(?:left|right)|continue(?:s)?|cross(?:es|ing)?|climb(?:s|ing)?|ascend(?:s|ing)?|descend(?:s|ing)?|go(?:es)? down|go(?:es)? up|reach(?:es)?|arrive(?:s)? at|junction|intersection|signpost|sign|trail markers?|marked trail|bridge|road|dirt road|wadi|riverbed|ascent|saddle|summit|peak|spring|campsite|overnight campsite|parking lot)\b/gi;
 export default function Story({
@@ -113,13 +113,17 @@ export default function Story({
   const suggested = gps ? Math.min(steps.length - 1, Math.floor(gps.frac * steps.length)) : null;
   const target = seg ? nobo ? seg.start : seg.end : null;
   const sun = useMemo(() => sunTimes(new Date(), seg?.start?.lat ?? 31.5, seg?.start?.lon ?? 34.9), [seg]);
+  // Hebrew: pre-generated ElevenLabs clips (official north→south step order); English: device voice
+  const official = i => nobo ? steps.length - 1 - i : i; // displayed index → official step index
+  const clips = useMemo(() => (!en && seg?.steps_he?.length ? segmentClips(seg.id, seg.steps_he) : []), [seg, en]);
+  const clipUrls = clips.filter(Boolean).map(c => c.url);
+  const hasClips = clipUrls.length > 0;
   const [cachedClips, setCachedClips] = useState(null);
   const [dl, setDl] = useState(null); // {done,total}
-  const useEleven = ttsConfigured();
-  useEffect(() => { if (useEleven && steps.length) countCached(steps, en ? 'en' : 'he').then(setCachedClips); else setCachedClips(null); }, [steps, en, useEleven, dl]);
+  useEffect(() => { if (hasClips) countCached(clipUrls).then(setCachedClips); else setCachedClips(null); }, [seg, en, dl]); // eslint-disable-line react-hooks/exhaustive-deps
   const downloadNarration = async () => {
-    const ctl = new AbortController(); setDl({ done: 0, total: steps.length, ctl });
-    try { await prefetchClips(steps, en ? 'en' : 'he', (done, total) => setDl({ done, total, ctl }), ctl.signal); toast(t("הקריינות של המקטע שמורה במכשיר")); }
+    const ctl = new AbortController(); setDl({ done: 0, total: clipUrls.length, ctl });
+    try { await prefetch(clipUrls, (done, total) => setDl({ done, total, ctl }), ctl.signal); toast(t("הקריינות של המקטע שמורה במכשיר")); }
     catch (e) { toast(t("הורדת הקריינות נכשלה: {0}", e.message)); }
     setDl(null);
   };
@@ -131,9 +135,9 @@ export default function Story({
     }
     synth.cancel();
     const u = new SpeechSynthesisUtterance(text);
-    u.lang = en ? locale() : 'he-IL'; // official route text is Hebrew unless translated
+    u.lang = en ? locale() : 'he-IL';
     u.rate = 0.95;
-    const voice = synth.getVoices().find(v => v.lang?.toLowerCase().startsWith(en ? 'en' : 'he'));
+    const voice = pickVoice(en ? 'en' : 'he');
     if (voice) u.voice = voice;
     u.onend = () => {
       setSpeaking(false);
@@ -143,22 +147,17 @@ export default function Story({
     setSpeaking(true);
     synth.speak(u);
   };
-  const speak = (text, then) => {
-    if (!useEleven) return speakBrowser(text, then);
+  const stopAll = () => { stopClip(); window.speechSynthesis?.cancel(); setSpeaking(false); };
+  useEffect(() => () => { stopClip(); window.speechSynthesis?.cancel(); }, []);
+  const readStep = (i = cur) => {
+    const next = autoRead && i < steps.length - 1 ? () => { setCur(i + 1); setTimeout(() => readStep(i + 1), 400); } : null;
+    const o = official(i);
+    const clip = clips[o];
+    const text = en ? t("שלב {0} מתוך {1}. {2}", o + 1, steps.length, steps[i]) : stepText(o, steps.length, steps[i]);
+    if (!clip) return speakBrowser(text, next);
     setSpeaking(true);
-    speakEleven(text, en ? 'en' : 'he').then(() => { setSpeaking(false); then?.(); }).catch(e => {
-      setSpeaking(false);
-      if (e?.name === 'AbortError' || e?.message === 'stopped') return;
-      toast(t("קריינות ElevenLabs לא זמינה ({0}) – עוברים לקול המכשיר", e?.message || ''));
-      speakBrowser(text, then);
-    });
+    playClip(clip.url).then(() => { setSpeaking(false); next?.(); }).catch(() => { setSpeaking(false); speakBrowser(text, next); });
   };
-  const stopAll = () => { stopEleven(); window.speechSynthesis?.cancel(); setSpeaking(false); };
-  useEffect(() => () => { stopEleven(); window.speechSynthesis?.cancel(); }, []);
-  const readStep = (i = cur) => speak(t("שלב {0} מתוך {1}. {2}", i + 1, steps.length, steps[i]), autoRead && i < steps.length - 1 ? () => {
-    setCur(i + 1);
-    setTimeout(() => readStep(i + 1), 400);
-  } : null);
   const toggleWake = async () => {
     try {
       if (wake.current) {
@@ -190,7 +189,7 @@ export default function Story({
         <div className="row between tiny muted mt" style={{
         gap: 6
       }}>
-          <span>{t("שלב")} {cur + 1} {t("מתוך")} {steps.length}</span>
+          <span>{t("שלב")} {official(cur) + 1} {t("מתוך")} {steps.length}{nobo ? ` · ${t("מדרום לצפון")}` : ''}</span>
           <span>{seg.distance_km} {t("ק\"מ · 🌇 שקיעה")} {fmtTime(sun.sunset)}</span>
         </div>
       </div>
@@ -236,7 +235,7 @@ export default function Story({
 
       <div className="story__steps">
         {steps.map((step, i) => <div key={i} ref={i === cur ? stepRef : null} className={`story__step ${i === cur ? 'is-current' : i < cur ? 'is-done' : ''}`} onClick={() => setCur(i)}>
-            <div className="story__num">{i < cur ? '✓' : i + 1}</div>
+            <div className="story__num">{i < cur ? '✓' : official(i) + 1}</div>
             <div className="story__text" dir={en ? undefined : 'rtl'}>{i === cur ? highlight(step) : step}</div>
           </div>)}
       </div>
@@ -257,7 +256,7 @@ export default function Story({
       justifyContent: 'center'
     }}>
         <label className="switch tiny"><input type="checkbox" checked={autoRead} onChange={e => setAutoRead(e.target.checked)} /> {t("הקראה רציפה")}</label>
-        {useEleven ? <button className="btn btn--sm btn--ghost tiny" onClick={downloadNarration} disabled={!!dl} title={t("שמירת הקריינות של כל השלבים לשימוש ללא קליטה")}>{dl ? t("מוריד קריינות {0}/{1}", dl.done, dl.total) : cachedClips === steps.length ? t("🔊 קריינות ElevenLabs שמורה ✓") : t("⬇️ קריינות ElevenLabs למקטע ({0}/{1})", cachedClips ?? 0, steps.length)}</button> : <button className="linkbtn tiny" onClick={() => navigate('settings')}>{t("קול המכשיר · הגדרת ElevenLabs")}</button>}
+        {hasClips ? <button className="btn btn--sm btn--ghost tiny" onClick={downloadNarration} disabled={!!dl} title={t("שמירת הקריינות של כל השלבים לשימוש ללא קליטה")}>{dl ? t("מוריד קריינות {0}/{1}", dl.done, dl.total) : cachedClips === clipUrls.length ? t("🔊 קריינות שמורה במכשיר ✓") : t("⬇️ קריינות למקטע ללא קליטה ({0}/{1})", cachedClips ?? 0, clipUrls.length)}</button> : <span className="tiny muted">{en ? t("קריינות: קול המכשיר") : t("קריינות: קול המכשיר (אין עדיין הקלטה למקטע)")}</span>}
         <label className="switch tiny"><input type="checkbox" checked={big} onChange={e => setBig(e.target.checked)} /> {t("טקסט גדול")}</label>
         <button className="btn btn--sm btn--ghost" onClick={toggleWake}>{t("🔆 מסך דולק")}</button>
         <button className="btn btn--sm btn--ghost" onClick={() => {
