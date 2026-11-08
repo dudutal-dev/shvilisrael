@@ -1,22 +1,17 @@
-# Daily: pull the latest route updates from SPNI, commit if changed, and redeploy GitHub Pages.
-# (Commits made with GITHUB_TOKEN do not trigger other workflows, so this workflow deploys itself.)
+# Daily: pull the latest route updates from SPNI, commit if changed, rebuild and publish to gh-pages.
 name: Refresh trail updates
 on:
   schedule:
-    - cron: '17 3 * * *'   # 03:17 UTC daily (~05:17 Israel winter time)
+    - cron: '17 3 * * *'   # 03:17 UTC daily
   workflow_dispatch:
 permissions:
   contents: write
-  pages: write
-  id-token: write
 concurrency:
-  group: pages
+  group: gh-pages
   cancel-in-progress: false
 jobs:
   refresh:
     runs-on: ubuntu-latest
-    outputs:
-      changed: ${{ steps.commit.outputs.changed }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -34,21 +29,17 @@ jobs:
           else
             echo "changed=false" >> "$GITHUB_OUTPUT"
           fi
-  deploy:
-    needs: refresh
-    if: needs.refresh.outputs.changed == 'true'
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - uses: actions/checkout@v4
-        with: { ref: main }
-      - uses: actions/setup-node@v4
-        with: { node-version: 22, cache: npm }
-      - run: npm ci
-      - run: npm run build
-      - uses: actions/upload-pages-artifact@v3
-        with: { path: dist }
-      - id: deployment
-        uses: actions/deploy-pages@v4
+      - if: steps.commit.outputs.changed == 'true'
+        run: npm ci && npm run build
+      - if: steps.commit.outputs.changed == 'true'
+        name: Publish dist to gh-pages
+        run: |
+          touch dist/.nojekyll
+          cd dist
+          git init -q
+          git config user.name "shvil-bot"
+          git config user.email "actions@github.com"
+          git checkout -q -b gh-pages
+          git add -A
+          git commit -q -m "deploy (updates refresh): $(date -u +%FT%TZ)"
+          git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" gh-pages

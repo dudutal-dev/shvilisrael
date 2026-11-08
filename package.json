@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "oxlint",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "publish:gh-pages": "npm run build && touch dist/.nojekyll && cd dist && git init -q && git checkout -q -b gh-pages && git add -A && git -c user.name=shvil -c user.email=shvil@local commit -q -m deploy && git push -f origin gh-pages 2>/dev/null || git push -f \"$(git -C .. remote get-url origin)\" gh-pages"
   },
   "dependencies": {
     "leaflet": "^1.9.4",

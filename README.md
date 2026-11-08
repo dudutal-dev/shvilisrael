@@ -33,12 +33,13 @@ npm run preview
 ## רענון אוטומטי
 
 - **גרסת האפליקציה**: ה-Service Worker בודק גרסה חדשה בכל פתיחה, בכל חזרה למסך (גם כשמותקנת על מסך הבית) ואחת לשעה, ומחיל אותה מיד.
-- **עדכוני תוואי**: המשימה `.github/workflows/refresh-updates.yml` רצה מדי יום, שולפת את עמוד העדכונים של החברה להגנת הטבע (`scripts/fetch-spni-updates.mjs`), מעדכנת את `public/data/updates.json`, ואם השתנה – מבצעת commit ופורסת מחדש. האפליקציה מושכת את הקובץ בכל פתיחה/חזרה למסך ומסמנת פריטים חדשים ב"חדש".
+- **עדכוני תוואי**: המשימה `.github/workflows/refresh-updates.yml` רצה מדי יום, שולפת את עמוד העדכונים של החברה להגנת הטבע (`scripts/fetch-spni-updates.mjs`), מעדכנת את `public/data/updates.json`, ואם השתנה – מבצעת commit, בונה ודוחפת לענף `gh-pages`. האפליקציה מושכת את הקובץ בכל פתיחה/חזרה למסך ומסמנת פריטים חדשים ב"חדש".
 - **מזג אוויר**: מתרענן בכל חזרה למסך וכל 10–20 דקות.
 
 ## פריסה
 
-- **GitHub Pages**: ה-workflow ב-`.github/workflows/deploy-pages.yml` בונה ומפרסם אוטומטית בכל push ל-`main` (יש להגדיר Settings → Pages → Source: GitHub Actions). ה-`base: './'` ב-Vite מאפשר הרצה מכל נתיב.
+- **GitHub Pages (מענף)**: בכל push ל-`main` ה-workflow `.github/workflows/deploy-pages.yml` בונה ודוחף את `dist/` לענף `gh-pages`. בהגדרות: Settings → Pages → Source: **Deploy from a branch** → Branch: **gh-pages** / (root). הכתובת: `https://<user>.github.io/shvilisrael/`. ה-`base: './'` ב-Vite מאפשר הרצה מכל נתיב.
+- בלי Actions בכלל: `npm run build` ואז לדחוף את תוכן `dist/` לענף `gh-pages` (ראו `npm run publish:gh-pages`).
 - **Netlify / Vercel / Cloudflare Pages**: build command `npm run build`, output `dist`.
 - חובה HTTPS כדי ש-GPS, מצפן ו-Service Worker יעבדו.
 
