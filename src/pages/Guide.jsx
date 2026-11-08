@@ -10,9 +10,9 @@ import lodging from '../data/lodging.json'
 import { gearFor, BASE_GEAR, packWeight } from '../lib/gear.js'
 import apps from '../data/apps.json'
 import tips from '../data/spni/tips.json'
-import updates from '../data/spni/updates.json'
+import { useLiveUpdates } from '../hooks/useLiveUpdates.js'
+import { markSeen } from '../lib/liveUpdates.js'
 import segData from '../data/segments.json'
-import { sortUpdates } from '../lib/updates.js'
 
 const SECTIONS = [
   ['weather', '🌤️', 'מזג אוויר חי'], ['seasons', '☀️', 'עונות ואקלים'], ['angels', '😇', 'מלאכי שביל'], ['water', '💧', 'מים והטמנות'], ['lodging', '🏕️', 'לינה'], ['safety', '🆘', 'בטיחות וחירום'],
@@ -376,12 +376,15 @@ function Apps() {
 
 function Spni({ navigate }) {
   const maps = segData.meta?.maps || {}
-  const items = sortUpdates(updates.items || [])
+  const live = useLiveUpdates()
+  const items = live.items
+  const newKeys = new Set(live.newItems.map((u) => u.place + u.date))
+  useEffect(() => { markSeen(items) }, [items.length]) // eslint-disable-line react-hooks/exhaustive-deps
   return (
     <div className="stack">
       <div className="card card--glow">
         <div className="card__title"><span className="blaze" style={{ width: 12, height: 18 }}><span className="w" /><span className="b" /><span className="o" /></span>המדריך הרשמי של החברה להגנת הטבע</div>
-        <p className="small">החלוקה ל-56 מקטעים, האורכים, תיאורי המסלול, העונות, נקודות ההתחלה והסיום, התחבורה וההמלצות באפליקציה מבוססים על המדריך הרשמי (נשלף {updates.fetched}). לכל מקטע יש מפה חינמית להורדה ועמוד מפורט באתר.</p>
+        <p className="small">החלוקה ל-56 מקטעים, האורכים, תיאורי המסלול, העונות, נקודות ההתחלה והסיום, התחבורה וההמלצות באפליקציה מבוססים על המדריך הרשמי (נשלף {segData.meta?.updated}). לכל מקטע יש מפה חינמית להורדה ועמוד מפורט באתר.</p>
         <div className="row mt" style={{ gap: 6 }}>
           <a className="btn btn--sm btn--primary" href={segData.meta?.spni_url} target="_blank" rel="noreferrer">המדריך המלא באתר</a>
           <a className="btn btn--sm" href={maps.interactive} target="_blank" rel="noreferrer">🗺️ מפה אינטראקטיבית</a>
@@ -390,8 +393,9 @@ function Spni({ navigate }) {
           <a className="btn btn--sm btn--ghost" href={maps.report_marking} target="_blank" rel="noreferrer">דיווח על בעיה בסימון</a>
         </div>
       </div>
-      <Section title="עדכונים ושינויים בתוואי" icon="flag" action={<a className="linkbtn small" href={updates.url} target="_blank" rel="noreferrer">לעמוד העדכונים ←</a>}>
-        {items.map((u, i) => <div key={i} className="news"><b>{u.place}</b> <span className="tiny muted">({u.region}{u.date ? ` · ${u.date}` : ''})</span><div>{u.text}</div></div>)}
+      <Section title="עדכונים ושינויים בתוואי" icon="flag" action={<a className="linkbtn small" href={live.url} target="_blank" rel="noreferrer">לעמוד העדכונים ←</a>}>
+        <p className="tiny muted mb">נשלף מאתר החברה להגנת הטבע ב-{live.fetched} · מתרענן אוטומטית מדי יום ובכל פתיחה של האפליקציה. <button className="linkbtn tiny" onClick={live.refresh}>{live.state === 'loading' ? 'בודק…' : 'רענון עכשיו'}</button></p>
+        {items.map((u, i) => <div key={i} className={`news ${newKeys.has(u.place + u.date) ? 'news--new' : ''}`}>{newKeys.has(u.place + u.date) && <span className="chip chip--orange" style={{ marginInlineEnd: 6 }}>חדש</span>}<b>{u.place}</b> <span className="tiny muted">({u.region}{u.date ? ` · ${u.date}` : ''})</span><div>{u.text}</div></div>)}
       </Section>
       <Section title="מדריכי הכנה ובטיחות" icon="book">
         {(tips.guides || []).filter((g) => g.sections?.length && g.key !== 'moked-teva').map((g) => (

@@ -11,8 +11,8 @@ import { regionGroup } from '../lib/season.js'
 import { useGeolocation } from '../hooks/useGeolocation.js'
 import { nearest } from '../lib/geo.js'
 import { sunTimes, fmtTime } from '../lib/sun.js'
-import updates from '../data/spni/updates.json'
-import { sortUpdates } from '../lib/updates.js'
+import { useLiveUpdates } from '../hooks/useLiveUpdates.js'
+import { markSeen } from '../lib/liveUpdates.js'
 
 const QUICK = [
   ['map', '🗺️', 'מפה חיה'], ['weather', '🌤️', 'מזג אוויר'], ['nav', '🧭', 'מצפן'], ['guide/angels', '😇', 'מלאכי שביל'],
@@ -30,7 +30,9 @@ export default function Home({ navigate }) {
   const month = today.getMonth()
   const daysToStart = plan.startDate ? Math.ceil((new Date(plan.startDate) - today) / 86400000) : null
   const sorted = useMemo(() => [...segments].sort((a, b) => a.id - b.id), [segments])
-  const changes = sortUpdates(updates.items || []).slice(0, 3)
+  const live = useLiveUpdates()
+  const changes = live.items.slice(0, 3)
+  const newKeys = new Set(live.newItems.map((u) => u.place + u.date))
   const needsAngel = tomorrow && !tomorrow.rest && /מלאכ/.test(tomorrow.overnight || '') && !angels.some((a) => tomorrow.segments.includes(Number(a.segId)))
 
   return (
@@ -116,9 +118,9 @@ export default function Home({ navigate }) {
       </Section>
 
       {changes.length > 0 && (
-        <Section title="עדכוני תוואי אחרונים" icon="flag" action={<button className="linkbtn small" onClick={() => navigate('guide/spni')}>כל העדכונים ←</button>}>
-          {changes.map((c, i) => <div key={i} className="news"><b>{c.place}</b> <span className="tiny muted">({c.date})</span> – {c.text}</div>)}
-          <p className="tiny muted mt">מקור: עמוד העדכונים של החברה להגנת הטבע. לפני היציאה בדקו גם את מוקד טבע ורשות הטבע והגנים.</p>
+        <Section title={<>עדכוני תוואי {live.newItems.length > 0 && <span className="chip chip--orange">{live.newItems.length} חדשים</span>}</>} icon="flag" action={<button className="linkbtn small" onClick={() => { markSeen(live.items); navigate('guide/spni') }}>כל העדכונים ←</button>}>
+          {changes.map((c, i) => <div key={i} className={`news ${newKeys.has(c.place + c.date) ? 'news--new' : ''}`}>{newKeys.has(c.place + c.date) && <span className="chip chip--orange" style={{ marginInlineEnd: 6 }}>חדש</span>}<b>{c.place}</b> <span className="tiny muted">({c.date})</span> – {c.text}</div>)}
+          <p className="tiny muted mt">מקור: החברה להגנת הטבע · נשלף {live.fetched} · {live.state === 'loading' ? 'בודק עדכונים…' : live.state === 'error' ? 'לא ניתן לרענן כרגע' : 'מתרענן אוטומטית בכל פתיחה'} <button className="linkbtn tiny" onClick={live.refresh}>רענון</button></p>
         </Section>
       )}
       <p className="tiny muted">המידע באפליקציה נאסף ממקורות ציבוריים ואינו תחליף למפות ולהנחיות הרשמיות. בטיחות קודמת לכול.</p>

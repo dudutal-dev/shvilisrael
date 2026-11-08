@@ -504,3 +504,5 @@ body { background: var(--bg); background-image: radial-gradient(1200px 500px at 
 .wx-pill { display: inline-flex; align-items: center; gap: 4px; font-size: 11px; padding: 2px 6px; border-radius: 8px; background: var(--surface-2); color: var(--text-2); white-space: nowrap; }
 .wx-pill.wx-warn { background: color-mix(in srgb, #c05621 18%, var(--surface)); color: #c05621; }
 .wx-pill.wx-bad { background: color-mix(in srgb, var(--red) 18%, var(--surface)); color: var(--red); }
+
+.news--new { border-inline-start-color: var(--orange); background: color-mix(in srgb, var(--orange) 10%, var(--surface)); }

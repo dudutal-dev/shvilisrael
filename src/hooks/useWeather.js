@@ -14,7 +14,9 @@ export function useWeather(lat, lon, { days = 7, hourly = false, refreshMin = 15
     }
     load()
     const id = setInterval(load, refreshMin * 60000)
-    return () => { alive = false; clearInterval(id) }
+    const onVis = () => { if (document.visibilityState === 'visible') load() }
+    document.addEventListener('visibilitychange', onVis)
+    return () => { alive = false; clearInterval(id); document.removeEventListener('visibilitychange', onVis) }
   }, [lat?.toFixed(2), lon?.toFixed(2), days, hourly, refreshMin]) // eslint-disable-line react-hooks/exhaustive-deps
   return { data, error, loading }
 }

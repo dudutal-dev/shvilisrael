@@ -1,0 +1,54 @@
+# Daily: pull the latest route updates from SPNI, commit if changed, and redeploy GitHub Pages.
+# (Commits made with GITHUB_TOKEN do not trigger other workflows, so this workflow deploys itself.)
+name: Refresh trail updates
+on:
+  schedule:
+    - cron: '17 3 * * *'   # 03:17 UTC daily (~05:17 Israel winter time)
+  workflow_dispatch:
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    outputs:
+      changed: ${{ steps.commit.outputs.changed }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm }
+      - run: node scripts/fetch-spni-updates.mjs
+      - id: commit
+        run: |
+          if [ -n "$(git status --porcelain public/data src/data/spni)" ]; then
+            git config user.name "shvil-bot"
+            git config user.email "actions@github.com"
+            git add public/data src/data/spni
+            git commit -m "chore: refresh SPNI trail updates ($(date -u +%F))"
+            git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          fi
+  deploy:
+    needs: refresh
+    if: needs.refresh.outputs.changed == 'true'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: main }
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm }
+      - run: npm ci
+      - run: npm run build
+      - uses: actions/upload-pages-artifact@v3
+        with: { path: dist }
+      - id: deployment
+        uses: actions/deploy-pages@v4

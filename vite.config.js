@@ -29,9 +29,15 @@ export default defineConfig({
         ],
       },
       workbox: {
-        globPatterns: ['**/*.{js,css,html,svg,png,woff2,json}'],
+        globPatterns: ['**/*.{js,css,html,svg,png,woff2}'],
+        globIgnores: ['**/data/**'],
         maximumFileSizeToCacheInBytes: 6 * 1024 * 1024,
         runtimeCaching: [
+          {
+            urlPattern: ({ url }) => url.pathname.endsWith('/data/updates.json'),
+            handler: 'NetworkFirst',
+            options: { cacheName: 'live-data', networkTimeoutSeconds: 8, expiration: { maxEntries: 5 } },
+          },
           {
             // Map tiles: cache what the user has seen so it works offline on the trail
             urlPattern: ({ url }) =>
