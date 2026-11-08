@@ -174,7 +174,7 @@ export default function SegmentDetail({
         }}>
                 {seg.spni.map_pdf && <a className="btn btn--sm btn--primary" href={seg.spni.map_pdf} target="_blank" rel="noreferrer">{t("🗺️ מפת המקטע (PDF חינם)")}</a>}
                 <a className="btn btn--sm" href={seg.spni.url} target="_blank" rel="noreferrer">{t("לעמוד המקטע באתר")}</a>
-                {seg.spni.guide_url && <a className="btn btn--sm btn--ghost" href={seg.spni.guide_url} target="_blank" rel="noreferrer">{t("מדריך")} {seg.region_spni}</a>}
+                {seg.spni.guide_url && <a className="btn btn--sm btn--ghost" href={seg.spni.guide_url} target="_blank" rel="noreferrer">{t("מדריך")} {t(seg.region_spni)}</a>}
               </div>
               {seg.spni.description_he && <details className="acc mt"><summary>{t("תיאור המסלול המלא (מצפון לדרום)")}</summary><div className="acc__body" dir={heDir(seg.spni, 'description')} style={{
             whiteSpace: 'pre-line',
@@ -189,11 +189,11 @@ export default function SegmentDetail({
           </div>
           {seg.hazards?.length > 0 && <div className="card">
               <div className="card__title"><Icon name="warn" />{t("אזהרות ודגשים")}</div>
-              <ul>{seg.hazards.map((h, i) => <li key={i}>{h}</li>)}</ul>
+              <ul>{seg.hazards.map((h, i) => <li key={i} dir={isEn() && /[\u0590-\u05FF]/.test(t(h)) ? 'rtl' : undefined}>{t(h)}</li>)}</ul>
             </div>}
           <div className="card">
             <div className="card__title"><Icon name="bus" />{t("הגעה ותחבורה")}</div>
-            <p className="small">{seg.transport?.spni_he || seg.transport?.start_he || t("ראו מדריך")}</p>
+            <p className="small" dir={isEn() && !seg.spni?.transport_en ? 'rtl' : undefined}>{(isEn() && seg.spni?.transport_en) || seg.transport?.spni_he || seg.transport?.start_he || t("ראו מדריך")}</p>
             {seg.transport?.end_he && <p className="small mt"><b>{t("סיום:")}</b> {seg.transport.end_he}</p>}
             {links && <div className="row mt" style={{
           gap: 6
@@ -264,7 +264,7 @@ export default function SegmentDetail({
       })()}
           {nearbyCamps.length > 0 && <div className="card">
               <div className="card__title"><Icon name="tent" />{t("חניוני לילה בסביבה")}</div>
-              {nearbyCamps.map((c, i) => <div key={i} className="small mt"><b>{c.name_he}</b> – {c.facilities_he || c.notes_he || ''}</div>)}
+              {nearbyCamps.map((c, i) => <div key={i} className="small mt"><span dir={isEn() ? 'rtl' : undefined}><b>{c.name_he}</b> – {c.facilities_he || c.notes_he || ''}</span></div>)}
             </div>}
         </div>}
 

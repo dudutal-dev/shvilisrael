@@ -16,7 +16,36 @@
     <title>שביל ישראל – מתכנן המסע</title>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <div id="boot" style="position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;background:#0b1d33;color:#e8eef7;font-family:Heebo,system-ui,sans-serif">
+        <div style="display:flex;gap:4px"><span style="width:12px;height:38px;background:#fff;border-radius:3px"></span><span style="width:12px;height:38px;background:#2f80ed;border-radius:3px"></span><span style="width:12px;height:38px;background:#f2994a;border-radius:3px"></span></div>
+        <div style="font-size:18px;font-weight:700">שביל ישראל</div>
+        <div id="boot-msg" style="font-size:13px;opacity:.75">טוען… · Loading…</div>
+      </div>
+    </div>
+    <script>
+      // Boot guard: if the app has not mounted within 8s (e.g. a stale service worker after an update),
+      // unregister the worker and drop only the app-shell precache – never user data (map tiles, photos) – then reload once.
+      (function () {
+        var KEY = 'shvil:boot-recover';
+        setTimeout(function () {
+          var boot = document.getElementById('boot');
+          if (!boot) return;
+          var msg = document.getElementById('boot-msg');
+          if (!sessionStorage.getItem(KEY)) {
+            sessionStorage.setItem(KEY, '1');
+            if (msg) msg.textContent = 'מרענן… · Refreshing…';
+            var reload = function () { location.reload(); };
+            Promise.all([
+              navigator.serviceWorker ? navigator.serviceWorker.getRegistrations().then(function (rs) { return Promise.all(rs.map(function (r) { return r.unregister(); })); }) : null,
+              window.caches ? caches.keys().then(function (ks) { return Promise.all(ks.filter(function (k) { return /precache/.test(k); }).map(function (k) { return caches.delete(k); })); }) : null
+            ]).then(reload, reload);
+          } else if (msg) {
+            msg.innerHTML = 'האפליקציה לא נטענה · The app did not load<br><button onclick="sessionStorage.removeItem(\'shvil:boot-recover\');location.reload()" style="margin-top:12px;padding:10px 18px;border-radius:999px;border:0;background:#f2994a;color:#111;font-weight:700;font-size:15px">נסו שוב · Try again</button>';
+          }
+        }, 8000);
+      })();
+    </script>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

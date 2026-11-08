@@ -11,7 +11,7 @@ import { sunTimes, fmtTime } from '../lib/sun.js';
 import { useToast } from '../hooks/useToast.jsx';
 import { poisForSegment, nearestPoi } from '../lib/pois.js';
 import { PoiCards, PoiModal } from '../components/PoiCards.jsx';
-import { t, tf, isEn, locale } from '../i18n/index.js'
+import { t, tf, tl, heDir, isEn, locale } from '../i18n/index.js'
 const KEYWORDS_HE = /(פונים|נפנה|ממשיכים|נמשיך|חוצים|נחצה|עולים|נעלה|יורדים|נרד|מטפסים|נטפס|הולכים|נלך|מגיעים|נגיע|יוצאים|נצא|שמאלה|ימינה|צומת|מפגש|שלט|סימון|מעבר|גשר|כביש|דרך עפר|ערוץ|מעלה|אוכף|פסגה|מעיין|חניון)/g;
 const KEYWORDS_EN = /\b(turn(?:s|ing)? (?:left|right)|(?:to the |on the )?(?:left|right)|continue(?:s)?|cross(?:es|ing)?|climb(?:s|ing)?|ascend(?:s|ing)?|descend(?:s|ing)?|go(?:es)? down|go(?:es)? up|reach(?:es)?|arrive(?:s)? at|junction|intersection|signpost|sign|trail markers?|marked trail|bridge|road|dirt road|wadi|riverbed|ascent|saddle|summit|peak|spring|campsite|overnight campsite|parking lot)\b/gi;
 export default function Story({
@@ -158,7 +158,7 @@ export default function Story({
         <div className="row between">
           <div><div className="tiny muted">{t("סיפור דרך · מקטע")} {seg.id}{nobo ? t("· דרום←צפון") : ''}</div><h2 style={{
             fontSize: 18
-          }}>{seg.name_he}</h2></div>
+          }}>{tf(seg, 'name')}</h2></div>
           <button className="iconbtn iconbtn--surface" onClick={() => navigate(`segments/${seg.id}`)} aria-label={t("חזרה")}><Icon name="back" /></button>
         </div>
         <div className="progress mt"><div style={{
@@ -176,7 +176,7 @@ export default function Story({
       {seg.spni?.important_he?.length > 0 && cur === 0 && <div className="alert alert--warn small"><div><b>{t("❗ לפני שיוצאים:")}</b><ul style={{
           paddingInlineStart: 18,
           marginTop: 4
-        }}>{seg.spni.important_he.map((x, i) => <li key={i}>{x}</li>)}</ul></div></div>}
+        }}>{tl(seg.spni, 'important').map((x, i) => <li key={i} dir={heDir(seg.spni, 'important')}>{x}</li>)}</ul></div></div>}
 
       <div className="card card--glow story__gps">
         <div className="row between">
@@ -195,7 +195,7 @@ export default function Story({
               <div className={`live ${gps.onTrail === false ? 'live--warn' : ''}`}><b>{gps.dist != null ? formatKm(gps.dist) : '–'}</b><span>{t("מהשביל")}</span></div>
             </div>
             {suggested != null && suggested !== cur && <button className="btn btn--sm btn--blue" onClick={() => setCur(suggested)}>{t("לפי ה-GPS אתם בערך בשלב")} {suggested + 1} {t("– קפיצה לשם")}</button>}
-            {target && <div className="tiny muted">{t("לסיום המקטע (")}{target.short_he || target.name_he}): {compassLabelLong(bearing(pos, target))} · {formatKm(nobo ? gps.dStart : gps.dEnd)} {t("אווירי")}</div>}
+            {target && <div className="tiny muted">{t("לסיום המקטע (")}{tf(target, 'short') || tf(target, 'name')}): {compassLabelLong(bearing(pos, target))} · {formatKm(nobo ? gps.dStart : gps.dEnd)} {t("אווירי")}</div>}
             {!index && <div className="tiny muted">{t("💡 הורידו את תוואי השביל במסך המפה לחישוב מדויק לאורך השביל (לא אווירי).")}</div>}
           </div>}
       </div>
@@ -240,6 +240,6 @@ export default function Story({
         if (confirm(t("לאפס את ההתקדמות במקטע?"))) setCur(0);
       }}>{t("איפוס")}</button>
       </div>
-      <p className="tiny muted center">{t("התיאור: המדריך הרשמי של החברה להגנת הטבע")}{seg.spni?.author_he ? ` (${seg.spni.author_he})` : ''}{t(". סיפור הדרך משלים את סימון השביל והמפה – לא מחליף אותם.")}</p>
+      <p className="tiny muted center">{t("התיאור: המדריך הרשמי של החברה להגנת הטבע")}{tf(seg.spni || {}, 'author') ? ` (${tf(seg.spni, 'author')})` : ''}{t(". סיפור הדרך משלים את סימון השביל והמפה – לא מחליף אותם.")}</p>
     </div>;
 }
