@@ -108,13 +108,13 @@ export function simplify(points, tolerance = 0.0002) {
       dx = b[0] - x,
       dy = b[1] - y;
     if (dx !== 0 || dy !== 0) {
-      const t = ((p[0] - x) * dx + (p[1] - y) * dy) / (dx * dx + dy * dy);
-      if (t > 1) {
+      const u = ((p[0] - x) * dx + (p[1] - y) * dy) / (dx * dx + dy * dy);
+      if (u > 1) {
         x = b[0];
         y = b[1];
-      } else if (t > 0) {
-        x += dx * t;
-        y += dy * t;
+      } else if (u > 0) {
+        x += dx * u;
+        y += dy * u;
       }
     }
     dx = p[0] - x;

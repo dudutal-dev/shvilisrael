@@ -64,4 +64,4 @@ export function BottomNav({
         </button>)}
     </nav>;
 }
-export const TAB_IDS = TABS.map(t => t.id);
+export const TAB_IDS = TABS.map(tab => tab.id);

@@ -150,7 +150,7 @@ export default function Story({
       toast(t("אין תמיכה בנעילת מסך"));
     }
   };
-  const highlight = t => t.split(en ? KEYWORDS_EN : KEYWORDS_HE).map((part, i) => i % 2 ? <mark key={i} className="kw">{part}</mark> : part);
+  const highlight = txt => txt.split(en ? KEYWORDS_EN : KEYWORDS_HE).map((part, i) => i % 2 ? <mark key={i} className="kw">{part}</mark> : part);
   if (!seg) return <div className="page"><Alert kind="warn">{t("המקטע לא נמצא")}</Alert></div>;
   if (!steps.length) return <div className="page stack"><Alert kind="info">{t("למקטע זה אין עדיין תיאור מסלול מפורט.")}</Alert><button className="btn" onClick={() => navigate(`segments/${seg.id}`)}>{t("חזרה למקטע")}</button></div>;
   return <div className={`page stack story ${big ? 'story--big' : ''}`}>
@@ -212,9 +212,9 @@ export default function Story({
       <PoiModal poi={openPoi} onClose={() => setOpenPoi(null)} pos={pos} />
 
       <div className="story__steps">
-        {steps.map((t, i) => <div key={i} ref={i === cur ? stepRef : null} className={`story__step ${i === cur ? 'is-current' : i < cur ? 'is-done' : ''}`} onClick={() => setCur(i)}>
+        {steps.map((step, i) => <div key={i} ref={i === cur ? stepRef : null} className={`story__step ${i === cur ? 'is-current' : i < cur ? 'is-done' : ''}`} onClick={() => setCur(i)}>
             <div className="story__num">{i < cur ? '✓' : i + 1}</div>
-            <div className="story__text" dir={en ? undefined : 'rtl'}>{i === cur ? highlight(t) : t}</div>
+            <div className="story__text" dir={en ? undefined : 'rtl'}>{i === cur ? highlight(step) : step}</div>
           </div>)}
       </div>
 

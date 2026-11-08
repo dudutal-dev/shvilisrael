@@ -30,8 +30,8 @@ export default function Settings({
   const onImport = e => {
     const f = e.target.files?.[0];
     if (!f) return;
-    f.text().then(async t => {
-      const j = JSON.parse(t);
+    f.text().then(async txt => {
+      const j = JSON.parse(txt);
       const data = j._shvilBackup ? j.data : j;
       importAll(data);
       for (const p of j._photos || []) await idbSet(`photo:${p.id}`, p);

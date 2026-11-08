@@ -84,7 +84,7 @@ export default function Navigate() {
     const nextI = plan.direction === 'nobo' ? Math.max(0, bestI - 1) : Math.min(pts.length - 1, bestI + 1);
     setTargetKey(pts[nextI]?.key || '');
   }, [pos, segments, plan.direction, targetKey]);
-  const target = targets.find(t => t.key === targetKey);
+  const target = targets.find(x => x.key === targetKey);
   const brg = pos && target ? bearing(pos, target) : null;
   const dist = pos && target ? haversine(pos, target) : null;
   const rel = brg != null && heading != null ? (brg - heading + 360) % 360 : null;
@@ -94,17 +94,17 @@ export default function Navigate() {
   // simple odometer from GPS fixes
   useEffect(() => {
     if (!track.on || !pos) return;
-    setTrack(t => {
-      if (!t.last) return {
-        ...t,
+    setTrack(tr => {
+      if (!tr.last) return {
+        ...tr,
         last: pos,
-        start: t.start || Date.now()
+        start: tr.start || Date.now()
       };
-      const d = haversine(t.last, pos);
-      if (d < 0.004 || pos.accuracy > 60) return t; // ignore jitter
+      const d = haversine(tr.last, pos);
+      if (d < 0.004 || pos.accuracy > 60) return tr; // ignore jitter
       return {
-        ...t,
-        km: t.km + d,
+        ...tr,
+        km: tr.km + d,
         last: pos
       };
     });
@@ -144,7 +144,7 @@ export default function Navigate() {
           <label>{t("יעד לניווט")}</label>
           <select className="select" value={targetKey} onChange={e => setTargetKey(e.target.value)}>
             <option value="">{t("בחרו יעד…")}</option>
-            {targets.map(t => <option key={t.key} value={t.key}>{t.name}</option>)}
+            {targets.map(x => <option key={x.key} value={x.key}>{x.name}</option>)}
           </select>
         </div>
       </div>
@@ -190,10 +190,10 @@ export default function Navigate() {
           <div className="row" style={{
           gap: 6
         }}>
-            <button className={`btn btn--sm ${track.on ? 'btn--danger' : 'btn--primary'}`} onClick={() => setTrack(t => ({
-            ...t,
-            on: !t.on,
-            start: t.start || Date.now()
+            <button className={`btn btn--sm ${track.on ? 'btn--danger' : 'btn--primary'}`} onClick={() => setTrack(tr => ({
+            ...tr,
+            on: !tr.on,
+            start: tr.start || Date.now()
           }))}>{track.on ? t("עצור") : t("התחל")}</button>
             <button className="btn btn--sm btn--ghost" onClick={() => setTrack({
             on: false,

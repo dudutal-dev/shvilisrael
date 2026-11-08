@@ -23,8 +23,8 @@ export default function Segments({
     if (region !== t("הכל")) l = l.filter(s => (s.region_spni || s.region || '') === region || (s.region || '').includes(region));
     if (diff) l = l.filter(s => s.difficulty === diff);
     if (q.trim()) {
-      const t = q.trim();
-      l = l.filter(s => [s.name_he, s.name_en, s.start?.name_he, s.end?.name_he, ...(s.highlights || [])].join(' ').includes(t));
+      const needle = q.trim();
+      l = l.filter(s => [s.name_he, s.name_en, s.start?.name_he, s.end?.name_he, ...(s.highlights || [])].join(' ').includes(needle));
     }
     return l;
   }, [segments, q, region, diff, dir]);

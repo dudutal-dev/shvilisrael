@@ -352,13 +352,13 @@ function Budget() {
     </div>;
 }
 function Transport() {
-  const t = logistics.logistics?.transport || {},
+  const tr = logistics.logistics?.transport || {},
     r = logistics.logistics?.resupply || {},
     p = logistics.logistics?.pace || {};
   return <div className="stack">
-      <Acc title={t("🚌 הגעה לנקודת ההתחלה בצפון")} open><List items={t.to_north_start_he} /></Acc>
-      <Acc title={t("🏁 אילת – סיום / התחלה")}><List items={t.from_eilat_he} /></Acc>
-      <Alert kind="warn">{t.shabbat_he}</Alert>
+      <Acc title={t("🚌 הגעה לנקודת ההתחלה בצפון")} open><List items={tr.to_north_start_he} /></Acc>
+      <Acc title={t("🏁 אילת – סיום / התחלה")}><List items={tr.from_eilat_he} /></Acc>
+      <Alert kind="warn">{tr.shabbat_he}</Alert>
       <Section title={t("נקודות הצטיידות (מצפון לדרום)")} icon="flag">
         <p className="small muted mb">{r.note_he}</p>
         <div className="card">{(r.points || []).map((x, i) => <div key={i} className="rs-row"><b>{x.segment_he}</b><div className="small muted">{x.places_he}</div></div>)}</div>

@@ -72,17 +72,17 @@ export default function Journal({
     setOpen(false);
   };
   const exportText = async () => {
-    const t = t("יומן המסע שלי בשביל ישראל {0} מקטעים · {1} ק\"מ מתוך {2}", done.length, Math.round(doneKm), Math.round(totalKm)) + [...journal].sort((a, b) => a.date.localeCompare(b.date)).map(e => `${e.date} ${e.mood} ${e.weather || ''} ${segments.find(s => s.id === Number(e.segId))?.name_he || ''} ${e.km ? t("· {0} ק\"מ", e.km) : ''}\n${e.text}\n`).join('\n');
+    const body = t("יומן המסע שלי בשביל ישראל {0} מקטעים · {1} ק\"מ מתוך {2}", done.length, Math.round(doneKm), Math.round(totalKm)) + [...journal].sort((a, b) => a.date.localeCompare(b.date)).map(e => `${e.date} ${e.mood} ${e.weather || ''} ${segments.find(s => s.id === Number(e.segId))?.name_he || ''} ${e.km ? t("· {0} ק\"מ", e.km) : ''}\n${e.text}\n`).join('\n');
     if (navigator.share) {
       try {
         await navigator.share({
           title: t("יומן שביל ישראל"),
-          text: t
+          text: body
         });
         return;
       } catch {/* cancelled */}
     }
-    await navigator.clipboard?.writeText(t);
+    await navigator.clipboard?.writeText(body);
     toast(t("הועתק ללוח"));
   };
   const pct = totalKm ? Math.round(doneKm / totalKm * 100) : 0;

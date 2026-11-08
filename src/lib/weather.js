@@ -134,16 +134,16 @@ export function dayVerdict({
   code
 }, group = 'center') {
   const flags = [];
-  const t = tapp ?? tmax;
-  if (t >= 36) flags.push({
+  const temp = tapp ?? tmax;
+  if (temp >= 36) flags.push({
     k: 'heat',
     s: 3,
     t: t("חום קיצוני – לא לצעוד")
-  });else if (t >= 31) flags.push({
+  });else if (temp >= 31) flags.push({
     k: 'heat',
     s: 2,
     t: t("חום כבד – יציאה עם שחר")
-  });else if (t >= 27) flags.push({
+  });else if (temp >= 27) flags.push({
     k: 'heat',
     s: 1,
     t: t("חם")

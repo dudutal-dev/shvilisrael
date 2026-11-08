@@ -62,7 +62,7 @@ export default function MapPage({
     idbGet(TRAIL_KEY).then(d => d?.lines && setLines(d.lines));
   }, []);
   useEffect(() => {
-    loadTracks().then(t => setTrack(t[today] || null));
+    loadTracks().then(all => setTrack(all[today] || null));
   }, [today]);
   useEffect(() => {
     if (error) toast(error);
@@ -324,7 +324,7 @@ function WxLine({
     h = data.hourly;
   const risk = heatRisk(c.apparent_temperature, c.uv_index);
   const now = Date.now();
-  const i0 = h?.time ? Math.max(0, h.time.findIndex(t => new Date(t).getTime() >= now)) : -1;
+  const i0 = h?.time ? Math.max(0, h.time.findIndex(ts => new Date(ts).getTime() >= now)) : -1;
   const next = i0 >= 0 ? [i0 + 2, i0 + 4, i0 + 6].filter(i => i < h.time.length) : [];
   const rainSoon = next.some(i => (h.precipitation_probability?.[i] || 0) >= 40);
   return <div className={`tiny row ${risk?.level === 'danger' || rainSoon ? 'txt-warn' : 'muted'}`} style={{

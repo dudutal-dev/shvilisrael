@@ -107,10 +107,10 @@ export default function Planner({
 
   // auto-save the draft (debounced) so nothing is lost
   useEffect(() => {
-    const t = setTimeout(() => {
+    const timer = setTimeout(() => {
       if (dirty) setPlan(draft);
     }, 600);
-    return () => clearTimeout(t);
+    return () => clearTimeout(timer);
   }, [draft]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // live forecast for upcoming days
@@ -255,18 +255,18 @@ export default function Planner({
     toast(t("קובץ יומן הורד"));
   };
   const exportText = async () => {
-    const t = preview.days.map(d => t("יום {0} · {1} · {2}", d.day, fmtDate(d.date), d.rest ? t("מנוחה") : t("{0} · {1} ק\"מ · לינה: {2}", d.title, d.km, d.overnight))).join('\n');
+    const lines = preview.days.map(d => t("יום {0} · {1} · {2}", d.day, fmtDate(d.date), d.rest ? t("מנוחה") : t("{0} · {1} ק\"מ · לינה: {2}", d.title, d.km, d.overnight))).join('\n');
     const head = t("שביל ישראל – תוכנית מסע {0} ← {1} · {2} ימים · {3} ק\"מ איש קשר לחירום: {4} {5} · צ'ק-אין יומי ב-{6}", fmtDate(preview.summary.startDate), fmtDate(preview.summary.endDate), preview.summary.days, preview.summary.totalKm, contacts.name || '-', contacts.phone || '', contacts.checkin);
     if (navigator.share) {
       try {
         await navigator.share({
           title: t("תוכנית שביל ישראל"),
-          text: head + t
+          text: head + lines
         });
         return;
       } catch {/* cancelled */}
     }
-    await navigator.clipboard?.writeText(head + t);
+    await navigator.clipboard?.writeText(head + lines);
     toast(t("התוכנית הועתקה ללוח"));
   };
   const startMonth = new Date(draft.startDate).getMonth();

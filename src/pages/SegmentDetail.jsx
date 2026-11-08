@@ -240,10 +240,10 @@ export default function SegmentDetail({
             <div className="stack" style={{
           gap: 8
         }}>
-              {seg.overnight?.night_camp && <Row ico="⛺" t={t("חניון לילה / לינת שטח")} v={seg.overnight.night_camp} />}
-              {seg.overnight?.trail_angels && <Row ico="😇" t={t("מלאכי שביל")} v={<>{seg.overnight.trail_angels} <button className="linkbtn" onClick={() => navigate('guide/angels')}>{t("← למדריך ולאנשי הקשר שלי")}</button></>} />}
-              {seg.overnight?.field_school && <Row ico="🏫" t={t("בית ספר שדה / אכסניה")} v={seg.overnight.field_school} />}
-              {seg.overnight?.paid && <Row ico="🏨" t={t("לינה בתשלום")} v={seg.overnight.paid} />}
+              {seg.overnight?.night_camp && <Row ico="⛺" label={t("חניון לילה / לינת שטח")} v={seg.overnight.night_camp} />}
+              {seg.overnight?.trail_angels && <Row ico="😇" label={t("מלאכי שביל")} v={<>{seg.overnight.trail_angels} <button className="linkbtn" onClick={() => navigate('guide/angels')}>{t("← למדריך ולאנשי הקשר שלי")}</button></>} />}
+              {seg.overnight?.field_school && <Row ico="🏫" label={t("בית ספר שדה / אכסניה")} v={seg.overnight.field_school} />}
+              {seg.overnight?.paid && <Row ico="🏨" label={t("לינה בתשלום")} v={seg.overnight.paid} />}
             </div>
             <button className="btn btn--ghost btn--sm mt" onClick={() => navigate('guide/lodging')}>{t("למדריך הלינה המלא ←")}</button>
           </div>
@@ -349,12 +349,12 @@ export default function SegmentDetail({
 }
 function Row({
   ico,
-  t,
+  label,
   v
 }) {
   return <div className="row" style={{
     alignItems: 'flex-start'
   }}><span style={{
       fontSize: 20
-    }}>{ico}</span><div><div className="tiny muted">{t}</div><div className="small">{v}</div></div></div>;
+    }}>{ico}</span><div><div className="tiny muted">{label}</div><div className="small">{v}</div></div></div>;
 }
