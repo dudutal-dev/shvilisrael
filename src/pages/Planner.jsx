@@ -47,14 +47,14 @@ export default function Planner({ navigate }) {
   const measuredPace = useMemo(() => { const k = journal.map((e) => parseFloat(e.km)).filter((x) => x > 0); return k.length ? Math.round(k.reduce((a, b) => a + b, 0) / k.length) : null }, [journal])
   const cacheMessage = () => {
     if (!preview?.caches?.length) return
-    const lines = preview.caches.map((c) => `• יום ${c.day} · ${fmtDate(c.date)} – ${c.title} → לינה: ${c.overnight}`)
-    const msg = `שלום, אשמח להזמין הטמנות מים לשביל ישראל (${draft.direction === 'sobo' ? 'צפון→דרום' : 'דרום→צפון'}).\nנקודות ותאריכים:\n${lines.join('\n')}\nכמות: ___ ליטר לנקודה עבור ___ מטיילים.\nתודה!`
+    const lines = preview.caches.map((c) => `• יום ${c.day} · ${fmtDate(c.date)} – ${c.title} ← לינה: ${c.overnight}`)
+    const msg = `שלום, אשמח להזמין הטמנות מים לשביל ישראל (${draft.direction === 'sobo' ? 'צפון←דרום' : 'דרום←צפון'}).\nנקודות ותאריכים:\n${lines.join('\n')}\nכמות: ___ ליטר לנקודה עבור ___ מטיילים.\nתודה!`
     navigator.clipboard?.writeText(msg); toast('הודעת הזמנת הטמנות הועתקה – שלחו לספק')
   }
   const exportIcs = () => { download('shvil-israel.ics', itineraryToICS(preview.days), 'text/calendar'); toast('קובץ יומן הורד') }
   const exportText = async () => {
     const t = preview.days.map((d) => `יום ${d.day} · ${fmtDate(d.date)} · ${d.rest ? 'מנוחה' : `${d.title} · ${d.km} ק"מ · לינה: ${d.overnight}`}`).join('\n')
-    const head = `שביל ישראל – תוכנית מסע\n${fmtDate(preview.summary.startDate)} → ${fmtDate(preview.summary.endDate)} · ${preview.summary.days} ימים · ${preview.summary.totalKm} ק"מ\n\n`
+    const head = `שביל ישראל – תוכנית מסע\n${fmtDate(preview.summary.startDate)} ← ${fmtDate(preview.summary.endDate)} · ${preview.summary.days} ימים · ${preview.summary.totalKm} ק"מ\n\n`
     if (navigator.share) { try { await navigator.share({ title: 'תוכנית שביל ישראל', text: head + t }); return } catch { /* cancelled */ } }
     await navigator.clipboard?.writeText(head + t); toast('התוכנית הועתקה ללוח')
   }
@@ -67,8 +67,8 @@ export default function Planner({ navigate }) {
         <div className="field">
           <label>כיוון ההליכה</label>
           <div className="segmented">
-            <button className={draft.direction === 'sobo' ? 'active' : ''} onClick={() => set('direction', 'sobo')}>חרמון → אילת</button>
-            <button className={draft.direction === 'nobo' ? 'active' : ''} onClick={() => set('direction', 'nobo')}>אילת → חרמון</button>
+            <button className={draft.direction === 'sobo' ? 'active' : ''} onClick={() => set('direction', 'sobo')}>חרמון ← אילת</button>
+            <button className={draft.direction === 'nobo' ? 'active' : ''} onClick={() => set('direction', 'nobo')}>אילת ← חרמון</button>
           </div>
           <p className="tiny muted">{draft.direction === 'sobo' ? 'מומלץ לצאת באוקטובר–נובמבר: הצפון עוד יבש, ומגיעים לנגב בחורף הנעים.' : 'מומלץ לצאת בפברואר–מרץ: חוצים את הנגב לפני החום ומגיעים לצפון הפורח באביב.'}</p>
         </div>

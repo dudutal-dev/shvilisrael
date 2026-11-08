@@ -91,7 +91,7 @@ export default function Story({ id, navigate }) {
     <div className={`page stack story ${big ? 'story--big' : ''}`}>
       <div className="story__head">
         <div className="row between">
-          <div><div className="tiny muted">סיפור דרך · מקטע {seg.id}{nobo ? ' · דרום→צפון' : ''}</div><h2 style={{ fontSize: 18 }}>{seg.name_he}</h2></div>
+          <div><div className="tiny muted">סיפור דרך · מקטע {seg.id}{nobo ? ' · דרום←צפון' : ''}</div><h2 style={{ fontSize: 18 }}>{seg.name_he}</h2></div>
           <button className="iconbtn iconbtn--surface" onClick={() => navigate(`segments/${seg.id}`)} aria-label="חזרה"><Icon name="back" /></button>
         </div>
         <div className="progress mt"><div style={{ width: `${((cur + 1) / steps.length) * 100}%` }} /></div>
@@ -101,7 +101,7 @@ export default function Story({ id, navigate }) {
         </div>
       </div>
 
-      {nobo && <Alert kind="info">התיאור הרשמי נכתב מצפון לדרום. אתם הולכים דרומה→צפונה, ולכן השלבים מוצגים בסדר הפוך – "ימינה/שמאלה" ו"עולים/יורדים" בטקסט מתייחסים לכיוון ההפוך.</Alert>}
+      {nobo && <Alert kind="info">התיאור הרשמי נכתב מצפון לדרום. אתם הולכים דרומה←צפונה, ולכן השלבים מוצגים בסדר הפוך – "ימינה/שמאלה" ו"עולים/יורדים" בטקסט מתייחסים לכיוון ההפוך.</Alert>}
       {seg.spni?.important_he?.length > 0 && cur === 0 && <div className="alert alert--warn small"><div><b>❗ לפני שיוצאים:</b><ul style={{ paddingInlineStart: 18, marginTop: 4 }}>{seg.spni.important_he.map((x, i) => <li key={i}>{x}</li>)}</ul></div></div>}
 
       <div className="card card--glow story__gps">

@@ -66,7 +66,7 @@ export default function Home({ navigate }) {
         <div className="card today-card">
           <div className="row between">
             <div className="card__title" style={{ marginBottom: 4 }}><Icon name="plan" />המסע שלי</div>
-            <span className="tiny" style={{ opacity: 0.85 }}>{fmtDate(itinerary.summary.startDate)} → {fmtDate(itinerary.summary.endDate)}</span>
+            <span className="tiny" style={{ opacity: 0.85 }}>{fmtDate(itinerary.summary.startDate)} ← {fmtDate(itinerary.summary.endDate)}</span>
           </div>
           {todayDay ? (
             <>

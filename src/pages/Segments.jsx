@@ -32,8 +32,8 @@ export default function Segments({ navigate }) {
       <div className="row between">
         <h2 className="section-title">מקטעי השביל</h2>
         <div className="segmented">
-          <button className={dir === 'sobo' ? 'active' : ''} onClick={() => setDir('sobo')}>חרמון → אילת</button>
-          <button className={dir === 'nobo' ? 'active' : ''} onClick={() => setDir('nobo')}>אילת → חרמון</button>
+          <button className={dir === 'sobo' ? 'active' : ''} onClick={() => setDir('sobo')}>חרמון ← אילת</button>
+          <button className={dir === 'nobo' ? 'active' : ''} onClick={() => setDir('nobo')}>אילת ← חרמון</button>
         </div>
       </div>
       <div className="row" style={{ gap: 8 }}>
