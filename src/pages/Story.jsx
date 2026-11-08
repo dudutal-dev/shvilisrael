@@ -12,6 +12,7 @@ import { useToast } from '../hooks/useToast.jsx';
 import { poisForSegment, nearestPoi } from '../lib/pois.js';
 import { PoiCards, PoiModal } from '../components/PoiCards.jsx';
 import { t, tf, tl, heDir, isEn, locale } from '../i18n/index.js'
+import { ttsConfigured, speakEleven, stopEleven, prefetchClips, countCached } from '../lib/tts.js'
 const KEYWORDS_HE = /(פונים|נפנה|ממשיכים|נמשיך|חוצים|נחצה|עולים|נעלה|יורדים|נרד|מטפסים|נטפס|הולכים|נלך|מגיעים|נגיע|יוצאים|נצא|שמאלה|ימינה|צומת|מפגש|שלט|סימון|מעבר|גשר|כביש|דרך עפר|ערוץ|מעלה|אוכף|פסגה|מעיין|חניון)/g;
 const KEYWORDS_EN = /\b(turn(?:s|ing)? (?:left|right)|(?:to the |on the )?(?:left|right)|continue(?:s)?|cross(?:es|ing)?|climb(?:s|ing)?|ascend(?:s|ing)?|descend(?:s|ing)?|go(?:es)? down|go(?:es)? up|reach(?:es)?|arrive(?:s)? at|junction|intersection|signpost|sign|trail markers?|marked trail|bridge|road|dirt road|wadi|riverbed|ascent|saddle|summit|peak|spring|campsite|overnight campsite|parking lot)\b/gi;
 export default function Story({
@@ -112,7 +113,17 @@ export default function Story({
   const suggested = gps ? Math.min(steps.length - 1, Math.floor(gps.frac * steps.length)) : null;
   const target = seg ? nobo ? seg.start : seg.end : null;
   const sun = useMemo(() => sunTimes(new Date(), seg?.start?.lat ?? 31.5, seg?.start?.lon ?? 34.9), [seg]);
-  const speak = (text, then) => {
+  const [cachedClips, setCachedClips] = useState(null);
+  const [dl, setDl] = useState(null); // {done,total}
+  const useEleven = ttsConfigured();
+  useEffect(() => { if (useEleven && steps.length) countCached(steps, en ? 'en' : 'he').then(setCachedClips); else setCachedClips(null); }, [steps, en, useEleven, dl]);
+  const downloadNarration = async () => {
+    const ctl = new AbortController(); setDl({ done: 0, total: steps.length, ctl });
+    try { await prefetchClips(steps, en ? 'en' : 'he', (done, total) => setDl({ done, total, ctl }), ctl.signal); toast(t("הקריינות של המקטע שמורה במכשיר")); }
+    catch (e) { toast(t("הורדת הקריינות נכשלה: {0}", e.message)); }
+    setDl(null);
+  };
+  const speakBrowser = (text, then) => {
     const synth = window.speechSynthesis;
     if (!synth) {
       toast(t("הדפדפן לא תומך בהקראה"));
@@ -132,6 +143,18 @@ export default function Story({
     setSpeaking(true);
     synth.speak(u);
   };
+  const speak = (text, then) => {
+    if (!useEleven) return speakBrowser(text, then);
+    setSpeaking(true);
+    speakEleven(text, en ? 'en' : 'he').then(() => { setSpeaking(false); then?.(); }).catch(e => {
+      setSpeaking(false);
+      if (e?.name === 'AbortError' || e?.message === 'stopped') return;
+      toast(t("קריינות ElevenLabs לא זמינה ({0}) – עוברים לקול המכשיר", e?.message || ''));
+      speakBrowser(text, then);
+    });
+  };
+  const stopAll = () => { stopEleven(); window.speechSynthesis?.cancel(); setSpeaking(false); };
+  useEffect(() => () => { stopEleven(); window.speechSynthesis?.cancel(); }, []);
   const readStep = (i = cur) => speak(t("שלב {0} מתוך {1}. {2}", i + 1, steps.length, steps[i]), autoRead && i < steps.length - 1 ? () => {
     setCur(i + 1);
     setTimeout(() => readStep(i + 1), 400);
@@ -220,7 +243,7 @@ export default function Story({
 
       <div className="story__bar">
         <button className="btn" onClick={() => setCur(cur - 1)} disabled={cur === 0}>{t("→ הקודם")}</button>
-        <button className={`btn ${speaking ? 'btn--danger' : ''}`} onClick={() => speaking ? (window.speechSynthesis?.cancel(), setSpeaking(false)) : readStep()} title={t("הקראה")}>{speaking ? '⏹' : '🔊'}</button>
+        <button className={`btn ${speaking ? 'btn--danger' : ''}`} onClick={() => speaking ? stopAll() : readStep()} title={t("הקראה")}>{speaking ? '⏹' : '🔊'}</button>
         {cur < steps.length - 1 ? <button className="btn btn--primary" onClick={() => {
         setCur(cur + 1);
         if (autoRead) setTimeout(() => readStep(cur + 1), 200);
@@ -234,6 +257,7 @@ export default function Story({
       justifyContent: 'center'
     }}>
         <label className="switch tiny"><input type="checkbox" checked={autoRead} onChange={e => setAutoRead(e.target.checked)} /> {t("הקראה רציפה")}</label>
+        {useEleven ? <button className="btn btn--sm btn--ghost tiny" onClick={downloadNarration} disabled={!!dl} title={t("שמירת הקריינות של כל השלבים לשימוש ללא קליטה")}>{dl ? t("מוריד קריינות {0}/{1}", dl.done, dl.total) : cachedClips === steps.length ? t("🔊 קריינות ElevenLabs שמורה ✓") : t("⬇️ קריינות ElevenLabs למקטע ({0}/{1})", cachedClips ?? 0, steps.length)}</button> : <button className="linkbtn tiny" onClick={() => navigate('settings')}>{t("קול המכשיר · הגדרת ElevenLabs")}</button>}
         <label className="switch tiny"><input type="checkbox" checked={big} onChange={e => setBig(e.target.checked)} /> {t("טקסט גדול")}</label>
         <button className="btn btn--sm btn--ghost" onClick={toggleWake}>{t("🔆 מסך דולק")}</button>
         <button className="btn btn--sm btn--ghost" onClick={() => {
