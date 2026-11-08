@@ -16,6 +16,7 @@ const Guide = lazy(() => import('./pages/Guide.jsx'))
 const Angels = lazy(() => import('./pages/Angels.jsx'))
 const Certificate = lazy(() => import('./pages/Certificate.jsx'))
 const Weather = lazy(() => import('./pages/Weather.jsx'))
+const Story = lazy(() => import('./pages/Story.jsx'))
 
 const TITLES = { home: 'שביל ישראל', segments: 'מקטעי השביל', map: 'מפה', plan: 'תכנון המסע', nav: 'ניווט', guide: 'המדריך', journal: 'יומן המסע', settings: 'הגדרות', certificate: 'תעודה', weather: 'מזג אוויר חי' }
 
@@ -30,7 +31,7 @@ export default function App() {
   const isSub = !TAB_IDS.includes(tab) || (tab === 'segments' && sub)
   let page
   switch (tab) {
-    case 'segments': page = sub ? <SegmentDetail id={sub} navigate={navigate} /> : <Segments navigate={navigate} />; break
+    case 'segments': page = sub ? (route.path[2] === 'story' ? <Story id={sub} navigate={navigate} /> : <SegmentDetail id={sub} navigate={navigate} />) : <Segments navigate={navigate} />; break
     case 'map': page = <MapPage query={route.query} navigate={navigate} />; break
     case 'plan': page = <Planner navigate={navigate} />; break
     case 'nav': page = <Navigate navigate={navigate} />; break

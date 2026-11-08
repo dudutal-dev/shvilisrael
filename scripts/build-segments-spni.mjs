@@ -14,7 +14,24 @@ const DIFF = { 'קל': 1, 'קל-בינוני': 2, 'בינוני': 2, 'בינונ
 const GUIDE_URL = { 'גליל': 'guide-north', 'כרמל ומישור החוף': 'guide-central', 'שפלה וירושלים': 'guide-jerusalem', 'מדבר יהודה וים המלח': 'guide-judaean-desert', 'נגב': 'guide-negev-desert' }
 const ANGEL_RANGES = [[1, 1, 9], [2, 10, 13], [3, 13, 15], [4, 15, 18], [5, 18, 21], [6, 21, 23], [7, 23, 25], [8, 25, 30], [9, 29, 38], [10, 39, 56]]
 
+// Split the official route description into navigation steps (paragraphs; long ones by sentence).
+function toSteps(desc = '') {
+  const paras = desc.split(/\n+/).map((x) => x.trim()).filter((x) => x.length > 15)
+  const steps = []
+  for (const p of paras) {
+    if (p.length <= 380) { steps.push(p); continue }
+    const sentences = p.match(/[^.!?]+[.!?]+(\s|$)|[^.!?]+$/g) || [p]
+    let cur = ''
+    for (const sen of sentences) {
+      if ((cur + sen).length > 300 && cur) { steps.push(cur.trim()); cur = '' }
+      cur += sen
+    }
+    if (cur.trim()) steps.push(cur.trim())
+  }
+  return steps
+}
 const segments = spni.map((s) => {
+
   const n = s.number
   const start = { name_he: s.start || pts[n].name, lat: pts[n].lat, lon: pts[n].lon, approx: true, short_he: pts[n].name }
   const end = { name_he: s.end || pts[n + 1].name, lat: pts[n + 1].lat, lon: pts[n + 1].lon, approx: true, short_he: pts[n + 1].name }
@@ -63,6 +80,7 @@ const segments = spni.map((s) => {
       season_he: s.season, character_he: s.character, shortcuts_he: s.shortcuts, parking_he: s.parking, transport_he: s.transport,
       important_he: s.important || [], nearby_he: s.nearby || [], lodging_he: s.lodging || [], description_he: s.description || '', author_he: s.author, image: s.image, photo_credit_he: s.photo_credit,
     },
+    steps_he: toSteps(s.description || ''),
     research_match: pool.map((r) => r.id),
   }
 })

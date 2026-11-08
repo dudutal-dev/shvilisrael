@@ -70,6 +70,13 @@ export default function SegmentDetail({ id, navigate }) {
       {seg.water_caching_needed && <Alert kind="warn" icon="water"><b>נדרשת הטמנת מים.</b> {seg.water?.summary_he}</Alert>}
       {seg.firing_zone && <Alert kind="danger" icon="warn"><b>שטח אש:</b> {seg.firing_zone}</Alert>}
 
+      {seg.steps_he?.length > 0 && (
+        <button className="story-cta" onClick={() => navigate(`segments/${seg.id}/story`)}>
+          <span className="story-cta__ico">🧭</span>
+          <span><b>סיפור דרך – ניווט שלב אחר שלב</b><br /><span className="tiny" style={{ opacity: 0.9 }}>{seg.steps_he.length} שלבים מתיאור המסלול הרשמי · הקראה קולית · מעקב GPS</span></span>
+          <span style={{ fontSize: 22 }}>←</span>
+        </button>
+      )}
       <div className="segmented" style={{ alignSelf: 'center' }}>
         {[['info', 'מידע'], ['weather', 'מזג אוויר'], ['lodging', 'לינה ומים'], ['gear', 'ציוד'], ['map', 'מפה'], ['notes', 'הערות שלי']].map(([k, v]) => <button key={k} className={tab === k ? 'active' : ''} onClick={() => setTab(k)}>{v}</button>)}
       </div>

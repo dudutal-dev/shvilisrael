@@ -136,7 +136,7 @@ export default function MapPage({ query, navigate }) {
           {status ? <div className="small">{status}</div> : pos && live ? (
             <div className="stack" style={{ gap: 6 }}>
               <div className="row between">
-                <div className="bold">{live.cur ? <button className="linkbtn" onClick={() => navigate(`segments/${live.cur.id}`)}>מקטע {live.cur.id}: {live.cur.name_he}</button> : 'מחוץ למקטעים'}</div>
+                <div className="bold row" style={{ gap: 6 }}>{live.cur ? <><button className="linkbtn" onClick={() => navigate(`segments/${live.cur.id}`)}>מקטע {live.cur.id}: {live.cur.name_he}</button><button className="btn btn--sm btn--primary" onClick={() => navigate(`segments/${live.cur.id}/story`)}>🧭 סיפור דרך</button></> : 'מחוץ למקטעים'}</div>
                 <span className="tiny muted">±{Math.round(pos.accuracy)} מ'</span>
               </div>
               {panel && (
