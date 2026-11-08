@@ -20,7 +20,10 @@ else {
 }
 const main = (html.match(/<main[\s\S]*?<\/main>/) || [html])[0]
 let txt = clean(main)
-txt = txt.split('לרכישת מפות סימון שבילים').slice(-1)[0].split('שיתוף')[0]
+const marker = 'לרכישת מפות סימון שבילים'
+const at = txt.indexOf(marker)
+if (at >= 0) txt = txt.slice(at + marker.length)
+txt = txt.split('\nשיתוף')[0]
 const items = []
 let region = null
 for (const ln of txt.split('\n')) {
