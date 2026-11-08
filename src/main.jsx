@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
 import ErrorBoundary from './components/ErrorBoundary.jsx'
+import { ready as i18nReady } from './i18n/index.js'
 import { registerSW } from 'virtual:pwa-register'
 import { persistStorage } from './lib/offline.js'
 
@@ -24,10 +25,11 @@ const updateSW = registerSW({
 })
 window.addEventListener('vite:preloadError', () => location.reload()) // stale chunk after an update
 
-createRoot(document.getElementById('root')).render(
+const mount = () => createRoot(document.getElementById('root')).render(
   <StrictMode>
     <ErrorBoundary>
       <App />
     </ErrorBoundary>
   </StrictMode>,
 )
+i18nReady().then(mount, mount) // English needs the data dictionary first; never block on failure

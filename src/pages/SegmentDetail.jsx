@@ -3,13 +3,15 @@ import { useApp } from '../context.jsx';
 import { Photo } from '../components/Photo.jsx';
 import { Difficulty, Stat, Alert, Section, Acc } from '../components/UI.jsx';
 import { MapView, BASE_LAYERS } from '../components/MapView.jsx';
-const BASE_LAYERS_NAME = k => BASE_LAYERS[k]?.name || '';
+const BASE_LAYERS_NAME = k => t(BASE_LAYERS[k]?.name || '');
 import { Icon } from '../components/Icons.jsx';
 import { navLinks, formatCoord } from '../lib/geo.js';
 import { waypointsToGPX, download } from '../lib/gpx.js';
 import { useToast } from '../hooks/useToast.jsx';
-import lodging from '../data/lodging.json';
-import spniAngels from '../data/spni/angels.json';
+import lodgingRaw from '../data/lodging.json';
+const lodging = tdata(lodgingRaw);
+import spniAngelsRaw from '../data/spni/angels.json';
+const spniAngels = tdata(spniAngelsRaw);
 import { gearFor } from '../lib/gear.js';
 import { poisForSegment } from '../lib/pois.js';
 import { PoiCards } from '../components/PoiCards.jsx';
@@ -18,7 +20,7 @@ import { WeatherNow, WeatherDaily, WeatherFlags } from '../components/Weather.js
 import { useWeather } from '../hooks/useWeather.js';
 import { regionGroup } from '../lib/season.js';
 import { HE_MONTHS } from '../lib/dates.js';
-import { t, tf, tSeason, isEn, tl, heDir } from '../i18n/index.js'
+import { t, tf, tSeason, isEn, tl, heDir, tdata } from '../i18n/index.js'
 export default function SegmentDetail({
   id,
   navigate

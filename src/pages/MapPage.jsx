@@ -12,12 +12,14 @@ import { linesToGPX, download } from '../lib/gpx.js';
 import { sunTimes, fmtTime } from '../lib/sun.js';
 import { toISODate } from '../lib/dates.js';
 import { useToast } from '../hooks/useToast.jsx';
-import lodging from '../data/lodging.json';
-import logistics from '../data/logistics.json';
+import lodgingRaw from '../data/lodging.json';
+const lodging = tdata(lodgingRaw);
+import logisticsRaw from '../data/logistics.json';
+const logistics = tdata(logisticsRaw);
 import { useWeather } from '../hooks/useWeather.js';
 import { allPois } from '../lib/pois.js';
 import { wmoText, heatRisk } from '../lib/weather.js';
-import { t, tf } from '../i18n/index.js'
+import { t, tf, tdata } from '../i18n/index.js'
 export default function MapPage({
   query,
   navigate

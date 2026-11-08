@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from 'react'
 import { getUpdates, refreshUpdates, unseen } from '../lib/liveUpdates.js'
 import { sortUpdates } from '../lib/updates.js'
+import { tdata } from '../i18n/index.js'
 /** Route updates with auto-refresh on launch and whenever the app returns to the foreground. */
 export function useLiveUpdates() {
   const [data, setData] = useState(getUpdates)
@@ -9,7 +10,7 @@ export function useLiveUpdates() {
   const refresh = useCallback(async () => {
     if (!navigator.onLine) return
     setState('loading')
-    try { setData(await refreshUpdates()); setState('ok') } catch { setState('error') }
+    try { setData(tdata(await refreshUpdates())); setState('ok') } catch { setState('error') }
     setLastCheck(Date.now())
   }, [])
   useEffect(() => {

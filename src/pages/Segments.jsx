@@ -14,13 +14,13 @@ export default function Segments({
     plan
   } = useApp();
   const [q, setQ] = useState('');
-  const [region, setRegion] = useState(t("הכל"));
+  const [region, setRegion] = useState('הכל');
   const [diff, setDiff] = useState(0);
   const [dir, setDir] = useState(plan.direction || 'sobo');
   const list = useMemo(() => {
     let l = [...segments].sort((a, b) => a.id - b.id);
     if (dir === 'nobo') l.reverse();
-    if (region !== t("הכל")) l = l.filter(s => (s.region_spni || s.region || '') === region || (s.region || '').includes(region));
+    if (region !== 'הכל') l = l.filter(s => (s.region_spni || s.region || '') === region || (s.region || '').includes(region));
     if (diff) l = l.filter(s => s.difficulty === diff);
     if (q.trim()) {
       const needle = q.trim();
@@ -68,7 +68,7 @@ export default function Segments({
     }}>
         {REGIONS.map(r => <button key={r} className={`chip chip--btn ${region === r ? 'active' : ''}`} onClick={() => setRegion(r)} style={{
         whiteSpace: 'nowrap'
-      }}>{r}</button>)}
+      }}>{t(r)}</button>)}
       </div>
       <p className="small muted">{list.length} {t("מקטעים ·")} {totalKm.toFixed(0)} {t("ק\"מ ·")} {list.filter(s => done.includes(s.id)).length} {t("הושלמו · לפי החלוקה הרשמית של החברה להגנת הטבע")}</p>
       {list.length === 0 && <Empty text={t("לא נמצאו מקטעים")} />}

@@ -6,15 +6,20 @@ import { Icon } from '../components/Icons.jsx';
 import { CIcon } from '../components/ColorIcons.jsx';
 import { HE_MONTHS_SHORT, HE_MONTHS } from '../lib/dates.js';
 import { LEVEL_CLS, LEVEL_HE } from '../lib/season.js';
-import logistics from '../data/logistics.json';
-import lodging from '../data/lodging.json';
+import logisticsRaw from '../data/logistics.json';
+const logistics = tdata(logisticsRaw);
+import lodgingRaw from '../data/lodging.json';
+const lodging = tdata(lodgingRaw);
 import { gearFor, BASE_GEAR, packWeight } from '../lib/gear.js';
-import apps from '../data/apps.json';
-import tips from '../data/spni/tips.json';
+import appsRaw from '../data/apps.json';
+const apps = tdata(appsRaw);
+import tipsRaw from '../data/spni/tips.json';
+const tips = tdata(tipsRaw);
 import { useLiveUpdates } from '../hooks/useLiveUpdates.js';
 import { markSeen } from '../lib/liveUpdates.js';
-import segData from '../data/segments.json';
-import { t, tf } from '../i18n/index.js'
+import segDataRaw from '../data/segments.json';
+const segData = tdata(segDataRaw);
+import { t, tf, tdata, heOnly } from '../i18n/index.js'
 const SECTIONS = [['weather', 'weather', 'מזג אוויר חי'], ['seasons', 'seasons', 'עונות ואקלים'], ['angels', 'angels', 'מלאכי שביל'], ['water', 'water', 'מים והטמנות'], ['lodging', 'lodging', 'לינה'], ['safety', 'safety', 'בטיחות וחירום'], ['gear', 'gear', 'ציוד'], ['budget', 'budget', 'תקציב'], ['transport', 'transport', 'תחבורה והצטיידות'], ['nav', 'nav', 'סימון וניווט'], ['spni', 'spni', 'המדריך הרשמי'], ['faq', 'faq', 'שאלות נפוצות'], ['ethics', 'ethics', 'טיול אחראי'], ['apps', 'apps', 'אפליקציות אחרות']];
 export default function Guide({
   section = 'seasons',
@@ -160,7 +165,7 @@ function Lodging({
 }) {
   const [tab, setTab] = useState('angels');
   const ta = lodging.trail_angels || {};
-  const [region, setRegion] = useState(t("הכל"));
+  const [region, setRegion] = useState('הכל');
   const camps = lodging.night_camps || [];
   const paid = lodging.paid_lodging || [];
   const regions = [t("הכל"), ...new Set(camps.map(c => (c.region || '').split('/')[0].trim()).filter(Boolean))];
@@ -184,7 +189,7 @@ function Lodging({
               {(ta.notable_locations || []).map((l, i) => <div key={i} className="card card--flat" style={{
             padding: 12
           }}>
-                  <div className="row between"><b>{l.settlement_he}</b><span className="tag">{l.region}</span></div>
+                  <div className="row between"><b>{l.settlement_he}</b><span className="tag">{t(l.region)}</span></div>
                   <p className="small muted">{l.note}</p>
                   {l.lat && <button className="btn btn--sm btn--ghost mt" onClick={() => navigate(`map?lat=${l.lat}&lon=${l.lon}`)}>{t("📍 במפה")}</button>}
                 </div>)}
@@ -200,9 +205,9 @@ function Lodging({
       }}>{regions.map(r => <button key={r} className={`chip chip--btn ${region === r ? 'active' : ''}`} style={{
           whiteSpace: 'nowrap'
         }} onClick={() => setRegion(r)}>{r}</button>)}</div>
-          {camps.filter(c => region === t("הכל") || (c.region || '').startsWith(region)).map((c, i) => <div key={i} className="card">
+          {camps.filter(c => region === 'הכל' || (c.region || '').startsWith(region)).map((c, i) => <div key={i} className="card">
               <div className="row between"><b>{c.name_he}</b>{c.facilities?.water === true ? <span className="chip chip--water">{t("💧 מים")}</span> : <span className="chip">{t("ללא מים")}</span>}</div>
-              <div className="tiny muted">{c.region} {t("· ליד")} {c.nearest_settlement} · {c.cost_he}</div>
+              <div className="tiny muted">{t(c.region)} {t("· ליד")} {c.nearest_settlement} · {c.cost_he}</div>
               <div className="small mt">{c.facilities_he}</div>
               <p className="small mt">{c.notes_he}</p>
               {c.water_caching && <p className="tiny" style={{
@@ -466,7 +471,7 @@ function Spni({
         <p className="tiny muted mb">{t("נשלף מאתר החברה להגנת הטבע ב-")}{live.fetched} {t("· מתרענן אוטומטית מדי יום ובכל פתיחה של האפליקציה.")} <button className="linkbtn tiny" onClick={live.refresh}>{live.state === 'loading' ? t("בודק…") : t("רענון עכשיו")}</button></p>
         {items.map((u, i) => <div key={i} className={`news ${newKeys.has(u.place + u.date) ? 'news--new' : ''}`}>{newKeys.has(u.place + u.date) && <span className="chip chip--orange" style={{
           marginInlineEnd: 6
-        }}>{t("חדש")}</span>}<b>{u.place}</b> <span className="tiny muted">({u.region}{u.date ? ` · ${u.date}` : ''})</span><div>{u.text}</div></div>)}
+        }}>{t("חדש")}</span>}<b dir={heOnly(u.text)}>{u.place}</b> <span className="tiny muted">({t(u.region)}{u.date ? ` · ${t(u.date)}` : ''})</span><div dir={heOnly(u.text)}>{u.text}</div></div>)}
       </Section>
       <Section title={t("מדריכי הכנה ובטיחות")} icon="book">
         {(tips.guides || []).filter(g => g.sections?.length && g.key !== 'moked-teva').map(g => <Acc key={g.key} title={g.title}>

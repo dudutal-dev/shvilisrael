@@ -15,9 +15,11 @@ import { toISODate as iso } from '../lib/dates.js';
 import { evaluatePlan } from '../lib/readiness.js';
 import { Readiness } from '../components/Readiness.jsx';
 import { gearFor, BASE_GEAR, packWeight } from '../lib/gear.js';
-import logistics from '../data/logistics.json';
-import lodgingData from '../data/lodging.json';
-import { t, tf } from '../i18n/index.js'
+import logisticsRaw from '../data/logistics.json';
+const logistics = tdata(logisticsRaw);
+import lodgingDataRaw from '../data/lodging.json';
+const lodgingData = tdata(lodgingDataRaw);
+import { t, tf, tdata } from '../i18n/index.js'
 const STEPS = [['route', 'מסלול', 'segments'], ['pace', 'קצב וימים', 'plan'], ['lodging', 'לינה', 'lodging'], ['water', 'מים ואוכל', 'water'], ['gear', 'ציוד', 'gear'], ['safety', 'בטיחות וקשר', 'safety'], ['logistics', 'לוגיסטיקה', 'transport'], ['summary', 'סיכום ולו"ז', 'certificate']];
 export default function Planner({
   navigate,

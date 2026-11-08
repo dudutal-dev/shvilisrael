@@ -15,7 +15,7 @@ import { sunTimes, fmtTime } from '../lib/sun.js';
 import { evaluatePlan } from '../lib/readiness.js';
 import { useLiveUpdates } from '../hooks/useLiveUpdates.js';
 import { markSeen } from '../lib/liveUpdates.js';
-import { t, tf } from '../i18n/index.js'
+import { t, tf, heOnly } from '../i18n/index.js'
 const QUICK = [['map', 'map', 'מפה חיה'], ['weather', 'weather', 'מזג אוויר'], ['nav', 'compass', 'מצפן'], ['guide/angels', 'angels', 'מלאכי שביל'], ['guide/lodging', 'lodging', 'לינה'], ['guide/water', 'water', 'מים'], ['guide/gear', 'gear', 'ציוד'], ['guide/safety', 'safety', 'בטיחות'], ['journal', 'journal', 'יומן']];
 export default function Home({
   navigate
@@ -177,7 +177,7 @@ export default function Home({
     }}>{t("כל העדכונים ←")}</button>}>
           {changes.map((c, i) => <div key={i} className={`news ${newKeys.has(c.place + c.date) ? 'news--new' : ''}`}>{newKeys.has(c.place + c.date) && <span className="chip chip--orange" style={{
           marginInlineEnd: 6
-        }}>{t("חדש")}</span>}<b>{c.place}</b> <span className="tiny muted">({c.date})</span> – {c.text}</div>)}
+        }}>{t("חדש")}</span>}<span dir={heOnly(c.text)}><b>{c.place}</b> <span className="tiny muted">({t(c.date)})</span> – {c.text}</span></div>)}
           <p className="tiny muted mt">{t("מקור: החברה להגנת הטבע · נשלף")} {live.fetched} · {live.state === 'loading' ? t("בודק עדכונים…") : live.state === 'error' ? t("לא ניתן לרענן כרגע") : t("מתרענן אוטומטית בכל פתיחה")} <button className="linkbtn tiny" onClick={live.refresh}>{t("רענון")}</button></p>
         </Section>}
       <p className="tiny muted">{t("המידע באפליקציה נאסף ממקורות ציבוריים ואינו תחליף למפות ולהנחיות הרשמיות. בטיחות קודמת לכול.")}</p>

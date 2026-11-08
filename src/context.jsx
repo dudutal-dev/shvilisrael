@@ -1,6 +1,8 @@
+import { tdata } from './i18n/index.js'
 import { createContext, useContext, useMemo } from 'react'
 import { useLocalStorage } from './hooks/useLocalStorage.js'
-import segData from './data/segments.json'
+import segDataRaw from './data/segments.json'
+const segData = tdata(segDataRaw)
 import { DEFAULT_PLAN, buildItinerary } from './lib/planner.js'
 
 const Ctx = createContext(null)

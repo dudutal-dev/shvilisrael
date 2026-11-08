@@ -58,7 +58,7 @@ export default function Settings({
           <select className="select" value={prefs.base} onChange={e => setPrefs({
           ...prefs,
           base: e.target.value
-        })}>{Object.entries(BASE_LAYERS).map(([k, v]) => <option key={k} value={k}>{v.name}</option>)}</select>
+        })}>{Object.entries(BASE_LAYERS).map(([k, v]) => <option key={k} value={k}>{t(v.name)}</option>)}</select>
         </div>
       </div>
       <div className="card stack">

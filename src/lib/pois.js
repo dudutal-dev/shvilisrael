@@ -1,5 +1,7 @@
+import { tdata } from '../i18n/index.js'
 // Points of interest: bundled Wikipedia summaries (src/data/pois.json) + runtime fallback fetch (CORS-enabled REST API).
-import data from '../data/pois.json'
+import dataRaw from '../data/pois.json'
+const data = tdata(dataRaw)
 import { load, save } from './storage.js'
 import { haversine } from './geo.js'
 

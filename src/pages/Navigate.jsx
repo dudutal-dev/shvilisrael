@@ -7,9 +7,11 @@ import { useGeolocation } from '../hooks/useGeolocation.js';
 import { bearing, haversine, compassLabelLong, formatKm, toDM, navLinks, formatCoord } from '../lib/geo.js';
 import { sunTimes, fmtTime } from '../lib/sun.js';
 import { useToast } from '../hooks/useToast.jsx';
-import logistics from '../data/logistics.json';
-import lodging from '../data/lodging.json';
-import { t, tf, locale } from '../i18n/index.js'
+import logisticsRaw from '../data/logistics.json';
+const logistics = tdata(logisticsRaw);
+import lodgingRaw from '../data/lodging.json';
+const lodging = tdata(lodgingRaw);
+import { t, tf, locale, tdata } from '../i18n/index.js'
 export default function Navigate() {
   const {
     segments,

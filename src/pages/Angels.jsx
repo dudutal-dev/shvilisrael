@@ -4,9 +4,11 @@ import { Acc, Alert, Modal, Section, Empty } from '../components/UI.jsx';
 import { Photo } from '../components/Photo.jsx';
 import { Icon } from '../components/Icons.jsx';
 import { fmtDate, addDays, toISODate } from '../lib/dates.js';
-import lodging from '../data/lodging.json';
-import spni from '../data/spni/angels.json';
-import { t, tf } from '../i18n/index.js'
+import lodgingRaw from '../data/lodging.json';
+const lodging = tdata(lodgingRaw);
+import spniRaw from '../data/spni/angels.json';
+const spni = tdata(spniRaw);
+import { t, tf, tdata } from '../i18n/index.js'
 const STATUS = {
   todo: ['לתאם', 'chip'],
   sent: ['נשלחה הודעה', 'chip chip--blue'],
@@ -102,7 +104,7 @@ export default function Angels({
             {official.map((a, i) => <div key={i} className="card angel-card" style={{
           padding: 12
         }}>
-                <div className="row between"><b>😇 {a.settlement}</b><span className="tag">{a.region}</span></div>
+                <div className="row between"><b>😇 {a.settlement}</b><span className="tag">{t(a.region)}</span></div>
                 <p className="small muted mt" style={{
             whiteSpace: 'pre-line'
           }}>{a.offer}</p>
@@ -128,7 +130,7 @@ export default function Angels({
           {official.length === 0 && <Empty icon="😇" text={t("לא נמצאו מארחים לחיפוש הזה")} />}
           {locations.length > 0 && regionIdx === 0 && !q && <details className="acc"><summary>{t("יישובים נוספים עם מסורת אירוח (ממקורות קהילתיים)")}</summary><div className="acc__body stack" style={{
           gap: 6
-        }}>{locations.map((l, i) => <div key={i} className="small"><b>{l.settlement_he}</b> ({l.region}) – {l.note}{l.lat && <button className="linkbtn tiny" style={{
+        }}>{locations.map((l, i) => <div key={i} className="small"><b>{l.settlement_he}</b> ({t(l.region)}) – {l.note}{l.lat && <button className="linkbtn tiny" style={{
               marginInlineStart: 6
             }} onClick={() => navigate(`map?lat=${l.lat}&lon=${l.lon}`)}>{t("📍 במפה")}</button>}</div>)}</div></details>}
         </div>}

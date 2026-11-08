@@ -1,5 +1,7 @@
+import { tdata } from '../i18n/index.js'
 import { useState } from 'react'
-import photos from '../data/photos.json'
+import photosRaw from '../data/photos.json'
+const photos = tdata(photosRaw)
 
 const ALIASES = { hero: 'makhtesh_ramon', meron: 'mount_meron', ramon: 'makhtesh_ramon', negev_hiker: 'hiker_negev', }
 export function getPhoto(key) { if (!key) return null; return photos.find((p) => p.key === key) || photos.find((p) => p.key === ALIASES[key]) || null }

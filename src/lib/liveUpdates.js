@@ -3,6 +3,7 @@
 // even before the service worker picks up a new app version.
 import { load, save } from './storage.js'
 import bundled from '../data/spni/updates.json'
+import { tdata } from '../i18n/index.js'
 
 const KEY = 'liveUpdates'
 const itemKey = (u) => `${u.place}|${u.date || ''}|${u.text.slice(0, 40)}`
@@ -10,7 +11,7 @@ const itemKey = (u) => `${u.place}|${u.date || ''}|${u.text.slice(0, 40)}`
 export function getUpdates() {
   const live = load(KEY, null)
   const useLive = live?.items?.length && live.fetched >= (bundled.fetched || '')
-  return useLive ? live : bundled
+  return tdata(useLive ? live : bundled)
 }
 
 export async function refreshUpdates() {

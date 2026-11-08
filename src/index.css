@@ -651,3 +651,7 @@ a { overflow-wrap: anywhere; }
 
 [dir='ltr'] .he-content, [dir='ltr'] .news, [dir='ltr'] .poi-text, [dir='ltr'] .angel-card p, [dir='ltr'] .rs-row, [dir='ltr'] .wx-station, [dir='ltr'] [dir='rtl'] { direction: rtl; text-align: right; }
 [dir='ltr'] .acc__body ul, [dir='ltr'] .acc__body ol { padding-inline-start: 1.2em; }
+
+/* English: longer labels may wrap inside stat cards instead of overflowing */
+[dir='ltr'] .stat__label { white-space: normal; line-height: 1.2; }
+[dir='ltr'] .hero__stats span { white-space: normal; }
