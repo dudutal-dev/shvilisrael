@@ -24,25 +24,43 @@
       </div>
     </div>
     <script>
-      // Boot guard: if the app has not mounted within 8s (e.g. a stale service worker after an update),
-      // unregister the worker and drop only the app-shell precache – never user data (map tiles, photos) – then reload once.
+      // Error capture + boot guard. If the app has not rendered within 8s: show any captured error
+      // (so a crash is readable instead of a white screen); otherwise assume a stale service worker,
+      // unregister it, drop only the app-shell precache (never user data) and reload once.
       (function () {
+        var errs = window.__shvilErrors = [];
+        window.addEventListener('error', function (e) { errs.push((e.message || 'error') + ' @ ' + String(e.filename || '').split('/').pop() + ':' + (e.lineno || 0)); });
+        window.addEventListener('unhandledrejection', function (e) { var r = e.reason; errs.push('promise: ' + (r && (r.message || r))); });
         var KEY = 'shvil:boot-recover';
+        function overlay(html) {
+          var box = document.getElementById('boot');
+          if (!box) { box = document.createElement('div'); box.id = 'boot'; document.body.appendChild(box); }
+          box.setAttribute('style', 'position:fixed;inset:0;z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:20px;background:#0b1d33;color:#e8eef7;font-family:Heebo,system-ui,sans-serif;text-align:center');
+          box.innerHTML = html;
+        }
         setTimeout(function () {
-          var boot = document.getElementById('boot');
-          if (!boot) return;
-          var msg = document.getElementById('boot-msg');
+          if (document.querySelector('#root .app')) return; // app is up
+          var ver = (document.querySelector('script[type=module]') || {}).src || '';
+          ver = ver.split('index-').pop().split('.js')[0];
           var tried = false; try { tried = !!sessionStorage.getItem(KEY); } catch (e) {}
+          if (errs.length) {
+            overlay('<div style="font-size:18px;font-weight:700">האפליקציה לא נטענה · The app did not load</div>' +
+              '<div style="font-size:12px;opacity:.7">build ' + ver + ' · ' + navigator.userAgent.slice(0, 90) + '</div>' +
+              '<pre dir="ltr" style="white-space:pre-wrap;text-align:left;font-size:12px;background:#122a47;padding:10px;border-radius:8px;max-height:45vh;overflow:auto;max-width:100%">' + errs.slice(0, 6).join('\n\n').replace(/</g, '&lt;') + '</pre>' +
+              '<div><button onclick="try{sessionStorage.removeItem(\'shvil:boot-recover\')}catch(e){};location.reload()" style="padding:10px 18px;border-radius:999px;border:0;background:#f2994a;color:#111;font-weight:700;font-size:15px">נסו שוב · Try again</button></div>');
+            return;
+          }
           if (!tried) {
             try { sessionStorage.setItem(KEY, '1'); } catch (e) {}
-            if (msg) msg.textContent = 'מרענן… · Refreshing…';
+            overlay('<div style="font-size:14px;opacity:.8">מרענן… · Refreshing…</div>');
             var reload = function () { location.reload(); };
             Promise.all([
               navigator.serviceWorker ? navigator.serviceWorker.getRegistrations().then(function (rs) { return Promise.all(rs.map(function (r) { return r.unregister(); })); }) : null,
-              window.caches ? caches.keys().then(function (ks) { return Promise.all(ks.filter(function (k) { return /precache/.test(k); }).map(function (k) { return caches.delete(k); })); }) : null
+              window.caches ? caches.keys().then(function (ks) { return Promise.all(ks.filter(function (k) { return /precache|app-shell/.test(k); }).map(function (k) { return caches.delete(k); })); }) : null
             ]).then(reload, reload);
-          } else if (msg) {
-            msg.innerHTML = 'האפליקציה לא נטענה · The app did not load<br><button onclick="try{sessionStorage.removeItem(\'shvil:boot-recover\')}catch(e){};location.reload()" style="margin-top:12px;padding:10px 18px;border-radius:999px;border:0;background:#f2994a;color:#111;font-weight:700;font-size:15px">נסו שוב · Try again</button>';
+          } else {
+            overlay('<div style="font-size:18px;font-weight:700">האפליקציה לא נטענה · The app did not load</div><div style="font-size:12px;opacity:.7">build ' + ver + '</div>' +
+              '<button onclick="try{sessionStorage.removeItem(\'shvil:boot-recover\')}catch(e){};location.reload()" style="margin-top:12px;padding:10px 18px;border-radius:999px;border:0;background:#f2994a;color:#111;font-weight:700;font-size:15px">נסו שוב · Try again</button>');
           }
         }, 8000);
       })();
