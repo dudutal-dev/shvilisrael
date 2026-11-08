@@ -32,6 +32,8 @@
   --safe-t: env(safe-area-inset-top, 0px);
 }
 :root[data-theme='dark'] {
+  --red: #f87171;
+  --yellow: #fbbf24;
   --bg: #0b1424;
   --surface: #12203a;
   --surface-2: #1a2a47;
@@ -45,6 +47,8 @@
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme='light']) {
+    --red: #f87171;
+    --yellow: #fbbf24;
     --bg: #0b1424;
     --surface: #12203a;
     --surface-2: #1a2a47;
@@ -71,7 +75,7 @@ body {
   overscroll-behavior-y: none;
 }
 a { color: var(--primary); text-decoration: none; }
-button { font-family: inherit; font-size: inherit; cursor: pointer; }
+button { font-family: inherit; font-size: inherit; cursor: pointer; color: inherit; }
 input, select, textarea { font-family: inherit; font-size: 16px; color: var(--text); }
 h1, h2, h3, h4 { margin: 0; line-height: 1.25; font-weight: 700; }
 p { margin: 0; }
@@ -591,3 +595,18 @@ a { overflow-wrap: anywhere; }
 .table tr.note-row td { border-bottom: 2px solid var(--border); padding-top: 0; }
 .rs-row { padding: 8px 0; border-bottom: 1px dashed var(--border); }
 .rs-row:last-child { border-bottom: 0; }
+
+/* dark-mode contrast fixes */
+.poi-card { color: var(--text); }
+.m-ok { color: #1a1a1a; }
+.wx-day.wx-ok .wx-day__verdict { color: #1a1a1a; }
+.diff-3 { background: #c2410c; }
+.chip--water { background: #1d4ed8 !important; color: #fff !important; }
+.btn--danger { background: #c53030; }
+.table tr.rest td { color: var(--text); }
+:root[data-theme='dark'] .alert--danger, :root[data-theme='dark'] .alert--warn { color: var(--text); }
+:root[data-theme='dark'] .cert { color: #1a2238; }
+:root[data-theme='dark'] .leaflet-popup-content { color: #1a2238; }
+:root[data-theme='dark'] .leaflet-popup-content a { color: #1d4ed8; }
+/* red fills stay the deep red in both themes (white text on top) */
+.diff-4, .m-avoid, .wx-day.wx-bad .wx-day__verdict, .btn--danger, .mapbtn.rec { background: #c53030; }

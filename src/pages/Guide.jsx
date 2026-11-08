@@ -158,7 +158,7 @@ function Lodging({ navigate }) {
           <div className="row" style={{ gap: 6, overflowX: 'auto', flexWrap: 'nowrap' }}>{regions.map((r) => <button key={r} className={`chip chip--btn ${region === r ? 'active' : ''}`} style={{ whiteSpace: 'nowrap' }} onClick={() => setRegion(r)}>{r}</button>)}</div>
           {camps.filter((c) => region === 'הכל' || (c.region || '').startsWith(region)).map((c, i) => (
             <div key={i} className="card">
-              <div className="row between"><b>{c.name_he}</b>{c.facilities?.water === true ? <span className="chip" style={{ background: 'var(--primary)', color: '#fff' }}>💧 מים</span> : <span className="chip">ללא מים</span>}</div>
+              <div className="row between"><b>{c.name_he}</b>{c.facilities?.water === true ? <span className="chip chip--water">💧 מים</span> : <span className="chip">ללא מים</span>}</div>
               <div className="tiny muted">{c.region} · ליד {c.nearest_settlement} · {c.cost_he}</div>
               <div className="small mt">{c.facilities_he}</div>
               <p className="small mt">{c.notes_he}</p>
