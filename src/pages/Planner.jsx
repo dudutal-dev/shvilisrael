@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { useApp } from '../context.jsx'
 import { Stat, Alert, Section, Modal } from '../components/UI.jsx'
 import { Icon } from '../components/Icons.jsx'
@@ -8,6 +8,8 @@ import { MONTHS, LEVEL_CLS, LEVEL_HE } from '../lib/season.js'
 import { itineraryToICS } from '../lib/ics.js'
 import { download } from '../lib/gpx.js'
 import { useToast } from '../hooks/useToast.jsx'
+import { fetchForecastMany, wmoText, dayVerdict } from '../lib/weather.js'
+import { toISODate as iso } from '../lib/dates.js'
 
 export default function Planner({ navigate }) {
   const { segments, plan, setPlan, journal } = useApp()
@@ -16,6 +18,27 @@ export default function Planner({ navigate }) {
   const [showTable, setShowTable] = useState(!!plan.startDate)
   const [detail, setDetail] = useState(null)
   const preview = useMemo(() => (segments.length ? buildItinerary(segments, draft) : null), [segments, draft])
+  const [wx, setWx] = useState({}) // day number -> {icon, tmax, tmin, rain, verdict}
+  useEffect(() => {
+    if (!preview || !showTable) return
+    const horizon = Date.now() + 15 * 86400000
+    const upcoming = preview.days.filter((d) => !d.rest && d.date >= new Date(new Date().toDateString()) && d.date <= horizon)
+    if (!upcoming.length) { setWx({}); return }
+    const pts = upcoming.map((d) => { const s = segments.find((x) => x.id === d.segments[0]); return { lat: s.start.lat, lon: s.start.lon } })
+    let alive = true
+    fetchForecastMany(pts, 16).then((res) => {
+      if (!alive) return
+      const out = {}
+      upcoming.forEach((d, i) => {
+        const dd = res[i]?.daily; if (!dd) return
+        const j = dd.time.indexOf(iso(d.date)); if (j < 0) return
+        const v = dayVerdict({ tmax: dd.temperature_2m_max[j], rainMm: dd.precipitation_sum[j], rainProb: dd.precipitation_probability_max[j], windMax: dd.wind_speed_10m_max[j], code: dd.weather_code[j] }, d.group)
+        out[d.day] = { icon: wmoText(dd.weather_code[j])[1], tmax: Math.round(dd.temperature_2m_max[j]), tmin: Math.round(dd.temperature_2m_min[j]), rain: dd.precipitation_probability_max[j], v }
+      })
+      setWx(out)
+    }).catch(() => {})
+    return () => { alive = false }
+  }, [preview?.summary.startDate?.getTime(), preview?.days.length, showTable, draft.direction]) // eslint-disable-line react-hooks/exhaustive-deps
   const set = (k, v) => setDraft((d) => ({ ...d, [k]: v }))
   const sorted = [...segments].sort((a, b) => a.id - b.id)
   const startMonth = new Date(draft.startDate).getMonth()
@@ -117,6 +140,7 @@ export default function Planner({ navigate }) {
 
           <Section title="לוח זמנים יומי" action={<div className="row" style={{ gap: 6 }}><button className="btn btn--sm" onClick={exportIcs}>📅 ליומן</button><button className="btn btn--sm" onClick={exportText}><Icon name="share" size={16} /></button><button className="btn btn--sm no-print" onClick={() => window.print()}>🖨️</button></div>}>
             {!showTable && <button className="btn btn--block mb" onClick={() => setShowTable(true)}>הצגת תצוגה מקדימה של {preview.days.length} ימים</button>}
+            {showTable && Object.keys(wx).length > 0 && <p className="tiny muted mb">🌤️ תחזית חיה (Open-Meteo) מוצגת לימים שבטווח 16 הימים הקרובים, לפי נקודת ההתחלה של כל יום.</p>}
             {showTable && (
               <div className="timeline">
                 {preview.days.map((d) => (
@@ -126,6 +150,7 @@ export default function Planner({ navigate }) {
                       {!d.rest && <div className="seg__km">{d.km}<small> ק"מ</small></div>}
                     </div>
                     {!d.rest && <div className="small muted">🛏 {d.overnight}</div>}
+                    {wx[d.day] && <div className="row" style={{ gap: 6, marginTop: 2 }}><span className={`wx-pill ${wx[d.day].v.cls}`}>{wx[d.day].icon} {wx[d.day].tmax}°/{wx[d.day].tmin}°{wx[d.day].rain > 15 ? ` ☔${wx[d.day].rain}%` : ''} · {wx[d.day].v.label}</span>{wx[d.day].v.flags[0] && <span className="tiny muted">{wx[d.day].v.flags[0].t}</span>}</div>}
                     {d.notes?.filter((n) => n.startsWith('סכנת') || n.startsWith('חם') || n.startsWith('חום') || n.includes('הטמנת') || n.includes('שטח אש')).slice(0, 2).map((n, i) => <div key={i} className="tiny" style={{ color: n.startsWith('סכנת') ? 'var(--red)' : 'var(--orange)' }}>⚠ {n}</div>)}
                   </div>
                 ))}

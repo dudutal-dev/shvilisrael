@@ -14,6 +14,8 @@ import { toISODate } from '../lib/dates.js'
 import { useToast } from '../hooks/useToast.jsx'
 import lodging from '../data/lodging.json'
 import logistics from '../data/logistics.json'
+import { useWeather } from '../hooks/useWeather.js'
+import { wmoText, heatRisk } from '../lib/weather.js'
 
 export default function MapPage({ query, navigate }) {
   const { segments, prefs, setPrefs, plan, done, totalKm } = useApp()
@@ -31,6 +33,7 @@ export default function MapPage({ query, navigate }) {
   const offTrail = useRef(false)
   const relationId = logistics?.navigation?.osm_relation_id
   const today = toISODate(new Date())
+  const wx = useWeather(pos?.lat, pos?.lon, { days: 1, hourly: true, refreshMin: 20 })
 
   useEffect(() => { idbGet(TRAIL_KEY).then((d) => d?.lines && setLines(d.lines)) }, [])
   useEffect(() => { loadTracks().then((t) => setTrack(t[today] || null)) }, [today])
@@ -151,6 +154,7 @@ export default function MapPage({ query, navigate }) {
                       זמן משוער לחניון הקרוב בקצב {live.speed.toFixed(1)} קמ"ש: <b>{(live.nc.dist / live.speed * 60).toFixed(0)} דק׳</b>{live.nc.dist / live.speed > live.hoursLeft ? ' – לא תספיקו לפני החשכה!' : ''}
                     </div>
                   )}
+                  {wx.data?.current && <WxLine data={wx.data} onClick={() => navigate('weather')} />}
                   <div className="tiny muted mono ltr">{pos.lat.toFixed(5)}, {pos.lon.toFixed(5)}</div>
                 </>
               )}
@@ -186,6 +190,23 @@ export default function MapPage({ query, navigate }) {
           <div className="alert alert--info small">לניווט שטח אמיתי מומלץ להחזיק גם אפליקציה ייעודית (Israel Hiking Map / עמוד ענן) ומפת סימון שבילים מודפסת. ה-GPS תלוי בסוללה ובקליטה.</div>
         </div>
       </Modal>
+    </div>
+  )
+}
+
+function WxLine({ data, onClick }) {
+  const c = data.current, h = data.hourly
+  const risk = heatRisk(c.apparent_temperature, c.uv_index)
+  const now = Date.now()
+  const i0 = h?.time ? Math.max(0, h.time.findIndex((t) => new Date(t).getTime() >= now)) : -1
+  const next = i0 >= 0 ? [i0 + 2, i0 + 4, i0 + 6].filter((i) => i < h.time.length) : []
+  const rainSoon = next.some((i) => (h.precipitation_probability?.[i] || 0) >= 40)
+  return (
+    <div className={`tiny row ${risk?.level === 'danger' || rainSoon ? 'txt-warn' : 'muted'}`} style={{ gap: 8, cursor: 'pointer' }} onClick={onClick}>
+      <span>{wmoText(c.weather_code)[1]} {Math.round(c.temperature_2m)}° (מורגש {Math.round(c.apparent_temperature)}°)</span>
+      <span>💨 {Math.round(c.wind_speed_10m)}</span><span>UV {c.uv_index}</span>
+      {next.map((i) => <span key={i} className="wx-pill">{new Date(h.time[i]).getHours()}:00 {wmoText(h.weather_code[i])[1]} {Math.round(h.temperature_2m[i])}°{(h.precipitation_probability?.[i] || 0) >= 20 ? ` ☔${h.precipitation_probability[i]}%` : ''}</span>)}
+      {rainSoon && <span>⚠ גשם בקרוב</span>}
     </div>
   )
 }

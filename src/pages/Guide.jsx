@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { useApp } from '../context.jsx'
 import { Acc, Alert, Section, Stat } from '../components/UI.jsx'
 import { Photo } from '../components/Photo.jsx'
@@ -11,12 +11,13 @@ import { gearFor, BASE_GEAR, packWeight } from '../lib/gear.js'
 import apps from '../data/apps.json'
 
 const SECTIONS = [
-  ['seasons', '☀️', 'עונות ומזג אוויר'], ['angels', '😇', 'מלאכי שביל'], ['water', '💧', 'מים והטמנות'], ['lodging', '🏕️', 'לינה'], ['safety', '🆘', 'בטיחות וחירום'],
+  ['weather', '🌤️', 'מזג אוויר חי'], ['seasons', '☀️', 'עונות ואקלים'], ['angels', '😇', 'מלאכי שביל'], ['water', '💧', 'מים והטמנות'], ['lodging', '🏕️', 'לינה'], ['safety', '🆘', 'בטיחות וחירום'],
   ['gear', '🎒', 'ציוד'], ['budget', '💰', 'תקציב'], ['transport', '🚌', 'תחבורה והצטיידות'], ['nav', '🧭', 'סימון וניווט'], ['faq', '❓', 'שאלות נפוצות'], ['ethics', '🌿', 'טיול אחראי'], ['apps', '📱', 'אפליקציות אחרות'],
 ]
 
 export default function Guide({ section = 'seasons', navigate, query = {} }) {
   const sec = SECTIONS.find((s) => s[0] === section) ? section : 'seasons'
+  useEffect(() => { if (sec === 'weather') navigate('weather') }, [sec, navigate])
   return (
     <div className="page stack">
       <div className="row" style={{ gap: 6, overflowX: 'auto', flexWrap: 'nowrap', paddingBottom: 4 }}>

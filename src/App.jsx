@@ -15,8 +15,9 @@ const MapPage = lazy(() => import('./pages/MapPage.jsx'))
 const Guide = lazy(() => import('./pages/Guide.jsx'))
 const Angels = lazy(() => import('./pages/Angels.jsx'))
 const Certificate = lazy(() => import('./pages/Certificate.jsx'))
+const Weather = lazy(() => import('./pages/Weather.jsx'))
 
-const TITLES = { home: 'שביל ישראל', segments: 'מקטעי השביל', map: 'מפה', plan: 'תכנון המסע', nav: 'ניווט', guide: 'המדריך', journal: 'יומן המסע', settings: 'הגדרות', certificate: 'תעודה' }
+const TITLES = { home: 'שביל ישראל', segments: 'מקטעי השביל', map: 'מפה', plan: 'תכנון המסע', nav: 'ניווט', guide: 'המדריך', journal: 'יומן המסע', settings: 'הגדרות', certificate: 'תעודה', weather: 'מזג אוויר חי' }
 
 export default function App() {
   const { route, navigate, back } = useRouter()
@@ -36,6 +37,7 @@ export default function App() {
     case 'guide': page = sub === 'angels' ? <Angels navigate={navigate} /> : <Guide section={sub} navigate={navigate} query={route.query} />; break
     case 'journal': page = <Journal navigate={navigate} />; break
     case 'certificate': page = <Certificate />; break
+    case 'weather': page = <Weather navigate={navigate} query={route.query} />; break
     case 'settings': page = <Settings theme={theme} setTheme={setTheme} />; break
     default: page = <Home navigate={navigate} />
   }

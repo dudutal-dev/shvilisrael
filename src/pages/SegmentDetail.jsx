@@ -9,6 +9,9 @@ import { waypointsToGPX, download } from '../lib/gpx.js'
 import { useToast } from '../hooks/useToast.jsx'
 import lodging from '../data/lodging.json'
 import { gearFor } from '../lib/gear.js'
+import { WeatherNow, WeatherDaily, WeatherFlags } from '../components/Weather.jsx'
+import { useWeather } from '../hooks/useWeather.js'
+import { regionGroup } from '../lib/season.js'
 import { HE_MONTHS } from '../lib/dates.js'
 
 export default function SegmentDetail({ id, navigate }) {
@@ -20,6 +23,8 @@ export default function SegmentDetail({ id, navigate }) {
   const [temp, setTemp] = useState(24)
   const [weight, setWeight] = useState(70)
   const gear = useMemo(() => gearFor(seg, month), [seg, month])
+  const wx = useWeather(seg?.start?.lat, seg?.start?.lon, { days: 7 })
+  const [wxDay, setWxDay] = useState(0)
   const idx = segments.findIndex((s) => s.id === Number(id))
   const prev = segments[idx - 1], next = segments[idx + 1]
   const fit = useMemo(() => seg?.start?.lat && seg?.end?.lat ? { bounds: [[seg.start.lat, seg.start.lon], [seg.end.lat, seg.end.lon]] } : null, [seg])
@@ -65,7 +70,7 @@ export default function SegmentDetail({ id, navigate }) {
       {seg.firing_zone && <Alert kind="danger" icon="warn"><b>שטח אש:</b> {seg.firing_zone}</Alert>}
 
       <div className="segmented" style={{ alignSelf: 'center' }}>
-        {[['info', 'מידע'], ['lodging', 'לינה ומים'], ['gear', 'ציוד'], ['map', 'מפה'], ['notes', 'הערות שלי']].map(([k, v]) => <button key={k} className={tab === k ? 'active' : ''} onClick={() => setTab(k)}>{v}</button>)}
+        {[['info', 'מידע'], ['weather', 'מזג אוויר'], ['lodging', 'לינה ומים'], ['gear', 'ציוד'], ['map', 'מפה'], ['notes', 'הערות שלי']].map(([k, v]) => <button key={k} className={tab === k ? 'active' : ''} onClick={() => setTab(k)}>{v}</button>)}
       </div>
 
       {tab === 'info' && (
@@ -142,6 +147,24 @@ export default function SegmentDetail({ id, navigate }) {
               <div className="card__title"><Icon name="tent" />חניוני לילה בסביבה</div>
               {nearbyCamps.map((c, i) => <div key={i} className="small mt"><b>{c.name_he}</b> – {c.facilities_he || c.notes_he || ''}</div>)}
             </div>
+          )}
+        </div>
+      )}
+
+      {tab === 'weather' && (
+        <div className="stack">
+          {!wx.data && <div className="card small muted">{wx.error ? 'אין חיבור לשרת מזג האוויר' : 'טוען תחזית חיה לנקודת ההתחלה…'}</div>}
+          {wx.data && (
+            <>
+              <div className="card card--glow"><WeatherNow data={wx.data} place={seg.start.name_he} /></div>
+              <div className="card">
+                <div className="card__title"><Icon name="sun" />7 ימים – מתי כדאי לצעוד כאן</div>
+                <WeatherDaily data={wx.data} group={regionGroup(seg.region)} onPick={setWxDay} />
+                <div className="mt"><WeatherFlags data={wx.data} group={regionGroup(seg.region)} dayIndex={wxDay} /></div>
+                {seg.hazards?.some((h) => /שיטפ|נחל|קניון|מכתש/.test(h)) && <p className="tiny mt" style={{ color: 'var(--orange)' }}>⚠ במקטע זה יש נחלים/קניונים – בגשם באזור כולו (גם רחוק) קיימת סכנת שיטפון.</p>}
+              </div>
+              <button className="btn btn--ghost btn--sm" onClick={() => navigate(`weather?seg=${seg.id}`)}>תחזית שעתית מלאה ←</button>
+            </>
           )}
         </div>
       )}

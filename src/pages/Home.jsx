@@ -5,15 +5,17 @@ import { Section } from '../components/UI.jsx'
 import { Icon } from '../components/Icons.jsx'
 import { fmtDate, HE_MONTHS } from '../lib/dates.js'
 import { MONTHS, LEVEL_CLS, LEVEL_HE } from '../lib/season.js'
-import { fetchForecast, wmoText, heatRisk } from '../lib/weather.js'
+import { WeatherNow, WeatherDaily } from '../components/Weather.jsx'
+import { useWeather } from '../hooks/useWeather.js'
+import { regionGroup } from '../lib/season.js'
 import { useGeolocation } from '../hooks/useGeolocation.js'
 import { nearest } from '../lib/geo.js'
 import { sunTimes, fmtTime } from '../lib/sun.js'
 
 const QUICK = [
-  ['map', '🗺️', 'מפה חיה'], ['nav', '🧭', 'מצפן'], ['guide/angels', '😇', 'מלאכי שביל'],
+  ['map', '🗺️', 'מפה חיה'], ['weather', '🌤️', 'מזג אוויר'], ['nav', '🧭', 'מצפן'], ['guide/angels', '😇', 'מלאכי שביל'],
   ['guide/lodging', '⛺', 'לינה'], ['guide/water', '💧', 'מים'], ['guide/gear', '🎒', 'ציוד'],
-  ['guide/safety', '🆘', 'בטיחות'], ['journal', '📓', 'יומן'], ['guide/faq', '❓', 'שאלות'],
+  ['guide/safety', '🆘', 'בטיחות'], ['journal', '📓', 'יומן'],
 ]
 
 export default function Home({ navigate }) {
@@ -89,7 +91,7 @@ export default function Home({ navigate }) {
         {QUICK.map(([to, ico, t]) => <button key={to} className="quick__btn" onClick={() => navigate(to)}><span className="quick__ico">{ico}</span>{t}</button>)}
       </div>
 
-      <WeatherCard segments={segments} />
+      <WeatherCard segments={segments} navigate={navigate} />
 
       <Section title="העונה עכשיו" icon="sun" action={<button className="linkbtn small" onClick={() => navigate('guide/seasons')}>לטבלה המלאה ←</button>}>
         <div className="grid-3">
@@ -122,41 +124,19 @@ export default function Home({ navigate }) {
   )
 }
 
-function WeatherCard({ segments }) {
+function WeatherCard({ segments, navigate }) {
   const { pos } = useGeolocation(true, { enableHighAccuracy: false, maximumAge: 600000 })
-  const [data, setData] = useState(null)
-  const [err, setErr] = useState(null)
-  const [place, setPlace] = useState(null)
-  useEffect(() => {
-    const target = pos || { lat: 31.78, lon: 35.2 }
-    const n = nearest(target, segments.filter((s) => s.start?.lat).map((s) => ({ ...s.start, seg: s })))
-    setPlace(pos ? (n ? `ליד ${n.point.name_he}` : 'מיקומך') : 'ירושלים (ברירת מחדל)')
-    fetchForecast(target.lat, target.lon, 4).then(setData).catch(() => setErr('אין חיבור לשרת מזג האוויר'))
-  }, [pos?.lat != null, segments]) // eslint-disable-line react-hooks/exhaustive-deps
-  const sun = sunTimes(new Date(), pos?.lat ?? 31.78, pos?.lon ?? 35.2)
-  if (err) return null
-  if (!data) return <div className="card small muted">טוען תחזית…</div>
-  const c = data.current, d = data.daily
-  const risk = heatRisk(c.apparent_temperature, c.uv_index)
+  const target = pos || { lat: 31.78, lon: 35.2 }
+  const n = useMemo(() => nearest(target, segments.filter((s) => s.start?.lat).map((s) => ({ ...s.start, region: s.region }))), [target.lat, target.lon, segments]) // eslint-disable-line react-hooks/exhaustive-deps
+  const place = pos ? (n ? `ליד ${n.point.name_he}` : 'מיקומך') : 'ירושלים (ללא GPS)'
+  const { data, error } = useWeather(target.lat, target.lon, { days: 5 })
+  if (error && !data) return null
+  if (!data) return <div className="card small muted">טוען תחזית חיה…</div>
   return (
-    <div className="card">
-      <div className="row between">
-        <div className="card__title" style={{ marginBottom: 0 }}>{wmoText(c.weather_code)[1]} מזג אוויר <span className="small muted">· {place}</span></div>
-        <span className="tiny muted">🌅 {fmtTime(sun.sunrise)} · 🌇 {fmtTime(sun.sunset)}</span>
-      </div>
-      <div className="row mt"><span className="gauge">{Math.round(c.temperature_2m)}°</span><span className="small muted">מורגש {Math.round(c.apparent_temperature)}° · רוח {Math.round(c.wind_speed_10m)} קמ"ש · UV {c.uv_index} · לחות {c.relative_humidity_2m}%</span></div>
-      {risk && <div className={`alert ${risk.cls} mt small`}>{risk.label}</div>}
-      <div className="row mt" style={{ gap: 6 }}>
-        {d.time.map((t, i) => (
-          <div key={t} className="stat" style={{ flex: 1, padding: '6px 4px' }}>
-            <div className="tiny muted">{i === 0 ? 'היום' : new Date(t).toLocaleDateString('he-IL', { weekday: 'short' })}</div>
-            <div>{wmoText(d.weather_code[i])[1]}</div>
-            <div className="small"><b>{Math.round(d.temperature_2m_max[i])}°</b> / {Math.round(d.temperature_2m_min[i])}°</div>
-            {d.precipitation_probability_max[i] > 20 && <div className="tiny" style={{ color: 'var(--primary)' }}>☔ {d.precipitation_probability_max[i]}%</div>}
-          </div>
-        ))}
-      </div>
-      <p className="tiny muted mt">Open-Meteo · בחורף בדקו גם אזהרות שיטפונות של השירות המטאורולוגי.</p>
+    <div className="card" onClick={() => navigate('weather')} style={{ cursor: 'pointer' }}>
+      <WeatherNow data={data} place={place} />
+      <div className="mt"><WeatherDaily data={data} group={regionGroup(n?.point?.region || '')} days={5} /></div>
+      <div className="row between mt"><span className="tiny muted">מתעדכן אוטומטית · לחצו לתחזית שעתית ולתחנות לאורך השביל</span><span className="linkbtn small">←</span></div>
     </div>
   )
 }

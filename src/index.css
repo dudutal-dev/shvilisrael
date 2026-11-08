@@ -482,3 +482,25 @@ body { background: var(--bg); background-image: radial-gradient(1200px 500px at 
 .leaflet-container.zoomed-out .seg-marker { width: 12px; height: 12px; font-size: 0; border-width: 1.5px; }
 .leaflet-container.zoomed-out .poi-marker { font-size: 12px; }
 .leaflet-left .leaflet-control { margin-left: 12px; }
+
+/* ---------- live weather ---------- */
+.wx-now__main { display: flex; align-items: center; gap: 12px; }
+.wx-now__icon { font-size: 40px; line-height: 1; }
+.wx-now__temp { font-size: 40px; font-weight: 800; line-height: 1; font-variant-numeric: tabular-nums; }
+.wx-now--compact .wx-now__icon, .wx-now--compact .wx-now__temp { font-size: 24px; }
+.wx-now__meta { flex: 1; min-width: 0; }
+.wx-daily { display: flex; gap: 6px; overflow-x: auto; padding-bottom: 4px; scroll-snap-type: x mandatory; }
+.wx-day { flex: none; width: 84px; scroll-snap-align: start; text-align: center; padding: 8px 4px; border-radius: 12px; background: var(--surface-2); border: 1px solid var(--border); cursor: pointer; }
+.wx-day__verdict { font-size: 10px; font-weight: 700; margin-top: 4px; padding: 2px 4px; border-radius: 6px; color: #fff; background: var(--green); }
+.wx-day.wx-ok .wx-day__verdict { background: var(--yellow); }
+.wx-day.wx-warn .wx-day__verdict { background: #c05621; }
+.wx-day.wx-bad .wx-day__verdict { background: var(--red); }
+.wx-day.wx-bad { border-color: var(--red); }
+.wx-hourly { background: var(--surface-2); border-radius: 12px; padding: 8px 6px 4px; }
+.wx-station { display: grid; grid-template-columns: 1fr auto auto auto; gap: 8px; align-items: center; padding: 8px 0; border-bottom: 1px dashed var(--border); font-size: 14px; }
+.wx-station:last-child { border-bottom: 0; }
+.wx-station .t { font-weight: 800; font-variant-numeric: tabular-nums; }
+.wx-chip { display: inline-flex; align-items: center; gap: 4px; padding: 2px 8px; border-radius: 999px; font-size: 12px; font-weight: 700; color: #fff; }
+.wx-pill { display: inline-flex; align-items: center; gap: 4px; font-size: 11px; padding: 2px 6px; border-radius: 8px; background: var(--surface-2); color: var(--text-2); white-space: nowrap; }
+.wx-pill.wx-warn { background: color-mix(in srgb, #c05621 18%, var(--surface)); color: #c05621; }
+.wx-pill.wx-bad { background: color-mix(in srgb, var(--red) 18%, var(--surface)); color: var(--red); }
