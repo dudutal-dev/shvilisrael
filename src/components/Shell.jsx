@@ -23,6 +23,10 @@ const TABS = [{
   label: 'ניווט',
   icon: 'compass'
 }, {
+  id: 'journal',
+  label: 'יומן',
+  icon: 'journal'
+}, {
   id: 'guide',
   label: 'מדריך',
   icon: 'guide'
@@ -47,7 +51,6 @@ export function Header({
       </div>
       <div className="header__actions">
         <button className="iconbtn iconbtn--lang" onClick={() => setLang(lang === 'en' ? 'he' : 'en')} aria-label="Language" title={lang === 'en' ? 'עברית' : 'English'}>{lang === 'en' ? 'עב' : 'EN'}</button>
-        <button className="iconbtn" onClick={() => navigate('journal')} aria-label={t("יומן מסע")}><Icon name="journal" /></button>
         <button className="iconbtn" onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} aria-label={t("מצב תצוגה")}><Icon name={theme === 'dark' ? 'sun' : 'moon'} /></button>
         <button className="iconbtn" onClick={() => navigate('settings')} aria-label={t("הגדרות")}><Icon name="settings" /></button>
       </div>
@@ -59,7 +62,7 @@ export function BottomNav({
 }) {
   return <nav className="nav">
       {TABS.map(tab => <button key={tab.id} className={`nav__btn ${active === tab.id ? 'active' : ''}`} onClick={() => navigate(tab.id)}>
-          <span className="nav__ico"><CIcon name={tab.icon} size={26} /></span>
+          <span className="nav__ico"><CIcon name={tab.icon} size={24} /></span>
           <span>{t(tab.label)}</span>
         </button>)}
     </nav>;

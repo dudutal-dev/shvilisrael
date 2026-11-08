@@ -7,6 +7,7 @@ import { useGeolocation } from '../hooks/useGeolocation.js';
 import { useToast } from '../hooks/useToast.jsx';
 import { savePhoto, getPhotos, deletePhoto } from '../lib/photos.js';
 import { loadTracks } from '../lib/track.js';
+import { buildJournalPdf, deliverPdf } from '../lib/journalPdf.js';
 import { t, tf } from '../i18n/index.js'
 const MOODS = ['🤩', '😊', '😐', '😩', '🤕'];
 const WEATHER = ['☀️', '⛅', '🌧️', '💨', '🥵', '🥶'];
@@ -71,6 +72,17 @@ export default function Journal({
     setJournal(j => j.filter(x => x.id !== e.id));
     setOpen(false);
   };
+  const [pdfBusy, setPdfBusy] = useState(false);
+  const exportPdf = async () => {
+    if (!journal.length) { toast(t("אין עדיין רשומות ביומן")); return; }
+    setPdfBusy(true);
+    try {
+      const blob = await buildJournalPdf({ journal, segments, done, stats: { doneKm, totalKm, trackKm: Object.values(tracks).reduce((a, x) => a + (x.km || 0), 0), trackDays: Object.keys(tracks).length }, onProgress: (i, n) => toast(t("מכין את היומן… עמוד {0} מתוך {1}", i, n), 4000) });
+      const r = await deliverPdf(blob, `shvil-israel-journal-${toISODate(new Date())}.pdf`);
+      toast(r === 'cancelled' ? t("השיתוף בוטל") : t("📄 היומן המעוצב מוכן"));
+    } catch (e) { console.error(e); toast(t("שגיאה ביצירת ה-PDF")); }
+    setPdfBusy(false);
+  };
   const exportText = async () => {
     const body = t("יומן המסע שלי בשביל ישראל {0} מקטעים · {1} ק\"מ מתוך {2}", done.length, Math.round(doneKm), Math.round(totalKm)) + [...journal].sort((a, b) => a.date.localeCompare(b.date)).map(e => `${e.date} ${e.mood} ${e.weather || ''} ${segments.find(s => s.id === Number(e.segId))?.name_he || ''} ${e.km ? t("· {0} ק\"מ", e.km) : ''}\n${e.text}\n`).join('\n');
     if (navigator.share) {
@@ -94,7 +106,7 @@ export default function Journal({
         <h2 className="section-title"><Icon name="journal" />{t("יומן המסע")}</h2>
         <div className="row" style={{
         gap: 6
-      }}><button className="btn btn--sm" onClick={exportText}><Icon name="share" size={16} /></button><button className="btn btn--primary btn--sm" onClick={() => {
+      }}><button className="btn btn--sm" onClick={exportText} title={t("שיתוף כטקסט")}><Icon name="share" size={16} /></button><button className="btn btn--sm" onClick={exportPdf} disabled={pdfBusy} title={t("יומן מעוצב (PDF)")}>{pdfBusy ? t("מכין…") : '📄 PDF'}</button><button className="btn btn--primary btn--sm" onClick={() => {
           setEdit(blank());
           setOpen(true);
         }}>{t("+ רשומה")}</button></div>
@@ -113,7 +125,10 @@ export default function Journal({
         </div>
         {trackKm > 0 && <p className="tiny muted mt">{t("נמדדו ב-GPS:")} {trackKm.toFixed(1)} {t("ק\"מ ב-")}{Object.keys(tracks).length} {t("ימי הקלטה")}</p>}
         {pct >= 100 && <div className="alert alert--ok mt">{t("🏆 סיימתם את שביל ישראל! כל הכבוד.")}</div>}
-        {done.length > 0 && <button className="btn btn--sm btn--ghost mt" onClick={() => navigate('certificate')}>{t("🏅 תעודת הוקרה להדפסה")}</button>}
+        <div className="row mt" style={{ gap: 8, flexWrap: 'wrap' }}>
+          {journal.length > 0 && <button className="btn btn--sm btn--primary" onClick={exportPdf} disabled={pdfBusy}>{pdfBusy ? t("מכין…") : t("📄 הורדת יומן מעוצב (PDF)")}</button>}
+          {done.length > 0 && <button className="btn btn--sm btn--ghost" onClick={() => navigate('certificate')}>{t("🏅 תעודת הוקרה להדפסה")}</button>}
+        </div>
       </div>
       <div className="segmented" style={{
       alignSelf: 'center'

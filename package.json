@@ -13,6 +13,8 @@
     "check:i18n": "node scripts/i18n-missing.mjs && node scripts/i18n-shadow-check.mjs && python3 scripts/i18n/spni-check.py"
   },
   "dependencies": {
+    "html2canvas": "^1.4.1",
+    "jspdf": "^4.2.1",
     "leaflet": "^1.9.4",
     "react": "^19.3.1",
     "react-dom": "^19.3.1"
