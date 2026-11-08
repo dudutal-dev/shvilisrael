@@ -276,7 +276,7 @@ export default function MapPage({
                   {wx.data?.current && <WxLine data={wx.data} onClick={() => navigate('weather')} />}
                   <div className="tiny muted mono ltr">{pos.lat.toFixed(5)}, {pos.lon.toFixed(5)}</div>
                 </>}
-            </div> : <div className="small">{gps ? t("מחפש לוויינים…") : lines ? t("הפעילו GPS לראות מיקום, התקדמות ומרחקים בזמן אמת") : t("מוצג תוואי סכמטי. הורידו את התוואי המלא (שכבות ←) לדיוק מלא ולחישוב התקדמות")}</div>}
+            </div> : <div className="small">{gps ? <span>{t("מחפש לוויינים…")} <span className="muted">{t("(בפעם הראשונה אשרו גישה למיקום)")}</span></span> : <div className="stack" style={{ gap: 8 }}><button className="btn btn--primary" onClick={() => { setGps(true); setFollow(true); }}>{t("📍 הפעל GPS – הצג את מיקומי על המפה")}</button><span className="tiny muted">{lines ? t("עובד גם בלי תוכנית: תראו את הנקודה הכחולה, המרחק מהשביל והמקטע הקרוב.") : t("מוצג תוואי סכמטי. הורידו את התוואי המלא (שכבות ←) לדיוק מלא ולחישוב התקדמות")}</span></div>}</div>}
         </div>
       </div>
 

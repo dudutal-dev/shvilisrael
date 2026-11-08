@@ -1239,5 +1239,8 @@
 "סיכום המסע": "Journey summary",
 "ק\"מ נמדדו ב-GPS": "km measured by GPS",
 "ק\"מ בשביל כולו": "km on the whole trail",
-"מקטעים שהושלמו": "Completed segments"
+"מקטעים שהושלמו": "Completed segments",
+"(בפעם הראשונה אשרו גישה למיקום)": "(allow location access the first time)",
+"📍 הפעל GPS – הצג את מיקומי על המפה": "📍 Turn on GPS – show me on the map",
+"עובד גם בלי תוכנית: תראו את הנקודה הכחולה, המרחק מהשביל והמקטע הקרוב.": "Works without a plan too: you'll see the blue dot, your distance from the trail and the nearest segment."
 }
