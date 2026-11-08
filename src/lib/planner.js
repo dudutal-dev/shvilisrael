@@ -63,8 +63,8 @@ export function buildItinerary(allSegments, plan) {
     }
     const last = todays[todays.length - 1]
     const first = todays[0]
-    const startName = p.direction === 'nobo' ? first.seg.end.name_he : first.seg.start.name_he
-    const endName = p.direction === 'nobo' ? last.seg.start.name_he : last.seg.end.name_he
+    const startName = p.direction === 'nobo' ? (first.seg.end.short_he || first.seg.end.name_he) : (first.seg.start.short_he || first.seg.start.name_he)
+    const endName = p.direction === 'nobo' ? (last.seg.start.short_he || last.seg.start.name_he) : (last.seg.end.short_he || last.seg.end.name_he)
     const partial = last.part && last.part < last.parts
     const notes = []
     const regions = [...new Set(todays.map((c) => c.seg.region))]

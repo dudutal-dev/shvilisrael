@@ -12,6 +12,7 @@ import { regionGroup } from '../lib/season.js'
 import { useGeolocation } from '../hooks/useGeolocation.js'
 import { nearest } from '../lib/geo.js'
 import { sunTimes, fmtTime } from '../lib/sun.js'
+import { evaluatePlan } from '../lib/readiness.js'
 import { useLiveUpdates } from '../hooks/useLiveUpdates.js'
 import { markSeen } from '../lib/liveUpdates.js'
 
@@ -32,6 +33,7 @@ export default function Home({ navigate }) {
   const daysToStart = plan.startDate ? Math.ceil((new Date(plan.startDate) - today) / 86400000) : null
   const sorted = useMemo(() => [...segments].sort((a, b) => a.id - b.id), [segments])
   const live = useLiveUpdates()
+  const readiness = useMemo(() => (itinerary ? evaluatePlan({ days: itinerary.days, segments, angels, caches: itinerary.caches || [] }) : null), [itinerary, segments, angels])
   const changes = live.items.slice(0, 3)
   const newKeys = new Set(live.newItems.map((u) => u.place + u.date))
   const needsAngel = tomorrow && !tomorrow.rest && /מלאכ/.test(tomorrow.overnight || '') && !angels.some((a) => tomorrow.segments.includes(Number(a.segId)))
@@ -77,6 +79,7 @@ export default function Home({ navigate }) {
           ) : nextDay ? (
             <div className="mt">היום הבא במסלול: <b>{nextDay.title}</b><div className="small" style={{ opacity: 0.85 }}>{fmtDate(nextDay.date)} · {nextDay.km} ק"מ</div></div>
           ) : <div className="mt">המסע הסתיים 🏆</div>}
+          {readiness && <button className="btn btn--sm mt" style={{ background: 'rgba(255,255,255,0.14)', borderColor: 'rgba(255,255,255,0.3)', color: '#fff' }} onClick={() => navigate('plan')}>{readiness.overall === 'ok' ? '🟢 רמזור התוכנית: תקין' : readiness.overall === 'warn' ? `🟡 רמזור התוכנית: ${readiness.checks.filter((c) => c.level === 'warn').length} דגשים` : `🔴 רמזור התוכנית: ${readiness.checks.filter((c) => c.level === 'bad').length} אזהרות`}</button>}
           {needsAngel && <div className="alert alert--warn mt small" style={{ background: 'rgba(255,255,255,0.12)', borderColor: '#ffb07a', color: '#fff' }}>😇 מחר לינה אצל מלאכי שביל ({tomorrow.overnight}) – עדיין אין איש קשר. תאמו היום!</div>}
           <div className="row mt" style={{ gap: 8 }}>
             <button className="btn btn--primary btn--sm" onClick={() => navigate('plan')}>לתוכנית המלאה</button>

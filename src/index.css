@@ -610,3 +610,20 @@ a { overflow-wrap: anywhere; }
 :root[data-theme='dark'] .leaflet-popup-content a { color: #1d4ed8; }
 /* red fills stay the deep red in both themes (white text on top) */
 .diff-4, .m-avoid, .wx-day.wx-bad .wx-day__verdict, .btn--danger, .mapbtn.rec { background: #c53030; }
+
+/* ---------- plan readiness traffic lights ---------- */
+.readiness__head { display: flex; align-items: center; gap: 12px; padding: 12px 14px; border-radius: 14px; margin-bottom: 10px; color: #fff; background: var(--green); }
+.readiness__head.readiness--warn { background: #b45309; }
+.readiness__head.readiness--bad { background: #b91c1c; }
+.readiness__light { font-size: 30px; line-height: 1; }
+.readiness__list { display: flex; flex-direction: column; gap: 6px; }
+.rc { display: grid; grid-template-columns: 26px 28px 1fr 18px; gap: 8px; align-items: start; padding: 10px; border-radius: 12px; border: 1px solid var(--border); background: var(--surface-2); cursor: pointer; }
+.rc--bad { border-color: #dc2626; background: color-mix(in srgb, #dc2626 10%, var(--surface)); }
+.rc--warn { border-color: #d97706; background: color-mix(in srgb, #d97706 10%, var(--surface)); }
+.rc--ok { border-color: color-mix(in srgb, var(--green) 50%, var(--border)); }
+.rc__num { width: 26px; height: 26px; border-radius: 50%; background: var(--surface); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 12px; }
+.rc__light { font-size: 20px; line-height: 1.3; }
+.rc__title { font-weight: 700; }
+.rc__details { margin-top: 6px; font-size: 13px; }
+.rc__details ul { padding-inline-start: 18px; display: flex; flex-direction: column; gap: 3px; }
+.rc__chev { color: var(--muted); }

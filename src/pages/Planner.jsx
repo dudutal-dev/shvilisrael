@@ -9,10 +9,12 @@ import { itineraryToICS } from '../lib/ics.js'
 import { download } from '../lib/gpx.js'
 import { useToast } from '../hooks/useToast.jsx'
 import { fetchForecastMany, wmoText, dayVerdict } from '../lib/weather.js'
+import { evaluatePlan } from '../lib/readiness.js'
+import { Readiness } from '../components/Readiness.jsx'
 import { toISODate as iso } from '../lib/dates.js'
 
 export default function Planner({ navigate }) {
-  const { segments, plan, setPlan, journal } = useApp()
+  const { segments, plan, setPlan, journal, angels } = useApp()
   const toast = useToast()
   const [draft, setDraft] = useState({ ...DEFAULT_PLAN, ...plan, startDate: plan.startDate || toISODate(new Date()) })
   const [showTable, setShowTable] = useState(!!plan.startDate)
@@ -20,7 +22,7 @@ export default function Planner({ navigate }) {
   const preview = useMemo(() => (segments.length ? buildItinerary(segments, draft) : null), [segments, draft])
   const [wx, setWx] = useState({}) // day number -> {icon, tmax, tmin, rain, verdict}
   useEffect(() => {
-    if (!preview || !showTable) return
+    if (!preview) return
     const horizon = Date.now() + 15 * 86400000
     const upcoming = preview.days.filter((d) => !d.rest && d.date >= new Date(new Date().toDateString()) && d.date <= horizon)
     if (!upcoming.length) { setWx({}); return }
@@ -38,7 +40,8 @@ export default function Planner({ navigate }) {
       setWx(out)
     }).catch(() => {})
     return () => { alive = false }
-  }, [preview?.summary.startDate?.getTime(), preview?.days.length, showTable, draft.direction]) // eslint-disable-line react-hooks/exhaustive-deps
+  }, [preview?.summary.startDate?.getTime(), preview?.days.length, draft.direction]) // eslint-disable-line react-hooks/exhaustive-deps
+  const readiness = useMemo(() => (preview ? evaluatePlan({ days: preview.days, segments, wx, angels, caches: preview.caches || [] }) : null), [preview, segments, wx, angels])
   const set = (k, v) => setDraft((d) => ({ ...d, [k]: v }))
   const sorted = [...segments].sort((a, b) => a.id - b.id)
   const startMonth = new Date(draft.startDate).getMonth()
@@ -128,6 +131,7 @@ export default function Planner({ navigate }) {
             <Stat value={preview.summary.restDays} label="ימי מנוחה" />
             <Stat value={`₪${preview.summary.budget.toLocaleString()}`} label="תקציב משוער" />
           </div>
+          <Readiness result={readiness} navigate={navigate} />
           <p className="small muted center">סיום משוער: <b>{fmtDateLong(preview.summary.endDate)}</b>{preview.summary.cacheDays ? ` · ${preview.summary.cacheDays} ימים עם הטמנת מים` : ''}</p>
           {preview.caches?.length > 0 && (
             <div className="card card--glow">
@@ -136,7 +140,7 @@ export default function Planner({ navigate }) {
               <div className="row mt" style={{ gap: 6 }}><button className="btn btn--sm btn--primary" onClick={cacheMessage}>📋 הודעת הזמנה לספק הטמנות</button><button className="btn btn--sm" onClick={() => navigate('guide/water')}>ספקי הטמנה ←</button></div>
             </div>
           )}
-          {preview.summary.seasonIssues > 0 && <Alert kind="danger" icon="warn"><b>{preview.summary.seasonIssues} ימים נופלים בעונה מסוכנת/קשה</b> (חום קיצוני בנגב או שרב). שקלו להזיז את תאריך היציאה או להפוך כיוון. פרטים בטבלה למטה.</Alert>}
+
 
           <Section title="לוח זמנים יומי" action={<div className="row" style={{ gap: 6 }}><button className="btn btn--sm" onClick={exportIcs}>📅 ליומן</button><button className="btn btn--sm" onClick={exportText}><Icon name="share" size={16} /></button><button className="btn btn--sm no-print" onClick={() => window.print()}>🖨️</button></div>}>
             {!showTable && <button className="btn btn--block mb" onClick={() => setShowTable(true)}>הצגת תצוגה מקדימה של {preview.days.length} ימים</button>}
