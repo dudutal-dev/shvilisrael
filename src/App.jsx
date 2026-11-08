@@ -33,7 +33,7 @@ export default function App() {
   switch (tab) {
     case 'segments': page = sub ? (route.path[2] === 'story' ? <Story id={sub} navigate={navigate} /> : <SegmentDetail id={sub} navigate={navigate} />) : <Segments navigate={navigate} />; break
     case 'map': page = <MapPage query={route.query} navigate={navigate} />; break
-    case 'plan': page = <Planner navigate={navigate} />; break
+    case 'plan': page = <Planner navigate={navigate} query={route.query} />; break
     case 'nav': page = <Navigate navigate={navigate} />; break
     case 'guide': page = sub === 'angels' ? <Angels navigate={navigate} /> : <Guide section={sub} navigate={navigate} query={route.query} />; break
     case 'journal': page = <Journal navigate={navigate} />; break
