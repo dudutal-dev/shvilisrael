@@ -8,7 +8,9 @@
     "build": "vite build",
     "lint": "oxlint",
     "preview": "vite preview",
-    "publish:gh-pages": "npm run build && touch dist/.nojekyll && cd dist && git init -q && git checkout -q -b gh-pages && git add -A && git -c user.name=shvil -c user.email=shvil@local commit -q -m deploy && git push -f origin gh-pages 2>/dev/null || git push -f \"$(git -C .. remote get-url origin)\" gh-pages"
+    "publish:gh-pages": "npm run build && touch dist/.nojekyll && cd dist && git init -q && git checkout -q -b gh-pages && git add -A && git -c user.name=shvil -c user.email=shvil@local commit -q -m deploy && git push -f origin gh-pages 2>/dev/null || git push -f \"$(git -C .. remote get-url origin)\" gh-pages",
+    "prebuild": "node scripts/i18n-shadow-check.mjs",
+    "check:i18n": "node scripts/i18n-missing.mjs && node scripts/i18n-shadow-check.mjs && python3 scripts/i18n/spni-check.py"
   },
   "dependencies": {
     "leaflet": "^1.9.4",
