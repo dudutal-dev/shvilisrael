@@ -644,3 +644,10 @@ a { overflow-wrap: anywhere; }
 .lod-row--angels { border-inline-start: 4px solid var(--orange); }
 .lod-row--paid { border-inline-start: 4px solid var(--primary); }
 .lod-row--camp { border-inline-start: 4px solid var(--green); opacity: 0.85; }
+
+.iconbtn--lang { font-size: 12px; font-weight: 800; letter-spacing: 0.02em; }
+[dir='ltr'] .switch input:checked::after { transform: translateX(18px); }
+[dir='ltr'] .header__title .blaze { order: 0; }
+
+[dir='ltr'] .he-content, [dir='ltr'] .acc__body, [dir='ltr'] .news, [dir='ltr'] .poi-text, [dir='ltr'] .story__text, [dir='ltr'] .angel-card p, [dir='ltr'] .rs-row, [dir='ltr'] .wx-station { direction: rtl; text-align: right; }
+[dir='ltr'] .acc__body ul, [dir='ltr'] .acc__body ol { padding-inline-start: 1.2em; }

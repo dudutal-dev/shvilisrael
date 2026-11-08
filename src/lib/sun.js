@@ -1,3 +1,4 @@
+import { locale } from '../i18n/index.js'
 // Sunrise / sunset (NOAA algorithm, accuracy ~1–2 min). Returns Date objects in local time.
 const rad = Math.PI / 180
 function toJulian(date) { return date.valueOf() / 86400000 - 0.5 + 2440588 }
@@ -35,5 +36,5 @@ export function sunTimes(date, lat, lon) {
 
 export function fmtTime(d) {
   if (!d) return '–'
-  return d.toLocaleTimeString('he-IL', { hour: '2-digit', minute: '2-digit' })
+  return d.toLocaleTimeString(locale(), { hour: '2-digit', minute: '2-digit' })
 }

@@ -364,7 +364,7 @@
   {
    "id": 1,
    "name_he": "חרמון - בניאס",
-   "name_en": null,
+   "name_en": "Hermon – Banias",
    "region": "חרמון / גליל עליון",
    "region_en": "Hermon / Upper Galilee",
    "region_spni": "גליל",
@@ -380,14 +380,18 @@
     "lat": 33.3035,
     "lon": 35.7705,
     "approx": true,
-    "short_he": "קופות אתר החרמון"
+    "short_he": "קופות אתר החרמון",
+    "short_en": "Hermon ski site ticket office",
+    "name_en": "Hermon ski site ticket office"
    },
    "end": {
     "name_he": "שמורת טבע מעיינות הבניאס",
     "lat": 33.2485,
     "lon": 35.6945,
     "approx": true,
-    "short_he": "שמורת הבניאס"
+    "short_he": "שמורת הבניאס",
+    "short_en": "Banias Reserve",
+    "name_en": "Banias Reserve"
    },
    "water": {
     "summary_he": "ברזים זמינים לאורך המקטע. נקודות: קופות החרמון, נווה אטי\"ב, נבי חזורי, מבצר נמרוד (קלעת נמרוד), שמורת הבניאס",
@@ -493,7 +497,7 @@
   {
    "id": 2,
    "name_he": "בניאס - תל חי",
-   "name_en": null,
+   "name_en": "Banias – Tel Hai",
    "region": "גליל עליון / עמק החולה",
    "region_en": "Upper Galilee / Hula Valley",
    "region_spni": "גליל",
@@ -509,14 +513,18 @@
     "lat": 33.2485,
     "lon": 35.6945,
     "approx": true,
-    "short_he": "שמורת הבניאס"
+    "short_he": "שמורת הבניאס",
+    "short_en": "Banias Reserve",
+    "name_en": "Banias Reserve"
    },
    "end": {
     "name_he": "בית העלמין בכניסה לקיבוץ כפר גלעדי",
     "lat": 33.2375,
     "lon": 35.5755,
     "approx": true,
-    "short_he": "כפר גלעדי / תל חי"
+    "short_he": "כפר גלעדי / תל חי",
+    "short_en": "Kfar Giladi / Tel Hai",
+    "name_en": "Kfar Giladi / Tel Hai"
    },
    "water": {
     "summary_he": "ברזים זמינים לאורך המקטע. נקודות: בניאס, קיבוץ שניר (סטייה קלה), קריית שמונה, מכללת תל חי",
@@ -627,7 +635,7 @@
   {
    "id": 3,
    "name_he": "תל חי – מצודת כ\"ח",
-   "name_en": null,
+   "name_en": "Tel Hai – Koach Fortress",
    "region": "גליל עליון (רכס רמים / הרי נפתלי)",
    "region_en": "Upper Galilee (Naftali ridge)",
    "region_spni": "גליל",
@@ -643,14 +651,18 @@
     "lat": 33.2375,
     "lon": 35.5755,
     "approx": true,
-    "short_he": "כפר גלעדי / תל חי"
+    "short_he": "כפר גלעדי / תל חי",
+    "short_en": "Kfar Giladi / Tel Hai",
+    "name_en": "Kfar Giladi / Tel Hai"
    },
    "end": {
     "name_he": "החניה שבכניסה למצודת כ״ח",
     "lat": 33.1055,
     "lon": 35.5475,
     "approx": true,
-    "short_he": "מצודת כ\"ח (נבי יושע)"
+    "short_he": "מצודת כ\"ח (נבי יושע)",
+    "short_en": "Koach Fortress (Nabi Yusha)",
+    "name_en": "Koach Fortress (Nabi Yusha)"
    },
    "water": {
     "summary_he": "ברזים זמינים לאורך המקטע. נקודות: תל חי / כפר גלעדי, קיבוץ יפתח, רמות נפתלי",
@@ -745,7 +757,7 @@
   {
    "id": 4,
    "name_he": "מצודת כ\"ח - נחל דישון",
-   "name_en": null,
+   "name_en": "Koach Fortress – Nahal Dishon",
    "region": "גליל עליון (נחל דישון)",
    "region_en": "Upper Galilee (Nahal Dishon)",
    "region_spni": "גליל",
@@ -761,14 +773,18 @@
     "lat": 33.1055,
     "lon": 35.5475,
     "approx": true,
-    "short_he": "מצודת כ\"ח (נבי יושע)"
+    "short_he": "מצודת כ\"ח (נבי יושע)",
+    "short_en": "Koach Fortress (Nabi Yusha)",
+    "name_en": "Koach Fortress (Nabi Yusha)"
    },
    "end": {
     "name_he": "גשר עלמה – מפגש נחל דישון עם כביש 886, בין עלמה לדישון, בנקודה הנמוכה ביותר של הכביש",
     "lat": 33.0475,
     "lon": 35.4575,
     "approx": true,
-    "short_he": "גשר עלמה – נחל דישון / כביש 886"
+    "short_he": "גשר עלמה – נחל דישון / כביש 886",
+    "short_en": "Alma Bridge – Nahal Dishon / Rd 886",
+    "name_en": "Alma Bridge – Nahal Dishon / Rd 886"
    },
    "water": {
     "summary_he": "ברזים זמינים לאורך המקטע. נקודות: רמות נפתלי, גשר עלמה (אין ברז; סטייה לעלמה), קיבוץ ברעם",
@@ -854,7 +870,7 @@
   {
    "id": 5,
    "name_he": "נחל דישון - ברעם",
-   "name_en": null,
+   "name_en": "Nahal Dishon – Bar'am",
    "region": "גליל עליון (הרי מירון)",
    "region_en": "Upper Galilee (Meron range)",
    "region_spni": "גליל",
@@ -870,14 +886,18 @@
     "lat": 33.0475,
     "lon": 35.4575,
     "approx": true,
-    "short_he": "גשר עלמה – נחל דישון / כביש 886"
+    "short_he": "גשר עלמה – נחל דישון / כביש 886",
+    "short_en": "Alma Bridge – Nahal Dishon / Rd 886",
+    "name_en": "Alma Bridge – Nahal Dishon / Rd 886"
    },
    "end": {
     "name_he": "עין ערבות, במפגש בין נחל דישון לכביש 899 מדרום לקיבוץ ברעם",
     "lat": 33.0335,
     "lon": 35.4075,
     "approx": true,
-    "short_he": "עין ערבות – נחל דישון / כביש 899"
+    "short_he": "עין ערבות – נחל דישון / כביש 899",
+    "short_en": "Ein Aravot – Nahal Dishon / Rd 899",
+    "name_en": "Ein Aravot – Nahal Dishon / Rd 899"
    },
    "water": {
     "summary_he": "ברזים זמינים לאורך המקטע. נקודות: ברעם, בית ספר שדה הר מירון, מושב מירון, חניון נחל עמוד · לאחר גשמים תיתכן זרימה בנחל, ולעיתים יש צורך בחציית מים רדודים או דילוג על האבנים מעל המים. בימים חמים באביב, ישנה לעיתים אפשרות לשכשוך בבריכות או בנחל, אך אלה אינם מי מעיינות צלולים ונקיים.",
@@ -971,7 +991,7 @@
   {
    "id": 6,
    "name_he": "ברעם - הר מירון",
-   "name_en": null,
+   "name_en": "Bar'am – Mount Meron",
    "region": "גליל עליון (הרי מירון)",
    "region_en": "Upper Galilee (Meron range)",
    "region_spni": "גליל",
@@ -987,14 +1007,18 @@
     "lat": 33.0335,
     "lon": 35.4075,
     "approx": true,
-    "short_he": "עין ערבות – נחל דישון / כביש 899"
+    "short_he": "עין ערבות – נחל דישון / כביש 899",
+    "short_en": "Ein Aravot – Nahal Dishon / Rd 899",
+    "name_en": "Ein Aravot – Nahal Dishon / Rd 899"
    },
    "end": {
     "name_he": "חניון מירון (חניון הפיתול), למרגלות מושב מירון וקבר רשב״י",
     "lat": 32.9875,
     "lon": 35.4425,
     "approx": true,
-    "short_he": "חניון מירון (הפיתול)"
+    "short_he": "חניון מירון (הפיתול)",
+    "short_en": "Meron camp (HaPitul)",
+    "name_en": "Meron camp (HaPitul)"
    },
    "water": {
     "summary_he": "ברזים זמינים לאורך המקטע. נקודות: ברעם, בית ספר שדה הר מירון, מושב מירון, חניון נחל עמוד · בחניון שביל הפסגה יש ברז, אך לא כדאי לסמוך על כך שתמיד יש בו מים, מומלץ לברר עם מטיילים שהיו שם לאחרונה. בחורבת חממה יש חניון קמפינג פתוח עם ברז מים.",
@@ -1119,7 +1143,7 @@
   {
    "id": 7,
    "name_he": "הר מירון - כביש 85",
-   "name_en": null,
+   "name_en": "Mount Meron – Road 85",
    "region": "גליל עליון (הרי מירון)",
    "region_en": "Upper Galilee (Meron range)",
    "region_spni": "גליל",
@@ -1135,14 +1159,18 @@
     "lat": 32.9875,
     "lon": 35.4425,
     "approx": true,
-    "short_he": "חניון מירון (הפיתול)"
+    "short_he": "חניון מירון (הפיתול)",
+    "short_en": "Meron camp (HaPitul)",
+    "name_en": "Meron camp (HaPitul)"
    },
    "end": {
     "name_he": "מפגש השביל עם כביש 85.\nחשוב לשים לב חניון האיסוף נמצא מצפון לכביש ואין גישה אליו בנסיעה ממערב למזרח. יש לנסוע מזרחה עד מחלפון כחל, לחזור מערבה ולפנות ימינה לחניון לפי השילוט",
     "lat": 32.8905,
     "lon": 35.4985,
     "approx": true,
-    "short_he": "מפגש השביל עם כביש 85 (נחל עמוד)"
+    "short_he": "מפגש השביל עם כביש 85 (נחל עמוד)",
+    "short_en": "Trail crossing of Road 85 (Nahal Amud)",
+    "name_en": "Trail crossing of Road 85 (Nahal Amud)"
    },
    "water": {
     "summary_he": "ברזים זמינים לאורך המקטע. נקודות: ברעם, בית ספר שדה הר מירון, מושב מירון, חניון נחל עמוד · בקיץ מומלץ ללכת במסלול מקוצר, בקטעים שבהם יש מים, להיזהר מהליכה בשעות החמות – ולהצטייד במי שתייה בשפע. לא מומלץ לטייל בחלק היבש של נחל עמוד, משיח כויס ועד כביש 85.",
@@ -1253,7 +1281,7 @@
   {
    "id": 8,
    "name_he": "כביש 85 - מגדל",
-   "name_en": null,
+   "name_en": "Road 85 – Migdal",
    "region": "גליל עליון / גליל תחתון (נחל עמוד)",
    "region_en": "Upper/Lower Galilee (Nahal Amud)",
    "region_spni": "גליל",
@@ -1269,14 +1297,18 @@
     "lat": 32.8905,
     "lon": 35.4985,
     "approx": true,
-    "short_he": "מפגש השביל עם כביש 85 (נחל עמוד)"
+    "short_he": "מפגש השביל עם כביש 85 (נחל עמוד)",
+    "short_en": "Trail crossing of Road 85 (Nahal Amud)",
+    "name_en": "Trail crossing of Road 85 (Nahal Amud)"
    },
    "end": {
     "name_he": "הכניסה המזרחית למושבה מגדל, מערבית לכביש 90, או עין נון – כחצי ק\"מ צפונית לכניסה זו. נגיש לכל רכב, עם חורשת פיקניק יפה ובריכה גדולה ורדודה לשכשוך",
     "lat": 32.8415,
     "lon": 35.4985,
     "approx": true,
-    "short_he": "מגדל / עין נון"
+    "short_he": "מגדל / עין נון",
+    "short_en": "Migdal / Ein Nun",
+    "name_en": "Migdal / Ein Nun"
    },
    "water": {
     "summary_he": "ברזים זמינים לאורך המקטע. נקודות: מתקן שאיבה ליד נחל עמוד, עין נון, מושבת מגדל · לאחר שבועות גשומים תיתכן זרימה משמעותית שתחייב כמה חציות של הנחל במים רדודים. מומלץ להצטייד בנעליים מתאימות להליכה במים. מקלות הליכה עוזרים בחציית הנחל.",
@@ -1362,7 +1394,7 @@
   {
    "id": 9,
    "name_he": "מגדל – חצר כנרת",
-   "name_en": null,
+   "name_en": "Migdal – Kinneret Courtyard",
    "region": "גליל תחתון / כנרת",
    "region_en": "Lower Galilee / Sea of Galilee",
    "region_spni": "גליל",
@@ -1378,14 +1410,18 @@
     "lat": 32.8415,
     "lon": 35.4985,
     "approx": true,
-    "short_he": "מגדל / עין נון"
+    "short_he": "מגדל / עין נון",
+    "short_en": "Migdal / Ein Nun",
+    "name_en": "Migdal / Ein Nun"
    },
    "end": {
     "name_he": "חצר כנרת",
     "lat": 32.7155,
     "lon": 35.5625,
     "approx": true,
-    "short_he": "חצר כנרת"
+    "short_he": "חצר כנרת",
+    "short_en": "Kinneret Courtyard",
+    "name_en": "Kinneret Courtyard"
    },
    "water": {
     "summary_he": "ברזים זמינים לאורך המקטע. נקודות: גן לאומי ארבל, כפר חיטים, כנרת המושבה / חצר כנרת",
@@ -1477,7 +1513,7 @@
   {
    "id": 10,
    "name_he": "חצר כנרת – כפר קיש",
-   "name_en": null,
+   "name_en": "Kinneret Courtyard – Kfar Kisch",
    "region": "גליל תחתון (נחל תבור)",
    "region_en": "Lower Galilee (Nahal Tavor)",
    "region_spni": "גליל",
@@ -1493,14 +1529,18 @@
     "lat": 32.7155,
     "lon": 35.5625,
     "approx": true,
-    "short_he": "חצר כנרת"
+    "short_he": "חצר כנרת",
+    "short_en": "Kinneret Courtyard",
+    "name_en": "Kinneret Courtyard"
    },
    "end": {
     "name_he": "כביש הכניסה לכפר קיש (בנקודה הדרומית, בעיקול הכביש)",
     "lat": 32.6465,
     "lon": 35.4395,
     "approx": true,
-    "short_he": "כפר קיש"
+    "short_he": "כפר קיש",
+    "short_en": "Kfar Kisch",
+    "name_en": "Kfar Kisch"
    },
    "water": {
     "summary_he": "ברזים זמינים לאורך המקטע. נקודות: ירדנית / כנרת המושבה, כפר קיש",
@@ -1588,7 +1628,7 @@
   {
    "id": 11,
    "name_he": "כפר קיש - נוף הגליל",
-   "name_en": null,
+   "name_en": "Kfar Kisch – Nof HaGalil",
    "region": "גליל תחתון (הר תבור)",
    "region_en": "Lower Galilee (Mt. Tabor)",
    "region_spni": "גליל",
@@ -1604,14 +1644,18 @@
     "lat": 32.6465,
     "lon": 35.4395,
     "approx": true,
-    "short_he": "כפר קיש"
+    "short_he": "כפר קיש",
+    "short_en": "Kfar Kisch",
+    "name_en": "Kfar Kisch"
    },
    "end": {
     "name_he": "הר יונה, סמוך לבית הקברות של נוף הגליל (נצרת עילית).\nאפשרות קיצור מעל הכפר שיבלי, בתחנת המוניות בצד המערבי של התבור",
     "lat": 32.7205,
     "lon": 35.3325,
     "approx": true,
-    "short_he": "הר יונה – נוף הגליל"
+    "short_he": "הר יונה – נוף הגליל",
+    "short_en": "Har Yona – Nof HaGalil",
+    "name_en": "Har Yona – Nof HaGalil"
    },
    "water": {
     "summary_he": "ברזים זמינים לאורך המקטע. נקודות: דבוריה, פסגת הר תבור, צומת גזית, כפר תבור (סטייה), הר יונה / נוף הגליל",
@@ -1703,7 +1747,7 @@
   {
    "id": 12,
    "name_he": "נוף הגליל - אלון הגליל",
-   "name_en": null,
+   "name_en": "Nof HaGalil – Alon HaGalil",
    "region": "גליל תחתון (הרי נצרת / ציפורי)",
    "region_en": "Lower Galilee (Nazareth hills / Tzippori)",
    "region_spni": "גליל",
@@ -1719,14 +1763,18 @@
     "lat": 32.7205,
     "lon": 35.3325,
     "approx": true,
-    "short_he": "הר יונה – נוף הגליל"
+    "short_he": "הר יונה – נוף הגליל",
+    "short_en": "Har Yona – Nof HaGalil",
+    "name_en": "Har Yona – Nof HaGalil"
    },
    "end": {
     "name_he": "צומת הגישה ליישוב אלון הגליל, 400 מטר מצפון למחלף המוביל",
     "lat": 32.7605,
     "lon": 35.2085,
     "approx": true,
-    "short_he": "צומת אלון הגליל"
+    "short_he": "צומת אלון הגליל",
+    "short_en": "Alon HaGalil junction",
+    "name_en": "Alon HaGalil junction"
    },
    "water": {
     "summary_he": "ברזים זמינים לאורך המקטע. נקודות: הושעיה (סטייה), משהד, אלון הגליל",
@@ -1815,7 +1863,7 @@
   {
    "id": 13,
    "name_he": "אלון הגליל - יגור",
-   "name_en": null,
+   "name_en": "Alon HaGalil – Yagur",
    "region": "גליל תחתון / עמק זבולון",
    "region_en": "Lower Galilee / Zevulun valley",
    "region_spni": "גליל",
@@ -1831,14 +1879,18 @@
     "lat": 32.7605,
     "lon": 35.2085,
     "approx": true,
-    "short_he": "צומת אלון הגליל"
+    "short_he": "צומת אלון הגליל",
+    "short_en": "Alon HaGalil junction",
+    "name_en": "Alon HaGalil junction"
    },
    "end": {
     "name_he": "מפגש השביל עם קיבוץ יגור, מדרום לכביש 70",
     "lat": 32.7415,
     "lon": 35.0775,
     "approx": true,
-    "short_he": "קיבוץ יגור"
+    "short_he": "קיבוץ יגור",
+    "short_en": "Kibbutz Yagur",
+    "name_en": "Kibbutz Yagur"
    },
    "water": {
     "summary_he": "ברזים זמינים לאורך המקטע. נקודות: אלון הגליל, כעביה, כפר חסידים / רכסים, יגור · ניתן להצטייד במים ומזון בכפר כעביה, שדרכו עובר השביל. · בימים חמים, מומלץ להצטייד בבגד להחלפה ולהיכנס לבריכת עין יבקע.",
@@ -1931,7 +1983,7 @@
   {
    "id": 14,
    "name_he": "יגור - נחל אורן",
-   "name_en": null,
+   "name_en": "Yagur – Nahal Oren",
    "region": "כרמל",
    "region_en": "Carmel",
    "region_spni": "כרמל ומישור החוף",
@@ -1947,14 +1999,18 @@
     "lat": 32.7415,
     "lon": 35.0775,
     "approx": true,
-    "short_he": "קיבוץ יגור"
+    "short_he": "קיבוץ יגור",
+    "short_en": "Kibbutz Yagur",
+    "name_en": "Kibbutz Yagur"
    },
    "end": {
     "name_he": "חניון נחל אורן ליד צומת אורן",
     "lat": 32.7015,
     "lon": 34.9685,
     "approx": true,
-    "short_he": "חניון נחל אורן / צומת אורן"
+    "short_he": "חניון נחל אורן / צומת אורן",
+    "short_en": "Nahal Oren camp / Oren junction",
+    "name_en": "Nahal Oren camp / Oren junction"
    },
    "water": {
     "summary_he": "ברזים זמינים לאורך המקטע. נקודות: יגור, אזור אוניברסיטת חיפה (סטייה), עוספיה, חניון נחל אורן, חורבת רקית, ניר עציון, עין הוד",
@@ -2048,7 +2104,7 @@
   {
    "id": 15,
    "name_he": "נחל אורן - כרם מהר\"ל",
-   "name_en": null,
+   "name_en": "Nahal Oren – Kerem Maharal",
    "region": "כרמל (חוטם הכרמל)",
    "region_en": "Carmel (Hotem HaCarmel)",
    "region_spni": "כרמל ומישור החוף",
@@ -2064,14 +2120,18 @@
     "lat": 32.7015,
     "lon": 34.9685,
     "approx": true,
-    "short_he": "חניון נחל אורן / צומת אורן"
+    "short_he": "חניון נחל אורן / צומת אורן",
+    "short_en": "Nahal Oren camp / Oren junction",
+    "name_en": "Nahal Oren camp / Oren junction"
    },
    "end": {
     "name_he": "כביש הכניסה למושב כרם מהר\"ל",
     "lat": 32.6495,
     "lon": 34.9905,
     "approx": true,
-    "short_he": "כרם מהר\"ל"
+    "short_he": "כרם מהר\"ל",
+    "short_en": "Kerem Maharal",
+    "name_en": "Kerem Maharal"
    },
    "water": {
     "summary_he": "ברזים זמינים לאורך המקטע. נקודות: עין הוד, שמורת נחל מערות, עופר, זכרון יעקב, רמת הנדיב",
@@ -2172,7 +2232,7 @@
   {
    "id": 16,
    "name_he": "כרם מהר\"ל – בית חנניה",
-   "name_en": null,
+   "name_en": "Kerem Maharal – Beit Hanania",
    "region": "כרמל (חוטם הכרמל)",
    "region_en": "Carmel (Hotem HaCarmel)",
    "region_spni": "כרמל ומישור החוף",
@@ -2188,14 +2248,18 @@
     "lat": 32.6495,
     "lon": 34.9905,
     "approx": true,
-    "short_he": "כרם מהר\"ל"
+    "short_he": "כרם מהר\"ל",
+    "short_en": "Kerem Maharal",
+    "name_en": "Kerem Maharal"
    },
    "end": {
     "name_he": "כביש הכניסה למושב בית חנניה ליד בית העלמין",
     "lat": 32.5325,
     "lon": 34.9295,
     "approx": true,
-    "short_he": "בית חנניה"
+    "short_he": "בית חנניה",
+    "short_en": "Beit Hanania",
+    "name_en": "Beit Hanania"
    },
    "water": {
     "summary_he": "ברזים זמינים לאורך המקטע. נקודות: עין הוד, שמורת נחל מערות, עופר, זכרון יעקב, רמת הנדיב",
@@ -2289,7 +2353,7 @@
   {
    "id": 17,
    "name_he": "בית חנניה - בית ינאי",
-   "name_en": null,
+   "name_en": "Beit Hanania – Beit Yanai",
    "region": "שרון / מישור החוף",
    "region_en": "Sharon / Coastal plain",
    "region_spni": "כרמל ומישור החוף",
@@ -2305,14 +2369,18 @@
     "lat": 32.5325,
     "lon": 34.9295,
     "approx": true,
-    "short_he": "בית חנניה"
+    "short_he": "בית חנניה",
+    "short_en": "Beit Hanania",
+    "name_en": "Beit Hanania"
    },
    "end": {
     "name_he": "גן לאומי חוף בית ינאי",
     "lat": 32.3825,
     "lon": 34.8605,
     "approx": true,
-    "short_he": "חוף בית ינאי"
+    "short_he": "חוף בית ינאי",
+    "short_en": "Beit Yanai beach",
+    "name_en": "Beit Yanai beach"
    },
    "water": {
     "summary_he": "ברזים זמינים לאורך המקטע. נקודות: רמת הנדיב, בנימינה, בית חנניה, ג'סר א-זרקא, חוף קיסריה, חדרה · ייתכן צורך לעבור במים רדודים ליד אמת במים ממערב לבית חנניה. · יש לא מעט נקודות מים ואפשרויות לקנות אוכל או לשבת במסעדות. · בימים חמים ניתן לשקול קיצור בהליכה ישירה על חוף הים מכפר הים באולגה עד בית ינאי, להנות מהבריזה מהים ומאפשרות ההתרעננות בחופים. בחורף ובאביב עדיף ללכת בנתיב הרגיל אל הפריחה בפארק השרון.",
@@ -2411,7 +2479,7 @@
   {
    "id": 18,
    "name_he": "בית ינאי - יקום",
-   "name_en": null,
+   "name_en": "Beit Yanai – Yakum",
    "region": "שרון (חוף)",
    "region_en": "Sharon coast",
    "region_spni": "כרמל ומישור החוף",
@@ -2427,14 +2495,18 @@
     "lat": 32.3825,
     "lon": 34.8605,
     "approx": true,
-    "short_he": "חוף בית ינאי"
+    "short_he": "חוף בית ינאי",
+    "short_en": "Beit Yanai beach",
+    "name_en": "Beit Yanai beach"
    },
    "end": {
     "name_he": "תחנת הדלק בכניסה ליקום",
     "lat": 32.2485,
     "lon": 34.8385,
     "approx": true,
-    "short_he": "יקום"
+    "short_he": "יקום",
+    "short_en": "Yakum",
+    "name_en": "Yakum"
    },
    "water": {
     "summary_he": "ברזים זמינים לאורך המקטע. נקודות: חדרה, מכמורת, בית ינאי, חופי נתניה · כדי לחצות את נחל פולג ליד השפך לים, צריך לרוב לעבור במים רדודים. הרחצה בנחל אסורה. · לאורך המסלול יש הרבה נקודות מים ואפשרויות לקנות אוכל או לשבת במסעדות. ליד תחילת המסלול, בקניון M הדרך, יש סופר הפתוח גם בשבת. נתניה מציעה מסעדות רבות בסמוך לחוף. בכניסה ליקום פועלים בתי קפה ומסעדות הפתוחים גם בשבת.",
@@ -2527,7 +2599,7 @@
   {
    "id": 19,
    "name_he": "יקום - תל-אביב",
-   "name_en": null,
+   "name_en": "Yakum – Tel Aviv",
    "region": "מישור החוף (הרצליה–תל אביב)",
    "region_en": "Coastal plain (Herzliya–Tel Aviv)",
    "region_spni": "כרמל ומישור החוף",
@@ -2543,14 +2615,18 @@
     "lat": 32.2485,
     "lon": 34.8385,
     "approx": true,
-    "short_he": "יקום"
+    "short_he": "יקום",
+    "short_en": "Yakum",
+    "name_en": "Yakum"
    },
    "end": {
     "name_he": "שפך הירקון",
     "lat": 32.1015,
     "lon": 34.7745,
     "approx": true,
-    "short_he": "שפך הירקון – נמל תל אביב"
+    "short_he": "שפך הירקון – נמל תל אביב",
+    "short_en": "Yarkon estuary – Tel Aviv Port",
+    "name_en": "Yarkon estuary – Tel Aviv Port"
    },
    "water": {
     "summary_he": "ברזים זמינים לאורך המקטע. נקודות: שמורת פולג, אפולוניה, הרצליה, תל ברוך, נמל תל אביב · יש הרבה נקודות מים ואפשרויות לקנות אוכל או לשבת במסעדות . ליד נקודת ההתחלה של המסלול בכניסה ליקום יש בתי קפה ומסעדות שפתוחים גם בשבת. בהמשך אפשר לעצור במסעדות החוף בהרצליה או במינימרקט ליד החניה של חוף השרון.",
@@ -2650,7 +2726,7 @@
   {
    "id": 20,
    "name_he": "תל-אביב - תל אפק",
-   "name_en": null,
+   "name_en": "Tel Aviv – Tel Afek",
    "region": "מישור החוף (נחל הירקון)",
    "region_en": "Coastal plain (Yarkon river)",
    "region_spni": "כרמל ומישור החוף",
@@ -2666,14 +2742,18 @@
     "lat": 32.1015,
     "lon": 34.7745,
     "approx": true,
-    "short_he": "שפך הירקון – נמל תל אביב"
+    "short_he": "שפך הירקון – נמל תל אביב",
+    "short_en": "Yarkon estuary – Tel Aviv Port",
+    "name_en": "Yarkon estuary – Tel Aviv Port"
    },
    "end": {
     "name_he": "שער הכניסה לגן לאומי תל אפק",
     "lat": 32.1045,
     "lon": 34.9295,
     "approx": true,
-    "short_he": "גן לאומי תל אפק"
+    "short_he": "גן לאומי תל אפק",
+    "short_en": "Tel Afek National Park",
+    "name_en": "Tel Afek National Park"
    },
    "water": {
     "summary_he": "ברזים זמינים לאורך המקטע. נקודות: פארק הירקון, גן לאומי ירקון – תל אפק, כפר סירקין",
@@ -2761,7 +2841,7 @@
   {
    "id": 21,
    "name_he": "תל אפק – מצפה מודיעין",
-   "name_en": null,
+   "name_en": "Tel Afek – Mitzpe Modi'in",
    "region": "שפלה (גבעות שוהם–מודיעין)",
    "region_en": "Shephelah (Shoham–Modi'in hills)",
    "region_spni": "שפלה וירושלים",
@@ -2777,14 +2857,18 @@
     "lat": 32.1045,
     "lon": 34.9295,
     "approx": true,
-    "short_he": "גן לאומי תל אפק"
+    "short_he": "גן לאומי תל אפק",
+    "short_en": "Tel Afek National Park",
+    "name_en": "Tel Afek National Park"
    },
    "end": {
     "name_he": "מצפה מודיעין",
     "lat": 31.9295,
     "lon": 34.9775,
     "approx": true,
-    "short_he": "מצפה מודיעין"
+    "short_he": "מצפה מודיעין",
+    "short_en": "Mitzpe Modi'in",
+    "name_en": "Mitzpe Modi'in"
    },
    "water": {
     "summary_he": "ברזים זמינים לאורך המקטע. נקודות: כפר סירקין, שוהם (טיילת מזרחית), גמזו",
@@ -2882,7 +2966,7 @@
   {
    "id": 22,
    "name_he": "מצפה מודיעין – לטרון",
-   "name_en": null,
+   "name_en": "Mitzpe Modi'in – Latrun",
    "region": "שפלה / מבואות ירושלים",
    "region_en": "Shephelah / Jerusalem foothills",
    "region_spni": "שפלה וירושלים",
@@ -2898,14 +2982,18 @@
     "lat": 31.9295,
     "lon": 34.9775,
     "approx": true,
-    "short_he": "מצפה מודיעין"
+    "short_he": "מצפה מודיעין",
+    "short_en": "Mitzpe Modi'in",
+    "name_en": "Mitzpe Modi'in"
    },
    "end": {
     "name_he": "יד לשריון בלטרון",
     "lat": 31.8375,
     "lon": 34.9805,
     "approx": true,
-    "short_he": "לטרון – יד לשריון"
+    "short_he": "לטרון – יד לשריון",
+    "short_en": "Latrun – Yad LaShiryon",
+    "name_en": "Latrun – Yad LaShiryon"
    },
    "water": {
     "summary_he": "ברזים זמינים לאורך המקטע. נקודות: גמזו, נווה שלום, צומת לטרון, מסילת ציון",
@@ -2988,7 +3076,7 @@
   {
    "id": 23,
    "name_he": "לטרון - צובה",
-   "name_en": null,
+   "name_en": "Latrun – Tzuba",
    "region": "הרי ירושלים",
    "region_en": "Jerusalem Hills",
    "region_spni": "שפלה וירושלים",
@@ -3004,14 +3092,18 @@
     "lat": 31.8375,
     "lon": 34.9805,
     "approx": true,
-    "short_he": "לטרון – יד לשריון"
+    "short_he": "לטרון – יד לשריון",
+    "short_en": "Latrun – Yad LaShiryon",
+    "name_en": "Latrun – Yad LaShiryon"
    },
    "end": {
     "name_he": "קיבוץ צובה",
     "lat": 31.7835,
     "lon": 35.1215,
     "approx": true,
-    "short_he": "קיבוץ צובה"
+    "short_he": "קיבוץ צובה",
+    "short_en": "Kibbutz Tzuba",
+    "name_en": "Kibbutz Tzuba"
    },
    "water": {
     "summary_he": "ברזים זמינים לאורך המקטע. נקודות: מסילת ציון, עין לימור (מעיין), קיבוץ צובה · מים ומזון: יש כמה נקודות מים בצמוד ובאזור השביל. ליד תחילת המסלול בלטרון יש חנות אלונית בתחנת הדלק. במסילת ציון יש חנות בתחנת פז. בהמשך אין ברזים ליד השביל, אך ניתן ללכת 1 ק\"מ אל מושב בית מאיר להצטיידות.",
@@ -3111,7 +3203,7 @@
   {
    "id": 24,
    "name_he": "צובה - בר גיורא",
-   "name_en": null,
+   "name_en": "Tzuba – Bar Giora",
    "region": "הרי ירושלים",
    "region_en": "Jerusalem Hills",
    "region_spni": "שפלה וירושלים",
@@ -3127,14 +3219,18 @@
     "lat": 31.7835,
     "lon": 35.1215,
     "approx": true,
-    "short_he": "קיבוץ צובה"
+    "short_he": "קיבוץ צובה",
+    "short_en": "Kibbutz Tzuba",
+    "name_en": "Kibbutz Tzuba"
    },
    "end": {
     "name_he": "צומת נס הרים או עין קובי",
     "lat": 31.7375,
     "lon": 35.0625,
     "approx": true,
-    "short_he": "צומת נס הרים / בר גיורא"
+    "short_he": "צומת נס הרים / בר גיורא",
+    "short_en": "Nes Harim junction / Bar Giora",
+    "name_en": "Nes Harim junction / Bar Giora"
    },
    "water": {
     "summary_he": "ברזים זמינים לאורך המקטע. נקודות: צובה, חניון סטף, עין כרם (ירושלים), צור הדסה · בימים חמים בקיץ מומלץ לטייל רק בחלק מהמקטע. למשל, בחלקו הראשון של המקטע, מצובה ועד צומת אורה-עין לבן בירושלים. · מים ומזון: יש כמה נקודות מים בצמוד ובאזור השביל. בתחילת המסלול בקיבוץ צובא, ליד הירידה לסטף, בשכונת עין כרם ובשכונת קרית מנחם. בעין כרם ובקרית מנחם ניתן לקנות אוכל. \"גזלן\" נמצא לרוב ליד כיכר הסטף, לפני הירידה לסטף.",
@@ -3241,7 +3337,7 @@
   {
    "id": 25,
    "name_he": "בר גיורא - צומת האלה",
-   "name_en": null,
+   "name_en": "Bar Giora – HaEla Junction",
    "region": "הרי ירושלים / שפלת יהודה",
    "region_en": "Jerusalem Hills / Judean Shephelah",
    "region_spni": "שפלה וירושלים",
@@ -3257,14 +3353,18 @@
     "lat": 31.7375,
     "lon": 35.0625,
     "approx": true,
-    "short_he": "צומת נס הרים / בר גיורא"
+    "short_he": "צומת נס הרים / בר גיורא",
+    "short_en": "Nes Harim junction / Bar Giora",
+    "name_en": "Nes Harim junction / Bar Giora"
    },
    "end": {
     "name_he": "צומת האלה (כביש 38)",
     "lat": 31.6925,
     "lon": 34.9535,
     "approx": true,
-    "short_he": "צומת האלה"
+    "short_he": "צומת האלה",
+    "short_en": "HaEla junction",
+    "name_en": "HaEla junction"
    },
    "water": {
     "summary_he": "ברזים זמינים לאורך המקטע. נקודות: ברז מקורות אחרי חציית כביש 3855, מטע (סטייה), בר גיורא (סטייה), נתיב הל\"ה",
@@ -3353,7 +3453,7 @@
   {
    "id": 26,
    "name_he": "צומת האלה - בית גוברין",
-   "name_en": null,
+   "name_en": "HaEla Junction – Beit Guvrin",
    "region": "שפלת יהודה (עדולם)",
    "region_en": "Judean Shephelah (Adullam)",
    "region_spni": "שפלה וירושלים",
@@ -3369,14 +3469,18 @@
     "lat": 31.6925,
     "lon": 34.9535,
     "approx": true,
-    "short_he": "צומת האלה"
+    "short_he": "צומת האלה",
+    "short_en": "HaEla junction",
+    "name_en": "HaEla junction"
    },
    "end": {
     "name_he": "כביש 35, תחנת הדלק \"דלק\" בית גוברין",
     "lat": 31.6115,
     "lon": 34.8975,
     "approx": true,
-    "short_he": "בית גוברין – תחנת דלק"
+    "short_he": "בית גוברין – תחנת דלק",
+    "short_en": "Beit Guvrin – petrol station",
+    "name_en": "Beit Guvrin – petrol station"
    },
    "water": {
     "summary_he": "ברזים זמינים לאורך המקטע. נקודות: נתיב הל\"ה, גבעת ישעיהו (סטייה), בית גוברין (מים, מכולת, לינה)",
@@ -3461,7 +3565,7 @@
   {
    "id": 27,
    "name_he": "בית גוברין - תל קשת",
-   "name_en": null,
+   "name_en": "Beit Guvrin – Tel Keshet",
    "region": "שפלה / חבל לכיש",
    "region_en": "Shephelah / Lachish region",
    "region_spni": "שפלה וירושלים",
@@ -3477,14 +3581,18 @@
     "lat": 31.6115,
     "lon": 34.8975,
     "approx": true,
-    "short_he": "בית גוברין – תחנת דלק"
+    "short_he": "בית גוברין – תחנת דלק",
+    "short_en": "Beit Guvrin – petrol station",
+    "name_en": "Beit Guvrin – petrol station"
    },
    "end": {
     "name_he": "תל קשת",
     "lat": 31.5215,
     "lon": 34.8405,
     "approx": true,
-    "short_he": "תל קשת"
+    "short_he": "תל קשת",
+    "short_en": "Tel Keshet",
+    "name_en": "Tel Keshet"
    },
    "water": {
     "summary_he": "ברזים זמינים לאורך המקטע. נקודות: בית גוברין, אמציה (סטייה), ברז במושב לכיש (סטייה)",
@@ -3570,7 +3678,7 @@
   {
    "id": 28,
    "name_he": "תל קשת - דביר",
-   "name_en": null,
+   "name_en": "Tel Keshet – Dvir",
    "region": "צפון הנגב (יערות להב–דביר)",
    "region_en": "Northern Negev (Lahav–Dvir forests)",
    "region_spni": "שפלה וירושלים",
@@ -3586,14 +3694,18 @@
     "lat": 31.5215,
     "lon": 34.8405,
     "approx": true,
-    "short_he": "תל קשת"
+    "short_he": "תל קשת",
+    "short_en": "Tel Keshet",
+    "name_en": "Tel Keshet"
    },
    "end": {
     "name_he": "קיבוץ דביר",
     "lat": 31.4215,
     "lon": 34.8635,
     "approx": true,
-    "short_he": "קיבוץ דביר"
+    "short_he": "קיבוץ דביר",
+    "short_en": "Kibbutz Dvir",
+    "name_en": "Kibbutz Dvir"
    },
    "water": {
     "summary_he": "ברזים זמינים לאורך המקטע. נקודות: דבירה (ברז בכניסה), להב (סטייה) · אחרי גשמים, ההליכה בקטע בין תל נג'ילה לשמורת פורה מעבר מעט קשה, וייתכן שהנעליים יירטבו.",
@@ -3684,7 +3796,7 @@
   {
    "id": 29,
    "name_he": "דביר - מיתר",
-   "name_en": null,
+   "name_en": "Dvir – Meitar",
    "region": "צפון הנגב / דרום הר חברון",
    "region_en": "Northern Negev / southern Hebron hills",
    "region_spni": "שפלה וירושלים",
@@ -3700,14 +3812,18 @@
     "lat": 31.4215,
     "lon": 34.8635,
     "approx": true,
-    "short_he": "קיבוץ דביר"
+    "short_he": "קיבוץ דביר",
+    "short_en": "Kibbutz Dvir",
+    "name_en": "Kibbutz Dvir"
    },
    "end": {
     "name_he": "גשר דבמבם, מצפון לכניסה למיתר",
     "lat": 31.3315,
     "lon": 34.9335,
     "approx": true,
-    "short_he": "גשר דבמבם – מיתר"
+    "short_he": "גשר דבמבם – מיתר",
+    "short_en": "Dvamba'am bridge – Meitar",
+    "name_en": "Dvamba'am bridge – Meitar"
    },
    "water": {
     "summary_he": "ברזים זמינים לאורך המקטע. נקודות: דבירה, סנסנה, מיתר",
@@ -3802,7 +3918,7 @@
   {
    "id": 30,
    "name_he": "מיתר - הר עמשא",
-   "name_en": null,
+   "name_en": "Meitar – Mount Amasa",
    "region": "צפון הנגב (יער יתיר)",
    "region_en": "Northern Negev (Yatir forest)",
    "region_spni": "שפלה וירושלים",
@@ -3818,14 +3934,18 @@
     "lat": 31.3315,
     "lon": 34.9335,
     "approx": true,
-    "short_he": "גשר דבמבם – מיתר"
+    "short_he": "גשר דבמבם – מיתר",
+    "short_en": "Dvamba'am bridge – Meitar",
+    "name_en": "Dvamba'am bridge – Meitar"
    },
    "end": {
     "name_he": "הישוב הר עמשא.\nאפשרות קיצור בבית היערן",
     "lat": 31.3385,
     "lon": 35.1095,
     "approx": true,
-    "short_he": "הר עמשא"
+    "short_he": "הר עמשא",
+    "short_en": "Mount Amasa",
+    "name_en": "Mount Amasa"
    },
    "water": {
     "summary_he": "ברזים זמינים לאורך המקטע. נקודות: מיתר, הר עמשא · יש ברז מים יש ליד השער של בית היערן, כדי להיכנס צריך לבקש מהשומר.",
@@ -3913,7 +4033,7 @@
   {
    "id": 31,
    "name_he": "הר עמשא - ערד",
-   "name_en": null,
+   "name_en": "Mount Amasa – Arad",
    "region": "צפון הנגב / ספר המדבר",
    "region_en": "Northern Negev / desert fringe",
    "region_spni": "מדבר יהודה וים המלח",
@@ -3929,14 +4049,18 @@
     "lat": 31.3385,
     "lon": 35.1095,
     "approx": true,
-    "short_he": "הר עמשא"
+    "short_he": "הר עמשא",
+    "short_en": "Mount Amasa",
+    "name_en": "Mount Amasa"
    },
    "end": {
     "name_he": "צומת ערד, הכניסה הראשית לערד מכביש 31",
     "lat": 31.2585,
     "lon": 35.1985,
     "approx": true,
-    "short_he": "ערד"
+    "short_he": "ערד",
+    "short_en": "Arad",
+    "name_en": "Arad"
    },
    "water": {
     "summary_he": "ברזים זמינים לאורך המקטע. נקודות: הר עמשא, גן לאומי תל ערד, ערד · בקעת ערד קרה פחות מהר עמשא בחורף, אך עלול להיות חמה מאוד בימים חמים. · מים ומזון: יש כמה נקודות מים בצמוד ובאזור השביל: בתחילת המסלול ביישוב הר עמשא, בסמוך לשביל בכפר דריג'את, בסמוך לשביל בגן לאומי תל ערד. המקום היחיד לקניית מזון הוא בערד, שמציעה אפשרויות רבות. ניתן לתאם ארוחה בדריג'את.",
@@ -4031,7 +4155,7 @@
   {
    "id": 32,
    "name_he": "ערד – בריכת צפירה",
-   "name_en": null,
+   "name_en": "Arad – Tzfira Pool",
    "region": "מדבר יהודה",
    "region_en": "Judean Desert",
    "region_spni": "מדבר יהודה וים המלח",
@@ -4047,14 +4171,18 @@
     "lat": 31.2585,
     "lon": 35.1985,
     "approx": true,
-    "short_he": "ערד"
+    "short_he": "ערד",
+    "short_en": "Arad",
+    "name_en": "Arad"
    },
    "end": {
     "name_he": "חניון לילה בריכת צפירה (או כפר הנוקדים ליד כביש ערד-מצדה)",
     "lat": 31.2615,
     "lon": 35.3185,
     "approx": true,
-    "short_he": "חניון לילה בריכת צפירה"
+    "short_he": "חניון לילה בריכת צפירה",
+    "short_en": "Tzfira Pool night camp",
+    "name_en": "Tzfira Pool night camp"
    },
    "water": {
     "summary_he": "אין מים בתוואי. נקודות: ערד בלבד · בורות המים לאורך הדרך אינם מגודרים, וחשוב לשמור על זהירות. ניתן למלא מים בכפר הנוקדים.",
@@ -4155,7 +4283,7 @@
   {
    "id": 33,
    "name_he": "ברכת צפירה - מצדה",
-   "name_en": null,
+   "name_en": "Tzfira Pool – Masada",
    "region": "מדבר יהודה",
    "region_en": "Judean Desert",
    "region_spni": "מדבר יהודה וים המלח",
@@ -4171,14 +4299,18 @@
     "lat": 31.2615,
     "lon": 35.3185,
     "approx": true,
-    "short_he": "חניון לילה בריכת צפירה"
+    "short_he": "חניון לילה בריכת צפירה",
+    "short_en": "Tzfira Pool night camp",
+    "name_en": "Tzfira Pool night camp"
    },
    "end": {
     "name_he": "הכניסה המערבית לגן הלאומי מצדה ('הסוללה')",
     "lat": 31.3135,
     "lon": 35.3455,
     "approx": true,
-    "short_he": "מצדה מערב (הסוללה)"
+    "short_he": "מצדה מערב (הסוללה)",
+    "short_en": "Masada West (the ramp)",
+    "name_en": "Masada West (the ramp)"
    },
    "water": {
     "summary_he": "ברזים זמינים לאורך המקטע. נקודות: מצדה מערב (ברזים בחניון/בכניסה) · אסור לטיול בימים עם סכנת שטפונות!",
@@ -4282,7 +4414,7 @@
   {
    "id": 34,
    "name_he": "מצדה – מלונות עין בוקק",
-   "name_en": null,
+   "name_en": "Masada – Ein Bokek Hotels",
    "region": "מדבר יהודה / ים המלח",
    "region_en": "Judean Desert / Dead Sea",
    "region_spni": "מדבר יהודה וים המלח",
@@ -4298,14 +4430,18 @@
     "lat": 31.3135,
     "lon": 35.3455,
     "approx": true,
-    "short_he": "מצדה מערב (הסוללה)"
+    "short_he": "מצדה מערב (הסוללה)",
+    "short_en": "Masada West (the ramp)",
+    "name_en": "Masada West (the ramp)"
    },
    "end": {
     "name_he": "הכניסה הצפונית מכביש 90 למלונות עין בוקק",
     "lat": 31.2005,
     "lon": 35.3605,
     "approx": true,
-    "short_he": "מלונות עין בוקק"
+    "short_he": "מלונות עין בוקק",
+    "short_en": "Ein Bokek hotels",
+    "name_en": "Ein Bokek hotels"
    },
    "water": {
     "summary_he": "ברזים זמינים לאורך המקטע. נקודות: מצדה, עין בוקק",
@@ -4411,7 +4547,7 @@
   {
    "id": 35,
    "name_he": "מלונות עין בוקק - מישור עמיעז",
-   "name_en": null,
+   "name_en": "Ein Bokek Hotels – Amiaz Plain",
    "region": "מדבר יהודה / הר סדום",
    "region_en": "Judean Desert / Mt. Sodom",
    "region_spni": "מדבר יהודה וים המלח",
@@ -4427,14 +4563,18 @@
     "lat": 31.2005,
     "lon": 35.3605,
     "approx": true,
-    "short_he": "מלונות עין בוקק"
+    "short_he": "מלונות עין בוקק",
+    "short_en": "Ein Bokek hotels",
+    "name_en": "Ein Bokek hotels"
    },
    "end": {
     "name_he": "חניון לילה מישור עמיעז",
     "lat": 31.0845,
     "lon": 35.3685,
     "approx": true,
-    "short_he": "חניון לילה מישור עמיעז"
+    "short_he": "חניון לילה מישור עמיעז",
+    "short_en": "Amiaz Plain night camp",
+    "name_en": "Amiaz Plain night camp"
    },
    "water": {
     "summary_he": "אין מים בתוואי. נקודות: עין בוקק / נווה זוהר בלבד",
@@ -4526,7 +4666,7 @@
   {
    "id": 36,
    "name_he": "מישור עמיעז - נחל תמר",
-   "name_en": null,
+   "name_en": "Amiaz Plain – Nahal Tamar",
    "region": "מדבר יהודה / צפון הנגב",
    "region_en": "Judean Desert / N. Negev",
    "region_spni": "מדבר יהודה וים המלח",
@@ -4542,14 +4682,18 @@
     "lat": 31.0845,
     "lon": 35.3685,
     "approx": true,
-    "short_he": "חניון לילה מישור עמיעז"
+    "short_he": "חניון לילה מישור עמיעז",
+    "short_en": "Amiaz Plain night camp",
+    "name_en": "Amiaz Plain night camp"
    },
    "end": {
     "name_he": "חניון לילה בנחל תמר (לצד דרך הכניסה למכתש הקטן)",
     "lat": 30.9955,
     "lon": 35.2305,
     "approx": true,
-    "short_he": "חניון לילה נחל תמר"
+    "short_he": "חניון לילה נחל תמר",
+    "short_en": "Nahal Tamar night camp",
+    "name_en": "Nahal Tamar night camp"
    },
    "water": {
     "summary_he": "spring. נקודות: עין צפית (מעיין קטן, לא לשתייה ללא טיהור)",
@@ -4645,7 +4789,7 @@
   {
    "id": 37,
    "name_he": "נחל תמר – נחל עקרבים",
-   "name_en": null,
+   "name_en": "Nahal Tamar – Nahal Akrabim",
    "region": "מדבר יהודה / צפון הנגב",
    "region_en": "Judean Desert / N. Negev",
    "region_spni": "נגב",
@@ -4661,14 +4805,18 @@
     "lat": 30.9955,
     "lon": 35.2305,
     "approx": true,
-    "short_he": "חניון לילה נחל תמר"
+    "short_he": "חניון לילה נחל תמר",
+    "short_en": "Nahal Tamar night camp",
+    "name_en": "Nahal Tamar night camp"
    },
    "end": {
     "name_he": "חניון הלילה בראש נחל עקרבים, מדרום למעלה עלי",
     "lat": 30.9315,
     "lon": 35.1245,
     "approx": true,
-    "short_he": "חניון לילה ראש נחל עקרבים"
+    "short_he": "חניון לילה ראש נחל עקרבים",
+    "short_en": "Nahal Akrabim head night camp",
+    "name_en": "Nahal Akrabim head night camp"
    },
    "water": {
     "summary_he": "spring. נקודות: עין צפית (מעיין קטן, לא לשתייה ללא טיהור)",
@@ -4776,7 +4924,7 @@
   {
    "id": 38,
    "name_he": "נחל עקרבים - אורון",
-   "name_en": null,
+   "name_en": "Nahal Akrabim – Oron",
    "region": "הר הנגב (המכתש הקטן – אורון)",
    "region_en": "Negev highlands",
    "region_spni": "נגב",
@@ -4792,14 +4940,18 @@
     "lat": 30.9315,
     "lon": 35.1245,
     "approx": true,
-    "short_he": "חניון לילה ראש נחל עקרבים"
+    "short_he": "חניון לילה ראש נחל עקרבים",
+    "short_en": "Nahal Akrabim head night camp",
+    "name_en": "Nahal Akrabim head night camp"
    },
    "end": {
     "name_he": "חניון הלילה בשער מפעל הפוספטים באורון",
     "lat": 30.9085,
     "lon": 35.0165,
     "approx": true,
-    "short_he": "אורון – שער מפעל הפוספטים"
+    "short_he": "אורון – שער מפעל הפוספטים",
+    "short_en": "Oron – phosphate plant gate",
+    "name_en": "Oron – phosphate plant gate"
    },
    "water": {
     "summary_he": "ברזים זמינים לאורך המקטע. נקודות: עין ירקעם (מעיין עונתי – טיהור), ברז במפעל אורון / מפעלי צין · בשער מפעלי אורון ניתן למלא מים – וזו הסיבה לכך שהשביל יורד לאורון ולא ממשיך ישירות להר כרבולת.",
@@ -4907,7 +5059,7 @@
   {
    "id": 39,
    "name_he": "אורון - נחל עפרן",
-   "name_en": null,
+   "name_en": "Oron – Nahal Afran (Karbolet)",
    "region": "הר הנגב (רכס חתירה / המכתש הגדול)",
    "region_en": "Negev highlands (Hatira ridge / Big Crater)",
    "region_spni": "נגב",
@@ -4923,14 +5075,18 @@
     "lat": 30.9085,
     "lon": 35.0165,
     "approx": true,
-    "short_he": "אורון – שער מפעל הפוספטים"
+    "short_he": "אורון – שער מפעל הפוספטים",
+    "short_en": "Oron – phosphate plant gate",
+    "name_en": "Oron – phosphate plant gate"
    },
    "end": {
     "name_he": "חניון לילה בנחל מדור",
     "lat": 30.9435,
     "lon": 34.9625,
     "approx": true,
-    "short_he": "חניון לילה נחל מדור"
+    "short_he": "חניון לילה נחל מדור",
+    "short_en": "Nahal Mador night camp",
+    "name_en": "Nahal Mador night camp"
    },
    "water": {
     "summary_he": "אין מים בתוואי · חשוב מאוד לדאוג מראש להטמנת מים בחניון נחל עפרן או נחל מדור. · ניתן לחלק את המקטע לשני ימים – בנחל מדור. הסבר נוסף ב",
@@ -5018,7 +5174,7 @@
   {
    "id": 40,
    "name_he": "נחל עפרן - חוד עקב",
-   "name_en": null,
+   "name_en": "Nahal Afran – Hod Akev",
    "region": "הר הנגב (נחל צין)",
    "region_en": "Negev highlands (Nahal Zin)",
    "region_spni": "נגב",
@@ -5034,14 +5190,18 @@
     "lat": 30.9435,
     "lon": 34.9625,
     "approx": true,
-    "short_he": "חניון לילה נחל מדור"
+    "short_he": "חניון לילה נחל מדור",
+    "short_en": "Nahal Mador night camp",
+    "name_en": "Nahal Mador night camp"
    },
    "end": {
     "name_he": "חניון הלילה למרגלות חוד עקב.\nיש אפשרות להמשיך רגלית עד המדרשה בשדה בוקר, דרך מעלה צין ושדה צין, בתוספת הליכה של כ-5 ק״מ",
     "lat": 30.8305,
     "lon": 34.8235,
     "approx": true,
-    "short_he": "חניון לילה חוד עקב"
+    "short_he": "חניון לילה חוד עקב",
+    "short_en": "Hod Akev night camp",
+    "name_en": "Hod Akev night camp"
    },
    "water": {
     "summary_he": "spring. נקודות: עין עקב (בריכה טבעית – טיהור) · חשוב מאוד לדאוג להטמנת מים (ורצוי גם אוכל) בנקודת הסיום בחניון הלילה נחל מדור.",
@@ -5123,7 +5283,7 @@
   {
    "id": 41,
    "name_he": "חוד עקב - נחל חווה",
-   "name_en": null,
+   "name_en": "Hod Akev – Nahal Hava",
    "region": "הר הנגב (שדה בוקר – עבדת)",
    "region_en": "Negev highlands (Sde Boker – Avdat)",
    "region_spni": "נגב",
@@ -5139,14 +5299,18 @@
     "lat": 30.8305,
     "lon": 34.8235,
     "approx": true,
-    "short_he": "חניון לילה חוד עקב"
+    "short_he": "חניון לילה חוד עקב",
+    "short_en": "Hod Akev night camp",
+    "name_en": "Hod Akev night camp"
    },
    "end": {
     "name_he": "חניון הלילה מעל נחל חווה",
     "lat": 30.7055,
     "lon": 34.7705,
     "approx": true,
-    "short_he": "חניון לילה נחל חווה"
+    "short_he": "חניון לילה נחל חווה",
+    "short_en": "Nahal Hava night camp",
+    "name_en": "Nahal Hava night camp"
    },
    "water": {
     "summary_he": "ברזים זמינים לאורך המקטע. נקודות: מדרשת בן-גוריון (הברז האחרון לפני מצפה רמון, ~45 ק\"מ), גן לאומי עין עבדת (לא לשתייה מהמעיין)",
@@ -5249,7 +5413,7 @@
   {
    "id": 42,
    "name_he": "נחל חווה - מצפה רמון",
-   "name_en": null,
+   "name_en": "Nahal Hava – Mitzpe Ramon",
    "region": "הר הנגב",
    "region_en": "Negev highlands",
    "region_spni": "נגב",
@@ -5265,14 +5429,18 @@
     "lat": 30.7055,
     "lon": 34.7705,
     "approx": true,
-    "short_he": "חניון לילה נחל חווה"
+    "short_he": "חניון לילה נחל חווה",
+    "short_en": "Nahal Hava night camp",
+    "name_en": "Nahal Hava night camp"
    },
    "end": {
     "name_he": "מצפה רמון",
     "lat": 30.6105,
     "lon": 34.8015,
     "approx": true,
-    "short_he": "מצפה רמון"
+    "short_he": "מצפה רמון",
+    "short_en": "Mitzpe Ramon",
+    "name_en": "Mitzpe Ramon"
    },
    "water": {
     "summary_he": "אין מים בתוואי. נקודות: מצפה רמון בלבד",
@@ -5362,7 +5530,7 @@
   {
    "id": 43,
    "name_he": "מצפה רמון - נחל גוונים",
-   "name_en": null,
+   "name_en": "Mitzpe Ramon – Nahal Gevanim",
    "region": "הר הנגב (מכתש רמון)",
    "region_en": "Negev highlands (Makhtesh Ramon)",
    "region_spni": "נגב",
@@ -5378,14 +5546,18 @@
     "lat": 30.6105,
     "lon": 34.8015,
     "approx": true,
-    "short_he": "מצפה רמון"
+    "short_he": "מצפה רמון",
+    "short_en": "Mitzpe Ramon",
+    "name_en": "Mitzpe Ramon"
    },
    "end": {
     "name_he": "חניון הלילה נחל גוונים",
     "lat": 30.5765,
     "lon": 34.8665,
     "approx": true,
-    "short_he": "חניון לילה נחל גוונים"
+    "short_he": "חניון לילה נחל גוונים",
+    "short_en": "Nahal Gevanim night camp",
+    "name_en": "Nahal Gevanim night camp"
    },
    "water": {
     "summary_he": "ברזים זמינים לאורך המקטע. נקודות: מצפה רמון, חאן בארות (ברז, בתשלום), עין סהרונים (מליח)",
@@ -5503,7 +5675,7 @@
   {
    "id": 44,
    "name_he": "נחל גוונים - גב חולית",
-   "name_en": null,
+   "name_en": "Nahal Gevanim – Gev Holit",
    "region": "הר הנגב (מזרח רמון / נחל נקרות)",
    "region_en": "Negev highlands (East Ramon / Nahal Nekarot)",
    "region_spni": "נגב",
@@ -5519,14 +5691,18 @@
     "lat": 30.5765,
     "lon": 34.8665,
     "approx": true,
-    "short_he": "חניון לילה נחל גוונים"
+    "short_he": "חניון לילה נחל גוונים",
+    "short_en": "Nahal Gevanim night camp",
+    "name_en": "Nahal Gevanim night camp"
    },
    "end": {
     "name_he": "חניון הלילה בגב חולית",
     "lat": 30.5805,
     "lon": 35.0605,
     "approx": true,
-    "short_he": "חניון לילה גב חולית"
+    "short_he": "חניון לילה גב חולית",
+    "short_en": "Gev Holit night camp",
+    "name_en": "Gev Holit night camp"
    },
    "water": {
     "summary_he": "אין מים בתוואי. נקודות: גב חולית – גב מים לא אמין; הטמנה שנתית של מלאך שביל (לוודא מראש) · הכניסה לחניון הלילה בגב חולית עם רכב שטח. חשוב מאוד לתאם הטמנת מים. · בחניון הלילה אין מקור מים לשתייה. מי שתייה וחניון מסודר יש בחניון בארות, כ-3 ק\"מ על דרך נוחה מחניון נחל גוונים. · אחרי שטפונות, ייתכן צורך לעבור במים בפרסת נקרות.",
@@ -5621,7 +5797,7 @@
   {
    "id": 45,
    "name_he": "גב חולית – ספיר",
-   "name_en": null,
+   "name_en": "Gev Holit – Sapir",
    "region": "הר הנגב / ערבה",
    "region_en": "Negev highlands / Arava",
    "region_spni": "נגב",
@@ -5637,14 +5813,18 @@
     "lat": 30.5805,
     "lon": 35.0605,
     "approx": true,
-    "short_he": "חניון לילה גב חולית"
+    "short_he": "חניון לילה גב חולית",
+    "short_en": "Gev Holit night camp",
+    "name_en": "Gev Holit night camp"
    },
    "end": {
     "name_he": "ספיר",
     "lat": 30.6115,
     "lon": 35.1795,
     "approx": true,
-    "short_he": "ספיר"
+    "short_he": "ספיר",
+    "short_en": "Sapir",
+    "name_en": "Sapir"
    },
    "water": {
     "summary_he": "ברזים זמינים לאורך המקטע. נקודות: צופר (הברז הראשון מאז בארות/מצפה רמון) · בחניון אין מקור מים. מומלץ לשקול הטמנת מים בחניון.",
@@ -5741,7 +5921,7 @@
   {
    "id": 46,
    "name_he": "ספיר – צוקים",
-   "name_en": null,
+   "name_en": "Sapir – Tzukim",
    "region": "הר הנגב / ערבה",
    "region_en": "Negev highlands / Arava",
    "region_spni": "נגב",
@@ -5757,14 +5937,18 @@
     "lat": 30.6115,
     "lon": 35.1795,
     "approx": true,
-    "short_he": "ספיר"
+    "short_he": "ספיר",
+    "short_en": "Sapir",
+    "name_en": "Sapir"
    },
    "end": {
     "name_he": "צוקים",
     "lat": 30.4835,
     "lon": 35.1625,
     "approx": true,
-    "short_he": "צוקים"
+    "short_he": "צוקים",
+    "short_en": "Tzukim",
+    "name_en": "Tzukim"
    },
    "water": {
     "summary_he": "ברזים זמינים לאורך המקטע. נקודות: צופר (הברז הראשון מאז בארות/מצפה רמון) · יש אפשרות למלא מים בבית העלמין של צופר, בקרבת השביל. · בצוקים יש אפשרויות להצטיידות במים ומזון.",
@@ -5870,7 +6054,7 @@
   {
    "id": 47,
    "name_he": "צוקים – נחל ברק",
-   "name_en": null,
+   "name_en": "Tzukim – Nahal Barak",
    "region": "ערבה / דרום הנגב",
    "region_en": "Arava / S. Negev",
    "region_spni": "נגב",
@@ -5886,14 +6070,18 @@
     "lat": 30.4835,
     "lon": 35.1625,
     "approx": true,
-    "short_he": "צוקים"
+    "short_he": "צוקים",
+    "short_en": "Tzukim",
+    "name_en": "Tzukim"
    },
    "end": {
     "name_he": "חניון לילה נחל ברק (נמצא כ-1.5 ק״מ מערבית לכביש 90)",
     "lat": 30.3695,
     "lon": 35.0735,
     "approx": true,
-    "short_he": "חניון לילה נחל ברק"
+    "short_he": "חניון לילה נחל ברק",
+    "short_en": "Nahal Barak night camp",
+    "name_en": "Nahal Barak night camp"
    },
    "water": {
     "summary_he": "אין מים בתוואי. נקודות: צופר, פארן (8 ק\"מ מכביש 90 – סטייה) · הכניסה לחניון הלילה בנחל ברק מתאימה לכל רכב. בחניון הלילה אין מים. · בצוקים יש אפשרויות להצטיידות במים ומזון.",
@@ -5987,7 +6175,7 @@
   {
    "id": 48,
    "name_he": "נחל ברק - נחל ציחור",
-   "name_en": null,
+   "name_en": "Nahal Barak – Nahal Tzihor",
    "region": "דרום הנגב",
    "region_en": "S. Negev",
    "region_spni": "נגב",
@@ -6003,14 +6191,18 @@
     "lat": 30.3695,
     "lon": 35.0735,
     "approx": true,
-    "short_he": "חניון לילה נחל ברק"
+    "short_he": "חניון לילה נחל ברק",
+    "short_en": "Nahal Barak night camp",
+    "name_en": "Nahal Barak night camp"
    },
    "end": {
     "name_he": "המפגש בין כביש 40 לנחל ציחור",
     "lat": 30.1935,
     "lon": 35.0015,
     "approx": true,
-    "short_he": "נחל ציחור / כביש 40"
+    "short_he": "נחל ציחור / כביש 40",
+    "short_en": "Nahal Tzihor / Road 40",
+    "name_en": "Nahal Tzihor / Road 40"
    },
    "water": {
     "summary_he": "ברזים זמינים לאורך המקטע. נקודות: צומת שיזפון (פונדק נאות סמדר) · הכניסה לחניון הלילה בנחל ברק מתאימה לכל רכב. בחניון הלילה אין מים. · ישנם חורפים שבהם גבי המים בקניונים מלאים מים, ויש אפשרות לעקוף את שני הקניונים. · אין מקורות מים למילוי מי שתיה לאורך כל המסלול, עד צומת ציחור. · סמוך לנקודת הסיום, מעבר לכביש 40, יש חניון לילה. בחניון אין מקור מים.",
@@ -6116,7 +6308,7 @@
   {
    "id": 49,
    "name_he": "נחל ציחור - צומת שיזפון",
-   "name_en": null,
+   "name_en": "Nahal Tzihor – Shizafon Junction",
    "region": "דרום הנגב",
    "region_en": "S. Negev",
    "region_spni": "נגב",
@@ -6132,14 +6324,18 @@
     "lat": 30.1935,
     "lon": 35.0015,
     "approx": true,
-    "short_he": "נחל ציחור / כביש 40"
+    "short_he": "נחל ציחור / כביש 40",
+    "short_en": "Nahal Tzihor / Road 40",
+    "name_en": "Nahal Tzihor / Road 40"
    },
    "end": {
     "name_he": "צומת שיזפון",
     "lat": 30.0725,
     "lon": 34.9695,
     "approx": true,
-    "short_he": "צומת שיזפון"
+    "short_he": "צומת שיזפון",
+    "short_en": "Shizafon junction",
+    "name_en": "Shizafon junction"
    },
    "water": {
     "summary_he": "ברזים זמינים לאורך המקטע. נקודות: צומת שיזפון (פונדק נאות סמדר) · בסמוך לנקודת ההתחלה, כ-300 מטר ממערב לנקודה שבה שביל ישראל חוצה את כביש 40, ישנו חניון לילה מוכרז. בחניון אין מקור מים. · אפשר למלא מים ביישוב שיטים ובכניסה לבסיס שיזפון.",
@@ -6221,7 +6417,7 @@
   {
    "id": 50,
    "name_he": "צומת שיזפון - שחרות",
-   "name_en": null,
+   "name_en": "Shizafon Junction – Shaharut",
    "region": "דרום הנגב (בקעת עובדה)",
    "region_en": "S. Negev (Uvda valley)",
    "region_spni": "נגב",
@@ -6237,14 +6433,18 @@
     "lat": 30.0725,
     "lon": 34.9695,
     "approx": true,
-    "short_he": "צומת שיזפון"
+    "short_he": "צומת שיזפון",
+    "short_en": "Shizafon junction",
+    "name_en": "Shizafon junction"
    },
    "end": {
     "name_he": "חאן מצפון לשחרות",
     "lat": 29.9215,
     "lon": 34.9805,
     "approx": true,
-    "short_he": "חאן שחרות"
+    "short_he": "חאן שחרות",
+    "short_en": "Shaharut khan",
+    "name_en": "Shaharut khan"
    },
    "water": {
     "summary_he": "ברזים זמינים לאורך המקטע. נקודות: שיזפון, שחרות · למרגלות הדיונה של נחל כסוי יש חניוני לילה (ללא מים). · סיום המקטע מצפון ליישוב שחרות. במקום יש חאן שמאפשר לינה, מילוי מים והצטיידות במזון בסיסי. · השביל לא עובר ליד היישוב שחרות. ניתן ללון ולהצטייד במי שתייה בנקודת הסיום של המקטע בחאן שחרות. הצטיידות במזון אפשרית על ידי משלוח של שופרסל אונליין שמגיע ליישוב שחרות כמה פעמים בשבוע.",
@@ -6335,7 +6535,7 @@
   {
    "id": 51,
    "name_he": "שחרות - באר מילחן",
-   "name_en": null,
+   "name_en": "Shaharut – Be'er Milhan",
    "region": "דרום הנגב / הרי אילת",
    "region_en": "S. Negev / Eilat mountains",
    "region_spni": "נגב",
@@ -6351,14 +6551,18 @@
     "lat": 29.9215,
     "lon": 34.9805,
     "approx": true,
-    "short_he": "חאן שחרות"
+    "short_he": "חאן שחרות",
+    "short_en": "Shaharut khan",
+    "name_en": "Shaharut khan"
    },
    "end": {
     "name_he": "חניון הלילה בבאר מילחן",
     "lat": 29.8505,
     "lon": 34.9585,
     "approx": true,
-    "short_he": "חניון לילה באר מילחן"
+    "short_he": "חניון לילה באר מילחן",
+    "short_en": "Be'er Milhan night camp",
+    "name_en": "Be'er Milhan night camp"
    },
    "water": {
     "summary_he": "אין מים בתוואי · השביל לא עובר ליד היישוב שחרות. ניתן ללון ולהצטייד במי שתייה בנקודת ההתחלה של המקטע בחאן שחרות. הצטיידות במזון אפשרית על ידי משלוח של שופרסל אונליין שמגיע ליישוב שחרות כמה פעמים בשבוע.",
@@ -6440,7 +6644,7 @@
   {
    "id": 52,
    "name_he": "באר מילחן - תמנע",
-   "name_en": null,
+   "name_en": "Be'er Milhan – Timna",
    "region": "הרי אילת (תמנע)",
    "region_en": "Eilat mountains (Timna)",
    "region_spni": "נגב",
@@ -6456,14 +6660,18 @@
     "lat": 29.8505,
     "lon": 34.9585,
     "approx": true,
-    "short_he": "חניון לילה באר מילחן"
+    "short_he": "חניון לילה באר מילחן",
+    "short_en": "Be'er Milhan night camp",
+    "name_en": "Be'er Milhan night camp"
    },
    "end": {
     "name_he": "מרכז המבקרים בשער פארק תמנע",
     "lat": 29.7845,
     "lon": 34.9815,
     "approx": true,
-    "short_he": "פארק תמנע – מרכז המבקרים"
+    "short_he": "פארק תמנע – מרכז המבקרים",
+    "short_en": "Timna Park – visitor center",
+    "name_en": "Timna Park – visitor center"
    },
    "water": {
     "summary_he": "ברזים זמינים לאורך המקטע. נקודות: פארק תמנע (מים מליחים בכניסה + ג'ריקן מי שתייה; מסעדה באגם) · רשות הטבע והגנים מציבה עוקב מים בחניוני הלילה באזור. יש לוודא זאת עם פקח אזורי בזמן תכנון המסלול.",
@@ -6564,7 +6772,7 @@
   {
    "id": 53,
    "name_he": "תמנע – באר אורה",
-   "name_en": null,
+   "name_en": "Timna – Be'er Ora",
    "region": "הרי אילת (תמנע)",
    "region_en": "Eilat mountains (Timna)",
    "region_spni": "נגב",
@@ -6580,14 +6788,18 @@
     "lat": 29.7845,
     "lon": 34.9815,
     "approx": true,
-    "short_he": "פארק תמנע – מרכז המבקרים"
+    "short_he": "פארק תמנע – מרכז המבקרים",
+    "short_en": "Timna Park – visitor center",
+    "name_en": "Timna Park – visitor center"
    },
    "end": {
     "name_he": "באר אורה או חניון הלילה במפגש הנחלים עתק ורחם.\nנ",
     "lat": 29.7125,
     "lon": 34.9825,
     "approx": true,
-    "short_he": "באר אורה"
+    "short_he": "באר אורה",
+    "short_en": "Be'er Ora",
+    "name_en": "Be'er Ora"
    },
    "water": {
     "summary_he": "ברזים זמינים לאורך המקטע. נקודות: פארק תמנע (מים מליחים בכניסה + ג'ריקן מי שתייה; מסעדה באגם)",
@@ -6683,7 +6895,7 @@
   {
    "id": 54,
    "name_he": "באר אורה - קניון שחורת",
-   "name_en": null,
+   "name_en": "Be'er Ora – Shehoret Canyon",
    "region": "הרי אילת",
    "region_en": "Eilat mountains",
    "region_spni": "נגב",
@@ -6699,14 +6911,18 @@
     "lat": 29.7125,
     "lon": 34.9825,
     "approx": true,
-    "short_he": "באר אורה"
+    "short_he": "באר אורה",
+    "short_en": "Be'er Ora",
+    "name_en": "Be'er Ora"
    },
    "end": {
     "name_he": "חניון הלילה בפתח קניון שחורת",
     "lat": 29.6405,
     "lon": 34.9005,
     "approx": true,
-    "short_he": "חניון לילה קניון שחורת"
+    "short_he": "חניון לילה קניון שחורת",
+    "short_en": "Shehoret Canyon night camp",
+    "name_en": "Shehoret Canyon night camp"
    },
    "water": {
     "summary_he": "אין מים בתוואי. נקודות: אין (עין נטפים – מעיין קבוע קטן, לא לשתייה ללא טיהור) · רשות הטבע והגנים נוהגת להביא עוקב מים לחניון שחורת. מומלץ לוודא זאת עם הרשות או בפורומים של שביליסטים.",
@@ -6797,7 +7013,7 @@
   {
    "id": 55,
    "name_he": "קניון שחורת – הר יהורם",
-   "name_en": null,
+   "name_en": "Shehoret Canyon – Mount Yehoram",
    "region": "הרי אילת",
    "region_en": "Eilat mountains",
    "region_spni": "נגב",
@@ -6813,14 +7029,18 @@
     "lat": 29.6405,
     "lon": 34.9005,
     "approx": true,
-    "short_he": "חניון לילה קניון שחורת"
+    "short_he": "חניון לילה קניון שחורת",
+    "short_en": "Shehoret Canyon night camp",
+    "name_en": "Shehoret Canyon night camp"
    },
    "end": {
     "name_he": "חניון הלילה למרגלות הר יהורם",
     "lat": 29.6205,
     "lon": 34.8955,
     "approx": true,
-    "short_he": "חניון לילה הר יהורם"
+    "short_he": "חניון לילה הר יהורם",
+    "short_en": "Mount Yehoram night camp",
+    "name_en": "Mount Yehoram night camp"
    },
    "water": {
     "summary_he": "אין מים בתוואי. נקודות: אין (עין נטפים – מעיין קבוע קטן, לא לשתייה ללא טיהור) · בחניון שבתחילת קניון שחורת אמור להיות עוקב מים (מיכלית למילוי מים) בשעות הערב. כדאי לוודא עם הפקח האזורי של רשות הטבע והגנים. הדרך לחניון עבירה לרכב רגיל. · בחניון הר יהורם אמור להיות עוקב מים שמציבה רשות הטבע והגנים. לפני היציאה כדאי לוודא זאת עם הפקח האזורי של רשות הטבע והגנים.",
@@ -6918,7 +7138,7 @@
   {
    "id": 56,
    "name_he": "הר יהורם - אילת",
-   "name_en": null,
+   "name_en": "Mount Yehoram – Eilat",
    "region": "הרי אילת",
    "region_en": "Eilat mountains",
    "region_spni": "נגב",
@@ -6934,14 +7154,18 @@
     "lat": 29.6205,
     "lon": 34.8955,
     "approx": true,
-    "short_he": "חניון לילה הר יהורם"
+    "short_he": "חניון לילה הר יהורם",
+    "short_en": "Mount Yehoram night camp",
+    "name_en": "Mount Yehoram night camp"
    },
    "end": {
     "name_he": "בית ספר שדה אילת",
     "lat": 29.5035,
     "lon": 34.9175,
     "approx": true,
-    "short_he": "בית ספר שדה אילת"
+    "short_he": "בית ספר שדה אילת",
+    "short_en": "Eilat Field School",
+    "name_en": "Eilat Field School"
    },
    "water": {
     "summary_he": "אין מים בתוואי. נקודות: אילת בלבד · אם מסיימים את מעלה גשרון לקראת סוף היום ונקלעים ללחץ זמן, ניתן לקצר את ההליכה ולרדת בשביל קצר אל דרך הג'יפים למרגלות גבעת רחבעם וללכת מזרחה עד לכביש. · בחניון הר יהורם אמור להיות עוקב מים שמציבה רשות הטבע והגנים. לפני היציאה כדאי לוודא זאת עם הפקח האזורי של רשות הטבע והגנים.",

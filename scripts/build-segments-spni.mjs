@@ -7,6 +7,7 @@ const spni = J('src/data/spni/segments.json')
 const pts = J('scripts/spni-endpoints.json')
 const photos = J('scripts/segment-photos-spni.json')
 const raw = J('src/data/segments.raw.json')
+const namesEn = J('scripts/segment-names-en.json')
 const research = raw.segments.filter((s) => s.variant !== 'old_route' && Number.isInteger(s.id))
 const hav = (a, b) => { const R = 6371, r = Math.PI / 180, dLat = (b.lat - a.lat) * r, dLon = (b.lon - a.lon) * r, h = Math.sin(dLat / 2) ** 2 + Math.cos(a.lat * r) * Math.cos(b.lat * r) * Math.sin(dLon / 2) ** 2; return 2 * R * Math.asin(Math.sqrt(h)) }
 const mid = (a, b) => ({ lat: (a.lat + b.lat) / 2, lon: (a.lon + b.lon) / 2 })
@@ -34,8 +35,8 @@ const fixSpaces = (t = '') => t.replace(/([.!?:])(?=[\u0590-\u05FF])/g, '$1 ').r
 const segments = spni.map((s) => {
 
   const n = s.number
-  const start = { name_he: s.start || pts[n].name, lat: pts[n].lat, lon: pts[n].lon, approx: true, short_he: pts[n].name }
-  const end = { name_he: s.end || pts[n + 1].name, lat: pts[n + 1].lat, lon: pts[n + 1].lon, approx: true, short_he: pts[n + 1].name }
+  const start = { name_he: s.start || pts[n].name, lat: pts[n].lat, lon: pts[n].lon, approx: true, short_he: pts[n].name, short_en: namesEn.points[n], name_en: namesEn.points[n] }
+  const end = { name_he: s.end || pts[n + 1].name, lat: pts[n + 1].lat, lon: pts[n + 1].lon, approx: true, short_he: pts[n + 1].name, short_en: namesEn.points[n + 1], name_en: namesEn.points[n + 1] }
   const m = mid(start, end)
   // research matches: segments overlapping this one (midpoint within 9 km, or endpoint pairs close)
   const scored = research.map((r) => ({ r, d: Math.min(hav(m, mid(r.start, r.end)), hav(start, r.start) + hav(end, r.end) / 2, hav(end, r.end) + hav(start, r.start) / 2) })).sort((a, b) => a.d - b.d)
@@ -61,7 +62,7 @@ const segments = spni.map((s) => {
   const angelsRegion = ANGEL_RANGES.find(([, a, b]) => n >= a && n <= b)?.[0] || null
   return {
     id: n,
-    name_he: s.title, name_en: null,
+    name_he: s.title, name_en: namesEn.segments[n] || null,
     region: best.region, region_en: best.region_en, region_spni: s.region_guide,
     distance_km: km, distance_approx: !!s.length_approx, hours,
     difficulty, difficulty_he: ['', 'קל', 'בינוני', 'קשה', 'קשה מאוד'][difficulty],

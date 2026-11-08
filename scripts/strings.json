@@ -1,0 +1,4251 @@
+{
+ "keys": {
+  "(חלק {0}/{1})": "(part {0}/{1})",
+  "(מקטעים": "(segments",
+  "(משבים {0})": "(gusts {0})",
+  "(מתחילים 15–18 · מנוסים 20–25 · מהירים 28+)": "(beginners 15–18 · experienced 20–25 · fast 28+)",
+  ") ושומר אותם במכשיר. אחרי ההורדה המפה תעבוד גם ללא קליטה.": ") and stores them on the device. After the download the map works without reception.",
+  ") מתוכננת": ") is planned",
+  ") – עדיין אין איש קשר. תאמו היום!": ") – no contact yet. Coordinate today!",
+  "). לכל מקטע יש מפה חינמית להורדה ועמוד מפורט באתר.": "). Every segment has a free downloadable map and a detailed page on the website.",
+  "* הקואורדינטות משוערות (±1 ק\"מ) – לניווט מדויק להשתמש בתוואי מ-OSM במפה.": "* Coordinates are approximate (±1 km) – for precise navigation use the OSM track on the map.",
+  "+ הוספת מלאך": "+ Add angel",
+  "+ רשומה": "+ Entry",
+  "+ שמירה אצלי": "+ Save to my list",
+  ". ב-iPhone: התקנה על מסך הבית מבטיחה שהנתונים לא יימחקו אוטומטית.": ". On iPhone, installing to the home screen guarantees data is not auto-deleted.",
+  ". סיפור הדרך משלים את סימון השביל והמפה – לא מחליף אותם.": ". The route story complements trail blazes and the map – it does not replace them.",
+  "1. מסלול, כיוון ותאריך": "1. Route, direction and date",
+  "2. קצב, ימי מנוחה ושבת": "2. Pace, rest days and Shabbat",
+  "24 השעות הקרובות": "Next 24 hours",
+  "2–3 זוגות גרביים (מרינו)": "2–3 pairs of socks (merino)",
+  "3. לינה – לילה אחר לילה": "3. Lodging – night by night",
+  "4. מים, הטמנות ואוכל": "4. Water, caches and food",
+  "5. ציוד מותאם למסע": "5. Gear tailored to the trip",
+  "500–800 גרם אוכל ליום; עתיר קלוריות ומשקל נמוך (אגוזים, טחינה, שיבולת שועל, קוסקוס, חטיפים).": "500–800 g of food per day; calorie-dense and light (nuts, tahini, oats, couscous, bars).",
+  "6. בטיחות, קשר וחירום": "6. Safety, contact and emergencies",
+  "7 ימים – התאמה להליכה": "7 days – hiking suitability",
+  "7 ימים – מתי כדאי לצעוד כאן": "7 days – when to hike here",
+  "7. לוגיסטיקה ותקציב": "7. Logistics and budget",
+  "<a href=\"{0}\" target=\"_blank\">אתר/הזמנה</a>": "<a href=\"{0}\" target=\"_blank\">Website / booking</a>",
+  "<b>{0}</b><br/>סיום השביל": "<b>{0}</b><br/>End of the trail",
+  "<b>😇 {0}</b><br/>{1}<br/><a href=\"#/guide/angels\">למדריך מלאכי השביל</a>": "<b>😇 {0}</b><br/>{1}<br/><a href=\"#/guide/angels\">Trail angels guide</a>",
+  "<div style=\"max-width:220px\">{0}<b>{1}</b><br/><span style=\"font-size:12px\">{2}…</span><br/><a href=\"{3}\" target=\"_blank\">לקריאה בוויקיפדיה</a></div>": "<div style=\"max-width:220px\">{0}<b>{1}</b><br/><span style=\"font-size:12px\">{2}…</span><br/><a href=\"{3}\" target=\"_blank\">Read on Wikipedia</a></div>",
+  "<div><b>מקטע {0}: {1}</b><br/>{2} ק\"מ · {3}<br/><a href=\"#/segments/{4}\">פרטי המקטע ←</a></div>": "<div><b>Segment {0}: {1}</b><br/>{2} km · {3}<br/><a href=\"#/segments/{4}\">Segment details →</a></div>",
+  "GPX הורד": "GPX downloaded",
+  "Google Maps לנק' ההתחלה": "Google Maps to the start",
+  "MB בשימוש": "MB used",
+  "{0} · {1} ק\"מ · לינה: {2}": "{0} · {1} km · lodging: {2}",
+  "{0} · ימים: {1}{2}": "{0} · days: {1}{2}",
+  "{0} ב{1} ({2} ימים): {3}{4}": "{0} in {1} ({2} days): {3}{4}",
+  "{0} יום {1}: {2}": "{0} day {1}: {2}",
+  "{0} ימי הליכה בשבת (אין תחבורה ציבורית, חנויות סגורות){1}": "{0} walking days on Shabbat (no public transport, shops closed){1}",
+  "{0} ימי מדבר באפריל/אוקטובר – לצאת לפני הזריחה, 6 ליטר מים": "{0} desert days in April/October – start before sunrise, carry 6 litres",
+  "{0} ימי מדבר בין מאי לספטמבר – אסור ומסוכן": "{0} desert days between May and September – forbidden and dangerous",
+  "{0} ימים בנחלי מדבר בעונת הגשמים – לבדוק אזהרות רט\"ג בבוקר": "{0} days in desert wadis during the rainy season – check INPA flood warnings each morning",
+  "{0} ימים דורשים זהירות (גשם משמעותי / חום / רוח)": "{0} days need caution (significant rain / heat / wind)",
+  "{0} ימים ליד שטחי אש ({1} בסופ\"ש) – להישאר על הסימון, לתאם במידת הצורך": "{0} days near firing zones ({1} on weekends) – stay on the marked trail, coordinate if needed",
+  "{0} ימים ללא מים בתוואי – לתאם הטמנות או ספק": "{0} days with no water on the trail – arrange caches or a supplier",
+  "{0} ימים עם תנאים מסוכנים (חום קיצוני / שיטפון / סופה)": "{0} days with dangerous conditions (extreme heat / flood / storm)",
+  "{0} ימים שבהם ההליכה כמעט כאורך היום – לצאת עם הזריחה או לפצל": "{0} days where walking time nearly equals daylight – start at sunrise or split",
+  "{0} ל'": "{0} L",
+  "{0} לילות אצל מלאכי שביל, {1} עדיין בלי איש קשר · {2} לילות שטח": "{0} nights with trail angels, {1} still without a contact · {2} nights camping",
+  "{0} לילות שטח, {1} לילות ביישובים": "{0} nights camping, {1} nights in settlements",
+  "{0} מ'": "{0} m",
+  "{0} ק\"מ": "{0} km",
+  "{0} ק\"מ · {1} {2}": "{0} km · {1} {2}",
+  "{0} שע'": "{0} h",
+  "{0}% מהמסע": "{0}% of the journey",
+  "{0}: {1} ק\"מ": "{0}: {1} km",
+  "{0}: יום מנוחה": "{0}: rest day",
+  "{0}המיקום שלי: https://maps.google.com/?q={1},{2}": "{0}My location: https://maps.google.com/?q={1},{2}",
+  "° (מורגש": "° (feels like",
+  "° · רוח": "° · wind",
+  "· {0} ימים בחגים – חניונים עמוסים ותחבורה מוגבלת": "· {0} days on holidays – crowded campsites and limited transport",
+  "· {0} נכשלו": "· {0} failed",
+  "· {0} ק\"מ": "· {0} km",
+  "· דרום←צפון": "· south→north",
+  "· הושלם ✓": "· done ✓",
+  "· לחות": "· humidity",
+  "· לחצו לקרוא את הסיפור": "· tap to read the story",
+  "· ליד": "· near",
+  "· מקטע {0}": "· segment {0}",
+  "· מרחק אווירי": "· straight-line distance",
+  "· מתרענן אוטומטית מדי יום ובכל פתיחה של האפליקציה.": "· refreshes automatically daily and on every launch.",
+  "· שבת": "· Shabbat",
+  "א": "Sun",
+  "אדומים ·": "red ·",
+  "אוג": "Aug",
+  "אוגדן המפות לרכישה": "Buy the map set",
+  "אוגוסט": "August",
+  "אוהל / חניוני לילה": "Tent / night camps",
+  "אוהל קל / טארפ": "Lightweight tent / tarp",
+  "אוהל/טארפ חובה – אין לינה מסודרת בסיום": "Tent/tarp required – no organised lodging at the end",
+  "אווירי": "straight-line",
+  "אווירי לסיום": "straight-line to end",
+  "אוטומטי": "Auto",
+  "אוכל": "Food",
+  "אוכל ל-2–4 ימים (הצטיידות מוגבלת בנגב)": "Food for 2–4 days (limited resupply in the Negev)",
+  "אוכל ליום-יומיים (חנויות ביישובים)": "Food for 1–2 days (shops in settlements)",
+  "אוכל קל ועתיר אנרגיה ליום ארוך; יציאה עם אור ראשון": "Light, energy-dense food for a long day; leave at first light",
+  "אוכל:": "Food:",
+  "אופי המסלול:": "Trail character:",
+  "אוק": "Oct",
+  "אוקטובר": "October",
+  "אור": "Light",
+  "אור יום": "Daylight",
+  "אורחים טובים": "Be good guests",
+  "אורך היום:": "Day length:",
+  "אזהרות ודגשים": "Warnings and notes",
+  "אזהרות רשמיות": "Official warnings",
+  "אזהרות שנמצאו בתוכנית:": "Warnings found in the plan:",
+  "אזימוט ליעד:": "Bearing to target:",
+  "אחסון": "Storage",
+  "אחסון קבוע": "Persistent storage",
+  "איך בודקים:": "How to check:",
+  "איך היה?": "How was it?",
+  "איך זה עובד": "How it works",
+  "אילת": "Eilat",
+  "אילת ← חרמון": "Eilat → Hermon",
+  "אין הרשאה לחיישני התנועה. ב-iPhone: הגדרות ← Safari ← Motion & Orientation.": "No motion-sensor permission. On iPhone: Settings → Safari → Motion & Orientation.",
+  "אין הרשאה למיקום – יש לאשר גישה למיקום בדפדפן": "No location permission – allow location access in the browser",
+  "אין חיבור לשרת מזג האוויר": "Cannot reach the weather server",
+  "אין חיבור לשרת מזג האוויר. נסו שוב כשיש קליטה.": "Cannot reach the weather server. Try again when you have reception.",
+  "אין ימי מדבר בחודשי החום": "No desert days during the hot months",
+  "אין ימי נחל בעונת שיטפונות": "No wadi days in the flood season",
+  "אין ימים הדורשים הטמנה": "No days require water caching",
+  "אין ימים הדורשים הטמנת מים במסלול שבחרתם.": "No days on your route require water caching.",
+  "אין מידע": "No information",
+  "אין מקטעים בשטחי אש": "No segments in firing zones",
+  "אין נקודות הצטיידות רשומות לטווח המקטעים שנבחר.": "No resupply points listed for the selected segment range.",
+  "אין עדיין איש קשר – לתאם 48 שעות לפני": "No contact yet – coordinate 48 hours ahead",
+  "אין קליטת GPS כרגע": "No GPS fix right now",
+  "אין תוספות מיוחדות – הציוד הבסיסי מספיק.": "No special extras – the base gear is enough.",
+  "אין תמיכה בנעילת מסך": "Screen wake lock not supported",
+  "איפה ישנתי": "Where I slept",
+  "איפה מוצאים מלאכים (רשימות רשמיות וקהילות)": "Where to find angels (official lists and communities)",
+  "איפה צריך להטמין": "Where caching is needed",
+  "איפוס": "Reset",
+  "איפוס הרשימה": "Reset list",
+  "איפוס מלא": "Full reset",
+  "אירוח אצל מלאכי שביל": "Hosted by trail angels",
+  "איש הקשר יודע את התוכנית ואת שעת הצ'ק-אין": "My contact knows the plan and the check-in time",
+  "איש קשר לחירום": "Emergency contact",
+  "אישור תיאום / לוודא ימי פתיחה; להישאר על הסימון": "Coordination approval / check open days; stay on the marked trail",
+  "אלרגיות, תרופות…": "Allergies, medication…",
+  "אני בסדר! מיקומי: https://maps.google.com/?q={0},{1}": "I'm fine! My location: https://maps.google.com/?q={0},{1}",
+  "אנשים שפגשתם, נוף, מים, לינה, מה הייתם עושים אחרת…": "People you met, views, water, lodging, what you'd do differently…",
+  "אפליקציות": "Apps",
+  "אפליקציות ומפות": "Apps and maps",
+  "אפליקציות ומקורות קיימים": "Existing apps and resources",
+  "אפליקציית תכנון וביצוע מסע בשביל ישראל. עובדת גם ללא אינטרנט לאחר הטעינה הראשונה (PWA) – הוסיפו למסך הבית.": "An app for planning and hiking the Israel National Trail. Works offline after the first load (PWA) – add it to your home screen.",
+  "אפר": "Apr",
+  "אפריל": "April",
+  "אפשרויות קיצור:": "Shortcut options:",
+  "אריחי מפה": "Map tiles",
+  "אריחים": "tiles",
+  "ב": "Mon",
+  "באזור {0}": "near {0}",
+  "באר שבע": "Beersheba",
+  "בגד נקי לערב + מתנה קטנה למלאך שביל": "Clean clothes for the evening + a small gift for the trail angel",
+  "בדקתי שבתות וחגים מול ימי הצטיידות ותחבורה": "I checked Shabbat and holidays against resupply and transport days",
+  "בהיר": "Light",
+  "בואו נתכנן 🥾": "Let's plan 🥾",
+  "בודק עדכונים…": "Checking for updates…",
+  "בודק…": "Checking…",
+  "בוץ בשבילי הצפון והמרכז": "Mud on northern and central trails",
+  "בזהירות": "Caution",
+  "בחירום: מסרו מיקום במעלות ודקות (למעלה), תיאור המקטע ומספר ההולכים. חייגו 100 גם כשאין קליטה לרשת שלכם – שיחות חירום עוברות בכל רשת.": "In an emergency: give your position in degrees and minutes (above), the segment and the number of hikers. Dial 100 even without reception on your own network – emergency calls go through any network.",
+  "בחרו יעד…": "Choose a target…",
+  "בחרו כיוון, תאריך וקצב – ותקבלו לו\"ז יומי עם לינה, מים, מלאכי שביל ואזהרות עונתיות. הכול נשמר במכשיר.": "Choose a direction, date and pace – and get a daily schedule with lodging, water, trail angels and seasonal warnings. Everything is saved on your device.",
+  "בטיחות": "Safety",
+  "בטיחות וקשר": "Safety & contact",
+  "בטל סימון": "Unmark",
+  "ביגוד": "Clothing",
+  "ביטוח (חילוץ/רפואי) מסודר": "Insurance (rescue/medical) arranged",
+  "בינוני": "Moderate",
+  "בישול ואוכל": "Cooking and food",
+  "בית": "Home",
+  "בית ספר שדה / אכסניה": "Field school / hostel",
+  "בנגב ובערבה: אזהרת שיטפונות = לא נכנסים לנחלים ולמכתשים, גם אם במקום שלכם בהיר. עומס חום כבד = רט\"ג סוגרת מסלולים.": "Negev and Arava: a flood warning means stay out of wadis and craters, even if it's clear where you are. Severe heat stress = INPA closes trails.",
+  "בנגב ימים ארוכים יותר אפשריים (שטח פתוח) אבל יש פחות מים; בצפון עליות וירידות מאטות.": "Longer days are possible in the Negev (open terrain) but there is less water; in the north climbs and descents slow you down.",
+  "בקבוקים/ג'ריקנים להטמנה + כף חפירה, שקיות סימון": "Bottles/jerrycans for caching + trowel, marker bags",
+  "בקשו אחסון קבוע": "Request persistent storage",
+  "בריאות והיגיינה": "Health and hygiene",
+  "ברשימת החברה להגנת הטבע, בקבוצות הפייסבוק/וואטסאפ או מפה לאוזן בשביל.": "On the SPNI list, in Facebook/WhatsApp groups or by word of mouth on the trail.",
+  "בשביל ישראל": "on the Israel National Trail",
+  "ג": "Tue",
+  "ג'ל חיטוי ידיים": "Hand sanitiser",
+  "ג'ריקנים/בקבוקים להטמנה": "Jerrycans/bottles for caching",
+  "גובה (מ')": "Altitude (m)",
+  "גזייה קטנה + מיכל גז (לקנות בארץ)": "Small stove + gas canister (buy in Israel)",
+  "גיבוי הורד": "Backup downloaded",
+  "גיבוי ושחזור": "Backup and restore",
+  "גיבוי ללא תמונות": "Backup without photos",
+  "גיבוי מלא (כולל תמונות)": "Full backup (incl. photos)",
+  "גיבוי מלא הורד ({0} תמונות)": "Full backup downloaded ({0} photos)",
+  "גייטרים / מכנסיים עמידים לבוץ": "Gaiters / mud-resistant trousers",
+  "גליל": "Galilee",
+  "גרביים נוספות ואבקת טלק – חול וחיכוך; נעליים אווריריות": "Extra socks and talc – sand and chafing; breathable shoes",
+  "גשם": "Rain",
+  "גשם משמעותי – בוץ ונחלים זורמים": "Significant rain – mud and flowing streams",
+  "גשם צפוי בימי נחל/מכתש: {0} – לא להיכנס לנחלים": "Rain expected on wadi/crater days: {0} – do not enter wadis",
+  "ד": "Wed",
+  "ד-מז": "SE",
+  "ד-מע": "SW",
+  "דגשים:": "Notes:",
+  "דוחה יתושים; בדיקת קרציות בערב": "Insect repellent; tick check in the evening",
+  "דיווח על בעיה בסימון": "Report a blazing problem",
+  "דיוק (מ')": "Accuracy (m)",
+  "דירוג שק שינה": "Sleeping bag rating",
+  "דצמ": "Dec",
+  "דצמבר": "December",
+  "דק׳": "min",
+  "דרום": "South",
+  "דרום-מזרח": "South-east",
+  "דרום-מערב": "South-west",
+  "דרום←צפון": "south→north",
+  "ה": "Thu",
+  "ה-GPS כבוי": "GPS is off",
+  "האם תאריך היציאה נופל על חג או שבת (תחבורה).": "Does the start date fall on a holiday or Shabbat (transport)?",
+  "האנשים שהופכים את שביל ישראל למסע של חסד": "The people who turn the Israel Trail into a journey of kindness",
+  "הבא ←": "Next →",
+  "הגדרות": "Settings",
+  "הגעה ותחבורה": "Getting there and transport",
+  "הגעה לנקודת ההתחלה (": "Getting to the start (",
+  "הגעתם ל": "You've reached ",
+  "הגעתם לסוף המקטע! סמנו אותו כהושלם 🎉": "You've reached the end of the segment! Mark it as done 🎉",
+  "הדפדפן טרם אישר אחסון קבוע – במצב של מחסור במקום הוא עלול למחוק מטמונים.": "The browser hasn't granted persistent storage yet – under storage pressure it may evict caches.",
+  "הדפדפן לא תומך ב-GPS": "This browser doesn't support GPS",
+  "הדפדפן לא תומך בהקראה": "This browser doesn't support speech",
+  "ההורדה נכשלה – בדקו חיבור לאינטרנט ונסו שוב": "Download failed – check your internet connection and try again",
+  "ההערות שלי למקטע": "My notes for this segment",
+  "ההקלטה נעצרה": "Recording stopped",
+  "ההתקדמות שלי": "My progress",
+  "ההתקדמות שלי לאורך השביל": "My progress along the trail",
+  "הודעת הזמנת הטמנות הועתקה – שלחו לספק": "Cache order message copied – send it to the supplier",
+  "הודעת וואטסאפ 24–48 שעות לפני: מי אתם, כמה אתם, מתי מגיעים ומה אתם צריכים (רצפה/מקלחת/כביסה).": "A WhatsApp message 24–48 hours ahead: who you are, how many, when you arrive and what you need (floor/shower/laundry).",
+  "הוספה": "Add",
+  "הועתק ללוח": "Copied to clipboard",
+  "הורדה חד-פעמית של תוואי שביל ישראל מ-OSM. נשמר במכשיר ומאפשר: חישוב אחוז התקדמות, מרחק מהשביל והתרעת סטייה – גם בלי אינטרנט.": "One-time download of the trail geometry from OSM. Stored on the device and enables progress percentage, distance from the trail and off-trail alerts – even offline.",
+  "הורדו {0} מתוך {1} אריחים ({2} נכשלו)": "Downloaded {0} of {1} tiles ({2} failed)",
+  "הורדת התוואי": "Download track",
+  "הורדת מפת המקטע": "Download segment map",
+  "הושלם": "Done",
+  "הושלם ✓": "Done ✓",
+  "הושלמו · לפי החלוקה הרשמית של החברה להגנת הטבע": "done · official SPNI segmentation",
+  "הזמנה": "Book",
+  "הזמנה / אתר": "Booking / website",
+  "החלוקה ל-56 מקטעים, האורכים, תיאורי המסלול, העונות, נקודות ההתחלה והסיום, התחבורה וההמלצות באפליקציה מבוססים על המדריך הרשמי (נשלף": "The 56-segment division, lengths, route descriptions, seasons, start/end points, transport and recommendations are based on the official guide (fetched",
+  "הטמנה:": "Caching:",
+  "הטמנות מים (ממוצע)": "Water caches (average)",
+  "הטמנת": "caching",
+  "הטמנת מים": "Water caching",
+  "הטמנת מים נדרשת ({0}).": "Water caching required ({0}).",
+  "היום": "Today",
+  "היום הארוך (ק\"מ)": "Longest day (km)",
+  "היום הארוך ביותר": "Longest day",
+  "היום הבא במסלול:": "Next day on the route:",
+  "היום: {0} ({1} ק\"מ) · לינה: {2}": "Today: {0} ({1} km) · lodging: {2}",
+  "היציאה רחוקה מ-16 יום – התחזית תופיע כשתתקרבו": "The start is more than 16 days away – the forecast will appear closer to the date",
+  "הכול נשמר במכשיר עצמו ונשאר בין פתיחות: התוכנית, היומן והתמונות, ההתקדמות, תוואי השביל ואריחי המפה שהורדתם. אין צורך להעלות או לשמור מחדש.": "Everything is stored on the device itself and persists between launches: the plan, journal and photos, progress, the trail track and downloaded map tiles. No need to upload or re-save.",
+  "הכל": "All",
+  "הכלל: \"עד ערד ואחרי ערד\"": "The rule: \"before Arad and after Arad\"",
+  "הליכה בחולות/חוף": "Walking on sand/beach",
+  "המדריך המלא באתר": "Full guide on the website",
+  "המדריך הרשמי": "Official guide",
+  "המדריך הרשמי של החברה להגנת הטבע": "The official SPNI guide",
+  "המדריך הרשמי – החברה להגנת הטבע": "Official guide – SPNI",
+  "המידע באפליקציה נאסף ממקורות ציבוריים ואינו תחליף למפות ולהנחיות הרשמיות. בטיחות קודמת לכול.": "Information in the app is compiled from public sources and does not replace official maps and guidance. Safety first.",
+  "המידע נאסף ממקורות ציבוריים (החברה להגנת הטבע, רשות הטבע והגנים, קהילות השביל ומדריכים) ועלול להשתנות. אמתו לפני היציאה.": "Information is compiled from public sources (SPNI, INPA, trail communities and guides) and may change. Verify before you go.",
+  "המיקום שלי": "My location",
+  "המכשיר לא תומך במצפן. כיוון ההליכה יחושב מ-GPS בתנועה.": "This device has no compass. Heading will be computed from GPS while moving.",
+  "המכשיר לא תומך בנעילת מסך": "Screen wake lock not supported on this device",
+  "המלאכים שלי": "My angels",
+  "המלאכים שלי ({0})": "My angels ({0})",
+  "המלצות בסביבה": "Nearby recommendations",
+  "המלצות ציוד מהמחקר (החברה להגנת הטבע ושביליסטים)": "Gear recommendations from the research (SPNI and thru-hikers)",
+  "המסך יישאר דולק": "Screen will stay on",
+  "המסך יכול לכבות": "Screen may turn off",
+  "המסע הסתיים 🏆": "Journey complete 🏆",
+  "המסע שלי": "My journey",
+  "המקטע גובל בשטחי אש": "The segment borders firing zones",
+  "המקטע לא נמצא": "Segment not found",
+  "המקטע ללא מקורות מים – נדרשת הטמנה": "No water sources on this segment – caching required",
+  "הנתונים יובאו – טוען מחדש": "Data imported – reloading",
+  "הסימון הוסר": "Mark removed",
+  "הסימונים נשמרים במכשיר. משקל יעד ללא מים ואוכל: 7–10 ק\"ג.": "Checks are saved on the device. Target base weight without water and food: 7–10 kg.",
+  "העונה עכשיו": "The season now",
+  "הערות": "Notes",
+  "הערות רפואיות / תרופות": "Medical notes / medication",
+  "הערות שלי": "My notes",
+  "הערכה: ~0.45 ל'/שעה ב-18°C, +0.1 ל'/שעה לכל 3°C נוספים, מותאם למשקל ולקושי. לא תחליף לשיקול דעת.": "Estimate: ~0.45 L/h at 18°C, +0.1 L/h per extra 3°C, adjusted for weight and difficulty. Not a substitute for judgement.",
+  "הערכת ההתאמה משקללת חום מורגש, גשם (ובנגב – סכנת שיטפון), רוח וסופות. אינה תחליף לאזהרות השירות המטאורולוגי ורשות הטבע והגנים.": "The suitability rating weighs apparent heat, rain (and flood risk in the Negev), wind and storms. It does not replace IMS and INPA warnings.",
+  "העתקה": "Copy",
+  "הפעילו GPS לראות מיקום, התקדמות ומרחקים בזמן אמת": "Turn on GPS to see your position, progress and distances in real time",
+  "הפעלת המצפן (נדרש אישור חיישנים)": "Enable compass (sensor permission required)",
+  "הקו המקווקו סכמטי בין נקודות הקצה. במסך המפה ניתן להוריד את התוואי המלא מ-OpenStreetMap לשימוש לא מקוון.": "The dashed line is schematic between the endpoints. On the map screen you can download the full track from OpenStreetMap for offline use.",
+  "הקואורדינטות הועתקו": "Coordinates copied",
+  "הקלטות GPS": "GPS recordings",
+  "הקלטת מסלול": "Record track",
+  "הקצב הממוצע שלכם לפי היומן:": "Your average pace from the journal:",
+  "הקראה": "Read aloud",
+  "הקראה רציפה": "Continuous reading",
+  "הרמזור משקלל עונה, תחזית חיה (עד 16 יום), שיטפונות, חום, מים, שטחי אש, לינה, שבת/חגים ושעות אור. הוא עוזר להחליט – לא מחליף שיקול דעת ואזהרות רשמיות.": "The traffic light weighs season, live forecast (up to 16 days), floods, heat, water, firing zones, lodging, Shabbat/holidays and daylight. It helps you decide – it does not replace judgement and official warnings.",
+  "הרשימה המלאה עם טלפונים": "Full list with phone numbers",
+  "הרשימה הרשמית ({0})": "Official list ({0})",
+  "הרשימה הרשמית של החברה להגנת הטבע (": "The official SPNI list (",
+  "השם שיופיע בתעודה": "Name to show on the certificate",
+  "התאמה למקטע ולעונה": "Tailored to segment and season",
+  "התאמת העונה לאורך המסע (לפי חודש יציאה):": "Season suitability along the journey (by start month):",
+  "התוואי הורד ונשמר ({0} ק\"מ)": "Track downloaded and saved ({0} km)",
+  "התוואי נמחק מהמכשיר": "Track deleted from device",
+  "התוכנית אפשרית, עם דגשים לטיפול": "The plan is feasible, with points to address",
+  "התוכנית הועתקה ללוח": "Plan copied to clipboard",
+  "התוכנית נוקתה – מתחילים מחדש": "Plan cleared – starting over",
+  "התוכנית נראית טוב – אפשר לצאת": "The plan looks good – ready to go",
+  "התזמון מתאים לאזורים שתעברו בהם": "The timing suits the regions you'll cross",
+  "התחזית לימים הקרובים נוחה להליכה": "The forecast for the coming days is comfortable for hiking",
+  "התחל": "Start",
+  "התחלה: {0}": "Start: {0}",
+  "התיאור הרשמי נכתב מצפון לדרום. אתם הולכים דרומה←צפונה, ולכן השלבים מוצגים בסדר הפוך – \"ימינה/שמאלה\" ו\"עולים/יורדים\" בטקסט מתייחסים לכיוון ההפוך.": "The official description is written north to south. You're walking south→north, so the steps are shown in reverse – \"right/left\" and \"up/down\" in the text refer to the opposite direction.",
+  "התיאור: המדריך הרשמי של החברה להגנת הטבע": "Description: the official SPNI guide",
+  "התמונות נדחסות ונשמרות במכשיר בלבד (IndexedDB). מומלץ לגבות מדי פעם.": "Photos are compressed and stored only on the device (IndexedDB). Back up occasionally.",
+  "ו": "Fri",
+  "ועוד": "and more",
+  "זמן": "Time",
+  "זמן משוער לחניון הקרוב בקצב": "Estimated time to the nearest camp at",
+  "זריחה": "Sunrise",
+  "חבל דק / חוטי כביסה + אטבים": "Thin cord / clothesline + pegs",
+  "חדש": "New",
+  "חדשים": "new",
+  "חודש": "Month",
+  "חולצה ארוכה בהירה נגד שמש": "Light long-sleeve sun shirt",
+  "חום": "Heat",
+  "חום במדבר": "Desert heat",
+  "חום גבוה – לצאת מוקדם, לשתות הרבה, להפסיק בצהריים": "High heat – start early, drink a lot, stop at midday",
+  "חום כבד": "Severe heat",
+  "חום כבד ולחות – לא מומלץ לצעוד באמצע היום. לצאת עם שחר ולסיים עד 11:00.": "Severe heat and humidity – don't walk at midday. Start at dawn and finish by 11:00.",
+  "חום כבד – יציאה עם שחר": "Severe heat – start at dawn",
+  "חום קיצוני – לא לצעוד": "Extreme heat – do not walk",
+  "חזרה": "Back",
+  "חזרה למקטע": "Back to segment",
+  "חזרה מנקודת הסיום (": "Return from the end point (",
+  "חיות בר בחניוני הלילה": "Wildlife at night camps",
+  "חיפה (כרמל)": "Haifa (Carmel)",
+  "חיפוש בשאלות…": "Search questions…",
+  "חיפוש יישוב / מה מציעים…": "Search settlement / what's offered…",
+  "חיפוש מקטע, יישוב, אתר…": "Search segment, place, site…",
+  "חירום": "Emergency",
+  "חלוקה למקטעים:": "Segmentation:",
+  "חלק מהימים בעונה קשה": "Some days fall in a hard season",
+  "חם": "Hot",
+  "חם מאוד": "Very hot",
+  "חם מאוד בנגב בעונה זו – לצאת לפני הזריחה, 5–6 ליטר מים ליום, ולהימנע מהליכה בשעות הצהריים.": "Very hot in the Negev this season – start before sunrise, 5–6 litres of water per day, and avoid walking at midday.",
+  "חם – כובע, מים והצללה": "Hot – hat, water and shade",
+  "חניה:": "Parking:",
+  "חניון לילה": "Night camp",
+  "חניון לילה / לינת שטח": "Night camp / wild camping",
+  "חניון לילה / מלאך שביל…": "Night camp / trail angel…",
+  "חניוני הלילה של שביל ישראל (רט\"ג/קק\"ל) הם המקומות היחידים שבהם מותר ללון בשמורות טבע ובנגב. רובם חינם, ללא מתקנים, וחלקם עם ברז מים. הגיעו לפני החשכה.": "The INT night camps (INPA/KKL) are the only places where camping is allowed in nature reserves and the Negev. Most are free, without facilities, some with a water tap. Arrive before dark.",
+  "חניוני לילה בסביבה": "Night camps nearby",
+  "חניוני לילה עם מים (דרום)": "Night camps with water (south)",
+  "חרמון": "Hermon",
+  "חרמון ← אילת": "Hermon → Eilat",
+  "טבלת אקלים חודשית": "Monthly climate table",
+  "טבריה": "Tiberias",
+  "טוען תחזית": "Loading forecast",
+  "טוען תחזית חיה לנקודת ההתחלה…": "Loading live forecast for the start point…",
+  "טוען תחזית חיה…": "Loading live forecast…",
+  "טוען תחנות…": "Loading stations…",
+  "טוען…": "Loading…",
+  "טיול אחראי": "Responsible hiking",
+  "טלפון": "Phone",
+  "טלפון + מפות לא-מקוונות (האפליקציה הזו + Israel Hiking Map)": "Phone + offline maps (this app + Israel Hiking Map)",
+  "טלפון, חשמל ומפות לא מקוונות": "Phone, power and offline maps",
+  "טמפרטורה מרבית צפויה:": "Expected maximum temperature:",
+  "טקסט גדול": "Large text",
+  "יודע/ת לבדוק אזהרות שיטפונות ועומס חום לפני כל יום מדבר": "I know how to check flood and heat warnings before every desert day",
+  "יול": "Jul",
+  "יולי": "July",
+  "יום": "Day",
+  "יום {0} ({1}) {2}: {3} {4}°{5} – {6}": "Day {0} ({1}) {2}: {3} {4}°{5} – {6}",
+  "יום {0} ({1}׳): {2}": "Day {0} ({1}): {2}",
+  "יום {0} · {1} · {2}": "Day {0} · {1} · {2}",
+  "יום {0}: {1}": "Day {0}: {1}",
+  "יום {0}: {1} ק\"מ (~{2} שע׳)": "Day {0}: {1} km (~{2} h)",
+  "יום הזיכרון ויום העצמאות": "Memorial Day and Independence Day",
+  "יום כיפור": "Yom Kippur",
+  "יום מנוחה": "Rest day",
+  "יום מנוחה כל": "Rest day every",
+  "יום מנוחה כל 6–7 ימים ביישוב עם סופר, כביסה ומקלחת.": "A rest day every 6–7 days in a settlement with a supermarket, laundry and shower.",
+  "יום מנוחה 😌": "Rest day 😌",
+  "יום שישי: חנויות נסגרות מוקדם, תחבורה ציבורית עד הצהריים.": "Friday: shops close early, public transport until noon.",
+  "יומן": "Journal",
+  "יומן המסע": "Trail journal",
+  "יומן המסע שלי בשביל ישראל {0} מקטעים · {1} ק\"מ מתוך {2}": "My Israel Trail journal {0} segments · {1} km of {2}",
+  "יומן מסע": "Journal",
+  "יומן שביל ישראל": "Israel Trail journal",
+  "יונ": "Jun",
+  "יוני": "June",
+  "יותר מ-6.5 ליטר – שקלו הטמנה באמצע המקטע, יציאה לפני הזריחה, או פיצול המקטע.": "More than 6.5 litres – consider a mid-segment cache, starting before sunrise, or splitting the segment.",
+  "ייבוא גיבוי": "Import backup",
+  "ייצוא GPX": "Export GPX",
+  "יישוב": "Settlement",
+  "יישובים נוספים עם מסורת אירוח (ממקורות קהילתיים)": "More settlements with a hosting tradition (community sources)",
+  "יישובים עם מסורת אירוח (מצפון לדרום)": "Settlements with a hosting tradition (north to south)",
+  "ים המלח": "Dead Sea",
+  "ימי אוכל": "Food days",
+  "ימי הליכה": "Walking days",
+  "ימי הליכה בשבת": "Walking days on Shabbat",
+  "ימי הקלטה": "recording days",
+  "ימי מדבר": "Desert days",
+  "ימי מנוחה": "Rest days",
+  "ימי מנוחה:": "Rest days:",
+  "ימים": "Days",
+  "ימים (משוער)": "Days (est.)",
+  "ימים בעונה מסוכנת – שקלו לשנות תאריך או כיוון": "Days in a dangerous season – consider changing the date or direction",
+  "ימים ליציאה": "days to go",
+  "ימים ללא מים": "Days without water",
+  "ימים מתועדים": "Days logged",
+  "ימים סה״כ": "Total days",
+  "ינו": "Jan",
+  "ינואר": "January",
+  "יעד לניווט": "Navigation target",
+  "יציאה:": "Start:",
+  "ירוקים": "green",
+  "ירושלים": "Jerusalem",
+  "ירושלים (ללא GPS)": "Jerusalem (no GPS)",
+  "יש איש קשר": "Contact saved",
+  "יש בעיות מהותיות בתוכנית": "There are serious problems with the plan",
+  "כבאות": "Fire & Rescue",
+  "כהה": "Dark",
+  "כובע רחב + חולצה ארוכה + משקפי שמש + קרם SPF50": "Wide-brim hat + long sleeves + sunglasses + SPF50",
+  "כובע רחב שוליים + באף": "Wide-brim hat + buff",
+  "כיוון ההליכה": "Walking direction",
+  "כיוון המכשיר": "Device heading",
+  "כיוון תנועה (GPS)": "Course over ground (GPS)",
+  "כיסוי גשם לתרמיל / שק פנימי אטום": "Pack rain cover / waterproof liner",
+  "כל הדרגות": "All levels",
+  "כל הימים נכנסים בשעות האור": "All days fit within daylight",
+  "כל הכבוד! המקטע סומן כהושלם 🎉": "Well done! Segment marked as complete 🎉",
+  "כל העדכונים ←": "All updates →",
+  "כל מה שצריך לדעת": "Everything you need to know",
+  "כלל הכיוון:": "Direction rule:",
+  "כללי התנהגות אצל מלאך שביל": "Etiquette at a trail angel's",
+  "כללי התנהגות מלאים": "Full etiquette",
+  "כללי לינה ואש בשטח": "Camping and fire rules",
+  "כמה מים?": "How much water?",
+  "כנרת": "Kinneret",
+  "כסף ותקציב": "Money and budget",
+  "כפפות עבודה קלות + נעליים עם אחיזה טובה; לארוז את התרמיל קומפקטי (לקטעי סולמות)": "Light work gloves + shoes with good grip; pack compactly (ladder sections)",
+  "כרמל": "Carmel",
+  "כתב:": "Written by:",
+  "ל'": "L",
+  "ל' בהליכה": "L walking",
+  "ל' לערב/בישול": "L evening/cooking",
+  "ל' לשאת": "L to carry",
+  "לא הולכים בשבת": "No walking on Shabbat",
+  "לא כולל:": "Excludes:",
+  "לא לצאת": "Don't go",
+  "לא מקוון": "Offline",
+  "לא ניתן לטעון כרגע.": "Can't load right now.",
+  "לא ניתן לרענן כרגע": "Can't refresh right now",
+  "לא נמצאו אזהרות בטיחות בתוכנית.": "No safety warnings found in the plan.",
+  "לא נמצאו מארחים לחיפוש הזה": "No hosts found for this search",
+  "לא נמצאו מקטעים": "No segments found",
+  "לא פורסם": "Not published",
+  "לא קבוע": "Not persistent",
+  "לאורך השביל עכשיו": "Along the trail now",
+  "לאפס את ההתקדמות במקטע?": "Reset progress in this segment?",
+  "לבדוק לינה ביישוב הקרוב": "Check lodging in the nearest settlement",
+  "לבדוק עדכוני תוואי וסגירות": "Check route updates and closures",
+  "לבדוק תחזית ואזהרות שיטפונות יום לפני כל מקטע": "Check the forecast and flood warnings the day before each segment",
+  "לבדוק תחזית שיטפונות בבוקר; שקיות אטומות לציוד": "Check the flood forecast in the morning; dry bags for gear",
+  "להוריד תוואי OSM ומפות למקטעים (לשימוש לא מקוון)": "Download the OSM track and segment maps (offline use)",
+  "להזמין הטמנות מים / לתכנן מילוי": "Order water caches / plan refills",
+  "להימנע": "Avoid",
+  "לוגיסטיקה": "Logistics",
+  "לוח זמנים יומי": "Daily schedule",
+  "לחצו לקרוא": "tap to read",
+  "לחצו על נקודה לקריאת ההיסטוריה והמהות שלה (ויקיפדיה), עם תמונות.": "Tap a point to read its history and essence (Wikipedia), with photos.",
+  "לטבלה המלאה ←": "Full table →",
+  "ליד {0}": "near {0}",
+  "ליטר מים": "Litres of water",
+  "ליטרים ששתיתי": "Litres I drank",
+  "לילות אצל מלאכים": "Nights with angels",
+  "לילות בתשלום": "Paid nights",
+  "לילות שטח": "Nights camping",
+  "לינה": "Lodging",
+  "לינה בסיום המקטע": "Lodging at the end of the segment",
+  "לינה בתשלום": "Paid lodging",
+  "לינה בתשלום (אכסניות/צימרים)": "Paid lodging (hostels/guesthouses)",
+  "לינה ומים": "Lodging & water",
+  "לינה ומלאכי שביל": "Lodging and trail angels",
+  "לינה:": "Lodging:",
+  "לינת שטח בלבד": "Wild camping only",
+  "לינת שטח בתוואי (חלוקת מקטע ארוך) – לוודא מים": "Camp on the trail (long segment split) – make sure of water",
+  "לכיש": "Lachish",
+  "לכל יום כזה צריך הטמנה (עצמית, מלאך שביל או ספק). סמנו כשסודר:": "Each of these days needs a cache (self, trail angel or supplier). Tick when arranged:",
+  "ללא": "None",
+  "ללא מים": "No water",
+  "למדריך הלינה המלא ←": "Full lodging guide →",
+  "למדריך המלא באתר": "Full guide on the website",
+  "למחוק את הרשומה והתמונות שלה?": "Delete this entry and its photos?",
+  "למחוק את כל אריחי המפה שהורדו?": "Delete all downloaded map tiles?",
+  "למחוק את כל הנתונים השמורים במכשיר?": "Delete all data stored on this device?",
+  "למקטע זה אין עדיין תיאור מסלול מפורט.": "This segment has no detailed route description yet.",
+  "לניווט שטח אמיתי מומלץ להחזיק גם אפליקציה ייעודית (Israel Hiking Map / עמוד ענן) ומפת סימון שבילים מודפסת. ה-GPS תלוי בסוללה ובקליטה.": "For real field navigation also carry a dedicated app (Israel Hiking Map / Amud Anan) and a printed trail map. GPS depends on battery and reception.",
+  "לנקות את התוכנית? יימחקו הכיוון, התאריכים, כל הסימונים וההכנות (היומן, התמונות ורשימת הציוד הבסיסית נשמרים).": "Clear the plan? Direction, dates, all checks and preparations will be deleted (journal, photos and the base gear list are kept).",
+  "לסיום המקטע (": "To the end of the segment (",
+  "לעבור על רשימת הציוד לפי העונה": "Go over the gear list for the season",
+  "לעדכונים אחרונים על מצב השבילים (סגירות, שיטפונות, שריפות):": "For the latest trail conditions (closures, floods, fires):",
+  "לעמוד המקטע באתר": "Segment page on the website",
+  "לעמוד העדכונים ←": "Updates page →",
+  "לפי ה-GPS אתם בערך בשלב": "By GPS you're around step",
+  "לפני החלפת טלפון או מחיקת האפליקציה – גבו לקובץ. \"גיבוי מלא\" כולל גם את התמונות (קובץ גדול יותר).": "Before switching phones or deleting the app – back up to a file. \"Full backup\" includes photos (larger file).",
+  "לפרטים ולטיפול ←": "Details and actions →",
+  "לקבוע איש קשר לצ'ק-אין יומי ולהעביר לו את התוכנית": "Set a daily check-in contact and send them the plan",
+  "לרשימת הציוד המלאה ←": "Full gear list →",
+  "לתאם מלאכי שביל ולהוסיף אנשי קשר": "Coordinate trail angels and add contacts",
+  "לתאם עד {0}": "coordinate by {0}",
+  "לתוכנית המלאה": "Full plan",
+  "לתכנן הגעה לנקודת ההתחלה וחזרה": "Plan transport to the start and back",
+  "מ\"מ": "mm",
+  "מ'": "m",
+  "מ' טיפוס": "m ascent",
+  "מאי": "May",
+  "מאילת ועד החרמון": "from Eilat to Hermon",
+  "מארחים ברשימה הרשמית של החברה להגנת הטבע. פרטי קשר – בעמוד האזורי באתר.": "hosts on the official SPNI list. Contact details – on the regional page of the website.",
+  "מארחים,": "hosts,",
+  "מאתרים": "Find",
+  "מבוסס על חיפוש בחנויות האפליקציות ובביקורות (נובמבר 2026). דירוגים ומחירים משתנים.": "Based on app-store searches and reviews (November 2026). Ratings and prices change.",
+  "מגיעים בזמן": "Arrive on time",
+  "מד מרחק יומי": "Daily odometer",
+  "מד\"א": "MDA (ambulance)",
+  "מדבר יהודה": "Judean Desert",
+  "מדריך": "Guide",
+  "מדריך הבטיחות המלא ←": "Full safety guide →",
+  "מדריכי הכנה ובטיחות": "Preparation and safety guides",
+  "מה האפליקציה הזו מוסיפה (לא קיים אצל אחרים)": "What this app adds (not found elsewhere)",
+  "מה יש:": "Features:",
+  "מה מציעים, מתי זמינים, איך הגעתם אליהם…": "What they offer, when available, how you found them…",
+  "מה קרה היום?": "What happened today?",
+  "מהחרמון ועד אילת": "From Hermon to Eilat",
+  "מהמקטע": "of segment",
+  "מהשביל": "from trail",
+  "מומלץ לצאת באוקטובר–נובמבר: הצפון עוד יבש, ומגיעים לנגב בחורף הנעים.": "Best to start in October–November: the north is still dry and you reach the Negev in the pleasant winter.",
+  "מומלץ לצאת בפברואר–מרץ: חוצים את הנגב לפני החום ומגיעים לצפון הפורח באביב.": "Best to start in February–March: cross the Negev before the heat and reach the blooming north in spring.",
+  "מוענקת ל": "Awarded to",
+  "מוצג תוואי סכמטי. הורידו את התוואי המלא (שכבות ←) לדיוק מלא ולחישוב התקדמות": "Schematic track shown. Download the full track (Layers →) for accuracy and progress tracking",
+  "מוקד טבע": "Nature Hotline",
+  "מורגש": "feels like",
+  "מוריד את אריחי המפה של אזור המקטע (זום 11–15,": "Downloads the map tiles of the segment area (zoom 11–15,",
+  "מוריד את תוואי השביל מ-OpenStreetMap…": "Downloading the trail track from OpenStreetMap…",
+  "מוריד תוואי…": "Downloading track…",
+  "מוריד…": "Downloading…",
+  "מז": "E",
+  "מזג אוויר": "Weather",
+  "מזג אוויר חי": "Live weather",
+  "מזומן לחניונים/מלאכים, כרטיס אשראי, תקציב יומי": "Cash for camps/angels, credit card, daily budget",
+  "מזרח": "East",
+  "מזרן מתנפח/מתקפל": "Inflatable/foam sleeping pad",
+  "מחוץ למקטעים": "Outside the segments",
+  "מחיקה": "Delete",
+  "מחיקת אריחי מפה": "Delete map tiles",
+  "מחפש לוויינים…": "Searching for satellites…",
+  "מחפש לוויינים… (בחוץ, עם שמיים פתוחים, זה לוקח עד דקה)": "Searching for satellites… (outdoors with open sky this takes up to a minute)",
+  "מחר: {0}": "Tomorrow: {0}",
+  "מחשבון מים למקטע": "Water calculator for this segment",
+  "מחשבון משקל ורשימה מלאה ←": "Weight calculator and full list →",
+  "מחשבון תקציב ←": "Budget calculator →",
+  "מטריית טיולים / יריעת צל להפסקת צהריים": "Hiking umbrella / shade sheet for the midday break",
+  "מי הם?": "Who are they?",
+  "מידע": "Info",
+  "מים": "Water",
+  "מים במקטע": "Water on this segment",
+  "מים ואוכל": "Water & food",
+  "מים והטמנות": "Water & caching",
+  "מים לשאת": "Water to carry",
+  "מינימום": "Minimum",
+  "מינ׳": "Min",
+  "מיקום חי": "Live location",
+  "מיקומך": "your location",
+  "מישור החוף": "Coastal Plain",
+  "מכנסי הליכה + מכנסיים קצרים": "Hiking trousers + shorts",
+  "מלאך שביל": "Trail angel",
+  "מלאכי שביל": "Trail angels",
+  "מלאכים": "Angels",
+  "מלחים / אבקת אלקטרוליטים": "Salts / electrolyte powder",
+  "מלחים/אלקטרוליטים בקיץ ובמדבר.": "Salts/electrolytes in summer and in the desert.",
+  "ממוצע": "Average",
+  "ממוצע יומי": "Daily average",
+  "ממוצע ק\"מ/יום": "Avg km/day",
+  "ממני": "from me",
+  "ממקטע": "From segment",
+  "ממתין לחיישנים…": "Waiting for sensors…",
+  "מנוחה": "Rest",
+  "מנוחה, כביסה, הצטיידות ותכנון ההמשך.": "Rest, laundry, resupply and planning ahead.",
+  "מסע של": "A journey of",
+  "מסע שלם": "the full journey",
+  "מספר ימים:": "Number of days:",
+  "מספרי הטלפון של המלאכים אינם מפורסמים באפליקציה (פרטיות). שמרו אותם בכרטיסייה \"המלאכים שלי\" לאחר שתקבלו מהרשימות הרשמיות.": "Angels' phone numbers are not published in the app (privacy). Save them under \"My angels\" once you get them from the official lists.",
+  "מספרי חירום": "Emergency numbers",
+  "מספרי חירום שמורים: 100 · 101 · *3639 · *6911": "Emergency numbers saved: 100 · 101 · *3639 · *6911",
+  "מספרי טלפון של מלאכי שביל, נקודות מים שמצאתם, טיפים…": "Trail-angel phone numbers, water points you found, tips…",
+  "מע": "W",
+  "מעבר בנחלים בעונת גשמים": "Wadi crossings in the rainy season",
+  "מעדכנים על עיכובים; לא מגיעים אחרי חשכה בלי לתאם.": "Update them about delays; don't arrive after dark without coordinating.",
+  "מעיל גשם קל + כיסוי לתרמיל": "Light rain jacket + pack cover",
+  "מעיל גשם, כיסוי לתרמיל וגייטרים לבוץ": "Rain jacket, pack cover and gaiters for mud",
+  "מעל 32°C: סכנת מכת חום. לא לצאת למקטע מדברי ארוך.": "Above 32°C: heat-stroke risk. Don't start a long desert segment.",
+  "מעלות ודקות (לחילוץ)": "Degrees & minutes (for rescue)",
+  "מעלות עשרוניות": "Decimal degrees",
+  "מערב": "West",
+  "מפה": "Map",
+  "מפה חיה": "Live map",
+  "מפות לשימוש לא מקוון: בדף כל מקטע, בלשונית \"מפה\", יש כפתור להורדת אריחי המפה של המקטע. אריחים שנצפו במסך המפה נשמרים גם הם.": "Offline maps: on each segment page, under the \"Map\" tab, there is a button to download the segment's map tiles. Tiles viewed on the map screen are saved too.",
+  "מפות: OpenStreetMap, Israel Hiking Map, OpenTopoMap. תמונות: Wikimedia Commons (רישיונות חופשיים, קרדיט מופיע על כל תמונה). מזג אוויר: Open-Meteo.": "Maps: OpenStreetMap, Israel Hiking Map, OpenTopoMap. Photos: Wikimedia Commons (free licences, credit on every photo). Weather: Open-Meteo.",
+  "מפת הטיולים של ישראל": "Israel Hiking Map",
+  "מפת הטיולים של ישראל מציגה סימוני שבילים ואת שביל ישראל. אריחים שנצפו נשמרים לשימוש לא מקוון – גללו מראש על המקטעים שלכם.": "Israel Hiking Map shows trail blazes and the INT. Viewed tiles are saved for offline use – pan over your segments in advance.",
+  "מפת המקטע שמורה במכשיר ({0} אריחים) ✓": "Segment map saved on device ({0} tiles) ✓",
+  "מפת העונות": "Season map",
+  "מפת סימון שבילים מודפסת / ספר השביל": "Printed trail map / trail guidebook",
+  "מפת רקע": "Base map",
+  "מצב רוח": "Mood",
+  "מצב תצוגה": "Display mode",
+  "מצוין": "Excellent",
+  "מצית + גפרורים עמידים למים": "Lighter + waterproof matches",
+  "מצפה רמון": "Mitzpe Ramon",
+  "מצפן גיבוי": "Backup compass",
+  "מצפן וניווט": "Compass & navigation",
+  "מקור": "Source",
+  "מקור: החברה להגנת הטבע · נשלף": "Source: SPNI · fetched",
+  "מקור: ויקיפדיה העברית (CC BY-SA). התמונה והטקסט עשויים להתייחס לאתר הכללי ולא לנקודה המדויקת על השביל.": "Source: Hebrew Wikipedia (CC BY-SA). The image and text may refer to the general site rather than the exact point on the trail.",
+  "מקורות המים במקטע הם מעיינות": "Water sources on this segment are springs",
+  "מקורות נתונים:": "Data sources:",
+  "מקטע": "Segment",
+  "מקטע {0} ({1})": "Segment {0} ({1})",
+  "מקטע {0} – {1}": "Segment {0} – {1}",
+  "מקטע ארוך ({0} ק\"מ)": "Long segment ({0} km)",
+  "מקטעי השביל": "Trail segments",
+  "מקטעים": "Segments",
+  "מקטעים ·": "segments ·",
+  "מקטעים בשביל ·": "segments on the trail ·",
+  "מקטעים הושלמו ·": "segments done ·",
+  "מקטעים רלוונטיים:": "Relevant segments:",
+  "מקטעים רשמיים · מתכנן, מפה חיה ומלווה בשטח": "official segments · planner, live map and trail companion",
+  "מקטעים שתרצו לדלג עליהם (עירוניים) – הגדירו טווח מקטעים.": "Segments you'd rather skip (urban) – set a segment range.",
+  "מקלות הליכה": "Trekking poles",
+  "מקליט את המסלול שלך": "Recording your track",
+  "מקסימום": "Maximum",
+  "מקסימום ליום (פיצול מקטעים ארוכים):": "Maximum per day (splitting long segments):",
+  "מקס׳": "Max",
+  "מראה": "Appearance",
+  "מרכז": "Center",
+  "מרכז (ת\"א)": "Center (Tel Aviv)",
+  "מרץ": "March",
+  "משולב (מלאכים + אוהל + מדי פעם בתשלום)": "Mixed (angels + tent + occasionally paid)",
+  "משחת אנטי-שפשוף": "Anti-chafing balm",
+  "משטרה": "Police",
+  "משקל בסיס של הציוד (ללא מים ואוכל):": "Base gear weight (without water and food):",
+  "משקל גוף:": "Body weight:",
+  "משקפי שמש": "Sunglasses",
+  "משרוקית": "Whistle",
+  "מתאמים מראש": "Coordinate ahead",
+  "מתוך": "of",
+  "מתעדכן אוטומטית · לחצו לתחזית שעתית ולתחנות לאורך השביל": "Updates automatically · tap for hourly forecast and stations along the trail",
+  "מתרענן אוטומטית בכל פתיחה": "refreshes automatically on every launch",
+  "נגב": "Negev",
+  "נדרשת הטמנת מים.": "Water caching required.",
+  "נוב": "Nov",
+  "נובמבר": "November",
+  "נופים מהשביל": "Views from the trail",
+  "נוצר באפליקציית \"שביל ישראל – מתכנן המסע\"": "Created with the \"Israel Trail – Trip Planner\" app",
+  "נותרו בשביל": "left on trail",
+  "ניווט": "Navigate",
+  "ניווט ותקשורת": "Navigation and communication",
+  "נייר טואלט + כף חפירה קטנה": "Toilet paper + small trowel",
+  "נמדדו ב-GPS:": "Measured by GPS:",
+  "נעלי הליכה מוכרות (לא חדשות!)": "Broken-in hiking shoes (not new!)",
+  "נקה תוכנית": "Clear plan",
+  "נקודות": "Points",
+  "נקודות הצטיידות (מצפון לדרום)": "Resupply points (north to south)",
+  "נקודות עניין": "Points of interest",
+  "נקודת התחלה": "Start point",
+  "נקודת סיום": "End point",
+  "נשיאה ולינה": "Carrying and sleeping",
+  "נשלף מאתר החברה להגנת הטבע ב-": "Fetched from the SPNI website on ",
+  "נשמר אוטומטית במכשיר.": "Saved automatically on the device.",
+  "נשמר אוטומטית ✓": "Saved automatically ✓",
+  "נשמר ביומן ✓": "Saved to journal ✓",
+  "סבון ביולוגי, מברשת + משחת שיניים": "Biodegradable soap, toothbrush + toothpaste",
+  "סביר": "Fair",
+  "סגור": "Close",
+  "סגנון לינה מועדף": "Preferred lodging style",
+  "סדום": "Sodom",
+  "סה\"כ ימים:": "Total days:",
+  "סוכות ושמחת תורה": "Sukkot and Simchat Torah",
+  "סוללת גיבוי 10,000–20,000mAh + כבלים": "Power bank 10,000–20,000 mAh + cables",
+  "סוללת גיבוי, SIM עם דאטה, הורדת מפות ותוואי לשימוש לא מקוון": "Power bank, SIM with data, maps and track downloaded for offline use",
+  "סוף {0} ({1})": "End of {0} ({1})",
+  "סוף השביל": "End of the trail",
+  "סופות רעמים": "Thunderstorms",
+  "סטטוס": "Status",
+  "סיום": "End",
+  "סיום השביל: {0}": "Trail end: {0}",
+  "סיום:": "End:",
+  "סיום: {0}": "End: {0}",
+  "סיימנו 🏁": "Finished 🏁",
+  "סיכוי לגשם": "Chance of rain",
+  "סימון וניווט": "Blazing & navigation",
+  "סימון שביל ישראל": "INT blaze",
+  "סיפור דרך · מקטע": "Route story · segment",
+  "סיפור דרך – ניווט שלב אחר שלב": "Route story – step-by-step navigation",
+  "סיר קטן + כף": "Small pot + spoon",
+  "סכין רב-שימושית": "Multi-tool knife",
+  "סכנת": "Danger",
+  "סכנת חיים": "Life-threatening",
+  "סכנת חיים: אין לטייל בנגב בחודשי הקיץ.": "Life-threatening: do not hike the Negev in summer.",
+  "סכנת חיים: אין לטייל בנגב ובערבה בחודשי הקיץ. רשות הטבע והגנים סוגרת מסלולים בימי שרב.": "Life-threatening: do not hike the Negev and Arava in summer. INPA closes trails on heatwave days.",
+  "סכנת מכת חום – לא לטייל בשעות היום": "Heat-stroke danger – don't hike during the day",
+  "סכנת שיטפון בעונת הגשמים – לבדוק תחזית ואזהרות רט\"ג בבוקר לפני הכניסה לנחל.": "Flash-flood danger in the rainy season – check the forecast and INPA warnings in the morning before entering a wadi.",
+  "סכנת שיטפונות בנחלי המדבר": "Flash-flood danger in desert wadis",
+  "סמן כהושלם": "Mark as done",
+  "סמנו כל לילה שסודר (תיאום עם מלאך / הזמנה). לילות שטח לא דורשים תיאום.": "Tick each night once arranged (angel coordination / booking). Camping nights need no arrangement.",
+  "סמנו נקודות שתכננתם לקנות בהן אוכל (בנגב: 2–4 ימי אוכל בין נקודה לנקודה).": "Tick the points where you plan to buy food (Negev: 2–4 days of food between points).",
+  "סנדלים לערב ולמעברי מים": "Sandals for evenings and water crossings",
+  "ספט": "Sep",
+  "ספטמבר": "September",
+  "ספקים והנחיות": "Suppliers and guidance",
+  "עד מקטע": "To segment",
+  "עדכוני תוואי": "Route updates",
+  "עדכוני תוואי וסגירות ביטחוניות במקטעי הצפון (מדריך ← המדריך הרשמי).": "Route updates and security closures on the northern segments (Guide → Official guide).",
+  "עדכונים ושינויים בתוואי": "Route updates and changes",
+  "עדכנו לפי הקצב האמיתי ←": "Update to your real pace →",
+  "עוד אין אנשי קשר. הוסיפו מלאכים שמצאתם ברשימות ותאמו איתם מראש.": "No contacts yet. Add angels you found in the lists and coordinate with them ahead.",
+  "עוד אין רשומות. תעדו כל יום – חוויות, אנשים, תמונות, נקודות מים, טיפים לבאים אחריכם.": "No entries yet. Log every day – experiences, people, photos, water points, tips for those after you.",
+  "עוד אין תמונות. הוסיפו תמונות לרשומות היומן.": "No photos yet. Add photos to journal entries.",
+  "עוד לא תכננתם מסע?": "Haven't planned a journey yet?",
+  "עודכן לפני {0} דק׳": "updated {0} min ago",
+  "עודכן:": "Updated:",
+  "עוזרים, לא מבזבזים מים וחשמל, משאירים נקי, מודים – ומשלמים קדימה כשתוכלו.": "Help out, don't waste water and power, leave it clean, say thanks – and pay it forward when you can.",
+  "עונה חמה – לצאת מוקדם, להצטייד במים ולתכנן הפסקת צהריים בצל.": "Hot season – start early, stock up on water and plan a midday break in the shade.",
+  "עונה מול אזור": "Season vs region",
+  "עונה מומלצת:": "Recommended season:",
+  "עונות": "Seasons",
+  "עונת גשמים": "Rainy season",
+  "עונת גשמים: בוץ בנחלים, סכנת שיטפונות בנחלי הצפון והמרכז, לבדוק תחזית.": "Rainy season: mud in wadis, flood risk in northern and central streams, check the forecast.",
+  "על האפליקציה": "About the app",
+  "על השלמת": "for completing",
+  "עמק": "Valley",
+  "עצור": "Stop",
+  "עקוב אחרי": "Follow me",
+  "ערבה": "Arava",
+  "ערד": "Arad",
+  "ערכת עזרה ראשונה (פלסטרים לשלפוחיות, תחבושת אלסטית, משככי כאבים, אנטיהיסטמין)": "First-aid kit (blister plasters, elastic bandage, painkillers, antihistamine)",
+  "ערכת תיקונים: סרט דביק, חוט ומחט": "Repair kit: duct tape, needle and thread",
+  "פבר": "Feb",
+  "פברואר": "February",
+  "פחות משעתיים אור – מומלץ להגיע ללינה. בשטח פתוח מתקררים מהר אחרי השקיעה.": "Less than two hours of daylight – time to reach your camp. It gets cold fast after sunset in open terrain.",
+  "פילטר / טבליות כלור לטיהור מים": "Filter / chlorine tablets for water treatment",
+  "פירוט רכיבי העלות": "Cost breakdown",
+  "פיתוח: דודו טל": "Developed by: Dudu Tal",
+  "פליז / שכבת חום": "Fleece / warm layer",
+  "פנס ראש + סוללות": "Headlamp + batteries",
+  "פנקס ועט ליומן": "Notebook and pen for the journal",
+  "פסח": "Passover",
+  "פסק זמן בקבלת מיקום": "Timed out getting location",
+  "פרופיל": "Profile",
+  "פרטי המקטע": "Segment details",
+  "פרטי קשר באתר": "Contact details on the website",
+  "פתיחה במפה המלאה": "Open in full map",
+  "צ": "N",
+  "צ'ק-אין הבא מחר בערב 🙂": "Next check-in tomorrow evening 🙂",
+  "צ-מז": "NE",
+  "צ-מע": "NW",
+  "צהובים ·": "yellow ·",
+  "ציוד": "Gear",
+  "ציוד בסיסי": "Base gear",
+  "ציוד לעונה": "Gear for the season",
+  "ציוד מומלץ למקטע זה לפי חודש": "Recommended gear for this segment by month",
+  "צמחייה וקרציות": "Vegetation and ticks",
+  "צפון": "North",
+  "צפון (ק. שמונה)": "North (Kiryat Shmona)",
+  "צפון-מזרח": "North-east",
+  "צפון-מערב": "North-west",
+  "צפון←דרום": "north→south",
+  "ק\"ג": "kg",
+  "ק\"ג על הגב": "kg on your back",
+  "ק\"ג על הגב (משוער)": "kg on your back (est.)",
+  "ק\"מ": "km",
+  "ק\"מ (": "km (",
+  "ק\"מ ·": "km ·",
+  "ק\"מ · כ-": "km · ~",
+  "ק\"מ · 🌇 שקיעה": "km · 🌇 sunset",
+  "ק\"מ ב-": "km in",
+  "ק\"מ ביומן": "km in journal",
+  "ק\"מ הושלמו": "km done",
+  "ק\"מ היום": "km today",
+  "ק\"מ לפי יום": "km per day",
+  "ק\"מ שנצעדו": "km walked",
+  "ק\"מ/יום": "km/day",
+  "קובץ GPX הורד": "GPX file downloaded",
+  "קובץ יומן הורד": "Calendar file downloaded",
+  "קובץ לא תקין": "Invalid file",
+  "קטעי סולמות/ידיות וירידות תלולות במקטע": "Ladder/rung sections and steep descents on this segment",
+  "קיבולת מים לפי המקטע (ראו המלצה)": "Water capacity per segment (see recommendation)",
+  "קיבולת מים לשאת": "Water capacity to carry",
+  "קיץ – קרינה וחום": "Summer – UV and heat",
+  "קישור": "Link",
+  "קל": "Easy",
+  "קמ\"ש": "km/h",
+  "קמ\"ש ·": "km/h ·",
+  "קמ\"ש · UV": "km/h · UV",
+  "קמ\"ש:": "km/h:",
+  "קצב ומשך": "Pace and duration",
+  "קצב יומי:": "Daily pace:",
+  "קצב קמ\"ש": "Pace km/h",
+  "קריית שמונה": "Kiryat Shmona",
+  "קרם הגנה SPF50 + שפתון": "SPF50 sunscreen + lip balm",
+  "קשה": "Hard",
+  "קשה מאוד": "Very hard",
+  "ראו מדריך": "See guide",
+  "ראש השנה": "Rosh Hashanah",
+  "רוח ערה": "Fresh wind",
+  "רוחות חזקות – זהירות על רכסים": "Strong winds – caution on ridges",
+  "רענון": "Refresh",
+  "רענון התוואי": "Refresh track",
+  "רענון עכשיו": "Refresh now",
+  "רשומה ביומן": "Journal entry",
+  "רשומות יומן": "Journal entries",
+  "רשות הטבע והגנים": "Nature and Parks Authority",
+  "רשימות רשמיות וקהילות (קישורים)": "Official lists and communities (links)",
+  "רשימת הציוד הבסיסית שלי": "My base gear list",
+  "רשת/כיסוי לאוכל נגד עורבים ושועלים; לא להשאיר אוכל פתוח (צבועים)": "Net/cover for food against crows and foxes; don't leave food out (hyenas)",
+  "ש": "Sat",
+  "שאלות": "FAQ",
+  "שבוע ראשון – לתכנן ימים קצרים (12–16 ק\"מ) עד שהגוף מתרגל.": "First week – plan short days (12–16 km) until your body adapts.",
+  "שבועות": "Shavuot",
+  "שביל ישראל": "Israel Trail",
+  "שביל ישראל · Israel National Trail": "Israel National Trail · שביל ישראל",
+  "שביל ישראל – מקטע {0}": "Israel Trail – segment {0}",
+  "שביל ישראל – מקטע {0}: {1} {2} ק\"מ · {3} {4}": "Israel Trail – segment {0}: {1} {2} km · {3} {4}",
+  "שביל ישראל – מתכנן המסע": "Israel Trail – Trip Planner",
+  "שביל ישראל – תוכנית מסע {0} ← {1} · {2} ימים · {3} ק\"מ איש קשר לחירום: {4} {5} · צ'ק-אין יומי ב-{6}": "Israel Trail – trip plan {0} → {1} · {2} days · {3} km Emergency contact: {4} {5} · daily check-in at {6}",
+  "שבת וחגים": "Shabbat and holidays",
+  "שבת – חנויות ותחבורה ציבורית סגורות; מנוחה, כביסה והצטיידות מראש.": "Shabbat – shops and public transport closed; rest, laundry and resupply in advance.",
+  "שבת: אין תחבורה ציבורית, חנויות סגורות.": "Shabbat: no public transport, shops closed.",
+  "שבתות בדרך": "Shabbats en route",
+  "שדה בוקר": "Sde Boker",
+  "שונות": "Miscellaneous",
+  "שטח אש": "Firing zone",
+  "שטח אש:": "Firing zone:",
+  "שטח אש: {0}": "Firing zone: {0}",
+  "שטחי אש": "Firing zones",
+  "שיטפון": "Flood",
+  "שיטפונות בנחלים": "Flash floods in wadis",
+  "שיתוף": "Share",
+  "שיתוף מיקום ב-WhatsApp": "Share location on WhatsApp",
+  "שכבות": "Layers",
+  "שכבות ומפות": "Layers and maps",
+  "שכבות חמות, כפפות, כובע צמר; לבדוק שלג בחרמון/מירון": "Warm layers, gloves, wool hat; check for snow on Hermon/Meron",
+  "של החברה להגנת הטבע.": "by SPNI.",
+  "שלב": "Step",
+  "שלב {0} מתוך {1}. {2}": "Step {0} of {1}. {2}",
+  "שלבים מתיאור המסלול הרשמי · הקראה קולית · מעקב GPS": "steps from the official route description · voice reading · GPS tracking",
+  "שלג": "Snow",
+  "שלג אפשרי": "Snow possible",
+  "שלום {0}! אני הולך/ת בשביל ישראל ומתכנן/ת להגיע ל{1} ב-{2}. האם ניתן ללון אצלכם? תודה רבה 🙏": "Hi {0}! I'm hiking the Israel National Trail and plan to reach {1} on {2}. Could I stay with you? Thank you 🙏",
+  "שלום, אשמח להזמין הטמנות מים לשביל ישראל ({0}). נקודות ותאריכים: {1} כמות: ___ ליטר לנקודה עבור ___ מטיילים. תודה!": "Hello, I'd like to order water caches for the Israel National Trail ({0}). Points and dates: {1} Quantity: ___ litres per point for ___ hikers. Thanks!",
+  "שלחתי לו את הלו\"ז המלא (כפתור שיתוף בסיכום)": "I sent them the full schedule (share button in the summary)",
+  "שם": "Name",
+  "שם המטייל/ת": "Hiker's name",
+  "שמירה": "Save",
+  "שעות ·": "hours ·",
+  "שעות · 🛏": "hours · 🛏",
+  "שעות אור": "Daylight hours",
+  "שעות אור שנותרו": "Daylight left",
+  "שעות הליכה": "Walking hours",
+  "שעות. בנגב בחורף: לצאת עם הזריחה כדי לנצל את כל האור.": "hours. In the Negev in winter: start at sunrise to use all the daylight.",
+  "שעת צ'ק-אין יומי": "Daily check-in time",
+  "שפלה": "Shfela",
+  "שפלת": "Shfela",
+  "שק קיץ +10°C / ליינר בלבד": "Summer bag +10°C / liner only",
+  "שק שינה": "Sleeping bag",
+  "שק שינה (לפי עונה – ראו למטה)": "Sleeping bag (by season – see below)",
+  "שק שינה +5°C": "Sleeping bag +5°C",
+  "שק שינה +5°C עד 0°C": "Sleeping bag +5°C to 0°C",
+  "שק שינה 0°C (קור ולחות בגליל ובחרמון)": "Sleeping bag 0°C (cold and damp in the Galilee and Hermon)",
+  "שק שינה 0°C עד -5°C (לילות קפואים בהר הנגב)": "Sleeping bag 0°C to -5°C (freezing nights in the Negev highlands)",
+  "שק שינה 0°C עד -5°C ללילות הנגב": "Sleeping bag 0°C to -5°C for Negev nights",
+  "שק שינה:": "Sleeping bag:",
+  "שקיות אשפה (משאירים נקי)": "Rubbish bags (leave no trace)",
+  "שקיעה": "Sunset",
+  "שקיעה ·": "sunset ·",
+  "שרון": "Sharon",
+  "ש׳": "h",
+  "ש׳ אור": "h of light",
+  "תאריך": "Date",
+  "תאריך הגעה": "Arrival date",
+  "תאריך יציאה": "Start date",
+  "תוואי השביל": "Trail track",
+  "תוואי השביל המלא (OpenStreetMap)": "Full trail track (OpenStreetMap)",
+  "תוכנית שביל ישראל": "Israel Trail plan",
+  "תוספות ייחודיות למקטע ולעונה": "Extras specific to this segment and season",
+  "תזכורות תיאום": "Coordination reminders",
+  "תחבורה": "Transport",
+  "תחזית חיה": "Live forecast",
+  "תחזית חיה ({0} הימים הקרובים)": "Live forecast (next {0} days)",
+  "תחזית שעתית מלאה ←": "Full hourly forecast →",
+  "תחילת {0} ({1})": "Start of {0} ({1})",
+  "תחילת השביל": "Start of the trail",
+  "תחילת מקטע {0}: {1}": "Start of segment {0}: {1}",
+  "תיאום:": "Coordination:",
+  "תיאור המסלול המלא (מצפון לדרום)": "Full route description (north to south, Hebrew)",
+  "תכנון": "Plan",
+  "תכנון המסע": "Trip planning",
+  "תל אביב": "Tel Aviv",
+  "תלונות נפוצות:": "Common complaints:",
+  "תמונה לא נשמרה": "Photo not saved",
+  "תמונות": "Photos",
+  "תמונות (": "Photos (",
+  "תמיד יום אוכל עודף בנגב.": "Always carry an extra day of food in the Negev.",
+  "תנאים נוחים להליכה": "Comfortable hiking conditions",
+  "תעודה": "Certificate",
+  "תעודה אישית מהאפליקציה. תעודת סיום רשמית – יש לברר מול החברה להגנת הטבע.": "A personal certificate from the app. For an official completion certificate, contact SPNI.",
+  "תעודת הוקרה": "Certificate of Achievement",
+  "תעודת זהות, כרטיס אשראי, מזומן": "ID, credit card, cash",
+  "תקציב": "Budget",
+  "תקציב משוער": "Estimated budget",
+  "תרופות אישיות": "Personal medication",
+  "תרמיל 45–65 ל' עם חגורת מותן": "45–65 L backpack with a hip belt",
+  "– חם מאוד/גשום, לצאת עם שחר": "– very hot/rainy, start at dawn",
+  "– לא תספיקו לפני החשכה!": "– you won't make it before dark!",
+  "– סכנת חיים בחום/שרב, לא לצאת": "– life-threatening heat, do not go",
+  "– עונת גשמים: בוץ, נחלים זורמים, ימים קצרים": "– rainy season: mud, flowing streams, short days",
+  "– קפיצה לשם": "– jump there",
+  "— טמפרטורה": "— temperature",
+  "• יום {0} · {1} – {2} ← לינה: {3}": "• Day {0} · {1} – {2} → lodging: {3}",
+  "₪/יום": "₪/day",
+  "← למדריך ולאנשי הקשר שלי": "→ guide and my contacts",
+  "→ הקודם": "← Previous",
+  "→ מקטע": "← Segment",
+  "↓{0} מ' טיפוס/ירידה": "↓{0} m ascent/descent",
+  "▮ סיכוי לגשם": "▮ chance of rain",
+  "▲ היעד": "▲ target",
+  "⚠ במקטע זה יש נחלים/קניונים – בגשם באזור כולו (גם רחוק) קיימת סכנת שיטפון.": "⚠ This segment has wadis/canyons – rain anywhere in the region (even far away) means flood risk.",
+  "⚠ גשם בקרוב": "⚠ rain soon",
+  "⚠ המידע נאסף ממקורות ציבוריים ועשוי להשתנות (שינויי תוואי, סגירות ביטחוניות, שטחי אש, מחירים). לפני היציאה יש לאמת מול החברה להגנת הטבע, רשות הטבע והגנים והמפות העדכניות. האחריות על הבטיחות היא של המטייל.": "⚠ Information is compiled from public sources and may change (route changes, security closures, firing zones, prices). Verify with SPNI, INPA and current maps before you go. Safety is the hiker's responsibility.",
+  "⚠ נתונים שמורים (אין חיבור)": "⚠ cached data (no connection)",
+  "⚠ סטיתם מהשביל ({0})": "⚠ You've left the trail ({0})",
+  "⛲ מקורות מים בצפון ובמרכז": "⛲ Water sources in the north and center",
+  "⛺ חניוני לילה": "⛺ Night camps",
+  "⛺ כללי לינת שטח (רט\"ג)": "⛺ Camping rules (INPA)",
+  "✅ אין אזהרות מזג אוויר ליום זה. שקיעה": "✅ No weather warnings for this day. Sunset",
+  "✅ צ'ק-אין יומי למשפחה": "✅ Daily family check-in",
+  "✅ צ'ק-אין משביל ישראל – {0}": "✅ Check-in from the Israel Trail – {0}",
+  "✓ יש איש קשר שמור": "✓ contact saved",
+  "❄️ שלג": "❄️ Snow",
+  "❗ חשוב לדעת": "❗ Important to know",
+  "❗ לפני שיוצאים:": "❗ Before you set out:",
+  "⬇️ כל מפות המקטעים (ZIP)": "⬇️ All segment maps (ZIP)",
+  "🌊 שיטפונות": "🌊 Flash floods",
+  "🌤️ תחזית חיה מוצגת לימים שבטווח 16 הימים הקרובים.": "🌤️ Live forecast is shown for days within the next 16 days.",
+  "🌧️ גשם ושיטפונות": "🌧️ Rain and floods",
+  "🌧️ השירות המטאורולוגי – אזהרות (שיטפונות, שרב, סופות)": "🌧️ Israel Meteorological Service – warnings (floods, heatwaves, storms)",
+  "🌸 פריחה": "🌸 Bloom",
+  "🌿 לא משאירים עקבות": "🌿 Leave no trace",
+  "🍲 טיפים לאוכל במסלול ארוך": "🍲 Food tips for a long trek",
+  "🎒 ציוד בסיסי ({0}/{1})": "🎒 Base gear ({0}/{1})",
+  "🎒 תרבות השביל": "🎒 Trail culture",
+  "🎯 שטח אש": "🎯 Firing zone",
+  "🎯 שטחי אש": "🎯 Firing zones",
+  "🎯 תוספות למסלול ולעונה ({0}/{1})": "🎯 Extras for the route and season ({0}/{1})",
+  "🏁 אילת – סיום / התחלה": "🏁 Eilat – end / start",
+  "🏅 תעודת הוקרה להדפסה": "🏅 Printable certificate",
+  "🏆 סיימתם את שביל ישראל! כל הכבוד.": "🏆 You've completed the Israel Trail! Congratulations.",
+  "🏛️ נקודות עניין (ויקיפדיה)": "🏛️ Points of interest (Wikipedia)",
+  "🏛️ נקודות עניין במקטע (": "🏛️ Points of interest on this segment (",
+  "🏞️ רשות הטבע והגנים – סגירת מסלולים בימי שרב ושיטפון": "🏞️ INPA – trail closures on heatwave and flood days",
+  "🏨 בתשלום": "🏨 Paid",
+  "🏨 לינה בתשלום / בתי ספר שדה": "🏨 Paid lodging / field schools",
+  "🐍 בעלי חיים": "🐍 Wildlife",
+  "🐕 כלבים בשביל": "🐕 Dogs on the trail",
+  "👥 קהילות ומקורות מידע": "👥 Communities and information sources",
+  "💡 הורידו את תוואי השביל במסך המפה לחישוב מדויק לאורך השביל (לא אווירי).": "💡 Download the trail track on the map screen for accurate along-trail distances (not straight-line).",
+  "💧 הטמנה": "💧 Cache",
+  "💧 מים": "💧 Water",
+  "💧 נקודות מים": "💧 Water points",
+  "💬 וואטסאפ": "💬 WhatsApp",
+  "💰 פירוט התקציב": "💰 Budget breakdown",
+  "💳 שירותי הטמנה בתשלום": "💳 Paid caching services",
+  "💾 נתונים שמורים במכשיר": "💾 Data stored on device",
+  "📅 ליומן": "📅 To calendar",
+  "📊 סיכום": "📊 Summary",
+  "📋 הודעת הזמנה לספק": "📋 Order message for supplier",
+  "📋 מצב ההכנות": "📋 Preparation status",
+  "📋 צ'ק-ליסט הכנות (": "📋 Preparation checklist (",
+  "📌 דגשים": "📌 Notes",
+  "📌 מה לבדוק בשלב הזה": "📌 What to check at this step",
+  "📍 במפה": "📍 On map",
+  "📍 הגעתם ל{0}": "📍 You've reached {0}",
+  "📍 כאן": "📍 Here",
+  "📍 ק\"מ": "📍 km",
+  "📓 רשומות": "📓 Entries",
+  "📖 הערך המלא בוויקיפדיה": "📖 Full article on Wikipedia",
+  "📜 כללים": "📜 Rules",
+  "📞 חיוג": "📞 Call",
+  "📞 פרטי הקשר של אזור זה באתר החברה להגנת הטבע": "📞 Contact details for this region on the SPNI website",
+  "📥 מפת המקטע לשימוש לא מקוון": "📥 Segment map for offline use",
+  "🔆 השאר מסך דולק": "🔆 Keep screen on",
+  "🔆 מסך דולק": "🔆 Screen on",
+  "🔥 כללי אש": "🔥 Fire rules",
+  "🔥 כללי חום": "🔥 Heat rules",
+  "🔴 אזהרות": "🔴 Warnings",
+  "🔴 חובה · 🟠 מומלץ · 🟢 נחמד שיש": "🔴 Must · 🟠 Recommended · 🟢 Nice to have",
+  "🔴 רמזור התוכנית: {0} אזהרות": "🔴 Plan status: {0} warnings",
+  "🕌 אתרים דתיים ויישובים": "🕌 Religious sites and settlements",
+  "🕯️ שבת וחגים": "🕯️ Shabbat and holidays",
+  "🖨️ הדפסה": "🖨️ Print",
+  "🖨️ הדפסה / שמירה כ-PDF": "🖨️ Print / save as PDF",
+  "🖼️ גלריה": "🖼️ Gallery",
+  "🗑️ נקה": "🗑️ Clear",
+  "🗑️ נקה תוכנית": "🗑️ Clear plan",
+  "🗺️ מפה אינטראקטיבית": "🗺️ Interactive map",
+  "🗺️ מפת המקטע (PDF חינם)": "🗺️ Segment map (free PDF)",
+  "😇 מחר לינה אצל מלאכי שביל (": "😇 Tomorrow you're staying with trail angels (",
+  "😇 מלאכי השביל": "😇 Trail angels",
+  "😇 מלאכי שביל": "😇 Trail angels",
+  "😇 מלאכי שביל (יישובים)": "😇 Trail angels (settlements)",
+  "😇 מלאכי שביל באזור:": "😇 Trail angels in the region:",
+  "😌 יום מנוחה": "😌 Rest day",
+  "🚌 הגעה לנקודת ההתחלה בצפון": "🚌 Getting to the northern start",
+  "🚌 תחבורה – פרטים": "🚌 Transport – details",
+  "🛒 נקודות הצטיידות במסלול שבחרתם ({0}/{1})": "🛒 Resupply points on your route ({0}/{1})",
+  "🛠️ איך מטמינים (בעצמכם)": "🛠️ How to cache (yourself)",
+  "🛡️ מצב ביטחוני 2024–2026 וקטעי הצפון": "🛡️ Security situation 2024–2026 and the northern segments",
+  "🟡 דגשים": "🟡 Notes",
+  "🟡 רמזור התוכנית: {0} דגשים": "🟡 Plan status: {0} notes",
+  "🟢 רמזור התוכנית: תקין": "🟢 Plan status: OK",
+  "🟢 תקין": "🟢 OK",
+  "🥵 חום ומכת חום": "🥵 Heat and heat stroke",
+  "🥾 החברה להגנת הטבע – הודעות שביל ישראל": "🥾 SPNI – Israel Trail announcements",
+  "🥾 מקטע": "🥾 Segment",
+  "🧭 סיפור דרך": "🧭 Route story"
+ },
+ "files": {
+  "שביל ישראל": [
+   "App.jsx",
+   "lib/gpx.js",
+   "lib/ics.js",
+   "pages/Home.jsx",
+   "pages/Navigate.jsx"
+  ],
+  "טוען…": [
+   "App.jsx"
+  ],
+  "בית": [
+   "components/ColorIcons.jsx"
+  ],
+  "מקטעים": [
+   "components/ColorIcons.jsx",
+   "pages/Home.jsx",
+   "pages/Journal.jsx"
+  ],
+  "מפה": [
+   "components/ColorIcons.jsx",
+   "pages/SegmentDetail.jsx"
+  ],
+  "תכנון": [
+   "components/ColorIcons.jsx"
+  ],
+  "ניווט": [
+   "components/ColorIcons.jsx"
+  ],
+  "מדריך": [
+   "components/ColorIcons.jsx",
+   "pages/SegmentDetail.jsx"
+  ],
+  "מזג אוויר": [
+   "components/ColorIcons.jsx",
+   "pages/Journal.jsx",
+   "pages/SegmentDetail.jsx"
+  ],
+  "מלאכי שביל": [
+   "components/ColorIcons.jsx",
+   "pages/Planner.jsx",
+   "pages/SegmentDetail.jsx"
+  ],
+  "לינה": [
+   "components/ColorIcons.jsx",
+   "pages/Guide.jsx",
+   "pages/Planner.jsx"
+  ],
+  "מים": [
+   "components/ColorIcons.jsx",
+   "lib/gear.js"
+  ],
+  "ציוד": [
+   "components/ColorIcons.jsx",
+   "pages/Planner.jsx",
+   "pages/SegmentDetail.jsx"
+  ],
+  "בטיחות": [
+   "components/ColorIcons.jsx"
+  ],
+  "יומן": [
+   "components/ColorIcons.jsx"
+  ],
+  "שאלות": [
+   "components/ColorIcons.jsx"
+  ],
+  "עונות": [
+   "components/ColorIcons.jsx"
+  ],
+  "טיול אחראי": [
+   "components/ColorIcons.jsx"
+  ],
+  "אפליקציות": [
+   "components/ColorIcons.jsx"
+  ],
+  "המדריך הרשמי": [
+   "components/ColorIcons.jsx"
+  ],
+  "תחבורה": [
+   "components/ColorIcons.jsx",
+   "pages/Guide.jsx"
+  ],
+  "תקציב": [
+   "components/ColorIcons.jsx"
+  ],
+  "סימון וניווט": [
+   "components/ColorIcons.jsx"
+  ],
+  "תעודה": [
+   "components/ColorIcons.jsx"
+  ],
+  "<div><b>מקטע {0}: {1}</b><br/>{2} ק\"מ · {3}<br/><a href=\"#/segments/{4}\">פרטי המקטע ←</a></div>": [
+   "components/MapView.jsx"
+  ],
+  "<b>{0}</b><br/>סיום השביל": [
+   "components/MapView.jsx"
+  ],
+  "📖 הערך המלא בוויקיפדיה": [
+   "components/PoiCards.jsx"
+  ],
+  "📍 במפה": [
+   "components/PoiCards.jsx",
+   "pages/Angels.jsx",
+   "pages/Guide.jsx"
+  ],
+  "ממני": [
+   "components/PoiCards.jsx"
+  ],
+  "מקור: ויקיפדיה העברית (CC BY-SA). התמונה והטקסט עשויים להתייחס לאתר הכללי ולא לנקודה המדויקת על השביל.": [
+   "components/PoiCards.jsx"
+  ],
+  "התוכנית נראית טוב – אפשר לצאת": [
+   "components/Readiness.jsx"
+  ],
+  "התוכנית אפשרית, עם דגשים לטיפול": [
+   "components/Readiness.jsx"
+  ],
+  "יש בעיות מהותיות בתוכנית": [
+   "components/Readiness.jsx"
+  ],
+  "אדומים ·": [
+   "components/Readiness.jsx"
+  ],
+  "צהובים ·": [
+   "components/Readiness.jsx"
+  ],
+  "ירוקים": [
+   "components/Readiness.jsx"
+  ],
+  "לפרטים ולטיפול ←": [
+   "components/Readiness.jsx"
+  ],
+  "📋 צ'ק-ליסט הכנות (": [
+   "components/Readiness.jsx"
+  ],
+  "הרמזור משקלל עונה, תחזית חיה (עד 16 יום), שיטפונות, חום, מים, שטחי אש, לינה, שבת/חגים ושעות אור. הוא עוזר להחליט – לא מחליף שיקול דעת ואזהרות רשמיות.": [
+   "components/Readiness.jsx"
+  ],
+  "חזרה": [
+   "components/Shell.jsx",
+   "pages/Story.jsx"
+  ],
+  "לא מקוון": [
+   "components/Shell.jsx"
+  ],
+  "יומן מסע": [
+   "components/Shell.jsx"
+  ],
+  "מצב תצוגה": [
+   "components/Shell.jsx"
+  ],
+  "הגדרות": [
+   "components/Shell.jsx",
+   "pages/Settings.jsx"
+  ],
+  "קל": [
+   "components/UI.jsx",
+   "pages/Segments.jsx"
+  ],
+  "בינוני": [
+   "components/UI.jsx",
+   "pages/Segments.jsx"
+  ],
+  "קשה": [
+   "components/UI.jsx",
+   "lib/season.js",
+   "pages/Guide.jsx",
+   "pages/Segments.jsx"
+  ],
+  "קשה מאוד": [
+   "components/UI.jsx",
+   "pages/Segments.jsx"
+  ],
+  "סגור": [
+   "components/UI.jsx"
+  ],
+  "מורגש": [
+   "components/Weather.jsx"
+  ],
+  "° · רוח": [
+   "components/Weather.jsx"
+  ],
+  "(משבים {0})": [
+   "components/Weather.jsx"
+  ],
+  "קמ\"ש · UV": [
+   "components/Weather.jsx"
+  ],
+  "· לחות": [
+   "components/Weather.jsx"
+  ],
+  "⚠ נתונים שמורים (אין חיבור)": [
+   "components/Weather.jsx"
+  ],
+  "עודכן לפני {0} דק׳": [
+   "components/Weather.jsx"
+  ],
+  "— טמפרטורה": [
+   "components/Weather.jsx"
+  ],
+  "▮ סיכוי לגשם": [
+   "components/Weather.jsx"
+  ],
+  "היום": [
+   "components/Weather.jsx"
+  ],
+  "✅ אין אזהרות מזג אוויר ליום זה. שקיעה": [
+   "components/Weather.jsx"
+  ],
+  "הדפדפן לא תומך ב-GPS": [
+   "hooks/useGeolocation.js"
+  ],
+  "אין הרשאה למיקום – יש לאשר גישה למיקום בדפדפן": [
+   "hooks/useGeolocation.js"
+  ],
+  "אין קליטת GPS כרגע": [
+   "hooks/useGeolocation.js"
+  ],
+  "פסק זמן בקבלת מיקום": [
+   "hooks/useGeolocation.js"
+  ],
+  "ינואר": [
+   "lib/dates.js"
+  ],
+  "פברואר": [
+   "lib/dates.js"
+  ],
+  "מרץ": [
+   "lib/dates.js"
+  ],
+  "אפריל": [
+   "lib/dates.js"
+  ],
+  "מאי": [
+   "lib/dates.js"
+  ],
+  "יוני": [
+   "lib/dates.js"
+  ],
+  "יולי": [
+   "lib/dates.js"
+  ],
+  "אוגוסט": [
+   "lib/dates.js"
+  ],
+  "ספטמבר": [
+   "lib/dates.js"
+  ],
+  "אוקטובר": [
+   "lib/dates.js"
+  ],
+  "נובמבר": [
+   "lib/dates.js"
+  ],
+  "דצמבר": [
+   "lib/dates.js"
+  ],
+  "ינו": [
+   "lib/dates.js"
+  ],
+  "פבר": [
+   "lib/dates.js"
+  ],
+  "אפר": [
+   "lib/dates.js"
+  ],
+  "יונ": [
+   "lib/dates.js"
+  ],
+  "יול": [
+   "lib/dates.js"
+  ],
+  "אוג": [
+   "lib/dates.js"
+  ],
+  "ספט": [
+   "lib/dates.js"
+  ],
+  "אוק": [
+   "lib/dates.js"
+  ],
+  "נוב": [
+   "lib/dates.js"
+  ],
+  "דצמ": [
+   "lib/dates.js"
+  ],
+  "נשיאה ולינה": [
+   "lib/gear.js"
+  ],
+  "תרמיל 45–65 ל' עם חגורת מותן": [
+   "lib/gear.js"
+  ],
+  "כיסוי גשם לתרמיל / שק פנימי אטום": [
+   "lib/gear.js"
+  ],
+  "אוהל קל / טארפ": [
+   "lib/gear.js"
+  ],
+  "מזרן מתנפח/מתקפל": [
+   "lib/gear.js"
+  ],
+  "שק שינה (לפי עונה – ראו למטה)": [
+   "lib/gear.js"
+  ],
+  "קיבולת מים לפי המקטע (ראו המלצה)": [
+   "lib/gear.js"
+  ],
+  "מלחים / אבקת אלקטרוליטים": [
+   "lib/gear.js"
+  ],
+  "ביגוד": [
+   "lib/gear.js"
+  ],
+  "נעלי הליכה מוכרות (לא חדשות!)": [
+   "lib/gear.js"
+  ],
+  "סנדלים לערב ולמעברי מים": [
+   "lib/gear.js"
+  ],
+  "2–3 זוגות גרביים (מרינו)": [
+   "lib/gear.js"
+  ],
+  "חולצה ארוכה בהירה נגד שמש": [
+   "lib/gear.js"
+  ],
+  "מכנסי הליכה + מכנסיים קצרים": [
+   "lib/gear.js"
+  ],
+  "כובע רחב שוליים + באף": [
+   "lib/gear.js"
+  ],
+  "פליז / שכבת חום": [
+   "lib/gear.js"
+  ],
+  "ניווט ותקשורת": [
+   "lib/gear.js"
+  ],
+  "טלפון + מפות לא-מקוונות (האפליקציה הזו + Israel Hiking Map)": [
+   "lib/gear.js"
+  ],
+  "סוללת גיבוי 10,000–20,000mAh + כבלים": [
+   "lib/gear.js"
+  ],
+  "מפת סימון שבילים מודפסת / ספר השביל": [
+   "lib/gear.js"
+  ],
+  "מצפן גיבוי": [
+   "lib/gear.js"
+  ],
+  "פנס ראש + סוללות": [
+   "lib/gear.js"
+  ],
+  "משרוקית": [
+   "lib/gear.js"
+  ],
+  "בישול ואוכל": [
+   "lib/gear.js"
+  ],
+  "גזייה קטנה + מיכל גז (לקנות בארץ)": [
+   "lib/gear.js"
+  ],
+  "סיר קטן + כף": [
+   "lib/gear.js"
+  ],
+  "מצית + גפרורים עמידים למים": [
+   "lib/gear.js"
+  ],
+  "שקיות אשפה (משאירים נקי)": [
+   "lib/gear.js"
+  ],
+  "בריאות והיגיינה": [
+   "lib/gear.js"
+  ],
+  "ערכת עזרה ראשונה (פלסטרים לשלפוחיות, תחבושת אלסטית, משככי כאבים, אנטיהיסטמין)": [
+   "lib/gear.js"
+  ],
+  "קרם הגנה SPF50 + שפתון": [
+   "lib/gear.js"
+  ],
+  "נייר טואלט + כף חפירה קטנה": [
+   "lib/gear.js"
+  ],
+  "סבון ביולוגי, מברשת + משחת שיניים": [
+   "lib/gear.js"
+  ],
+  "תרופות אישיות": [
+   "lib/gear.js"
+  ],
+  "משחת אנטי-שפשוף": [
+   "lib/gear.js"
+  ],
+  "ג'ל חיטוי ידיים": [
+   "lib/gear.js"
+  ],
+  "שונות": [
+   "lib/gear.js",
+   "pages/Guide.jsx"
+  ],
+  "מקלות הליכה": [
+   "lib/gear.js"
+  ],
+  "משקפי שמש": [
+   "lib/gear.js"
+  ],
+  "סכין רב-שימושית": [
+   "lib/gear.js"
+  ],
+  "חבל דק / חוטי כביסה + אטבים": [
+   "lib/gear.js"
+  ],
+  "תעודת זהות, כרטיס אשראי, מזומן": [
+   "lib/gear.js"
+  ],
+  "ערכת תיקונים: סרט דביק, חוט ומחט": [
+   "lib/gear.js"
+  ],
+  "פנקס ועט ליומן": [
+   "lib/gear.js"
+  ],
+  "שק שינה +5°C": [
+   "lib/gear.js"
+  ],
+  "שק שינה 0°C עד -5°C (לילות קפואים בהר הנגב)": [
+   "lib/gear.js"
+  ],
+  "שק שינה 0°C (קור ולחות בגליל ובחרמון)": [
+   "lib/gear.js"
+  ],
+  "שק קיץ +10°C / ליינר בלבד": [
+   "lib/gear.js"
+  ],
+  "שק שינה +5°C עד 0°C": [
+   "lib/gear.js"
+  ],
+  "בקבוקים/ג'ריקנים להטמנה + כף חפירה, שקיות סימון": [
+   "lib/gear.js"
+  ],
+  "המקטע ללא מקורות מים – נדרשת הטמנה": [
+   "lib/gear.js"
+  ],
+  "פילטר / טבליות כלור לטיהור מים": [
+   "lib/gear.js"
+  ],
+  "מקורות המים במקטע הם מעיינות": [
+   "lib/gear.js"
+  ],
+  "כפפות עבודה קלות + נעליים עם אחיזה טובה; לארוז את התרמיל קומפקטי (לקטעי סולמות)": [
+   "lib/gear.js"
+  ],
+  "קטעי סולמות/ידיות וירידות תלולות במקטע": [
+   "lib/gear.js"
+  ],
+  "גרביים נוספות ואבקת טלק – חול וחיכוך; נעליים אווריריות": [
+   "lib/gear.js"
+  ],
+  "הליכה בחולות/חוף": [
+   "lib/gear.js"
+  ],
+  "לבדוק תחזית שיטפונות בבוקר; שקיות אטומות לציוד": [
+   "lib/gear.js"
+  ],
+  "מעבר בנחלים בעונת גשמים": [
+   "lib/gear.js"
+  ],
+  "אישור תיאום / לוודא ימי פתיחה; להישאר על הסימון": [
+   "lib/gear.js"
+  ],
+  "המקטע גובל בשטחי אש": [
+   "lib/gear.js"
+  ],
+  "שכבות חמות, כפפות, כובע צמר; לבדוק שלג בחרמון/מירון": [
+   "lib/gear.js"
+  ],
+  "שלג אפשרי": [
+   "lib/gear.js"
+  ],
+  "אוכל קל ועתיר אנרגיה ליום ארוך; יציאה עם אור ראשון": [
+   "lib/gear.js"
+  ],
+  "מקטע ארוך ({0} ק\"מ)": [
+   "lib/gear.js"
+  ],
+  "אוהל/טארפ חובה – אין לינה מסודרת בסיום": [
+   "lib/gear.js"
+  ],
+  "לינת שטח בלבד": [
+   "lib/gear.js"
+  ],
+  "בגד נקי לערב + מתנה קטנה למלאך שביל": [
+   "lib/gear.js"
+  ],
+  "אירוח אצל מלאכי שביל": [
+   "lib/gear.js"
+  ],
+  "סכנת חיים: אין לטייל בנגב בחודשי הקיץ.": [
+   "lib/gear.js"
+  ],
+  "כובע רחב + חולצה ארוכה + משקפי שמש + קרם SPF50": [
+   "lib/gear.js"
+  ],
+  "קיץ – קרינה וחום": [
+   "lib/gear.js"
+  ],
+  "מטריית טיולים / יריעת צל להפסקת צהריים": [
+   "lib/gear.js"
+  ],
+  "חום": [
+   "lib/gear.js",
+   "pages/Planner.jsx"
+  ],
+  "מעיל גשם קל + כיסוי לתרמיל": [
+   "lib/gear.js"
+  ],
+  "עונת גשמים": [
+   "lib/gear.js"
+  ],
+  "גייטרים / מכנסיים עמידים לבוץ": [
+   "lib/gear.js"
+  ],
+  "בוץ בשבילי הצפון והמרכז": [
+   "lib/gear.js"
+  ],
+  "רשת/כיסוי לאוכל נגד עורבים ושועלים; לא להשאיר אוכל פתוח (צבועים)": [
+   "lib/gear.js"
+  ],
+  "חיות בר בחניוני הלילה": [
+   "lib/gear.js"
+  ],
+  "דוחה יתושים; בדיקת קרציות בערב": [
+   "lib/gear.js"
+  ],
+  "צמחייה וקרציות": [
+   "lib/gear.js"
+  ],
+  "אוכל ל-2–4 ימים (הצטיידות מוגבלת בנגב)": [
+   "lib/gear.js"
+  ],
+  "אוכל ליום-יומיים (חנויות ביישובים)": [
+   "lib/gear.js"
+  ],
+  "צ": [
+   "lib/geo.js"
+  ],
+  "צ-מז": [
+   "lib/geo.js"
+  ],
+  "מז": [
+   "lib/geo.js"
+  ],
+  "ד-מז": [
+   "lib/geo.js"
+  ],
+  "ד": [
+   "lib/geo.js",
+   "lib/readiness.js"
+  ],
+  "ד-מע": [
+   "lib/geo.js"
+  ],
+  "מע": [
+   "lib/geo.js"
+  ],
+  "צ-מע": [
+   "lib/geo.js"
+  ],
+  "צפון": [
+   "lib/geo.js",
+   "pages/Guide.jsx",
+   "pages/Home.jsx",
+   "pages/Planner.jsx"
+  ],
+  "צפון-מזרח": [
+   "lib/geo.js"
+  ],
+  "מזרח": [
+   "lib/geo.js"
+  ],
+  "דרום-מזרח": [
+   "lib/geo.js"
+  ],
+  "דרום": [
+   "lib/geo.js"
+  ],
+  "דרום-מערב": [
+   "lib/geo.js"
+  ],
+  "מערב": [
+   "lib/geo.js"
+  ],
+  "צפון-מערב": [
+   "lib/geo.js"
+  ],
+  "{0} מ'": [
+   "lib/geo.js",
+   "pages/MapPage.jsx"
+  ],
+  "{0} ק\"מ": [
+   "lib/geo.js"
+  ],
+  "{0}המיקום שלי: https://maps.google.com/?q={1},{2}": [
+   "lib/geo.js"
+  ],
+  "{0}: יום מנוחה": [
+   "lib/ics.js"
+  ],
+  "{0} יום {1}: {2}": [
+   "lib/ics.js"
+  ],
+  "{0} ק\"מ · {1} {2}": [
+   "lib/ics.js"
+  ],
+  "מפת הטיולים של ישראל": [
+   "lib/layers.js"
+  ],
+  "מוריד את תוואי השביל מ-OpenStreetMap…": [
+   "lib/overpass.js"
+  ],
+  "יום מנוחה": [
+   "lib/planner.js",
+   "pages/Navigate.jsx"
+  ],
+  "שבת – חנויות ותחבורה ציבורית סגורות; מנוחה, כביסה והצטיידות מראש.": [
+   "lib/planner.js"
+  ],
+  "מנוחה, כביסה, הצטיידות ותכנון ההמשך.": [
+   "lib/planner.js"
+  ],
+  "שבת: אין תחבורה ציבורית, חנויות סגורות.": [
+   "lib/planner.js"
+  ],
+  "יום שישי: חנויות נסגרות מוקדם, תחבורה ציבורית עד הצהריים.": [
+   "lib/planner.js"
+  ],
+  "הטמנת מים נדרשת ({0}).": [
+   "lib/planner.js"
+  ],
+  "סכנת שיטפון בעונת הגשמים – לבדוק תחזית ואזהרות רט\"ג בבוקר לפני הכניסה לנחל.": [
+   "lib/planner.js"
+  ],
+  "שטח אש: {0}": [
+   "lib/planner.js"
+  ],
+  "לינת שטח בתוואי (חלוקת מקטע ארוך) – לוודא מים": [
+   "lib/planner.js"
+  ],
+  "(חלק {0}/{1})": [
+   "lib/planner.js"
+  ],
+  "הטמנת מים": [
+   "lib/planner.js",
+   "pages/Segments.jsx"
+  ],
+  "סכנת חיים": [
+   "lib/planner.js"
+  ],
+  "חם מאוד": [
+   "lib/planner.js"
+  ],
+  "חום כבד": [
+   "lib/planner.js"
+  ],
+  "לבדוק לינה ביישוב הקרוב": [
+   "lib/planner.js"
+  ],
+  "פסח": [
+   "lib/readiness.js"
+  ],
+  "יום הזיכרון ויום העצמאות": [
+   "lib/readiness.js"
+  ],
+  "שבועות": [
+   "lib/readiness.js"
+  ],
+  "ראש השנה": [
+   "lib/readiness.js"
+  ],
+  "יום כיפור": [
+   "lib/readiness.js"
+  ],
+  "סוכות ושמחת תורה": [
+   "lib/readiness.js"
+  ],
+  "{0} ב{1} ({2} ימים): {3}{4}": [
+   "lib/readiness.js"
+  ],
+  "– סכנת חיים בחום/שרב, לא לצאת": [
+   "lib/readiness.js"
+  ],
+  "– חם מאוד/גשום, לצאת עם שחר": [
+   "lib/readiness.js"
+  ],
+  "– עונת גשמים: בוץ, נחלים זורמים, ימים קצרים": [
+   "lib/readiness.js"
+  ],
+  "עונה מול אזור": [
+   "lib/readiness.js"
+  ],
+  "התזמון מתאים לאזורים שתעברו בהם": [
+   "lib/readiness.js"
+  ],
+  "חלק מהימים בעונה קשה": [
+   "lib/readiness.js"
+  ],
+  "ימים בעונה מסוכנת – שקלו לשנות תאריך או כיוון": [
+   "lib/readiness.js"
+  ],
+  "יום {0} ({1}) {2}: {3} {4}°{5} – {6}": [
+   "lib/readiness.js"
+  ],
+  "תחזית חיה ({0} הימים הקרובים)": [
+   "lib/readiness.js"
+  ],
+  "{0} ימים עם תנאים מסוכנים (חום קיצוני / שיטפון / סופה)": [
+   "lib/readiness.js"
+  ],
+  "{0} ימים דורשים זהירות (גשם משמעותי / חום / רוח)": [
+   "lib/readiness.js"
+  ],
+  "התחזית לימים הקרובים נוחה להליכה": [
+   "lib/readiness.js"
+  ],
+  "תחזית חיה": [
+   "lib/readiness.js"
+  ],
+  "היציאה רחוקה מ-16 יום – התחזית תופיע כשתתקרבו": [
+   "lib/readiness.js"
+  ],
+  "שיטפון": [
+   "lib/readiness.js"
+  ],
+  "שיטפונות בנחלים": [
+   "lib/readiness.js"
+  ],
+  "גשם צפוי בימי נחל/מכתש: {0} – לא להיכנס לנחלים": [
+   "lib/readiness.js"
+  ],
+  "יום": [
+   "lib/readiness.js",
+   "pages/Angels.jsx",
+   "pages/Home.jsx",
+   "pages/Planner.jsx"
+  ],
+  "{0} ימים בנחלי מדבר בעונת הגשמים – לבדוק אזהרות רט\"ג בבוקר": [
+   "lib/readiness.js"
+  ],
+  "אין ימי נחל בעונת שיטפונות": [
+   "lib/readiness.js"
+  ],
+  "יום {0}: {1}": [
+   "lib/readiness.js",
+   "pages/Planner.jsx"
+  ],
+  "חום במדבר": [
+   "lib/readiness.js"
+  ],
+  "{0} ימי מדבר בין מאי לספטמבר – אסור ומסוכן": [
+   "lib/readiness.js"
+  ],
+  "{0} ימי מדבר באפריל/אוקטובר – לצאת לפני הזריחה, 6 ליטר מים": [
+   "lib/readiness.js"
+  ],
+  "אין ימי מדבר בחודשי החום": [
+   "lib/readiness.js"
+  ],
+  "מים והטמנות": [
+   "lib/readiness.js"
+  ],
+  "{0} ימים ללא מים בתוואי – לתאם הטמנות או ספק": [
+   "lib/readiness.js"
+  ],
+  "אין ימים הדורשים הטמנה": [
+   "lib/readiness.js"
+  ],
+  "שטח אש": [
+   "lib/readiness.js",
+   "pages/Planner.jsx",
+   "pages/Segments.jsx"
+  ],
+  "שטחי אש": [
+   "lib/readiness.js"
+  ],
+  "{0} ימים ליד שטחי אש ({1} בסופ\"ש) – להישאר על הסימון, לתאם במידת הצורך": [
+   "lib/readiness.js"
+  ],
+  "אין מקטעים בשטחי אש": [
+   "lib/readiness.js"
+  ],
+  "יום {0} ({1}׳): {2}": [
+   "lib/readiness.js"
+  ],
+  "א": [
+   "lib/readiness.js"
+  ],
+  "ב": [
+   "lib/readiness.js"
+  ],
+  "ג": [
+   "lib/readiness.js"
+  ],
+  "ה": [
+   "lib/readiness.js"
+  ],
+  "ו": [
+   "lib/readiness.js"
+  ],
+  "ש": [
+   "lib/readiness.js"
+  ],
+  "לינה ומלאכי שביל": [
+   "lib/readiness.js"
+  ],
+  "{0} לילות אצל מלאכי שביל, {1} עדיין בלי איש קשר · {2} לילות שטח": [
+   "lib/readiness.js"
+  ],
+  "{0} לילות שטח, {1} לילות ביישובים": [
+   "lib/readiness.js"
+  ],
+  "שבת וחגים": [
+   "lib/readiness.js"
+  ],
+  "{0} ימי הליכה בשבת (אין תחבורה ציבורית, חנויות סגורות){1}": [
+   "lib/readiness.js"
+  ],
+  "· {0} ימים בחגים – חניונים עמוסים ותחבורה מוגבלת": [
+   "lib/readiness.js"
+  ],
+  "שעות אור": [
+   "lib/readiness.js"
+  ],
+  "{0} ימים שבהם ההליכה כמעט כאורך היום – לצאת עם הזריחה או לפצל": [
+   "lib/readiness.js"
+  ],
+  "כל הימים נכנסים בשעות האור": [
+   "lib/readiness.js"
+  ],
+  "יום {0}: {1} ק\"מ (~{2} שע׳)": [
+   "lib/readiness.js"
+  ],
+  "שק שינה 0°C עד -5°C ללילות הנגב": [
+   "lib/readiness.js"
+  ],
+  "מעיל גשם, כיסוי לתרמיל וגייטרים לבוץ": [
+   "lib/readiness.js"
+  ],
+  "ג'ריקנים/בקבוקים להטמנה": [
+   "lib/readiness.js"
+  ],
+  "ציוד לעונה": [
+   "lib/readiness.js"
+  ],
+  "ציוד בסיסי": [
+   "lib/readiness.js"
+  ],
+  "לבדוק עדכוני תוואי וסגירות": [
+   "lib/readiness.js"
+  ],
+  "להוריד תוואי OSM ומפות למקטעים (לשימוש לא מקוון)": [
+   "lib/readiness.js"
+  ],
+  "לתאם מלאכי שביל ולהוסיף אנשי קשר": [
+   "lib/readiness.js"
+  ],
+  "להזמין הטמנות מים / לתכנן מילוי": [
+   "lib/readiness.js"
+  ],
+  "לעבור על רשימת הציוד לפי העונה": [
+   "lib/readiness.js"
+  ],
+  "לבדוק תחזית ואזהרות שיטפונות יום לפני כל מקטע": [
+   "lib/readiness.js"
+  ],
+  "לקבוע איש קשר לצ'ק-אין יומי ולהעביר לו את התוכנית": [
+   "lib/readiness.js"
+  ],
+  "לתכנן הגעה לנקודת ההתחלה וחזרה": [
+   "lib/readiness.js"
+  ],
+  "חרמון": [
+   "lib/season.js",
+   "pages/Planner.jsx"
+  ],
+  "גליל": [
+   "lib/season.js"
+  ],
+  "כרמל": [
+   "lib/season.js"
+  ],
+  "עמק": [
+   "lib/season.js"
+  ],
+  "כנרת": [
+   "lib/season.js"
+  ],
+  "שרון": [
+   "lib/season.js"
+  ],
+  "מישור החוף": [
+   "lib/season.js"
+  ],
+  "שפלה": [
+   "lib/season.js"
+  ],
+  "שפלת": [
+   "lib/season.js"
+  ],
+  "ירושלים": [
+   "lib/season.js",
+   "lib/weather.js"
+  ],
+  "לכיש": [
+   "lib/season.js"
+  ],
+  "נגב": [
+   "lib/season.js",
+   "pages/Guide.jsx",
+   "pages/Home.jsx",
+   "pages/Planner.jsx"
+  ],
+  "אילת": [
+   "lib/season.js",
+   "lib/weather.js",
+   "pages/Guide.jsx",
+   "pages/Planner.jsx"
+  ],
+  "ערבה": [
+   "lib/season.js"
+  ],
+  "מדבר יהודה": [
+   "lib/season.js"
+  ],
+  "ים המלח": [
+   "lib/season.js"
+  ],
+  "סדום": [
+   "lib/season.js"
+  ],
+  "מצוין": [
+   "lib/season.js",
+   "lib/weather.js",
+   "pages/Guide.jsx"
+  ],
+  "סביר": [
+   "lib/season.js",
+   "lib/weather.js",
+   "pages/Guide.jsx"
+  ],
+  "להימנע": [
+   "lib/season.js",
+   "pages/Guide.jsx"
+  ],
+  "סכנת חיים: אין לטייל בנגב ובערבה בחודשי הקיץ. רשות הטבע והגנים סוגרת מסלולים בימי שרב.": [
+   "lib/season.js"
+  ],
+  "חום כבד ולחות – לא מומלץ לצעוד באמצע היום. לצאת עם שחר ולסיים עד 11:00.": [
+   "lib/season.js"
+  ],
+  "חם מאוד בנגב בעונה זו – לצאת לפני הזריחה, 5–6 ליטר מים ליום, ולהימנע מהליכה בשעות הצהריים.": [
+   "lib/season.js"
+  ],
+  "עונה חמה – לצאת מוקדם, להצטייד במים ולתכנן הפסקת צהריים בצל.": [
+   "lib/season.js"
+  ],
+  "עונת גשמים: בוץ בנחלים, סכנת שיטפונות בנחלי הצפון והמרכז, לבדוק תחזית.": [
+   "lib/season.js"
+  ],
+  "סכנת מכת חום – לא לטייל בשעות היום": [
+   "lib/weather.js"
+  ],
+  "חום גבוה – לצאת מוקדם, לשתות הרבה, להפסיק בצהריים": [
+   "lib/weather.js"
+  ],
+  "חם – כובע, מים והצללה": [
+   "lib/weather.js"
+  ],
+  "תנאים נוחים להליכה": [
+   "lib/weather.js"
+  ],
+  "חום קיצוני – לא לצעוד": [
+   "lib/weather.js"
+  ],
+  "חום כבד – יציאה עם שחר": [
+   "lib/weather.js"
+  ],
+  "חם": [
+   "lib/weather.js",
+   "pages/Planner.jsx"
+  ],
+  "סכנת שיטפונות בנחלי המדבר": [
+   "lib/weather.js"
+  ],
+  "גשם משמעותי – בוץ ונחלים זורמים": [
+   "lib/weather.js"
+  ],
+  "סיכוי לגשם": [
+   "lib/weather.js"
+  ],
+  "רוחות חזקות – זהירות על רכסים": [
+   "lib/weather.js"
+  ],
+  "רוח ערה": [
+   "lib/weather.js"
+  ],
+  "סופות רעמים": [
+   "lib/weather.js"
+  ],
+  "שלג": [
+   "lib/weather.js"
+  ],
+  "לא לצאת": [
+   "lib/weather.js"
+  ],
+  "בזהירות": [
+   "lib/weather.js"
+  ],
+  "קריית שמונה": [
+   "lib/weather.js"
+  ],
+  "טבריה": [
+   "lib/weather.js"
+  ],
+  "חיפה (כרמל)": [
+   "lib/weather.js"
+  ],
+  "תל אביב": [
+   "lib/weather.js"
+  ],
+  "ערד": [
+   "lib/weather.js"
+  ],
+  "שדה בוקר": [
+   "lib/weather.js"
+  ],
+  "מצפה רמון": [
+   "lib/weather.js",
+   "pages/Guide.jsx"
+  ],
+  "😇 מלאכי השביל": [
+   "pages/Angels.jsx"
+  ],
+  "האנשים שהופכים את שביל ישראל למסע של חסד": [
+   "pages/Angels.jsx"
+  ],
+  "מי הם?": [
+   "pages/Angels.jsx"
+  ],
+  "הרשימה הרשמית ({0})": [
+   "pages/Angels.jsx"
+  ],
+  "המלאכים שלי ({0})": [
+   "pages/Angels.jsx"
+  ],
+  "איך זה עובד": [
+   "pages/Angels.jsx"
+  ],
+  "מאתרים": [
+   "pages/Angels.jsx"
+  ],
+  "ברשימת החברה להגנת הטבע, בקבוצות הפייסבוק/וואטסאפ או מפה לאוזן בשביל.": [
+   "pages/Angels.jsx"
+  ],
+  "מתאמים מראש": [
+   "pages/Angels.jsx"
+  ],
+  "הודעת וואטסאפ 24–48 שעות לפני: מי אתם, כמה אתם, מתי מגיעים ומה אתם צריכים (רצפה/מקלחת/כביסה).": [
+   "pages/Angels.jsx"
+  ],
+  "מגיעים בזמן": [
+   "pages/Angels.jsx"
+  ],
+  "מעדכנים על עיכובים; לא מגיעים אחרי חשכה בלי לתאם.": [
+   "pages/Angels.jsx"
+  ],
+  "אורחים טובים": [
+   "pages/Angels.jsx"
+  ],
+  "עוזרים, לא מבזבזים מים וחשמל, משאירים נקי, מודים – ומשלמים קדימה כשתוכלו.": [
+   "pages/Angels.jsx"
+  ],
+  "כללי התנהגות מלאים": [
+   "pages/Angels.jsx"
+  ],
+  "רשימות רשמיות וקהילות (קישורים)": [
+   "pages/Angels.jsx"
+  ],
+  "מספרי הטלפון של המלאכים אינם מפורסמים באפליקציה (פרטיות). שמרו אותם בכרטיסייה \"המלאכים שלי\" לאחר שתקבלו מהרשימות הרשמיות.": [
+   "pages/Angels.jsx"
+  ],
+  "הרשימה הרשמית של החברה להגנת הטבע (": [
+   "pages/Angels.jsx"
+  ],
+  "מארחים,": [
+   "pages/Angels.jsx"
+  ],
+  "חיפוש יישוב / מה מציעים…": [
+   "pages/Angels.jsx"
+  ],
+  "הכל": [
+   "pages/Angels.jsx",
+   "pages/Guide.jsx",
+   "pages/Segments.jsx"
+  ],
+  "📞 פרטי הקשר של אזור זה באתר החברה להגנת הטבע": [
+   "pages/Angels.jsx"
+  ],
+  "פרטי קשר באתר": [
+   "pages/Angels.jsx"
+  ],
+  "+ שמירה אצלי": [
+   "pages/Angels.jsx"
+  ],
+  "לא נמצאו מארחים לחיפוש הזה": [
+   "pages/Angels.jsx"
+  ],
+  "יישובים נוספים עם מסורת אירוח (ממקורות קהילתיים)": [
+   "pages/Angels.jsx"
+  ],
+  "תזכורות תיאום": [
+   "pages/Angels.jsx"
+  ],
+  "יש איש קשר": [
+   "pages/Angels.jsx"
+  ],
+  "לתאם עד {0}": [
+   "pages/Angels.jsx"
+  ],
+  "+ הוספת מלאך": [
+   "pages/Angels.jsx"
+  ],
+  "עוד אין אנשי קשר. הוסיפו מלאכים שמצאתם ברשימות ותאמו איתם מראש.": [
+   "pages/Angels.jsx"
+  ],
+  "· מקטע {0}": [
+   "pages/Angels.jsx"
+  ],
+  "📞 חיוג": [
+   "pages/Angels.jsx"
+  ],
+  "שלום {0}! אני הולך/ת בשביל ישראל ומתכנן/ת להגיע ל{1} ב-{2}. האם ניתן ללון אצלכם? תודה רבה 🙏": [
+   "pages/Angels.jsx"
+  ],
+  "תאריך": [
+   "pages/Angels.jsx",
+   "pages/Journal.jsx"
+  ],
+  "💬 וואטסאפ": [
+   "pages/Angels.jsx"
+  ],
+  "מלאך שביל": [
+   "pages/Angels.jsx"
+  ],
+  "שם": [
+   "pages/Angels.jsx",
+   "pages/Planner.jsx"
+  ],
+  "יישוב": [
+   "pages/Angels.jsx"
+  ],
+  "טלפון": [
+   "pages/Angels.jsx",
+   "pages/Planner.jsx"
+  ],
+  "תאריך הגעה": [
+   "pages/Angels.jsx"
+  ],
+  "מקטע": [
+   "pages/Angels.jsx",
+   "pages/Guide.jsx",
+   "pages/Journal.jsx",
+   "pages/MapPage.jsx",
+   "pages/Planner.jsx",
+   "pages/SegmentDetail.jsx"
+  ],
+  "סטטוס": [
+   "pages/Angels.jsx"
+  ],
+  "הערות": [
+   "pages/Angels.jsx"
+  ],
+  "מה מציעים, מתי זמינים, איך הגעתם אליהם…": [
+   "pages/Angels.jsx"
+  ],
+  "מחיקה": [
+   "pages/Angels.jsx",
+   "pages/Journal.jsx",
+   "pages/MapPage.jsx"
+  ],
+  "שמירה": [
+   "pages/Angels.jsx",
+   "pages/Journal.jsx"
+  ],
+  "שם המטייל/ת": [
+   "pages/Certificate.jsx"
+  ],
+  "השם שיופיע בתעודה": [
+   "pages/Certificate.jsx"
+  ],
+  "שביל ישראל · Israel National Trail": [
+   "pages/Certificate.jsx"
+  ],
+  "תעודת הוקרה": [
+   "pages/Certificate.jsx"
+  ],
+  "מוענקת ל": [
+   "pages/Certificate.jsx"
+  ],
+  "על השלמת": [
+   "pages/Certificate.jsx"
+  ],
+  "מסע שלם": [
+   "pages/Certificate.jsx"
+  ],
+  "{0}% מהמסע": [
+   "pages/Certificate.jsx"
+  ],
+  "בשביל ישראל": [
+   "pages/Certificate.jsx"
+  ],
+  "מקטעים ·": [
+   "pages/Certificate.jsx",
+   "pages/Segments.jsx"
+  ],
+  "ק\"מ ·": [
+   "pages/Certificate.jsx",
+   "pages/Journal.jsx",
+   "pages/Segments.jsx"
+  ],
+  "מאילת ועד החרמון": [
+   "pages/Certificate.jsx"
+  ],
+  "מהחרמון ועד אילת": [
+   "pages/Certificate.jsx",
+   "pages/Home.jsx"
+  ],
+  "מקטעים בשביל ·": [
+   "pages/Certificate.jsx"
+  ],
+  "ק\"מ": [
+   "pages/Certificate.jsx",
+   "pages/Home.jsx",
+   "pages/Journal.jsx",
+   "pages/Planner.jsx",
+   "pages/SegmentDetail.jsx",
+   "pages/Segments.jsx"
+  ],
+  "נוצר באפליקציית \"שביל ישראל – מתכנן המסע\"": [
+   "pages/Certificate.jsx"
+  ],
+  "🖨️ הדפסה / שמירה כ-PDF": [
+   "pages/Certificate.jsx"
+  ],
+  "תעודה אישית מהאפליקציה. תעודת סיום רשמית – יש לברר מול החברה להגנת הטבע.": [
+   "pages/Certificate.jsx"
+  ],
+  "המידע נאסף ממקורות ציבוריים (החברה להגנת הטבע, רשות הטבע והגנים, קהילות השביל ומדריכים) ועלול להשתנות. אמתו לפני היציאה.": [
+   "pages/Guide.jsx"
+  ],
+  "צפון (ק. שמונה)": [
+   "pages/Guide.jsx"
+  ],
+  "מרכז (ת\"א)": [
+   "pages/Guide.jsx"
+  ],
+  "באר שבע": [
+   "pages/Guide.jsx"
+  ],
+  "יציאה:": [
+   "pages/Guide.jsx"
+  ],
+  "סיום:": [
+   "pages/Guide.jsx",
+   "pages/SegmentDetail.jsx"
+  ],
+  "מפת העונות": [
+   "pages/Guide.jsx"
+  ],
+  "מרכז": [
+   "pages/Guide.jsx",
+   "pages/Home.jsx",
+   "pages/Planner.jsx"
+  ],
+  "טבלת אקלים חודשית": [
+   "pages/Guide.jsx"
+  ],
+  "חודש": [
+   "pages/Guide.jsx"
+  ],
+  "מקס׳": [
+   "pages/Guide.jsx"
+  ],
+  "מינ׳": [
+   "pages/Guide.jsx"
+  ],
+  "גשם": [
+   "pages/Guide.jsx"
+  ],
+  "אור": [
+   "pages/Guide.jsx"
+  ],
+  "מ\"מ": [
+   "pages/Guide.jsx"
+  ],
+  "ש׳": [
+   "pages/Guide.jsx"
+  ],
+  "🔥 כללי חום": [
+   "pages/Guide.jsx"
+  ],
+  "🌧️ גשם ושיטפונות": [
+   "pages/Guide.jsx"
+  ],
+  "❄️ שלג": [
+   "pages/Guide.jsx"
+  ],
+  "🌸 פריחה": [
+   "pages/Guide.jsx"
+  ],
+  "כמה מים?": [
+   "pages/Guide.jsx"
+  ],
+  "הכלל: \"עד ערד ואחרי ערד\"": [
+   "pages/Guide.jsx"
+  ],
+  "איפה צריך להטמין": [
+   "pages/Guide.jsx"
+  ],
+  "חניוני לילה עם מים (דרום)": [
+   "pages/Guide.jsx"
+  ],
+  "ללא מים": [
+   "pages/Guide.jsx"
+  ],
+  "🛠️ איך מטמינים (בעצמכם)": [
+   "pages/Guide.jsx"
+  ],
+  "💳 שירותי הטמנה בתשלום": [
+   "pages/Guide.jsx"
+  ],
+  "מקור": [
+   "pages/Guide.jsx"
+  ],
+  "⛲ מקורות מים בצפון ובמרכז": [
+   "pages/Guide.jsx"
+  ],
+  "😇 מלאכי שביל": [
+   "pages/Guide.jsx"
+  ],
+  "⛺ חניוני לילה": [
+   "pages/Guide.jsx",
+   "pages/MapPage.jsx"
+  ],
+  "🏨 בתשלום": [
+   "pages/Guide.jsx"
+  ],
+  "📜 כללים": [
+   "pages/Guide.jsx"
+  ],
+  "איפה מוצאים מלאכים (רשימות רשמיות וקהילות)": [
+   "pages/Guide.jsx"
+  ],
+  "כללי התנהגות אצל מלאך שביל": [
+   "pages/Guide.jsx"
+  ],
+  "יישובים עם מסורת אירוח (מצפון לדרום)": [
+   "pages/Guide.jsx"
+  ],
+  "חניוני הלילה של שביל ישראל (רט\"ג/קק\"ל) הם המקומות היחידים שבהם מותר ללון בשמורות טבע ובנגב. רובם חינם, ללא מתקנים, וחלקם עם ברז מים. הגיעו לפני החשכה.": [
+   "pages/Guide.jsx"
+  ],
+  "💧 מים": [
+   "pages/Guide.jsx"
+  ],
+  "· ליד": [
+   "pages/Guide.jsx"
+  ],
+  "הטמנה:": [
+   "pages/Guide.jsx"
+  ],
+  "לא פורסם": [
+   "pages/Guide.jsx"
+  ],
+  "הזמנה / אתר": [
+   "pages/Guide.jsx"
+  ],
+  "כללי לינה ואש בשטח": [
+   "pages/Guide.jsx"
+  ],
+  "מספרי חירום": [
+   "pages/Guide.jsx"
+  ],
+  "קישור": [
+   "pages/Guide.jsx"
+  ],
+  "🌊 שיטפונות": [
+   "pages/Guide.jsx"
+  ],
+  "איך בודקים:": [
+   "pages/Guide.jsx"
+  ],
+  "🎯 שטחי אש": [
+   "pages/Guide.jsx"
+  ],
+  "תיאום:": [
+   "pages/Guide.jsx"
+  ],
+  "מקטעים רלוונטיים:": [
+   "pages/Guide.jsx"
+  ],
+  "🥵 חום ומכת חום": [
+   "pages/Guide.jsx"
+  ],
+  "🐍 בעלי חיים": [
+   "pages/Guide.jsx"
+  ],
+  "🛡️ מצב ביטחוני 2024–2026 וקטעי הצפון": [
+   "pages/Guide.jsx"
+  ],
+  "👥 קהילות ומקורות מידע": [
+   "pages/Guide.jsx"
+  ],
+  "התאמה למקטע ולעונה": [
+   "pages/Guide.jsx"
+  ],
+  "{0} ל'": [
+   "pages/Guide.jsx",
+   "pages/Planner.jsx",
+   "pages/SegmentDetail.jsx"
+  ],
+  "מים לשאת": [
+   "pages/Guide.jsx",
+   "pages/SegmentDetail.jsx"
+  ],
+  "ק\"ג על הגב (משוער)": [
+   "pages/Guide.jsx"
+  ],
+  "ימי אוכל": [
+   "pages/Guide.jsx"
+  ],
+  "משקל בסיס של הציוד (ללא מים ואוכל):": [
+   "pages/Guide.jsx"
+  ],
+  "ק\"ג": [
+   "pages/Guide.jsx",
+   "pages/SegmentDetail.jsx"
+  ],
+  "שק שינה:": [
+   "pages/Guide.jsx",
+   "pages/Planner.jsx",
+   "pages/SegmentDetail.jsx"
+  ],
+  "אוכל:": [
+   "pages/Guide.jsx",
+   "pages/SegmentDetail.jsx"
+  ],
+  "🔴 חובה · 🟠 מומלץ · 🟢 נחמד שיש": [
+   "pages/Guide.jsx"
+  ],
+  "רשימת הציוד הבסיסית שלי": [
+   "pages/Guide.jsx"
+  ],
+  "הסימונים נשמרים במכשיר. משקל יעד ללא מים ואוכל: 7–10 ק\"ג.": [
+   "pages/Guide.jsx"
+  ],
+  "המלצות ציוד מהמחקר (החברה להגנת הטבע ושביליסטים)": [
+   "pages/Guide.jsx"
+  ],
+  "איפוס הרשימה": [
+   "pages/Guide.jsx"
+  ],
+  "פרופיל": [
+   "pages/Guide.jsx"
+  ],
+  "מספר ימים:": [
+   "pages/Guide.jsx"
+  ],
+  "מינימום": [
+   "pages/Guide.jsx"
+  ],
+  "ממוצע": [
+   "pages/Guide.jsx"
+  ],
+  "מקסימום": [
+   "pages/Guide.jsx"
+  ],
+  "אוכל": [
+   "pages/Guide.jsx"
+  ],
+  "₪/יום": [
+   "pages/Guide.jsx"
+  ],
+  "הטמנות מים (ממוצע)": [
+   "pages/Guide.jsx"
+  ],
+  "לא כולל:": [
+   "pages/Guide.jsx"
+  ],
+  "פירוט רכיבי העלות": [
+   "pages/Guide.jsx"
+  ],
+  "🚌 הגעה לנקודת ההתחלה בצפון": [
+   "pages/Guide.jsx"
+  ],
+  "🏁 אילת – סיום / התחלה": [
+   "pages/Guide.jsx"
+  ],
+  "נקודות הצטיידות (מצפון לדרום)": [
+   "pages/Guide.jsx"
+  ],
+  "קצב ומשך": [
+   "pages/Guide.jsx"
+  ],
+  "קצב יומי:": [
+   "pages/Guide.jsx",
+   "pages/Planner.jsx"
+  ],
+  "סה\"כ ימים:": [
+   "pages/Guide.jsx"
+  ],
+  "ימי מנוחה:": [
+   "pages/Guide.jsx"
+  ],
+  "חלוקה למקטעים:": [
+   "pages/Guide.jsx"
+  ],
+  "🎒 תרבות השביל": [
+   "pages/Guide.jsx"
+  ],
+  "סימון שביל ישראל": [
+   "pages/Guide.jsx"
+  ],
+  "כלל הכיוון:": [
+   "pages/Guide.jsx"
+  ],
+  "אפליקציות ומפות": [
+   "pages/Guide.jsx"
+  ],
+  "חיפוש בשאלות…": [
+   "pages/Guide.jsx"
+  ],
+  "🌿 לא משאירים עקבות": [
+   "pages/Guide.jsx"
+  ],
+  "🔥 כללי אש": [
+   "pages/Guide.jsx"
+  ],
+  "🐕 כלבים בשביל": [
+   "pages/Guide.jsx"
+  ],
+  "🕯️ שבת וחגים": [
+   "pages/Guide.jsx"
+  ],
+  "🕌 אתרים דתיים ויישובים": [
+   "pages/Guide.jsx"
+  ],
+  "מה האפליקציה הזו מוסיפה (לא קיים אצל אחרים)": [
+   "pages/Guide.jsx"
+  ],
+  "אפליקציות ומקורות קיימים": [
+   "pages/Guide.jsx"
+  ],
+  "מה יש:": [
+   "pages/Guide.jsx"
+  ],
+  "תלונות נפוצות:": [
+   "pages/Guide.jsx"
+  ],
+  "מבוסס על חיפוש בחנויות האפליקציות ובביקורות (נובמבר 2026). דירוגים ומחירים משתנים.": [
+   "pages/Guide.jsx"
+  ],
+  "המדריך הרשמי של החברה להגנת הטבע": [
+   "pages/Guide.jsx"
+  ],
+  "החלוקה ל-56 מקטעים, האורכים, תיאורי המסלול, העונות, נקודות ההתחלה והסיום, התחבורה וההמלצות באפליקציה מבוססים על המדריך הרשמי (נשלף": [
+   "pages/Guide.jsx"
+  ],
+  "). לכל מקטע יש מפה חינמית להורדה ועמוד מפורט באתר.": [
+   "pages/Guide.jsx"
+  ],
+  "המדריך המלא באתר": [
+   "pages/Guide.jsx"
+  ],
+  "🗺️ מפה אינטראקטיבית": [
+   "pages/Guide.jsx"
+  ],
+  "⬇️ כל מפות המקטעים (ZIP)": [
+   "pages/Guide.jsx"
+  ],
+  "אוגדן המפות לרכישה": [
+   "pages/Guide.jsx"
+  ],
+  "דיווח על בעיה בסימון": [
+   "pages/Guide.jsx"
+  ],
+  "עדכונים ושינויים בתוואי": [
+   "pages/Guide.jsx"
+  ],
+  "לעמוד העדכונים ←": [
+   "pages/Guide.jsx"
+  ],
+  "נשלף מאתר החברה להגנת הטבע ב-": [
+   "pages/Guide.jsx"
+  ],
+  "· מתרענן אוטומטית מדי יום ובכל פתיחה של האפליקציה.": [
+   "pages/Guide.jsx"
+  ],
+  "בודק…": [
+   "pages/Guide.jsx"
+  ],
+  "רענון עכשיו": [
+   "pages/Guide.jsx"
+  ],
+  "חדש": [
+   "pages/Guide.jsx",
+   "pages/Home.jsx"
+  ],
+  "מדריכי הכנה ובטיחות": [
+   "pages/Guide.jsx"
+  ],
+  "כל מה שצריך לדעת": [
+   "pages/Guide.jsx"
+  ],
+  "למדריך המלא באתר": [
+   "pages/Guide.jsx"
+  ],
+  "לעדכונים אחרונים על מצב השבילים (סגירות, שיטפונות, שריפות):": [
+   "pages/Guide.jsx"
+  ],
+  "מוקד טבע": [
+   "pages/Guide.jsx"
+  ],
+  "של החברה להגנת הטבע.": [
+   "pages/Guide.jsx"
+  ],
+  "מסע של": [
+   "pages/Home.jsx"
+  ],
+  "ק\"מ ב-": [
+   "pages/Home.jsx",
+   "pages/Journal.jsx"
+  ],
+  "מקטעים רשמיים · מתכנן, מפה חיה ומלווה בשטח": [
+   "pages/Home.jsx"
+  ],
+  "הושלם": [
+   "pages/Home.jsx"
+  ],
+  "ימים ליציאה": [
+   "pages/Home.jsx"
+  ],
+  "ההתקדמות שלי לאורך השביל": [
+   "pages/Home.jsx"
+  ],
+  "אילת ← חרמון": [
+   "pages/Home.jsx",
+   "pages/Planner.jsx",
+   "pages/Segments.jsx"
+  ],
+  "חרמון ← אילת": [
+   "pages/Home.jsx",
+   "pages/Planner.jsx",
+   "pages/Segments.jsx"
+  ],
+  "המסע שלי": [
+   "pages/Home.jsx"
+  ],
+  "יום מנוחה 😌": [
+   "pages/Home.jsx"
+  ],
+  "ק\"מ · כ-": [
+   "pages/Home.jsx",
+   "pages/Planner.jsx"
+  ],
+  "שעות · 🛏": [
+   "pages/Home.jsx"
+  ],
+  "היום הבא במסלול:": [
+   "pages/Home.jsx"
+  ],
+  "המסע הסתיים 🏆": [
+   "pages/Home.jsx"
+  ],
+  "🟢 רמזור התוכנית: תקין": [
+   "pages/Home.jsx"
+  ],
+  "🟡 רמזור התוכנית: {0} דגשים": [
+   "pages/Home.jsx"
+  ],
+  "🔴 רמזור התוכנית: {0} אזהרות": [
+   "pages/Home.jsx"
+  ],
+  "😇 מחר לינה אצל מלאכי שביל (": [
+   "pages/Home.jsx"
+  ],
+  ") – עדיין אין איש קשר. תאמו היום!": [
+   "pages/Home.jsx"
+  ],
+  "לתוכנית המלאה": [
+   "pages/Home.jsx"
+  ],
+  "פרטי המקטע": [
+   "pages/Home.jsx"
+  ],
+  "מפה חיה": [
+   "pages/Home.jsx"
+  ],
+  "עוד לא תכננתם מסע?": [
+   "pages/Home.jsx"
+  ],
+  "בחרו כיוון, תאריך וקצב – ותקבלו לו\"ז יומי עם לינה, מים, מלאכי שביל ואזהרות עונתיות. הכול נשמר במכשיר.": [
+   "pages/Home.jsx"
+  ],
+  "בואו נתכנן 🥾": [
+   "pages/Home.jsx"
+  ],
+  "העונה עכשיו": [
+   "pages/Home.jsx"
+  ],
+  "לטבלה המלאה ←": [
+   "pages/Home.jsx"
+  ],
+  "נופים מהשביל": [
+   "pages/Home.jsx"
+  ],
+  "עדכוני תוואי": [
+   "pages/Home.jsx"
+  ],
+  "חדשים": [
+   "pages/Home.jsx"
+  ],
+  "כל העדכונים ←": [
+   "pages/Home.jsx"
+  ],
+  "מקור: החברה להגנת הטבע · נשלף": [
+   "pages/Home.jsx"
+  ],
+  "בודק עדכונים…": [
+   "pages/Home.jsx"
+  ],
+  "לא ניתן לרענן כרגע": [
+   "pages/Home.jsx"
+  ],
+  "מתרענן אוטומטית בכל פתיחה": [
+   "pages/Home.jsx"
+  ],
+  "רענון": [
+   "pages/Home.jsx",
+   "pages/Settings.jsx"
+  ],
+  "המידע באפליקציה נאסף ממקורות ציבוריים ואינו תחליף למפות ולהנחיות הרשמיות. בטיחות קודמת לכול.": [
+   "pages/Home.jsx"
+  ],
+  "ליד {0}": [
+   "pages/Home.jsx",
+   "pages/Weather.jsx"
+  ],
+  "מיקומך": [
+   "pages/Home.jsx"
+  ],
+  "ירושלים (ללא GPS)": [
+   "pages/Home.jsx",
+   "pages/Weather.jsx"
+  ],
+  "טוען תחזית חיה…": [
+   "pages/Home.jsx"
+  ],
+  "מתעדכן אוטומטית · לחצו לתחזית שעתית ולתחנות לאורך השביל": [
+   "pages/Home.jsx"
+  ],
+  "נשמר ביומן ✓": [
+   "pages/Journal.jsx"
+  ],
+  "למחוק את הרשומה והתמונות שלה?": [
+   "pages/Journal.jsx"
+  ],
+  "יומן המסע שלי בשביל ישראל {0} מקטעים · {1} ק\"מ מתוך {2}": [
+   "pages/Journal.jsx"
+  ],
+  "· {0} ק\"מ": [
+   "pages/Journal.jsx"
+  ],
+  "יומן שביל ישראל": [
+   "pages/Journal.jsx"
+  ],
+  "הועתק ללוח": [
+   "pages/Journal.jsx",
+   "pages/SegmentDetail.jsx"
+  ],
+  "יומן המסע": [
+   "pages/Journal.jsx"
+  ],
+  "+ רשומה": [
+   "pages/Journal.jsx"
+  ],
+  "ההתקדמות שלי": [
+   "pages/Journal.jsx"
+  ],
+  "ק\"מ הושלמו": [
+   "pages/Journal.jsx"
+  ],
+  "תמונות": [
+   "pages/Journal.jsx",
+   "pages/Settings.jsx"
+  ],
+  "נמדדו ב-GPS:": [
+   "pages/Journal.jsx"
+  ],
+  "ימי הקלטה": [
+   "pages/Journal.jsx"
+  ],
+  "🏆 סיימתם את שביל ישראל! כל הכבוד.": [
+   "pages/Journal.jsx"
+  ],
+  "🏅 תעודת הוקרה להדפסה": [
+   "pages/Journal.jsx"
+  ],
+  "📓 רשומות": [
+   "pages/Journal.jsx"
+  ],
+  "🖼️ גלריה": [
+   "pages/Journal.jsx"
+  ],
+  "📊 סיכום": [
+   "pages/Journal.jsx"
+  ],
+  "עוד אין רשומות. תעדו כל יום – חוויות, אנשים, תמונות, נקודות מים, טיפים לבאים אחריכם.": [
+   "pages/Journal.jsx"
+  ],
+  "רשומה ביומן": [
+   "pages/Journal.jsx"
+  ],
+  "ל'": [
+   "pages/Journal.jsx"
+  ],
+  "תמונה לא נשמרה": [
+   "pages/Journal.jsx"
+  ],
+  "ק\"מ היום": [
+   "pages/Journal.jsx",
+   "pages/MapPage.jsx"
+  ],
+  "איך היה?": [
+   "pages/Journal.jsx"
+  ],
+  "איפה ישנתי": [
+   "pages/Journal.jsx"
+  ],
+  "חניון לילה / מלאך שביל…": [
+   "pages/Journal.jsx"
+  ],
+  "ליטרים ששתיתי": [
+   "pages/Journal.jsx"
+  ],
+  "מה קרה היום?": [
+   "pages/Journal.jsx"
+  ],
+  "אנשים שפגשתם, נוף, מים, לינה, מה הייתם עושים אחרת…": [
+   "pages/Journal.jsx"
+  ],
+  "תמונות (": [
+   "pages/Journal.jsx"
+  ],
+  "הוספה": [
+   "pages/Journal.jsx"
+  ],
+  "התמונות נדחסות ונשמרות במכשיר בלבד (IndexedDB). מומלץ לגבות מדי פעם.": [
+   "pages/Journal.jsx"
+  ],
+  "עוד אין תמונות. הוסיפו תמונות לרשומות היומן.": [
+   "pages/Journal.jsx"
+  ],
+  "ימים מתועדים": [
+   "pages/Journal.jsx"
+  ],
+  "ק\"מ ביומן": [
+   "pages/Journal.jsx"
+  ],
+  "ממוצע יומי": [
+   "pages/Journal.jsx"
+  ],
+  "ק\"מ לפי יום": [
+   "pages/Journal.jsx"
+  ],
+  "{0}: {1} ק\"מ": [
+   "pages/Journal.jsx"
+  ],
+  "מצב רוח": [
+   "pages/Journal.jsx"
+  ],
+  "היום הארוך ביותר": [
+   "pages/Journal.jsx"
+  ],
+  "הקלטות GPS": [
+   "pages/Journal.jsx"
+  ],
+  "נקודות": [
+   "pages/Journal.jsx"
+  ],
+  "<a href=\"{0}\" target=\"_blank\">אתר/הזמנה</a>": [
+   "pages/MapPage.jsx"
+  ],
+  "<b>😇 {0}</b><br/>{1}<br/><a href=\"#/guide/angels\">למדריך מלאכי השביל</a>": [
+   "pages/MapPage.jsx"
+  ],
+  "<div style=\"max-width:220px\">{0}<b>{1}</b><br/><span style=\"font-size:12px\">{2}…</span><br/><a href=\"{3}\" target=\"_blank\">לקריאה בוויקיפדיה</a></div>": [
+   "pages/MapPage.jsx"
+  ],
+  "תחילת {0} ({1})": [
+   "pages/MapPage.jsx"
+  ],
+  "סוף {0} ({1})": [
+   "pages/MapPage.jsx"
+  ],
+  "⚠ סטיתם מהשביל ({0})": [
+   "pages/MapPage.jsx"
+  ],
+  "מוריד תוואי…": [
+   "pages/MapPage.jsx"
+  ],
+  "התוואי הורד ונשמר ({0} ק\"מ)": [
+   "pages/MapPage.jsx"
+  ],
+  "ההורדה נכשלה – בדקו חיבור לאינטרנט ונסו שוב": [
+   "pages/MapPage.jsx"
+  ],
+  "התוואי נמחק מהמכשיר": [
+   "pages/MapPage.jsx"
+  ],
+  "עקוב אחרי": [
+   "pages/MapPage.jsx"
+  ],
+  "ההקלטה נעצרה": [
+   "pages/MapPage.jsx"
+  ],
+  "מקליט את המסלול שלך": [
+   "pages/MapPage.jsx"
+  ],
+  "הקלטת מסלול": [
+   "pages/MapPage.jsx"
+  ],
+  "שכבות": [
+   "pages/MapPage.jsx"
+  ],
+  "📍 ק\"מ": [
+   "pages/MapPage.jsx"
+  ],
+  "מתוך": [
+   "pages/MapPage.jsx",
+   "pages/Story.jsx"
+  ],
+  "מהשביל": [
+   "pages/MapPage.jsx",
+   "pages/Story.jsx"
+  ],
+  "מקטעים הושלמו ·": [
+   "pages/MapPage.jsx"
+  ],
+  "ק\"מ (": [
+   "pages/MapPage.jsx"
+  ],
+  "🧭 סיפור דרך": [
+   "pages/MapPage.jsx",
+   "pages/Planner.jsx"
+  ],
+  "מחוץ למקטעים": [
+   "pages/MapPage.jsx"
+  ],
+  "מ'": [
+   "pages/MapPage.jsx"
+  ],
+  "חניון לילה": [
+   "pages/MapPage.jsx"
+  ],
+  "קמ\"ש ·": [
+   "pages/MapPage.jsx"
+  ],
+  "שקיעה ·": [
+   "pages/MapPage.jsx"
+  ],
+  "ש׳ אור": [
+   "pages/MapPage.jsx"
+  ],
+  "זמן משוער לחניון הקרוב בקצב": [
+   "pages/MapPage.jsx"
+  ],
+  "קמ\"ש:": [
+   "pages/MapPage.jsx"
+  ],
+  "דק׳": [
+   "pages/MapPage.jsx"
+  ],
+  "– לא תספיקו לפני החשכה!": [
+   "pages/MapPage.jsx"
+  ],
+  "מחפש לוויינים…": [
+   "pages/MapPage.jsx",
+   "pages/Story.jsx"
+  ],
+  "הפעילו GPS לראות מיקום, התקדמות ומרחקים בזמן אמת": [
+   "pages/MapPage.jsx"
+  ],
+  "מוצג תוואי סכמטי. הורידו את התוואי המלא (שכבות ←) לדיוק מלא ולחישוב התקדמות": [
+   "pages/MapPage.jsx"
+  ],
+  "שכבות ומפות": [
+   "pages/MapPage.jsx"
+  ],
+  "מפת רקע": [
+   "pages/MapPage.jsx",
+   "pages/Settings.jsx"
+  ],
+  "מפת הטיולים של ישראל מציגה סימוני שבילים ואת שביל ישראל. אריחים שנצפו נשמרים לשימוש לא מקוון – גללו מראש על המקטעים שלכם.": [
+   "pages/MapPage.jsx"
+  ],
+  "נקודות עניין": [
+   "pages/MapPage.jsx",
+   "pages/SegmentDetail.jsx"
+  ],
+  "🏛️ נקודות עניין (ויקיפדיה)": [
+   "pages/MapPage.jsx"
+  ],
+  "😇 מלאכי שביל (יישובים)": [
+   "pages/MapPage.jsx"
+  ],
+  "🏨 לינה בתשלום / בתי ספר שדה": [
+   "pages/MapPage.jsx"
+  ],
+  "💧 נקודות מים": [
+   "pages/MapPage.jsx"
+  ],
+  "תוואי השביל המלא (OpenStreetMap)": [
+   "pages/MapPage.jsx"
+  ],
+  "הורדה חד-פעמית של תוואי שביל ישראל מ-OSM. נשמר במכשיר ומאפשר: חישוב אחוז התקדמות, מרחק מהשביל והתרעת סטייה – גם בלי אינטרנט.": [
+   "pages/MapPage.jsx"
+  ],
+  "רענון התוואי": [
+   "pages/MapPage.jsx"
+  ],
+  "הורדת התוואי": [
+   "pages/MapPage.jsx"
+  ],
+  "GPX הורד": [
+   "pages/MapPage.jsx"
+  ],
+  "ייצוא GPX": [
+   "pages/MapPage.jsx"
+  ],
+  "לניווט שטח אמיתי מומלץ להחזיק גם אפליקציה ייעודית (Israel Hiking Map / עמוד ענן) ומפת סימון שבילים מודפסת. ה-GPS תלוי בסוללה ובקליטה.": [
+   "pages/MapPage.jsx"
+  ],
+  "° (מורגש": [
+   "pages/MapPage.jsx"
+  ],
+  "⚠ גשם בקרוב": [
+   "pages/MapPage.jsx"
+  ],
+  "תחילת מקטע {0}: {1}": [
+   "pages/Navigate.jsx"
+  ],
+  "סיום השביל: {0}": [
+   "pages/Navigate.jsx"
+  ],
+  "המסך יכול לכבות": [
+   "pages/Navigate.jsx",
+   "pages/Story.jsx"
+  ],
+  "המסך יישאר דולק": [
+   "pages/Navigate.jsx",
+   "pages/Story.jsx"
+  ],
+  "המכשיר לא תומך בנעילת מסך": [
+   "pages/Navigate.jsx"
+  ],
+  "מצפן וניווט": [
+   "pages/Navigate.jsx"
+  ],
+  "הפעלת המצפן (נדרש אישור חיישנים)": [
+   "pages/Navigate.jsx"
+  ],
+  "אין הרשאה לחיישני התנועה. ב-iPhone: הגדרות ← Safari ← Motion & Orientation.": [
+   "pages/Navigate.jsx"
+  ],
+  "המכשיר לא תומך במצפן. כיוון ההליכה יחושב מ-GPS בתנועה.": [
+   "pages/Navigate.jsx"
+  ],
+  "כיוון המכשיר": [
+   "pages/Navigate.jsx"
+  ],
+  "כיוון תנועה (GPS)": [
+   "pages/Navigate.jsx"
+  ],
+  "ממתין לחיישנים…": [
+   "pages/Navigate.jsx"
+  ],
+  "אזימוט ליעד:": [
+   "pages/Navigate.jsx"
+  ],
+  "· מרחק אווירי": [
+   "pages/Navigate.jsx"
+  ],
+  "יעד לניווט": [
+   "pages/Navigate.jsx"
+  ],
+  "בחרו יעד…": [
+   "pages/Navigate.jsx"
+  ],
+  "מעלות עשרוניות": [
+   "pages/Navigate.jsx"
+  ],
+  "מעלות ודקות (לחילוץ)": [
+   "pages/Navigate.jsx"
+  ],
+  "דיוק (מ')": [
+   "pages/Navigate.jsx"
+  ],
+  "גובה (מ')": [
+   "pages/Navigate.jsx"
+  ],
+  "קמ\"ש": [
+   "pages/Navigate.jsx"
+  ],
+  "הקואורדינטות הועתקו": [
+   "pages/Navigate.jsx"
+  ],
+  "העתקה": [
+   "pages/Navigate.jsx"
+  ],
+  "שיתוף מיקום ב-WhatsApp": [
+   "pages/Navigate.jsx"
+  ],
+  "✅ צ'ק-אין יומי למשפחה": [
+   "pages/Navigate.jsx"
+  ],
+  "מחפש לוויינים… (בחוץ, עם שמיים פתוחים, זה לוקח עד דקה)": [
+   "pages/Navigate.jsx"
+  ],
+  "ה-GPS כבוי": [
+   "pages/Navigate.jsx"
+  ],
+  "אור יום": [
+   "pages/Navigate.jsx"
+  ],
+  "זריחה": [
+   "pages/Navigate.jsx"
+  ],
+  "שקיעה": [
+   "pages/Navigate.jsx"
+  ],
+  "שעות אור שנותרו": [
+   "pages/Navigate.jsx"
+  ],
+  "פחות משעתיים אור – מומלץ להגיע ללינה. בשטח פתוח מתקררים מהר אחרי השקיעה.": [
+   "pages/Navigate.jsx"
+  ],
+  "אורך היום:": [
+   "pages/Navigate.jsx"
+  ],
+  "שעות. בנגב בחורף: לצאת עם הזריחה כדי לנצל את כל האור.": [
+   "pages/Navigate.jsx"
+  ],
+  "מד מרחק יומי": [
+   "pages/Navigate.jsx"
+  ],
+  "עצור": [
+   "pages/Navigate.jsx"
+  ],
+  "התחל": [
+   "pages/Navigate.jsx"
+  ],
+  "איפוס": [
+   "pages/Navigate.jsx",
+   "pages/Story.jsx"
+  ],
+  "ק\"מ שנצעדו": [
+   "pages/Navigate.jsx"
+  ],
+  "זמן": [
+   "pages/Navigate.jsx"
+  ],
+  "קצב קמ\"ש": [
+   "pages/Navigate.jsx"
+  ],
+  "🔆 השאר מסך דולק": [
+   "pages/Navigate.jsx"
+  ],
+  "חירום": [
+   "pages/Navigate.jsx"
+  ],
+  "משטרה": [
+   "pages/Navigate.jsx"
+  ],
+  "מד\"א": [
+   "pages/Navigate.jsx"
+  ],
+  "כבאות": [
+   "pages/Navigate.jsx"
+  ],
+  "רשות הטבע והגנים": [
+   "pages/Navigate.jsx"
+  ],
+  "בחירום: מסרו מיקום במעלות ודקות (למעלה), תיאור המקטע ומספר ההולכים. חייגו 100 גם כשאין קליטה לרשת שלכם – שיחות חירום עוברות בכל רשת.": [
+   "pages/Navigate.jsx"
+  ],
+  "✅ צ'ק-אין משביל ישראל – {0}": [
+   "pages/Navigate.jsx"
+  ],
+  "אני בסדר! מיקומי: https://maps.google.com/?q={0},{1}": [
+   "pages/Navigate.jsx"
+  ],
+  "באזור {0}": [
+   "pages/Navigate.jsx"
+  ],
+  "היום: {0} ({1} ק\"מ) · לינה: {2}": [
+   "pages/Navigate.jsx"
+  ],
+  "מחר: {0}": [
+   "pages/Navigate.jsx"
+  ],
+  "צ'ק-אין הבא מחר בערב 🙂": [
+   "pages/Navigate.jsx"
+  ],
+  "מקטע {0} ({1})": [
+   "pages/Navigate.jsx"
+  ],
+  "▲ היעד": [
+   "pages/Navigate.jsx"
+  ],
+  "לנקות את התוכנית? יימחקו הכיוון, התאריכים, כל הסימונים וההכנות (היומן, התמונות ורשימת הציוד הבסיסית נשמרים).": [
+   "pages/Planner.jsx"
+  ],
+  "התוכנית נוקתה – מתחילים מחדש": [
+   "pages/Planner.jsx"
+  ],
+  "• יום {0} · {1} – {2} ← לינה: {3}": [
+   "pages/Planner.jsx"
+  ],
+  "שלום, אשמח להזמין הטמנות מים לשביל ישראל ({0}). נקודות ותאריכים: {1} כמות: ___ ליטר לנקודה עבור ___ מטיילים. תודה!": [
+   "pages/Planner.jsx"
+  ],
+  "צפון←דרום": [
+   "pages/Planner.jsx"
+  ],
+  "דרום←צפון": [
+   "pages/Planner.jsx"
+  ],
+  "הודעת הזמנת הטמנות הועתקה – שלחו לספק": [
+   "pages/Planner.jsx"
+  ],
+  "קובץ יומן הורד": [
+   "pages/Planner.jsx"
+  ],
+  "יום {0} · {1} · {2}": [
+   "pages/Planner.jsx"
+  ],
+  "מנוחה": [
+   "pages/Planner.jsx"
+  ],
+  "{0} · {1} ק\"מ · לינה: {2}": [
+   "pages/Planner.jsx"
+  ],
+  "שביל ישראל – תוכנית מסע {0} ← {1} · {2} ימים · {3} ק\"מ איש קשר לחירום: {4} {5} · צ'ק-אין יומי ב-{6}": [
+   "pages/Planner.jsx"
+  ],
+  "תוכנית שביל ישראל": [
+   "pages/Planner.jsx"
+  ],
+  "התוכנית הועתקה ללוח": [
+   "pages/Planner.jsx"
+  ],
+  "→ הקודם": [
+   "pages/Planner.jsx",
+   "pages/Story.jsx"
+  ],
+  "נשמר אוטומטית ✓": [
+   "pages/Planner.jsx"
+  ],
+  "הבא ←": [
+   "pages/Planner.jsx",
+   "pages/Story.jsx"
+  ],
+  "שיתוף": [
+   "pages/Planner.jsx"
+  ],
+  "תכנון המסע": [
+   "pages/Planner.jsx"
+  ],
+  "🟢 תקין": [
+   "pages/Planner.jsx"
+  ],
+  "🟡 דגשים": [
+   "pages/Planner.jsx"
+  ],
+  "🔴 אזהרות": [
+   "pages/Planner.jsx"
+  ],
+  "נקה תוכנית": [
+   "pages/Planner.jsx"
+  ],
+  "🗑️ נקה": [
+   "pages/Planner.jsx"
+  ],
+  "1. מסלול, כיוון ותאריך": [
+   "pages/Planner.jsx"
+  ],
+  "כיוון ההליכה": [
+   "pages/Planner.jsx"
+  ],
+  "מומלץ לצאת באוקטובר–נובמבר: הצפון עוד יבש, ומגיעים לנגב בחורף הנעים.": [
+   "pages/Planner.jsx"
+  ],
+  "מומלץ לצאת בפברואר–מרץ: חוצים את הנגב לפני החום ומגיעים לצפון הפורח באביב.": [
+   "pages/Planner.jsx"
+  ],
+  "תאריך יציאה": [
+   "pages/Planner.jsx"
+  ],
+  "ממקטע": [
+   "pages/Planner.jsx"
+  ],
+  "תחילת השביל": [
+   "pages/Planner.jsx"
+  ],
+  "עד מקטע": [
+   "pages/Planner.jsx"
+  ],
+  "סוף השביל": [
+   "pages/Planner.jsx"
+  ],
+  "ימים (משוער)": [
+   "pages/Planner.jsx"
+  ],
+  "סיום": [
+   "pages/Planner.jsx"
+  ],
+  "📌 מה לבדוק בשלב הזה": [
+   "pages/Planner.jsx"
+  ],
+  "עדכוני תוואי וסגירות ביטחוניות במקטעי הצפון (מדריך ← המדריך הרשמי).": [
+   "pages/Planner.jsx"
+  ],
+  "האם תאריך היציאה נופל על חג או שבת (תחבורה).": [
+   "pages/Planner.jsx"
+  ],
+  "מקטעים שתרצו לדלג עליהם (עירוניים) – הגדירו טווח מקטעים.": [
+   "pages/Planner.jsx"
+  ],
+  "2. קצב, ימי מנוחה ושבת": [
+   "pages/Planner.jsx"
+  ],
+  "(מתחילים 15–18 · מנוסים 20–25 · מהירים 28+)": [
+   "pages/Planner.jsx"
+  ],
+  "מקסימום ליום (פיצול מקטעים ארוכים):": [
+   "pages/Planner.jsx"
+  ],
+  "יום מנוחה כל": [
+   "pages/Planner.jsx"
+  ],
+  "ללא": [
+   "pages/Planner.jsx"
+  ],
+  "ימי הליכה": [
+   "pages/Planner.jsx"
+  ],
+  "לא הולכים בשבת": [
+   "pages/Planner.jsx"
+  ],
+  "הקצב הממוצע שלכם לפי היומן:": [
+   "pages/Planner.jsx"
+  ],
+  "ק\"מ/יום": [
+   "pages/Planner.jsx"
+  ],
+  "עדכנו לפי הקצב האמיתי ←": [
+   "pages/Planner.jsx"
+  ],
+  "ימים סה״כ": [
+   "pages/Planner.jsx"
+  ],
+  "ימי מנוחה": [
+   "pages/Planner.jsx"
+  ],
+  "ממוצע ק\"מ/יום": [
+   "pages/Planner.jsx"
+  ],
+  "היום הארוך (ק\"מ)": [
+   "pages/Planner.jsx"
+  ],
+  "ימי הליכה בשבת": [
+   "pages/Planner.jsx"
+  ],
+  "📌 דגשים": [
+   "pages/Planner.jsx"
+  ],
+  "שבוע ראשון – לתכנן ימים קצרים (12–16 ק\"מ) עד שהגוף מתרגל.": [
+   "pages/Planner.jsx"
+  ],
+  "בנגב ימים ארוכים יותר אפשריים (שטח פתוח) אבל יש פחות מים; בצפון עליות וירידות מאטות.": [
+   "pages/Planner.jsx"
+  ],
+  "יום מנוחה כל 6–7 ימים ביישוב עם סופר, כביסה ומקלחת.": [
+   "pages/Planner.jsx"
+  ],
+  "3. לינה – לילה אחר לילה": [
+   "pages/Planner.jsx"
+  ],
+  "סגנון לינה מועדף": [
+   "pages/Planner.jsx"
+  ],
+  "משולב (מלאכים + אוהל + מדי פעם בתשלום)": [
+   "pages/Planner.jsx"
+  ],
+  "אוהל / חניוני לילה": [
+   "pages/Planner.jsx"
+  ],
+  "לינה בתשלום (אכסניות/צימרים)": [
+   "pages/Planner.jsx"
+  ],
+  "לילות אצל מלאכים": [
+   "pages/Planner.jsx"
+  ],
+  "לילות שטח": [
+   "pages/Planner.jsx"
+  ],
+  "לילות בתשלום": [
+   "pages/Planner.jsx"
+  ],
+  "סמנו כל לילה שסודר (תיאום עם מלאך / הזמנה). לילות שטח לא דורשים תיאום.": [
+   "pages/Planner.jsx"
+  ],
+  "✓ יש איש קשר שמור": [
+   "pages/Planner.jsx"
+  ],
+  "אין עדיין איש קשר – לתאם 48 שעות לפני": [
+   "pages/Planner.jsx"
+  ],
+  "מלאכים": [
+   "pages/Planner.jsx"
+  ],
+  "הזמנה": [
+   "pages/Planner.jsx"
+  ],
+  "⛺ כללי לינת שטח (רט\"ג)": [
+   "pages/Planner.jsx"
+  ],
+  "4. מים, הטמנות ואוכל": [
+   "pages/Planner.jsx"
+  ],
+  "ימים ללא מים": [
+   "pages/Planner.jsx"
+  ],
+  "קיבולת מים לשאת": [
+   "pages/Planner.jsx"
+  ],
+  "ימי מדבר": [
+   "pages/Planner.jsx"
+  ],
+  "לכל יום כזה צריך הטמנה (עצמית, מלאך שביל או ספק). סמנו כשסודר:": [
+   "pages/Planner.jsx"
+  ],
+  "📋 הודעת הזמנה לספק": [
+   "pages/Planner.jsx"
+  ],
+  "ספקים והנחיות": [
+   "pages/Planner.jsx"
+  ],
+  "אין ימים הדורשים הטמנת מים במסלול שבחרתם.": [
+   "pages/Planner.jsx"
+  ],
+  "🛒 נקודות הצטיידות במסלול שבחרתם ({0}/{1})": [
+   "pages/Planner.jsx"
+  ],
+  "סמנו נקודות שתכננתם לקנות בהן אוכל (בנגב: 2–4 ימי אוכל בין נקודה לנקודה).": [
+   "pages/Planner.jsx"
+  ],
+  "(מקטעים": [
+   "pages/Planner.jsx"
+  ],
+  "אין נקודות הצטיידות רשומות לטווח המקטעים שנבחר.": [
+   "pages/Planner.jsx"
+  ],
+  "🍲 טיפים לאוכל במסלול ארוך": [
+   "pages/Planner.jsx"
+  ],
+  "500–800 גרם אוכל ליום; עתיר קלוריות ומשקל נמוך (אגוזים, טחינה, שיבולת שועל, קוסקוס, חטיפים).": [
+   "pages/Planner.jsx"
+  ],
+  "תמיד יום אוכל עודף בנגב.": [
+   "pages/Planner.jsx"
+  ],
+  "מלחים/אלקטרוליטים בקיץ ובמדבר.": [
+   "pages/Planner.jsx"
+  ],
+  "5. ציוד מותאם למסע": [
+   "pages/Planner.jsx"
+  ],
+  "ליטר מים": [
+   "pages/Planner.jsx"
+  ],
+  "ק\"ג על הגב": [
+   "pages/Planner.jsx"
+  ],
+  "שק שינה": [
+   "pages/Planner.jsx"
+  ],
+  "🎯 תוספות למסלול ולעונה ({0}/{1})": [
+   "pages/Planner.jsx"
+  ],
+  "{0} · ימים: {1}{2}": [
+   "pages/Planner.jsx"
+  ],
+  "🎒 ציוד בסיסי ({0}/{1})": [
+   "pages/Planner.jsx"
+  ],
+  "מחשבון משקל ורשימה מלאה ←": [
+   "pages/Planner.jsx"
+  ],
+  "6. בטיחות, קשר וחירום": [
+   "pages/Planner.jsx"
+  ],
+  "איש קשר לחירום": [
+   "pages/Planner.jsx"
+  ],
+  "שעת צ'ק-אין יומי": [
+   "pages/Planner.jsx"
+  ],
+  "הערות רפואיות / תרופות": [
+   "pages/Planner.jsx"
+  ],
+  "אלרגיות, תרופות…": [
+   "pages/Planner.jsx"
+  ],
+  "איש הקשר יודע את התוכנית ואת שעת הצ'ק-אין": [
+   "pages/Planner.jsx"
+  ],
+  "שלחתי לו את הלו\"ז המלא (כפתור שיתוף בסיכום)": [
+   "pages/Planner.jsx"
+  ],
+  "ביטוח (חילוץ/רפואי) מסודר": [
+   "pages/Planner.jsx"
+  ],
+  "מספרי חירום שמורים: 100 · 101 · *3639 · *6911": [
+   "pages/Planner.jsx"
+  ],
+  "יודע/ת לבדוק אזהרות שיטפונות ועומס חום לפני כל יום מדבר": [
+   "pages/Planner.jsx"
+  ],
+  "אזהרות שנמצאו בתוכנית:": [
+   "pages/Planner.jsx"
+  ],
+  "לא נמצאו אזהרות בטיחות בתוכנית.": [
+   "pages/Planner.jsx"
+  ],
+  "מדריך הבטיחות המלא ←": [
+   "pages/Planner.jsx"
+  ],
+  "7. לוגיסטיקה ותקציב": [
+   "pages/Planner.jsx"
+  ],
+  "תקציב משוער": [
+   "pages/Planner.jsx"
+  ],
+  "שבתות בדרך": [
+   "pages/Planner.jsx"
+  ],
+  "ימים": [
+   "pages/Planner.jsx"
+  ],
+  "הגעה לנקודת ההתחלה (": [
+   "pages/Planner.jsx"
+  ],
+  ") מתוכננת": [
+   "pages/Planner.jsx"
+  ],
+  "חזרה מנקודת הסיום (": [
+   "pages/Planner.jsx"
+  ],
+  "מזומן לחניונים/מלאכים, כרטיס אשראי, תקציב יומי": [
+   "pages/Planner.jsx"
+  ],
+  "כסף ותקציב": [
+   "pages/Planner.jsx"
+  ],
+  "בדקתי שבתות וחגים מול ימי הצטיידות ותחבורה": [
+   "pages/Planner.jsx"
+  ],
+  "סוללת גיבוי, SIM עם דאטה, הורדת מפות ותוואי לשימוש לא מקוון": [
+   "pages/Planner.jsx"
+  ],
+  "טלפון, חשמל ומפות לא מקוונות": [
+   "pages/Planner.jsx"
+  ],
+  "💰 פירוט התקציב": [
+   "pages/Planner.jsx"
+  ],
+  "מחשבון תקציב ←": [
+   "pages/Planner.jsx"
+  ],
+  "🚌 תחבורה – פרטים": [
+   "pages/Planner.jsx"
+  ],
+  "📋 מצב ההכנות": [
+   "pages/Planner.jsx"
+  ],
+  "מים ואוכל": [
+   "pages/Planner.jsx"
+  ],
+  "בטיחות וקשר": [
+   "pages/Planner.jsx"
+  ],
+  "לוגיסטיקה": [
+   "pages/Planner.jsx"
+  ],
+  "📅 ליומן": [
+   "pages/Planner.jsx"
+  ],
+  "🖨️ הדפסה": [
+   "pages/Planner.jsx"
+  ],
+  "🗑️ נקה תוכנית": [
+   "pages/Planner.jsx"
+  ],
+  "לוח זמנים יומי": [
+   "pages/Planner.jsx"
+  ],
+  "🌤️ תחזית חיה מוצגת לימים שבטווח 16 הימים הקרובים.": [
+   "pages/Planner.jsx"
+  ],
+  "· שבת": [
+   "pages/Planner.jsx"
+  ],
+  "😌 יום מנוחה": [
+   "pages/Planner.jsx"
+  ],
+  "סכנת": [
+   "pages/Planner.jsx"
+  ],
+  "הטמנת": [
+   "pages/Planner.jsx"
+  ],
+  "שעות ·": [
+   "pages/Planner.jsx"
+  ],
+  "לינה:": [
+   "pages/Planner.jsx"
+  ],
+  "דגשים:": [
+   "pages/Planner.jsx"
+  ],
+  "התאמת העונה לאורך המסע (לפי חודש יציאה):": [
+   "pages/Planner.jsx"
+  ],
+  "הורדו {0} מתוך {1} אריחים ({2} נכשלו)": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "מפת המקטע שמורה במכשיר ({0} אריחים) ✓": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "המקטע לא נמצא": [
+   "pages/SegmentDetail.jsx",
+   "pages/Story.jsx"
+  ],
+  "התחלה: {0}": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "סיום: {0}": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "שביל ישראל – מקטע {0}": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "קובץ GPX הורד": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "שביל ישראל – מקטע {0}: {1} {2} ק\"מ · {3} {4}": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "הושלם ✓": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "שעות הליכה": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "↓{0} מ' טיפוס/ירידה": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "מ' טיפוס": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "נדרשת הטמנת מים.": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "שטח אש:": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "סיפור דרך – ניווט שלב אחר שלב": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "שלבים מתיאור המסלול הרשמי · הקראה קולית · מעקב GPS": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "מידע": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "לינה ומים": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "הערות שלי": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "המדריך הרשמי – החברה להגנת הטבע": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "עונה מומלצת:": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "אופי המסלול:": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "אפשרויות קיצור:": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "חניה:": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "❗ חשוב לדעת": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "🗺️ מפת המקטע (PDF חינם)": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "לעמוד המקטע באתר": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "תיאור המסלול המלא (מצפון לדרום)": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "כתב:": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "המלצות בסביבה": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "לחצו על נקודה לקריאת ההיסטוריה והמהות שלה (ויקיפדיה), עם תמונות.": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "אזהרות ודגשים": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "הגעה ותחבורה": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "ראו מדריך": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "Google Maps לנק' ההתחלה": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "נקודת התחלה": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "נקודת סיום": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "* הקואורדינטות משוערות (±1 ק\"מ) – לניווט מדויק להשתמש בתוואי מ-OSM במפה.": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "מים במקטע": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "אין מידע": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "מחשבון מים למקטע": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "טמפרטורה מרבית צפויה:": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "משקל גוף:": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "ל' בהליכה": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "ל' לערב/בישול": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "ל' לשאת": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "יותר מ-6.5 ליטר – שקלו הטמנה באמצע המקטע, יציאה לפני הזריחה, או פיצול המקטע.": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "מעל 32°C: סכנת מכת חום. לא לצאת למקטע מדברי ארוך.": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "הערכה: ~0.45 ל'/שעה ב-18°C, +0.1 ל'/שעה לכל 3°C נוספים, מותאם למשקל ולקושי. לא תחליף לשיקול דעת.": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "לינה בסיום המקטע": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "חניון לילה / לינת שטח": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "← למדריך ולאנשי הקשר שלי": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "בית ספר שדה / אכסניה": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "לינה בתשלום": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "למדריך הלינה המלא ←": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "😇 מלאכי שביל באזור:": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "מארחים ברשימה הרשמית של החברה להגנת הטבע. פרטי קשר – בעמוד האזורי באתר.": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "ועוד": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "הרשימה המלאה עם טלפונים": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "המלאכים שלי": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "חניוני לילה בסביבה": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "אין חיבור לשרת מזג האוויר": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "טוען תחזית חיה לנקודת ההתחלה…": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "7 ימים – מתי כדאי לצעוד כאן": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "⚠ במקטע זה יש נחלים/קניונים – בגשם באזור כולו (גם רחוק) קיימת סכנת שיטפון.": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "תחזית שעתית מלאה ←": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "ציוד מומלץ למקטע זה לפי חודש": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "דירוג שק שינה": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "תוספות ייחודיות למקטע ולעונה": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "אין תוספות מיוחדות – הציוד הבסיסי מספיק.": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "לרשימת הציוד המלאה ←": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "הקו המקווקו סכמטי בין נקודות הקצה. במסך המפה ניתן להוריד את התוואי המלא מ-OpenStreetMap לשימוש לא מקוון.": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "📥 מפת המקטע לשימוש לא מקוון": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "מוריד את אריחי המפה של אזור המקטע (זום 11–15,": [
+   "pages/SegmentDetail.jsx"
+  ],
+  ") ושומר אותם במכשיר. אחרי ההורדה המפה תעבוד גם ללא קליטה.": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "אריחים": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "· {0} נכשלו": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "· הושלם ✓": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "מוריד…": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "הורדת מפת המקטע": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "פתיחה במפה המלאה": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "ההערות שלי למקטע": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "מספרי טלפון של מלאכי שביל, נקודות מים שמצאתם, טיפים…": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "נשמר אוטומטית במכשיר.": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "הסימון הוסר": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "כל הכבוד! המקטע סומן כהושלם 🎉": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "בטל סימון": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "סמן כהושלם": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "→ מקטע": [
+   "pages/SegmentDetail.jsx"
+  ],
+  "מקטעי השביל": [
+   "pages/Segments.jsx"
+  ],
+  "חיפוש מקטע, יישוב, אתר…": [
+   "pages/Segments.jsx"
+  ],
+  "כל הדרגות": [
+   "pages/Segments.jsx"
+  ],
+  "הושלמו · לפי החלוקה הרשמית של החברה להגנת הטבע": [
+   "pages/Segments.jsx"
+  ],
+  "לא נמצאו מקטעים": [
+   "pages/Segments.jsx"
+  ],
+  "💧 הטמנה": [
+   "pages/Segments.jsx"
+  ],
+  "🎯 שטח אש": [
+   "pages/Segments.jsx"
+  ],
+  "{0} שע'": [
+   "pages/Segments.jsx"
+  ],
+  "הנתונים יובאו – טוען מחדש": [
+   "pages/Settings.jsx"
+  ],
+  "קובץ לא תקין": [
+   "pages/Settings.jsx"
+  ],
+  "גיבוי מלא הורד ({0} תמונות)": [
+   "pages/Settings.jsx"
+  ],
+  "מראה": [
+   "pages/Settings.jsx"
+  ],
+  "בהיר": [
+   "pages/Settings.jsx"
+  ],
+  "כהה": [
+   "pages/Settings.jsx"
+  ],
+  "אוטומטי": [
+   "pages/Settings.jsx"
+  ],
+  "💾 נתונים שמורים במכשיר": [
+   "pages/Settings.jsx"
+  ],
+  "הכול נשמר במכשיר עצמו ונשאר בין פתיחות: התוכנית, היומן והתמונות, ההתקדמות, תוואי השביל ואריחי המפה שהורדתם. אין צורך להעלות או לשמור מחדש.": [
+   "pages/Settings.jsx"
+  ],
+  "רשומות יומן": [
+   "pages/Settings.jsx"
+  ],
+  "אריחי מפה": [
+   "pages/Settings.jsx"
+  ],
+  "תוואי השביל": [
+   "pages/Settings.jsx"
+  ],
+  "MB בשימוש": [
+   "pages/Settings.jsx"
+  ],
+  "אחסון קבוע": [
+   "pages/Settings.jsx"
+  ],
+  "לא קבוע": [
+   "pages/Settings.jsx"
+  ],
+  "אחסון": [
+   "pages/Settings.jsx"
+  ],
+  "הדפדפן טרם אישר אחסון קבוע – במצב של מחסור במקום הוא עלול למחוק מטמונים.": [
+   "pages/Settings.jsx"
+  ],
+  "בקשו אחסון קבוע": [
+   "pages/Settings.jsx"
+  ],
+  ". ב-iPhone: התקנה על מסך הבית מבטיחה שהנתונים לא יימחקו אוטומטית.": [
+   "pages/Settings.jsx"
+  ],
+  "מפות לשימוש לא מקוון: בדף כל מקטע, בלשונית \"מפה\", יש כפתור להורדת אריחי המפה של המקטע. אריחים שנצפו במסך המפה נשמרים גם הם.": [
+   "pages/Settings.jsx"
+  ],
+  "למחוק את כל אריחי המפה שהורדו?": [
+   "pages/Settings.jsx"
+  ],
+  "מחיקת אריחי מפה": [
+   "pages/Settings.jsx"
+  ],
+  "גיבוי ושחזור": [
+   "pages/Settings.jsx"
+  ],
+  "לפני החלפת טלפון או מחיקת האפליקציה – גבו לקובץ. \"גיבוי מלא\" כולל גם את התמונות (קובץ גדול יותר).": [
+   "pages/Settings.jsx"
+  ],
+  "גיבוי מלא (כולל תמונות)": [
+   "pages/Settings.jsx"
+  ],
+  "גיבוי הורד": [
+   "pages/Settings.jsx"
+  ],
+  "גיבוי ללא תמונות": [
+   "pages/Settings.jsx"
+  ],
+  "ייבוא גיבוי": [
+   "pages/Settings.jsx"
+  ],
+  "למחוק את כל הנתונים השמורים במכשיר?": [
+   "pages/Settings.jsx"
+  ],
+  "איפוס מלא": [
+   "pages/Settings.jsx"
+  ],
+  "על האפליקציה": [
+   "pages/Settings.jsx"
+  ],
+  "אפליקציית תכנון וביצוע מסע בשביל ישראל. עובדת גם ללא אינטרנט לאחר הטעינה הראשונה (PWA) – הוסיפו למסך הבית.": [
+   "pages/Settings.jsx"
+  ],
+  "פיתוח: דודו טל": [
+   "pages/Settings.jsx"
+  ],
+  "שביל ישראל – מתכנן המסע": [
+   "pages/Settings.jsx"
+  ],
+  "מקורות נתונים:": [
+   "pages/Settings.jsx"
+  ],
+  "מפות: OpenStreetMap, Israel Hiking Map, OpenTopoMap. תמונות: Wikimedia Commons (רישיונות חופשיים, קרדיט מופיע על כל תמונה). מזג אוויר: Open-Meteo.": [
+   "pages/Settings.jsx"
+  ],
+  "⚠ המידע נאסף ממקורות ציבוריים ועשוי להשתנות (שינויי תוואי, סגירות ביטחוניות, שטחי אש, מחירים). לפני היציאה יש לאמת מול החברה להגנת הטבע, רשות הטבע והגנים והמפות העדכניות. האחריות על הבטיחות היא של המטייל.": [
+   "pages/Settings.jsx"
+  ],
+  "עודכן:": [
+   "pages/Settings.jsx"
+  ],
+  "📍 הגעתם ל{0}": [
+   "pages/Story.jsx"
+  ],
+  "הדפדפן לא תומך בהקראה": [
+   "pages/Story.jsx"
+  ],
+  "שלב {0} מתוך {1}. {2}": [
+   "pages/Story.jsx"
+  ],
+  "אין תמיכה בנעילת מסך": [
+   "pages/Story.jsx"
+  ],
+  "למקטע זה אין עדיין תיאור מסלול מפורט.": [
+   "pages/Story.jsx"
+  ],
+  "חזרה למקטע": [
+   "pages/Story.jsx"
+  ],
+  "סיפור דרך · מקטע": [
+   "pages/Story.jsx"
+  ],
+  "· דרום←צפון": [
+   "pages/Story.jsx"
+  ],
+  "שלב": [
+   "pages/Story.jsx"
+  ],
+  "ק\"מ · 🌇 שקיעה": [
+   "pages/Story.jsx"
+  ],
+  "התיאור הרשמי נכתב מצפון לדרום. אתם הולכים דרומה←צפונה, ולכן השלבים מוצגים בסדר הפוך – \"ימינה/שמאלה\" ו\"עולים/יורדים\" בטקסט מתייחסים לכיוון ההפוך.": [
+   "pages/Story.jsx"
+  ],
+  "❗ לפני שיוצאים:": [
+   "pages/Story.jsx"
+  ],
+  "מיקום חי": [
+   "pages/Story.jsx"
+  ],
+  "מהמקטע": [
+   "pages/Story.jsx"
+  ],
+  "נותרו בשביל": [
+   "pages/Story.jsx"
+  ],
+  "אווירי לסיום": [
+   "pages/Story.jsx"
+  ],
+  "לפי ה-GPS אתם בערך בשלב": [
+   "pages/Story.jsx"
+  ],
+  "– קפיצה לשם": [
+   "pages/Story.jsx"
+  ],
+  "לסיום המקטע (": [
+   "pages/Story.jsx"
+  ],
+  "אווירי": [
+   "pages/Story.jsx"
+  ],
+  "💡 הורידו את תוואי השביל במסך המפה לחישוב מדויק לאורך השביל (לא אווירי).": [
+   "pages/Story.jsx"
+  ],
+  "🏛️ נקודות עניין במקטע (": [
+   "pages/Story.jsx"
+  ],
+  "לחצו לקרוא": [
+   "pages/Story.jsx"
+  ],
+  "הגעתם ל": [
+   "pages/Story.jsx"
+  ],
+  "· לחצו לקרוא את הסיפור": [
+   "pages/Story.jsx"
+  ],
+  "הקראה": [
+   "pages/Story.jsx"
+  ],
+  "הגעתם לסוף המקטע! סמנו אותו כהושלם 🎉": [
+   "pages/Story.jsx"
+  ],
+  "סיימנו 🏁": [
+   "pages/Story.jsx"
+  ],
+  "הקראה רציפה": [
+   "pages/Story.jsx"
+  ],
+  "טקסט גדול": [
+   "pages/Story.jsx"
+  ],
+  "🔆 מסך דולק": [
+   "pages/Story.jsx"
+  ],
+  "לאפס את ההתקדמות במקטע?": [
+   "pages/Story.jsx"
+  ],
+  "התיאור: המדריך הרשמי של החברה להגנת הטבע": [
+   "pages/Story.jsx"
+  ],
+  ". סיפור הדרך משלים את סימון השביל והמפה – לא מחליף אותם.": [
+   "pages/Story.jsx"
+  ],
+  "מקטע {0} – {1}": [
+   "pages/Weather.jsx"
+  ],
+  "המיקום שלי": [
+   "pages/Weather.jsx"
+  ],
+  "מזג אוויר חי": [
+   "pages/Weather.jsx"
+  ],
+  "📍 כאן": [
+   "pages/Weather.jsx"
+  ],
+  "🥾 מקטע": [
+   "pages/Weather.jsx"
+  ],
+  "אין חיבור לשרת מזג האוויר. נסו שוב כשיש קליטה.": [
+   "pages/Weather.jsx"
+  ],
+  "טוען תחזית": [
+   "pages/Weather.jsx"
+  ],
+  "24 השעות הקרובות": [
+   "pages/Weather.jsx"
+  ],
+  "7 ימים – התאמה להליכה": [
+   "pages/Weather.jsx"
+  ],
+  "הערכת ההתאמה משקללת חום מורגש, גשם (ובנגב – סכנת שיטפון), רוח וסופות. אינה תחליף לאזהרות השירות המטאורולוגי ורשות הטבע והגנים.": [
+   "pages/Weather.jsx"
+  ],
+  "לאורך השביל עכשיו": [
+   "pages/Weather.jsx"
+  ],
+  "טוען תחנות…": [
+   "pages/Weather.jsx"
+  ],
+  "לא ניתן לטעון כרגע.": [
+   "pages/Weather.jsx"
+  ],
+  "אזהרות רשמיות": [
+   "pages/Weather.jsx"
+  ],
+  "🌧️ השירות המטאורולוגי – אזהרות (שיטפונות, שרב, סופות)": [
+   "pages/Weather.jsx"
+  ],
+  "🏞️ רשות הטבע והגנים – סגירת מסלולים בימי שרב ושיטפון": [
+   "pages/Weather.jsx"
+  ],
+  "🥾 החברה להגנת הטבע – הודעות שביל ישראל": [
+   "pages/Weather.jsx"
+  ],
+  "בנגב ובערבה: אזהרת שיטפונות = לא נכנסים לנחלים ולמכתשים, גם אם במקום שלכם בהיר. עומס חום כבד = רט\"ג סוגרת מסלולים.": [
+   "pages/Weather.jsx"
+  ]
+ }
+}

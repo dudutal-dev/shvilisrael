@@ -1,6 +1,6 @@
 # שביל ישראל – מתכנן ומלווה המסע 🥾
 
-אפליקציית ווב (PWA) בעברית לתכנון וביצוע מסע בשביל ישראל: מקטעים, לינה, מים, עונות, מפה, מצפן, GPS, יומן מסע ועוד.
+אפליקציית ווב (PWA) דו-לשונית (עברית / English) לתכנון וביצוע מסע בשביל ישראל: מקטעים, לינה, מים, עונות, מפה, מצפן, GPS, יומן מסע ועוד.
 עובדת בדפדפן, ניתנת להתקנה על מסך הבית בטלפון, וממשיכה לעבוד ללא אינטרנט לאחר הטעינה הראשונה.
 
 ## מה יש באפליקציה
@@ -20,6 +20,7 @@
 | **מדריך** | עונות ואקלים חודשי, מים והטמנות, מלאכי שביל / חניוני לילה / לינה בתשלום, בטיחות (שיטפונות, שטחי אש, חום, בע"ח, ביטחון), רשימת ציוד אינטראקטיבית, מחשבון תקציב, תחבורה והצטיידות, סימון השביל, שאלות נפוצות, טיול אחראי |
 | **יומן** | רשומות יומיות עם תמונות (נדחסות ונשמרות במכשיר), מצב רוח, מזג אוויר, לינה, ליטרים, מקטע ומיקום; גלריה; סטטיסטיקות; תעודת הוקרה להדפסה |
 | **הגדרות** | מצב כהה/בהיר, מפת רקע, גיבוי/שחזור הנתונים (JSON) |
+| **English UI** | כפתור EN/עב בכותרת מחליף את כל הממשק לאנגלית (כ-1,070 מחרוזות, שמות מקטעים ונקודות קצה באנגלית, תאריכים ומספרים לפי שפה, פריסה LTR). תוכן רשמי ארוך של החברה להגנת הטבע וויקיפדיה (תיאורי מסלול, סיפור דרך, נקודות עניין) נשאר בעברית ומוצג RTL בתוך הממשק האנגלי |
 
 כל הנתונים האישיים נשמרים במכשיר בלבד ונשארים בין פתיחות: תוכנית, יומן, התקדמות, אנשי קשר (localStorage); תמונות, תוואי השביל ומסלולי GPS (IndexedDB); אריחי מפה ותמונות ויקיפדיה (Cache API דרך ה-Service Worker). האפליקציה מבקשת אחסון קבוע (`navigator.storage.persist`), ובכל מקטע אפשר להוריד מראש את אריחי המפה (זום 11–15). גיבוי מלא כולל תמונות – בהגדרות. אין שרת.
 
@@ -52,12 +53,16 @@ src/
   data/           segments.json · lodging.json · logistics.json · photos.json  (תוצרי המחקר)
   lib/            geo (מרחקים/אזימוט), planner (מחולל לו"ז), season, sun, weather, overpass, gpx, ics, storage
   hooks/          useGeolocation · useCompass · useLocalStorage · useRouter · useOnline · useToast
-  components/     MapView (Leaflet) · Shell · Photo · UI · Icons
+  components/     MapView (Leaflet) · Shell · Photo · UI · Icons · ColorIcons · Readiness
+  i18n/           index.js (t / tf / useLang / locale) · en.json (מילון עברית→אנגלית)
   pages/          Home · Segments · SegmentDetail · MapPage · Planner · Navigate · Guide · Journal · Settings
 scripts/
   import-research.mjs      ממיר את קבצי המחקר ל-src/data
   normalise-segments.mjs   מנרמל את רשימת המקטעים
   make-icons.mjs           מייצר אייקוני PWA
+  build-segments-spni.mjs  בונה את segments.json מנתוני החברה להגנת הטבע + segment-names-en.json
+  i18n-codemod.mjs         עוטף מחרוזות עבריות ב-t() (Babel)
+  i18n-missing.mjs         מדווח על מחרוזות עבריות ללא תרגום ב-en.json
 docs/
   research.md              דו"ח המחקר המלא (עברית)
   apps-comparison.md       סקירת האפליקציות הקיימות ומה האפליקציה הזו מוסיפה
