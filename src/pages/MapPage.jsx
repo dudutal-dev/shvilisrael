@@ -7,7 +7,7 @@ import { useGeolocation } from '../hooks/useGeolocation.js';
 import { loadTrailGeometry, idbGet, idbDel, TRAIL_KEY } from '../lib/overpass.js';
 import { nearest, formatKm, bearing, compassLabelLong, lineLength, haversine } from '../lib/geo.js';
 import { buildIndex, locate, slice } from '../lib/progress.js';
-import { appendPoint, loadTracks } from '../lib/track.js';
+import { appendPoint, loadTracks, deleteTrack } from '../lib/track.js';
 import { linesToGPX, download } from '../lib/gpx.js';
 import { sunTimes, fmtTime } from '../lib/sun.js';
 import { toISODate } from '../lib/dates.js';
@@ -275,7 +275,7 @@ export default function MapPage({
                     {live.loc && <div className={`live ${live.loc.dist > 0.35 ? 'live--warn' : ''}`}><b>{formatKm(live.loc.dist)}</b><span>{t("מהשביל")}</span></div>}
                     {live.nc && <div className="live"><b>{formatKm(live.nc.dist)}</b><span>⛺ {live.nc.point.name_he.replace(t("חניון לילה"), '')}</span></div>}
                     {live.n && <div className="live"><b>{formatKm(live.n.dist)}</b><span>{live.n.point.label} {compassLabelLong(bearing(pos, live.n.point))}</span></div>}
-                    <div className="live"><b>{track ? track.km.toFixed(1) : '0.0'}</b><span>{t("ק\"מ היום")} {rec ? '⏺' : ''}</span></div>
+                    <div className="live"><b>{track ? track.km.toFixed(1) : '0.0'}</b><span>{t("ק\"מ היום")} {rec ? '⏺' : track?.points?.length ? <button className="linkbtn tiny" title={t("מחיקת ההקלטה של היום")} onClick={() => { if (confirm(t("למחוק את הקלטת המסלול של היום?"))) deleteTrack(today).then(() => { setTrack(null); toast(t("ההקלטה נמחקה")); }); }}>🗑</button> : ''}</span></div>
                     <div className="live"><b>{pos.speed ? (pos.speed * 3.6).toFixed(1) : '0'}</b><span>{t("קמ\"ש ·")} {pos.altitude != null ? t("{0} מ'", Math.round(pos.altitude)) : ''}</span></div>
                     <div className={`live ${live.hoursLeft < 2 ? 'live--warn' : ''}`}><b>{fmtTime(live.sun.sunset)}</b><span>{t("שקיעה ·")} {live.hoursLeft?.toFixed(1)} {t("ש׳ אור")}</span></div>
                   </div>

@@ -19,3 +19,4 @@ export async function appendPoint(date, pos) {
   return day
 }
 export async function clearTracks() { await idbDel(KEY) }
+export async function deleteTrack(date) { const all = await loadTracks(); delete all[date]; await idbSet(KEY, all); return all }

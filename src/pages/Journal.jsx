@@ -6,7 +6,7 @@ import { fmtDate, toISODate } from '../lib/dates.js';
 import { useGeolocation } from '../hooks/useGeolocation.js';
 import { useToast } from '../hooks/useToast.jsx';
 import { savePhoto, getPhotos, deletePhoto } from '../lib/photos.js';
-import { loadTracks } from '../lib/track.js';
+import { loadTracks, deleteTrack } from '../lib/track.js';
 import { buildJournalPdf, deliverPdf } from '../lib/journalPdf.js';
 import { t, tf } from '../i18n/index.js'
 const MOODS = ['🤩', '😊', '😐', '😩', '🤕'];
@@ -123,7 +123,8 @@ export default function Journal({
           <div className="stat"><div className="stat__value">{Math.round(doneKm)}</div><div className="stat__label">{t("ק\"מ הושלמו")}</div></div>
           <div className="stat"><div className="stat__value">{allPhotoIds.length}</div><div className="stat__label">{t("תמונות")}</div></div>
         </div>
-        {trackKm > 0 && <p className="tiny muted mt">{t("נמדדו ב-GPS:")} {trackKm.toFixed(1)} {t("ק\"מ ב-")}{Object.keys(tracks).length} {t("ימי הקלטה")}</p>}
+        {trackKm > 0 && <details className="mt"><summary className="tiny muted" style={{ cursor: 'pointer' }}>{t("נמדדו ב-GPS:")} {trackKm.toFixed(1)} {t("ק\"מ ב-")}{Object.keys(tracks).length} {t("ימי הקלטה")} · {t("ניהול")}</summary>
+          <div className="stack mt" style={{ gap: 4 }}>{Object.entries(tracks).sort(([a], [b]) => b.localeCompare(a)).map(([d, tr]) => <div key={d} className="row between small"><span>{fmtDate(d, { year: 'numeric' })} · {(tr.km || 0).toFixed(1)} {t("ק\"מ")} · {tr.points?.length || 0} {t("נקודות")}</span><button className="linkbtn tiny" onClick={() => { if (confirm(t("למחוק את הקלטת ה-GPS של {0}?", fmtDate(d)))) deleteTrack(d).then(setTracks); }}>🗑 {t("מחיקה")}</button></div>)}</div></details>}
         {pct >= 100 && <div className="alert alert--ok mt">{t("🏆 סיימתם את שביל ישראל! כל הכבוד.")}</div>}
         <div className="row mt" style={{ gap: 8, flexWrap: 'wrap' }}>
           {journal.length > 0 && <button className="btn btn--sm btn--primary" onClick={exportPdf} disabled={pdfBusy}>{pdfBusy ? t("מכין…") : t("📄 הורדת יומן מעוצב (PDF)")}</button>}

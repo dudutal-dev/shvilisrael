@@ -667,7 +667,7 @@
 "נמדדו ב-GPS:": "Measured by GPS:",
 "נעלי הליכה מוכרות (לא חדשות!)": "Broken-in hiking shoes (not new!)",
 "נקה תוכנית": "Clear plan",
-"נקודות": "Points",
+"נקודות": "points",
 "נקודות הצטיידות (מצפון לדרום)": "Resupply points (north to south)",
 "נקודות עניין": "Points of interest",
 "נקודת התחלה": "Start point",
@@ -1288,5 +1288,10 @@
 "מוריד {0}/{1}": "Downloading {0}/{1}",
 "⬇️ הורדת קריינות לכל השביל ({0} MB)": "⬇️ Download narration for the whole trail ({0} MB)",
 "עצירה": "Stop",
-"שמור במכשיר: {0} מתוך {1} קטעים · {2} MB": "Saved on device: {0} of {1} clips · {2} MB"
+"שמור במכשיר: {0} מתוך {1} קטעים · {2} MB": "Saved on device: {0} of {1} clips · {2} MB",
+"מחיקת ההקלטה של היום": "Delete today's recording",
+"למחוק את הקלטת המסלול של היום?": "Delete today's track recording?",
+"ההקלטה נמחקה": "Recording deleted",
+"ניהול": "manage",
+"למחוק את הקלטת ה-GPS של {0}?": "Delete the GPS recording of {0}?"
 }
