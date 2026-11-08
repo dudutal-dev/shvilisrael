@@ -1,0 +1,3804 @@
+{
+ "meta": {
+  "trail_name_he": "שביל ישראל",
+  "trail_name_en": "Israel National Trail (INT, Shvil Yisrael)",
+  "direction": "north_to_south",
+  "generated": "2026-11-08",
+  "total_length_km": {
+   "official_current_approx": 1100,
+   "notes": "ה-SPNI/טיולי (2023+) מציינים כ-1,100 ק\"מ 'מהחרמון לאילת'; ynet 2024: כ-1,080 ק\"מ ו-56 מקטעים; ויקיפדיה: 1,040 ק\"מ (ערך ישן ~1,000-1,025); טיולי 2021: 1,057 ק\"מ אחרי ביטול מקטע דן–תל חי (קיצור 13.3 ק\"מ); הסכום של מקטעי טיולי N→S (ללא תוואי ים המלח) ~1,018 ק\"מ + 38 ק\"מ חרמון + ~50 ק\"מ תוספת ים המלח ≈ 1,105 ק\"מ.",
+   "historic_values": {
+    "1995": 940,
+    "2021": 1057,
+    "2024": 1080,
+    "2010s": 1000
+   }
+  },
+  "segments_count_in_this_file": {
+   "official_route": 49,
+   "old_route_variants": 3
+  },
+  "typical_segment_count_in_guides": "44–56 (טיולי: 46-47 מקטעים N→S; SPNI/ynet: 56; מדריך סער: ~50 ימים)",
+  "inaugurated": {
+   "year": 1995,
+   "notes": "נחנך ביום העצמאות 1995 ע\"י החברה להגנת הטבע; הרעיון – אורי דביר (בהשראת שביל האפלצ'ים), הקמה – אברהם תמיר; עבודת הסימון ארכה כעשור."
+  },
+  "maintained_by": {
+   "he": "החברה להגנת הטבע – הוועדה לשבילי ישראל (ועדת סימון שבילים)",
+   "en": "Society for the Protection of Nature in Israel (SPNI) – Israel Trails Committee"
+  },
+  "marking": {
+   "colors": [
+    "לבן",
+    "כחול",
+    "כתום"
+   ],
+   "colors_en": [
+    "white",
+    "blue",
+    "orange"
+   ],
+   "popular_interpretation": "לבן = שלגי החרמון (צפון), כחול = הים/הכנרת, כתום = המדבר (דרום). לפי הפרשנות העממית סדר הפסים מצביע על כיוון ההליכה (הלבן לכיוון צפון/חרמון, הכתום לכיוון דרום/אילת).",
+   "official_position": "צוות הסימון של החברה להגנת הטבע (ynet) מבהיר כי לצבעים אין משמעות רשמית וכי אין להסתמך על כיוון הפסים לניווט – יש להשתמש במפה. הפרשנות 'מצפן הצבעים' אינה מאומתת.",
+   "sources": [
+    "https://www.ynet.co.il/articles/0,7340,L-4265630,00.html",
+    "https://www.jdn.co.il/?p=1957739",
+    "https://www.tiuli.com/articles/336/israel_trail.asp"
+   ]
+  },
+  "night_camps_negev": {
+   "description_he": "מדרום לערד אין כמעט מקורות מים, ולכן נקבעה מערכת 'חניוני לילה של שביל ישראל' (חניוני שלט – ללא מים, חשמל או שירותים) במרחק יום הליכה זה מזה. בחלקם נגישים לרכב רגיל (נוח להטמנת מים) ובחלקם רק ל-4x4. שירותי הטמנת מים בתשלום פועלים ממושבי הערבה (חצבה, צופר), ובחלק מהחניונים מטמינים מלאכי שביל (לוודא מראש). מומלץ 5-6 ליטר לאדם ליום.",
+   "camps_north_to_south": [
+    {
+     "name_he": "ברכת צפירה",
+     "name_en": "Brekhat Tzfira",
+     "lat": 31.262,
+     "lon": 35.318,
+     "approx": true,
+     "access": "4x4",
+     "route": "ים המלח"
+    },
+    {
+     "name_he": "מצדה מערב",
+     "name_en": "Masada West",
+     "lat": 31.313,
+     "lon": 35.345,
+     "approx": true,
+     "access": "רכב רגיל (בתשלום, מים)",
+     "route": "ים המלח"
+    },
+    {
+     "name_he": "באר אפעה",
+     "name_en": "Be'er Efa",
+     "lat": 31.142,
+     "lon": 35.256,
+     "approx": true,
+     "access": "4x4",
+     "route": "ישן"
+    },
+    {
+     "name_he": "מצד תמר",
+     "name_en": "Metzad Tamar",
+     "lat": 31.0555,
+     "lon": 35.264,
+     "approx": true,
+     "access": "רכב רגיל (כביש 25)",
+     "route": "ישן"
+    },
+    {
+     "name_he": "המכתש הקטן",
+     "name_en": "Makhtesh Katan",
+     "lat": 30.947,
+     "lon": 35.17,
+     "approx": true,
+     "access": "רכב רגיל/4x4"
+    },
+    {
+     "name_he": "מפעל אורון",
+     "name_en": "Oron plant",
+     "lat": 30.908,
+     "lon": 35.016,
+     "approx": true,
+     "access": "רכב רגיל (ברז)"
+    },
+    {
+     "name_he": "נחל מדור",
+     "name_en": "Nahal Mador",
+     "lat": 30.943,
+     "lon": 34.962,
+     "approx": true,
+     "access": "4x4"
+    },
+    {
+     "name_he": "חוד עקב / עין עקב",
+     "name_en": "Hod Akev / Ein Akev",
+     "lat": 30.83,
+     "lon": 34.823,
+     "approx": true,
+     "access": "4x4"
+    },
+    {
+     "name_he": "נחל חווה (גבי חווה)",
+     "name_en": "Nahal Hava",
+     "lat": 30.705,
+     "lon": 34.77,
+     "approx": true,
+     "access": "4x4"
+    },
+    {
+     "name_he": "נחל גוונים",
+     "name_en": "Nahal Gevanim",
+     "lat": 30.576,
+     "lon": 34.866,
+     "approx": true,
+     "access": "רכב רגיל (מבור קטנה)",
+     "note": "חלופה"
+    },
+    {
+     "name_he": "חאן בארות",
+     "name_en": "Be'erot Khan",
+     "lat": 30.593,
+     "lon": 34.889,
+     "approx": true,
+     "access": "רכב רגיל (בתשלום, מים ומזון)",
+     "note": "חלופה"
+    },
+    {
+     "name_he": "הר סהרונים",
+     "name_en": "Har Saharonim",
+     "lat": 30.574,
+     "lon": 34.933,
+     "approx": true,
+     "access": "4x4"
+    },
+    {
+     "name_he": "גב חולית (נחל נקרות)",
+     "name_en": "Gev Holit",
+     "lat": 30.58,
+     "lon": 35.06,
+     "approx": true,
+     "access": "4x4"
+    },
+    {
+     "name_he": "נחל ברק",
+     "name_en": "Nahal Barak",
+     "lat": 30.42,
+     "lon": 35.08,
+     "approx": true,
+     "access": "רכב רגיל"
+    },
+    {
+     "name_he": "ציחור",
+     "name_en": "Tzihor",
+     "lat": 30.33,
+     "lon": 35,
+     "approx": true,
+     "access": "רכב רגיל"
+    },
+    {
+     "name_he": "נחל מנגן",
+     "name_en": "Nahal Mangan",
+     "lat": 29.855,
+     "lon": 34.97,
+     "approx": true,
+     "access": "4x4"
+    },
+    {
+     "name_he": "נחל רחם / עתק",
+     "name_en": "Nahal Raham / Atek",
+     "lat": 29.71,
+     "lon": 34.915,
+     "approx": true,
+     "access": "4x4"
+    },
+    {
+     "name_he": "קניון שחורת",
+     "name_en": "Shehoret Canyon",
+     "lat": 29.615,
+     "lon": 34.925,
+     "approx": true,
+     "access": "רכב רגיל",
+     "note": "חלופה"
+    },
+    {
+     "name_he": "הר יהורם",
+     "name_en": "Har Yehoram",
+     "lat": 29.62,
+     "lon": 34.895,
+     "approx": true,
+     "access": "4x4"
+    }
+   ]
+  },
+  "guides_and_maps": [
+   {
+    "title": "שביל ישראל – מדריך ומפות (החברה להגנת הטבע, 'המדריך האדום'); סדרת מפות סימון שבילים 1:50,000 של החברה להגנת הטבע (השביל מסומן בכל הגיליונות); תיקיית 52 מפות באנגלית למקטעי השביל",
+    "publisher": "SPNI",
+    "notes": "מהדורות מתעדכנות; לרכוש את העדכנית ביותר – התוואי משתנה"
+   },
+   {
+    "title": "Israel National Trail – Hike the Land of Israel",
+    "authors": "Jacob Saar & Yagil Henkin",
+    "publisher": "Eshkol",
+    "editions": "2nd 2011, 3rd 2016, 4th 2020 (ISBN 9789654205917; 62 מפות 1:50,000; הוסיפה את מקטע ערד–מצדה–ים המלח)",
+    "notes": "לא נמצאה מהדורה 2024/2025"
+   },
+   {
+    "title": "שביל ישראל (מדריך בעברית)",
+    "authors": "צבי גילת",
+    "notes": "מופיע כמקור לאורכי מקטעים באתרים"
+   },
+   {
+    "title": "פודקאסט 'שביל ישראל.כאן' (כאן 11) – 44 פרקים לפי מקטעים",
+    "url": "https://www.kan.org.il/content/kan/podcasts/p-8751/"
+   },
+   {
+    "title": "אפליקציות: עמוד ענן, Israel Hiking Map (OSM), מפות KML של טיולי לכל מקטע"
+   }
+  ],
+  "recent_changes_2019_2026": [
+   {
+    "when": "2019–2020 (נפתח בחוה\"מ סוכות)",
+    "what": "הארכת השביל דרך מדבר יהודה: ערד → בקעת קנאים → מצדה → מלונות עין בוקק → מצד זוהר → נחל פרצים → מעלה צורים → נחל פרס → נחל צפית → המכתש הקטן (~90 ק\"מ, 5 מקטעים) במקום באר אפעה–מצד תמר (~40 ק\"מ). הסימון הישן נשאר כשנתיים.",
+    "sources": [
+     "https://www.inn.co.il/news/415350",
+     "https://www.tiuli.com/articles/692/",
+     "https://deadsea.co.il/wp-content/uploads/2020/07/שביל-ישראל-מתארך.pdf"
+    ]
+   },
+   {
+    "when": "2021-09-01",
+    "what": "ביטול המקטע הראשון בית אוסישקין (קיבוץ דן) – תל חי (13.3 ק\"מ) מטעמי בטיחות (הליכה לאורך כבישים); השביל התחיל/הסתיים בתל חי.",
+    "sources": [
+     "https://jpost.com/israel-news/first-segment-of-israel-national-trail-canceled-for-safety-reasons-678326",
+     "https://www.makorrishon.co.il/news/article/273779"
+    ]
+   },
+   {
+    "when": "2023",
+    "what": "שני מקטעים חדשים תל חי–בניאס–קופות החרמון (~38 ק\"מ); השביל 'מהחרמון לאילת'. סומן בסיוע עיריית קריית שמונה, מ.א. גליל עליון/מבואות חרמון/גולן, קק\"ל, רט\"ג, צה\"ל וקרן שוסטרמן.",
+    "sources": [
+     "https://www.ias.co.il/?p=144220",
+     "https://www.maariv.co.il/lifestyle/travel/Article-1031541",
+     "https://www.ynetnews.com/travel/article/hk89kala2"
+    ]
+   },
+   {
+    "when": "2023",
+    "what": "לראשונה השביל עובר במושבה ההיסטורית זכרון יעקב ובפארק רמת הנדיב.",
+    "sources": [
+     "https://www.maariv.co.il/lifestyle/travel/article-1039812",
+     "https://www.ias.co.il/?p=146656"
+    ]
+   },
+   {
+    "when": "2024 (משוער)",
+    "what": "שינוי תוואי בחוטם הכרמל: מעבר במצפה מורן ולאורך שולי מחצבת בנימינה במקום הליכה ליד כביש 4 והמסילה.",
+    "sources": [
+     "https://www.ias.co.il/?p=120477"
+    ]
+   },
+   {
+    "when": "2025 (אביב, משוער)",
+    "what": "תוואי חדש של ~14 ק\"מ בין יער שוהם לתל אפק (ממערב לכבישים 6 ו-444, דרך שוהם וכפר סירקין, גשר חדש מעל המסילה המזרחית) לאחר שפיתוח אלעד והמסילה המזרחית חסמו את התוואי הישן.",
+    "sources": [
+     "https://www.maariv.co.il/lifestyle/travel/article-1182407",
+     "https://www.jpost.com/consumerism/article-847335"
+    ]
+   },
+   {
+    "when": "10/2023 – 2025",
+    "what": "מלחמת חרבות ברזל: מקטעי הצפון (גבול לבנון – חרמון, תל חי, רכס רמים, ברעם) ושמורות (נחל שניר, עיון, עמוד, הר מירון) נסגרו תקופות ארוכות לפי הנחיות פיקוד העורף; הומלץ להתחיל מהדרום. פתיחה מחדש הדרגתית ב-2025.",
+    "sources": [
+     "https://www.tiuli.com/articles/1530/",
+     "https://backpackisrael.com/the-israel-national-trail-ultimate-preparation-guide/"
+    ]
+   },
+   {
+    "when": "06/2025",
+    "what": "מלחמת 12 הימים עם איראן – סגירה ארצית של שמורות, גנים ויערות לימים אחדים.",
+    "sources": [
+     "https://www.jns.org/news/israel-news/israel-shuts-down-national-parks-trails-amid-war-with-iran"
+    ]
+   },
+   {
+    "when": "03–04/2026",
+    "what": "סבב לחימה מול איראן: סגירת יערות/גנים ארצית; יער שוהם (על התוואי) נסגר באפריל 2026 בשל שברי טילים ללא מועד פתיחה; אתרי הצפון נפתחו מחדש ב-25.4.2026 לאחר סריקות.",
+    "sources": [
+     "https://www.kikar.co.il/security-news/southern-command-opens-hiking-trails-independence-",
+     "https://www.ynetnews.com/travel/article/sjyvuk11o11x",
+     "https://www.alltrails.com/trail/israel/southern-district-hadarom/israel-national-trail"
+    ]
+   },
+   {
+    "when": "2026-10-20 (לכ-8 חודשים)",
+    "what": "מעקף זמני בין כפר גלעדי לתל חי (הקמת גשר תלוי; הקטע מתחת לגשר בוואדי השומר סגור) – המטיילים לא עוברים בתל חי. (מקור אחד מתארך ל-20.5.2025.)",
+    "sources": [
+     "https://www.jpost.com/travel/article-912375",
+     "https://www.jfeed.com/travel/tn7qvz"
+    ]
+   },
+   {
+    "when": "2025–2026",
+    "what": "פרויקט שיקום ושדרוג השביל בעלות ~30.6 מיליון ש\"ח (רמ\"י, החברה הממשלתית לתיירות, רט\"ג, החברה להגנת הטבע); קול קורא 'קהילות שביל ישראל' של החברה להגנת הטבע (08/2026) לקידום אירוח ומלאכי שביל.",
+    "sources": [
+     "https://www.inn.co.il/news/665962",
+     "https://www.teva.org.il/app/uploads/2026/08/Israel-trail-communities-call.pdf"
+    ]
+   }
+  ],
+  "general_hazards": [
+   "שטחי אש: ברוב המקטעים הדרומיים השביל עובר בשולי שטחי אש; על התוואי המסומן אין צורך בתיאום, אך בסטייה ממנו או בלינה מחוץ לחניונים יש לתאם מול 'מתאם שטחי האש' של צה\"ל. ליד שיזפון/ציחור ועובדה – שטחי אימונים פעילים.",
+   "שיטפונות: נחל עמוד, נחל דישון, נחל צין, נחל פרצים/צפית, המכתש הקטן, נקרות, ברק, גשרון – לא להיכנס בימי גשם/אזהרת שיטפונות.",
+   "חום: מדרום לערד לא מומלץ ללכת ממאי עד ספטמבר; עונת השביל: ספטמבר–מאי (אידיאלי: אוקטובר–נובמבר ופברואר–אפריל).",
+   "קטעי סולמות/ידיות ברזל: צוק הארבל, עין עבדת, הר כרבולת (טיפוס), נחל ברק, הר שלמה, נחל גשרון.",
+   "ביטחון: גבול לבנון (מקטעים 1-5), קו התפר (דבירה–מיתר), גבול מצרים (הרי אילת) – לבדוק הנחיות פיקוד העורף לפני היציאה."
+  ],
+  "coordinate_accuracy": "WGS84; רוב הנקודות משוערות (±1 ק\"מ) ומבוססות על מיקומי יישובים/אתרים ידועים; נקודות המסומנות approx=false נלקחו מדפי טיולי (למשל כנרת המושבה 32.72145,35.56881; כפר קיש 32.66684,35.44539; רמת הנדיב 32.55292,34.94527; חדרה 32.44063,34.90311).",
+  "primary_sources": [
+   "https://www.tiuli.com/tracks/213 … /260 ו-/369 (מקטעי שביל ישראל מצפון לדרום, 2021)",
+   "https://www.tiuli.com/articles/336/israel_trail.asp",
+   "https://www.tiuli.com/articles/42/israel_trail.asp (חניוני לילה בנגב)",
+   "https://www.tiuli.com/articles/43/ (מים והטמנות)",
+   "https://www.ynet.co.il/yedioth/article/yokra14339156",
+   "https://neshamah.net (יומן מסע 2013-14)",
+   "https://sites.google.com/site/israeltrailjournal/",
+   "https://www.jpost.com/israel-news/article-755484",
+   "https://en.wikivoyage.org/wiki/Israel_National_Trail"
+  ]
+ },
+ "segments": [
+  {
+   "id": 1,
+   "name_he": "קופות אתר החרמון – שמורת נחל חרמון (בניאס)",
+   "name_en": "Mt. Hermon ticket office – Banias (Nahal Hermon) Reserve",
+   "start": {
+    "name_he": "קופות אתר החרמון",
+    "name_en": "Mt. Hermon ski site ticket office",
+    "lat": 33.3035,
+    "lon": 35.7705,
+    "approx": true
+   },
+   "end": {
+    "name_he": "שמורת נחל חרמון – בניאס",
+    "name_en": "Banias / Nahal Hermon Nature Reserve",
+    "lat": 33.2485,
+    "lon": 35.6945,
+    "approx": true
+   },
+   "distance_km": 12,
+   "distance_km_approx": false,
+   "estimated_hours": 7,
+   "estimated_hours_approx": false,
+   "difficulty": "קשה",
+   "total_ascent_m": 150,
+   "total_descent_m": 1300,
+   "region": "חרמון / גליל עליון",
+   "region_en": "Hermon / Upper Galilee",
+   "water": {
+    "availability": "taps",
+    "points": [
+     "קופות החרמון",
+     "נווה אטי\"ב",
+     "נבי חזורי",
+     "מבצר נמרוד (קלעת נמרוד)",
+     "שמורת הבניאס"
+    ],
+    "caching_needed": false
+   },
+   "overnight": {
+    "night_camp": "חורשת נבי חזורי (לינת שטח)",
+    "trail_angels": "נווה אטי\"ב / מג'דל שמס / שניר (קבוצת מלאכי שביל ישראל)",
+    "paid_lodging": [
+     "צימרים בנווה אטי\"ב",
+     "מלונות במג'דל שמס",
+     "בית ספר שדה חרמון (קיבוץ שניר, בסמוך)"
+    ],
+    "field_school": "בית ספר שדה חרמון"
+   },
+   "highlights": [
+    "מורדות החרמון – הנקודה הגבוהה בשביל (~1,600 מ')",
+    "אנדרטת סיירת אגוז ואתר נבי חזורי",
+    "מבצר נמרוד (גן לאומי)",
+    "שמורת הבניאס – מפל ומעיינות הבניאס",
+    "חפיפה עם שביל הגולן ב-2 הק\"מ הראשונים"
+   ],
+   "hazards_notes": [
+    "שלג וקרח בחורף; אתר החרמון נסגר לעיתים (מזג אוויר/ביטחון – 2024-2025)",
+    "ירידה תלולה ומצטברת של כ-1,300 מ'",
+    "חציית כביש 989 ליד נווה אטי\"ב בזהירות",
+    "קרבה לגבול – לבדוק הנחיות פיקוד העורף"
+   ],
+   "public_transport": {
+    "start": "קו 58 (קריית שמונה–נווה אטי\"ב/אתר החרמון, עונתי) – לבדוק לוח זמנים",
+    "end": "תחנת 'בניאס' על כביש 99 – קווים מקריית שמונה (למשל 58/36)",
+    "approx": true
+   },
+   "variant": "official",
+   "tiuli_segment_number": 1,
+   "notes": "מקטע חדש שסומן ב-2023 בעקבות ביטול מקטע דן–תל חי (2021). טיולי מציין גם גרסה של 14 ק\"מ.",
+   "sources": [
+    "https://www.tiuli.com/tracks/369",
+    "https://www.ias.co.il/?p=144220",
+    "https://www.maariv.co.il/lifestyle/travel/Article-1031541"
+   ]
+  },
+  {
+   "id": 2,
+   "name_he": "הבניאס – תל חי (פסל האריה השואג)",
+   "name_en": "Banias – Tel Hai (Roaring Lion monument)",
+   "start": {
+    "name_he": "שמורת נחל חרמון – בניאס",
+    "name_en": "Banias Reserve",
+    "lat": 33.2485,
+    "lon": 35.6945,
+    "approx": true
+   },
+   "end": {
+    "name_he": "תל חי – אנדרטת האריה השואג",
+    "name_en": "Tel Hai – Roaring Lion monument",
+    "lat": 33.2378,
+    "lon": 35.5783,
+    "approx": true
+   },
+   "distance_km": 26,
+   "distance_km_approx": false,
+   "estimated_hours": 11,
+   "estimated_hours_approx": true,
+   "difficulty": "בינוני-קשה",
+   "total_ascent_m": null,
+   "total_descent_m": null,
+   "region": "גליל עליון / עמק החולה",
+   "region_en": "Upper Galilee / Hula Valley",
+   "water": {
+    "availability": "taps",
+    "points": [
+     "בניאס",
+     "קיבוץ שניר (סטייה קלה)",
+     "קריית שמונה",
+     "מכללת תל חי"
+    ],
+    "caching_needed": false
+   },
+   "overnight": {
+    "night_camp": "אין חניון רשמי; לינה בקריית שמונה/תל חי",
+    "trail_angels": "קריית שמונה, כפר גלעדי, מטולה",
+    "paid_lodging": [
+     "אכסניית אנ\"א תל חי",
+     "מלון כפר גלעדי",
+     "מלונות ואכסניות בקריית שמונה"
+    ],
+    "field_school": null
+   },
+   "highlights": [
+    "מורד נחל חרמון (בניאס)",
+    "תל פאח'ר (מצפה גולני) ותל עזזיאת",
+    "גבעת האם וצפון עמק החולה",
+    "קריית שמונה ונחל הזהב",
+    "מכללת תל חי, שביל הפסלים ואנדרטת האריה השואג"
+   ],
+   "hazards_notes": [
+    "ניתן לפצל לשני ימים (10-12 שעות)",
+    "חום כבד בעמק החולה בקיץ",
+    "חציות כבישים 99/90",
+    "מעקף זמני בין כפר גלעדי לתל חי החל מ-20.10.2026 לכ-8 חודשים (הקמת גשר תלוי; הקטע מתחת לגשר בוואדי השומר סגור)",
+    "קרבה לגבול לבנון – לבדוק הנחיות"
+   ],
+   "public_transport": {
+    "start": "קווים מקריית שמונה לבניאס (כביש 99)",
+    "end": "תל חי/כפר גלעדי – קווים עירוניים מהתחנה המרכזית קריית שמונה; לקריית שמונה: 845/963 מת\"א, 541 מחיפה",
+    "approx": true
+   },
+   "variant": "official",
+   "tiuli_segment_number": 2,
+   "notes": "מקטע חדש (2023). שני המקטעים החדשים תל חי–חרמון מצטברים לכ-38 ק\"מ.",
+   "sources": [
+    "https://www.tiuli.com/track_info.asp?track_id=259",
+    "https://www.ynetnews.com/travel/article/hk89kala2",
+    "https://www.jpost.com/israel-news/article-755484",
+    "https://www.jpost.com/travel/article-912375"
+   ]
+  },
+  {
+   "id": 3,
+   "name_he": "תל חי – רמות נפתלי (דרך יפתח ומצודת כ\"ח)",
+   "name_en": "Tel Hai – Ramot Naftali (via Yiftah & Metzudat Koach)",
+   "start": {
+    "name_he": "תל חי – אנדרטת האריה",
+    "name_en": "Tel Hai lion monument",
+    "lat": 33.2378,
+    "lon": 35.5783,
+    "approx": true
+   },
+   "end": {
+    "name_he": "רמות נפתלי",
+    "name_en": "Ramot Naftali",
+    "lat": 33.103,
+    "lon": 35.552,
+    "approx": true
+   },
+   "distance_km": 23,
+   "distance_km_approx": true,
+   "estimated_hours": 9,
+   "estimated_hours_approx": true,
+   "difficulty": "קשה",
+   "total_ascent_m": null,
+   "total_descent_m": null,
+   "region": "גליל עליון (רכס רמים / הרי נפתלי)",
+   "region_en": "Upper Galilee (Naftali ridge)",
+   "water": {
+    "availability": "taps",
+    "points": [
+     "תל חי / כפר גלעדי",
+     "קיבוץ יפתח",
+     "רמות נפתלי"
+    ],
+    "caching_needed": false
+   },
+   "overnight": {
+    "night_camp": "חניון מצודת כ\"ח (נבי יושע) – לינת שטח לא מוסדרת; חניוני קק\"ל ברכס רמים",
+    "trail_angels": "רמות נפתלי, יפתח, מלכיה",
+    "paid_lodging": [
+     "צימרים ברמות נפתלי",
+     "אירוח כפרי ביפתח"
+    ],
+    "field_school": null
+   },
+   "highlights": [
+    "עלייה מתל חי לרכס רמים – עין רועים וצוק מנרה (תצפית על עמק החולה)",
+    "דרך הרי נפתלי (דרך הנוף)",
+    "סדקי יפתח",
+    "שמורת נחל קדש ומצודת כ\"ח (נבי יושע)",
+    "מצפה איתן ברמות נפתלי"
+   ],
+   "hazards_notes": [
+    "עלייה תלולה של כ-600 מ' בתחילת היום",
+    "ירידה צרה ומאתגרת לנחל קדש",
+    "קרבה לגבול לבנון – המקטע היה סגור בתקופת המלחמה (10/2023 – 2025); לבדוק פיקוד העורף",
+    "שרב בקיץ"
+   ],
+   "public_transport": {
+    "start": "תל חי – קווים עירוניים מקריית שמונה",
+    "end": "רמות נפתלי – קו מקומי מקריית שמונה (תדירות נמוכה)",
+    "approx": true
+   },
+   "variant": "official",
+   "tiuli_segment_number": "2 (ישן)",
+   "notes": "טיולי מפצל: תל חי–יפתח 14.5 ק\"מ (6-7 שעות, קשה) + סדקי יפתח–רמות נפתלי. חישוב האורך מתוך המצטבר של טיולי (61 ק\"מ בברעם).",
+   "sources": [
+    "https://www.tiuli.com/guided-tours/1844/",
+    "https://hikingintheholyland.com/?p=30383",
+    "https://www.tiuli.com/guided-tours/1061/"
+   ]
+  },
+  {
+   "id": 4,
+   "name_he": "רמות נפתלי – ברעם (כביש יראון–ברעם)",
+   "name_en": "Ramot Naftali – Baram (Yiron–Baram road)",
+   "start": {
+    "name_he": "רמות נפתלי",
+    "name_en": "Ramot Naftali",
+    "lat": 33.103,
+    "lon": 35.552,
+    "approx": true
+   },
+   "end": {
+    "name_he": "קיבוץ ברעם / כביש 899",
+    "name_en": "Kibbutz Baram / Route 899 crossing",
+    "lat": 33.05,
+    "lon": 35.427,
+    "approx": true
+   },
+   "distance_km": 25,
+   "distance_km_approx": true,
+   "estimated_hours": 10,
+   "estimated_hours_approx": true,
+   "difficulty": "בינוני-קשה",
+   "total_ascent_m": null,
+   "total_descent_m": null,
+   "region": "גליל עליון (נחל דישון)",
+   "region_en": "Upper Galilee (Nahal Dishon)",
+   "water": {
+    "availability": "taps",
+    "points": [
+     "רמות נפתלי",
+     "גשר עלמה (אין ברז; סטייה לעלמה)",
+     "קיבוץ ברעם"
+    ],
+    "caching_needed": false
+   },
+   "overnight": {
+    "night_camp": "חניון לילה נחל דישון (רשות הטבע והגנים, ליד גשר עלמה) – לינת שטח",
+    "trail_angels": "ברעם, דובב, עלמה",
+    "paid_lodging": [
+     "אירוח בקיבוץ ברעם",
+     "צימרים בדובב/עלמה"
+    ],
+    "field_school": null
+   },
+   "highlights": [
+    "קרן נפתלי ותצפיות לעמק החולה",
+    "קניון נחל דישון (שמורת טבע)",
+    "גשר עלמה",
+    "בית הכנסת העתיק בברעם (גן לאומי)"
+   ],
+   "hazards_notes": [
+    "יום ארוך (טיולי: ~12 שעות)",
+    "שטחי אימונים/גבול לבנון בקרבת מקום – לא לסטות מהסימון",
+    "שיטפונות בנחל דישון בחורף"
+   ],
+   "public_transport": {
+    "start": "רמות נפתלי – קו מקריית שמונה",
+    "end": "ברעם/צומת חירם – קווים לצפת וכרמיאל (למשל 43/367)",
+    "approx": true
+   },
+   "variant": "official",
+   "tiuli_segment_number": 3,
+   "notes": null,
+   "sources": [
+    "https://www.tiuli.com/tracks/258",
+    "https://www.tiuli.com/guided-tours/1091/"
+   ]
+  },
+  {
+   "id": 5,
+   "name_he": "ברעם – חניון נחל עמוד (דרך הר מירון)",
+   "name_en": "Baram – Nahal Amud night camp (over Mt. Meron)",
+   "start": {
+    "name_he": "קיבוץ ברעם",
+    "name_en": "Kibbutz Baram",
+    "lat": 33.05,
+    "lon": 35.427,
+    "approx": true
+   },
+   "end": {
+    "name_he": "חניון לילה נחל עמוד (משטרת עין תינה)",
+    "name_en": "Nahal Amud night camp (Ein Tina police)",
+    "lat": 32.923,
+    "lon": 35.476,
+    "approx": true
+   },
+   "distance_km": 23,
+   "distance_km_approx": true,
+   "estimated_hours": 10,
+   "estimated_hours_approx": true,
+   "difficulty": "בינוני",
+   "total_ascent_m": null,
+   "total_descent_m": null,
+   "region": "גליל עליון (הרי מירון)",
+   "region_en": "Upper Galilee (Meron range)",
+   "water": {
+    "availability": "taps",
+    "points": [
+     "ברעם",
+     "בית ספר שדה הר מירון",
+     "מושב מירון",
+     "חניון נחל עמוד"
+    ],
+    "caching_needed": false
+   },
+   "overnight": {
+    "night_camp": "חניון לילה נחל עמוד (רט\"ג, בתשלום, הנחה לשביליסטים; מים ושירותים)",
+    "trail_angels": "מירון, ספסופה, כפר שמאי",
+    "paid_lodging": [
+     "בית ספר שדה הר מירון",
+     "צימרים במירון"
+    ],
+    "field_school": "בית ספר שדה הר מירון"
+   },
+   "highlights": [
+    "נחל צבעון",
+    "פסגת הר מירון (1,204 מ') ושביל הפסגה",
+    "קבר רשב\"י במירון",
+    "ירידה בנחל מירון לנחל עמוד העליון"
+   ],
+   "hazards_notes": [
+    "ערפל/שלג על המירון בחורף",
+    "צפיפות קיצונית בל\"ג בעומר",
+    "עלייה מצטברת ~650 מ'"
+   ],
+   "public_transport": {
+    "start": "צומת חירם/ברעם – קווים לצפת",
+    "end": "צומת מירון/עין תינה (כביש 85) – קווים צפת–כרמיאל–עכו",
+    "approx": true
+   },
+   "variant": "official",
+   "tiuli_segment_number": 4,
+   "notes": null,
+   "sources": [
+    "https://www.tiuli.com/tracks/257",
+    "https://hikingintheholyland.com/2022/06/27/israel-trail-5-climbing-mount-meron/"
+   ]
+  },
+  {
+   "id": 6,
+   "name_he": "חניון נחל עמוד – עין נון",
+   "name_en": "Nahal Amud night camp – Ein Nun",
+   "start": {
+    "name_he": "חניון לילה נחל עמוד",
+    "name_en": "Nahal Amud night camp",
+    "lat": 32.923,
+    "lon": 35.476,
+    "approx": true
+   },
+   "end": {
+    "name_he": "עין נון (מגדל)",
+    "name_en": "Ein Nun spring (near Migdal)",
+    "lat": 32.846,
+    "lon": 35.492,
+    "approx": true
+   },
+   "distance_km": 21,
+   "distance_km_approx": false,
+   "estimated_hours": 10,
+   "estimated_hours_approx": true,
+   "difficulty": "קשה",
+   "total_ascent_m": null,
+   "total_descent_m": null,
+   "region": "גליל עליון / גליל תחתון (נחל עמוד)",
+   "region_en": "Upper/Lower Galilee (Nahal Amud)",
+   "water": {
+    "availability": "taps",
+    "points": [
+     "מתקן שאיבה ליד נחל עמוד",
+     "עין נון",
+     "מושבת מגדל"
+    ],
+    "caching_needed": false
+   },
+   "overnight": {
+    "night_camp": "חניון לילה חוקוק (ליד הקיבוץ) / לינת שטח ליד עין נון",
+    "trail_angels": "מגדל, חוקוק, גינוסר",
+    "paid_lodging": [
+     "אכסניות במגדל",
+     "מלון נוף גינוסר"
+    ],
+    "field_school": null
+   },
+   "highlights": [
+    "שמורת נחל עמוד – עין סתר, עין יקים ובריכת שכוי",
+    "העמוד – עמוד הסלע שעל שמו הנחל",
+    "מערות פרהיסטוריות (זוטיה, עמוד)",
+    "עין נון ומישורי מגדל"
+   ],
+   "hazards_notes": [
+    "סלעים חלקים ברטוב; שיטפונות בחורף",
+    "טיולי: 10-12 שעות",
+    "חום בקיץ באזור הכנרת"
+   ],
+   "public_transport": {
+    "start": "כביש 85 ליד עין תינה",
+    "end": "מגדל – קווים לטבריה",
+    "approx": true
+   },
+   "variant": "official",
+   "tiuli_segment_number": 5,
+   "notes": null,
+   "sources": [
+    "https://www.tiuli.com/tracks/256"
+   ]
+  },
+  {
+   "id": 7,
+   "name_he": "עין נון – כנרת המושבה (דרך הארבל)",
+   "name_en": "Ein Nun – Kinneret Moshava (via Mt. Arbel)",
+   "start": {
+    "name_he": "עין נון",
+    "name_en": "Ein Nun",
+    "lat": 32.846,
+    "lon": 35.492,
+    "approx": true
+   },
+   "end": {
+    "name_he": "כנרת המושבה",
+    "name_en": "Kinneret Moshava",
+    "lat": 32.7215,
+    "lon": 35.5688,
+    "approx": false
+   },
+   "distance_km": 25,
+   "distance_km_approx": true,
+   "estimated_hours": 10,
+   "estimated_hours_approx": true,
+   "difficulty": "בינוני",
+   "total_ascent_m": null,
+   "total_descent_m": null,
+   "region": "גליל תחתון / כנרת",
+   "region_en": "Lower Galilee / Sea of Galilee",
+   "water": {
+    "availability": "taps",
+    "points": [
+     "גן לאומי ארבל",
+     "כפר חיטים",
+     "כנרת המושבה / חצר כנרת"
+    ],
+    "caching_needed": false
+   },
+   "overnight": {
+    "night_camp": "חניוני חוף סביב הכנרת (בתשלום); לינה במושבה",
+    "trail_angels": "כנרת המושבה, קבוצת כנרת, יבנאל",
+    "paid_lodging": [
+     "אכסניות וצימרים בכנרת/טבריה",
+     "חניון ארבל"
+    ],
+    "field_school": null
+   },
+   "highlights": [
+    "טיפוס צוקי הארבל בעזרת ידיות ברזל (שלבים)",
+    "גן לאומי ארבל – תצפית על הכנרת והגולן",
+    "קרני חיטין",
+    "בית הקברות של כנרת (קבר רחל המשוררת) וחצר כנרת",
+    "ירדנית"
+   ],
+   "hazards_notes": [
+    "קטע צוק הארבל עם ידיות אחיזה – לא מתאים לפחד גבהים",
+    "חום כבד בקיץ (מינוס 200 מ')",
+    "טיולי: 12 שעות"
+   ],
+   "public_transport": {
+    "start": "מגדל – קווים לטבריה",
+    "end": "צומת כנרת/כנרת המושבה – קווים טבריה–בית שאן–עפולה",
+    "approx": true
+   },
+   "variant": "official",
+   "tiuli_segment_number": 6,
+   "notes": null,
+   "sources": [
+    "https://www.tiuli.com/tracks/255"
+   ]
+  },
+  {
+   "id": 8,
+   "name_he": "כנרת המושבה – כפר קיש",
+   "name_en": "Kinneret Moshava – Kfar Kish",
+   "start": {
+    "name_he": "כנרת המושבה",
+    "name_en": "Kinneret Moshava",
+    "lat": 32.7215,
+    "lon": 35.5688,
+    "approx": false
+   },
+   "end": {
+    "name_he": "כפר קיש",
+    "name_en": "Kfar Kish",
+    "lat": 32.6668,
+    "lon": 35.4454,
+    "approx": false
+   },
+   "distance_km": 25,
+   "distance_km_approx": true,
+   "estimated_hours": 10,
+   "estimated_hours_approx": true,
+   "difficulty": "בינוני-קשה",
+   "total_ascent_m": null,
+   "total_descent_m": null,
+   "region": "גליל תחתון (נחל תבור)",
+   "region_en": "Lower Galilee (Nahal Tavor)",
+   "water": {
+    "availability": "taps",
+    "points": [
+     "ירדנית / כנרת המושבה",
+     "כפר קיש"
+    ],
+    "caching_needed": false
+   },
+   "overnight": {
+    "night_camp": "לינת שטח ליד כפר קיש (בתיאום)",
+    "trail_angels": "כפר קיש, יבנאל, שדמות דבורה",
+    "paid_lodging": [
+     "צימרים בכפר קיש וביבנאל"
+    ],
+    "field_school": null
+   },
+   "highlights": [
+    "שמורת נחל תבור – נוף פתוח ופריחה באביב",
+    "מצפה עלות – תצפית לכנרת",
+    "עין אחלום",
+    "חורבת סירין"
+   ],
+   "hazards_notes": [
+    "חום בבקעת הירדן",
+    "גדרות בקר ושטחי מרעה",
+    "טיולי: 12 שעות"
+   ],
+   "public_transport": {
+    "start": "צומת כנרת",
+    "end": "כפר קיש – קו מקומי לעפולה/צומת גזית",
+    "approx": true
+   },
+   "variant": "official",
+   "tiuli_segment_number": 7,
+   "notes": null,
+   "sources": [
+    "https://www.tiuli.com/tracks/254"
+   ]
+  },
+  {
+   "id": 9,
+   "name_he": "כפר קיש – הר יונה (נוף הגליל) דרך הר תבור",
+   "name_en": "Kfar Kish – Har Yona (Nof HaGalil) via Mt. Tabor",
+   "start": {
+    "name_he": "כפר קיש",
+    "name_en": "Kfar Kish",
+    "lat": 32.6668,
+    "lon": 35.4454,
+    "approx": false
+   },
+   "end": {
+    "name_he": "שכונת הר יונה, נוף הגליל",
+    "name_en": "Har Yona neighborhood, Nof HaGalil",
+    "lat": 32.729,
+    "lon": 35.329,
+    "approx": true
+   },
+   "distance_km": 22,
+   "distance_km_approx": false,
+   "estimated_hours": 10,
+   "estimated_hours_approx": true,
+   "difficulty": "קשה",
+   "total_ascent_m": null,
+   "total_descent_m": null,
+   "region": "גליל תחתון (הר תבור)",
+   "region_en": "Lower Galilee (Mt. Tabor)",
+   "water": {
+    "availability": "taps",
+    "points": [
+     "דבוריה",
+     "פסגת הר תבור",
+     "צומת גזית",
+     "כפר תבור (סטייה)",
+     "הר יונה / נוף הגליל"
+    ],
+    "caching_needed": false
+   },
+   "overnight": {
+    "night_camp": "אין (יער בית קשת – לינת שטח לא מוסדרת)",
+    "trail_angels": "שיבלי, כפר תבור, נוף הגליל",
+    "paid_lodging": [
+     "מלונות בנוף הגליל ונצרת"
+    ],
+    "field_school": null
+   },
+   "highlights": [
+    "עלייה וירידה בהר תבור – כנסיית ההשתנות ותצפית לעמק יזרעאל",
+    "שיבלי ודבוריה",
+    "נחל ברק בן אבינועם",
+    "הר דבורה ויער בית קשת"
+   ],
+   "hazards_notes": [
+    "יום קשה עם עלייה תלולה לתבור",
+    "טיולי: 12 שעות; אין אפשרות קמפינג מוסדרת"
+   ],
+   "public_transport": {
+    "start": "כפר קיש",
+    "end": "נוף הגליל – קווים לנצרת/עפולה/חיפה/ת\"א",
+    "approx": true
+   },
+   "variant": "official",
+   "tiuli_segment_number": 8,
+   "notes": null,
+   "sources": [
+    "https://www.tiuli.com/tracks/253"
+   ]
+  },
+  {
+   "id": 10,
+   "name_he": "הר יונה – אלון הגליל",
+   "name_en": "Har Yona – Alon HaGalil",
+   "start": {
+    "name_he": "הר יונה, נוף הגליל",
+    "name_en": "Har Yona, Nof HaGalil",
+    "lat": 32.729,
+    "lon": 35.329,
+    "approx": true
+   },
+   "end": {
+    "name_he": "אלון הגליל",
+    "name_en": "Alon HaGalil",
+    "lat": 32.758,
+    "lon": 35.22,
+    "approx": true
+   },
+   "distance_km": 15,
+   "distance_km_approx": false,
+   "estimated_hours": 8,
+   "estimated_hours_approx": false,
+   "difficulty": "בינוני",
+   "total_ascent_m": null,
+   "total_descent_m": null,
+   "region": "גליל תחתון (הרי נצרת / ציפורי)",
+   "region_en": "Lower Galilee (Nazareth hills / Tzippori)",
+   "water": {
+    "availability": "taps",
+    "points": [
+     "הושעיה (סטייה)",
+     "משהד",
+     "אלון הגליל"
+    ],
+    "caching_needed": false
+   },
+   "overnight": {
+    "night_camp": "לינת שטח ליד אלון הגליל (בתיאום עם היישוב)",
+    "trail_angels": "אלון הגליל, הושעיה",
+    "paid_lodging": [
+     "צימרים באלון הגליל והושעיה"
+    ],
+    "field_school": null
+   },
+   "highlights": [
+    "משהד (מסורת קבר יונה הנביא)",
+    "כפר כנא ונצרת מרחוק",
+    "יער ציפורי ותצפית לבקעת בית נטופה",
+    "גן לאומי ציפורי (סטייה קצרה)"
+   ],
+   "hazards_notes": [
+    "מעבר בכפרים – חציות כביש 79",
+    "חום בקיץ"
+   ],
+   "public_transport": {
+    "start": "נוף הגליל",
+    "end": "אלון הגליל – קווים לנצרת/חיפה דרך צומת המוביל",
+    "approx": true
+   },
+   "variant": "official",
+   "tiuli_segment_number": 9,
+   "notes": null,
+   "sources": [
+    "https://www.tiuli.com/tracks/252"
+   ]
+  },
+  {
+   "id": 11,
+   "name_he": "אלון הגליל – קיבוץ יגור",
+   "name_en": "Alon HaGalil – Kibbutz Yagur",
+   "start": {
+    "name_he": "אלון הגליל",
+    "name_en": "Alon HaGalil",
+    "lat": 32.758,
+    "lon": 35.22,
+    "approx": true
+   },
+   "end": {
+    "name_he": "קיבוץ יגור",
+    "name_en": "Kibbutz Yagur",
+    "lat": 32.742,
+    "lon": 35.078,
+    "approx": true
+   },
+   "distance_km": 24,
+   "distance_km_approx": true,
+   "estimated_hours": 9,
+   "estimated_hours_approx": true,
+   "difficulty": "בינוני",
+   "total_ascent_m": null,
+   "total_descent_m": null,
+   "region": "גליל תחתון / עמק זבולון",
+   "region_en": "Lower Galilee / Zevulun valley",
+   "water": {
+    "availability": "taps",
+    "points": [
+     "אלון הגליל",
+     "כעביה",
+     "כפר חסידים / רכסים",
+     "יגור"
+    ],
+    "caching_needed": false
+   },
+   "overnight": {
+    "night_camp": "לינת שטח בקיבוץ יגור (בתיאום) / חניוני יער אלונים",
+    "trail_angels": "יגור, קריית טבעון, כפר חסידים",
+    "paid_lodging": [
+     "אירוח בקיבוץ יגור",
+     "מלונות בקריית טבעון"
+    ],
+    "field_school": null
+   },
+   "highlights": [
+    "יער ציפורי ונחל ציפורי – עין יבקע וטחנת הנזירים",
+    "כעביה-טבאש",
+    "גבעות אלונים",
+    "חציית הקישון וכפר חסידים"
+   ],
+   "hazards_notes": [
+    "חציות כביש 762/70",
+    "טיולי: 12 שעות"
+   ],
+   "public_transport": {
+    "start": "אלון הגליל",
+    "end": "יגור – קווים לחיפה (צומת יגור, כביש 70/75)",
+    "approx": true
+   },
+   "variant": "official",
+   "tiuli_segment_number": 10,
+   "notes": "האורך נגזר מהמצטבר בטיולי (216 ק\"מ ביגור).",
+   "sources": [
+    "https://www.tiuli.com/tracks/251"
+   ]
+  },
+  {
+   "id": 12,
+   "name_he": "יגור – עין הוד (רכס הכרמל)",
+   "name_en": "Yagur – Ein Hod (Carmel ridge)",
+   "start": {
+    "name_he": "קיבוץ יגור",
+    "name_en": "Kibbutz Yagur",
+    "lat": 32.742,
+    "lon": 35.078,
+    "approx": true
+   },
+   "end": {
+    "name_he": "עין הוד",
+    "name_en": "Ein Hod",
+    "lat": 32.699,
+    "lon": 34.979,
+    "approx": true
+   },
+   "distance_km": 26,
+   "distance_km_approx": true,
+   "estimated_hours": 11,
+   "estimated_hours_approx": true,
+   "difficulty": "קשה",
+   "total_ascent_m": null,
+   "total_descent_m": null,
+   "region": "כרמל",
+   "region_en": "Carmel",
+   "water": {
+    "availability": "taps",
+    "points": [
+     "יגור",
+     "אזור אוניברסיטת חיפה (סטייה)",
+     "עוספיה",
+     "חניון נחל אורן",
+     "חורבת רקית",
+     "ניר עציון",
+     "עין הוד"
+    ],
+    "caching_needed": false
+   },
+   "overnight": {
+    "night_camp": "חניוני לילה בפארק הכרמל (חניון אלון / חי-בר כרמל – בתיאום עם רט\"ג)",
+    "trail_angels": "עין הוד, ניר עציון, עוספיה, עין כרמל",
+    "paid_lodging": [
+     "צימרים בעין הוד",
+     "מלון ניר עציון",
+     "אכסניית אנ\"א חוף הכרמל (בסמוך)"
+    ],
+    "field_school": null
+   },
+   "highlights": [
+    "עליית נחל יגור לרכס הכרמל (סמוך לאוניברסיטת חיפה/נשר)",
+    "'שווייץ הקטנה' (נחל כלח)",
+    "חי-בר כרמל",
+    "נחל אורן ומערת אצבע",
+    "תצפיות נחל שוקף; כפר האמנים עין הוד"
+   ],
+   "hazards_notes": [
+    "יום ארוך ומצטבר עם עליות וירידות (טיולי: 12 שעות)",
+    "אזורי שריפות 2010/2016/2021",
+    "חום בקיץ; חציית כביש 672"
+   ],
+   "public_transport": {
+    "start": "יגור",
+    "end": "עין הוד – קו מחיפה/זכרון (כביש 4, צומת עין הוד)",
+    "approx": true
+   },
+   "variant": "official",
+   "tiuli_segment_number": 11,
+   "notes": null,
+   "sources": [
+    "https://www.tiuli.com/tracks/250"
+   ]
+  },
+  {
+   "id": 13,
+   "name_he": "עין הוד – רמת הנדיב (דרך נחל מערות וזכרון יעקב)",
+   "name_en": "Ein Hod – Ramat HaNadiv (via Nahal Me'arot & Zichron Yaakov)",
+   "start": {
+    "name_he": "עין הוד",
+    "name_en": "Ein Hod",
+    "lat": 32.699,
+    "lon": 34.979,
+    "approx": true
+   },
+   "end": {
+    "name_he": "רמת הנדיב",
+    "name_en": "Ramat HaNadiv park",
+    "lat": 32.5529,
+    "lon": 34.9453,
+    "approx": false
+   },
+   "distance_km": 23,
+   "distance_km_approx": true,
+   "estimated_hours": 10,
+   "estimated_hours_approx": true,
+   "difficulty": "בינוני-קשה",
+   "total_ascent_m": null,
+   "total_descent_m": null,
+   "region": "כרמל (חוטם הכרמל)",
+   "region_en": "Carmel (Hotem HaCarmel)",
+   "water": {
+    "availability": "taps",
+    "points": [
+     "עין הוד",
+     "שמורת נחל מערות",
+     "עופר",
+     "זכרון יעקב",
+     "רמת הנדיב"
+    ],
+    "caching_needed": false
+   },
+   "overnight": {
+    "night_camp": "אין חניון לילה; לינה בזכרון יעקב",
+    "trail_angels": "זכרון יעקב, עופר, כרם מהר\"ל",
+    "paid_lodging": [
+     "מלונות וצימרים בזכרון יעקב",
+     "אכסניית אנ\"א חוף הכרמל"
+    ],
+    "field_school": null
+   },
+   "highlights": [
+    "שמורת נחל מערות (אתר מורשת עולמית)",
+    "מצפה עופר",
+    "חוטם הכרמל ומצפה מורן (תוואי חדש)",
+    "המושבה זכרון יעקב (תוואי 2023)",
+    "פארק רמת הנדיב – גני הברון ועין צור"
+   ],
+   "hazards_notes": [
+    "התוואי בחוטם הכרמל שונה (מעבר במצפה מורן ולאורך מחצבת בנימינה) כדי להימנע מהליכה לאורך כביש 4 ומסילת הרכבת",
+    "טיולי: 12 שעות"
+   ],
+   "public_transport": {
+    "start": "עין הוד",
+    "end": "זכרון יעקב – תחנה מרכזית (קווים לחיפה/ת\"א); רכבת בנימינה",
+    "approx": true
+   },
+   "variant": "official",
+   "tiuli_segment_number": 12,
+   "notes": null,
+   "sources": [
+    "https://www.tiuli.com/tracks/249",
+    "https://www.maariv.co.il/lifestyle/travel/article-1039812",
+    "https://www.ias.co.il/?p=120477"
+   ]
+  },
+  {
+   "id": 14,
+   "name_he": "רמת הנדיב – חדרה (דרך נחל תנינים וחוף קיסריה)",
+   "name_en": "Ramat HaNadiv – Hadera (via Nahal Taninim & Caesarea beach)",
+   "start": {
+    "name_he": "רמת הנדיב",
+    "name_en": "Ramat HaNadiv",
+    "lat": 32.5529,
+    "lon": 34.9453,
+    "approx": false
+   },
+   "end": {
+    "name_he": "חדרה (תחנת הרכבת)",
+    "name_en": "Hadera railway station",
+    "lat": 32.4406,
+    "lon": 34.9031,
+    "approx": false
+   },
+   "distance_km": 23,
+   "distance_km_approx": false,
+   "estimated_hours": 9,
+   "estimated_hours_approx": true,
+   "difficulty": "בינוני",
+   "total_ascent_m": null,
+   "total_descent_m": null,
+   "region": "שרון / מישור החוף",
+   "region_en": "Sharon / Coastal plain",
+   "water": {
+    "availability": "taps",
+    "points": [
+     "רמת הנדיב",
+     "בנימינה",
+     "בית חנניה",
+     "ג'סר א-זרקא",
+     "חוף קיסריה",
+     "חדרה"
+    ],
+    "caching_needed": false
+   },
+   "overnight": {
+    "night_camp": "חניון חוף (קיסריה / נחל חדרה) – לינת שטח",
+    "trail_angels": "בנימינה, ג'סר א-זרקא, קיסריה, חדרה",
+    "paid_lodging": [
+     "מלונות בחדרה ובקיסריה"
+    ],
+    "field_school": null
+   },
+   "highlights": [
+    "גן לאומי נחל תנינים (סכר רומי)",
+    "ג'סר א-זרקא וכפר הדייגים",
+    "אמת המים של קיסריה וחוף הים",
+    "פארק נחל חדרה"
+   ],
+   "hazards_notes": [
+    "הליכה בחול רך",
+    "תחנת הכוח אורות רבין",
+    "שינויים אחרונים בתוואי באזור הכרמל – לבדוק מפה מעודכנת"
+   ],
+   "public_transport": {
+    "start": "זכרון יעקב / רכבת בנימינה",
+    "end": "רכבת חדרה מערב",
+    "approx": true
+   },
+   "variant": "official",
+   "tiuli_segment_number": 13,
+   "notes": null,
+   "sources": [
+    "https://www.tiuli.com/tracks/248"
+   ]
+  },
+  {
+   "id": 15,
+   "name_he": "חדרה – חוף פולג",
+   "name_en": "Hadera – Poleg Beach",
+   "start": {
+    "name_he": "חדרה (תחנת הרכבת)",
+    "name_en": "Hadera railway station",
+    "lat": 32.4406,
+    "lon": 34.9031,
+    "approx": false
+   },
+   "end": {
+    "name_he": "חוף פולג",
+    "name_en": "Poleg Beach",
+    "lat": 32.274,
+    "lon": 34.833,
+    "approx": true
+   },
+   "distance_km": 24.5,
+   "distance_km_approx": false,
+   "estimated_hours": 9,
+   "estimated_hours_approx": true,
+   "difficulty": "קשה",
+   "total_ascent_m": null,
+   "total_descent_m": null,
+   "region": "שרון (חוף)",
+   "region_en": "Sharon coast",
+   "water": {
+    "availability": "taps",
+    "points": [
+     "חדרה",
+     "מכמורת",
+     "בית ינאי",
+     "חופי נתניה"
+    ],
+    "caching_needed": false
+   },
+   "overnight": {
+    "night_camp": "חוף בית ינאי (גן לאומי, קמפינג בתשלום) / חוף מכמורת",
+    "trail_angels": "מכמורת, בית ינאי, נתניה",
+    "paid_lodging": [
+     "מלונות בנתניה",
+     "אכסניות במכמורת"
+    ],
+    "field_school": null
+   },
+   "highlights": [
+    "יער חדרה ונחל אלכסנדר (גשר הצבים)",
+    "חוף מכמורת",
+    "מצוקי הכורכר של נתניה",
+    "שמורת פולג"
+   ],
+   "hazards_notes": [
+    "הליכה ארוכה על חול – קשה למרות הגובה האפסי",
+    "סכנת התמוטטות מצוקים – להתרחק משפת המצוק",
+    "שמש ללא צל"
+   ],
+   "public_transport": {
+    "start": "רכבת חדרה",
+    "end": "חוף פולג – קווים מנתניה; רכבת נתניה ספיר",
+    "approx": true
+   },
+   "variant": "official",
+   "tiuli_segment_number": 14,
+   "notes": null,
+   "sources": [
+    "https://www.tiuli.com/tracks/247"
+   ]
+  },
+  {
+   "id": 16,
+   "name_he": "חוף פולג – נמל תל אביב",
+   "name_en": "Poleg Beach – Tel Aviv Port",
+   "start": {
+    "name_he": "חוף פולג",
+    "name_en": "Poleg Beach",
+    "lat": 32.274,
+    "lon": 34.833,
+    "approx": true
+   },
+   "end": {
+    "name_he": "נמל תל אביב",
+    "name_en": "Tel Aviv Port",
+    "lat": 32.097,
+    "lon": 34.774,
+    "approx": true
+   },
+   "distance_km": 21.5,
+   "distance_km_approx": false,
+   "estimated_hours": 7,
+   "estimated_hours_approx": true,
+   "difficulty": "קל",
+   "total_ascent_m": null,
+   "total_descent_m": null,
+   "region": "מישור החוף (הרצליה–תל אביב)",
+   "region_en": "Coastal plain (Herzliya–Tel Aviv)",
+   "water": {
+    "availability": "taps",
+    "points": [
+     "שמורת פולג",
+     "אפולוניה",
+     "הרצליה",
+     "תל ברוך",
+     "נמל תל אביב"
+    ],
+    "caching_needed": false
+   },
+   "overnight": {
+    "night_camp": "אין",
+    "trail_angels": "הרצליה, תל אביב (קבוצת מלאכי שביל)",
+    "paid_lodging": [
+     "מלונות ואכסניות בתל אביב/הרצליה"
+    ],
+    "field_school": null
+   },
+   "highlights": [
+    "שמורת פולג – רכס הכורכר",
+    "גן לאומי אפולוניה (ארסוף)",
+    "מרינה הרצליה וחופי תל ברוך",
+    "שפך הירקון ונמל תל אביב"
+   ],
+   "hazards_notes": [
+    "מצוקי כורכר – סכנת התמוטטות",
+    "הליכה עירונית"
+   ],
+   "public_transport": {
+    "start": "חוף פולג",
+    "end": "נמל תל אביב – רכבת ת\"א אוניברסיטה, קווי דן",
+    "approx": true
+   },
+   "variant": "official",
+   "tiuli_segment_number": 15,
+   "notes": null,
+   "sources": [
+    "https://www.tiuli.com/tracks/246"
+   ]
+  },
+  {
+   "id": 17,
+   "name_he": "נמל תל אביב – כפר סירקין (לאורך הירקון ותל אפק)",
+   "name_en": "Tel Aviv Port – Kfar Sirkin (Yarkon & Tel Afek)",
+   "start": {
+    "name_he": "נמל תל אביב",
+    "name_en": "Tel Aviv Port",
+    "lat": 32.097,
+    "lon": 34.774,
+    "approx": true
+   },
+   "end": {
+    "name_he": "כפר סירקין",
+    "name_en": "Kfar Sirkin",
+    "lat": 32.082,
+    "lon": 34.929,
+    "approx": true
+   },
+   "distance_km": 26,
+   "distance_km_approx": true,
+   "estimated_hours": 8,
+   "estimated_hours_approx": true,
+   "difficulty": "קל",
+   "total_ascent_m": null,
+   "total_descent_m": null,
+   "region": "מישור החוף (נחל הירקון)",
+   "region_en": "Coastal plain (Yarkon river)",
+   "water": {
+    "availability": "taps",
+    "points": [
+     "פארק הירקון",
+     "גן לאומי ירקון – תל אפק",
+     "כפר סירקין"
+    ],
+    "caching_needed": false
+   },
+   "overnight": {
+    "night_camp": "אין",
+    "trail_angels": "כפר סירקין, ראש העין, פתח תקווה",
+    "paid_lodging": [
+     "מלונות בראש העין/פתח תקווה"
+    ],
+    "field_school": null
+   },
+   "highlights": [
+    "פארק הירקון ושבע טחנות",
+    "מקורות הירקון",
+    "תל אפק (אנטיפטריס) – מבצר עות'מאני",
+    "שדות קיבוץ עינת"
+   ],
+   "hazards_notes": [
+    "הליכה עירונית ארוכה",
+    "שינוי תוואי: המעבר דרך כפר סירקין (רח' הכלנית) ומטע האפרסקים חדש; טיולי מציין 30 ק\"מ, מדריך צבי גילת 18 ק\"מ – האורך משתנה לפי תוואי"
+   ],
+   "public_transport": {
+    "start": "נמל תל אביב",
+    "end": "כפר סירקין – קווים לפתח תקווה; רכבת ראש העין צפון",
+    "approx": true
+   },
+   "variant": "official",
+   "tiuli_segment_number": 16,
+   "notes": null,
+   "sources": [
+    "https://www.tiuli.com/tracks/245",
+    "https://www.maariv.co.il/lifestyle/travel/article-1182407"
+   ]
+  },
+  {
+   "id": 18,
+   "name_he": "כפר סירקין – גמזו (דרך שוהם ויער שוהם)",
+   "name_en": "Kfar Sirkin – Gimzo (via Shoham & Shoham forest)",
+   "start": {
+    "name_he": "כפר סירקין",
+    "name_en": "Kfar Sirkin",
+    "lat": 32.082,
+    "lon": 34.929,
+    "approx": true
+   },
+   "end": {
+    "name_he": "מושב גמזו",
+    "name_en": "Moshav Gimzo",
+    "lat": 31.928,
+    "lon": 34.943,
+    "approx": true
+   },
+   "distance_km": 26,
+   "distance_km_approx": true,
+   "estimated_hours": 9,
+   "estimated_hours_approx": true,
+   "difficulty": "קל-בינוני",
+   "total_ascent_m": null,
+   "total_descent_m": null,
+   "region": "שפלה (גבעות שוהם–מודיעין)",
+   "region_en": "Shephelah (Shoham–Modi'in hills)",
+   "water": {
+    "availability": "taps",
+    "points": [
+     "כפר סירקין",
+     "שוהם (טיילת מזרחית)",
+     "גמזו"
+    ],
+    "caching_needed": false
+   },
+   "overnight": {
+    "night_camp": "חניוני קק\"ל ביער שוהם/בן שמן (לינת שטח)",
+    "trail_angels": "שוהם, מודיעין, גמזו",
+    "paid_lodging": [
+     "מלונות במודיעין"
+    ],
+    "field_school": null
+   },
+   "highlights": [
+    "תוואי חדש (~14 ק\"מ) בין תל אפק ליער שוהם – ממערב לכבישים 6 ו-444, גשר חדש מעל המסילה המזרחית",
+    "שוהם – טיילת מזרחית וגינת כרמים",
+    "יער שוהם ותצפיותיו",
+    "יער בן שמן ומושב גמזו"
+   ],
+   "hazards_notes": [
+    "התוואי הוותיק דרך מגדל צדק/נחל שילה נחסם ע\"י פיתוח אלעד והמסילה המזרחית",
+    "יער שוהם נסגר באפריל 2026 (שברי טילים) – לבדוק סטטוס בקק\"ל",
+    "חציות כבישים 444/443"
+   ],
+   "public_transport": {
+    "start": "כפר סירקין",
+    "end": "גמזו – קווים ללוד/מודיעין",
+    "approx": true
+   },
+   "variant": "official",
+   "tiuli_segment_number": 17,
+   "notes": null,
+   "sources": [
+    "https://www.tiuli.com/tracks/244",
+    "https://www.maariv.co.il/lifestyle/travel/article-1182407",
+    "https://www.jpost.com/consumerism/article-847335"
+   ]
+  },
+  {
+   "id": 19,
+   "name_he": "גמזו – מסילת ציון (דרך לטרון ושער הגיא)",
+   "name_en": "Gimzo – Mesilat Zion (via Latrun & Sha'ar HaGai)",
+   "start": {
+    "name_he": "מושב גמזו",
+    "name_en": "Moshav Gimzo",
+    "lat": 31.928,
+    "lon": 34.943,
+    "approx": true
+   },
+   "end": {
+    "name_he": "מסילת ציון",
+    "name_en": "Mesilat Zion",
+    "lat": 31.795,
+    "lon": 35.029,
+    "approx": true
+   },
+   "distance_km": 25,
+   "distance_km_approx": false,
+   "estimated_hours": 9,
+   "estimated_hours_approx": true,
+   "difficulty": "קל-בינוני",
+   "total_ascent_m": null,
+   "total_descent_m": null,
+   "region": "שפלה / מבואות ירושלים",
+   "region_en": "Shephelah / Jerusalem foothills",
+   "water": {
+    "availability": "taps",
+    "points": [
+     "גמזו",
+     "נווה שלום",
+     "צומת לטרון",
+     "מסילת ציון"
+    ],
+    "caching_needed": false
+   },
+   "overnight": {
+    "night_camp": "חניוני קק\"ל ביער בן שמן / פארק קנדה (לינת שטח)",
+    "trail_angels": "מסילת ציון, שורש, נווה שלום",
+    "paid_lodging": [
+     "מלון נווה שלום",
+     "מלון שורש (בסמוך)"
+    ],
+    "field_school": null
+   },
+   "highlights": [
+    "מצפה מודיעים",
+    "מנזר השתקנים (לטרון) ויד לשריון",
+    "שער הגיא – שרידי שיירות תש\"ח",
+    "תחילת הרי ירושלים"
+   ],
+   "hazards_notes": [
+    "חציית כביש 3 וכביש 1 (גשר)",
+    "טיולי: 12 שעות"
+   ],
+   "public_transport": {
+    "start": "גמזו",
+    "end": "מסילת ציון / שער הגיא – קווים ירושלים–ת\"א (כביש 1)",
+    "approx": true
+   },
+   "variant": "official",
+   "tiuli_segment_number": 18,
+   "notes": null,
+   "sources": [
+    "https://www.tiuli.com/tracks/243"
+   ]
+  },
+  {
+   "id": 20,
+   "name_he": "מסילת ציון – קיבוץ צובה (דרך הבורמה)",
+   "name_en": "Mesilat Zion – Kibbutz Tzuba (Burma Road)",
+   "start": {
+    "name_he": "מסילת ציון",
+    "name_en": "Mesilat Zion",
+    "lat": 31.795,
+    "lon": 35.029,
+    "approx": true
+   },
+   "end": {
+    "name_he": "קיבוץ צובה",
+    "name_en": "Kibbutz Tzuba",
+    "lat": 31.783,
+    "lon": 35.118,
+    "approx": true
+   },
+   "distance_km": 18.5,
+   "distance_km_approx": true,
+   "estimated_hours": 8,
+   "estimated_hours_approx": true,
+   "difficulty": "בינוני-קשה",
+   "total_ascent_m": null,
+   "total_descent_m": null,
+   "region": "הרי ירושלים",
+   "region_en": "Jerusalem Hills",
+   "water": {
+    "availability": "taps",
+    "points": [
+     "מסילת ציון",
+     "עין לימור (מעיין)",
+     "קיבוץ צובה"
+    ],
+    "caching_needed": false
+   },
+   "overnight": {
+    "night_camp": "לינת שטח ביער (חניוני קק\"ל ליד שורש/בית מאיר)",
+    "trail_angels": "צובה, שורש, בית מאיר, אבו גוש",
+    "paid_lodging": [
+     "מלון צובה (בלמונט)",
+     "מלון שורש"
+    ],
+    "field_school": null
+   },
+   "highlights": [
+    "דרך בורמה ואנדרטאות תש\"ח",
+    "עין לימור ומערת האחים",
+    "תצפיות נחל כסלון",
+    "מבצר בלמונט הצלבני בצובה"
+   ],
+   "hazards_notes": [
+    "עליות מצטברות משמעותיות",
+    "טיולי: ~10 שעות"
+   ],
+   "public_transport": {
+    "start": "שער הגיא / מסילת ציון",
+    "end": "צובה – קו 183/ קווים מירושלים",
+    "approx": true
+   },
+   "variant": "official",
+   "tiuli_segment_number": 19,
+   "notes": null,
+   "sources": [
+    "https://www.tiuli.com/tracks/242"
+   ]
+  },
+  {
+   "id": 21,
+   "name_he": "צובה – צומת צור הדסה (דרך סטף, עין כרם ויד קנדי)",
+   "name_en": "Tzuba – Tzur Hadassah junction (via Sataf, Ein Kerem, Kennedy Memorial)",
+   "start": {
+    "name_he": "קיבוץ צובה",
+    "name_en": "Kibbutz Tzuba",
+    "lat": 31.783,
+    "lon": 35.118,
+    "approx": true
+   },
+   "end": {
+    "name_he": "צומת צור הדסה",
+    "name_en": "Tzur Hadassah junction",
+    "lat": 31.718,
+    "lon": 35.098,
+    "approx": true
+   },
+   "distance_km": 18.5,
+   "distance_km_approx": false,
+   "estimated_hours": 8,
+   "estimated_hours_approx": true,
+   "difficulty": "קשה",
+   "total_ascent_m": null,
+   "total_descent_m": null,
+   "region": "הרי ירושלים",
+   "region_en": "Jerusalem Hills",
+   "water": {
+    "availability": "taps",
+    "points": [
+     "צובה",
+     "חניון סטף",
+     "עין כרם (ירושלים)",
+     "צור הדסה"
+    ],
+    "caching_needed": false
+   },
+   "overnight": {
+    "night_camp": "לינת שטח ביער עמינדב (חניוני קק\"ל)",
+    "trail_angels": "עין כרם, צור הדסה, אבן ספיר",
+    "paid_lodging": [
+     "אכסניות בעין כרם",
+     "ירושלים (סטייה)"
+    ],
+    "field_school": null
+   },
+   "highlights": [
+    "סטף – חקלאות טרסות עתיקה ומעיינות",
+    "שולי עין כרם",
+    "יער עמינדב ויד קנדי",
+    "תצפיות לנחל רפאים ולגוש עציון"
+   ],
+   "hazards_notes": [
+    "עליות וירידות תלולות (טיולי: 12 שעות)",
+    "עומס מבקרים בסטף בסופי שבוע"
+   ],
+   "public_transport": {
+    "start": "צובה",
+    "end": "צור הדסה – קווים לירושלים (כביש 375/386)",
+    "approx": true
+   },
+   "variant": "official",
+   "tiuli_segment_number": 20,
+   "notes": null,
+   "sources": [
+    "https://www.tiuli.com/tracks/241",
+    "https://neshamah.net/?p=1536"
+   ]
+  },
+  {
+   "id": 22,
+   "name_he": "צור הדסה – נתיב הל\"ה (דרך הרומית ועמק האלה)",
+   "name_en": "Tzur Hadassah – Netiv HaLamed-He (Roman road & Elah valley)",
+   "start": {
+    "name_he": "צומת צור הדסה",
+    "name_en": "Tzur Hadassah junction",
+    "lat": 31.718,
+    "lon": 35.098,
+    "approx": true
+   },
+   "end": {
+    "name_he": "קיבוץ נתיב הל\"ה",
+    "name_en": "Kibbutz Netiv HaLamed-He",
+    "lat": 31.687,
+    "lon": 34.985,
+    "approx": true
+   },
+   "distance_km": 16,
+   "distance_km_approx": false,
+   "estimated_hours": 7,
+   "estimated_hours_approx": true,
+   "difficulty": "בינוני-קשה",
+   "total_ascent_m": null,
+   "total_descent_m": null,
+   "region": "הרי ירושלים / שפלת יהודה",
+   "region_en": "Jerusalem Hills / Judean Shephelah",
+   "water": {
+    "availability": "taps",
+    "points": [
+     "ברז מקורות אחרי חציית כביש 3855",
+     "מטע (סטייה)",
+     "בר גיורא (סטייה)",
+     "נתיב הל\"ה"
+    ],
+    "caching_needed": false
+   },
+   "overnight": {
+    "night_camp": "חניון לילה בקיבוץ נתיב הל\"ה (בתיאום)",
+    "trail_angels": "מטע, בר גיורא, נס הרים, נתיב הל\"ה",
+    "paid_lodging": [
+     "צימרים במטע/בר גיורא/נס הרים",
+     "אירוח בנתיב הל\"ה"
+    ],
+    "field_school": null
+   },
+   "highlights": [
+    "מעיינות באזור מטע",
+    "הדרך הרומית העתיקה",
+    "ירידה לעמק האלה",
+    "חורבת חנות"
+   ],
+   "hazards_notes": [
+    "טיולי: ~10 שעות",
+    "חציית כביש 375/3855"
+   ],
+   "public_transport": {
+    "start": "צור הדסה",
+    "end": "נתיב הל\"ה – קווים לבית שמש",
+    "approx": true
+   },
+   "variant": "official",
+   "tiuli_segment_number": 21,
+   "notes": null,
+   "sources": [
+    "https://www.tiuli.com/tracks/240"
+   ]
+  },
+  {
+   "id": 23,
+   "name_he": "נתיב הל\"ה – בית גוברין",
+   "name_en": "Netiv HaLamed-He – Beit Guvrin",
+   "start": {
+    "name_he": "קיבוץ נתיב הל\"ה",
+    "name_en": "Kibbutz Netiv HaLamed-He",
+    "lat": 31.687,
+    "lon": 34.985,
+    "approx": true
+   },
+   "end": {
+    "name_he": "קיבוץ בית גוברין",
+    "name_en": "Kibbutz Beit Guvrin",
+    "lat": 31.613,
+    "lon": 34.897,
+    "approx": true
+   },
+   "distance_km": 23.5,
+   "distance_km_approx": false,
+   "estimated_hours": 9,
+   "estimated_hours_approx": true,
+   "difficulty": "קשה",
+   "total_ascent_m": null,
+   "total_descent_m": null,
+   "region": "שפלת יהודה (עדולם)",
+   "region_en": "Judean Shephelah (Adullam)",
+   "water": {
+    "availability": "taps",
+    "points": [
+     "נתיב הל\"ה",
+     "גבעת ישעיהו (סטייה)",
+     "בית גוברין (מים, מכולת, לינה)"
+    ],
+    "caching_needed": false
+   },
+   "overnight": {
+    "night_camp": "חניון לילה בקיבוץ בית גוברין (בתשלום סמלי)",
+    "trail_angels": "גבעת ישעיהו, לוזית, בית גוברין",
+    "paid_lodging": [
+     "אירוח כפרי בבית גוברין / בית ניר"
+    ],
+    "field_school": null
+   },
+   "highlights": [
+    "תל עזקה ואנדרטת הל\"ה",
+    "עמק האלה (דוד וגוליית)",
+    "פארק עדולם – חורבת בורגין",
+    "גן לאומי בית גוברין–מרשה (מערות הפעמון)"
+   ],
+   "hazards_notes": [
+    "יום ארוך ומצטבר",
+    "בוץ כבד בחורף"
+   ],
+   "public_transport": {
+    "start": "נתיב הל\"ה",
+    "end": "צומת בית גוברין – קווים לקריית גת/בית שמש",
+    "approx": true
+   },
+   "variant": "official",
+   "tiuli_segment_number": 22,
+   "notes": null,
+   "sources": [
+    "https://www.tiuli.com/tracks/239",
+    "https://sites.google.com/site/israeltrailjournal/part2/day29"
+   ]
+  },
+  {
+   "id": 24,
+   "name_he": "בית גוברין – תל קשת (חבל לכיש)",
+   "name_en": "Beit Guvrin – Tel Keshet (Lachish region)",
+   "start": {
+    "name_he": "קיבוץ בית גוברין",
+    "name_en": "Kibbutz Beit Guvrin",
+    "lat": 31.613,
+    "lon": 34.897,
+    "approx": true
+   },
+   "end": {
+    "name_he": "תל קשת (חניון לילה)",
+    "name_en": "Tel Keshet night camp",
+    "lat": 31.545,
+    "lon": 34.84,
+    "approx": true
+   },
+   "distance_km": 22.5,
+   "distance_km_approx": false,
+   "estimated_hours": 8,
+   "estimated_hours_approx": true,
+   "difficulty": "קל",
+   "total_ascent_m": null,
+   "total_descent_m": null,
+   "region": "שפלה / חבל לכיש",
+   "region_en": "Shephelah / Lachish region",
+   "water": {
+    "availability": "taps",
+    "points": [
+     "בית גוברין",
+     "אמציה (סטייה)",
+     "ברז במושב לכיש (סטייה)"
+    ],
+    "caching_needed": false
+   },
+   "overnight": {
+    "night_camp": "חניון לילה תל קשת (קק\"ל, ללא מים)",
+    "trail_angels": "אמציה, לכיש, שקף",
+    "paid_lodging": [
+     "צימרים במושבי חבל לכיש"
+    ],
+    "field_school": null
+   },
+   "highlights": [
+    "הווילה של נאצר ומערת השוק (הכניסה אסורה)",
+    "כרמי חבל לכיש",
+    "תל לכיש (סטייה קצרה)",
+    "נחל גוברין"
+   ],
+   "hazards_notes": [
+    "אין מים בחניון תל קשת – למלא בבית גוברין/לכיש",
+    "בוץ בחורף"
+   ],
+   "public_transport": {
+    "start": "בית גוברין",
+    "end": "אין תחבורה בתל קשת; הקרובה – מושב לכיש/אמציה",
+    "approx": true
+   },
+   "variant": "official",
+   "tiuli_segment_number": 23,
+   "notes": null,
+   "sources": [
+    "https://www.tiuli.com/tracks/238"
+   ]
+  },
+  {
+   "id": 25,
+   "name_he": "תל קשת – קיבוץ דבירה (יער להב)",
+   "name_en": "Tel Keshet – Kibbutz Dvira (Lahav forest)",
+   "start": {
+    "name_he": "תל קשת",
+    "name_en": "Tel Keshet",
+    "lat": 31.545,
+    "lon": 34.84,
+    "approx": true
+   },
+   "end": {
+    "name_he": "קיבוץ דבירה",
+    "name_en": "Kibbutz Dvira",
+    "lat": 31.415,
+    "lon": 34.816,
+    "approx": true
+   },
+   "distance_km": 26.5,
+   "distance_km_approx": false,
+   "estimated_hours": 9,
+   "estimated_hours_approx": true,
+   "difficulty": "קל",
+   "total_ascent_m": null,
+   "total_descent_m": null,
+   "region": "צפון הנגב (יערות להב–דביר)",
+   "region_en": "Northern Negev (Lahav–Dvir forests)",
+   "water": {
+    "availability": "taps",
+    "points": [
+     "דבירה (ברז בכניסה)",
+     "להב (סטייה)"
+    ],
+    "caching_needed": false
+   },
+   "overnight": {
+    "night_camp": "חניון לילה בקיבוץ דבירה",
+    "trail_angels": "דבירה, להב",
+    "paid_lodging": [
+     "מרכז ג'ו אלון/להב (בסמוך)"
+    ],
+    "field_school": null
+   },
+   "highlights": [
+    "יער דביר ויער להב",
+    "תל חליף",
+    "מרכז ג'ו אלון למורשת הבדואים (סטייה)",
+    "המעבר מהשפלה לנגב"
+   ],
+   "hazards_notes": [
+    "יום ארוך אך קל",
+    "ציד/שטחי מרעה – להישאר על הסימון"
+   ],
+   "public_transport": {
+    "start": "תל קשת",
+    "end": "דבירה – קווים לבאר שבע (כביש 358/40)",
+    "approx": true
+   },
+   "variant": "official",
+   "tiuli_segment_number": 24,
+   "notes": null,
+   "sources": [
+    "https://www.tiuli.com/tracks/236"
+   ]
+  },
+  {
+   "id": 26,
+   "name_he": "דבירה – מיתר (דרך סנסנה)",
+   "name_en": "Dvira – Meitar (via Sansana)",
+   "start": {
+    "name_he": "קיבוץ דבירה",
+    "name_en": "Kibbutz Dvira",
+    "lat": 31.415,
+    "lon": 34.816,
+    "approx": true
+   },
+   "end": {
+    "name_he": "מיתר",
+    "name_en": "Meitar",
+    "lat": 31.325,
+    "lon": 34.93,
+    "approx": true
+   },
+   "distance_km": 19,
+   "distance_km_approx": true,
+   "estimated_hours": 7,
+   "estimated_hours_approx": true,
+   "difficulty": "בינוני",
+   "total_ascent_m": null,
+   "total_descent_m": null,
+   "region": "צפון הנגב / דרום הר חברון",
+   "region_en": "Northern Negev / southern Hebron hills",
+   "water": {
+    "availability": "taps",
+    "points": [
+     "דבירה",
+     "סנסנה",
+     "מיתר"
+    ],
+    "caching_needed": false
+   },
+   "overnight": {
+    "night_camp": "לינת שטח ביער מיתר (חניוני קק\"ל)",
+    "trail_angels": "מיתר, סנסנה",
+    "paid_lodging": [
+     "צימרים במיתר"
+    ],
+    "field_school": null
+   },
+   "highlights": [
+    "תצפית סנסנה",
+    "גבעות דרום הר חברון",
+    "יער מיתר"
+   ],
+   "hazards_notes": [
+    "קרבה לקו התפר/גדר ההפרדה – להישאר על הסימון",
+    "טיולי: 10 שעות; מקורות שונים 18-20 ק\"מ"
+   ],
+   "public_transport": {
+    "start": "דבירה",
+    "end": "מיתר – קווים לבאר שבע (למשל 55/58)",
+    "approx": true
+   },
+   "variant": "official",
+   "tiuli_segment_number": 25,
+   "notes": null,
+   "sources": [
+    "https://www.tiuli.com/tracks/235",
+    "https://sites.google.com/site/israeltrailjournal/part2/day24"
+   ]
+  },
+  {
+   "id": 27,
+   "name_he": "מיתר – הר עמשא (יער יתיר)",
+   "name_en": "Meitar – Har Amasa (Yatir forest)",
+   "start": {
+    "name_he": "מיתר",
+    "name_en": "Meitar",
+    "lat": 31.325,
+    "lon": 34.93,
+    "approx": true
+   },
+   "end": {
+    "name_he": "הר עמשא",
+    "name_en": "Har Amasa",
+    "lat": 31.342,
+    "lon": 35.102,
+    "approx": true
+   },
+   "distance_km": 22,
+   "distance_km_approx": true,
+   "estimated_hours": 8,
+   "estimated_hours_approx": true,
+   "difficulty": "בינוני",
+   "total_ascent_m": null,
+   "total_descent_m": null,
+   "region": "צפון הנגב (יער יתיר)",
+   "region_en": "Northern Negev (Yatir forest)",
+   "water": {
+    "availability": "taps",
+    "points": [
+     "מיתר",
+     "הר עמשא"
+    ],
+    "caching_needed": false
+   },
+   "overnight": {
+    "night_camp": "חניוני לילה קק\"ל ביער יתיר / לינה בהר עמשא (בתיאום)",
+    "trail_angels": "הר עמשא, כרמל, מיתר",
+    "paid_lodging": [
+     "צימרים בהר עמשא וביישובי יתיר"
+    ],
+    "field_school": null
+   },
+   "highlights": [
+    "יער יתיר – היער הנטוע הגדול בישראל",
+    "נחל אשתמוע",
+    "חורבת ענים (בית כנסת עתיק)",
+    "תצפית הר עמשא למדבר יהודה"
+   ],
+   "hazards_notes": [
+    "אין מים ביער – למלא במיתר",
+    "ציד בחורף; ג'יפים"
+   ],
+   "public_transport": {
+    "start": "מיתר",
+    "end": "הר עמשא – קו מקומי לערד/באר שבע (תדירות נמוכה)",
+    "approx": true
+   },
+   "variant": "official",
+   "tiuli_segment_number": 26,
+   "notes": null,
+   "sources": [
+    "https://www.tiuli.com/tracks/234"
+   ]
+  },
+  {
+   "id": 28,
+   "name_he": "הר עמשא – ערד (דרך תל ערד)",
+   "name_en": "Har Amasa – Arad (via Tel Arad)",
+   "start": {
+    "name_he": "הר עמשא",
+    "name_en": "Har Amasa",
+    "lat": 31.342,
+    "lon": 35.102,
+    "approx": true
+   },
+   "end": {
+    "name_he": "ערד – הכניסה לעיר / כיכר צומת ערד",
+    "name_en": "Arad – city entrance (Arad junction roundabout)",
+    "lat": 31.256,
+    "lon": 35.199,
+    "approx": true
+   },
+   "distance_km": 22,
+   "distance_km_approx": true,
+   "estimated_hours": 8,
+   "estimated_hours_approx": true,
+   "difficulty": "בינוני",
+   "total_ascent_m": null,
+   "total_descent_m": null,
+   "region": "צפון הנגב / ספר המדבר",
+   "region_en": "Northern Negev / desert fringe",
+   "water": {
+    "availability": "taps",
+    "points": [
+     "הר עמשא",
+     "גן לאומי תל ערד",
+     "ערד"
+    ],
+    "caching_needed": false
+   },
+   "overnight": {
+    "night_camp": "לינה בערד (אכסניות); חניון תל ערד",
+    "trail_angels": "ערד (קהילת מלאכי שביל פעילה; 'ארד הוסטל' לשביליסטים)",
+    "paid_lodging": [
+     "אכסניית אנ\"א ערד (בלאו)",
+     "מלונות בערד"
+    ],
+    "field_school": null
+   },
+   "highlights": [
+    "גן לאומי תל ערד – עיר כנענית ומצודה ישראלית",
+    "נוף הכניסה למדבר",
+    "ערד – נקודת ההצטיידות האחרונה לפני הנגב"
+   ],
+   "hazards_notes": [
+    "ערד היא נקודת החלוקה הלוגיסטית: מדרום לה מקורות המים נדירים – לתכנן הטמנות",
+    "חציית כביש 31"
+   ],
+   "public_transport": {
+    "start": "הר עמשא",
+    "end": "ערד – תחנה מרכזית: אגד 384/389 לבאר שבע, 421 לת\"א",
+    "approx": true
+   },
+   "variant": "official",
+   "tiuli_segment_number": 27,
+   "notes": null,
+   "sources": [
+    "https://www.tiuli.com/tracks/233"
+   ]
+  },
+  {
+   "id": 29,
+   "name_he": "ערד – חניון לילה ברכת צפירה ('שביל בורות המים')",
+   "name_en": "Arad – Brekhat Tzfira night camp ('Cisterns trail')",
+   "start": {
+    "name_he": "ערד",
+    "name_en": "Arad",
+    "lat": 31.256,
+    "lon": 35.213,
+    "approx": true
+   },
+   "end": {
+    "name_he": "חניון לילה ברכת צפירה (בקעת קנאים)",
+    "name_en": "Brekhat Tzfira night camp (Bik'at Kana'im)",
+    "lat": 31.262,
+    "lon": 35.318,
+    "approx": true
+   },
+   "distance_km": 16,
+   "distance_km_approx": true,
+   "estimated_hours": 6,
+   "estimated_hours_approx": true,
+   "difficulty": "קל-בינוני",
+   "total_ascent_m": null,
+   "total_descent_m": null,
+   "region": "מדבר יהודה",
+   "region_en": "Judean Desert",
+   "water": {
+    "availability": "none",
+    "points": [
+     "ערד בלבד"
+    ],
+    "caching_needed": true
+   },
+   "overnight": {
+    "night_camp": "חניון לילה ברכת צפירה (ללא מים)",
+    "trail_angels": "ערד",
+    "paid_lodging": [],
+    "field_school": null
+   },
+   "highlights": [
+    "תצפית מואב בערד",
+    "בורות מים עתיקים לאורך 'שביל בורות המים' (פרויקט עירוני של ערד)",
+    "בקעת קנאים"
+   ],
+   "hazards_notes": [
+    "אין מים – לשאת לפחות 4-5 ל' לאדם",
+    "חום קיצוני אפריל–אוקטובר",
+    "שיטפונות בוואדיות בחורף"
+   ],
+   "public_transport": {
+    "start": "ערד",
+    "end": "אין",
+    "approx": true
+   },
+   "variant": "official",
+   "tiuli_segment_number": "ים המלח 1",
+   "notes": "המקטע שייך לתוואי ים המלח–מדבר יהודה שנוסף רשמית ב-2019/2020 (5 מקטעים, ~90 ק\"מ מערד למכתש הקטן) במקום התוואי הישן דרך באר אפעה ומצד תמר (~40 ק\"מ). חלוקת המקטעים והקואורדינטות משוערות (לא אומתו מול מפה רשמית).",
+   "sources": [
+    "https://www.tiuli.com/articles/692/",
+    "https://www.inn.co.il/news/415350",
+    "https://deadsea.co.il/wp-content/uploads/2020/07/שביל-ישראל-מתארך.pdf"
+   ]
+  },
+  {
+   "id": 30,
+   "name_he": "ברכת צפירה – מצדה (מערב)",
+   "name_en": "Brekhat Tzfira – Masada (west)",
+   "start": {
+    "name_he": "חניון לילה ברכת צפירה",
+    "name_en": "Brekhat Tzfira night camp",
+    "lat": 31.262,
+    "lon": 35.318,
+    "approx": true
+   },
+   "end": {
+    "name_he": "מצדה – הכניסה המערבית / חניון לילה מצדה מערב",
+    "name_en": "Masada western entrance / Masada West night camp",
+    "lat": 31.313,
+    "lon": 35.345,
+    "approx": true
+   },
+   "distance_km": 14,
+   "distance_km_approx": true,
+   "estimated_hours": 6,
+   "estimated_hours_approx": true,
+   "difficulty": "בינוני",
+   "total_ascent_m": null,
+   "total_descent_m": null,
+   "region": "מדבר יהודה",
+   "region_en": "Judean Desert",
+   "water": {
+    "availability": "taps",
+    "points": [
+     "מצדה מערב (ברזים בחניון/בכניסה)"
+    ],
+    "caching_needed": false
+   },
+   "overnight": {
+    "night_camp": "חניון לילה מצדה מערב (רט\"ג, בתשלום)",
+    "trail_angels": "ערד",
+    "paid_lodging": [
+     "אכסניית אנ\"א מצדה (צד מזרחי)"
+    ],
+    "field_school": null
+   },
+   "highlights": [
+    "4 הק\"מ האחרונים עם השביל הכחול למצדה",
+    "הסוללה הרומית ומחנות המצור",
+    "תצפית על ים המלח ונחל צאלים",
+    "עליה אופציונלית למצדה"
+   ],
+   "hazards_notes": [
+    "חום",
+    "שעות פתיחה של גן לאומי מצדה"
+   ],
+   "public_transport": {
+    "start": "אין",
+    "end": "מצדה מערב – אין תחבורה סדירה (ערד 17 ק\"מ בכביש 3199)",
+    "approx": true
+   },
+   "variant": "official",
+   "tiuli_segment_number": "ים המלח 2",
+   "notes": "המקטע שייך לתוואי ים המלח–מדבר יהודה שנוסף רשמית ב-2019/2020 (5 מקטעים, ~90 ק\"מ מערד למכתש הקטן) במקום התוואי הישן דרך באר אפעה ומצד תמר (~40 ק\"מ). חלוקת המקטעים והקואורדינטות משוערות (לא אומתו מול מפה רשמית).",
+   "sources": [
+    "https://www.tiuli.com/articles/692/"
+   ]
+  },
+  {
+   "id": 31,
+   "name_he": "מצדה – עין בוקק",
+   "name_en": "Masada – Ein Bokek",
+   "start": {
+    "name_he": "מצדה (מערב)",
+    "name_en": "Masada (west)",
+    "lat": 31.313,
+    "lon": 35.345,
+    "approx": true
+   },
+   "end": {
+    "name_he": "עין בוקק (מלונות)",
+    "name_en": "Ein Bokek hotels",
+    "lat": 31.2,
+    "lon": 35.362,
+    "approx": true
+   },
+   "distance_km": 22,
+   "distance_km_approx": true,
+   "estimated_hours": 9,
+   "estimated_hours_approx": true,
+   "difficulty": "קשה",
+   "total_ascent_m": null,
+   "total_descent_m": null,
+   "region": "מדבר יהודה / ים המלח",
+   "region_en": "Judean Desert / Dead Sea",
+   "water": {
+    "availability": "taps",
+    "points": [
+     "מצדה",
+     "עין בוקק"
+    ],
+    "caching_needed": false
+   },
+   "overnight": {
+    "night_camp": "חוף ציבורי עין בוקק (לינת חוף); חניון לילה אין",
+    "trail_angels": "נווה זוהר, עין בוקק",
+    "paid_lodging": [
+     "מלונות עין בוקק",
+     "אכסניית אנ\"א מצדה"
+    ],
+    "field_school": null
+   },
+   "highlights": [
+    "מצוקי העתקים של ים המלח",
+    "נחל רחף / נחל בוקק",
+    "ים המלח – הנקודה הנמוכה בשביל (~-400 מ')",
+    "מעיין עין בוקק ומצד בוקק"
+   ],
+   "hazards_notes": [
+    "חום קיצוני רוב השנה – ללכת מוקדם",
+    "שיטפונות בחורף",
+    "בולענים בקרבת החוף – להישאר על הסימון"
+   ],
+   "public_transport": {
+    "start": "מצדה",
+    "end": "עין בוקק – אגד 384/386/421 (ערד/באר שבע/ת\"א/ירושלים)",
+    "approx": true
+   },
+   "variant": "official",
+   "tiuli_segment_number": "ים המלח 3",
+   "notes": "המקטע שייך לתוואי ים המלח–מדבר יהודה שנוסף רשמית ב-2019/2020 (5 מקטעים, ~90 ק\"מ מערד למכתש הקטן) במקום התוואי הישן דרך באר אפעה ומצד תמר (~40 ק\"מ). חלוקת המקטעים והקואורדינטות משוערות (לא אומתו מול מפה רשמית).",
+   "sources": [
+    "https://www.inn.co.il/news/415350"
+   ]
+  },
+  {
+   "id": 32,
+   "name_he": "עין בוקק – מצד זוהר – נחל פרצים – מעלה צורים (חניון לילה)",
+   "name_en": "Ein Bokek – Metzad Zohar – Nahal Peratzim – Ma'ale Tzurim (night camp)",
+   "start": {
+    "name_he": "עין בוקק",
+    "name_en": "Ein Bokek",
+    "lat": 31.2,
+    "lon": 35.362,
+    "approx": true
+   },
+   "end": {
+    "name_he": "חניון לילה באזור מעלה צורים / נחל פרס",
+    "name_en": "Night camp near Ma'ale Tzurim / Nahal Peres",
+    "lat": 31.06,
+    "lon": 35.32,
+    "approx": true
+   },
+   "distance_km": 20,
+   "distance_km_approx": true,
+   "estimated_hours": 8,
+   "estimated_hours_approx": true,
+   "difficulty": "קשה",
+   "total_ascent_m": null,
+   "total_descent_m": null,
+   "region": "מדבר יהודה / הר סדום",
+   "region_en": "Judean Desert / Mt. Sodom",
+   "water": {
+    "availability": "none",
+    "points": [
+     "עין בוקק / נווה זוהר בלבד"
+    ],
+    "caching_needed": true
+   },
+   "overnight": {
+    "night_camp": "חניון לילה (ללא מים) – מיקום משוער",
+    "trail_angels": "נווה זוהר",
+    "paid_lodging": [],
+    "field_school": null
+   },
+   "highlights": [
+    "מצד זוהר (מצודה רומית) ונחל זוהר",
+    "נחל פרצים – קניון חוואר לבן (מערת הקמח – הכניסה אסורה)",
+    "מעלה צורים",
+    "תצפיות להר סדום ולים המלח"
+   ],
+   "hazards_notes": [
+    "אין מים ליומיים – הטמנה/נשיאה",
+    "שיטפונות בנחל פרצים",
+    "חום"
+   ],
+   "public_transport": {
+    "start": "עין בוקק",
+    "end": "אין",
+    "approx": true
+   },
+   "variant": "official",
+   "tiuli_segment_number": "ים המלח 4",
+   "notes": "המקטע שייך לתוואי ים המלח–מדבר יהודה שנוסף רשמית ב-2019/2020 (5 מקטעים, ~90 ק\"מ מערד למכתש הקטן) במקום התוואי הישן דרך באר אפעה ומצד תמר (~40 ק\"מ). חלוקת המקטעים והקואורדינטות משוערות (לא אומתו מול מפה רשמית).",
+   "sources": [
+    "https://www.inn.co.il/news/415350"
+   ]
+  },
+  {
+   "id": 33,
+   "name_he": "מעלה צורים – נחל פרס – נחל צפית – חניון המכתש הקטן",
+   "name_en": "Ma'ale Tzurim – Nahal Peres – Nahal Tzafit – Makhtesh Katan night camp",
+   "start": {
+    "name_he": "חניון לילה מעלה צורים / נחל פרס",
+    "name_en": "Ma'ale Tzurim / Nahal Peres camp",
+    "lat": 31.06,
+    "lon": 35.32,
+    "approx": true
+   },
+   "end": {
+    "name_he": "חניון לילה המכתש הקטן",
+    "name_en": "Makhtesh Katan (Small Crater) night camp",
+    "lat": 30.947,
+    "lon": 35.17,
+    "approx": true
+   },
+   "distance_km": 20,
+   "distance_km_approx": true,
+   "estimated_hours": 8,
+   "estimated_hours_approx": true,
+   "difficulty": "בינוני-קשה",
+   "total_ascent_m": null,
+   "total_descent_m": null,
+   "region": "מדבר יהודה / צפון הנגב",
+   "region_en": "Judean Desert / N. Negev",
+   "water": {
+    "availability": "spring",
+    "points": [
+     "עין צפית (מעיין קטן, לא לשתייה ללא טיהור)"
+    ],
+    "caching_needed": true
+   },
+   "overnight": {
+    "night_camp": "חניון לילה המכתש הקטן (ללא מים)",
+    "trail_angels": "אין",
+    "paid_lodging": [],
+    "field_school": null
+   },
+   "highlights": [
+    "נחל פרס",
+    "קניון נחל צפית והמעיין",
+    "תצפית למכתש הקטן מעל מעלה חצרה"
+   ],
+   "hazards_notes": [
+    "שיטפונות בנחל צפית",
+    "אין מים",
+    "כאן מתאחד התוואי החדש עם התוואי הישן"
+   ],
+   "public_transport": {
+    "start": "אין",
+    "end": "אין (כביש 227 במרחק הליכה)",
+    "approx": true
+   },
+   "variant": "official",
+   "tiuli_segment_number": "ים המלח 5",
+   "notes": "המקטע שייך לתוואי ים המלח–מדבר יהודה שנוסף רשמית ב-2019/2020 (5 מקטעים, ~90 ק\"מ מערד למכתש הקטן) במקום התוואי הישן דרך באר אפעה ומצד תמר (~40 ק\"מ). חלוקת המקטעים והקואורדינטות משוערות (לא אומתו מול מפה רשמית).",
+   "sources": [
+    "https://www.inn.co.il/news/415350",
+    "https://www.tiuli.com/tracks/230"
+   ]
+  },
+  {
+   "id": "A1",
+   "name_he": "ערד – חניון באר אפעה (תוואי ישן)",
+   "name_en": "Arad – Be'er Efa night camp (old route)",
+   "start": {
+    "name_he": "צומת ערד",
+    "name_en": "Arad junction",
+    "lat": 31.256,
+    "lon": 35.199,
+    "approx": true
+   },
+   "end": {
+    "name_he": "חניון לילה באר אפעה",
+    "name_en": "Be'er Efa night camp",
+    "lat": 31.142,
+    "lon": 35.256,
+    "approx": true
+   },
+   "distance_km": 17,
+   "distance_km_approx": true,
+   "estimated_hours": 7,
+   "estimated_hours_approx": true,
+   "difficulty": "בינוני",
+   "total_ascent_m": null,
+   "total_descent_m": null,
+   "region": "צפון הנגב / מדבר יהודה",
+   "region_en": "N. Negev / Judean Desert",
+   "water": {
+    "availability": "none",
+    "points": [
+     "ערד בלבד (באר אפעה – מי באר לא לשתייה)"
+    ],
+    "caching_needed": true
+   },
+   "overnight": {
+    "night_camp": "חניון לילה באר אפעה",
+    "trail_angels": "ערד",
+    "paid_lodging": [],
+    "field_school": null
+   },
+   "highlights": [
+    "ראש זוהר – תצפית לים המלח",
+    "נחל קנפן",
+    "באר אפעה"
+   ],
+   "hazards_notes": [
+    "אין מים",
+    "טיולי: 10-12 שעות"
+   ],
+   "public_transport": {
+    "start": "ערד",
+    "end": "אין",
+    "approx": true
+   },
+   "variant": "old_route",
+   "tiuli_segment_number": 28,
+   "notes": "תוואי ישן (עד ~2020) שעדיין מופיע במדריכים רבים (טיולי, מהדורות סער 1-3) ובסימון שנותר בשטח. אינו התוואי הרשמי הנוכחי.",
+   "sources": [
+    "https://www.tiuli.com/tracks/232"
+   ]
+  },
+  {
+   "id": "A2",
+   "name_he": "באר אפעה – חניון מצד תמר (תוואי ישן)",
+   "name_en": "Be'er Efa – Metzad Tamar night camp (old route)",
+   "start": {
+    "name_he": "חניון באר אפעה",
+    "name_en": "Be'er Efa camp",
+    "lat": 31.142,
+    "lon": 35.256,
+    "approx": true
+   },
+   "end": {
+    "name_he": "חניון לילה מצד תמר (כביש 25)",
+    "name_en": "Metzad Tamar night camp (Route 25)",
+    "lat": 31.0555,
+    "lon": 35.264,
+    "approx": true
+   },
+   "distance_km": 21,
+   "distance_km_approx": true,
+   "estimated_hours": 8,
+   "estimated_hours_approx": true,
+   "difficulty": "קל",
+   "total_ascent_m": null,
+   "total_descent_m": null,
+   "region": "צפון הנגב",
+   "region_en": "N. Negev",
+   "water": {
+    "availability": "none",
+    "points": [],
+    "caching_needed": true
+   },
+   "overnight": {
+    "night_camp": "חניון לילה מצד תמר",
+    "trail_angels": "עין תמר / נאות הכיכר (רחוק)",
+    "paid_lodging": [],
+    "field_school": null
+   },
+   "highlights": [
+    "בקעת צפעים",
+    "מצד תמר – מצודה רומית"
+   ],
+   "hazards_notes": [
+    "אין מים ואין מזון",
+    "כביש 25 – נקודת הטמנה נוחה"
+   ],
+   "public_transport": {
+    "start": "אין",
+    "end": "כביש 25 – קווים דימונה–ים המלח (תדירות נמוכה)",
+    "approx": true
+   },
+   "variant": "old_route",
+   "tiuli_segment_number": 29,
+   "notes": "תוואי ישן (עד ~2020) שעדיין מופיע במדריכים רבים (טיולי, מהדורות סער 1-3) ובסימון שנותר בשטח. אינו התוואי הרשמי הנוכחי.",
+   "sources": [
+    "https://www.tiuli.com/tracks/231"
+   ]
+  },
+  {
+   "id": "A3",
+   "name_he": "מצד תמר – חניון המכתש הקטן (תוואי ישן)",
+   "name_en": "Metzad Tamar – Makhtesh Katan night camp (old route)",
+   "start": {
+    "name_he": "חניון מצד תמר",
+    "name_en": "Metzad Tamar camp",
+    "lat": 31.0555,
+    "lon": 35.264,
+    "approx": true
+   },
+   "end": {
+    "name_he": "חניון לילה המכתש הקטן",
+    "name_en": "Makhtesh Katan night camp",
+    "lat": 30.947,
+    "lon": 35.17,
+    "approx": true
+   },
+   "distance_km": 19,
+   "distance_km_approx": false,
+   "estimated_hours": 8,
+   "estimated_hours_approx": true,
+   "difficulty": "בינוני-קשה",
+   "total_ascent_m": null,
+   "total_descent_m": null,
+   "region": "צפון הנגב",
+   "region_en": "N. Negev",
+   "water": {
+    "availability": "spring",
+    "points": [
+     "עין צפית (טיהור)"
+    ],
+    "caching_needed": true
+   },
+   "overnight": {
+    "night_camp": "חניון לילה המכתש הקטן",
+    "trail_angels": "אין",
+    "paid_lodging": [],
+    "field_school": null
+   },
+   "highlights": [
+    "נחל צפית והמעיין",
+    "תצפית המכתש הקטן ממעלה חצרה"
+   ],
+   "hazards_notes": [
+    "שיטפונות",
+    "אין מים"
+   ],
+   "public_transport": {
+    "start": "כביש 25",
+    "end": "אין",
+    "approx": true
+   },
+   "variant": "old_route",
+   "tiuli_segment_number": 30,
+   "notes": "תוואי ישן (עד ~2020) שעדיין מופיע במדריכים רבים (טיולי, מהדורות סער 1-3) ובסימון שנותר בשטח. אינו התוואי הרשמי הנוכחי.",
+   "sources": [
+    "https://www.tiuli.com/tracks/230"
+   ]
+  },
+  {
+   "id": 34,
+   "name_he": "חניון המכתש הקטן – חניון מפעל אורון",
+   "name_en": "Makhtesh Katan night camp – Oron plant night camp",
+   "start": {
+    "name_he": "חניון לילה המכתש הקטן",
+    "name_en": "Makhtesh Katan night camp",
+    "lat": 30.947,
+    "lon": 35.17,
+    "approx": true
+   },
+   "end": {
+    "name_he": "חניון לילה מפעל אורון",
+    "name_en": "Oron (phosphate plant) night camp",
+    "lat": 30.908,
+    "lon": 35.016,
+    "approx": true
+   },
+   "distance_km": 20,
+   "distance_km_approx": false,
+   "estimated_hours": 8,
+   "estimated_hours_approx": true,
+   "difficulty": "בינוני",
+   "total_ascent_m": null,
+   "total_descent_m": null,
+   "region": "הר הנגב (המכתש הקטן – אורון)",
+   "region_en": "Negev highlands",
+   "water": {
+    "availability": "taps",
+    "points": [
+     "עין ירקעם (מעיין עונתי – טיהור)",
+     "ברז במפעל אורון / מפעלי צין"
+    ],
+    "caching_needed": false
+   },
+   "overnight": {
+    "night_camp": "חניון לילה מפעל אורון (ברז מים בסמוך)",
+    "trail_angels": "ירוחם (סטייה 15 ק\"מ) / דימונה",
+    "paid_lodging": [],
+    "field_school": null
+   },
+   "highlights": [
+    "קרקעית המכתש הקטן ויציאה במעלה",
+    "מצפה צפיר ומצד צפיר",
+    "עין ירקעם – בריכות",
+    "תצפית המכתש הגדול"
+   ],
+   "hazards_notes": [
+    "שיטפונות במכתש הקטן",
+    "אבק המפעל",
+    "טיולי: 12 שעות"
+   ],
+   "public_transport": {
+    "start": "אין",
+    "end": "אורון – כביש 206/227; תחבורה דלילה (ירוחם)",
+    "approx": true
+   },
+   "variant": "official",
+   "tiuli_segment_number": 31,
+   "notes": null,
+   "sources": [
+    "https://www.tiuli.com/tracks/229",
+    "https://neshamah.net/?p=1643"
+   ]
+  },
+  {
+   "id": 35,
+   "name_he": "מפעל אורון – חניון נחל מדור (הר כרבולת)",
+   "name_en": "Oron plant – Nahal Mador night camp (Mt. Karbolet ridge)",
+   "start": {
+    "name_he": "חניון מפעל אורון",
+    "name_en": "Oron night camp",
+    "lat": 30.908,
+    "lon": 35.016,
+    "approx": true
+   },
+   "end": {
+    "name_he": "חניון לילה נחל מדור",
+    "name_en": "Nahal Mador night camp",
+    "lat": 30.943,
+    "lon": 34.962,
+    "approx": true
+   },
+   "distance_km": 22,
+   "distance_km_approx": true,
+   "estimated_hours": 10,
+   "estimated_hours_approx": true,
+   "difficulty": "קשה מאוד",
+   "total_ascent_m": null,
+   "total_descent_m": null,
+   "region": "הר הנגב (רכס חתירה / המכתש הגדול)",
+   "region_en": "Negev highlands (Hatira ridge / Big Crater)",
+   "water": {
+    "availability": "none",
+    "points": [],
+    "caching_needed": true
+   },
+   "overnight": {
+    "night_camp": "חניון לילה נחל מדור (גישה ברכב 4x4; מקובל להטמין מים)",
+    "trail_angels": "ירוחם (הצטיידות דרך כביש 225)",
+    "paid_lodging": [],
+    "field_school": null
+   },
+   "highlights": [
+    "הר כרבולת – רכס 'כרבולת התרנגול' החד של קמר חתירה",
+    "תצפיות למכתש הגדול",
+    "נחל אפרן"
+   ],
+   "hazards_notes": [
+    "נחשב ליום הקשה ביותר בשביל: רכס חשוף וצר, טיפוס בידיים, ללא צל וללא מים",
+    "לא ברוח חזקה/שרב; לא לפחד גבהים",
+    "טיולי: 12 שעות"
+   ],
+   "public_transport": {
+    "start": "אורון",
+    "end": "אין",
+    "approx": true
+   },
+   "variant": "official",
+   "tiuli_segment_number": 32,
+   "notes": null,
+   "sources": [
+    "https://www.tiuli.com/tracks/228"
+   ]
+  },
+  {
+   "id": 36,
+   "name_he": "נחל מדור – חניון חוד עקב / עין עקב (נחל צין)",
+   "name_en": "Nahal Mador – Hod Akev / Ein Akev night camp (Nahal Zin)",
+   "start": {
+    "name_he": "חניון נחל מדור",
+    "name_en": "Nahal Mador camp",
+    "lat": 30.943,
+    "lon": 34.962,
+    "approx": true
+   },
+   "end": {
+    "name_he": "חניון לילה חוד עקב (עין עקב)",
+    "name_en": "Hod Akev / Ein Akev night camp",
+    "lat": 30.83,
+    "lon": 34.823,
+    "approx": true
+   },
+   "distance_km": 17,
+   "distance_km_approx": true,
+   "estimated_hours": 7,
+   "estimated_hours_approx": true,
+   "difficulty": "בינוני",
+   "total_ascent_m": null,
+   "total_descent_m": null,
+   "region": "הר הנגב (נחל צין)",
+   "region_en": "Negev highlands (Nahal Zin)",
+   "water": {
+    "availability": "spring",
+    "points": [
+     "עין עקב (בריכה טבעית – טיהור)"
+    ],
+    "caching_needed": true
+   },
+   "overnight": {
+    "night_camp": "חניון לילה חוד עקב (ללא מים; רבים מטמינים כאן)",
+    "trail_angels": "מדרשת בן-גוריון",
+    "paid_lodging": [],
+    "field_school": null
+   },
+   "highlights": [
+    "מצוקי נחל צין",
+    "חוד עקב (עלייה אופציונלית)",
+    "עין עקב – בריכת מעיין ומפל"
+   ],
+   "hazards_notes": [
+    "שיטפונות בנחל צין",
+    "טיולי: ~6 שעות"
+   ],
+   "public_transport": {
+    "start": "אין",
+    "end": "אין (מדרשת בן-גוריון במקטע הבא)",
+    "approx": true
+   },
+   "variant": "official",
+   "tiuli_segment_number": 33,
+   "notes": null,
+   "sources": [
+    "https://www.tiuli.com/tracks/227",
+    "https://www.tiuli.com/articles/515/"
+   ]
+  },
+  {
+   "id": 37,
+   "name_he": "חוד עקב – חניון נחל חווה (דרך מדרשת בן-גוריון ועין עבדת)",
+   "name_en": "Hod Akev – Nahal Hava night camp (via Midreshet Ben-Gurion & Ein Avdat)",
+   "start": {
+    "name_he": "חניון חוד עקב",
+    "name_en": "Hod Akev camp",
+    "lat": 30.83,
+    "lon": 34.823,
+    "approx": true
+   },
+   "end": {
+    "name_he": "חניון לילה נחל חווה (גבי חווה)",
+    "name_en": "Nahal Hava (Gevei Hava) night camp",
+    "lat": 30.705,
+    "lon": 34.77,
+    "approx": true
+   },
+   "distance_km": 28,
+   "distance_km_approx": true,
+   "estimated_hours": 11,
+   "estimated_hours_approx": true,
+   "difficulty": "קשה",
+   "total_ascent_m": null,
+   "total_descent_m": null,
+   "region": "הר הנגב (שדה בוקר – עבדת)",
+   "region_en": "Negev highlands (Sde Boker – Avdat)",
+   "water": {
+    "availability": "taps",
+    "points": [
+     "מדרשת בן-גוריון (הברז האחרון לפני מצפה רמון, ~45 ק\"מ)",
+     "גן לאומי עין עבדת (לא לשתייה מהמעיין)"
+    ],
+    "caching_needed": true
+   },
+   "overnight": {
+    "night_camp": "חניון לילה נחל חווה (ללא מים; 4x4)",
+    "trail_angels": "מדרשת בן-גוריון / שדה בוקר (קהילה פעילה)",
+    "paid_lodging": [
+     "בית ספר שדה שדה בוקר",
+     "אכסניות במדרשה"
+    ],
+    "field_school": "בית ספר שדה שדה בוקר"
+   },
+   "highlights": [
+    "עין שביב ונחל צין",
+    "קבר בן-גוריון ותצפית צין",
+    "קניון עין עבדת – מפלים, יעלים, עלייה בסולמות (חד-כיווני, בתשלום)",
+    "נחל חווארים – חוואר לבן"
+   ],
+   "hazards_notes": [
+    "סולמות עין עבדת – שעות פתיחה ומעבר חד-כיווני בלבד",
+    "אין מים מהמדרשה עד מצפה רמון – הטמנה בנחל חווה",
+    "ניתן לפצל ללינה במדרשה"
+   ],
+   "public_transport": {
+    "start": "אין",
+    "end": "מדרשת בן-גוריון – אגד 60/64/65 (באר שבע–מצפה רמון)",
+    "approx": true
+   },
+   "variant": "official",
+   "tiuli_segment_number": 34,
+   "notes": null,
+   "sources": [
+    "https://www.tiuli.com/tracks/226",
+    "https://neshamah.net/2014/05/israel-boker-makhtesh.html"
+   ]
+  },
+  {
+   "id": 38,
+   "name_he": "נחל חווה – מצפה רמון",
+   "name_en": "Nahal Hava – Mitzpe Ramon",
+   "start": {
+    "name_he": "חניון נחל חווה",
+    "name_en": "Nahal Hava camp",
+    "lat": 30.705,
+    "lon": 34.77,
+    "approx": true
+   },
+   "end": {
+    "name_he": "מצפה רמון (מרכז המבקרים)",
+    "name_en": "Mitzpe Ramon (visitor centre)",
+    "lat": 30.609,
+    "lon": 34.801,
+    "approx": true
+   },
+   "distance_km": 22.5,
+   "distance_km_approx": true,
+   "estimated_hours": 8,
+   "estimated_hours_approx": true,
+   "difficulty": "בינוני",
+   "total_ascent_m": null,
+   "total_descent_m": null,
+   "region": "הר הנגב",
+   "region_en": "Negev highlands",
+   "water": {
+    "availability": "none",
+    "points": [
+     "מצפה רמון בלבד"
+    ],
+    "caching_needed": false
+   },
+   "overnight": {
+    "night_camp": "לינה במצפה רמון",
+    "trail_angels": "מצפה רמון (קהילה גדולה)",
+    "paid_lodging": [
+     "בית ספר שדה הר הנגב",
+     "אכסניית אנ\"א מצפה רמון",
+     "Green Backpackers",
+     "מלון בראשית"
+    ],
+    "field_school": "בית ספר שדה הר הנגב"
+   },
+   "highlights": [
+    "נחל חווה – עליות וירידות קלות",
+    "תצפיות ראשונות למכתש רמון",
+    "מצפה רמון – מצפה הנוף למכתש"
+   ],
+   "hazards_notes": [
+    "אין מים לאורך כל היום",
+    "טיולי: 12 שעות"
+   ],
+   "public_transport": {
+    "start": "אין",
+    "end": "מצפה רמון – אגד 60/64/65 לבאר שבע, 392 לת\"א/אילת",
+    "approx": true
+   },
+   "variant": "official",
+   "tiuli_segment_number": 35,
+   "notes": null,
+   "sources": [
+    "https://www.tiuli.com/tracks/225"
+   ]
+  },
+  {
+   "id": 39,
+   "name_he": "מצפה רמון – חניון הר סהרונים (חציית מכתש רמון)",
+   "name_en": "Mitzpe Ramon – Har Saharonim night camp (crossing Makhtesh Ramon)",
+   "start": {
+    "name_he": "מצפה רמון",
+    "name_en": "Mitzpe Ramon",
+    "lat": 30.609,
+    "lon": 34.801,
+    "approx": true
+   },
+   "end": {
+    "name_he": "חניון לילה הר סהרונים",
+    "name_en": "Har Saharonim night camp",
+    "lat": 30.574,
+    "lon": 34.933,
+    "approx": true
+   },
+   "distance_km": 22.5,
+   "distance_km_approx": true,
+   "estimated_hours": 9,
+   "estimated_hours_approx": true,
+   "difficulty": "בינוני",
+   "total_ascent_m": null,
+   "total_descent_m": null,
+   "region": "הר הנגב (מכתש רמון)",
+   "region_en": "Negev highlands (Makhtesh Ramon)",
+   "water": {
+    "availability": "taps",
+    "points": [
+     "מצפה רמון",
+     "חאן בארות (ברז, בתשלום)",
+     "עין סהרונים (מליח)"
+    ],
+    "caching_needed": false
+   },
+   "overnight": {
+    "night_camp": "חניון לילה הר סהרונים (ללא מים); חלופות: חאן בארות (בתשלום, מים ומזון), חניון נחל גוונים",
+    "trail_angels": "מצפה רמון",
+    "paid_lodging": [
+     "חאן בארות"
+    ],
+    "field_school": null
+   },
+   "highlights": [
+    "ירידה במצוק המכתש",
+    "קיר האמוניטים",
+    "שן רמון",
+    "חאן סהרונים ועין סהרונים (דרך הבשמים)"
+   ],
+   "hazards_notes": [
+    "חום במכתש",
+    "חציית כביש 40",
+    "גבול שטח אש ממזרח"
+   ],
+   "public_transport": {
+    "start": "מצפה רמון",
+    "end": "אין (חאן בארות – דרך עפר מכביש 40)",
+    "approx": true
+   },
+   "variant": "official",
+   "tiuli_segment_number": 36,
+   "notes": null,
+   "sources": [
+    "https://www.tiuli.com/tracks/223",
+    "https://neshamah.net/?p=1689"
+   ]
+  },
+  {
+   "id": 40,
+   "name_he": "הר סהרונים – חניון גב חולית (מזרח רמון)",
+   "name_en": "Har Saharonim – Gev Holit night camp (East Ramon)",
+   "start": {
+    "name_he": "חניון הר סהרונים",
+    "name_en": "Har Saharonim camp",
+    "lat": 30.574,
+    "lon": 34.933,
+    "approx": true
+   },
+   "end": {
+    "name_he": "חניון לילה גב חולית (נחל נקרות)",
+    "name_en": "Gev Holit night camp (Nahal Nekarot)",
+    "lat": 30.58,
+    "lon": 35.06,
+    "approx": true
+   },
+   "distance_km": 18.5,
+   "distance_km_approx": false,
+   "estimated_hours": 8,
+   "estimated_hours_approx": true,
+   "difficulty": "קשה",
+   "total_ascent_m": null,
+   "total_descent_m": null,
+   "region": "הר הנגב (מזרח רמון / נחל נקרות)",
+   "region_en": "Negev highlands (East Ramon / Nahal Nekarot)",
+   "water": {
+    "availability": "none",
+    "points": [
+     "גב חולית – גב מים לא אמין; הטמנה שנתית של מלאך שביל (לוודא מראש)"
+    ],
+    "caching_needed": true
+   },
+   "overnight": {
+    "night_camp": "חניון לילה גב חולית (ללא מים; 4x4)",
+    "trail_angels": "אין",
+    "paid_lodging": [],
+    "field_school": null
+   },
+   "highlights": [
+    "נחל גלד ועין גלד (מפל יבש)",
+    "כרבולת החרירים – תצפית למכתש רמון",
+    "ירידה לנחל נקרות",
+    "גב חולית"
+   ],
+   "hazards_notes": [
+    "אין מים ליומיים ברצף",
+    "טיולי: 10 שעות",
+    "שטח אש בסביבה – להישאר על הסימון"
+   ],
+   "public_transport": {
+    "start": "אין",
+    "end": "אין",
+    "approx": true
+   },
+   "variant": "official",
+   "tiuli_segment_number": 37,
+   "notes": null,
+   "sources": [
+    "https://www.tiuli.com/tracks/222"
+   ]
+  },
+  {
+   "id": 41,
+   "name_he": "גב חולית – מושב צופר (נחל נקרות ופרסת נקרות)",
+   "name_en": "Gev Holit – Moshav Tzofar (Nahal Nekarot & Nekarot horseshoe)",
+   "start": {
+    "name_he": "חניון גב חולית",
+    "name_en": "Gev Holit camp",
+    "lat": 30.58,
+    "lon": 35.06,
+    "approx": true
+   },
+   "end": {
+    "name_he": "מושב צופר",
+    "name_en": "Moshav Tzofar",
+    "lat": 30.56,
+    "lon": 35.183,
+    "approx": true
+   },
+   "distance_km": 30,
+   "distance_km_approx": true,
+   "estimated_hours": 10,
+   "estimated_hours_approx": true,
+   "difficulty": "בינוני-קשה",
+   "total_ascent_m": null,
+   "total_descent_m": null,
+   "region": "הר הנגב / ערבה",
+   "region_en": "Negev highlands / Arava",
+   "water": {
+    "availability": "taps",
+    "points": [
+     "צופר (הברז הראשון מאז בארות/מצפה רמון)"
+    ],
+    "caching_needed": true
+   },
+   "overnight": {
+    "night_camp": "לינה בצופר (בתיאום); חניון לילה ספיר",
+    "trail_angels": "צופר, ספיר, פארן (קהילה פעילה)",
+    "paid_lodging": [
+     "צימרים בצופר/ספיר",
+     "בית ספר שדה חצבה (צפונה)"
+    ],
+    "field_school": "בית ספר שדה חצבה (בסמוך)"
+   },
+   "highlights": [
+    "קניון נחל נקרות",
+    "פרסת נקרות",
+    "מצפה הר יהב – נוף להרי אדום",
+    "מצד מועה (דרך הבשמים) ליד כביש 90"
+   ],
+   "hazards_notes": [
+    "יום ארוך; שיטפונות בנקרות",
+    "חום בערבה"
+   ],
+   "public_transport": {
+    "start": "אין",
+    "end": "צומת צופר (כביש 90) – אגד 392/397 אילת–באר שבע/ת\"א",
+    "approx": true
+   },
+   "variant": "official",
+   "tiuli_segment_number": 38,
+   "notes": null,
+   "sources": [
+    "https://www.tiuli.com/tracks/221",
+    "https://neshamah.net/?p=1713"
+   ]
+  },
+  {
+   "id": 42,
+   "name_he": "צופר – חניון נחל ברק (דרך מועה ונחל ברק)",
+   "name_en": "Tzofar – Nahal Barak night camp (via Moa & Nahal Barak)",
+   "start": {
+    "name_he": "מושב צופר",
+    "name_en": "Moshav Tzofar",
+    "lat": 30.56,
+    "lon": 35.183,
+    "approx": true
+   },
+   "end": {
+    "name_he": "חניון לילה נחל ברק (ליד כביש 40)",
+    "name_en": "Nahal Barak night camp (near Route 40)",
+    "lat": 30.42,
+    "lon": 35.08,
+    "approx": true
+   },
+   "distance_km": 26,
+   "distance_km_approx": false,
+   "estimated_hours": 10,
+   "estimated_hours_approx": true,
+   "difficulty": "בינוני-קשה",
+   "total_ascent_m": null,
+   "total_descent_m": null,
+   "region": "ערבה / דרום הנגב",
+   "region_en": "Arava / S. Negev",
+   "water": {
+    "availability": "none",
+    "points": [
+     "צופר",
+     "פארן (8 ק\"מ מכביש 90 – סטייה)"
+    ],
+    "caching_needed": true
+   },
+   "overnight": {
+    "night_camp": "חניון לילה נחל ברק (ללא מים; גישה לרכב רגיל)",
+    "trail_angels": "פארן, צופר",
+    "paid_lodging": [],
+    "field_school": null
+   },
+   "highlights": [
+    "מועה – תחנה נבטית בדרך הבשמים",
+    "שמורת נחל עשוש ושיטים",
+    "קניון נחל ברק – קטע הסולמות/ידיות הברזל המפורסם (לפי המדריכים, בעלייה מהערבה)",
+    "רובו דרכי 4x4 בוואדיות"
+   ],
+   "hazards_notes": [
+    "קטע סולמות וידיות בנחל ברק – תרמיל כבד מקשה; לא ברטוב",
+    "אין מים – הטמנה בחניון ברק (נגיש לרכב)",
+    "שיטפונות"
+   ],
+   "public_transport": {
+    "start": "צומת צופר (כביש 90)",
+    "end": "כביש 40 ליד נחל ברק – אין תחבורה ציבורית סדירה",
+    "approx": true
+   },
+   "variant": "official",
+   "tiuli_segment_number": 39,
+   "notes": "מיקום קטע הסולמות ביחס לחניון לא אומת סופית (טיולי מתאר את המקטע כ'קל' ואת הבא אחריו כ'מאתגר').",
+   "sources": [
+    "https://www.tiuli.com/tracks/220"
+   ]
+  },
+  {
+   "id": 43,
+   "name_he": "חניון נחל ברק – צומת ציחור",
+   "name_en": "Nahal Barak night camp – Tzihor junction",
+   "start": {
+    "name_he": "חניון נחל ברק",
+    "name_en": "Nahal Barak camp",
+    "lat": 30.42,
+    "lon": 35.08,
+    "approx": true
+   },
+   "end": {
+    "name_he": "חניון לילה ליד צומת ציחור (~2 ק\"מ מערבית לצומת)",
+    "name_en": "Night camp near Tzihor junction (~2 km west)",
+    "lat": 30.33,
+    "lon": 35,
+    "approx": true
+   },
+   "distance_km": 28,
+   "distance_km_approx": true,
+   "estimated_hours": 10,
+   "estimated_hours_approx": true,
+   "difficulty": "קשה",
+   "total_ascent_m": null,
+   "total_descent_m": null,
+   "region": "דרום הנגב",
+   "region_en": "S. Negev",
+   "water": {
+    "availability": "none",
+    "points": [],
+    "caching_needed": true
+   },
+   "overnight": {
+    "night_camp": "חניון לילה ציחור (ללא מים)",
+    "trail_angels": "אין",
+    "paid_lodging": [],
+    "field_school": null
+   },
+   "highlights": [
+    "נחל ברק עליון – חציית כביש 40 אחרי כ-4.8 ק\"מ (סימון מתחדש ליד שיטה)",
+    "נופי דרום הנגב – נחל ציחור",
+    "הרי אדום באופק"
+   ],
+   "hazards_notes": [
+    "אין מים ואין צל",
+    "שטחי אימונים – להישאר על הסימון"
+   ],
+   "public_transport": {
+    "start": "אין",
+    "end": "צומת ציחור (כביש 40) – אין שירות סדיר",
+    "approx": true
+   },
+   "variant": "official",
+   "tiuli_segment_number": 40,
+   "notes": null,
+   "sources": [
+    "https://www.tiuli.com/tracks/219"
+   ]
+  },
+  {
+   "id": 44,
+   "name_he": "צומת ציחור – צומת שיזפון (נאות סמדר)",
+   "name_en": "Tzihor junction – Shizafon junction (Neot Smadar)",
+   "start": {
+    "name_he": "צומת ציחור",
+    "name_en": "Tzihor junction",
+    "lat": 30.33,
+    "lon": 35.018,
+    "approx": true
+   },
+   "end": {
+    "name_he": "צומת שיזפון",
+    "name_en": "Shizafon junction",
+    "lat": 30.126,
+    "lon": 35.018,
+    "approx": true
+   },
+   "distance_km": 26,
+   "distance_km_approx": true,
+   "estimated_hours": 8,
+   "estimated_hours_approx": true,
+   "difficulty": "קל",
+   "total_ascent_m": null,
+   "total_descent_m": null,
+   "region": "דרום הנגב",
+   "region_en": "S. Negev",
+   "water": {
+    "availability": "taps",
+    "points": [
+     "צומת שיזפון (פונדק נאות סמדר)"
+    ],
+    "caching_needed": true
+   },
+   "overnight": {
+    "night_camp": "לינת שטח ליד שיזפון; אירוח בקיבוץ נאות סמדר (בתיאום)",
+    "trail_angels": "נאות סמדר, שיטים (אשרם במדבר – סטייה)",
+    "paid_lodging": [
+     "אשרם במדבר (שיטים)",
+     "אירוח בנאות סמדר"
+    ],
+    "field_school": null
+   },
+   "highlights": [
+    "הליכה לאורך כביש 40 ובשטחי אימוני שריון",
+    "פונדק נאות סמדר בצומת שיזפון"
+   ],
+   "hazards_notes": [
+    "שטחי אש/אימונים של צה\"ל – לא לסטות מהסימון; ייתכנו הגבלות",
+    "יום מונוטוני; טיולי: 12 שעות",
+    "אין צל"
+   ],
+   "public_transport": {
+    "start": "צומת ציחור",
+    "end": "צומת שיזפון – אגד 392/397 (אילת–באר שבע)",
+    "approx": true
+   },
+   "variant": "official",
+   "tiuli_segment_number": 41,
+   "notes": null,
+   "sources": [
+    "https://www.tiuli.com/tracks/218"
+   ]
+  },
+  {
+   "id": 45,
+   "name_he": "צומת שיזפון – שחרות (חולית כסוי ומקדש הנמרים)",
+   "name_en": "Shizafon junction – Shaharut (Kasuy dune & Leopard temple)",
+   "start": {
+    "name_he": "צומת שיזפון",
+    "name_en": "Shizafon junction",
+    "lat": 30.126,
+    "lon": 35.018,
+    "approx": true
+   },
+   "end": {
+    "name_he": "שחרות",
+    "name_en": "Shaharut",
+    "lat": 29.917,
+    "lon": 35.017,
+    "approx": true
+   },
+   "distance_km": 23,
+   "distance_km_approx": false,
+   "estimated_hours": 8,
+   "estimated_hours_approx": true,
+   "difficulty": "קל-בינוני",
+   "total_ascent_m": null,
+   "total_descent_m": null,
+   "region": "דרום הנגב (בקעת עובדה)",
+   "region_en": "S. Negev (Uvda valley)",
+   "water": {
+    "availability": "taps",
+    "points": [
+     "שיזפון",
+     "שחרות"
+    ],
+    "caching_needed": false
+   },
+   "overnight": {
+    "night_camp": "לינת שטח ליד שחרות / חוות הגמלים",
+    "trail_angels": "שחרות (קהילה קטנה ומארחת)",
+    "paid_lodging": [
+     "צימרים וחוות גמלים בשחרות"
+    ],
+    "field_school": null
+   },
+   "highlights": [
+    "חולית כסוי – דיונת החול",
+    "בקעת עובדה",
+    "מקדש הנמרים (אתר פולחן פרהיסטורי)",
+    "תצפית מצוקי שחרות להרי אדום"
+   ],
+   "hazards_notes": [
+    "בסיס עובדה ושטחי אש בסביבה",
+    "חום"
+   ],
+   "public_transport": {
+    "start": "צומת שיזפון",
+    "end": "שחרות – אין שירות סדיר (צומת שחרות על כביש 12)",
+    "approx": true
+   },
+   "variant": "official",
+   "tiuli_segment_number": 42,
+   "notes": null,
+   "sources": [
+    "https://www.tiuli.com/tracks/217"
+   ]
+  },
+  {
+   "id": 46,
+   "name_he": "שחרות – חניון נחל מנגן",
+   "name_en": "Shaharut – Nahal Mangan night camp",
+   "start": {
+    "name_he": "שחרות",
+    "name_en": "Shaharut",
+    "lat": 29.917,
+    "lon": 35.017,
+    "approx": true
+   },
+   "end": {
+    "name_he": "חניון לילה נחל מנגן",
+    "name_en": "Nahal Mangan night camp",
+    "lat": 29.855,
+    "lon": 34.97,
+    "approx": true
+   },
+   "distance_km": 24,
+   "distance_km_approx": false,
+   "estimated_hours": 10,
+   "estimated_hours_approx": true,
+   "difficulty": "קשה",
+   "total_ascent_m": null,
+   "total_descent_m": null,
+   "region": "דרום הנגב / הרי אילת",
+   "region_en": "S. Negev / Eilat mountains",
+   "water": {
+    "availability": "none",
+    "points": [],
+    "caching_needed": true
+   },
+   "overnight": {
+    "night_camp": "חניון לילה נחל מנגן (ללא מים)",
+    "trail_angels": "אין",
+    "paid_lodging": [],
+    "field_school": null
+   },
+   "highlights": [
+    "בארות עתיקות (באר מילחן)",
+    "מאובנים",
+    "תצפיות לבקעת תמנע ולהרי אדום",
+    "ים סוף נראה באופק"
+   ],
+   "hazards_notes": [
+    "יום מדברי קשה; טיולי: 12 שעות",
+    "אין מים – הטמנה"
+   ],
+   "public_transport": {
+    "start": "שחרות",
+    "end": "אין",
+    "approx": true
+   },
+   "variant": "official",
+   "tiuli_segment_number": 43,
+   "notes": null,
+   "sources": [
+    "https://www.tiuli.com/tracks/216"
+   ]
+  },
+  {
+   "id": 47,
+   "name_he": "נחל מנגן – חניון נחל רחם/עתק (דרך פארק תמנע)",
+   "name_en": "Nahal Mangan – Nahal Raham/Atek night camp (through Timna Park)",
+   "start": {
+    "name_he": "חניון נחל מנגן",
+    "name_en": "Nahal Mangan camp",
+    "lat": 29.855,
+    "lon": 34.97,
+    "approx": true
+   },
+   "end": {
+    "name_he": "חניון לילה נחל רחם / עתק",
+    "name_en": "Nahal Raham / Atek night camp",
+    "lat": 29.71,
+    "lon": 34.915,
+    "approx": true
+   },
+   "distance_km": 16.5,
+   "distance_km_approx": false,
+   "estimated_hours": 7,
+   "estimated_hours_approx": true,
+   "difficulty": "בינוני",
+   "total_ascent_m": null,
+   "total_descent_m": null,
+   "region": "הרי אילת (תמנע)",
+   "region_en": "Eilat mountains (Timna)",
+   "water": {
+    "availability": "taps",
+    "points": [
+     "פארק תמנע (מים מליחים בכניסה + ג'ריקן מי שתייה; מסעדה באגם)"
+    ],
+    "caching_needed": true
+   },
+   "overnight": {
+    "night_camp": "חניון לילה נחל רחם/עתק (ללא מים); קמפינג בתשלום באגם תמנע",
+    "trail_angels": "אליפז, באר אורה",
+    "paid_lodging": [
+     "קמפינג תמנע",
+     "קיבוץ אליפז"
+    ],
+    "field_school": null
+   },
+   "highlights": [
+    "אגם תמנע (נחושתן)",
+    "מכרות הנחושת המצריים",
+    "עמודי שלמה ופטריית הסלע",
+    "הר תמנע"
+   ],
+   "hazards_notes": [
+    "דמי כניסה לפארק (~49 ש\"ח למבוגר) ושעות פתיחה",
+    "חום",
+    "טיולי: 8-10 שעות"
+   ],
+   "public_transport": {
+    "start": "אין",
+    "end": "אין (צומת תמנע כביש 90 – אגד 392/397)",
+    "approx": true
+   },
+   "variant": "official",
+   "tiuli_segment_number": 44,
+   "notes": null,
+   "sources": [
+    "https://www.tiuli.com/tracks/215"
+   ]
+  },
+  {
+   "id": 48,
+   "name_he": "נחל רחם/עתק – חניון הר יהורם (קניון שחורת, הר שלמה)",
+   "name_en": "Nahal Raham/Atek – Har Yehoram night camp (Shehoret canyon, Mt. Shlomo)",
+   "start": {
+    "name_he": "חניון נחל רחם / עתק",
+    "name_en": "Nahal Raham / Atek camp",
+    "lat": 29.71,
+    "lon": 34.915,
+    "approx": true
+   },
+   "end": {
+    "name_he": "חניון לילה הר יהורם",
+    "name_en": "Har Yehoram night camp",
+    "lat": 29.62,
+    "lon": 34.895,
+    "approx": true
+   },
+   "distance_km": 24.5,
+   "distance_km_approx": false,
+   "estimated_hours": 10,
+   "estimated_hours_approx": true,
+   "difficulty": "קשה",
+   "total_ascent_m": null,
+   "total_descent_m": null,
+   "region": "הרי אילת",
+   "region_en": "Eilat mountains",
+   "water": {
+    "availability": "none",
+    "points": [
+     "אין (עין נטפים – מעיין קבוע קטן, לא לשתייה ללא טיהור)"
+    ],
+    "caching_needed": true
+   },
+   "overnight": {
+    "night_camp": "חניון לילה הר יהורם (ללא מים); חלופה: חניון לילה קניון שחורת (נגיש לרכב)",
+    "trail_angels": "אילת",
+    "paid_lodging": [],
+    "field_school": null
+   },
+   "highlights": [
+    "נחל רחם וסלעי הגרניט הצבעוניים",
+    "קניון שחורת (עמוד קניון צר)",
+    "הר שלמה (705 מ') – עלייה עם ידיות ברזל; קיים מעקף דרך נחל שלמה",
+    "נווה מדבר ומעיינות קטנים"
+   ],
+   "hazards_notes": [
+    "טיפוס/ירידה תלולים עם ידיות ברזל בהר שלמה",
+    "טיולי: ~12 שעות",
+    "חום וחוסר מים"
+   ],
+   "public_transport": {
+    "start": "אין",
+    "end": "אין (כביש 12 במרחק)",
+    "approx": true
+   },
+   "variant": "official",
+   "tiuli_segment_number": 45,
+   "notes": null,
+   "sources": [
+    "https://www.tiuli.com/tracks/214",
+    "https://sites.google.com/site/israeltrailjournal/part1"
+   ]
+  },
+  {
+   "id": 49,
+   "name_he": "הר יהורם – אילת (עין נטפים, נחל גשרון, הר צפחות)",
+   "name_en": "Har Yehoram – Eilat (Ein Netafim, Nahal Gishron, Mt. Tzfahot)",
+   "start": {
+    "name_he": "חניון הר יהורם",
+    "name_en": "Har Yehoram camp",
+    "lat": 29.62,
+    "lon": 34.895,
+    "approx": true
+   },
+   "end": {
+    "name_he": "אילת – בית ספר שדה אילת / חוף אלמוג (סמוך למעבר טאבה)",
+    "name_en": "Eilat – Eilat Field School / Coral Beach (near Taba crossing)",
+    "lat": 29.503,
+    "lon": 34.917,
+    "approx": true
+   },
+   "distance_km": 14,
+   "distance_km_approx": false,
+   "estimated_hours": 8,
+   "estimated_hours_approx": true,
+   "difficulty": "קשה",
+   "total_ascent_m": null,
+   "total_descent_m": null,
+   "region": "הרי אילת",
+   "region_en": "Eilat mountains",
+   "water": {
+    "availability": "none",
+    "points": [
+     "אילת בלבד"
+    ],
+    "caching_needed": true
+   },
+   "overnight": {
+    "night_camp": "סיום השביל – לינה באילת",
+    "trail_angels": "אילת",
+    "paid_lodging": [
+     "בית ספר שדה אילת",
+     "אכסניית אנ\"א אילת",
+     "מלונות אילת"
+    ],
+    "field_school": "בית ספר שדה אילת"
+   },
+   "highlights": [
+    "עין נטפים – המעיין הקבוע היחיד בהרי אילת",
+    "הר יועש (כביש 12) – תצפית לארבע מדינות",
+    "נחל גשרון – קניון עם סולמות/ידיות",
+    "הר צפחות – תצפית על מפרץ אילת",
+    "סיום בבית ספר שדה אילת / הים האדום"
+   ],
+   "hazards_notes": [
+    "סולמות וירידות תלולות בנחל גשרון",
+    "קרבה לגבול מצרים – להישאר על הסימון",
+    "טיולי: 8-10 שעות"
+   ],
+   "public_transport": {
+    "start": "אין",
+    "end": "אילת – תחנה מרכזית (אגד 390/393/394/444/397), שדה תעופה רמון",
+    "approx": true
+   },
+   "variant": "official",
+   "tiuli_segment_number": 46,
+   "notes": null,
+   "sources": [
+    "https://www.tiuli.com/tracks/213",
+    "https://sites.google.com/site/israeltrailjournal/part1/day1"
+   ]
+  }
+ ]
+}
