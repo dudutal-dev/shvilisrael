@@ -180,8 +180,8 @@ function SeasonStrip({ month, days }) {
     <div>
       <div className="tiny muted mb">התאמת העונה לאורך המסע (לפי חודש יציאה):</div>
       {[['north', 'צפון'], ['center', 'מרכז'], ['negev', 'נגב']].map(([g, n]) => (
-        <div key={g} className="row mb" style={{ gap: 4 }}>
-          <span className="tiny" style={{ width: 36 }}>{n}</span>
+        <div key={g} className="month-row mb">
+          <span className="tiny" style={{ width: 36, flex: 'none' }}>{n}</span>
           {Array.from({ length: 12 }).map((_, i) => {
             const m = (month + i) % 12
             const lvl = MONTHS[g][m]

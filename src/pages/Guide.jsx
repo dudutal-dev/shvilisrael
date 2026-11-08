@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react'
+import { Fragment, useEffect, useMemo, useState } from 'react'
 import { useApp } from '../context.jsx'
 import { Acc, Alert, Section, Stat } from '../components/UI.jsx'
 import { Photo } from '../components/Photo.jsx'
@@ -70,9 +70,9 @@ function Seasons() {
       <Section title="מפת העונות" icon="sun">
         <div className="card">
           {[['north', 'צפון'], ['center', 'מרכז'], ['negev', 'נגב']].map(([g, n]) => (
-            <div key={g} className="row mb" style={{ gap: 4 }}>
-              <span className="small" style={{ width: 40 }}>{n}</span>
-              {(s.monthly_table || []).map((m) => <div key={m.month} className={`month-cell ${LEVEL_CLS[m.rec?.[g]] || ''}`} style={{ flex: 1 }} title={`${m.name_he}: ${LEVEL_HE[m.rec?.[g]]}`}>{HE_MONTHS_SHORT[m.month - 1]}</div>)}
+            <div key={g} className="month-row mb">
+              <span className="small" style={{ width: 40, flex: 'none' }}>{n}</span>
+              {(s.monthly_table || []).map((m) => <div key={m.month} className={`month-cell ${LEVEL_CLS[m.rec?.[g]] || ''}`} title={`${m.name_he}: ${LEVEL_HE[m.rec?.[g]]}`}>{HE_MONTHS_SHORT[m.month - 1]}</div>)}
             </div>
           ))}
           <div className="row tiny muted" style={{ gap: 10 }}><span><span className="month-cell m-ideal" style={{ display: 'inline-block', width: 12, height: 12 }} /> מצוין</span><span><span className="month-cell m-ok" style={{ display: 'inline-block', width: 12, height: 12 }} /> סביר</span><span><span className="month-cell m-hard" style={{ display: 'inline-block', width: 12, height: 12 }} /> קשה</span><span><span className="month-cell m-avoid" style={{ display: 'inline-block', width: 12, height: 12 }} /> להימנע</span></div>
@@ -82,9 +82,9 @@ function Seasons() {
         <div className="segmented mb" style={{ flexWrap: 'wrap' }}>{Object.entries(cols).map(([k, v]) => <button key={k} className={col === k ? 'active' : ''} onClick={() => setCol(k)}>{v}</button>)}</div>
         <div className="card table-wrap">
           <table className="table">
-            <thead><tr><th>חודש</th><th>מקס׳</th><th>מינ׳</th><th>גשם</th><th>אור</th><th>הערה</th></tr></thead>
+            <thead><tr><th>חודש</th><th>מקס׳</th><th>מינ׳</th><th>גשם</th><th>אור</th></tr></thead>
             <tbody>{(s.monthly_table || []).map((m) => (
-              <tr key={m.month}><td className="bold">{HE_MONTHS[m.month - 1]}</td><td>{m[col]?.hi}°</td><td>{m[col]?.lo}°</td><td>{m[col]?.rain_mm} מ"מ</td><td>{s.daylight_hours?.by_month?.[m.month]} ש׳</td><td className="tiny muted">{m.note_he}</td></tr>
+              <Fragment key={m.month}><tr><td className="bold">{HE_MONTHS[m.month - 1]}</td><td>{m[col]?.hi}°</td><td>{m[col]?.lo}°</td><td>{m[col]?.rain_mm} מ"מ</td><td>{s.daylight_hours?.by_month?.[m.month]} ש׳</td></tr><tr className="note-row"><td colSpan={5} className="tiny muted wrap">{m.note_he}</td></tr></Fragment>
             ))}</tbody>
           </table>
         </div>
@@ -295,7 +295,7 @@ function Transport() {
       <Alert kind="warn">{t.shabbat_he}</Alert>
       <Section title="נקודות הצטיידות (מצפון לדרום)" icon="flag">
         <p className="small muted mb">{r.note_he}</p>
-        <div className="card table-wrap"><table className="table"><thead><tr><th>קטע</th><th>יישובים / חנויות</th></tr></thead><tbody>{(r.points || []).map((x, i) => <tr key={i}><td className="bold">{x.segment_he}</td><td className="small">{x.places_he}</td></tr>)}</tbody></table></div>
+        <div className="card">{(r.points || []).map((x, i) => <div key={i} className="rs-row"><b>{x.segment_he}</b><div className="small muted">{x.places_he}</div></div>)}</div>
         <p className="small mt">{r.mail_drops_he}</p>
       </Section>
       <Section title="קצב ומשך">

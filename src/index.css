@@ -141,7 +141,7 @@ ul { margin: 0; padding-inline-start: 1.2em; }
 
 /* ---------- Cards / layout ---------- */
 .card {
-  overflow-wrap: anywhere; min-width: 0;
+  overflow-wrap: break-word; min-width: 0;
   background: var(--surface); border: 1px solid var(--border);
   border-radius: var(--radius); box-shadow: var(--shadow-sm);
   padding: 16px;
@@ -546,7 +546,7 @@ mark.kw { background: color-mix(in srgb, var(--primary) 18%, transparent); color
 .src-list { padding-inline-start: 18px; margin-top: 4px; display: flex; flex-direction: column; gap: 4px; }
 .src-list a { overflow-wrap: anywhere; }
 a { overflow-wrap: anywhere; }
-.page, .stack, .acc__body, .news, .alert { min-width: 0; overflow-wrap: anywhere; }
+.page, .stack, .acc__body, .news, .alert { min-width: 0; overflow-wrap: break-word; }
 
 /* ---------- points of interest ---------- */
 .poi-strip { display: flex; gap: 10px; overflow-x: auto; padding: 4px 2px 8px; scroll-snap-type: x mandatory; }
@@ -574,3 +574,20 @@ a { overflow-wrap: anywhere; }
 .em-row__name { min-width: 0; flex: 1; }
 .em-row__num { flex: none; white-space: nowrap; font-variant-numeric: tabular-nums; font-weight: 800; background: color-mix(in srgb, var(--red) 10%, var(--surface)); border-color: color-mix(in srgb, var(--red) 40%, var(--border)); }
 .btn { white-space: normal; }
+
+/* tables & compact cells never break inside words */
+.table th, .table td { white-space: nowrap; }
+.table td.wrap, .table th.wrap { white-space: normal; min-width: 200px; }
+.table-wrap { margin-inline: -4px; padding-inline: 4px; }
+.month-cell, .stat__value, .stat__label, .live b, .live span, .chip, .tag, .badge, .seg__km, .wx-day, .wx-station .t { white-space: nowrap; }
+.wx-station { grid-template-columns: 1fr auto auto auto; }
+.wx-station > span:first-child { white-space: normal; }
+.grid-3 .stat { padding: 8px 4px; }
+.stat__value { font-size: clamp(14px, 5vw, 20px); }
+
+.month-row { display: flex; flex-wrap: nowrap; align-items: center; gap: 3px; }
+.month-row .month-cell { flex: 1 1 0; min-width: 0; aspect-ratio: auto; height: 24px; font-size: 10px; padding: 0 1px; overflow: hidden; }
+.table td.wrap, .table th.wrap { min-width: 0; }
+.table tr.note-row td { border-bottom: 2px solid var(--border); padding-top: 0; }
+.rs-row { padding: 8px 0; border-bottom: 1px dashed var(--border); }
+.rs-row:last-child { border-bottom: 0; }
