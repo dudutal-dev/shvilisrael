@@ -30,9 +30,22 @@ export default defineConfig({
       },
       workbox: {
         globPatterns: ['**/*.{js,css,html,svg,png,woff2}'],
-        globIgnores: ['**/data/**'],
+        // index.html is NOT precached: navigations always try the network first (so a new deploy is picked
+        // up immediately and a stale shell can never point at assets that no longer exist) and fall back
+        // to the last good copy offline. Hashed assets stay precached for offline use.
+        globIgnores: ['**/data/**', '**/index.html'],
+        navigateFallback: null,
         maximumFileSizeToCacheInBytes: 6 * 1024 * 1024,
         runtimeCaching: [
+          {
+            urlPattern: ({ request }) => request.mode === 'navigate',
+            handler: 'NetworkFirst',
+            options: {
+              cacheName: 'app-shell', networkTimeoutSeconds: 4, expiration: { maxEntries: 4 }, cacheableResponse: { statuses: [200] },
+              // every in-scope navigation (any route / query) shares one cached shell
+              plugins: [{ cacheKeyWillBeUsed: async () => self.registration.scope }],
+            },
+          },
           {
             urlPattern: ({ url }) => url.pathname.endsWith('/data/updates.json'),
             handler: 'NetworkFirst',

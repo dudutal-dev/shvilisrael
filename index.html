@@ -32,8 +32,9 @@
           var boot = document.getElementById('boot');
           if (!boot) return;
           var msg = document.getElementById('boot-msg');
-          if (!sessionStorage.getItem(KEY)) {
-            sessionStorage.setItem(KEY, '1');
+          var tried = false; try { tried = !!sessionStorage.getItem(KEY); } catch (e) {}
+          if (!tried) {
+            try { sessionStorage.setItem(KEY, '1'); } catch (e) {}
             if (msg) msg.textContent = 'מרענן… · Refreshing…';
             var reload = function () { location.reload(); };
             Promise.all([
@@ -41,7 +42,7 @@
               window.caches ? caches.keys().then(function (ks) { return Promise.all(ks.filter(function (k) { return /precache/.test(k); }).map(function (k) { return caches.delete(k); })); }) : null
             ]).then(reload, reload);
           } else if (msg) {
-            msg.innerHTML = 'האפליקציה לא נטענה · The app did not load<br><button onclick="sessionStorage.removeItem(\'shvil:boot-recover\');location.reload()" style="margin-top:12px;padding:10px 18px;border-radius:999px;border:0;background:#f2994a;color:#111;font-weight:700;font-size:15px">נסו שוב · Try again</button>';
+            msg.innerHTML = 'האפליקציה לא נטענה · The app did not load<br><button onclick="try{sessionStorage.removeItem(\'shvil:boot-recover\')}catch(e){};location.reload()" style="margin-top:12px;padding:10px 18px;border-radius:999px;border:0;background:#f2994a;color:#111;font-weight:700;font-size:15px">נסו שוב · Try again</button>';
           }
         }, 8000);
       })();

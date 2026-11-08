@@ -19,6 +19,11 @@ jobs:
         with: { node-version: 22, cache: npm }
       - run: npm ci
       - run: npm run build
+      - name: Keep assets of recent deploys (devices with a cached app shell keep working)
+        uses: actions/checkout@v4
+        with: { ref: gh-pages, path: prev-pages }
+        continue-on-error: true
+      - run: node scripts/keep-old-assets.mjs prev-pages dist
       - name: Publish dist to gh-pages
         run: |
           touch dist/.nojekyll

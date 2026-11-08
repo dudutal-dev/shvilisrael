@@ -15,6 +15,7 @@ const updateSW = registerSW({
   onRegisteredSW(_url, reg) {
     if (!reg) return
     const check = () => { if (navigator.onLine) reg.update().catch(() => {}) }
+    check() // register() alone does not look for a new version – ask explicitly on every launch
     document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') check() })
     window.addEventListener('online', check)
     setInterval(check, 60 * 60 * 1000)
