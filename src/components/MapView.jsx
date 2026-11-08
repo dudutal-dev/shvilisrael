@@ -1,12 +1,9 @@
 import { useEffect, useRef } from 'react'
 import L from 'leaflet'
 import 'leaflet/dist/leaflet.css'
+import { BASE_LAYERS } from '../lib/layers.js'
 
-export const BASE_LAYERS = {
-  ihm: { name: 'מפת הטיולים של ישראל', url: 'https://israelhiking.osm.org.il/Hebrew/Tiles/{z}/{x}/{y}.png', attribution: '© <a href="https://israelhiking.osm.org.il">Israel Hiking Map</a>, © OpenStreetMap', maxZoom: 16 },
-  osm: { name: 'OpenStreetMap', url: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png', attribution: '© OpenStreetMap contributors', maxZoom: 19 },
-  topo: { name: 'OpenTopoMap', url: 'https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', attribution: '© OpenTopoMap (CC-BY-SA), © OpenStreetMap', maxZoom: 17 },
-}
+export { BASE_LAYERS }
 const ISRAEL_BOUNDS = [[29.45, 34.2], [33.35, 35.95]]
 
 /**
@@ -37,7 +34,7 @@ export function MapView({ segments = [], lines = null, pois = [], user = null, f
     const m = map.current; if (!m) return
     const cfg = BASE_LAYERS[base] || BASE_LAYERS.osm
     if (layers.current.base) m.removeLayer(layers.current.base)
-    layers.current.base = L.tileLayer(cfg.url, { attribution: cfg.attribution, maxZoom: cfg.maxZoom, maxNativeZoom: cfg.maxZoom, crossOrigin: true }).addTo(m)
+    layers.current.base = L.tileLayer(cfg.url, { attribution: cfg.attribution, maxZoom: cfg.maxZoom, maxNativeZoom: cfg.maxZoom }).addTo(m)
     layers.current.base.bringToBack()
   }, [base])
 

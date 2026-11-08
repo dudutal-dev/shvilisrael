@@ -45,7 +45,7 @@ export default defineConfig({
             handler: 'CacheFirst',
             options: {
               cacheName: 'map-tiles',
-              expiration: { maxEntries: 4000, maxAgeSeconds: 60 * 60 * 24 * 60 },
+              expiration: { maxEntries: 40000, maxAgeSeconds: 60 * 60 * 24 * 365, purgeOnQuotaError: false },
               cacheableResponse: { statuses: [0, 200] },
             },
           },
@@ -54,7 +54,7 @@ export default defineConfig({
             handler: 'StaleWhileRevalidate',
             options: {
               cacheName: 'photos',
-              expiration: { maxEntries: 200, maxAgeSeconds: 60 * 60 * 24 * 90 },
+              expiration: { maxEntries: 1500, maxAgeSeconds: 60 * 60 * 24 * 365 },
               cacheableResponse: { statuses: [0, 200] },
             },
           },

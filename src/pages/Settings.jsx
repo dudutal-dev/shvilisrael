@@ -1,18 +1,36 @@
-import { useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useApp } from '../context.jsx'
 import { Icon } from '../components/Icons.jsx'
 import { exportAll, importAll, clearAll } from '../lib/storage.js'
 import { download } from '../lib/gpx.js'
 import { useToast } from '../hooks/useToast.jsx'
 import { BASE_LAYERS } from '../components/MapView.jsx'
+import { storageInfo, persistStorage, clearTiles } from '../lib/offline.js'
+import { idbGet, idbSet } from '../lib/overpass.js'
+import { getPhotos } from '../lib/photos.js'
 
 export default function Settings({ theme, setTheme }) {
-  const { prefs, setPrefs, meta } = useApp()
+  const { prefs, setPrefs, meta, journal } = useApp()
+  const [info, setInfo] = useState(null)
+  const photoIds = journal.flatMap((e) => e.photos || [])
+  const refresh = () => storageInfo().then(setInfo)
+  useEffect(() => { refresh() }, []) // eslint-disable-line react-hooks/exhaustive-deps
   const toast = useToast()
   const file = useRef()
   const onImport = (e) => {
     const f = e.target.files?.[0]; if (!f) return
-    f.text().then((t) => { importAll(JSON.parse(t)); toast('הנתונים יובאו – טוען מחדש'); setTimeout(() => location.reload(), 800) }).catch(() => toast('קובץ לא תקין'))
+    f.text().then(async (t) => {
+      const j = JSON.parse(t)
+      const data = j._shvilBackup ? j.data : j
+      importAll(data)
+      for (const p of j._photos || []) await idbSet(`photo:${p.id}`, p)
+      toast('הנתונים יובאו – טוען מחדש'); setTimeout(() => location.reload(), 800)
+    }).catch(() => toast('קובץ לא תקין'))
+  }
+  const exportFull = async () => {
+    const photos = await getPhotos(photoIds)
+    download(`shvil-backup-full-${new Date().toISOString().slice(0, 10)}.json`, JSON.stringify({ _shvilBackup: 2, data: exportAll(), _photos: photos }), 'application/json')
+    toast(`גיבוי מלא הורד (${photos.length} תמונות)`)
   }
   return (
     <div className="page stack">
@@ -26,10 +44,28 @@ export default function Settings({ theme, setTheme }) {
         </div>
       </div>
       <div className="card stack">
+        <div className="card__title">💾 נתונים שמורים במכשיר</div>
+        <p className="small muted">הכול נשמר במכשיר עצמו ונשאר בין פתיחות: התוכנית, היומן והתמונות, ההתקדמות, תוואי השביל ואריחי המפה שהורדתם. אין צורך להעלות או לשמור מחדש.</p>
+        {info && (
+          <div className="grid-3">
+            <div className="stat"><div className="stat__value">{journal.length}</div><div className="stat__label">רשומות יומן</div></div>
+            <div className="stat"><div className="stat__value">{photoIds.length}</div><div className="stat__label">תמונות</div></div>
+            <div className="stat"><div className="stat__value">{info.tiles.toLocaleString()}</div><div className="stat__label">אריחי מפה</div></div>
+            <div className="stat"><div className="stat__value">{info.trail ? '✓' : '–'}</div><div className="stat__label">תוואי השביל</div></div>
+            <div className="stat"><div className="stat__value">{info.usageMB != null ? `${info.usageMB}` : '–'}</div><div className="stat__label">MB בשימוש</div></div>
+            <div className="stat"><div className="stat__value">{info.persisted === true ? '🔒' : info.persisted === false ? '⚠' : '–'}</div><div className="stat__label">{info.persisted === true ? 'אחסון קבוע' : info.persisted === false ? 'לא קבוע' : 'אחסון'}</div></div>
+          </div>
+        )}
+        {info?.persisted === false && <div className="alert alert--warn small"><div>הדפדפן טרם אישר אחסון קבוע – במצב של מחסור במקום הוא עלול למחוק מטמונים. <button className="linkbtn" onClick={() => persistStorage().then(refresh)}>בקשו אחסון קבוע</button>. ב-iPhone: התקנה על מסך הבית מבטיחה שהנתונים לא יימחקו אוטומטית.</div></div>}
+        <p className="tiny muted">מפות לשימוש לא מקוון: בדף כל מקטע, בלשונית "מפה", יש כפתור להורדת אריחי המפה של המקטע. אריחים שנצפו במסך המפה נשמרים גם הם.</p>
+        <div className="row"><button className="btn btn--sm btn--ghost" onClick={refresh}>רענון</button><button className="btn btn--sm btn--ghost" style={{ color: 'var(--red)' }} onClick={async () => { if (confirm('למחוק את כל אריחי המפה שהורדו?')) { await clearTiles(); refresh() } }}>מחיקת אריחי מפה</button></div>
+      </div>
+      <div className="card stack">
         <div className="card__title">גיבוי ושחזור</div>
-        <p className="small muted">התוכנית, היומן, ההתקדמות והציוד נשמרים במכשיר בלבד. גבו לקובץ לפני החלפת טלפון.</p>
+        <p className="small muted">לפני החלפת טלפון או מחיקת האפליקציה – גבו לקובץ. "גיבוי מלא" כולל גם את התמונות (קובץ גדול יותר).</p>
         <div className="row">
-          <button className="btn" onClick={() => { download(`shvil-backup-${new Date().toISOString().slice(0, 10)}.json`, JSON.stringify(exportAll(), null, 2), 'application/json'); toast('גיבוי הורד') }}><Icon name="download" size={18} />ייצוא גיבוי</button>
+          <button className="btn btn--primary" onClick={exportFull}><Icon name="download" size={18} />גיבוי מלא (כולל תמונות)</button>
+          <button className="btn" onClick={() => { download(`shvil-backup-${new Date().toISOString().slice(0, 10)}.json`, JSON.stringify(exportAll(), null, 2), 'application/json'); toast('גיבוי הורד') }}><Icon name="download" size={18} />גיבוי ללא תמונות</button>
           <button className="btn" onClick={() => file.current.click()}>ייבוא גיבוי</button>
           <input ref={file} type="file" accept="application/json" hidden onChange={onImport} />
           <button className="btn btn--ghost" style={{ color: 'var(--red)' }} onClick={() => { if (confirm('למחוק את כל הנתונים השמורים במכשיר?')) { clearAll(); location.reload() } }}>איפוס מלא</button>

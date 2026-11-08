@@ -2,7 +2,8 @@ import { useMemo, useState } from 'react'
 import { useApp } from '../context.jsx'
 import { Photo } from '../components/Photo.jsx'
 import { Difficulty, Stat, Alert, Section, Acc } from '../components/UI.jsx'
-import { MapView } from '../components/MapView.jsx'
+import { MapView, BASE_LAYERS } from '../components/MapView.jsx'
+const BASE_LAYERS_NAME = (k) => BASE_LAYERS[k]?.name || ''
 import { Icon } from '../components/Icons.jsx'
 import { navLinks, formatCoord } from '../lib/geo.js'
 import { waypointsToGPX, download } from '../lib/gpx.js'
@@ -12,6 +13,7 @@ import spniAngels from '../data/spni/angels.json'
 import { gearFor } from '../lib/gear.js'
 import { poisForSegment } from '../lib/pois.js'
 import { PoiCards } from '../components/PoiCards.jsx'
+import { tileUrls, downloadTiles, segmentBounds } from '../lib/offline.js'
 import { WeatherNow, WeatherDaily, WeatherFlags } from '../components/Weather.jsx'
 import { useWeather } from '../hooks/useWeather.js'
 import { regionGroup } from '../lib/season.js'
@@ -24,6 +26,14 @@ export default function SegmentDetail({ id, navigate }) {
   const [tab, setTab] = useState('info')
   const [month, setMonth] = useState(new Date().getMonth())
   const [temp, setTemp] = useState(24)
+  const [dl, setDl] = useState(null)
+  const downloadMap = async () => {
+    const urls = tileUrls(segmentBounds(seg), [11, 12, 13, 14, 15], prefs.base)
+    setDl({ done: 0, failed: 0, skipped: 0, total: urls.length })
+    const r = await downloadTiles(urls, setDl)
+    setDl({ ...r, finished: true })
+    toast(r.failed ? `הורדו ${r.done + r.skipped} מתוך ${r.total} אריחים (${r.failed} נכשלו)` : `מפת המקטע שמורה במכשיר (${r.total} אריחים) ✓`)
+  }
   const [weight, setWeight] = useState(70)
   const gear = useMemo(() => gearFor(seg, month), [seg, month])
   const wx = useWeather(seg?.start?.lat, seg?.start?.lon, { days: 7 })
@@ -238,6 +248,12 @@ export default function SegmentDetail({ id, navigate }) {
             <MapView segments={[seg]} base={prefs.base} fitTo={fit} selectedId={seg.id} />
           </div>
           <p className="tiny muted">הקו המקווקו סכמטי בין נקודות הקצה. במסך המפה ניתן להוריד את התוואי המלא מ-OpenStreetMap לשימוש לא מקוון.</p>
+          <div className="card card--glow">
+            <div className="card__title">📥 מפת המקטע לשימוש לא מקוון</div>
+            <p className="small muted">מוריד את אריחי המפה של אזור המקטע (זום 11–15, {BASE_LAYERS_NAME(prefs.base)}) ושומר אותם במכשיר. אחרי ההורדה המפה תעבוד גם ללא קליטה.</p>
+            {dl && <div className="mt"><div className="progress"><div style={{ width: `${((dl.done + dl.skipped + dl.failed) / dl.total) * 100}%` }} /></div><div className="tiny muted mt">{dl.done + dl.skipped} / {dl.total} אריחים{dl.failed ? ` · ${dl.failed} נכשלו` : ''}{dl.finished ? ' · הושלם ✓' : ''}</div></div>}
+            <button className="btn btn--primary btn--sm mt" onClick={downloadMap} disabled={dl && !dl.finished}>{dl && !dl.finished ? 'מוריד…' : 'הורדת מפת המקטע'}</button>
+          </div>
           <button className="btn" onClick={() => navigate(`map?seg=${seg.id}`)}><Icon name="map" size={18} /> פתיחה במפה המלאה</button>
         </div>
       )}
