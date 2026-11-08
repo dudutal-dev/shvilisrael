@@ -543,3 +543,22 @@ mark.kw { background: color-mix(in srgb, var(--primary) 18%, transparent); color
 .src-list a { overflow-wrap: anywhere; }
 a { overflow-wrap: anywhere; }
 .page, .stack, .acc__body, .news, .alert { min-width: 0; overflow-wrap: anywhere; }
+
+/* ---------- points of interest ---------- */
+.poi-strip { display: flex; gap: 10px; overflow-x: auto; padding: 4px 2px 8px; scroll-snap-type: x mandatory; }
+.poi-strip .poi-card { flex: none; width: 150px; scroll-snap-align: start; }
+.poi-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+@media (min-width: 640px) { .poi-grid { grid-template-columns: repeat(3, 1fr); } }
+.poi-card { text-align: start; border: 1px solid var(--border); background: var(--surface); border-radius: 16px; overflow: hidden; padding: 0; cursor: pointer; box-shadow: var(--shadow-sm); transition: transform 0.12s; }
+.poi-card:hover { transform: translateY(-2px); }
+.poi-card__img { aspect-ratio: 4/3; background: var(--surface-2); display: flex; align-items: center; justify-content: center; font-size: 30px; }
+.poi-card__img img { width: 100%; height: 100%; object-fit: cover; }
+.poi-card__body { padding: 8px 10px; }
+.poi-card__title { font-weight: 700; font-size: 14px; line-height: 1.3; }
+.poi-hero { border-radius: 14px; overflow: hidden; max-height: 280px; background: var(--surface-2); }
+.poi-hero img { width: 100%; height: 100%; object-fit: cover; max-height: 280px; }
+.poi-text { line-height: 1.75; white-space: pre-line; }
+.poi-arrive { position: sticky; bottom: 76px; z-index: 6; display: grid; grid-template-columns: 56px 1fr auto; gap: 10px; align-items: center; padding: 10px; border-radius: 16px; background: var(--grad-sun); color: #fff; box-shadow: var(--shadow); border: 0; text-align: start; cursor: pointer; animation: up 0.3s ease; }
+.poi-arrive img { width: 56px; height: 56px; border-radius: 12px; object-fit: cover; }
+
+.dev-credit { display: flex; align-items: center; gap: 10px; padding: 10px 12px; border-radius: 12px; background: var(--surface-2); margin: 6px 0; }

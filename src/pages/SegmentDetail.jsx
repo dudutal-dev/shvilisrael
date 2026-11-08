@@ -10,6 +10,8 @@ import { useToast } from '../hooks/useToast.jsx'
 import lodging from '../data/lodging.json'
 import spniAngels from '../data/spni/angels.json'
 import { gearFor } from '../lib/gear.js'
+import { poisForSegment } from '../lib/pois.js'
+import { PoiCards } from '../components/PoiCards.jsx'
 import { WeatherNow, WeatherDaily, WeatherFlags } from '../components/Weather.jsx'
 import { useWeather } from '../hooks/useWeather.js'
 import { regionGroup } from '../lib/season.js'
@@ -105,7 +107,8 @@ export default function SegmentDetail({ id, navigate }) {
           )}
           <div className="card">
             <div className="card__title"><Icon name="star" />נקודות עניין</div>
-            <ul>{(seg.highlights || []).map((h, i) => <li key={i}>{h}</li>)}</ul>
+            {poisForSegment(seg.id).length > 0 && <><p className="tiny muted mb">לחצו על נקודה לקריאת ההיסטוריה והמהות שלה (ויקיפדיה), עם תמונות.</p><PoiCards pois={poisForSegment(seg.id)} layout="grid" /></>}
+            <ul className="mt">{(seg.highlights || []).map((h, i) => <li key={i}>{h}</li>)}</ul>
           </div>
           {(seg.hazards?.length > 0) && (
             <div className="card">

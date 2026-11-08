@@ -78,7 +78,7 @@ const segments = spni.map((s) => {
     spni: {
       url: s.url, map_pdf: s.map_pdf, map_pdfs: s.map_pdfs, guide_url: s.region_guide ? `https://www.teva.org.il/israel-national-trail/${GUIDE_URL[s.region_guide] || ''}` : null,
       season_he: s.season, character_he: s.character, shortcuts_he: s.shortcuts, parking_he: s.parking, transport_he: s.transport,
-      important_he: s.important || [], nearby_he: s.nearby || [], lodging_he: s.lodging || [], description_he: s.description || '', author_he: s.author, image: s.image, photo_credit_he: s.photo_credit,
+      pois_raw: s.pois || '', important_he: s.important || [], nearby_he: s.nearby || [], lodging_he: s.lodging || [], description_he: s.description || '', author_he: s.author, image: s.image, photo_credit_he: s.photo_credit,
     },
     steps_he: toSteps(s.description || ''),
     research_match: pool.map((r) => r.id),

@@ -15,6 +15,7 @@ import { useToast } from '../hooks/useToast.jsx'
 import lodging from '../data/lodging.json'
 import logistics from '../data/logistics.json'
 import { useWeather } from '../hooks/useWeather.js'
+import { allPois } from '../lib/pois.js'
 import { wmoText, heatRisk } from '../lib/weather.js'
 
 export default function MapPage({ query, navigate }) {
@@ -28,7 +29,7 @@ export default function MapPage({ query, navigate }) {
   const [status, setStatus] = useState('')
   const [layersOpen, setLayersOpen] = useState(false)
   const [panel, setPanel] = useState(true)
-  const [show, setShow] = useState({ camps: true, lodging: false, water: false, angels: false })
+  const [show, setShow] = useState({ camps: true, lodging: false, water: false, angels: false, pois: true })
   const [track, setTrack] = useState(null)
   const offTrail = useRef(false)
   const relationId = logistics?.navigation?.osm_relation_id
@@ -58,6 +59,7 @@ export default function MapPage({ query, navigate }) {
     if (show.camps) for (const c of lodging.night_camps || []) out.push({ lat: c.lat, lon: c.lon, icon: '⛺', title: c.name_he, html: `<b>⛺ ${c.name_he}</b><br/>${c.facilities_he || ''}<br/><span style="color:#666">${c.notes_he || ''}</span>` })
     if (show.lodging) for (const c of lodging.paid_lodging || []) if (c.lat) out.push({ lat: c.lat, lon: c.lon, icon: c.type === 'field_school' ? '🏫' : '🏨', title: c.name_he, html: `<b>${c.name_he}</b><br/>${c.type_he || ''} · ${c.price_he || ''}<br/>${c.url ? `<a href="${c.url}" target="_blank">אתר/הזמנה</a>` : ''}` })
     if (show.angels) for (const a of lodging.trail_angels?.notable_locations || []) if (a.lat) out.push({ lat: a.lat, lon: a.lon, icon: '😇', title: a.settlement_he, html: `<b>😇 ${a.settlement_he}</b><br/>${a.note || ''}<br/><a href="#/guide/angels">למדריך מלאכי השביל</a>` })
+    if (show.pois) for (const p of allPois()) if (p.lat != null) out.push({ lat: p.lat, lon: p.lon, icon: '🏛️', title: p.title, html: `<div style="max-width:220px">${p.image ? `<img src="${p.image}" style="width:100%;border-radius:8px;margin-bottom:6px" referrerpolicy="no-referrer"/>` : ''}<b>${p.title}</b><br/><span style="font-size:12px">${(p.extract || '').slice(0, 160)}…</span><br/><a href="${p.url}" target="_blank">לקריאה בוויקיפדיה</a></div>` })
     if (show.water) for (const w of logistics?.water?.points || []) if (w.lat) out.push({ lat: w.lat, lon: w.lon, icon: '💧', title: w.name_he, html: `<b>💧 ${w.name_he}</b><br/>${w.notes_he || ''}` })
     return out
   }, [show])
@@ -176,7 +178,7 @@ export default function MapPage({ query, navigate }) {
           </div>
           <div>
             <div className="bold mb">נקודות עניין</div>
-            {[['camps', '⛺ חניוני לילה'], ['angels', '😇 מלאכי שביל (יישובים)'], ['lodging', '🏨 לינה בתשלום / בתי ספר שדה'], ['water', '💧 נקודות מים']].map(([k, v]) => <div key={k}><label className="switch mt"><input type="checkbox" checked={show[k]} onChange={(e) => setShow({ ...show, [k]: e.target.checked })} /> {v}</label></div>)}
+            {[['camps', '⛺ חניוני לילה'], ['pois', '🏛️ נקודות עניין (ויקיפדיה)'], ['angels', '😇 מלאכי שביל (יישובים)'], ['lodging', '🏨 לינה בתשלום / בתי ספר שדה'], ['water', '💧 נקודות מים']].map(([k, v]) => <div key={k}><label className="switch mt"><input type="checkbox" checked={show[k]} onChange={(e) => setShow({ ...show, [k]: e.target.checked })} /> {v}</label></div>)}
           </div>
           <div>
             <div className="bold mb">תוואי השביל המלא (OpenStreetMap)</div>

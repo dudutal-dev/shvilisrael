@@ -38,6 +38,7 @@ export default function Settings({ theme, setTheme }) {
       <div className="card stack small">
         <div className="card__title">על האפליקציה</div>
         <p>אפליקציית תכנון וביצוע מסע בשביל ישראל. עובדת גם ללא אינטרנט לאחר הטעינה הראשונה (PWA) – הוסיפו למסך הבית.</p>
+        <div className="dev-credit"><span className="blaze" style={{ width: 12, height: 18 }}><span className="w" /><span className="b" /><span className="o" /></span><span><b>פיתוח: דודו טל</b><br /><span className="tiny muted">שביל ישראל – מתכנן המסע</span></span></div>
         <div><b>מקורות נתונים:</b>
           <ul className="src-list">{(meta.sources || []).map((src, i) => {
             const url = src.url || (typeof src === 'string' ? src : '')

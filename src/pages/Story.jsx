@@ -9,6 +9,8 @@ import { idbGet, TRAIL_KEY } from '../lib/overpass.js'
 import { buildIndex, locate } from '../lib/progress.js'
 import { sunTimes, fmtTime } from '../lib/sun.js'
 import { useToast } from '../hooks/useToast.jsx'
+import { poisForSegment, nearestPoi } from '../lib/pois.js'
+import { PoiCards, PoiModal } from '../components/PoiCards.jsx'
 
 const KEYWORDS = /(פונים|נפנה|ממשיכים|נמשיך|חוצים|נחצה|עולים|נעלה|יורדים|נרד|מטפסים|נטפס|הולכים|נלך|מגיעים|נגיע|יוצאים|נצא|שמאלה|ימינה|צומת|מפגש|שלט|סימון|מעבר|גשר|כביש|דרך עפר|ערוץ|מעלה|אוכף|פסגה|מעיין|חניון)/g
 
@@ -28,6 +30,14 @@ export default function Story({ id, navigate }) {
   const [autoRead, setAutoRead] = useLocalStorage('storyAutoRead', false)
   const [big, setBig] = useLocalStorage('storyBigText', false)
   const wake = useRef(null)
+  const pois = useMemo(() => (seg ? poisForSegment(seg.id) : []), [seg])
+  const [openPoi, setOpenPoi] = useState(null)
+  const announced = useRef(new Set())
+  const near = useMemo(() => (pos && pois.length ? nearestPoi(pos, pois, 0.3) : null), [pos, pois])
+  useEffect(() => {
+    if (!near || announced.current.has(near.poi.title)) return
+    announced.current.add(near.poi.title); navigator.vibrate?.([120, 60, 120]); toast(`📍 הגעתם ל${near.poi.title}`)
+  }, [near]) // eslint-disable-line react-hooks/exhaustive-deps
   const stepRef = useRef(null)
   useEffect(() => { idbGet(TRAIL_KEY).then((d) => d?.lines && setIndex(buildIndex(d.lines))) }, [])
   useEffect(() => { if (error) toast(error) }, [error]) // eslint-disable-line react-hooks/exhaustive-deps
@@ -113,6 +123,15 @@ export default function Story({ id, navigate }) {
           </div>
         )}
       </div>
+
+      {pois.length > 0 && (
+        <div>
+          <div className="row between mb"><span className="bold small">🏛️ נקודות עניין במקטע ({pois.length})</span><span className="tiny muted">לחצו לקרוא</span></div>
+          <PoiCards pois={pois} pos={pos} onOpen={setOpenPoi} />
+        </div>
+      )}
+      {near && <button className="poi-arrive" onClick={() => setOpenPoi(near.poi)}>{near.poi.image ? <img src={near.poi.image} alt="" referrerPolicy="no-referrer" /> : <span style={{ fontSize: 30 }}>🏛️</span>}<span><b>הגעתם ל{near.poi.title}</b><br /><span className="tiny">{formatKm(near.d)} · לחצו לקרוא את הסיפור</span></span><span style={{ fontSize: 22 }}>←</span></button>}
+      <PoiModal poi={openPoi} onClose={() => setOpenPoi(null)} pos={pos} />
 
       <div className="story__steps">
         {steps.map((t, i) => (
