@@ -103,7 +103,10 @@ ul { margin: 0; padding-inline-start: 1.2em; }
   color: #fff;
   border-bottom: 3px solid var(--orange);
 }
-.header__title { font-size: 18px; font-weight: 800; display: flex; align-items: center; gap: 10px; }
+.header__title { font-size: 18px; font-weight: 800; display: flex; align-items: center; gap: 10px; min-width: 0; flex: 1; }
+.header__title > span:not(.blaze):not(.chip) { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.header__actions { flex: none; }
+@media (max-width: 380px) { .iconbtn { width: 36px; height: 36px; } .header__title { font-size: 16px; } }
 .header__title .blaze { width: 18px; height: 26px; border-radius: 3px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 0 0 1px rgba(255,255,255,0.4); }
 .blaze span { flex: 1; display: block; }
 .blaze .w { background: #fff; } .blaze .b { background: #2563eb; } .blaze .o { background: var(--orange); }
@@ -245,8 +248,9 @@ ul { margin: 0; padding-inline-start: 1.2em; }
 }
 .textarea { min-height: 90px; resize: vertical; }
 .range { width: 100%; accent-color: var(--orange); }
-.segmented { display: inline-flex; background: var(--surface-2); border-radius: 12px; padding: 3px; gap: 3px; }
-.segmented button { border: 0; background: transparent; padding: 7px 12px; border-radius: 10px; font-weight: 600; color: var(--text-2); }
+.segmented { display: inline-flex; max-width: 100%; background: var(--surface-2); border-radius: 12px; padding: 3px; gap: 3px; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+.segmented::-webkit-scrollbar { display: none; }
+.segmented button { border: 0; background: transparent; padding: 7px 12px; border-radius: 10px; font-weight: 600; color: var(--text-2); white-space: nowrap; flex: none; }
 .segmented button.active { background: var(--surface); color: var(--text); box-shadow: var(--shadow-sm); }
 .switch { display: inline-flex; align-items: center; gap: 8px; cursor: pointer; }
 .switch input { width: 42px; height: 24px; appearance: none; background: var(--border); border-radius: 999px; position: relative; transition: 0.2s; margin: 0; }

@@ -30,6 +30,7 @@ function toSteps(desc = '') {
   }
   return steps
 }
+const fixSpaces = (t = '') => t.replace(/([.!?:])(?=[\u0590-\u05FF])/g, '$1 ').replace(/[ \t]{2,}/g, ' ')
 const segments = spni.map((s) => {
 
   const n = s.number
@@ -72,15 +73,15 @@ const segments = spni.map((s) => {
     highlights: uniq([...(s.pois ? s.pois.split(/,|·/).map((x) => x.trim().replace(/\.$/, '')) : []), ...pool.flatMap((r) => r.highlights || [])]).slice(0, 10),
     hazards, firing_zone: fz,
     transport: { start_he: s.transport || best.public_transport?.start || '', end_he: '' , spni_he: s.transport || '' },
-    description_he: (s.intro || '').split('\n').filter((l) => !/\(\d+\)\s*$/.test(l.trim()) && !/^למקטע/.test(l.trim())).join('\n').trim(),
+    description_he: fixSpaces((s.intro || '')).split('\n').filter((l) => !/\(\d+\)\s*$/.test(l.trim()) && !/^למקטע/.test(l.trim())).join('\n').trim(),
     photo: photos[n] || null,
     angels_region: angelsRegion,
     spni: {
       url: s.url, map_pdf: s.map_pdf, map_pdfs: s.map_pdfs, guide_url: s.region_guide ? `https://www.teva.org.il/israel-national-trail/${GUIDE_URL[s.region_guide] || ''}` : null,
-      season_he: s.season, character_he: s.character, shortcuts_he: s.shortcuts, parking_he: s.parking, transport_he: s.transport,
-      pois_raw: s.pois || '', important_he: s.important || [], nearby_he: s.nearby || [], lodging_he: s.lodging || [], description_he: s.description || '', author_he: s.author, image: s.image, photo_credit_he: s.photo_credit,
+      season_he: s.season, character_he: fixSpaces(s.character || ''), shortcuts_he: s.shortcuts, parking_he: s.parking, transport_he: s.transport,
+      pois_raw: s.pois || '', important_he: s.important || [], nearby_he: s.nearby || [], lodging_he: s.lodging || [], description_he: fixSpaces(s.description || ''), author_he: s.author, image: s.image, photo_credit_he: s.photo_credit,
     },
-    steps_he: toSteps(s.description || ''),
+    steps_he: toSteps(fixSpaces(s.description || '')),
     research_match: pool.map((r) => r.id),
   }
 })

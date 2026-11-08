@@ -85,7 +85,7 @@ export default function SegmentDetail({ id, navigate }) {
 
       {tab === 'info' && (
         <div className="stack">
-          {seg.description_he && <div className="card card--glow"><p style={{ lineHeight: 1.7 }}>{seg.description_he}</p></div>}
+          {seg.description_he && <div className="card card--glow"><p style={{ lineHeight: 1.7, whiteSpace: 'pre-line' }}>{seg.description_he}</p></div>}
           {seg.spni && (
             <div className="card">
               <div className="card__title"><span className="blaze" style={{ width: 12, height: 18 }}><span className="w" /><span className="b" /><span className="o" /></span>המדריך הרשמי – החברה להגנת הטבע</div>
