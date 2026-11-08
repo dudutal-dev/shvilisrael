@@ -142,9 +142,12 @@ export default function Navigate() {
 
       <div className="card" style={{ borderColor: 'var(--red)' }}>
         <div className="card__title" style={{ color: 'var(--red)' }}><Icon name="phone" />חירום</div>
-        <div className="grid-2">
+        <div className="em-list">
           {(em.length ? em : [{ name_he: 'משטרה', number: '100' }, { name_he: 'מד"א', number: '101' }, { name_he: 'כבאות', number: '102' }, { name_he: 'רשות הטבע והגנים', number: '*3639' }]).map((c) => (
-            <a key={c.number} className="btn" href={`tel:${c.number.replace('*', '%2A')}`}><b className="ltr">{c.number}</b> {c.name_he}</a>
+            <div key={c.number} className="em-row">
+              <div className="em-row__name"><b>{c.name_he}</b>{c.note_he && <div className="tiny muted">{c.note_he}</div>}</div>
+              <div className="stack" style={{ gap: 4, flex: 'none' }}>{c.number.split(/\s*\/\s*/).map((n) => <a key={n} className="btn btn--sm em-row__num" href={`tel:${n.replace('*', '%2A')}`} dir="ltr">📞 {n}</a>)}</div>
+            </div>
           ))}
         </div>
         <p className="tiny muted mt">בחירום: מסרו מיקום במעלות ודקות (למעלה), תיאור המקטע ומספר ההולכים. חייגו 100 גם כשאין קליטה לרשת שלכם – שיחות חירום עוברות בכל רשת.</p>
