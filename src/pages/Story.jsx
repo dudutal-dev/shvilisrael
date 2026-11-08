@@ -208,7 +208,7 @@ export default function Story({
         fontSize: 30
       }}>🏛️</span>}<span><b>{t("הגעתם ל")}{near.poi.title}</b><br /><span className="tiny">{formatKm(near.d)} {t("· לחצו לקרוא את הסיפור")}</span></span><span style={{
         fontSize: 22
-      }}>←</span></button>}
+      }}>{isEn() ? '→' : '←'}</span></button>}
       <PoiModal poi={openPoi} onClose={() => setOpenPoi(null)} pos={pos} />
 
       <div className="story__steps">

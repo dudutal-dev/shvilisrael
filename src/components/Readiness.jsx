@@ -3,7 +3,7 @@ import { Acc } from './UI.jsx';
 import { Icon } from './Icons.jsx';
 import { PREP_STEPS } from '../lib/readiness.js';
 import { useLocalStorage } from '../hooks/useLocalStorage.js';
-import { t } from '../i18n/index.js'
+import { t, isEn } from '../i18n/index.js'
 const LIGHT = {
   ok: ['🟢', 'תקין'],
   warn: ['🟡', 'שימו לב'],
@@ -64,7 +64,7 @@ export function Readiness({
             <button className="linkbtn tiny" onClick={e => {
           e.preventDefault();
           navigate(s.link);
-        }}>←</button>
+        }}>{isEn() ? '→' : '←'}</button>
           </label>)}
       </Acc>
       <p className="tiny muted mt">{t("הרמזור משקלל עונה, תחזית חיה (עד 16 יום), שיטפונות, חום, מים, שטחי אש, לינה, שבת/חגים ושעות אור. הוא עוזר להחליט – לא מחליף שיקול דעת ואזהרות רשמיות.")}</p>
