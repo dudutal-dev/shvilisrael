@@ -1242,5 +1242,9 @@
 "מקטעים שהושלמו": "Completed segments",
 "(בפעם הראשונה אשרו גישה למיקום)": "(allow location access the first time)",
 "📍 הפעל GPS – הצג את מיקומי על המפה": "📍 Turn on GPS – show me on the map",
-"עובד גם בלי תוכנית: תראו את הנקודה הכחולה, המרחק מהשביל והמקטע הקרוב.": "Works without a plan too: you'll see the blue dot, your distance from the trail and the nearest segment."
+"עובד גם בלי תוכנית: תראו את הנקודה הכחולה, המרחק מהשביל והמקטע הקרוב.": "Works without a plan too: you'll see the blue dot, your distance from the trail and the nearest segment.",
+"המיקום לא התקבל:": "Location not received:",
+"אייפון: הגדרות → פרטיות ואבטחה → שירותי מיקום → הדפדפן/האפליקציה → \"בזמן השימוש\". בחוץ ה-GPS מדויק יותר מאשר בתוך מבנה.": "iPhone: Settings → Privacy & Security → Location Services → the browser/app → \"While Using\". GPS is more accurate outdoors than inside a building.",
+"נסו שוב": "Try again",
+"בדיקת מיקום (GPS)": "Location test (GPS)"
 }

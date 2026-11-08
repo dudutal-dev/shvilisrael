@@ -4,6 +4,7 @@
 <style>body{font-family:system-ui,sans-serif;padding:16px;background:#0b1d33;color:#e8eef7;line-height:1.5}pre{direction:ltr;text-align:left;white-space:pre-wrap;background:#122a47;padding:10px;border-radius:8px;font-size:12px}.ok{color:#7ee787}.bad{color:#ff7b72}h1{font-size:20px}</style></head>
 <body><h1>אבחון טעינה · Load diagnostics</h1>
 <p>צלמו את המסך הזה ושלחו · Please screenshot this page.</p>
+<p><button id="geo" style="padding:10px 18px;border-radius:999px;border:0;background:#f2994a;font-weight:700;font-size:15px">📍 בדיקת מיקום · Location test</button> <span id="geoout" style="font-size:13px"></span></p>
 <pre id="out">running…</pre>
 <script>
 (function(){
@@ -29,6 +30,12 @@
     fetch('./index.html',{cache:'no-store'}).then(function(r){return r.text()}).then(function(html){ var m=html.match(/assets\/(index-[^"]+\.js)/); document.body.dataset.main=m?m[1]:''; document.body.appendChild(s); });
   }).catch(function(e){ log('index.html fetch failed: '+e.message); });
   window.__diagLog=log;
+  document.getElementById('geo').onclick=function(){ var o=document.getElementById('geoout'); o.textContent='מחפש… / searching…'; var t0=Date.now();
+    if(!navigator.geolocation){ o.textContent='✗ navigator.geolocation missing'; return; }
+    navigator.geolocation.getCurrentPosition(function(p){ o.innerHTML='<span class=ok>✓ '+p.coords.latitude.toFixed(5)+', '+p.coords.longitude.toFixed(5)+' ±'+Math.round(p.coords.accuracy)+'m in '+((Date.now()-t0)/1000).toFixed(1)+'s</span>'; log('GEO OK '+p.coords.latitude.toFixed(5)+','+p.coords.longitude.toFixed(5)+' ±'+Math.round(p.coords.accuracy)+'m'); },
+      function(e){ var why={1:'PERMISSION_DENIED (אין הרשאה)',2:'POSITION_UNAVAILABLE (אין קליטה)',3:'TIMEOUT (פסק זמן)'}[e.code]||e.code; o.innerHTML='<span class=bad>✗ '+why+' – '+e.message+'</span>'; log('GEO ERROR '+why+' '+e.message); },
+      {enableHighAccuracy:true,timeout:25000,maximumAge:0}); };
+  if(navigator.permissions&&navigator.permissions.query) navigator.permissions.query({name:'geolocation'}).then(function(r){ log('geolocation permission: '+r.state); }).catch(function(){});
   if('serviceWorker' in navigator) navigator.serviceWorker.getRegistrations().then(function(rs){ log('SW registrations: '+rs.length+(rs[0]&&rs[0].active?' (active)':'')); });
   if(window.caches) caches.keys().then(function(ks){ log('caches: '+ks.join(', ')); });
 })();
