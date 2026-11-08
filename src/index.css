@@ -657,3 +657,11 @@ a { overflow-wrap: anywhere; }
 [dir='ltr'] .hero__stats span { white-space: normal; }
 
 @media (max-width: 360px) { .nav__btn { font-size: 9.5px; } .nav__ico svg { width: 22px; height: 22px; } }
+
+/* Full-screen map: hide the shell, keep controls clear of the notch */
+body.map-full .header, body.map-full .nav { display: none !important; }
+body.map-full .content { padding: 0 !important; }
+body.map-full .map-ctl--tr { top: calc(12px + var(--safe-t, 0px)); }
+body.map-full .map-progress { top: calc(12px + var(--safe-t, 0px)); }
+body.map-full .map-panel { bottom: calc(12px + var(--safe-b, 0px)); }
+body.map-full .leaflet-control-zoom { margin-top: calc(12px + var(--safe-t, 0px)) !important; }

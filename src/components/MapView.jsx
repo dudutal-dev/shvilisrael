@@ -62,6 +62,9 @@ export function MapView({
     onZoom();
     map.current = m;
     setTimeout(() => m.invalidateSize(), 50);
+    // keep Leaflet in sync with layout changes (full-screen toggle, panel, rotation)
+    const ro = typeof ResizeObserver !== 'undefined' ? new ResizeObserver(() => m.invalidateSize()) : null;
+    ro?.observe(el.current);
     return () => {
       m.remove();
       map.current = null;
@@ -77,9 +80,13 @@ export function MapView({
     layers.current.base = L.tileLayer(cfg.url, {
       attribution: cfg.attribution,
       maxZoom: cfg.maxZoom,
-      maxNativeZoom: cfg.maxZoom
+      maxNativeZoom: cfg.maxZoom,
+      keepBuffer: 4
     }).addTo(m);
     layers.current.base.bringToBack();
+    // never zoom past the tiles' native resolution (blurry, pixelated tiles)
+    m.setMaxZoom(cfg.maxZoom);
+    if (m.getZoom() > cfg.maxZoom) m.setZoom(cfg.maxZoom);
   }, [base]);
 
   // schematic polyline through segment endpoints + numbered markers
@@ -221,7 +228,7 @@ export function MapView({
       icon,
       zIndexOffset: 1000
     }).addTo(g);
-    if (follow) m.setView([user.lat, user.lon], Math.max(m.getZoom(), 14), {
+    if (follow) m.setView([user.lat, user.lon], Math.min(Math.max(m.getZoom(), 15), m.getMaxZoom()), {
       animate: true
     });
   }, [user, follow]);

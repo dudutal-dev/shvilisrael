@@ -44,6 +44,13 @@ export default function MapPage({
   const [status, setStatus] = useState('');
   const [layersOpen, setLayersOpen] = useState(false);
   const [panel, setPanel] = useState(true);
+  const [full, setFull] = useState(false);
+  useEffect(() => {
+    document.body.classList.toggle('map-full', full);
+    const onKey = e => { if (e.key === 'Escape') setFull(false); };
+    window.addEventListener('keydown', onKey);
+    return () => { document.body.classList.remove('map-full'); window.removeEventListener('keydown', onKey); };
+  }, [full]);
   const [show, setShow] = useState({
     camps: true,
     lodging: false,
@@ -229,6 +236,7 @@ export default function MapPage({
       <div className="map-wrap">
         <MapView segments={segments} lines={lines} pois={pois} user={pos} follow={follow} base={prefs.base} fitTo={fitTo} selectedId={query.seg ? Number(query.seg) : null} overlays={overlays} />
         <div className="map-ctl map-ctl--tr">
+          <button className={`mapbtn ${full ? 'active' : ''}`} onClick={() => setFull(!full)} title={full ? t("יציאה ממסך מלא") : t("מסך מלא")} aria-label={full ? t("יציאה ממסך מלא") : t("מסך מלא")}>{full ? '✕' : '⛶'}</button>
           <button className={`mapbtn ${gps ? 'active' : ''}`} onClick={() => {
           setGps(!gps);
           setFollow(!gps);

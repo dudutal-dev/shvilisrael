@@ -1246,5 +1246,7 @@
 "המיקום לא התקבל:": "Location not received:",
 "אייפון: הגדרות → פרטיות ואבטחה → שירותי מיקום → הדפדפן/האפליקציה → \"בזמן השימוש\". בחוץ ה-GPS מדויק יותר מאשר בתוך מבנה.": "iPhone: Settings → Privacy & Security → Location Services → the browser/app → \"While Using\". GPS is more accurate outdoors than inside a building.",
 "נסו שוב": "Try again",
-"בדיקת מיקום (GPS)": "Location test (GPS)"
+"בדיקת מיקום (GPS)": "Location test (GPS)",
+"מסך מלא": "Full screen",
+"יציאה ממסך מלא": "Exit full screen"
 }
