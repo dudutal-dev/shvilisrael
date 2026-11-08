@@ -5,6 +5,8 @@ import { VitePWA } from 'vite-plugin-pwa'
 // https://vite.dev/config/
 export default defineConfig({
   base: './',
+  // Older iPhones (iOS 13–15) still get a working app: transpile newer syntax
+  build: { target: ['es2019', 'safari13', 'chrome80', 'firefox78'] },
   plugins: [
     react(),
     VitePWA({
