@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#0b1d33" />
+    <meta name="description" content="שביל ישראל – אפליקציה לתכנון וביצוע המסע: מקטעים, לינה, מים, עונות, מפה, מצפן ו-GPS" />
+    <link rel="icon" href="./icons/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./icons/icon-192.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <title>שביל ישראל – מתכנן המסע</title>
+    <script type="module" crossorigin src="./assets/index-BVZaojyW.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/rolldown-runtime-XKyaHtl9.js">
+    <link rel="modulepreload" crossorigin href="./assets/preload-helper-D97eqSzU.js">
+    <link rel="modulepreload" crossorigin href="./assets/context-V4CMtGMi.js">
+    <link rel="stylesheet" crossorigin href="./assets/index-C5M7_KzB.css">
+  <link rel="manifest" href="./manifest.webmanifest"></head>
+  <body>
+    <div id="root">
+      <div id="boot" style="position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;background:#0b1d33;color:#e8eef7;font-family:Heebo,system-ui,sans-serif">
+        <div style="display:flex;gap:4px"><span style="width:12px;height:38px;background:#fff;border-radius:3px"></span><span style="width:12px;height:38px;background:#2f80ed;border-radius:3px"></span><span style="width:12px;height:38px;background:#f2994a;border-radius:3px"></span></div>
+        <div style="font-size:18px;font-weight:700">שביל ישראל</div>
+        <div id="boot-msg" style="font-size:13px;opacity:.75">טוען… · Loading…</div>
+      </div>
+    </div>
+    <script>
+      // Error capture + boot guard. If the app has not rendered within 8s: show any captured error
+      // (so a crash is readable instead of a white screen); otherwise assume a stale service worker,
+      // unregister it, drop only the app-shell precache (never user data) and reload once.
+      (function () {
+        var errs = window.__shvilErrors = [];
+        window.addEventListener('error', function (e) { errs.push((e.message || 'error') + ' @ ' + String(e.filename || '').split('/').pop() + ':' + (e.lineno || 0)); });
+        window.addEventListener('unhandledrejection', function (e) { var r = e.reason; errs.push('promise: ' + (r && (r.message || r))); });
+        var KEY = 'shvil:boot-recover';
+        function overlay(html) {
+          var box = document.getElementById('boot');
+          if (!box) { box = document.createElement('div'); box.id = 'boot'; document.body.appendChild(box); }
+          box.setAttribute('style', 'position:fixed;inset:0;z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:20px;background:#0b1d33;color:#e8eef7;font-family:Heebo,system-ui,sans-serif;text-align:center');
+          box.innerHTML = html;
+        }
+        setTimeout(function () {
+          if (document.querySelector('#root .app')) return; // app is up
+          var ver = (document.querySelector('script[type=module]') || {}).src || '';
+          ver = ver.split('index-').pop().split('.js')[0];
+          var tried = false; try { tried = !!sessionStorage.getItem(KEY); } catch (e) {}
+          if (errs.length) {
+            overlay('<div style="font-size:18px;font-weight:700">האפליקציה לא נטענה · The app did not load</div>' +
+              '<div style="font-size:12px;opacity:.7">build ' + ver + ' · ' + navigator.userAgent.slice(0, 90) + '</div>' +
+              '<pre dir="ltr" style="white-space:pre-wrap;text-align:left;font-size:12px;background:#122a47;padding:10px;border-radius:8px;max-height:45vh;overflow:auto;max-width:100%">' + errs.slice(0, 6).join('\n\n').replace(/</g, '&lt;') + '</pre>' +
+              '<div><button onclick="try{sessionStorage.removeItem(\'shvil:boot-recover\')}catch(e){};location.reload()" style="padding:10px 18px;border-radius:999px;border:0;background:#f2994a;color:#111;font-weight:700;font-size:15px">נסו שוב · Try again</button></div>');
+            return;
+          }
+          if (!tried) {
+            try { sessionStorage.setItem(KEY, '1'); } catch (e) {}
+            overlay('<div style="font-size:14px;opacity:.8">מרענן… · Refreshing…</div>');
+            var reload = function () { location.reload(); };
+            Promise.all([
+              navigator.serviceWorker ? navigator.serviceWorker.getRegistrations().then(function (rs) { return Promise.all(rs.map(function (r) { return r.unregister(); })); }) : null,
+              window.caches ? caches.keys().then(function (ks) { return Promise.all(ks.filter(function (k) { return /precache|app-shell/.test(k); }).map(function (k) { return caches.delete(k); })); }) : null
+            ]).then(reload, reload);
+          } else {
+            overlay('<div style="font-size:18px;font-weight:700">האפליקציה לא נטענה · The app did not load</div><div style="font-size:12px;opacity:.7">build ' + ver + '</div>' +
+              '<button onclick="try{sessionStorage.removeItem(\'shvil:boot-recover\')}catch(e){};location.reload()" style="margin-top:12px;padding:10px 18px;border-radius:999px;border:0;background:#f2994a;color:#111;font-weight:700;font-size:15px">נסו שוב · Try again</button>');
+          }
+        }, 8000);
+      })();
+    </script>
+  </body>
+</html>
