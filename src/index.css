@@ -665,3 +665,24 @@ body.map-full .map-ctl--tr { top: calc(12px + var(--safe-t, 0px)); }
 body.map-full .map-progress { top: calc(12px + var(--safe-t, 0px)); }
 body.map-full .map-panel { bottom: calc(12px + var(--safe-b, 0px)); }
 body.map-full .leaflet-control-zoom { margin-top: calc(12px + var(--safe-t, 0px)) !important; }
+
+/* Very narrow effective viewports (Android page zoom / large display size): keep rows readable */
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+.wx-now__main { flex-wrap: wrap; }
+.wx-now__meta { flex: 1 1 130px; }
+@media (max-width: 340px) {
+  .wx-now__icon, .wx-now__temp { font-size: 32px; }
+  .quick { grid-template-columns: repeat(2, 1fr); }
+  .live-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 300px) {
+  .nav__btn { font-size: 9px; padding: 6px 0; }
+  .nav__ico svg { width: 20px; height: 20px; }
+  .grid-3 { grid-template-columns: repeat(2, 1fr); }
+  .hero h1 { font-size: 30px; }
+  .section-title { font-size: 20px; }
+}
+@media (max-width: 300px) {
+  .table { display: block; overflow-x: auto; max-width: 100%; }
+  b, strong { overflow-wrap: anywhere; }
+}
