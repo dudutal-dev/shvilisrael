@@ -16,7 +16,8 @@ const STATUS = {
   no: ['לא זמין', 'chip chip--red']
 };
 export default function Angels({
-  navigate
+  navigate,
+  embedded = false
 }) {
   const {
     angels,
@@ -47,7 +48,7 @@ export default function Angels({
   const [regionIdx, setRegionIdx] = useState(0);
   const official = (spni.angels || []).filter(a => (!regionIdx || a.region_index === regionIdx) && (!q || (a.settlement + a.offer + a.region).includes(q)));
   const locations = (ta.notable_locations || []).filter(l => !q || (l.settlement_he + l.note + l.region).includes(q));
-  return <div className="page stack">
+  return <div className={embedded ? 'stack' : 'page stack'}>
       <div className="hero hero--sm">
         <Photo photoKey="trail_angels" credit={false} style={{
         position: 'absolute',

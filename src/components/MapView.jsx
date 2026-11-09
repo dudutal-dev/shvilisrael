@@ -63,9 +63,10 @@ export function MapView({
     map.current = m;
     setTimeout(() => m.invalidateSize(), 50);
     // keep Leaflet in sync with layout changes (full-screen toggle, panel, rotation)
-    const ro = typeof ResizeObserver !== 'undefined' ? new ResizeObserver(() => m.invalidateSize()) : null;
+    const ro = typeof ResizeObserver !== 'undefined' ? new ResizeObserver(() => { try { if (map.current === m && m.getContainer()?.isConnected) m.invalidateSize(); } catch { /* map torn down */ } }) : null;
     ro?.observe(el.current);
     return () => {
+      ro?.disconnect();
       m.remove();
       map.current = null;
     };

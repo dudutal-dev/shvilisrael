@@ -58,7 +58,7 @@ export default function App() {
       page = <Navigate navigate={navigate} />;
       break;
     case 'guide':
-      page = sub === 'angels' ? <Angels navigate={navigate} /> : <Guide section={sub} navigate={navigate} query={route.query} />;
+      page = <Guide section={sub} navigate={navigate} query={route.query} />;
       break;
     case 'journal':
       page = <Journal navigate={navigate} />;

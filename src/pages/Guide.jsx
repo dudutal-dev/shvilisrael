@@ -3,6 +3,7 @@ import { useApp } from '../context.jsx';
 import { Acc, Alert, Section, Stat } from '../components/UI.jsx';
 import { Photo } from '../components/Photo.jsx';
 import { Icon } from '../components/Icons.jsx';
+import Angels from './Angels.jsx';
 import { CIcon } from '../components/ColorIcons.jsx';
 import { HE_MONTHS_SHORT, HE_MONTHS } from '../lib/dates.js';
 import { LEVEL_CLS, LEVEL_HE } from '../lib/season.js';
@@ -48,6 +49,7 @@ export default function Guide({
         whiteSpace: 'nowrap'
       }} onClick={() => navigate(id === 'weather' ? 'weather' : `guide/${id}`)}><CIcon name={ico} size={20} /> {t(name)}</button>)}
       </div>
+      {sec === 'angels' && <Angels navigate={navigate} embedded />}
       {sec === 'seasons' && <Seasons />}
       {sec === 'water' && <Water />}
       {sec === 'lodging' && <Lodging navigate={navigate} />}
