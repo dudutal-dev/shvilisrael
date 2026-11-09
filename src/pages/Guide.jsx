@@ -28,7 +28,7 @@ export default function Guide({
 }) {
   const sec = SECTIONS.find(s => s[0] === section) ? section : 'seasons';
   useEffect(() => {
-    if (sec === 'weather') navigate('weather');
+    if (sec === 'weather') navigate('weather', { replace: true }); // direct link: replace, so Back returns to where you came from
   }, [sec, navigate]);
   useEffect(() => {
     document.querySelector('.chip--ico.active')?.scrollIntoView({
@@ -46,7 +46,7 @@ export default function Guide({
     }}>
         {SECTIONS.map(([id, ico, name]) => <button key={id} className={`chip chip--btn chip--ico ${sec === id ? 'active' : ''}`} style={{
         whiteSpace: 'nowrap'
-      }} onClick={() => navigate(`guide/${id}`)}><CIcon name={ico} size={20} /> {t(name)}</button>)}
+      }} onClick={() => navigate(id === 'weather' ? 'weather' : `guide/${id}`)}><CIcon name={ico} size={20} /> {t(name)}</button>)}
       </div>
       {sec === 'seasons' && <Seasons />}
       {sec === 'water' && <Water />}

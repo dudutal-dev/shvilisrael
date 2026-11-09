@@ -14,7 +14,11 @@ export function useRouter() {
     window.addEventListener('hashchange', onHash)
     return () => window.removeEventListener('hashchange', onHash)
   }, [])
-  const navigate = useCallback((to) => { location.hash = to.startsWith('#') ? to : '#/' + to.replace(/^\//, '') }, [])
+  const navigate = useCallback((to, opts) => {
+    const h = to.startsWith('#') ? to : '#/' + to.replace(/^\//, '')
+    if (opts?.replace) { history.replaceState(null, '', h); window.dispatchEvent(new HashChangeEvent('hashchange')) } // no extra history entry (redirects)
+    else location.hash = h
+  }, [])
   const back = useCallback(() => { if (history.length > 1) history.back(); else navigate('home') }, [navigate])
   return { route, navigate, back }
 }
