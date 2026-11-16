@@ -1,15 +1,16 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Icon } from '../components/Icons.jsx';
 import { Alert } from '../components/UI.jsx';
 import { useGroup } from '../hooks/useGroup.js';
 import { useToast } from '../hooks/useToast.jsx';
-import { join, leave, newCode, cryptoOk, inviteText, pushSupported, pushActive, pushEnable, pushTest } from '../lib/group.js';
+import { join, leave, newCode, cryptoOk, inviteText, pushSupported, pushActive, pushEnable, pushTest, setShare, setAvatar } from '../lib/group.js';
 import { t } from '../i18n/index.js'
 const COLORS = ['#f26b1d', '#1d4ed8', '#2f855a', '#d69e2e', '#7c3aed', '#0891b2', '#c53030', '#be185d'];
 export const memberColor = id => COLORS[[...String(id)].reduce((s, c) => s + c.charCodeAt(0), 0) % COLORS.length];
 export function Avatar({
   id,
   name,
+  av,
   size = 38
 }) {
   return <span className="avatar" style={{
@@ -17,7 +18,7 @@ export function Avatar({
     width: size,
     height: size,
     fontSize: size * 0.38
-  }}>{String(name || '?').slice(0, 2)}</span>;
+  }}>{av ? <img src={av} alt="" /> : String(name || '?').slice(0, 2)}</span>;
 }
 export function ago(ts) {
   const m = Math.round((Date.now() - ts) / 60000);
@@ -34,6 +35,7 @@ export default function Group({
   const [busy, setBusy] = useState(false);
   const [sure, setSure] = useState(false);
   const [push, setPush] = useState(false);
+  const avFile = useRef();
   useEffect(() => {
     pushActive().then(setPush);
   }, [g.push, g.joined]);
@@ -97,6 +99,33 @@ export default function Group({
         </div>
       </div>
       <div className="card">
+        <div className="row" style={{
+        flexWrap: 'nowrap',
+        gap: 14
+      }}>
+          <Avatar id={g.id} name={g.name} av={g.av} size={64} />
+          <div><div className="bold">{t("התמונה שלי")}</div><div className="tiny muted">{t("חברי הקבוצה יראו אותה בצ'אט, במפה וברשימה")}</div>
+            <div className="row mt" style={{
+            gap: 8,
+            marginTop: 6
+          }}><button className="btn btn--sm" onClick={() => avFile.current.click()}>{t("בחירת תמונה")}</button>{g.av && <button className="linkbtn small" onClick={() => setAvatar(null)}>{t("הסרה")}</button>}</div></div>
+        </div>
+        <input ref={avFile} type="file" accept="image/*" hidden onChange={async e => {
+        const f = e.target.files[0];
+        e.target.value = '';
+        if (!f) return;
+        try {
+          toast((await setAvatar(f)) ? t("התמונה נשלחה לקבוצה ✓") : t("התמונה נשמרה ותישלח כשתהיה קליטה"));
+        } catch {
+          toast(t("לא הצלחנו לקרוא את התמונה"));
+        }
+      }} />
+        <label className="switch share-switch mt"><input type="checkbox" checked={!!g.share} onChange={e => {
+          setShare(e.target.checked);
+          toast(e.target.checked ? t("חברי הקבוצה רואים אתכם על המפה") : t("שיתוף המיקום הופסק"));
+        }} /><span><b>{t("לשתף את המיקום שלי עם הקבוצה")}</b><br /><span className="tiny muted">{t("מתעדכן כל כמה דקות, כשהאפליקציה פתוחה ויש קליטה")}</span></span></label>
+      </div>
+      <div className="card">
         <div className="card__title row between"><span>{t("חברי הקבוצה ({0})", ids.length)}</span><span className={`chip ${g.online ? 'chip--green' : ''}`}>{g.online ? t("מחוברים") : t("מתחבר…")}</span></div>
         <div className="stack" style={{
         gap: 10
@@ -105,7 +134,10 @@ export default function Group({
             m = g.members[id] || {};
           return <div key={id} className="row" style={{
             flexWrap: 'nowrap'
-          }}><Avatar id={id} name={me ? g.name : m.n} /><div><div className="bold">{me ? g.name : m.n} {me && <span className="muted small">{t("(אני)")}</span>}</div>{!me && m.seen && <div className="tiny muted">{t("נראו")} {ago(m.seen)}</div>}</div></div>;
+          }}><Avatar id={id} name={me ? g.name : m.n} av={me ? g.av : m.av} /><div style={{
+              flex: 1,
+              minWidth: 0
+            }}><div className="bold">{me ? g.name : m.n} {me && <span className="muted small">{t("(אני)")}</span>}</div>{!me && m.seen && <div className="tiny muted">{t("נראו")} {ago(m.seen)}{m.lt ? ` · 📍 ${ago(m.lt)}` : ''}</div>}{me && <div className="tiny muted">{g.share ? t("משתפים מיקום") : t("לא משתפים מיקום")}</div>}</div>{!me && m.lat && <button className="btn btn--sm" onClick={() => navigate(`map?lat=${m.lat}&lon=${m.lon}`)}>🗺️ {t("במפה")}</button>}</div>;
         })}</div>
       </div>
       <div className="card">

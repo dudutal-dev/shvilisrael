@@ -23,7 +23,8 @@ export function MapView({
   fitTo,
   interactive = true,
   direction = 'sobo',
-  overlays = []
+  overlays = [],
+  friends = []
 }) {
   const el = useRef(null);
   const map = useRef(null);
@@ -55,6 +56,7 @@ export function MapView({
       overlays: L.layerGroup().addTo(m),
       markers: L.layerGroup().addTo(m),
       pois: L.layerGroup().addTo(m),
+      friends: L.layerGroup().addTo(m),
       user: L.layerGroup().addTo(m)
     };
     const onZoom = () => el.current?.classList.toggle('zoomed-out', m.getZoom() < 10);
@@ -204,6 +206,39 @@ export function MapView({
       }).addTo(g).bindPopup(p.html || `<b>${p.title}</b>`);
     }
   }, [pois]);
+
+  // trail-group members who share their location: [{id, lat, lon, name, av, color, when}]
+  useEffect(() => {
+    const m = map.current;
+    if (!m) return;
+    const g = layers.current.friends;
+    g.clearLayers();
+    for (const f of friends) {
+      if (f.lat == null) continue;
+      const el = document.createElement('div');
+      el.className = 'friend-marker';
+      el.style.background = f.color || '#1d4ed8';
+      if (f.av) {
+        const img = document.createElement('img');
+        img.src = f.av;
+        img.alt = '';
+        el.appendChild(img);
+      } else el.textContent = String(f.name || '?').slice(0, 2);
+      const pop = document.createElement('div');
+      const b = document.createElement('b');
+      b.textContent = f.name || '';
+      pop.append(b, document.createElement('br'), f.when || '');
+      L.marker([f.lat, f.lon], {
+        icon: L.divIcon({
+          className: '',
+          html: el,
+          iconSize: [40, 40],
+          iconAnchor: [20, 20]
+        }),
+        zIndexOffset: 900
+      }).addTo(g).bindPopup(pop);
+    }
+  }, [friends]);
 
   // user location
   useEffect(() => {

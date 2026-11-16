@@ -60,7 +60,7 @@ export default function Chat({
       <div className="chat__list" ref={box}>
         {g.msgs.length === 0 && <p className="chat__sys">{t("עוד אין הודעות. כתבו משהו לקבוצה.")}</p>}
         {g.msgs.map(m => m.x === null ? <p key={m.id} className="chat__sys">{t("{0} הצטרף/ה לקבוצה", m.n)}</p> : <div key={m.id} className={`chat__row ${m.d === g.id ? 'mine' : ''}`}>
-            {m.d !== g.id && <Avatar id={m.d} name={m.n} size={30} />}
+            {m.d !== g.id && <Avatar id={m.d} name={m.n} av={g.members[m.d]?.av} size={30} />}
             <div className={`chat__msg ${m.pending ? 'pending' : ''}`}>
               {m.d !== g.id && <b style={{
             color: memberColor(m.d)
