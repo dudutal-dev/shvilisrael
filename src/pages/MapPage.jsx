@@ -19,6 +19,9 @@ const logistics = tdata(logisticsRaw);
 import { useWeather } from '../hooks/useWeather.js';
 import { allPois } from '../lib/pois.js';
 import { wmoText, heatRisk } from '../lib/weather.js';
+import { useGroup } from '../hooks/useGroup.js';
+import { reportPos } from '../lib/group.js';
+import { memberColor, ago } from './Group.jsx';
 import { t, tf, tdata } from '../i18n/index.js'
 export default function MapPage({
   query,
@@ -33,6 +36,17 @@ export default function MapPage({
     totalKm
   } = useApp();
   const toast = useToast();
+  const group = useGroup();
+  // members who shared a position in the last 12 hours (a day's walk apart is still useful on the trail)
+  const friends = useMemo(() => group.joined ? Object.entries(group.members).filter(([id, m]) => id !== group.id && m.lat && Date.now() - m.lt < 12 * 3600e3).map(([id, m]) => ({
+    id,
+    lat: m.lat,
+    lon: m.lon,
+    name: m.n,
+    av: m.av,
+    color: memberColor(id),
+    when: ago(m.lt)
+  })) : [], [group.joined, group.members, group.id]);
   const [gps, setGps] = useState(false);
   const [follow, setFollow] = useState(false);
   const [rec, setRec] = useState(false);
@@ -77,6 +91,10 @@ export default function MapPage({
     if (error) toast(error);
   }, [error]); // eslint-disable-line react-hooks/exhaustive-deps
   const index = useMemo(() => lines ? buildIndex(lines) : null, [lines]);
+
+  useEffect(() => {
+    if (pos) reportPos(pos); // feeds the group's live location when sharing is on
+  }, [pos]);
 
   // record breadcrumbs
   useEffect(() => {
@@ -234,7 +252,7 @@ export default function MapPage({
   const doneKmSegs = segments.filter(s => done.includes(s.id)).reduce((a, s) => a + s.distance_km, 0);
   return <div className="page page--full">
       <div className="map-wrap">
-        <MapView segments={segments} lines={lines} pois={pois} user={pos} follow={follow} base={prefs.base} fitTo={fitTo} selectedId={query.seg ? Number(query.seg) : null} overlays={overlays} />
+        <MapView segments={segments} lines={lines} pois={pois} user={pos} follow={follow} base={prefs.base} fitTo={fitTo} selectedId={query.seg ? Number(query.seg) : null} overlays={overlays} friends={friends} />
         <div className="map-ctl map-ctl--tr">
           <button className={`mapbtn ${full ? 'active' : ''}`} onClick={() => setFull(!full)} title={full ? t("יציאה ממסך מלא") : t("מסך מלא")} aria-label={full ? t("יציאה ממסך מלא") : t("מסך מלא")}>{full ? '✕' : '⛶'}</button>
           <button className={`mapbtn ${gps ? 'active' : ''}`} onClick={() => {

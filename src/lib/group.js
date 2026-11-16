@@ -12,7 +12,7 @@ export const PUSH_URL = 'https://athens-push.dudu-tal.workers.dev'
 const te = new TextEncoder(), td = new TextDecoder()
 const rid = () => Math.random().toString(36).slice(2, 10)
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms))
-const blank = () => ({ code: '', name: '', id: rid(), msgs: [], members: {}, last: '', sent: {}, push: false, lastOnline: 0 })
+const blank = () => ({ code: '', name: '', id: rid(), msgs: [], members: {}, last: '', sent: {}, push: false, lastOnline: 0, share: false, av: '' })
 
 let G = { ...blank(), ...(load('group', null) || {}) }
 let SJ = load('sharedJournal', []) // entries written by other members
@@ -137,6 +137,10 @@ async function handle(p, mid, att) {
   const mem = G.members[p.d] || (G.members[p.d] = {})
   mem.n = p.n; mem.seen = Math.max(mem.seen || 0, p.ts || 0)
   const fresh = Date.now() - p.ts < 5 * 60e3
+  if (p.t === 'loc' && p.lat && p.lon) { mem.lat = +p.lat; mem.lon = +p.lon; mem.lt = p.ts }
+  if (p.t === 'chat' && p.lat && p.lon) { mem.lat = +p.lat; mem.lon = +p.lon; mem.lt = p.ts }
+  if (p.t === 'av') { if (okAvatar(p.av)) mem.av = p.av; else delete mem.av }
+  if (p.t === 'hi' && !mine && G.av && fresh) setTimeout(() => send({ t: 'av', av: G.av }), 1000 + Math.random() * 3000) // a newcomer gets our picture
   if (p.t === 'chat' || p.t === 'hi') {
     if (G.msgs.some((x) => x.id === mid)) return
     const pend = p.c && G.msgs.find((x) => x.id === 'c' + p.c)
@@ -193,6 +197,38 @@ async function handle(p, mid, att) {
   emit()
 }
 
+// ---------- live location ----------
+// Sent only while the member has sharing switched on, and sparingly: after moving ~60 m (at most every
+// 90 s) or every 6 minutes. Works whenever the app is open; the live map feeds exact GPS fixes.
+let lastLoc = null
+const distM = (a, b) => { const R = 6371000, r = (x) => x * Math.PI / 180, dl = r(b.lat - a.lat), dn = r(b.lon - a.lon), h = Math.sin(dl / 2) ** 2 + Math.cos(r(a.lat)) * Math.cos(r(b.lat)) * Math.sin(dn / 2) ** 2; return 2 * R * Math.asin(Math.sqrt(h)) }
+export function reportPos(pos) {
+  if (!key || !G.share || !pos || pos.lat == null) return
+  const age = lastLoc ? Date.now() - lastLoc.t : Infinity, moved = lastLoc ? distM(lastLoc, pos) : Infinity
+  if ((moved > 60 && age > 90e3) || age > 6 * 60e3) { lastLoc = { lat: pos.lat, lon: pos.lon, t: Date.now() }; send({ t: 'loc', lat: +pos.lat.toFixed(5), lon: +pos.lon.toFixed(5) }) }
+}
+function pollPos() { // low-power fix for members who share but do not have the live map open
+  if (!key || !G.share || document.hidden || !navigator.geolocation) return
+  navigator.geolocation.getCurrentPosition((p) => reportPos({ lat: p.coords.latitude, lon: p.coords.longitude }), () => {}, { enableHighAccuracy: false, maximumAge: 120000, timeout: 20000 })
+}
+if (typeof document !== 'undefined') { setInterval(pollPos, 5 * 60e3); document.addEventListener('visibilitychange', () => { if (!document.hidden) setTimeout(pollPos, 3000) }) }
+export function setShare(v) { G.share = !!v; lastLoc = null; emit(); if (G.share) pollPos() }
+
+// ---------- profile picture ----------
+// 72 px JPEG so it fits in one encrypted message.
+const okAvatar = (s) => typeof s === 'string' && s.length < 4000 && /^data:image\/jpeg;base64,[A-Za-z0-9+/=]+$/.test(s)
+export async function setAvatar(file) {
+  let av = ''
+  if (file) {
+    const bmp = await createImageBitmap(file)
+    const s = Math.min(bmp.width, bmp.height), c = document.createElement('canvas'); c.width = c.height = 72
+    c.getContext('2d').drawImage(bmp, (bmp.width - s) / 2, (bmp.height - s) / 2, s, s, 0, 0, 72, 72)
+    for (const q of [0.72, 0.6, 0.5, 0.4, 0.3, 0.2]) { av = c.toDataURL('image/jpeg', q); if (av.length <= 2700) break }
+  }
+  G.av = av; emit()
+  return send({ t: 'av', av })
+}
+
 // ---------- public API ----------
 export const cryptoOk = () => typeof crypto !== 'undefined' && !!crypto.subtle
 export function newCode() {
@@ -201,17 +237,17 @@ export function newCode() {
 }
 export async function join(code, name) {
   const c = norm(code)
-  G = { ...blank(), id: G.id, name: String(name).trim().slice(0, 16), code: c.replace(/(.{4})(?=.)/g, '$1-') }
+  G = { ...blank(), id: G.id, av: G.av, name: String(name).trim().slice(0, 16), code: c.replace(/(.{4})(?=.)/g, '$1-') }
   SJ = []; unread = 0
   await derive(c); emit(); connect()
-  setTimeout(() => send({ t: 'hi' }).then(() => send({ t: 'jwant', since: 0 })), 800)
+  setTimeout(() => send({ t: 'hi' }).then(() => { if (G.av) send({ t: 'av', av: G.av }); send({ t: 'jwant', since: 0 }) }), 800)
 }
 export async function leave() {
   await send({ t: 'bye' })
   clearTimeout(retry); if (es) es.close(); if (ws) { ws.onclose = null; try { ws.close() } catch { /* ignore */ } }
   es = ws = null; key = null; online = false
   for (const e of SJ) await dropPhotos(e.photos)
-  SJ = []; G = { ...blank(), id: G.id, name: G.name }; unread = 0; emit()
+  SJ = []; G = { ...blank(), id: G.id, name: G.name, av: G.av }; unread = 0; lastLoc = null; emit()
 }
 /** Chat message. Shows immediately (pending) and is confirmed when the relay echoes it back. */
 export async function say(x, loc) {
@@ -253,4 +289,4 @@ async function pushRefresh() { // the browser may rotate the subscription: re-re
 }
 
 // ---------- boot ----------
-if (G.code && cryptoOk()) derive(G.code).then(() => { connect(); pushRefresh() }).catch(() => {})
+if (G.code && cryptoOk()) derive(G.code).then(() => { connect(); pushRefresh(); if (G.share) setTimeout(pollPos, 4000) }).catch(() => {})

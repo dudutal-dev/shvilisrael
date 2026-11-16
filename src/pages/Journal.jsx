@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, lazy, Suspense } from 'react';
 import { useApp } from '../context.jsx';
 import { Empty, Modal } from '../components/UI.jsx';
 import { Icon } from '../components/Icons.jsx';
@@ -11,6 +11,7 @@ import { buildJournalPdf, deliverPdf } from '../lib/journalPdf.js';
 import { useGroup } from '../hooks/useGroup.js';
 import { shareEntry, unshareEntry } from '../lib/group.js';
 import { t, tf } from '../i18n/index.js'
+const Slideshow = lazy(() => import('../components/Slideshow.jsx'));
 const MOODS = ['🤩', '😊', '😐', '😩', '🤕'];
 const WEATHER = ['☀️', '⛅', '🌧️', '💨', '🥵', '🥶'];
 export default function Journal({
@@ -33,6 +34,7 @@ export default function Journal({
   const [edit, setEdit] = useState(null);
   const [view, setView] = useState('list'); // list | gallery | stats
   const [lightbox, setLightbox] = useState(null);
+  const [show, setShow] = useState(false);
   const [tracks, setTracks] = useState({});
   const {
     pos
@@ -122,7 +124,7 @@ export default function Journal({
         <h2 className="section-title"><Icon name="journal" />{t("יומן המסע")}</h2>
         <div className="row" style={{
         gap: 6
-      }}><button className="btn btn--sm" onClick={exportText} title={t("שיתוף כטקסט")}><Icon name="share" size={16} /></button><button className="btn btn--sm" onClick={exportPdf} disabled={pdfBusy} title={t("יומן מעוצב (PDF)")}>{pdfBusy ? t("מכין…") : '📄 PDF'}</button><button className="btn btn--primary btn--sm" onClick={() => {
+      }}><button className="btn btn--sm" onClick={() => setShow(true)} title={t("מצגת המסע")}>🎞️</button><button className="btn btn--sm" onClick={exportText} title={t("שיתוף כטקסט")}><Icon name="share" size={16} /></button><button className="btn btn--sm" onClick={exportPdf} disabled={pdfBusy} title={t("יומן מעוצב (PDF)")}>{pdfBusy ? t("מכין…") : '📄 PDF'}</button><button className="btn btn--primary btn--sm" onClick={() => {
           setEdit(blank());
           setOpen(true);
         }}>{t("+ רשומה")}</button></div>
@@ -130,7 +132,7 @@ export default function Journal({
       <div className="segmented segmented--wide">{[['mine', t("📓 היומן שלי")], ['shared', t("👥 יומן משותף")]].map(([k, v]) => <button key={k} className={book === k ? 'active' : ''} onClick={() => setBook(k)}>{v}{k === 'shared' && group.shared.length > 0 && <span className="chip chip--blue" style={{
           marginInlineStart: 6
         }}>{group.shared.length + journal.filter(e => e.shared).length}</span>}</button>)}</div>
-      {book === 'shared' && <SharedBook group={group} journal={journal} segments={segments} navigate={navigate} onPhoto={setLightbox} onOpen={e => {
+      {book === 'shared' && <SharedBook group={group} journal={journal} segments={segments} navigate={navigate} onPhoto={setLightbox} onShow={() => setShow(true)} onOpen={e => {
       setEdit(e);
       setOpen(true);
     }} />}
@@ -150,6 +152,7 @@ export default function Journal({
           <div className="stack mt" style={{ gap: 4 }}>{Object.entries(tracks).sort(([a], [b]) => b.localeCompare(a)).map(([d, tr]) => <div key={d} className="row between small"><span>{fmtDate(d, { year: 'numeric' })} · {(tr.km || 0).toFixed(1)} {t("ק\"מ")} · {tr.points?.length || 0} {t("נקודות")}</span><button className="linkbtn tiny" onClick={() => { if (confirm(t("למחוק את הקלטת ה-GPS של {0}?", fmtDate(d)))) deleteTrack(d).then(setTracks); }}>🗑 {t("מחיקה")}</button></div>)}</div></details>}
         {pct >= 100 && <div className="alert alert--ok mt">{t("🏆 סיימתם את שביל ישראל! כל הכבוד.")}</div>}
         <div className="row mt" style={{ gap: 8, flexWrap: 'wrap' }}>
+          {journal.length > 0 && <button className="btn btn--sm btn--blue" onClick={() => setShow(true)}>{t("🎞️ מצגת המסע")}</button>}
           {journal.length > 0 && <button className="btn btn--sm btn--primary" onClick={exportPdf} disabled={pdfBusy}>{pdfBusy ? t("מכין…") : t("📄 הורדת יומן מעוצב (PDF)")}</button>}
           {done.length > 0 && <button className="btn btn--sm btn--ghost" onClick={() => navigate('certificate')}>{t("🏅 תעודת הוקרה להדפסה")}</button>}
         </div>
@@ -171,6 +174,7 @@ export default function Journal({
       <Modal open={open} onClose={() => setOpen(false)} title={t("רשומה ביומן")}>
         {edit && <EntryForm edit={edit} setEdit={setEdit} segments={segments} onSave={saveEntry} onDelete={() => remove(edit)} toast={toast} canShare={group.joined} />}
       </Modal>
+      {show && <Suspense fallback={null}><Slideshow initialScope={book === 'shared' && group.joined ? 'shared' : 'mine'} journal={journal} group={group} segments={segments} onClose={() => setShow(false)} /></Suspense>}
       {lightbox && <div className="lightbox" onClick={() => setLightbox(null)}><img src={lightbox} alt="" /></div>}
     </div>;
 }
@@ -180,7 +184,8 @@ function SharedBook({
   segments,
   navigate,
   onPhoto,
-  onOpen
+  onOpen,
+  onShow
 }) {
   if (!group.joined) return <>
       <Empty icon="👥" text={t("היומן המשותף נפתח כשמצטרפים לקבוצת מסע. כל רשומה שאחד מחברי הקבוצה משתף מופיעה אצל כולם, עם התמונות.")} />
@@ -196,10 +201,10 @@ function SharedBook({
   const all = [...mine, ...group.shared].sort((a, b) => String(b.date).localeCompare(String(a.date)) || (b.ts || b.id) - (a.ts || a.id));
   if (!all.length) return <Empty icon="👥" text={t("עוד אין רשומות משותפות. בכל רשומה ביומן אפשר לסמן \"לשתף ביומן המשותף\", והיא תופיע כאן אצל כל חברי הקבוצה.")} />;
   return <>
-      <p className="small muted center">{t("{0} רשומות · {1} חברי קבוצה", all.length, Object.keys({
-        [group.id]: 1,
-        ...group.members
-      }).length)}</p>
+      <div className="row between"><span className="small muted">{t("{0} רשומות · {1} חברי קבוצה", all.length, Object.keys({
+          [group.id]: 1,
+          ...group.members
+        }).length)}</span><button className="btn btn--sm btn--blue" onClick={onShow}>{t("🎞️ מצגת משותפת")}</button></div>
       {all.map(e => <Entry key={e.id} e={e} segments={segments} navigate={navigate} onPhoto={onPhoto} by={e.by} rev={group.rev} onOpen={e.own ? () => onOpen(journal.find(x => x.id === e.id)) : null} />)}
     </>;
 }
