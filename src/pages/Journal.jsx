@@ -8,11 +8,14 @@ import { useToast } from '../hooks/useToast.jsx';
 import { savePhoto, getPhotos, deletePhoto } from '../lib/photos.js';
 import { loadTracks, deleteTrack } from '../lib/track.js';
 import { buildJournalPdf, deliverPdf } from '../lib/journalPdf.js';
+import { useGroup } from '../hooks/useGroup.js';
+import { shareEntry, unshareEntry } from '../lib/group.js';
 import { t, tf } from '../i18n/index.js'
 const MOODS = ['🤩', '😊', '😐', '😩', '🤕'];
 const WEATHER = ['☀️', '⛅', '🌧️', '💨', '🥵', '🥶'];
 export default function Journal({
-  navigate
+  navigate,
+  query
 }) {
   const {
     journal,
@@ -24,6 +27,8 @@ export default function Journal({
     itinerary
   } = useApp();
   const toast = useToast();
+  const group = useGroup();
+  const [book, setBook] = useState(query?.tab === 'shared' ? 'shared' : 'mine'); // mine | shared
   const [open, setOpen] = useState(false);
   const [edit, setEdit] = useState(null);
   const [view, setView] = useState('list'); // list | gallery | stats
@@ -49,7 +54,8 @@ export default function Journal({
     photos: [],
     pos: null,
     sleep: '',
-    water: ''
+    water: '',
+    shared: book === 'shared' && group.joined
   });
   const saveEntry = () => {
     const e = {
@@ -59,15 +65,25 @@ export default function Journal({
         lon: pos.lon
       } : null)
     };
+    const prev = journal.find(x => x.id === e.id);
+    e.shared = !!e.shared && group.joined;
+    if (e.shared) e.sharedAt = Date.now();
     setJournal(j => {
       const i = j.findIndex(x => x.id === e.id);
       return i >= 0 ? j.map(x => x.id === e.id ? e : x) : [e, ...j];
     });
     setOpen(false);
-    toast(t("נשמר ביומן ✓"));
+    if (e.shared) {
+      toast(t("נשמר. משתף עם הקבוצה…"));
+      shareEntry(e).then(ok => toast(ok ? t("נשמר ושותף עם הקבוצה ✓") : t("נשמר במכשיר. אין קליטה לשיתוף – שמרו שוב כשתהיה"), 4000));
+    } else {
+      if (prev?.shared) unshareEntry(prev);
+      toast(t("נשמר ביומן ✓"));
+    }
   };
   const remove = async e => {
     if (!confirm(t("למחוק את הרשומה והתמונות שלה?"))) return;
+    if (e.shared) unshareEntry(e);
     for (const id of e.photos || []) await deletePhoto(id);
     setJournal(j => j.filter(x => x.id !== e.id));
     setOpen(false);
@@ -111,7 +127,14 @@ export default function Journal({
           setOpen(true);
         }}>{t("+ רשומה")}</button></div>
       </div>
-      <div className="card card--glow">
+      <div className="segmented segmented--wide">{[['mine', t("📓 היומן שלי")], ['shared', t("👥 יומן משותף")]].map(([k, v]) => <button key={k} className={book === k ? 'active' : ''} onClick={() => setBook(k)}>{v}{k === 'shared' && group.shared.length > 0 && <span className="chip chip--blue" style={{
+          marginInlineStart: 6
+        }}>{group.shared.length + journal.filter(e => e.shared).length}</span>}</button>)}</div>
+      {book === 'shared' && <SharedBook group={group} journal={journal} segments={segments} navigate={navigate} onPhoto={setLightbox} onOpen={e => {
+      setEdit(e);
+      setOpen(true);
+    }} />}
+      {book === 'mine' && <><div className="card card--glow">
         <div className="row between"><span className="bold">{t("ההתקדמות שלי")}</span><span className="bold" style={{
           color: 'var(--orange)'
         }}>{pct}%</span></div>
@@ -143,30 +166,66 @@ export default function Journal({
       {view === 'gallery' && <Gallery ids={allPhotoIds} onOpen={setLightbox} />}
 
       {view === 'stats' && <Stats journal={journal} segments={segments} tracks={tracks} />}
+      </>}
 
       <Modal open={open} onClose={() => setOpen(false)} title={t("רשומה ביומן")}>
-        {edit && <EntryForm edit={edit} setEdit={setEdit} segments={segments} onSave={saveEntry} onDelete={() => remove(edit)} toast={toast} />}
+        {edit && <EntryForm edit={edit} setEdit={setEdit} segments={segments} onSave={saveEntry} onDelete={() => remove(edit)} toast={toast} canShare={group.joined} />}
       </Modal>
       {lightbox && <div className="lightbox" onClick={() => setLightbox(null)}><img src={lightbox} alt="" /></div>}
     </div>;
+}
+function SharedBook({
+  group,
+  journal,
+  segments,
+  navigate,
+  onPhoto,
+  onOpen
+}) {
+  if (!group.joined) return <>
+      <Empty icon="👥" text={t("היומן המשותף נפתח כשמצטרפים לקבוצת מסע. כל רשומה שאחד מחברי הקבוצה משתף מופיעה אצל כולם, עם התמונות.")} />
+      <button className="btn btn--primary" style={{
+      alignSelf: 'center'
+    }} onClick={() => navigate('group')}>{t("לקבוצת המסע")}</button>
+    </>;
+  const mine = journal.filter(e => e.shared).map(e => ({
+    ...e,
+    by: group.name,
+    own: true
+  }));
+  const all = [...mine, ...group.shared].sort((a, b) => String(b.date).localeCompare(String(a.date)) || (b.ts || b.id) - (a.ts || a.id));
+  if (!all.length) return <Empty icon="👥" text={t("עוד אין רשומות משותפות. בכל רשומה ביומן אפשר לסמן \"לשתף ביומן המשותף\", והיא תופיע כאן אצל כל חברי הקבוצה.")} />;
+  return <>
+      <p className="small muted center">{t("{0} רשומות · {1} חברי קבוצה", all.length, Object.keys({
+        [group.id]: 1,
+        ...group.members
+      }).length)}</p>
+      {all.map(e => <Entry key={e.id} e={e} segments={segments} navigate={navigate} onPhoto={onPhoto} by={e.by} rev={group.rev} onOpen={e.own ? () => onOpen(journal.find(x => x.id === e.id)) : null} />)}
+    </>;
 }
 function Entry({
   e,
   segments,
   navigate,
   onOpen,
-  onPhoto
+  onPhoto,
+  by,
+  rev
 }) {
   const seg = segments.find(s => s.id === Number(e.segId));
   const [photos, setPhotos] = useState([]);
   useEffect(() => {
-    if (e.photos?.length) getPhotos(e.photos).then(setPhotos);
-  }, [e.photos]);
+    if (e.photos?.length) getPhotos(e.photos).then(setPhotos);else setPhotos([]);
+  }, [e.photos, rev]);
+  const missing = (e.photos?.length || 0) - photos.length;
   return <div className="card entry">
-      {photos.length > 0 && <div className="entry__photos">{photos.map(p => <img key={p.id} src={p.data} alt="" onClick={() => onPhoto(p.data)} />)}</div>}
-      <div onClick={onOpen} style={{
-      cursor: 'pointer'
+      {(photos.length > 0 || missing > 0) && <div className="entry__photos">{photos.map(p => <img key={p.id} src={p.data} alt="" onClick={() => onPhoto(p.data)} />)}{by && missing > 0 && <div className="photo-wait">{t("{0} תמונות בדרך…", missing)}</div>}</div>}
+      <div onClick={onOpen || undefined} style={{
+      cursor: onOpen ? 'pointer' : 'default'
     }}>
+        {by ? <div className="row tiny mb" style={{
+        gap: 6
+      }}><span className="chip chip--blue">✍️ {by}</span></div> : e.shared && <div className="row tiny mb"><span className="chip chip--blue">👥 {t("משותף")}</span></div>}
         <div className="row between"><span className="bold" style={{
           fontSize: 17
         }}>{e.mood} {e.weather || ''} {fmtDate(e.date, {
@@ -194,7 +253,8 @@ function EntryForm({
   segments,
   onSave,
   onDelete,
-  toast
+  toast,
+  canShare
 }) {
   const file = useRef();
   const [photos, setPhotos] = useState([]);
@@ -288,6 +348,10 @@ function EntryForm({
         <input ref={file} type="file" accept="image/*" multiple capture="environment" hidden onChange={e => addPhotos([...e.target.files])} />
         <p className="tiny muted">{t("התמונות נדחסות ונשמרות במכשיר בלבד (IndexedDB). מומלץ לגבות מדי פעם.")}</p>
       </div>
+      {canShare && <label className="switch share-switch"><input type="checkbox" checked={!!edit.shared} onChange={e => setEdit({
+        ...edit,
+        shared: e.target.checked
+      })} /><span><b>{t("לשתף ביומן המשותף")}</b><br /><span className="tiny muted">{t("הרשומה והתמונות יופיעו אצל כל חברי הקבוצה")}</span></span></label>}
       <div className="row between">
         <button className="btn btn--ghost btn--sm" style={{
         color: 'var(--red)'

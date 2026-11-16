@@ -37,6 +37,7 @@ export default defineConfig({
         // to the last good copy offline. Hashed assets stay precached for offline use.
         globIgnores: ['**/data/**', '**/index.html', '**/audio/**'],
         navigateFallback: null,
+        importScripts: ['push-sw.js'], // push notifications for the group chat (public/push-sw.js)
         maximumFileSizeToCacheInBytes: 6 * 1024 * 1024,
         runtimeCaching: [
           {

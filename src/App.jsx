@@ -18,6 +18,9 @@ const Angels = lazy(() => import('./pages/Angels.jsx'));
 const Certificate = lazy(() => import('./pages/Certificate.jsx'));
 const Weather = lazy(() => import('./pages/Weather.jsx'));
 const Story = lazy(() => import('./pages/Story.jsx'));
+const Group = lazy(() => import('./pages/Group.jsx'));
+const Chat = lazy(() => import('./pages/Chat.jsx'));
+import { GroupWatcher } from './components/GroupWatcher.jsx';
 const TITLES = {
   home: 'שביל ישראל',
   segments: 'מקטעי השביל',
@@ -28,7 +31,9 @@ const TITLES = {
   journal: 'יומן המסע',
   settings: 'הגדרות',
   certificate: 'תעודה',
-  weather: 'מזג אוויר חי'
+  weather: 'מזג אוויר חי',
+  group: 'קבוצת מסע',
+  chat: "צ'אט הקבוצה"
 };
 export default function App() {
   const {
@@ -61,7 +66,13 @@ export default function App() {
       page = <Guide section={sub} navigate={navigate} query={route.query} />;
       break;
     case 'journal':
-      page = <Journal navigate={navigate} />;
+      page = <Journal navigate={navigate} query={route.query} />;
+      break;
+    case 'group':
+      page = <Group navigate={navigate} query={route.query} />;
+      break;
+    case 'chat':
+      page = <Chat navigate={navigate} />;
       break;
     case 'certificate':
       page = <Certificate />;
@@ -81,6 +92,7 @@ export default function App() {
         <div className="app">
           <Header title={t(TITLES[tab] || "שביל ישראל")} onBack={isSub ? back : null} theme={effectiveTheme} setTheme={setTheme} navigate={navigate} />
           <main className="content" id="content"><Suspense fallback={<div className="page center muted">{t("טוען…")}</div>}>{page}</Suspense></main>
+          <GroupWatcher tab={tab} />
           <BottomNav active={TAB_IDS.includes(tab) ? tab : ''} navigate={navigate} />
         </div>
       </ToastProvider>

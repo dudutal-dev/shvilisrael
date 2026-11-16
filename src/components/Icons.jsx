@@ -27,6 +27,9 @@ export const I = {
   layers: () => <svg viewBox="0 0 24 24" {...P}><path d="M12 2L2 7l10 5 10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>,
   flag: () => <svg viewBox="0 0 24 24" {...P}><path d="M4 22V4a1 1 0 0 1 1-1h12l-2 4 2 4H5"/></svg>,
   info: () => <svg viewBox="0 0 24 24" {...P}><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>,
+  chat: () => <svg viewBox="0 0 24 24" {...P}><path d="M21 15a2 2 0 0 1-2 2H8l-5 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>,
+  users: () => <svg viewBox="0 0 24 24" {...P}><circle cx="9" cy="8" r="4"/><path d="M2 21a7 7 0 0 1 14 0"/><path d="M16 4.5a4 4 0 0 1 0 7M18 14.5a7 7 0 0 1 4 6.5"/></svg>,
+  send: () => <svg viewBox="0 0 24 24" {...P}><path d="M22 2L11 13M22 2l-7 20-4-9-9-4z"/></svg>,
   star: () => <svg viewBox="0 0 24 24" {...P}><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>,
 }
 export function Icon({ name, size = 22 }) { const C = I[name]; return C ? <span style={{ display: 'inline-flex', width: size, height: size }}><C /></span> : null }
