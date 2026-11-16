@@ -16,7 +16,7 @@ import { evaluatePlan } from '../lib/readiness.js';
 import { useLiveUpdates } from '../hooks/useLiveUpdates.js';
 import { markSeen } from '../lib/liveUpdates.js';
 import { t, tf, heOnly } from '../i18n/index.js'
-const QUICK = [['map', 'map', 'מפה חיה'], ['weather', 'weather', 'מזג אוויר'], ['nav', 'compass', 'מצפן'], ['guide/angels', 'angels', 'מלאכי שביל'], ['guide/lodging', 'lodging', 'לינה'], ['guide/water', 'water', 'מים'], ['guide/gear', 'gear', 'ציוד'], ['guide/safety', 'safety', 'בטיחות'], ['journal', 'journal', 'יומן']];
+const QUICK = [['map', 'map', 'מפה חיה'], ['weather', 'weather', 'מזג אוויר'], ['nav', 'compass', 'מצפן'], ['guide/angels', 'angels', 'מלאכי שביל'], ['guide/lodging', 'lodging', 'לינה'], ['guide/water', 'water', 'מים'], ['guide/gear', 'gear', 'ציוד'], ['guide/safety', 'safety', 'בטיחות'], ['journal', 'journal', 'יומן'], ['group', 'chat', 'קבוצה']];
 export default function Home({
   navigate
 }) {

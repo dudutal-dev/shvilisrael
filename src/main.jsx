@@ -23,6 +23,8 @@ const updateSW = registerSW({
     setInterval(check, 60 * 60 * 1000)
   },
 })
+// a tapped push notification asks the open app to show a screen (the group chat)
+navigator.serviceWorker?.addEventListener('message', (e) => { if (e.data?.go) location.hash = '#/' + e.data.go })
 window.addEventListener('vite:preloadError', () => location.reload()) // stale chunk after an update
 
 const mount = () => createRoot(document.getElementById('root')).render(

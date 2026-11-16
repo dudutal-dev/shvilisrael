@@ -1,6 +1,7 @@
 import { Icon } from './Icons.jsx';
 import { CIcon } from './ColorIcons.jsx';
 import { useOnline } from '../hooks/useOnline.js';
+import { useGroup } from '../hooks/useGroup.js';
 import { t, useLang } from '../i18n/index.js'
 const TABS = [{
   id: 'home',
@@ -40,6 +41,7 @@ export function Header({
 }) {
   const online = useOnline();
   const [lang, setLang] = useLang();
+  const group = useGroup();
   return <header className="header">
       <div className="header__title">
         {onBack ? <button className="iconbtn" onClick={onBack} aria-label={t("חזרה")}><Icon name="back" /></button> : <span className="blaze"><span className="w" /><span className="b" /><span className="o" /></span>}
@@ -50,6 +52,7 @@ export function Header({
       }}>{t("לא מקוון")}</span>}
       </div>
       <div className="header__actions">
+        <button className="iconbtn iconbtn--badge" onClick={() => navigate(group.joined ? 'chat' : 'group')} aria-label={t("קבוצת מסע")}><Icon name="chat" />{group.unread > 0 && <span className="badge-n">{group.unread > 99 ? '99+' : group.unread}</span>}</button>
         <button className="iconbtn iconbtn--lang" onClick={() => setLang(lang === 'en' ? 'he' : 'en')} aria-label="Language" title={lang === 'en' ? 'עברית' : 'English'}>{lang === 'en' ? 'עב' : 'EN'}</button>
         <button className="iconbtn" onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} aria-label={t("מצב תצוגה")}><Icon name={theme === 'dark' ? 'sun' : 'moon'} /></button>
         <button className="iconbtn" onClick={() => navigate('settings')} aria-label={t("הגדרות")}><Icon name="settings" /></button>
