@@ -765,3 +765,5 @@ body.kb .nav { display: none; }
 .chat__tick { font-style: normal; font-weight: 800; letter-spacing: -3px; margin-inline-start: 5px; opacity: 0.8; }
 .chat__tick--read { color: #0b3fd6; opacity: 1; text-shadow: 0 0 2px rgba(255,255,255,0.7); }
 .chat__save { position: absolute; bottom: calc(var(--safe-b) + 24px); inset-inline: 0; margin-inline: auto; width: fit-content; }
+.chat__vid { display: block; width: 100%; max-width: 240px; max-height: 300px; border-radius: 12px; background: #000; margin-bottom: 2px; }
+.chat__flink { border: 0; background: none; padding: 0; color: inherit; font-size: 12.5px; font-weight: 700; text-decoration: underline; opacity: 0.85; text-align: start; margin-bottom: 4px; }

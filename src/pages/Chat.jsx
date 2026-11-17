@@ -64,7 +64,8 @@ function ChatFile({
       if (u) URL.revokeObjectURL(u);
     };
   }, [f.id, state]);
-  const ico = f.img ? '🖼️' : '📄';
+  const ico = f.img ? '🖼️' : f.vid ? '🎬' : '📄';
+  if (url && f.vid) return <><video className="chat__vid" src={url} controls playsInline preload="metadata" /><button type="button" className="chat__flink" onClick={() => shareFile(f)}>{t("שמירה או שיתוף")} · {kb(f.size)}</button></>;
   if (url) return f.img ? <img className="chat__img" src={url} alt="" onClick={() => onOpen({
     url,
     f
@@ -117,10 +118,11 @@ export default function Chat({
     if (!f) return;
     const x = text.trim();
     setText('');
+    if (f.size > 3e6) toast(t("מעלה… זה יכול לקחת כמה שניות"), 8000);
     const r = await sayFile(f, x);
     if (r !== 'ok') {
       setText(x);
-      toast(r === 'big' ? t("הקובץ גדול מדי. אפשר לשלוח עד 8 מ\"ב") : r === 'unreadable' ? t("לא הצלחנו לקרוא את התמונה") : t("אין קליטה – הקובץ לא נשלח"));
+      toast(r === 'big' ? t("הקובץ גדול מדי. אפשר לשלוח עד 14 מ\"ב") : r === 'bigvideo' ? t("הסרטון גדול מדי. אפשר לשלוח עד 14 מ\"ב, בערך 10–20 שניות") : r === 'unreadable' ? t("לא הצלחנו לקרוא את התמונה") : t("אין קליטה – הקובץ לא נשלח"));
     }
   };
   const here = () => {
@@ -171,7 +173,7 @@ export default function Chat({
       {emoji && <div className="chat__emoji">{EMOJI.map(x => <button key={x} type="button" onClick={() => setText(v => v + x)}>{x}</button>)}</div>}
       <form className="chat__form" onSubmit={submit}>
         <button type="button" className="chat__ibtn" onClick={() => setEmoji(!emoji)} aria-label={t("סמיילים")}>😊</button>
-        <button type="button" className="chat__ibtn" onClick={() => file.current.click()} aria-label={t("צירוף תמונה או מסמך")}>📎</button>
+        <button type="button" className="chat__ibtn" onClick={() => file.current.click()} aria-label={t("צירוף תמונה, סרטון או מסמך")}>📎</button>
         <input className="input" value={text} onChange={e => setText(e.target.value)} maxLength={500} placeholder={t("הודעה לקבוצה…")} enterKeyHint="send" autoComplete="off" />
         <button className="btn btn--primary" aria-label={t("שליחה")}><Icon name="send" size={18} /></button>
       </form>

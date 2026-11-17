@@ -152,7 +152,7 @@ async function handle(p, mid, att) {
     if (f && !mine) { if (att) fetchFile(f, att); else fst[f.id] = 'missing' }
     if (tell && Date.now() - p.ts < 12 * 3600e3) queueAck(p.c, chatVisible())
     G.msgs.sort((a, b) => a.ts - b.ts); if (G.msgs.length > 300) G.msgs.splice(0, G.msgs.length - 300)
-    if (!mine && p.t === 'chat') { unread++; if (fresh) fire({ type: 'chat', name: p.n, text: (f ? (f.img ? '📷 ' : '📎 ' + f.name + ' ') : '') + String(p.x || '') }) }
+    if (!mine && p.t === 'chat') { unread++; if (fresh) fire({ type: 'chat', name: p.n, text: (f ? (f.img ? '📷 ' : f.vid ? '🎬 ' : '📎 ' + f.name + ' ') : '') + String(p.x || '') }) }
   }
   if (p.t === 'bye') delete G.members[p.d]
   if (p.t === 'ack' && !mine) { // delivery / read receipts for my messages
@@ -268,7 +268,7 @@ export async function leave() {
   SJ = []; G = { ...blank(), id: G.id, name: G.name, av: G.av }; unread = 0; lastLoc = null; emit()
 }
 // ---------- chat attachments ----------
-const okFile = (f) => (f && /^[a-z0-9]{6,12}$/.test(f.id || '') ? { id: f.id, name: String(f.name || 'file').slice(0, 80), type: String(f.type || '').slice(0, 60), size: +f.size || 0, img: !!f.img } : null)
+const okFile = (f) => (f && /^[a-z0-9]{6,12}$/.test(f.id || '') ? { id: f.id, name: String(f.name || 'file').slice(0, 80), type: String(f.type || '').slice(0, 60), size: +f.size || 0, img: !!f.img, vid: !!f.vid } : null)
 const findFile = (id) => { const m = G.msgs.find((x) => x.f && x.f.id === id); return m && m.f }
 async function fetchFile(f, url) { // download, decrypt, keep on the device
   fst[f.id] = 'loading'; emit()
@@ -284,18 +284,20 @@ export function requestFile(fid) {
   fst[fid] = 'loading'; emit(); send({ t: 'freq', fid })
   return new Promise((res) => setTimeout(() => { if (fst[fid] === 'loading') { fst[fid] = 'missing'; emit(); res(false) } else res(true) }, 25000))
 }
-/** Send a photo or a document, with optional text. Returns 'ok' | 'big' | 'unreadable' | 'offline' */
+/** Send a photo, a short video or a document, with optional text. Returns 'ok' | 'big' | 'bigvideo' | 'unreadable' | 'offline' */
 export async function sayFile(file, x = '') {
   const img = /^image\//.test(file.type) || /\.(heic|heif|jpe?g|png|webp)$/i.test(file.name || '')
   let blob = file, name = file.name || (img ? 'photo.jpg' : 'file'), type = file.type || 'application/octet-stream'
   if (img) try { blob = await (await fetch(await compressImage(file, 1280, 0.82))).blob(); type = 'image/jpeg'; name = name.replace(/\.\w+$/, '') + '.jpg' } catch { return 'unreadable' }
-  if (blob.size > 8e6) return 'big'
-  const fid = rid(), c = rid(), f = { id: fid, name: name.slice(0, 80), type, size: blob.size, img }
+  const vid = !img && (/^video\//.test(file.type) || /\.(mp4|mov|m4v|webm)$/i.test(name))
+  if (vid && !/^video\//.test(type)) type = /\.mov$/i.test(name) ? 'video/quicktime' : 'video/mp4'
+  if (blob.size > 14e6) return vid ? 'bigvideo' : 'big' // the relay accepts attachments up to 15 MB
+  const fid = rid(), c = rid(), f = { id: fid, name: name.slice(0, 80), type, size: blob.size, img, vid }
   await idbSet('chatfile:' + fid, { blob, name }); fst[fid] = 'ok'
   const m = { id: 'c' + c, c, d: G.id, n: G.name, x, ts: Date.now(), pending: true, f }
   G.msgs.push(m); emit()
   if (!(await sendFile({ t: 'chat', x, c, f }, new Uint8Array(await blob.arrayBuffer())))) { G.msgs = G.msgs.filter((y) => y !== m); emit(); return 'offline' }
-  if (PUSH_URL) fetch(PUSH_URL + '/push', { method: 'POST', body: JSON.stringify({ g: ntopic, d: G.id, title: 'שביל ישראל', body: `${G.name}: ${img ? '📷' : '📎 ' + name} ${x.slice(0, 100)}`, site: location.origin + location.pathname }) }).catch(() => {})
+  if (PUSH_URL) fetch(PUSH_URL + '/push', { method: 'POST', body: JSON.stringify({ g: ntopic, d: G.id, title: 'שביל ישראל', body: `${G.name}: ${img ? '📷' : vid ? '🎬' : '📎 ' + name} ${x.slice(0, 100)}`, site: location.origin + location.pathname }) }).catch(() => {})
   return 'ok'
 }
 

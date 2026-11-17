@@ -1427,5 +1427,9 @@
 "אין קליטה – הקובץ לא נשלח": "No reception – the file was not sent",
 "סמיילים": "Emoji",
 "צירוף תמונה או מסמך": "Attach a photo or a document",
-"שמירה או שיתוף": "Save or share"
+"שמירה או שיתוף": "Save or share",
+"הקובץ גדול מדי. אפשר לשלוח עד 14 מ\"ב": "The file is too large. Up to 14 MB can be sent",
+"הסרטון גדול מדי. אפשר לשלוח עד 14 מ\"ב, בערך 10–20 שניות": "The video is too large. Up to 14 MB can be sent, about 10–20 seconds",
+"מעלה… זה יכול לקחת כמה שניות": "Uploading… this can take a few seconds",
+"צירוף תמונה, סרטון או מסמך": "Attach a photo, a video or a document"
 }
