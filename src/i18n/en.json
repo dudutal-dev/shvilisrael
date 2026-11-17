@@ -1431,5 +1431,11 @@
 "הקובץ גדול מדי. אפשר לשלוח עד 14 מ\"ב": "The file is too large. Up to 14 MB can be sent",
 "הסרטון גדול מדי. אפשר לשלוח עד 14 מ\"ב, בערך 10–20 שניות": "The video is too large. Up to 14 MB can be sent, about 10–20 seconds",
 "מעלה… זה יכול לקחת כמה שניות": "Uploading… this can take a few seconds",
-"צירוף תמונה, סרטון או מסמך": "Attach a photo, a video or a document"
+"צירוף תמונה, סרטון או מסמך": "Attach a photo, a video or a document",
+"מי קרא": "Read by",
+"ההודעה עוד בדרך לשרת.": "The message is still on its way to the server.",
+"עוד אין חברים נוספים בקבוצה.": "No other members in the group yet.",
+"קראו": "Read",
+"הגיעה, עוד לא נקראה": "Delivered, not read yet",
+"עוד לא הגיעה": "Not delivered yet"
 }

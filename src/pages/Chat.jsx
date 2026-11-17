@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { Icon } from '../components/Icons.jsx';
-import { Empty } from '../components/UI.jsx';
+import { Empty, Modal } from '../components/UI.jsx';
 import { useGroup } from '../hooks/useGroup.js';
 import { useToast } from '../hooks/useToast.jsx';
 import { say, sayFile, markRead, setChatOpen, tickState, getChatFile, requestFile } from '../lib/group.js';
@@ -75,6 +75,39 @@ function ChatFile({
     if (!(await requestFile(f.id))) toast(t("אף אחד מחברי הקבוצה שמחזיק את הקובץ לא מחובר כרגע"));
   }}>{ico} <span>{f.name}</span><small>{t("כבר לא בשרת · לחצו לבקש שוב")}</small></button>;
 }
+function Receipts({
+  g,
+  id,
+  hm,
+  onClose
+}) {
+  const m = id && g.msgs.find(x => x.id === id);
+  if (!m) return null;
+  const ids = Object.keys(g.members).filter(x => x !== g.id);
+  const read = ids.filter(x => m.rd?.[x]),
+    got = ids.filter(x => !m.rd?.[x] && m.dv?.[x]),
+    none = ids.filter(x => !m.dv?.[x]);
+  const Sec = (title, cls, mark, list, k) => list.length > 0 && <div className="stack" style={{
+    gap: 8
+  }}>
+      <div className="small bold"><i className={`chat__tick ${cls}`}>{mark}</i> {title}</div>
+      {list.map(x => <div key={x} className="row" style={{
+      flexWrap: 'nowrap'
+    }}><Avatar id={x} name={g.members[x].n} av={g.members[x].av} size={34} /><span className="bold" style={{
+        flex: 1
+      }}>{g.members[x].n}</span><span className="tiny muted">{k && m[k][x] > 1 ? hm(m[k][x]) : ''}</span></div>)}
+    </div>;
+  return <Modal open onClose={onClose} title={t("מי קרא")}>
+      <div className="stack">
+        <p className="chat__quote">{m.f ? (m.f.img ? '📷 ' : m.f.vid ? '🎬 ' : '📎 ') : ''}{m.x || m.f?.name}</p>
+        {m.pending ? <p className="muted">{t("ההודעה עוד בדרך לשרת.")}</p> : !ids.length ? <p className="muted">{t("עוד אין חברים נוספים בקבוצה.")}</p> : <>
+            {Sec(t("קראו"), 'chat__tick--read', '✓✓', read, 'rd')}
+            {Sec(t("הגיעה, עוד לא נקראה"), '', '✓✓', got, 'dv')}
+            {Sec(t("עוד לא הגיעה"), '', '✓', none, '')}
+          </>}
+      </div>
+    </Modal>;
+}
 export default function Chat({
   navigate
 }) {
@@ -83,6 +116,7 @@ export default function Chat({
   const [text, setText] = useState('');
   const [emoji, setEmoji] = useState(false);
   const [view, setView] = useState(null);
+  const [info, setInfo] = useState(null); // id of my message whose receipts are shown
   const box = useRef();
   const file = useRef();
   useEffect(() => {
@@ -162,7 +196,7 @@ export default function Chat({
               {m.f && <ChatFile f={m.f} state={g.fst[m.f.id]} onOpen={setView} toast={toast} />}
               {m.x && <span>{m.x}</span>}
               {m.lat && <button className="linkbtn" onClick={() => navigate(`map?lat=${m.lat}&lon=${m.lon}`)}>🗺️ {t("הצגה במפה")}</button>}
-              <small>{hm(m.ts)}{tick && <i className={`chat__tick chat__tick--${tick}`}>{TICK[tick]}</i>}</small>
+              <small>{hm(m.ts)}{tick && <button type="button" className="chat__tickbtn" onClick={() => setInfo(m.id)} aria-label={t("מי קרא")}><i className={`chat__tick chat__tick--${tick}`}>{TICK[tick]}</i></button>}</small>
             </div>
           </div>;
       })}
@@ -178,6 +212,7 @@ export default function Chat({
         <button className="btn btn--primary" aria-label={t("שליחה")}><Icon name="send" size={18} /></button>
       </form>
       <input ref={file} type="file" hidden onChange={attach} />
+      <Receipts g={g} id={info} hm={hm} onClose={() => setInfo(null)} />
       {view && <div className="lightbox" onClick={() => setView(null)}><img src={view.url} alt="" /><button className="btn chat__save" onClick={e => {
         e.stopPropagation();
         shareFile(view.f);

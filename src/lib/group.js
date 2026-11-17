@@ -156,7 +156,7 @@ async function handle(p, mid, att) {
   }
   if (p.t === 'bye') delete G.members[p.d]
   if (p.t === 'ack' && !mine) { // delivery / read receipts for my messages
-    const mark = (list, k) => { for (const c of Array.isArray(list) ? list.slice(0, 80) : []) { const m = G.msgs.find((x) => x.c === c && x.d === G.id); if (m) (m[k] || (m[k] = {}))[p.d] = 1 } }
+    const mark = (list, k) => { for (const c of Array.isArray(list) ? list.slice(0, 80) : []) { const m = G.msgs.find((x) => x.c === c && x.d === G.id); if (m && !(m[k] || (m[k] = {}))[p.d]) m[k][p.d] = p.ts || 1 } } // keeps the time of the first receipt
     mark(p.dl, 'dv'); mark(p.rd, 'dv'); mark(p.rd, 'rd')
   }
   if (p.t === 'freq' && !mine && p.fid) { // someone asks for an attachment the relay dropped: whoever holds it re-uploads (the sender first)

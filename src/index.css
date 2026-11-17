@@ -767,3 +767,7 @@ body.kb .nav { display: none; }
 .chat__save { position: absolute; bottom: calc(var(--safe-b) + 24px); inset-inline: 0; margin-inline: auto; width: fit-content; }
 .chat__vid { display: block; width: 100%; max-width: 240px; max-height: 300px; border-radius: 12px; background: #000; margin-bottom: 2px; }
 .chat__flink { border: 0; background: none; padding: 0; color: inherit; font-size: 12.5px; font-weight: 700; text-decoration: underline; opacity: 0.85; text-align: start; margin-bottom: 4px; }
+.chat__tickbtn { border: 0; background: none; color: inherit; padding: 2px 0; margin: -2px 0; font: inherit; }
+.chat__quote { background: var(--surface-2); border-radius: 12px; padding: 8px 12px; font-size: 14px; overflow-wrap: anywhere; max-height: 4.6em; overflow: hidden; margin: 0; }
+.modal .chat__tick { letter-spacing: -3px; margin-inline-end: 6px; opacity: 1; }
+.modal .chat__tick--read { color: var(--primary); text-shadow: none; }
