@@ -24,6 +24,14 @@
       </div>
     </div>
     <script>
+      // Invite links (?j=CODE). Android: keep the install prompt so the invite window can open it from its button.
+      // iPhone: without a manifest, "Add to Home Screen" saves this exact URL, so the home-screen app starts with the code.
+      window.addEventListener('beforeinstallprompt', function (e) { e.preventDefault(); window.__shvilInstall = e; });
+      if (/[?&]j=/.test(location.search) && /iPhone|iPad|iPod/.test(navigator.userAgent) && !navigator.standalone) {
+        var mf = document.querySelector('link[rel=manifest]'); if (mf) mf.parentNode.removeChild(mf);
+      }
+    </script>
+    <script>
       // Error capture + boot guard. If the app has not rendered within 8s: show any captured error
       // (so a crash is readable instead of a white screen); otherwise assume a stale service worker,
       // unregister it, drop only the app-shell precache (never user data) and reload once.
