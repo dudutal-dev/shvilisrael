@@ -25,6 +25,10 @@ const updateSW = registerSW({
 })
 // a tapped push notification asks the open app to show a screen (the group chat)
 navigator.serviceWorker?.addEventListener('message', (e) => { if (e.data?.go) location.hash = '#/' + e.data.go })
+// while the keyboard is open the bottom nav is hidden, so it never rides up above the keyboard
+const typing = (el) => el && (el.tagName === 'TEXTAREA' || (el.tagName === 'INPUT' && !/^(checkbox|radio|file|button|submit|range)$/.test(el.type)))
+document.addEventListener('focusin', (e) => { if (typing(e.target)) document.body.classList.add('kb') })
+document.addEventListener('focusout', () => setTimeout(() => { if (!typing(document.activeElement)) document.body.classList.remove('kb') }, 120))
 window.addEventListener('vite:preloadError', () => location.reload()) // stale chunk after an update
 
 const mount = () => createRoot(document.getElementById('root')).render(
