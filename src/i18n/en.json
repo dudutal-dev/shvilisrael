@@ -1420,5 +1420,12 @@
 "מצגת המסע": "Trail slideshow",
 "🎞️ מצגת המסע": "🎞️ Trail slideshow",
 "🎞️ מצגת משותפת": "🎞️ Shared slideshow",
-"יום אחד": "1 day"
+"יום אחד": "1 day",
+"אף אחד מחברי הקבוצה שמחזיק את הקובץ לא מחובר כרגע": "No group member who holds the file is connected right now",
+"כבר לא בשרת · לחצו לבקש שוב": "No longer on the server · tap to ask again",
+"הקובץ גדול מדי. אפשר לשלוח עד 8 מ\"ב": "The file is too large. Up to 8 MB can be sent",
+"אין קליטה – הקובץ לא נשלח": "No reception – the file was not sent",
+"סמיילים": "Emoji",
+"צירוף תמונה או מסמך": "Attach a photo or a document",
+"שמירה או שיתוף": "Save or share"
 }

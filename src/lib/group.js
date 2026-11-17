@@ -5,6 +5,7 @@
 // who still holds a photo re-uploads it when somebody asks for it.
 import { load, save } from './storage.js'
 import { idbGet, idbSet, idbDel } from './overpass.js'
+import { compressImage } from './photos.js'
 
 const BASE = 'https://ntfy.sh/'
 // Web-push relay (Cloudflare Worker): stores each group's push subscriptions and fans a notification out.
@@ -21,10 +22,11 @@ let ws = null, es = null, retry = null, wsFails = 0
 let online = false, unread = 0, rev = 0, snap = null
 const subs = new Set(), events = new Set()
 const served = {}, asked = {}
+const fst = {} // chat attachments: fid -> 'loading' | 'ok' | 'missing'
 
 function emit() { save('group', G); save('sharedJournal', SJ); snap = null; subs.forEach((f) => f()) }
 export const subscribe = (f) => { subs.add(f); return () => subs.delete(f) }
-export const getSnapshot = () => snap || (snap = { ...G, joined: !!G.code, online, unread, rev, shared: SJ })
+export const getSnapshot = () => snap || (snap = { ...G, joined: !!G.code, online, unread, rev, shared: SJ, fst: { ...fst } })
 /** Subscribe to incoming things worth a toast: { type: 'chat' | 'journal', name, text } */
 export const onEvent = (f) => { events.add(f); return () => events.delete(f) }
 const fire = (ev) => events.forEach((f) => f(ev))
@@ -145,11 +147,27 @@ async function handle(p, mid, att) {
     if (G.msgs.some((x) => x.id === mid)) return
     const pend = p.c && G.msgs.find((x) => x.id === 'c' + p.c)
     if (pend) { pend.id = mid; delete pend.pending; emit(); return }
-    G.msgs.push({ id: mid, d: p.d, n: p.n, x: p.t === 'hi' ? null : String(p.x || '').slice(0, 1200), ts: p.ts, lat: p.lat, lon: p.lon })
+    const f = okFile(p.f), tell = !mine && p.c && p.t === 'chat'
+    G.msgs.push({ id: mid, d: p.d, n: p.n, x: p.t === 'hi' ? null : String(p.x || '').slice(0, 1200), ts: p.ts, lat: p.lat, lon: p.lon, ...(f ? { f } : {}), ...(p.c ? { c: p.c } : {}), ...(tell && !chatVisible() ? { ur: 1 } : {}) })
+    if (f && !mine) { if (att) fetchFile(f, att); else fst[f.id] = 'missing' }
+    if (tell && Date.now() - p.ts < 12 * 3600e3) queueAck(p.c, chatVisible())
     G.msgs.sort((a, b) => a.ts - b.ts); if (G.msgs.length > 300) G.msgs.splice(0, G.msgs.length - 300)
-    if (!mine && p.t === 'chat') { unread++; if (fresh) fire({ type: 'chat', name: p.n, text: String(p.x || '') }) }
+    if (!mine && p.t === 'chat') { unread++; if (fresh) fire({ type: 'chat', name: p.n, text: (f ? (f.img ? '📷 ' : '📎 ' + f.name + ' ') : '') + String(p.x || '') }) }
   }
   if (p.t === 'bye') delete G.members[p.d]
+  if (p.t === 'ack' && !mine) { // delivery / read receipts for my messages
+    const mark = (list, k) => { for (const c of Array.isArray(list) ? list.slice(0, 80) : []) { const m = G.msgs.find((x) => x.c === c && x.d === G.id); if (m) (m[k] || (m[k] = {}))[p.d] = 1 } }
+    mark(p.dl, 'dv'); mark(p.rd, 'dv'); mark(p.rd, 'rd')
+  }
+  if (p.t === 'freq' && !mine && p.fid) { // someone asks for an attachment the relay dropped: whoever holds it re-uploads (the sender first)
+    const v = await idbGet('chatfile:' + p.fid), f = findFile(p.fid)
+    if (v && f) {
+      const own = G.msgs.some((x) => x.f && x.f.id === p.fid && x.d === G.id), t0 = Date.now()
+      await sleep(own ? 300 + Math.random() * 1200 : 2500 + Math.random() * 3000)
+      if ((served['f' + p.fid] || 0) < t0) { served['f' + p.fid] = Date.now(); sendFile({ t: 'fdata', fid: p.fid }, new Uint8Array(await v.blob.arrayBuffer())) }
+    }
+  }
+  if (p.t === 'fdata' && p.fid) { served['f' + p.fid] = Date.now(); const f = findFile(p.fid); if (!mine && f && att && fst[p.fid] !== 'ok') fetchFile(f, att) }
   if (p.t === 'j' && !mine && p.e && p.e.id) {
     const old = SJ.find((x) => x.id === p.e.id)
     if (old && old.byId !== p.d) return
@@ -249,9 +267,61 @@ export async function leave() {
   for (const e of SJ) await dropPhotos(e.photos)
   SJ = []; G = { ...blank(), id: G.id, name: G.name, av: G.av }; unread = 0; lastLoc = null; emit()
 }
+// ---------- chat attachments ----------
+const okFile = (f) => (f && /^[a-z0-9]{6,12}$/.test(f.id || '') ? { id: f.id, name: String(f.name || 'file').slice(0, 80), type: String(f.type || '').slice(0, 60), size: +f.size || 0, img: !!f.img } : null)
+const findFile = (id) => { const m = G.msgs.find((x) => x.f && x.f.id === id); return m && m.f }
+async function fetchFile(f, url) { // download, decrypt, keep on the device
+  fst[f.id] = 'loading'; emit()
+  try {
+    const blob = new Blob([await decBytes(await (await fetch(url)).arrayBuffer())], { type: f.img ? 'image/jpeg' : f.type || 'application/octet-stream' })
+    await idbSet('chatfile:' + f.id, { blob, name: f.name }); fst[f.id] = 'ok'
+  } catch { fst[f.id] = 'missing' }
+  emit()
+}
+export const getChatFile = (fid) => idbGet('chatfile:' + fid)
+/** Ask the group to re-send an attachment the relay no longer has. Resolves false if nobody answered. */
+export function requestFile(fid) {
+  fst[fid] = 'loading'; emit(); send({ t: 'freq', fid })
+  return new Promise((res) => setTimeout(() => { if (fst[fid] === 'loading') { fst[fid] = 'missing'; emit(); res(false) } else res(true) }, 25000))
+}
+/** Send a photo or a document, with optional text. Returns 'ok' | 'big' | 'unreadable' | 'offline' */
+export async function sayFile(file, x = '') {
+  const img = /^image\//.test(file.type) || /\.(heic|heif|jpe?g|png|webp)$/i.test(file.name || '')
+  let blob = file, name = file.name || (img ? 'photo.jpg' : 'file'), type = file.type || 'application/octet-stream'
+  if (img) try { blob = await (await fetch(await compressImage(file, 1280, 0.82))).blob(); type = 'image/jpeg'; name = name.replace(/\.\w+$/, '') + '.jpg' } catch { return 'unreadable' }
+  if (blob.size > 8e6) return 'big'
+  const fid = rid(), c = rid(), f = { id: fid, name: name.slice(0, 80), type, size: blob.size, img }
+  await idbSet('chatfile:' + fid, { blob, name }); fst[fid] = 'ok'
+  const m = { id: 'c' + c, c, d: G.id, n: G.name, x, ts: Date.now(), pending: true, f }
+  G.msgs.push(m); emit()
+  if (!(await sendFile({ t: 'chat', x, c, f }, new Uint8Array(await blob.arrayBuffer())))) { G.msgs = G.msgs.filter((y) => y !== m); emit(); return 'offline' }
+  if (PUSH_URL) fetch(PUSH_URL + '/push', { method: 'POST', body: JSON.stringify({ g: ntopic, d: G.id, title: 'שביל ישראל', body: `${G.name}: ${img ? '📷' : '📎 ' + name} ${x.slice(0, 100)}`, site: location.origin + location.pathname }) }).catch(() => {})
+  return 'ok'
+}
+
+// ---------- delivery and read receipts ----------
+// One tick: the relay has the message. Two: every active member's phone has it. Blue: every active member opened the chat.
+// Each receiving phone sends one short, batched acknowledgement.
+const ackQ = { dl: new Set(), rd: new Set() }
+let ackT = null, chatOpen = false
+const chatVisible = () => chatOpen && typeof document !== 'undefined' && !document.hidden
+function queueAck(c, read) { if (!c) return; ackQ.dl.add(c); if (read) ackQ.rd.add(c); clearTimeout(ackT); ackT = setTimeout(flushAck, read ? 1500 : 6000) }
+function flushAck() { if (!key || !ackQ.dl.size) return; const dl = [...ackQ.dl].slice(-60), rd = [...ackQ.rd].slice(-60); ackQ.dl.clear(); ackQ.rd.clear(); send({ t: 'ack', dl, rd }) }
+function ackRead() { for (const m of G.msgs) if (m.ur) { delete m.ur; queueAck(m.c, true) } }
+/** The chat screen calls this when it opens and closes. */
+export function setChatOpen(v) { chatOpen = !!v; if (chatVisible()) { ackRead(); markRead() } }
+if (typeof document !== 'undefined') document.addEventListener('visibilitychange', () => { if (chatVisible()) ackRead() })
+/** 'pending' | 'sent' | 'delivered' | 'read' for one of my own messages. */
+export function tickState(m, g) {
+  if (m.pending) return 'pending'
+  const who = Object.keys(g.members).filter((id) => id !== g.id && Date.now() - (g.members[id].seen || 0) < 48 * 3600e3) // active in the last two days
+  const all = (k) => who.length > 0 && who.every((id) => m[k] && m[k][id])
+  return all('rd') ? 'read' : all('dv') ? 'delivered' : 'sent'
+}
+
 /** Chat message. Shows immediately (pending) and is confirmed when the relay echoes it back. */
 export async function say(x, loc) {
-  const c = rid(), m = { id: 'c' + c, d: G.id, n: G.name, x, ts: Date.now(), pending: true, ...loc }
+  const c = rid(), m = { id: 'c' + c, c, d: G.id, n: G.name, x, ts: Date.now(), pending: true, ...loc }
   G.msgs.push(m); emit()
   const ok = await send({ t: 'chat', x, c, ...loc })
   if (!ok) { G.msgs = G.msgs.filter((y) => y !== m); emit(); return false }

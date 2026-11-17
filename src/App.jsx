@@ -33,7 +33,7 @@ const TITLES = {
   certificate: 'תעודה',
   weather: 'מזג אוויר חי',
   group: 'קבוצת מסע',
-  chat: "צ'אט הקבוצה"
+  chat: "צ'אט"
 };
 export default function App() {
   const {
