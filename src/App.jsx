@@ -21,6 +21,7 @@ const Story = lazy(() => import('./pages/Story.jsx'));
 const Group = lazy(() => import('./pages/Group.jsx'));
 const Chat = lazy(() => import('./pages/Chat.jsx'));
 import { GroupWatcher } from './components/GroupWatcher.jsx';
+import { InviteJoin } from './components/InviteJoin.jsx';
 const TITLES = {
   home: 'שביל ישראל',
   segments: 'מקטעי השביל',
@@ -93,6 +94,7 @@ export default function App() {
           <Header title={t(TITLES[tab] || "שביל ישראל")} onBack={isSub ? back : null} theme={effectiveTheme} setTheme={setTheme} navigate={navigate} />
           <main className="content" id="content"><Suspense fallback={<div className="page center muted">{t("טוען…")}</div>}>{page}</Suspense></main>
           <GroupWatcher tab={tab} />
+          <InviteJoin />
           <BottomNav active={TAB_IDS.includes(tab) ? tab : ''} navigate={navigate} />
         </div>
       </ToastProvider>

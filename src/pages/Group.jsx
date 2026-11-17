@@ -46,10 +46,10 @@ export default function Group({
     setBusy(true);
     await join(c, name);
     setBusy(false);
-    toast(created ? t("הקבוצה נוצרה. שלחו את הקוד לשותפים למסע") : t("הצטרפתם לקבוצה ✓"));
+    toast(created ? t("הקבוצה נוצרה. שלחו הזמנה לשותפים למסע") : t("הצטרפתם לקבוצה ✓"));
   };
   const invite = async () => {
-    const text = inviteText(t("הצטרפו לקבוצת המסע שלנו באפליקציית שביל ישראל 🥾\n{url}\nקוד הקבוצה: {code}"));
+    const text = inviteText(t("הוזמנתם לקבוצת המסע שלנו באפליקציית שביל ישראל 🥾\nלוחצים על הקישור, מתקינים במסך הבית, וזהו:\n{url}\n\nכבר יש לכם את האפליקציה? מזינים בה את קוד הקבוצה: {code}"));
     if (navigator.share) {
       try {
         await navigator.share({

@@ -771,3 +771,9 @@ body.kb .nav { display: none; }
 .chat__quote { background: var(--surface-2); border-radius: 12px; padding: 8px 12px; font-size: 14px; overflow-wrap: anywhere; max-height: 4.6em; overflow: hidden; margin: 0; }
 .modal .chat__tick { letter-spacing: -3px; margin-inline-end: 6px; opacity: 1; }
 .modal .chat__tick--read { color: var(--primary); text-shadow: none; }
+
+/* ---------- Invite window ---------- */
+.invite h3 { margin-bottom: 10px; }
+.invite__steps { margin: 12px 0; padding-inline-start: 22px; display: grid; gap: 12px; line-height: 1.5; }
+.invite__steps li::marker { font-weight: 800; color: var(--primary); }
+.invite__ic { display: inline-grid; place-items: center; width: 32px; height: 32px; border-radius: 9px; background: color-mix(in srgb, var(--primary) 14%, transparent); color: var(--primary); vertical-align: middle; font-weight: 800; }

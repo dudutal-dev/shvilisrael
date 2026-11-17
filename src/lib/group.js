@@ -331,7 +331,7 @@ export async function say(x, loc) {
   return true
 }
 export function markRead() { if (unread) { unread = 0; emit() } }
-export const inviteText = (tmpl) => tmpl.replace('{url}', location.origin + location.pathname + '#/group?code=' + G.code).replace('{code}', G.code)
+export const inviteText = (tmpl) => tmpl.replace('{url}', location.origin + location.pathname + '?j=' + G.code).replace('{code}', G.code)
 
 // ---------- push notifications ----------
 const b64uToU8 = (s) => Uint8Array.from(atob(s.replace(/-/g, '+').replace(/_/g, '/')), (c) => c.charCodeAt(0))
